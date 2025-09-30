@@ -26,6 +26,9 @@ export default function Header() {
               </span>
             </Link>
           </div>
+          <div className="flex items-center space-x-6">
+            {/* Empty div to maintain same structure as ai-latex-editor navbar */}
+          </div>
         </div>
       </div>
     </nav>
