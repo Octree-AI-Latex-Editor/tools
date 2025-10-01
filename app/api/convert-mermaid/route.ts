@@ -20,6 +20,9 @@ export async function POST(request: NextRequest) {
 - \\usepackage{tikz} and necessary TikZ libraries
 - Complete \\begin{document}...\\end{document} structure
 - Properly formatted TikZ code that recreates the Mermaid diagram
+- IMPORTANT: Position all nodes properly using positioning syntax like "below of=", "right of=", coordinates, or positioning library
+- Ensure nodes don't overlap by specifying explicit positions
+- Use proper node distance and spacing
 
 Return ONLY the complete LaTeX code, no explanations or markdown formatting.
 
@@ -37,11 +40,11 @@ ${mermaid}`,
       return NextResponse.json({
         latex: `\\documentclass{standalone}
 \\usepackage{tikz}
-\\usetikzlibrary{shapes.geometric, arrows}
+\\usetikzlibrary{shapes.geometric, arrows, positioning}
 \\begin{document}
-\\begin{tikzpicture}[node distance=2cm]
+\\begin{tikzpicture}[node distance=2cm, every node/.style={align=center}]
   \\node (start) [rectangle, draw] {Start};
-  \\node (end) [rectangle, draw, below of=start] {End};
+  \\node (end) [rectangle, draw, below=of start] {End};
   \\draw [->] (start) -- (end);
 \\end{tikzpicture}
 \\end{document}`,
@@ -57,11 +60,11 @@ ${mermaid}`,
     return NextResponse.json({
       latex: `\\documentclass{standalone}
 \\usepackage{tikz}
-\\usetikzlibrary{shapes.geometric, arrows}
+\\usetikzlibrary{shapes.geometric, arrows, positioning}
 \\begin{document}
-\\begin{tikzpicture}[node distance=2cm]
+\\begin{tikzpicture}[node distance=2cm, every node/.style={align=center}]
   \\node (start) [rectangle, draw] {Start};
-  \\node (end) [rectangle, draw, below of=start] {End};
+  \\node (end) [rectangle, draw, below=of start] {End};
   \\draw [->] (start) -- (end);
 \\end{tikzpicture}
 \\end{document}`,
