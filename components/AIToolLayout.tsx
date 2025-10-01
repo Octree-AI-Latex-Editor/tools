@@ -2,6 +2,13 @@
 
 import { useState, useCallback } from 'react';
 import { Upload, Code2, Eye, Loader2 } from 'lucide-react';
+import { DM_Sans } from 'next/font/google';
+import { cn } from '@/lib/utils';
+
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+});
 
 interface AIToolLayoutProps {
   title: string;
@@ -89,25 +96,25 @@ export default function AIToolLayout({
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+    <div className={cn("min-h-screen bg-gray-50", dmSans.className)}>
+      <div className="mx-auto max-w-7xl px-6 py-12">
         {/* Header */}
         <div className="mb-12 text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-3">{title}</h1>
           <p className="text-lg text-gray-600">{description}</p>
         </div>
 
-        {/* Main Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* Main Grid - Two columns aligned */}
+        <div className="grid grid-cols-2 gap-8">
           {/* Input Section */}
-          <div>
-            <div className="mb-4 flex items-center gap-2">
-              <span className="inline-flex items-center rounded-md bg-orange-100 px-3 py-1 text-sm font-medium text-orange-800">
+          <div className="flex flex-col">
+            <div className="mb-4 flex items-center gap-3">
+              <span className="inline-flex items-center rounded-md bg-orange-50 px-3 py-1.5 text-sm font-semibold text-orange-900 border border-orange-200">
                 INPUT
               </span>
-              <h2 className="text-xl font-semibold text-gray-900">{inputLabel}</h2>
+              <h2 className="text-xl font-bold text-gray-900">{inputLabel}</h2>
             </div>
-            <p className="text-sm text-gray-600 mb-4">
+            <p className="text-sm text-gray-600 mb-6">
               Upload any image containing mathematical expressions
             </p>
 
@@ -116,34 +123,34 @@ export default function AIToolLayout({
               onDrop={handleDrop}
               onDragOver={handleDragOver}
               onDragLeave={handleDragLeave}
-              className={`relative border-2 border-dashed rounded-xl p-12 text-center transition-all ${
+              className={`relative border-2 border-dashed rounded-xl p-16 text-center transition-all flex-1 flex flex-col items-center justify-center ${
                 isDragging
                   ? 'border-blue-500 bg-blue-50'
                   : 'border-gray-300 bg-white hover:border-gray-400'
               } ${isProcessing ? 'opacity-50 pointer-events-none' : ''}`}
             >
               {imageData ? (
-                <div className="relative">
+                <div className="relative w-full">
                   <img
                     src={imageData}
                     alt="Uploaded"
                     className="max-w-full h-auto rounded-lg mx-auto"
                   />
-                  <div className="absolute top-2 right-2 bg-white rounded-full px-3 py-1 text-xs font-medium text-gray-700 shadow">
+                  <div className="absolute top-3 right-3 bg-white rounded-full px-3 py-1.5 text-xs font-semibold text-gray-700 shadow-sm border border-gray-200">
                     {acceptedFormats}
                   </div>
                 </div>
               ) : (
                 <>
                   {isProcessing ? (
-                    <Loader2 className="mx-auto h-16 w-16 text-blue-500 animate-spin" />
+                    <Loader2 className="h-16 w-16 text-blue-500 animate-spin mb-4" />
                   ) : (
-                    <Upload className="mx-auto h-16 w-16 text-gray-400" />
+                    <Upload className="h-16 w-16 text-gray-400 mb-4" />
                   )}
-                  <p className="mt-4 text-base text-gray-700 font-medium">
+                  <p className="text-base text-gray-900 font-medium mb-2">
                     {isProcessing ? 'Processing...' : 'Drop your image here'}
                   </p>
-                  <p className="mt-2 text-sm text-gray-500">
+                  <p className="text-sm text-gray-500 mb-4">
                     or{' '}
                     <label className="text-blue-600 hover:text-blue-500 cursor-pointer font-medium">
                       browse files
@@ -156,7 +163,7 @@ export default function AIToolLayout({
                       />
                     </label>
                   </p>
-                  <div className="mt-4 inline-block bg-gray-100 rounded-full px-4 py-1.5 text-xs font-medium text-gray-600">
+                  <div className="inline-block bg-gray-100 rounded-full px-4 py-1.5 text-xs font-semibold text-gray-700">
                     {acceptedFormats}
                   </div>
                 </>
@@ -165,29 +172,29 @@ export default function AIToolLayout({
 
             {error && (
               <div className="mt-4 rounded-lg bg-red-50 border border-red-200 p-4">
-                <p className="text-sm text-red-800">{error}</p>
+                <p className="text-sm text-red-800 font-medium">{error}</p>
               </div>
             )}
           </div>
 
           {/* Output Section */}
-          <div>
-            <div className="mb-4 flex items-center gap-2">
-              <span className="inline-flex items-center rounded-md bg-green-100 px-3 py-1 text-sm font-medium text-green-800">
+          <div className="flex flex-col">
+            <div className="mb-4 flex items-center gap-3">
+              <span className="inline-flex items-center rounded-md bg-green-50 px-3 py-1.5 text-sm font-semibold text-green-900 border border-green-200">
                 OUTPUT
               </span>
-              <h2 className="text-xl font-semibold text-gray-900">{outputLabel}</h2>
+              <h2 className="text-xl font-bold text-gray-900">{outputLabel}</h2>
             </div>
-            <p className="text-sm text-gray-600 mb-4">
+            <p className="text-sm text-gray-600 mb-6">
               Ready to copy into any LaTeX editor
             </p>
 
             {/* Tabs */}
             <div className="border-b border-gray-200 mb-4">
-              <div className="flex gap-2">
+              <div className="flex gap-1">
                 <button
                   onClick={() => setActiveTab('code')}
-                  className={`flex items-center gap-2 px-4 py-2 text-sm font-medium border-b-2 transition-colors ${
+                  className={`flex items-center gap-2 px-4 py-2.5 text-sm font-semibold border-b-2 transition-colors ${
                     activeTab === 'code'
                       ? 'border-gray-900 text-gray-900'
                       : 'border-transparent text-gray-500 hover:text-gray-700'
@@ -198,9 +205,9 @@ export default function AIToolLayout({
                 </button>
                 <button
                   onClick={() => setActiveTab('preview')}
-                  className={`flex items-center gap-2 px-4 py-2 text-sm font-medium border-b-2 transition-colors ${
+                  className={`flex items-center gap-2 px-4 py-2.5 text-sm font-semibold border-b-2 transition-colors ${
                     activeTab === 'preview'
-                      ? 'border-green-500 text-gray-900 bg-green-50'
+                      ? 'border-blue-600 text-gray-900 bg-blue-50'
                       : 'border-transparent text-gray-500 hover:text-gray-700'
                   }`}
                 >
@@ -211,26 +218,26 @@ export default function AIToolLayout({
             </div>
 
             {/* Output Content */}
-            <div className="bg-white border border-gray-200 rounded-xl p-6 min-h-[400px]">
+            <div className="bg-white border border-gray-200 rounded-xl p-6 flex-1 flex flex-col">
               {isProcessing ? (
-                <div className="flex items-center justify-center h-full">
+                <div className="flex items-center justify-center flex-1">
                   <div className="text-center">
                     <Loader2 className="mx-auto h-12 w-12 text-blue-500 animate-spin mb-4" />
-                    <p className="text-gray-600">Converting to LaTeX...</p>
+                    <p className="text-gray-600 font-medium">Converting to LaTeX...</p>
                   </div>
                 </div>
               ) : latexCode ? (
                 activeTab === 'code' ? (
-                  <pre className="font-mono text-sm text-gray-800 whitespace-pre-wrap">
+                  <pre className="font-mono text-sm text-gray-800 whitespace-pre-wrap overflow-auto">
                     {latexCode}
                   </pre>
                 ) : (
-                  <div className="text-center text-2xl text-gray-800">
+                  <div className="text-center text-2xl text-gray-800 flex-1 flex items-center justify-center">
                     <div dangerouslySetInnerHTML={{ __html: renderLatexPreview(latexCode) }} />
                   </div>
                 )
               ) : (
-                <div className="flex items-center justify-center h-full">
+                <div className="flex items-center justify-center flex-1">
                   <p className="text-gray-400">Output will appear here...</p>
                 </div>
               )}
@@ -243,7 +250,7 @@ export default function AIToolLayout({
                   href="https://useoctree.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white text-base font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-sm"
+                  className="w-full inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white text-base font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-sm"
                 >
                   Open in Octree
                 </a>
