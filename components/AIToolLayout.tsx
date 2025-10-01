@@ -238,10 +238,11 @@ export default function AIToolLayout({
 
       // Render PDF page to canvas
       if (context) {
+        // @ts-ignore - pdfjs types are incomplete
         await page.render({
           canvasContext: context,
           viewport: viewport,
-        } as unknown as any).promise;
+        }).promise;
       }
 
       // Convert canvas to JPG
@@ -311,6 +312,7 @@ export default function AIToolLayout({
             >
                                    {imageData ? (
                        <div className="relative w-full h-full flex items-center justify-center">
+                         {/* eslint-disable-next-line @next/next/no-img-element */}
                          <img
                            src={imageData}
                            alt="Uploaded"
