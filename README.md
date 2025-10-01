@@ -14,6 +14,7 @@ Free online conversion tools for LaTeX, HTML, and Math powered by AI.
 - **MathML to LaTeX** - Convert MathML (Mathematical Markup Language) to clean LaTeX code using GPT-4o-mini
 - **AI LaTeX Generator** - Generate complete LaTeX documents from text descriptions using GPT-4o-mini
 - **HTML to LaTeX** - Convert HTML markup to clean LaTeX code using GPT-4o-mini
+- **Mermaid to LaTeX** - Convert Mermaid diagram syntax to LaTeX TikZ code using GPT-4o-mini
 
 ## Setup
 
@@ -110,6 +111,14 @@ All converters use **GPT-4o-mini** to process different file types:
 - AI-powered conversion to complete LaTeX documents
 - HTML syntax highlighting for input
 - Preserves document structure and formatting
+- Code/Preview toggle with PDF rendering
+- Export as LaTeX or PDF
+
+### Mermaid to LaTeX
+- Paste Mermaid diagram syntax
+- AI-powered conversion to TikZ/LaTeX code
+- Syntax highlighting for input
+- Supports all Mermaid diagram types (flowcharts, sequence diagrams, etc.)
 - Code/Preview toggle with PDF rendering
 - Export as LaTeX or PDF
 

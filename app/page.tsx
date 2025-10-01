@@ -75,6 +75,13 @@ const tools = [
     href: "/tools/html-to-latex",
     icon: "🌐",
   },
+  {
+    id: 11,
+    title: "Mermaid to LaTeX",
+    description: "Convert Mermaid diagrams to LaTeX format",
+    href: "/tools/mermaid-to-latex",
+    icon: "🔷",
+  },
 ];
 
 export default function Home() {
