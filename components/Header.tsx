@@ -14,7 +14,7 @@ export default function Header() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex h-14 items-center justify-between">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2">
+            <Link href="https://useoctree.com" className="flex items-center space-x-2">
               <OctreeLogo className="h-7 w-7" />
               <span
                 className={cn(

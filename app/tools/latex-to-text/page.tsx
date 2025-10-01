@@ -1,43 +1,43 @@
+'use client';
+
+import ToolLayout from '@/components/ToolLayout';
+
 export default function LatexToText() {
+  const handleConvert = (input: string): string => {
+    // Basic LaTeX to text conversion - strip common LaTeX commands
+    let text = input
+      // Remove document structure
+      .replace(/\\documentclass\{[^}]*\}/g, '')
+      .replace(/\\usepackage\{[^}]*\}/g, '')
+      .replace(/\\begin\{document\}/g, '')
+      .replace(/\\end\{document\}/g, '')
+      // Remove sections
+      .replace(/\\section\{([^}]*)\}/g, '$1\n')
+      .replace(/\\subsection\{([^}]*)\}/g, '$1\n')
+      // Remove formatting
+      .replace(/\\textbf\{([^}]*)\}/g, '$1')
+      .replace(/\\textit\{([^}]*)\}/g, '$1')
+      .replace(/\\emph\{([^}]*)\}/g, '$1')
+      // Remove math environments
+      .replace(/\$\$([^$]*)\$\$/g, '$1')
+      .replace(/\$([^$]*)\$/g, '$1')
+      .replace(/\\begin\{equation\}/g, '')
+      .replace(/\\end\{equation\}/g, '')
+      // Clean up
+      .replace(/\\[a-zA-Z]+/g, '')
+      .replace(/[{}]/g, '')
+      .trim();
+    
+    return text || 'Converted text will appear here...';
+  };
+
   return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">LaTeX to Text</h1>
-          <p className="text-gray-500 mt-2">
-            Convert LaTeX documents to plain text
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Input (LaTeX)
-            </label>
-            <textarea
-              className="w-full h-64 p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm"
-              placeholder="Enter your LaTeX code..."
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Output (Plain Text)
-            </label>
-            <textarea
-              className="w-full h-64 p-4 border border-gray-300 rounded-lg bg-gray-50"
-              placeholder="Plain text output will appear here..."
-              readOnly
-            />
-          </div>
-        </div>
-
-        <div className="mt-6">
-          <button className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-            Convert
-          </button>
-        </div>
-      </div>
-    </div>
+    <ToolLayout
+      title="LaTeX to Text"
+      description="Convert LaTeX documents to plain text"
+      onConvert={handleConvert}
+      inputPlaceholder="Enter your LaTeX code..."
+      acceptImage={false}
+    />
   );
 } 
