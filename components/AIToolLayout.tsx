@@ -49,6 +49,13 @@ export default function AIToolLayout({
   const [lastCompiledLatex, setLastCompiledLatex] = useState<string>('');
   const [showExportMenu, setShowExportMenu] = useState(false);
 
+  // Convert acceptedFormats to file accept attribute
+  const getAcceptAttribute = () => {
+    if (acceptedFormats.includes('CSV')) return '.csv,.json,.xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+    if (acceptedFormats.includes('PDF')) return 'application/pdf';
+    return 'image/*,.pdf';
+  };
+
   // Initialize Monaco with LaTeX syntax highlighting
   useEffect(() => {
     loader.init().then((monaco) => {
@@ -122,14 +129,21 @@ export default function AIToolLayout({
     setIsDragging(false);
 
     const file = e.dataTransfer.files[0];
-    if (file && (file.type.startsWith('image/') || file.type === 'application/pdf')) {
+    if (file) {
       const reader = new FileReader();
       reader.onload = (event) => {
         const data = event.target?.result as string;
         setImageData(data);
         processImage(data);
       };
-      reader.readAsDataURL(file);
+      
+      // Handle different file types
+      if (file.type === 'text/csv' || file.name.endsWith('.csv') || 
+          file.type === 'application/json' || file.name.endsWith('.json')) {
+        reader.readAsText(file);
+      } else {
+        reader.readAsDataURL(file);
+      }
     }
   }, []);
 
@@ -151,7 +165,14 @@ export default function AIToolLayout({
         setImageData(data);
         processImage(data);
       };
-      reader.readAsDataURL(file);
+      
+      // Handle different file types
+      if (file.type === 'text/csv' || file.name.endsWith('.csv') || 
+          file.type === 'application/json' || file.name.endsWith('.json')) {
+        reader.readAsText(file);
+      } else {
+        reader.readAsDataURL(file);
+      }
     }
   };
 
@@ -301,7 +322,7 @@ export default function AIToolLayout({
                     <Upload className="h-16 w-16 text-gray-400 mb-4" />
                   )}
                   <p className="text-base text-gray-900 font-normal mb-2">
-                    {isProcessing ? 'Processing...' : 'Drop your image here'}
+                    {isProcessing ? 'Processing...' : 'Drop your file here'}
                   </p>
                   <p className="text-sm text-gray-500 mb-4">
                     or{' '}
@@ -310,7 +331,7 @@ export default function AIToolLayout({
                       <input
                         type="file"
                         className="hidden"
-                        accept="image/*,.pdf"
+                        accept={getAcceptAttribute()}
                         onChange={handleFileInput}
                         disabled={isProcessing}
                       />

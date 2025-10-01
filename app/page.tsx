@@ -15,6 +15,13 @@ const tools = [
     href: "/tools/pdf-to-latex",
     icon: "📄",
   },
+  {
+    id: 3,
+    title: "Table to LaTeX",
+    description: "Convert CSV, JSON, Excel to LaTeX tables",
+    href: "/tools/table-to-latex",
+    icon: "📊",
+  },
 ];
 
 export default function Home() {
