@@ -104,24 +104,22 @@ export default function AIToolLayout({
           <p className="text-lg text-gray-600">{description}</p>
         </div>
 
-        {/* Main Grid - Two identical columns */}
+        {/* Main Grid - Two identical columns with perfectly aligned boxes */}
         <div className="grid grid-cols-2 gap-8">
           {/* Input Section */}
           <div className="flex flex-col">
-            {/* Header - Fixed height */}
-            <div className="h-[88px] flex flex-col">
-              <div className="mb-4 flex items-center gap-3">
-                <span className="inline-flex items-center rounded-md bg-orange-50 px-3 py-1.5 text-sm font-medium text-orange-900 border border-orange-200">
-                  INPUT
-                </span>
-                <h2 className="text-xl font-medium text-gray-900">{inputLabel}</h2>
-              </div>
-              <p className="text-sm text-gray-600">
-                Upload any image containing mathematical expressions
-              </p>
+            {/* Header */}
+            <div className="mb-4 flex items-center gap-3">
+              <span className="inline-flex items-center rounded-md bg-orange-50 px-3 py-1.5 text-sm font-medium text-orange-900 border border-orange-200">
+                INPUT
+              </span>
+              <h2 className="text-xl font-medium text-gray-900">{inputLabel}</h2>
             </div>
+            <p className="text-sm text-gray-600 mb-6">
+              Upload any image containing mathematical expressions
+            </p>
 
-            {/* Drop Zone - Fixed height */}
+            {/* Drop Zone - Main box */}
             <div
               onDrop={handleDrop}
               onDragOver={handleDragOver}
@@ -182,71 +180,72 @@ export default function AIToolLayout({
 
           {/* Output Section */}
           <div className="flex flex-col">
-            {/* Header - Fixed height matching input */}
-            <div className="h-[88px] flex flex-col">
-              <div className="mb-4 flex items-center gap-3">
-                <span className="inline-flex items-center rounded-md bg-green-50 px-3 py-1.5 text-sm font-medium text-green-900 border border-green-200">
-                  OUTPUT
-                </span>
-                <h2 className="text-xl font-medium text-gray-900">{outputLabel}</h2>
-              </div>
-              <p className="text-sm text-gray-600">
-                Ready to copy into any LaTeX editor
-              </p>
+            {/* Header */}
+            <div className="mb-4 flex items-center gap-3">
+              <span className="inline-flex items-center rounded-md bg-green-50 px-3 py-1.5 text-sm font-medium text-green-900 border border-green-200">
+                OUTPUT
+              </span>
+              <h2 className="text-xl font-medium text-gray-900">{outputLabel}</h2>
             </div>
+            <p className="text-sm text-gray-600 mb-6">
+              Ready to copy into any LaTeX editor
+            </p>
 
-            {/* Tabs - Fixed height */}
-            <div className="h-[41px] border-b border-gray-200 flex items-end">
-              <div className="flex gap-1">
-                <button
-                  onClick={() => setActiveTab('code')}
-                  className={`flex items-center gap-2 px-4 py-2.5 text-sm font-medium border-b-2 transition-colors ${
-                    activeTab === 'code'
-                      ? 'border-gray-900 text-gray-900'
-                      : 'border-transparent text-gray-500 hover:text-gray-700'
-                  }`}
-                >
-                  <Code2 className="h-4 w-4" />
-                  Code
-                </button>
-                <button
-                  onClick={() => setActiveTab('preview')}
-                  className={`flex items-center gap-2 px-4 py-2.5 text-sm font-medium border-b-2 transition-colors ${
-                    activeTab === 'preview'
-                      ? 'border-blue-600 text-gray-900 bg-blue-50'
-                      : 'border-transparent text-gray-500 hover:text-gray-700'
-                  }`}
-                >
-                  <Eye className="h-4 w-4" />
-                  Preview
-                </button>
-              </div>
-            </div>
-
-            {/* Output Content - Height matching input box minus tabs */}
-            <div className="bg-white border border-gray-200 rounded-xl p-6 h-[479px] flex flex-col overflow-hidden mt-4">
-              {isProcessing ? (
-                <div className="flex items-center justify-center flex-1">
-                  <div className="text-center">
-                    <Loader2 className="mx-auto h-12 w-12 text-blue-500 animate-spin mb-4" />
-                    <p className="text-gray-600">Converting to LaTeX...</p>
-                  </div>
+            {/* Main box with tabs inside - Same height as input box */}
+            <div className="bg-white border border-gray-200 rounded-xl h-[520px] flex flex-col overflow-hidden">
+              {/* Tabs inside the box */}
+              <div className="border-b border-gray-200 flex-shrink-0">
+                <div className="flex gap-1 px-6 pt-4">
+                  <button
+                    onClick={() => setActiveTab('code')}
+                    className={`flex items-center gap-2 px-4 py-2.5 text-sm font-medium border-b-2 transition-colors ${
+                      activeTab === 'code'
+                        ? 'border-gray-900 text-gray-900'
+                        : 'border-transparent text-gray-500 hover:text-gray-700'
+                    }`}
+                  >
+                    <Code2 className="h-4 w-4" />
+                    Code
+                  </button>
+                  <button
+                    onClick={() => setActiveTab('preview')}
+                    className={`flex items-center gap-2 px-4 py-2.5 text-sm font-medium border-b-2 transition-colors ${
+                      activeTab === 'preview'
+                        ? 'border-blue-600 text-gray-900 bg-blue-50'
+                        : 'border-transparent text-gray-500 hover:text-gray-700'
+                    }`}
+                  >
+                    <Eye className="h-4 w-4" />
+                    Preview
+                  </button>
                 </div>
-              ) : latexCode ? (
-                activeTab === 'code' ? (
-                  <pre className="font-mono text-sm text-gray-800 whitespace-pre-wrap overflow-auto flex-1">
-                    {latexCode}
-                  </pre>
+              </div>
+
+              {/* Output Content */}
+              <div className="p-6 flex-1 flex flex-col overflow-hidden">
+                {isProcessing ? (
+                  <div className="flex items-center justify-center flex-1">
+                    <div className="text-center">
+                      <Loader2 className="mx-auto h-12 w-12 text-blue-500 animate-spin mb-4" />
+                      <p className="text-gray-600">Converting to LaTeX...</p>
+                    </div>
+                  </div>
+                ) : latexCode ? (
+                  activeTab === 'code' ? (
+                    <pre className="font-mono text-sm text-gray-800 whitespace-pre-wrap overflow-auto flex-1">
+                      {latexCode}
+                    </pre>
+                  ) : (
+                    <div className="text-center text-2xl text-gray-800 flex-1 flex items-center justify-center overflow-auto">
+                      <div dangerouslySetInnerHTML={{ __html: renderLatexPreview(latexCode) }} />
+                    </div>
+                  )
                 ) : (
-                  <div className="text-center text-2xl text-gray-800 flex-1 flex items-center justify-center overflow-auto">
-                    <div dangerouslySetInnerHTML={{ __html: renderLatexPreview(latexCode) }} />
+                  <div className="flex items-center justify-center flex-1">
+                    <p className="text-gray-400">Output will appear here...</p>
                   </div>
-                )
-              ) : (
-                <div className="flex items-center justify-center flex-1">
-                  <p className="text-gray-400">Output will appear here...</p>
-                </div>
-              )}
+                )}
+              </div>
             </div>
 
             {/* Action Button */}
