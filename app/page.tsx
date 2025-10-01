@@ -43,6 +43,13 @@ const tools = [
     href: "/tools/markdown-to-latex",
     icon: "📝",
   },
+  {
+    id: 7,
+    title: "Citation Generator",
+    description: "Generate BibTeX citations from DOIs or article details",
+    href: "/tools/citation-generator",
+    icon: "📚",
+  },
 ];
 
 export default function Home() {
@@ -53,7 +60,7 @@ export default function Home() {
         <div className="mb-8">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-2xl font-light text-gray-900">Free Online Math to LaTeX Converter Tools</h1>
+              <h1 className="text-2xl font-light text-gray-900">Free LaTeX Tools</h1>
               <p className="text-sm text-gray-500 mt-1">
                 Convert handwritten math equations, formulas, and expressions to LaTeX code instantly
               </p>

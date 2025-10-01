@@ -10,6 +10,7 @@ Free online conversion tools for LaTeX, HTML, and Math powered by AI.
 - **TikZ Generator** - Generate TikZ diagrams and graphics from text descriptions using GPT-4o-mini
 - **LaTeX Preview** - Live LaTeX editor with instant PDF preview
 - **Markdown to LaTeX** - Convert Markdown documents to clean LaTeX code using GPT-4o-mini
+- **Citation Generator** - Generate BibTeX citations from DOIs, article details, or URLs using GPT-4o-mini
 
 ## Setup
 
@@ -78,6 +79,13 @@ All converters use **GPT-4o-mini** to process different file types:
 - Supports all Markdown elements (headers, lists, tables, code blocks)
 - Preserves inline and block math equations
 - Code/Preview toggle and export features
+
+### Citation Generator
+- Enter article details, DOIs, or URLs
+- AI-powered BibTeX citation generation
+- Supports multiple citation types (article, book, inproceedings, etc.)
+- Automatic citation key generation
+- Export as .bib file for direct use in LaTeX documents
 
 ## Tech Stack
 
