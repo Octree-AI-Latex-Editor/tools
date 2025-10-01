@@ -1,9 +1,10 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { Upload, Code2, Eye, Loader2 } from 'lucide-react';
 import { DM_Sans } from 'next/font/google';
 import { cn } from '@/lib/utils';
+import { OctreeLogo } from '@/components/icons/octree-logo';
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -33,6 +34,8 @@ export default function AIToolLayout({
   const [isProcessing, setIsProcessing] = useState(false);
   const [error, setError] = useState<string>('');
   const [activeTab, setActiveTab] = useState<'code' | 'preview'>('preview');
+  const [previewUrl, setPreviewUrl] = useState<string>('');
+  const [isCompiling, setIsCompiling] = useState(false);
 
   const processImage = async (image: string) => {
     setIsProcessing(true);
@@ -56,6 +59,32 @@ export default function AIToolLayout({
       setIsProcessing(false);
     }
   };
+
+  const compileLatex = async (latex: string) => {
+    setIsCompiling(true);
+    try {
+      const response = await fetch('/api/compile', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ latex }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setPreviewUrl(data.previewUrl || data.pdfUrl || '');
+      }
+    } catch (err) {
+      console.error('Compilation error:', err);
+    } finally {
+      setIsCompiling(false);
+    }
+  };
+
+  useEffect(() => {
+    if (latexCode && activeTab === 'preview') {
+      compileLatex(latexCode);
+    }
+  }, [latexCode, activeTab]);
 
   const handleDrop = useCallback((e: React.DragEvent) => {
     e.preventDefault();
@@ -236,12 +265,25 @@ export default function AIToolLayout({
                   </div>
                 ) : latexCode ? (
                   activeTab === 'code' ? (
-                    <pre className="font-mono text-sm text-gray-800 whitespace-pre-wrap overflow-auto flex-1">
-                      {latexCode}
+                    <pre className="font-mono text-sm overflow-auto flex-1 p-4 bg-gray-50 rounded-lg">
+                      <code className="latex-code">{latexCode}</code>
                     </pre>
                   ) : (
-                    <div className="text-center text-2xl text-gray-800 flex-1 flex items-center justify-center overflow-auto">
-                      <div dangerouslySetInnerHTML={{ __html: renderLatexPreview(latexCode) }} />
+                    <div className="flex-1 flex items-center justify-center overflow-auto bg-gray-50 rounded-lg">
+                      {isCompiling ? (
+                        <div className="text-center">
+                          <Loader2 className="mx-auto h-8 w-8 text-blue-500 animate-spin mb-2" />
+                          <p className="text-sm text-gray-600">Generating preview...</p>
+                        </div>
+                      ) : previewUrl ? (
+                        <iframe
+                          src={previewUrl}
+                          className="w-full h-full"
+                          title="LaTeX Preview"
+                        />
+                      ) : (
+                        <p className="text-gray-400">Preview will appear here...</p>
+                      )}
                     </div>
                   )
                 ) : (
@@ -252,15 +294,16 @@ export default function AIToolLayout({
               </div>
             </div>
 
-            {/* Action Button */}
+            {/* Action Button with Octree Logo */}
             {latexCode && !isProcessing && (
               <div className="mt-6">
                 <a
                   href="https://useoctree.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white text-base font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-sm"
+                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 text-base font-medium rounded-lg border-2 border-gray-900 hover:bg-gray-900 hover:text-white transition-colors shadow-sm"
                 >
+                  <OctreeLogo className="h-5 w-5" />
                   Open in Octree
                 </a>
               </div>
@@ -270,16 +313,4 @@ export default function AIToolLayout({
       </div>
     </div>
   );
-}
-
-// Simple LaTeX preview renderer (for display purposes)
-function renderLatexPreview(latex: string): string {
-  // Basic rendering - in production, use KaTeX or MathJax
-  return latex
-    .replace(/\\\[/g, '<div style="margin: 1rem 0;">')
-    .replace(/\\\]/g, '</div>')
-    .replace(/\\int_\{([^}]*)\}\^\{([^}]*)\}/g, '∫<sub>$1</sub><sup>$2</sup>')
-    .replace(/\\frac\{([^}]*)\}\{([^}]*)\}/g, '($1)/($2)')
-    .replace(/\\_/g, '_')
-    .replace(/\\\'/g, "'");
 } 
