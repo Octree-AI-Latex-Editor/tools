@@ -50,6 +50,13 @@ const tools = [
     href: "/tools/citation-generator",
     icon: "📚",
   },
+  {
+    id: 8,
+    title: "MathML to LaTeX",
+    description: "Convert MathML markup to LaTeX format",
+    href: "/tools/mathml-to-latex",
+    icon: "🔤",
+  },
 ];
 
 export default function Home() {

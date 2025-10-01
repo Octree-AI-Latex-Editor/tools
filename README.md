@@ -11,6 +11,7 @@ Free online conversion tools for LaTeX, HTML, and Math powered by AI.
 - **LaTeX Preview** - Live LaTeX editor with instant PDF preview
 - **Markdown to LaTeX** - Convert Markdown documents to clean LaTeX code using GPT-4o-mini
 - **Citation Generator** - Generate BibTeX citations from DOIs, article details, or URLs using GPT-4o-mini
+- **MathML to LaTeX** - Convert MathML (Mathematical Markup Language) to clean LaTeX code using GPT-4o-mini
 
 ## Setup
 
@@ -86,6 +87,13 @@ All converters use **GPT-4o-mini** to process different file types:
 - Supports multiple citation types (article, book, inproceedings, etc.)
 - Automatic citation key generation
 - Export as .bib file for direct use in LaTeX documents
+
+### MathML to LaTeX
+- Paste MathML (Mathematical Markup Language) markup
+- AI-powered conversion to complete LaTeX documents
+- XML syntax highlighting for input
+- Code/Preview toggle with PDF rendering
+- Export as LaTeX or PDF
 
 ## Tech Stack
 
