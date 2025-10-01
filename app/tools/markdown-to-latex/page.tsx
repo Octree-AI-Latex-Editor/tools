@@ -188,13 +188,23 @@ export default function MarkdownToLatex() {
             </div>
 
             <div className="bg-white border border-gray-200 rounded-xl h-[520px] w-full flex flex-col overflow-hidden">
-              <textarea
-                value={markdownText}
-                onChange={(e) => setMarkdownText(e.target.value)}
-                placeholder="Enter your Markdown content..."
-                className="flex-1 p-6 resize-none focus:outline-none text-gray-900 placeholder:text-gray-400 font-mono text-sm"
-                disabled={isProcessing}
-              />
+              <div className="flex-1 overflow-hidden">
+                <Editor
+                  height="100%"
+                  language="markdown"
+                  value={markdownText}
+                  onChange={(value) => setMarkdownText(value || '')}
+                  theme="vs-light"
+                  options={{
+                    minimap: { enabled: false },
+                    scrollBeyondLastLine: false,
+                    fontSize: 14,
+                    lineNumbers: 'on',
+                    wordWrap: 'on',
+                    padding: { top: 16, bottom: 16 },
+                  }}
+                />
+              </div>
             </div>
 
             <button
