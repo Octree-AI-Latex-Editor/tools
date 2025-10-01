@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { ArrowLeft, Loader2 } from 'lucide-react';
 import { DM_Sans } from 'next/font/google';
 import { cn } from '@/lib/utils';
+import { OctreeLogo } from '@/components/icons/octree-logo';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { loader } from '@monaco-editor/react';
@@ -177,6 +178,20 @@ export default function LatexPreview() {
                 )}
               </div>
             </div>
+
+            {previewUrl && (
+              <div className="mt-6">
+                <a
+                  href="https://useoctree.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 text-base font-medium rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm"
+                >
+                  <OctreeLogo className="h-5 w-5" />
+                  Open in Octree
+                </a>
+              </div>
+            )}
           </div>
         </div>
       </div>
