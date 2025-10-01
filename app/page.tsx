@@ -57,6 +57,13 @@ const tools = [
     href: "/tools/mathml-to-latex",
     icon: "🔤",
   },
+  {
+    id: 9,
+    title: "AI LaTeX Generator",
+    description: "Generate LaTeX code from text descriptions",
+    href: "/tools/ai-latex-generator",
+    icon: "✨",
+  },
 ];
 
 export default function Home() {
