@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useCallback, useEffect } from 'react';
-import { Upload, Code2, Eye, Loader2 } from 'lucide-react';
+import { Upload, Code2, Eye, Loader2, Download, ChevronDown } from 'lucide-react';
 import { DM_Sans } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import { OctreeLogo } from '@/components/icons/octree-logo';
@@ -46,6 +46,8 @@ export default function AIToolLayout({
   const [activeTab, setActiveTab] = useState<'code' | 'preview'>('preview');
   const [previewUrl, setPreviewUrl] = useState<string>('');
   const [isCompiling, setIsCompiling] = useState(false);
+  const [lastCompiledLatex, setLastCompiledLatex] = useState<string>('');
+  const [showExportMenu, setShowExportMenu] = useState(false);
 
   // Initialize Monaco with LaTeX syntax highlighting
   useEffect(() => {
@@ -84,6 +86,11 @@ export default function AIToolLayout({
   };
 
   const compileLatex = async (latex: string) => {
+    // Check if we already have a cached preview for this LaTeX
+    if (lastCompiledLatex === latex && previewUrl) {
+      return;
+    }
+
     setIsCompiling(true);
     try {
       const response = await fetch('/api/compile', {
@@ -95,6 +102,7 @@ export default function AIToolLayout({
       if (response.ok) {
         const data = await response.json();
         setPreviewUrl(data.previewUrl || data.pdfUrl || '');
+        setLastCompiledLatex(latex);
       }
     } catch (err) {
       console.error('Compilation error:', err);
@@ -145,6 +153,88 @@ export default function AIToolLayout({
       };
       reader.readAsDataURL(file);
     }
+  };
+
+  const exportAsLatex = () => {
+    const blob = new Blob([latexCode], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'document.tex';
+    a.click();
+    URL.revokeObjectURL(url);
+    setShowExportMenu(false);
+  };
+
+  const exportAsPDF = async () => {
+    if (!previewUrl) return;
+    
+    const base64Data = previewUrl.split(',')[1];
+    const binaryData = atob(base64Data);
+    const bytes = new Uint8Array(binaryData.length);
+    for (let i = 0; i < binaryData.length; i++) {
+      bytes[i] = binaryData.charCodeAt(i);
+    }
+    
+    const blob = new Blob([bytes], { type: 'application/pdf' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'document.pdf';
+    a.click();
+    URL.revokeObjectURL(url);
+    setShowExportMenu(false);
+  };
+
+  const exportAsImage = async () => {
+    if (!previewUrl) return;
+
+    try {
+      // Dynamically import pdfjs
+      const pdfjsLib = await import('pdfjs-dist');
+      
+      // Convert base64 to Uint8Array
+      const base64Data = previewUrl.split(',')[1];
+      const binaryData = atob(base64Data);
+      const bytes = new Uint8Array(binaryData.length);
+      for (let i = 0; i < binaryData.length; i++) {
+        bytes[i] = binaryData.charCodeAt(i);
+      }
+
+      // Load PDF
+      const pdf = await pdfjsLib.getDocument({ data: bytes }).promise;
+      const page = await pdf.getPage(1);
+      
+      // Prepare canvas
+      const viewport = page.getViewport({ scale: 2.0 });
+      const canvas = document.createElement('canvas');
+      const context = canvas.getContext('2d');
+      canvas.width = viewport.width;
+      canvas.height = viewport.height;
+
+      // Render PDF page to canvas
+      if (context) {
+        await page.render({
+          canvasContext: context,
+          viewport: viewport,
+        } as any).promise;
+      }
+
+      // Convert canvas to JPG
+      canvas.toBlob((blob) => {
+        if (blob) {
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = 'document.jpg';
+          a.click();
+          URL.revokeObjectURL(url);
+        }
+      }, 'image/jpeg', 0.95);
+    } catch (err) {
+      console.error('Image export error:', err);
+    }
+    setShowExportMenu(false);
   };
 
   return (
@@ -328,18 +418,52 @@ export default function AIToolLayout({
               </div>
             </div>
 
-                               {/* Action Button with Octree Logo */}
+                               {/* Action Buttons */}
                    {latexCode && !isProcessing && (
-                     <div className="mt-6">
+                     <div className="mt-6 flex gap-3">
                        <a
                          href="https://useoctree.com"
                          target="_blank"
                          rel="noopener noreferrer"
-                         className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 text-base font-medium rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm"
+                         className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 text-base font-medium rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm"
                        >
                          <OctreeLogo className="h-5 w-5" />
                          Open in Octree
                        </a>
+                       
+                       <div className="relative">
+                         <button
+                           onClick={() => setShowExportMenu(!showExportMenu)}
+                           className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 text-base font-medium rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm"
+                         >
+                           <Download className="h-5 w-5" />
+                           Export
+                           <ChevronDown className="h-4 w-4" />
+                         </button>
+                         
+                         {showExportMenu && (
+                           <div className="absolute bottom-full mb-2 right-0 bg-white border border-gray-200 rounded-lg shadow-lg py-1 min-w-[160px] z-10">
+                             <button
+                               onClick={exportAsLatex}
+                               className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
+                             >
+                               Export as LaTeX
+                             </button>
+                             <button
+                               onClick={exportAsPDF}
+                               className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
+                             >
+                               Export as PDF
+                             </button>
+                             <button
+                               onClick={exportAsImage}
+                               className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
+                             >
+                               Export as Image
+                             </button>
+                           </div>
+                         )}
+                       </div>
                      </div>
                    )}
           </div>
