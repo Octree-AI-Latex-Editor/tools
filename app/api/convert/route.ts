@@ -16,18 +16,18 @@ export async function POST(request: NextRequest) {
         messages: [
           {
             role: 'user',
-            content: [
-              {
-                type: 'text',
-                text: 'Convert this handwritten mathematical expression to clean LaTeX code. Return ONLY the LaTeX code, no explanations or markdown formatting.',
-              },
-              {
-                type: 'image_url',
-                image_url: {
-                  url: image,
-                },
-              },
-            ],
+                              content: [
+                    {
+                      type: 'text',
+                      text: 'Convert this handwritten mathematical expression to a complete LaTeX document. Include \\documentclass{article}, necessary packages (amsmath, amssymb, etc.), and wrap the math in \\begin{document}...\\end{document}. Return ONLY the complete LaTeX code, no explanations or markdown formatting.',
+                    },
+                    {
+                      type: 'image_url',
+                      image_url: {
+                        url: image,
+                      },
+                    },
+                  ],
           },
         ],
         max_tokens: 1000,

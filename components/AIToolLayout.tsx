@@ -14,6 +14,7 @@ import {
 } from '@/lib/editor-config';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
+const PDFPreview = dynamic(() => import('@/components/PDFPreview'), { ssr: false });
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -85,18 +86,10 @@ export default function AIToolLayout({
   const compileLatex = async (latex: string) => {
     setIsCompiling(true);
     try {
-      // Wrap raw LaTeX in a complete document
-      const fullDocument = `\\documentclass{article}
-\\usepackage{amsmath}
-\\usepackage{amssymb}
-\\begin{document}
-${latex}
-\\end{document}`;
-
       const response = await fetch('/api/compile', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ latex: fullDocument }),
+        body: JSON.stringify({ latex }),
       });
 
       if (response.ok) {
@@ -309,24 +302,24 @@ ${latex}
                         }}
                       />
                     </div>
-                  ) : (
-                    <div className="flex-1 flex items-center justify-center overflow-auto bg-gray-50 rounded-lg">
-                      {isCompiling ? (
-                        <div className="text-center">
-                          <Loader2 className="mx-auto h-8 w-8 text-blue-500 animate-spin mb-2" />
-                          <p className="text-sm text-gray-600">Generating preview...</p>
-                        </div>
-                      ) : previewUrl ? (
-                        <iframe
-                          src={previewUrl}
-                          className="w-full h-full"
-                          title="LaTeX Preview"
-                        />
-                      ) : (
-                        <p className="text-gray-400">Preview will appear here...</p>
-                      )}
-                    </div>
-                  )
+                                           ) : (
+                           <div className="flex-1 overflow-hidden rounded-lg">
+                             {isCompiling ? (
+                               <div className="flex items-center justify-center h-full">
+                                 <div className="text-center">
+                                   <Loader2 className="mx-auto h-8 w-8 text-blue-500 animate-spin mb-2" />
+                                   <p className="text-sm text-gray-600">Generating preview...</p>
+                                 </div>
+                               </div>
+                             ) : previewUrl ? (
+                               <PDFPreview pdfUrl={previewUrl} />
+                             ) : (
+                               <div className="flex items-center justify-center h-full">
+                                 <p className="text-gray-400">Preview will appear here...</p>
+                               </div>
+                             )}
+                           </div>
+                         )
                 ) : (
                   <div className="flex items-center justify-center flex-1">
                     <p className="text-gray-400">Output will appear here...</p>
