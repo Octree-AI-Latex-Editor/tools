@@ -5,8 +5,7 @@ Free online conversion tools for LaTeX, HTML, and Math powered by AI.
 ## Tools
 
 - **Image to LaTeX** - Convert images of handwritten math and equations to clean LaTeX code using GPT-4o-mini
-- **LaTeX to Text** - Convert LaTeX documents to plain text
-- **HTML to Text** - Extract plain text from HTML content
+- **PDF to LaTeX** - Convert PDF documents with mathematical content to clean LaTeX code using GPT-4o-mini
 
 ## Setup
 
@@ -36,15 +35,20 @@ Open [http://localhost:3000](http://localhost:3000) to view the tools.
 
 ## AI Features
 
-The Image to LaTeX converter uses **GPT-4o-mini** to process images of handwritten math and equations:
+Both converters use **GPT-4o-mini** to process images and PDFs with mathematical content:
 
-- Drag and drop images or click to upload
-- Supports JPEG, PNG, PDF formats
+### Image to LaTeX
+- Drag and drop images (JPEG, PNG) or click to upload
 - AI-powered conversion to complete LaTeX documents
 - Code/Preview toggle with professional PDF rendering
 - Preview caching for instant tab switching
 - Export as LaTeX (.tex), PDF, or Image (JPG)
 - One-click "Open in Octree" integration
+
+### PDF to LaTeX
+- Upload PDF documents with mathematical equations
+- Same powerful AI conversion and preview features
+- Extract LaTeX code from academic papers, textbooks, or notes
 
 ## Tech Stack
 

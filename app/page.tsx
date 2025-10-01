@@ -6,21 +6,14 @@ const tools = [
     title: "Image to LaTeX",
     description: "Convert images to LaTeX format",
     href: "/tools/math-to-latex",
-    icon: "∑",
+    icon: "🖼️",
   },
   {
     id: 2,
-    title: "LaTeX to Text",
-    description: "Convert LaTeX documents to plain text",
-    href: "/tools/latex-to-text",
-    icon: "📝",
-  },
-  {
-    id: 3,
-    title: "HTML to Text",
-    description: "Extract plain text from HTML content",
-    href: "/tools/html-to-text",
-    icon: "🌐",
+    title: "PDF to LaTeX",
+    description: "Convert PDF documents to LaTeX format",
+    href: "/tools/pdf-to-latex",
+    icon: "📄",
   },
 ];
 

@@ -6,8 +6,8 @@ import Header from "@/components/Header";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Convert Handwritten Math to LaTeX - Free Online Math Equation Converter | Octree Tools",
-  description: "Free online tool to convert handwritten math equations to LaTeX code. Convert math formula, math text, and mathematical expressions to LaTeX format instantly. AI-powered LaTeX converter with PDF preview.",
+  title: "Convert Image & PDF to LaTeX - Free Online Math Equation Converter | Octree Tools",
+  description: "Free online tools to convert images and PDFs to LaTeX code. Convert handwritten math equations, formulas, and PDF documents to LaTeX format instantly. AI-powered LaTeX converter with PDF preview.",
   keywords: [
     "convert handwritten math to LaTeX",
     "math equation to LaTeX converter",
