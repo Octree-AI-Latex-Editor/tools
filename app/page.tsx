@@ -78,20 +78,6 @@ export default function Home() {
             ))}
           </div>
         </div>
-
-        {/* SEO Content */}
-        <div className="mt-12 prose prose-sm max-w-none text-gray-600">
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">Convert Handwritten Math to LaTeX Online</h2>
-          <p className="mb-4">
-            Our free online math equation to LaTeX converter uses AI to instantly transform handwritten mathematical expressions, formulas, and equations into clean LaTeX code. Whether you need to convert math text to LaTeX, convert math formulas to LaTeX, or convert handwritten math equations to LaTeX format, our tool makes it effortless.
-          </p>
-          <p className="mb-4">
-            Perfect for students, researchers, and educators who need to convert math equations to LaTeX online. Simply upload an image of your handwritten math, and our AI-powered LaTeX math converter will generate properly formatted LaTeX code with a real-time PDF preview.
-          </p>
-          <div className="text-xs text-gray-400 mt-8">
-            Keywords: convert handwritten math to LaTeX, math equation to LaTeX converter, convert math to LaTeX, LaTeX math converter, math formula to LaTeX, convert math equation to LaTeX online, handwritten equation to LaTeX, math text to LaTeX converter, free LaTeX converter
-          </div>
-        </div>
       </div>
     </div>
   );
