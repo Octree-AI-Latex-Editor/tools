@@ -49,6 +49,9 @@ export default function AIToolLayout({
   const [isCompiling, setIsCompiling] = useState(false);
   const [lastCompiledLatex, setLastCompiledLatex] = useState<string>('');
   const [showExportMenu, setShowExportMenu] = useState(false);
+  const [uploadedFileName, setUploadedFileName] = useState<string>('');
+  const [isTableFile, setIsTableFile] = useState(false);
+  const [fileType, setFileType] = useState<string>('math');
 
   // Convert acceptedFormats to file accept attribute
   const getAcceptAttribute = () => {
@@ -78,7 +81,7 @@ export default function AIToolLayout({
       const response = await fetch(apiEndpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ image, type: 'math' }),
+        body: JSON.stringify({ image, type: fileType }),
       });
 
       if (!response.ok) throw new Error('Conversion failed');
@@ -132,7 +135,23 @@ export default function AIToolLayout({
 
     const file = e.dataTransfer.files[0];
     if (file) {
+      setUploadedFileName(file.name);
       const reader = new FileReader();
+      
+      // Detect file type
+      let detectedType = 'math';
+      if (file.name.endsWith('.csv') || file.type === 'text/csv') {
+        detectedType = 'csv';
+      } else if (file.name.endsWith('.json') || file.type === 'application/json') {
+        detectedType = 'json';
+      } else if (file.name.endsWith('.xlsx') || file.type === 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') {
+        detectedType = 'xlsx';
+      }
+      
+      const isTable = detectedType === 'csv' || detectedType === 'json' || detectedType === 'xlsx';
+      setIsTableFile(isTable);
+      setFileType(detectedType);
+      
       reader.onload = (event) => {
         const data = event.target?.result as string;
         setImageData(data);
@@ -140,8 +159,7 @@ export default function AIToolLayout({
       };
       
       // Handle different file types
-      if (file.type === 'text/csv' || file.name.endsWith('.csv') || 
-          file.type === 'application/json' || file.name.endsWith('.json')) {
+      if (isTable) {
         reader.readAsText(file);
       } else {
         reader.readAsDataURL(file);
@@ -162,7 +180,23 @@ export default function AIToolLayout({
   const handleFileInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
+      setUploadedFileName(file.name);
       const reader = new FileReader();
+      
+      // Detect file type
+      let detectedType = 'math';
+      if (file.name.endsWith('.csv') || file.type === 'text/csv') {
+        detectedType = 'csv';
+      } else if (file.name.endsWith('.json') || file.type === 'application/json') {
+        detectedType = 'json';
+      } else if (file.name.endsWith('.xlsx') || file.type === 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') {
+        detectedType = 'xlsx';
+      }
+      
+      const isTable = detectedType === 'csv' || detectedType === 'json' || detectedType === 'xlsx';
+      setIsTableFile(isTable);
+      setFileType(detectedType);
+      
       reader.onload = (event) => {
         const data = event.target?.result as string;
         setImageData(data);
@@ -170,8 +204,7 @@ export default function AIToolLayout({
       };
       
       // Handle different file types
-      if (file.type === 'text/csv' || file.name.endsWith('.csv') || 
-          file.type === 'application/json' || file.name.endsWith('.json')) {
+      if (isTable) {
         reader.readAsText(file);
       } else {
         reader.readAsDataURL(file);
@@ -312,12 +345,28 @@ export default function AIToolLayout({
             >
                                    {imageData ? (
                        <div className="relative w-full h-full flex items-center justify-center">
-                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                         <img
-                           src={imageData}
-                           alt="Uploaded"
-                           className="max-w-full max-h-full object-contain rounded-lg relative z-10"
-                         />
+                         {isTableFile ? (
+                           <div className="text-center">
+                             <div className="mb-4 flex justify-center">
+                               <div className="bg-blue-50 rounded-full p-6">
+                                 <svg className="w-16 h-16 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                 </svg>
+                               </div>
+                             </div>
+                             <p className="text-lg font-medium text-gray-900 mb-1">{uploadedFileName}</p>
+                             <p className="text-sm text-gray-500">File uploaded successfully</p>
+                           </div>
+                         ) : (
+                           <>
+                             {/* eslint-disable-next-line @next/next/no-img-element */}
+                             <img
+                               src={imageData}
+                               alt="Uploaded"
+                               className="max-w-full max-h-full object-contain rounded-lg relative z-10"
+                             />
+                           </>
+                         )}
                        </div>
                      ) : (
                 <>
