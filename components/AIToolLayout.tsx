@@ -104,27 +104,29 @@ export default function AIToolLayout({
           <p className="text-lg text-gray-600">{description}</p>
         </div>
 
-        {/* Main Grid - Two identical columns with perfectly aligned boxes */}
+        {/* Main Grid - Fixed 2 columns, no responsive breakpoints */}
         <div className="grid grid-cols-2 gap-8">
           {/* Input Section */}
           <div className="flex flex-col">
-            {/* Header */}
-            <div className="mb-4 flex items-center gap-3">
-              <span className="inline-flex items-center rounded-md bg-orange-50 px-3 py-1.5 text-sm font-medium text-orange-900 border border-orange-200">
-                INPUT
-              </span>
-              <h2 className="text-xl font-medium text-gray-900">{inputLabel}</h2>
+            {/* Header - Fixed height container */}
+            <div className="h-[72px] mb-6 flex flex-col justify-start">
+              <div className="mb-2 flex items-center gap-3">
+                <span className="inline-flex items-center rounded-md bg-orange-50 px-3 py-1.5 text-sm font-medium text-orange-900 border border-orange-200">
+                  INPUT
+                </span>
+                <h2 className="text-xl font-medium text-gray-900">{inputLabel}</h2>
+              </div>
+              <p className="text-sm text-gray-600">
+                Upload any image containing mathematical expressions
+              </p>
             </div>
-            <p className="text-sm text-gray-600 mb-6">
-              Upload any image containing mathematical expressions
-            </p>
 
-            {/* Drop Zone - Main box */}
+            {/* Drop Zone - Fixed dimensions */}
             <div
               onDrop={handleDrop}
               onDragOver={handleDragOver}
               onDragLeave={handleDragLeave}
-              className={`relative border-2 border-dashed rounded-xl p-16 text-center transition-all h-[520px] flex flex-col items-center justify-center ${
+              className={`relative border-2 border-dashed rounded-xl p-16 text-center transition-all h-[520px] w-full flex flex-col items-center justify-center ${
                 isDragging
                   ? 'border-blue-500 bg-blue-50'
                   : 'border-gray-300 bg-white hover:border-gray-400'
@@ -180,19 +182,21 @@ export default function AIToolLayout({
 
           {/* Output Section */}
           <div className="flex flex-col">
-            {/* Header */}
-            <div className="mb-4 flex items-center gap-3">
-              <span className="inline-flex items-center rounded-md bg-green-50 px-3 py-1.5 text-sm font-medium text-green-900 border border-green-200">
-                OUTPUT
-              </span>
-              <h2 className="text-xl font-medium text-gray-900">{outputLabel}</h2>
+            {/* Header - Fixed height container matching input */}
+            <div className="h-[72px] mb-6 flex flex-col justify-start">
+              <div className="mb-2 flex items-center gap-3">
+                <span className="inline-flex items-center rounded-md bg-green-50 px-3 py-1.5 text-sm font-medium text-green-900 border border-green-200">
+                  OUTPUT
+                </span>
+                <h2 className="text-xl font-medium text-gray-900">{outputLabel}</h2>
+              </div>
+              <p className="text-sm text-gray-600">
+                Ready to copy into any LaTeX editor
+              </p>
             </div>
-            <p className="text-sm text-gray-600 mb-6">
-              Ready to copy into any LaTeX editor
-            </p>
 
-            {/* Main box with tabs inside - Same height as input box */}
-            <div className="bg-white border border-gray-200 rounded-xl h-[520px] flex flex-col overflow-hidden">
+            {/* Main box - Fixed dimensions matching input */}
+            <div className="bg-white border border-gray-200 rounded-xl h-[520px] w-full flex flex-col overflow-hidden">
               {/* Tabs inside the box */}
               <div className="border-b border-gray-200 flex-shrink-0">
                 <div className="flex gap-1 px-6 pt-4">
