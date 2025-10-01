@@ -36,6 +36,13 @@ const tools = [
     href: "/tools/latex-preview",
     icon: "👁️",
   },
+  {
+    id: 6,
+    title: "Markdown to LaTeX",
+    description: "Convert Markdown documents to LaTeX format",
+    href: "/tools/markdown-to-latex",
+    icon: "📝",
+  },
 ];
 
 export default function Home() {
