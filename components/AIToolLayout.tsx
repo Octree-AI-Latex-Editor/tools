@@ -6,6 +6,7 @@ import { DM_Sans } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import { OctreeLogo } from '@/components/icons/octree-logo';
 import dynamic from 'next/dynamic';
+import Link from 'next/link';
 import { loader } from '@monaco-editor/react';
 import {
   latexLanguageConfiguration,
@@ -122,6 +123,7 @@ export default function AIToolLayout({
     if (latexCode && activeTab === 'preview') {
       compileLatex(latexCode);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [latexCode, activeTab]);
 
   const handleDrop = useCallback((e: React.DragEvent) => {
@@ -145,6 +147,7 @@ export default function AIToolLayout({
         reader.readAsDataURL(file);
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleDragOver = useCallback((e: React.DragEvent) => {
@@ -238,7 +241,7 @@ export default function AIToolLayout({
         await page.render({
           canvasContext: context,
           viewport: viewport,
-        } as any).promise;
+        } as unknown as any).promise;
       }
 
       // Convert canvas to JPG
@@ -263,13 +266,13 @@ export default function AIToolLayout({
       <div className="mx-auto max-w-7xl px-6 py-12">
         {/* Back Button */}
         <div className="mb-8">
-          <a
+          <Link
             href="/"
             className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
           >
             <ArrowLeft className="h-5 w-5" />
             <span className="text-sm font-medium">Back to Tools</span>
-          </a>
+          </Link>
         </div>
 
         {/* Header */}

@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(request: NextRequest) {
   try {
-    const { image, type } = await request.json();
+    const { image } = await request.json();
 
     // Call OpenAI Vision API with GPT-4o-mini
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
