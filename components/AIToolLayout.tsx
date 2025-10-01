@@ -104,26 +104,29 @@ export default function AIToolLayout({
           <p className="text-lg text-gray-600">{description}</p>
         </div>
 
-        {/* Main Grid - Two columns aligned with equal heights */}
-        <div className="grid grid-cols-2 gap-8 items-start">
+        {/* Main Grid - Two identical columns */}
+        <div className="grid grid-cols-2 gap-8">
           {/* Input Section */}
-          <div className="flex flex-col h-full">
-            <div className="mb-4 flex items-center gap-3">
-              <span className="inline-flex items-center rounded-md bg-orange-50 px-3 py-1.5 text-sm font-medium text-orange-900 border border-orange-200">
-                INPUT
-              </span>
-              <h2 className="text-xl font-medium text-gray-900">{inputLabel}</h2>
+          <div className="flex flex-col">
+            {/* Header - Fixed height */}
+            <div className="h-[88px] flex flex-col">
+              <div className="mb-4 flex items-center gap-3">
+                <span className="inline-flex items-center rounded-md bg-orange-50 px-3 py-1.5 text-sm font-medium text-orange-900 border border-orange-200">
+                  INPUT
+                </span>
+                <h2 className="text-xl font-medium text-gray-900">{inputLabel}</h2>
+              </div>
+              <p className="text-sm text-gray-600">
+                Upload any image containing mathematical expressions
+              </p>
             </div>
-            <p className="text-sm text-gray-600 mb-6">
-              Upload any image containing mathematical expressions
-            </p>
 
             {/* Drop Zone - Fixed height */}
             <div
               onDrop={handleDrop}
               onDragOver={handleDragOver}
               onDragLeave={handleDragLeave}
-              className={`relative border-2 border-dashed rounded-xl p-16 text-center transition-all h-[500px] flex flex-col items-center justify-center ${
+              className={`relative border-2 border-dashed rounded-xl p-16 text-center transition-all h-[520px] flex flex-col items-center justify-center ${
                 isDragging
                   ? 'border-blue-500 bg-blue-50'
                   : 'border-gray-300 bg-white hover:border-gray-400'
@@ -178,19 +181,22 @@ export default function AIToolLayout({
           </div>
 
           {/* Output Section */}
-          <div className="flex flex-col h-full">
-            <div className="mb-4 flex items-center gap-3">
-              <span className="inline-flex items-center rounded-md bg-green-50 px-3 py-1.5 text-sm font-medium text-green-900 border border-green-200">
-                OUTPUT
-              </span>
-              <h2 className="text-xl font-medium text-gray-900">{outputLabel}</h2>
+          <div className="flex flex-col">
+            {/* Header - Fixed height matching input */}
+            <div className="h-[88px] flex flex-col">
+              <div className="mb-4 flex items-center gap-3">
+                <span className="inline-flex items-center rounded-md bg-green-50 px-3 py-1.5 text-sm font-medium text-green-900 border border-green-200">
+                  OUTPUT
+                </span>
+                <h2 className="text-xl font-medium text-gray-900">{outputLabel}</h2>
+              </div>
+              <p className="text-sm text-gray-600">
+                Ready to copy into any LaTeX editor
+              </p>
             </div>
-            <p className="text-sm text-gray-600 mb-6">
-              Ready to copy into any LaTeX editor
-            </p>
 
-            {/* Tabs */}
-            <div className="border-b border-gray-200 mb-4">
+            {/* Tabs - Fixed height */}
+            <div className="h-[41px] border-b border-gray-200 flex items-end">
               <div className="flex gap-1">
                 <button
                   onClick={() => setActiveTab('code')}
@@ -217,8 +223,8 @@ export default function AIToolLayout({
               </div>
             </div>
 
-            {/* Output Content - Fixed height matching input */}
-            <div className="bg-white border border-gray-200 rounded-xl p-6 h-[500px] flex flex-col overflow-hidden">
+            {/* Output Content - Height matching input box minus tabs */}
+            <div className="bg-white border border-gray-200 rounded-xl p-6 h-[479px] flex flex-col overflow-hidden mt-4">
               {isProcessing ? (
                 <div className="flex items-center justify-center flex-1">
                   <div className="text-center">
