@@ -22,6 +22,13 @@ const tools = [
     href: "/tools/table-to-latex",
     icon: "📊",
   },
+  {
+    id: 4,
+    title: "TikZ Generator",
+    description: "Generate TikZ diagrams with AI",
+    href: "/tools/tikz-generator",
+    icon: "🎨",
+  },
 ];
 
 export default function Home() {
