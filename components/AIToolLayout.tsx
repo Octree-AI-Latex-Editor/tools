@@ -6,6 +6,12 @@ import { DM_Sans } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import { OctreeLogo } from '@/components/icons/octree-logo';
 import dynamic from 'next/dynamic';
+import { loader } from '@monaco-editor/react';
+import {
+  latexLanguageConfiguration,
+  latexTokenProvider,
+  registerLatexCompletions,
+} from '@/lib/editor-config';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
 
@@ -39,6 +45,19 @@ export default function AIToolLayout({
   const [activeTab, setActiveTab] = useState<'code' | 'preview'>('preview');
   const [previewUrl, setPreviewUrl] = useState<string>('');
   const [isCompiling, setIsCompiling] = useState(false);
+
+  // Initialize Monaco with LaTeX syntax highlighting
+  useEffect(() => {
+    loader.init().then((monaco) => {
+      monaco.languages.register({ id: 'latex' });
+      monaco.languages.setLanguageConfiguration(
+        'latex',
+        latexLanguageConfiguration
+      );
+      monaco.languages.setMonarchTokensProvider('latex', latexTokenProvider);
+      registerLatexCompletions(monaco);
+    });
+  }, []);
 
   const processImage = async (image: string) => {
     setIsProcessing(true);
