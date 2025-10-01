@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useCallback, useEffect } from 'react';
-import { Upload, Code2, Eye, Loader2, Download, ChevronDown } from 'lucide-react';
+import { Upload, Code2, Eye, Loader2, Download, ChevronDown, ArrowLeft } from 'lucide-react';
 import { DM_Sans } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import { OctreeLogo } from '@/components/icons/octree-logo';
@@ -237,14 +237,25 @@ export default function AIToolLayout({
     setShowExportMenu(false);
   };
 
-  return (
+    return (
     <div className={cn("min-h-screen bg-gray-50", dmSans.className)}>
       <div className="mx-auto max-w-7xl px-6 py-12">
-                       {/* Header */}
-               <div className="mb-12 text-center">
-                 <h1 className="text-4xl font-light text-gray-900 mb-3">{title}</h1>
-                 <p className="text-lg text-gray-600">{description}</p>
-               </div>
+        {/* Back Button */}
+        <div className="mb-8">
+          <a
+            href="/"
+            className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
+          >
+            <ArrowLeft className="h-5 w-5" />
+            <span className="text-sm font-medium">Back to Tools</span>
+          </a>
+        </div>
+
+        {/* Header */}
+        <div className="mb-12 text-center">
+          <h1 className="text-4xl font-light text-gray-900 mb-3">{title}</h1>
+          <p className="text-lg text-gray-600">{description}</p>
+        </div>
 
         {/* Main Grid - Fixed 2 columns, no responsive breakpoints */}
         <div className="grid grid-cols-2 gap-8">
