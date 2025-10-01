@@ -149,11 +149,11 @@ export default function AIToolLayout({
   return (
     <div className={cn("min-h-screen bg-gray-50", dmSans.className)}>
       <div className="mx-auto max-w-7xl px-6 py-12">
-        {/* Header */}
-        <div className="mb-12 text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-3">{title}</h1>
-          <p className="text-lg text-gray-600">{description}</p>
-        </div>
+                       {/* Header */}
+               <div className="mb-12 text-center">
+                 <h1 className="text-4xl font-light text-gray-900 mb-3">{title}</h1>
+                 <p className="text-lg text-gray-600">{description}</p>
+               </div>
 
         {/* Main Grid - Fixed 2 columns, no responsive breakpoints */}
         <div className="grid grid-cols-2 gap-8">
@@ -183,18 +183,15 @@ export default function AIToolLayout({
                   : 'border-gray-300 bg-white hover:border-gray-400'
               } ${isProcessing ? 'opacity-50 pointer-events-none' : ''}`}
             >
-              {imageData ? (
-                <div className="relative w-full h-full flex items-center justify-center">
-                  <img
-                    src={imageData}
-                    alt="Uploaded"
-                    className="max-w-full max-h-full object-contain rounded-lg"
-                  />
-                  <div className="absolute top-3 right-3 bg-white rounded-full px-3 py-1.5 text-xs font-medium text-gray-700 shadow-sm border border-gray-200">
-                    {acceptedFormats}
-                  </div>
-                </div>
-              ) : (
+                                   {imageData ? (
+                       <div className="relative w-full h-full flex items-center justify-center">
+                         <img
+                           src={imageData}
+                           alt="Uploaded"
+                           className="max-w-full max-h-full object-contain rounded-lg relative z-10"
+                         />
+                       </div>
+                     ) : (
                 <>
                   {isProcessing ? (
                     <Loader2 className="h-16 w-16 text-blue-500 animate-spin mb-4" />
@@ -330,20 +327,20 @@ export default function AIToolLayout({
               </div>
             </div>
 
-            {/* Action Button with Octree Logo */}
-            {latexCode && !isProcessing && (
-              <div className="mt-6">
-                <a
-                  href="https://useoctree.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 text-base font-medium rounded-lg border-2 border-gray-900 hover:bg-gray-900 hover:text-white transition-colors shadow-sm"
-                >
-                  <OctreeLogo className="h-5 w-5" />
-                  Open in Octree
-                </a>
-              </div>
-            )}
+                               {/* Action Button with Octree Logo */}
+                   {latexCode && !isProcessing && (
+                     <div className="mt-6">
+                       <a
+                         href="https://useoctree.com"
+                         target="_blank"
+                         rel="noopener noreferrer"
+                         className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 text-base font-medium rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm"
+                       >
+                         <OctreeLogo className="h-5 w-5" />
+                         Open in Octree
+                       </a>
+                     </div>
+                   )}
           </div>
         </div>
       </div>
