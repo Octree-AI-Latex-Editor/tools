@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Code2, Loader2, Download, ArrowLeft } from 'lucide-react';
+import { Code2, Eye, Loader2, Download, ArrowLeft } from 'lucide-react';
 import { DM_Sans } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import { OctreeLogo } from '@/components/icons/octree-logo';
@@ -10,6 +10,7 @@ import Link from 'next/link';
 import { loader } from '@monaco-editor/react';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
+const PDFPreview = dynamic(() => import('@/components/PDFPreview'), { ssr: false });
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -35,6 +36,10 @@ export default function CitationGenerator() {
   const [bibtexCode, setBibtexCode] = useState<string>('');
   const [isProcessing, setIsProcessing] = useState(false);
   const [error, setError] = useState<string>('');
+  const [activeTab, setActiveTab] = useState<'code' | 'preview'>('preview');
+  const [previewUrl, setPreviewUrl] = useState<string>('');
+  const [isCompiling, setIsCompiling] = useState(false);
+  const [lastCompiledBibtex, setLastCompiledBibtex] = useState<string>('');
 
   useEffect(() => {
     loader.init().then((monaco) => {
@@ -81,6 +86,63 @@ export default function CitationGenerator() {
       setIsProcessing(false);
     }
   };
+
+  const compileBibtex = async (bibtex: string) => {
+    if (lastCompiledBibtex === bibtex && previewUrl) return;
+
+    setIsCompiling(true);
+    try {
+      // Create a complete LaTeX document that uses the BibTeX citation
+      const citationKey = bibtex.match(/@\w+\{([^,]+),/)?.[1] || 'citation';
+      const latexDocument = `\\documentclass{article}
+\\usepackage{cite}
+\\begin{document}
+
+\\section{Sample Citation}
+
+This is a sample document showing how the citation will appear in your LaTeX document~\\cite{${citationKey}}.
+
+\\bibliographystyle{plain}
+\\begin{thebibliography}{1}
+
+\\bibitem{${citationKey}}
+${bibtex.replace(/@\w+\{[^,]+,/, '').replace(/}/g, '').split('\n').filter(line => line.trim()).map(line => {
+  const match = line.match(/(\w+)\s*=\s*[{"](.*?)["}]/);
+  if (match) {
+    const [, field, value] = match;
+    return value;
+  }
+  return '';
+}).filter(Boolean).join(', ')}
+
+\\end{thebibliography}
+
+\\end{document}`;
+
+      const response = await fetch('/api/compile', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ latex: latexDocument }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setPreviewUrl(data.previewUrl || data.pdfUrl || '');
+        setLastCompiledBibtex(bibtex);
+      }
+    } catch (err) {
+      console.error('Compilation error:', err);
+    } finally {
+      setIsCompiling(false);
+    }
+  };
+
+  useEffect(() => {
+    if (bibtexCode && activeTab === 'preview') {
+      compileBibtex(bibtexCode);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [bibtexCode, activeTab]);
 
   const exportAsBibtex = () => {
     const blob = new Blob([bibtexCode], { type: 'text/plain' });
@@ -162,6 +224,33 @@ export default function CitationGenerator() {
             </div>
 
             <div className="bg-white border border-gray-200 rounded-xl h-[520px] w-full flex flex-col overflow-hidden">
+              <div className="border-b border-gray-200 flex-shrink-0">
+                <div className="flex gap-1 px-6 pt-4">
+                  <button
+                    onClick={() => setActiveTab('code')}
+                    className={`flex items-center gap-2 px-4 py-2.5 text-sm font-medium border-b-2 transition-colors ${
+                      activeTab === 'code'
+                        ? 'border-gray-900 text-gray-900'
+                        : 'border-transparent text-gray-500 hover:text-gray-700'
+                    }`}
+                  >
+                    <Code2 className="h-4 w-4" />
+                    Code
+                  </button>
+                  <button
+                    onClick={() => setActiveTab('preview')}
+                    className={`flex items-center gap-2 px-4 py-2.5 text-sm font-medium border-b-2 transition-colors ${
+                      activeTab === 'preview'
+                        ? 'border-blue-600 text-gray-900 bg-blue-50'
+                        : 'border-transparent text-gray-500 hover:text-gray-700'
+                    }`}
+                  >
+                    <Eye className="h-4 w-4" />
+                    Preview
+                  </button>
+                </div>
+              </div>
+
               <div className="p-6 flex-1 flex flex-col overflow-hidden">
                 {isProcessing ? (
                   <div className="flex items-center justify-center flex-1">
@@ -171,23 +260,42 @@ export default function CitationGenerator() {
                     </div>
                   </div>
                 ) : bibtexCode ? (
-                  <div className="flex-1 overflow-hidden rounded-lg">
-                    <Editor
-                      height="100%"
-                      language="bibtex"
-                      value={bibtexCode}
-                      theme="vs-light"
-                      options={{
-                        readOnly: true,
-                        minimap: { enabled: false },
-                        scrollBeyondLastLine: false,
-                        fontSize: 14,
-                        lineNumbers: 'on',
-                        wordWrap: 'on',
-                        padding: { top: 8, bottom: 8 },
-                      }}
-                    />
-                  </div>
+                  activeTab === 'code' ? (
+                    <div className="flex-1 overflow-hidden rounded-lg">
+                      <Editor
+                        height="100%"
+                        language="bibtex"
+                        value={bibtexCode}
+                        theme="vs-light"
+                        options={{
+                          readOnly: true,
+                          minimap: { enabled: false },
+                          scrollBeyondLastLine: false,
+                          fontSize: 14,
+                          lineNumbers: 'on',
+                          wordWrap: 'on',
+                          padding: { top: 8, bottom: 8 },
+                        }}
+                      />
+                    </div>
+                  ) : (
+                    <div className="flex-1 overflow-hidden rounded-lg">
+                      {isCompiling ? (
+                        <div className="flex items-center justify-center h-full">
+                          <div className="text-center">
+                            <Loader2 className="mx-auto h-8 w-8 text-blue-500 animate-spin mb-2" />
+                            <p className="text-sm text-gray-600">Generating preview...</p>
+                          </div>
+                        </div>
+                      ) : previewUrl ? (
+                        <PDFPreview pdfUrl={previewUrl} />
+                      ) : (
+                        <div className="flex items-center justify-center h-full">
+                          <p className="text-gray-400">Preview will appear here...</p>
+                        </div>
+                      )}
+                    </div>
+                  )
                 ) : (
                   <div className="flex items-center justify-center flex-1">
                     <p className="text-gray-400">BibTeX citation will appear here...</p>
