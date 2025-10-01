@@ -85,10 +85,18 @@ export default function AIToolLayout({
   const compileLatex = async (latex: string) => {
     setIsCompiling(true);
     try {
+      // Wrap raw LaTeX in a complete document
+      const fullDocument = `\\documentclass{article}
+\\usepackage{amsmath}
+\\usepackage{amssymb}
+\\begin{document}
+${latex}
+\\end{document}`;
+
       const response = await fetch('/api/compile', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ latex }),
+        body: JSON.stringify({ latex: fullDocument }),
       });
 
       if (response.ok) {
