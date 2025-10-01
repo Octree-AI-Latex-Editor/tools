@@ -6,7 +6,7 @@ Free online conversion tools for LaTeX, HTML, and Math powered by AI.
 
 - **Image to LaTeX** - Convert images of handwritten math and equations to clean LaTeX code using GPT-4o-mini
 - **PDF to LaTeX** - Convert PDF documents with mathematical content to clean LaTeX code using GPT-4o-mini
-- **Table to LaTeX** - Convert CSV, JSON, and Excel tables to clean LaTeX code using GPT-4o-mini
+- **Excel to LaTeX** - Convert CSV, JSON, and Excel tables to clean LaTeX code using GPT-4o-mini
 - **TikZ Generator** - Generate TikZ diagrams and graphics from text descriptions using GPT-4o-mini
 - **LaTeX Preview** - Live LaTeX editor with instant PDF preview
 - **Markdown to LaTeX** - Convert Markdown documents to clean LaTeX code using GPT-4o-mini
@@ -55,7 +55,7 @@ All converters use **GPT-4o-mini** to process different file types:
 - Same powerful AI conversion and preview features
 - Extract LaTeX code from academic papers, textbooks, or notes
 
-### Table to LaTeX
+### Excel to LaTeX
 - Upload CSV, JSON, or Excel files
 - AI-powered conversion to beautifully formatted LaTeX tables
 - Supports complex table structures with booktabs styling

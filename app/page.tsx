@@ -17,7 +17,7 @@ const tools = [
   },
   {
     id: 3,
-    title: "Table to LaTeX",
+    title: "Excel to LaTeX",
     description: "Convert CSV, JSON, Excel to LaTeX tables",
     href: "/tools/table-to-latex",
     icon: "📊",
