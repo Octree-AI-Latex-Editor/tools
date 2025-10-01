@@ -4,7 +4,7 @@ Free online conversion tools for LaTeX, HTML, and Math powered by AI.
 
 ## Tools
 
-- **Math to LaTeX** - Convert handwritten mathematical expressions to clean LaTeX code using GPT-4o-mini
+- **Notes to LaTeX** - Convert handwritten notes and mathematical expressions to clean LaTeX code using GPT-4o-mini
 - **LaTeX to Text** - Convert LaTeX documents to plain text
 - **HTML to Text** - Extract plain text from HTML content
 
@@ -36,20 +36,25 @@ Open [http://localhost:3000](http://localhost:3000) to view the tools.
 
 ## AI Features
 
-The Math to LaTeX converter uses **GPT-4o-mini** to process handwritten mathematical expressions:
+The Notes to LaTeX converter uses **GPT-4o-mini** to process handwritten notes and mathematical expressions:
 
 - Drag and drop images or click to upload
 - Supports JPEG, PNG, PDF formats
-- AI-powered conversion to clean LaTeX code
-- Code/Preview toggle for output verification
+- AI-powered conversion to complete LaTeX documents
+- Code/Preview toggle with professional PDF rendering
+- Preview caching for instant tab switching
+- Export as LaTeX (.tex), PDF, or Image (JPG)
 - One-click "Open in Octree" integration
 
 ## Tech Stack
 
-- Next.js 15
+- Next.js 15 with Turbopack
 - TypeScript
-- Tailwind CSS
+- Tailwind CSS v4
 - OpenAI GPT-4o-mini API
+- Monaco Editor for LaTeX syntax highlighting
+- React-PDF for professional PDF rendering
+- Octree LaTeX Compilation Server
 - Lucide React Icons
 
 ## License

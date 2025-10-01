@@ -6,8 +6,25 @@ import Header from "@/components/Header";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Octree Tools - Free LaTeX, HTML & Math Converters",
-  description: "Free online conversion tools for LaTeX, HTML, and Math expressions",
+  title: "Convert Handwritten Math to LaTeX - Free Online Math Equation Converter | Octree Tools",
+  description: "Free online tool to convert handwritten math equations to LaTeX code. Convert math formula, math text, and mathematical expressions to LaTeX format instantly. AI-powered LaTeX converter with PDF preview.",
+  keywords: [
+    "convert handwritten math to LaTeX",
+    "math equation to LaTeX converter",
+    "convert math to LaTeX",
+    "LaTeX math converter",
+    "math formula to LaTeX",
+    "convert math equation to LaTeX online",
+    "handwritten equation to LaTeX",
+    "math text to LaTeX converter",
+    "free LaTeX converter",
+    "online math to LaTeX",
+  ],
+  openGraph: {
+    title: "Convert Handwritten Math to LaTeX - Free Online Tool",
+    description: "AI-powered tool to convert handwritten math equations and formulas to LaTeX code with instant PDF preview",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

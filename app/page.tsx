@@ -3,8 +3,8 @@ import Link from "next/link";
 const tools = [
   {
     id: 1,
-    title: "Math to LaTeX",
-    description: "Convert mathematical expressions to LaTeX format",
+    title: "Notes to LaTeX",
+    description: "Convert handwritten notes to LaTeX format",
     href: "/tools/math-to-latex",
     icon: "∑",
   },
@@ -32,9 +32,9 @@ export default function Home() {
         <div className="mb-8">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-2xl font-semibold text-gray-900">Tools</h1>
+              <h1 className="text-2xl font-semibold text-gray-900">Free Online Math to LaTeX Converter Tools</h1>
               <p className="text-sm text-gray-500 mt-1">
-                Free online conversion tools for LaTeX, HTML, and Math
+                Convert handwritten math equations, formulas, and expressions to LaTeX code instantly
               </p>
             </div>
           </div>
@@ -83,6 +83,20 @@ export default function Home() {
                 </div>
               </Link>
             ))}
+          </div>
+        </div>
+
+        {/* SEO Content */}
+        <div className="mt-12 prose prose-sm max-w-none text-gray-600">
+          <h2 className="text-lg font-semibold text-gray-900 mb-4">Convert Handwritten Math to LaTeX Online</h2>
+          <p className="mb-4">
+            Our free online math equation to LaTeX converter uses AI to instantly transform handwritten mathematical expressions, formulas, and equations into clean LaTeX code. Whether you need to convert math text to LaTeX, convert math formulas to LaTeX, or convert handwritten math equations to LaTeX format, our tool makes it effortless.
+          </p>
+          <p className="mb-4">
+            Perfect for students, researchers, and educators who need to convert math equations to LaTeX online. Simply upload an image of your handwritten math, and our AI-powered LaTeX math converter will generate properly formatted LaTeX code with a real-time PDF preview.
+          </p>
+          <div className="text-xs text-gray-400 mt-8">
+            Keywords: convert handwritten math to LaTeX, math equation to LaTeX converter, convert math to LaTeX, LaTeX math converter, math formula to LaTeX, convert math equation to LaTeX online, handwritten equation to LaTeX, math text to LaTeX converter, free LaTeX converter
           </div>
         </div>
       </div>
