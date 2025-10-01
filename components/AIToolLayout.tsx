@@ -5,6 +5,9 @@ import { Upload, Code2, Eye, Loader2 } from 'lucide-react';
 import { DM_Sans } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import { OctreeLogo } from '@/components/icons/octree-logo';
+import dynamic from 'next/dynamic';
+
+const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -265,9 +268,23 @@ export default function AIToolLayout({
                   </div>
                 ) : latexCode ? (
                   activeTab === 'code' ? (
-                    <pre className="font-mono text-sm overflow-auto flex-1 p-4 bg-gray-50 rounded-lg">
-                      <code className="latex-code">{latexCode}</code>
-                    </pre>
+                    <div className="flex-1 overflow-hidden rounded-lg">
+                      <Editor
+                        height="100%"
+                        language="latex"
+                        value={latexCode}
+                        theme="vs-light"
+                        options={{
+                          readOnly: true,
+                          minimap: { enabled: false },
+                          scrollBeyondLastLine: false,
+                          fontSize: 14,
+                          lineNumbers: 'on',
+                          wordWrap: 'on',
+                          padding: { top: 8, bottom: 8 },
+                        }}
+                      />
+                    </div>
                   ) : (
                     <div className="flex-1 flex items-center justify-center overflow-auto bg-gray-50 rounded-lg">
                       {isCompiling ? (
