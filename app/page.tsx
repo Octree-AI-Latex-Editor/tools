@@ -1,4 +1,8 @@
+'use client';
+
 import Link from "next/link";
+import { useState } from "react";
+import { Search } from "lucide-react";
 
 const tools = [
   {
@@ -64,9 +68,23 @@ const tools = [
     href: "/tools/ai-latex-generator",
     icon: "✨",
   },
+  {
+    id: 10,
+    title: "HTML to LaTeX",
+    description: "Convert HTML markup to LaTeX format",
+    href: "/tools/html-to-latex",
+    icon: "🌐",
+  },
 ];
 
 export default function Home() {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredTools = tools.filter((tool) =>
+    tool.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    tool.description.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -82,10 +100,26 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Search Bar */}
+        <div className="mb-6">
+          <div className="relative">
+            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <Search className="h-5 w-5 text-gray-400" />
+            </div>
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="block w-full pl-10 pr-3 py-2.5 border border-gray-200 rounded-lg text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              placeholder="Search tools..."
+            />
+          </div>
+        </div>
+
         {/* Tools Grid */}
         <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
           <div className="divide-y divide-gray-200">
-            {tools.map((tool) => (
+            {filteredTools.map((tool) => (
               <Link
                 key={tool.id}
                 href={tool.href}
