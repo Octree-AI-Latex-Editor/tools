@@ -29,6 +29,13 @@ const tools = [
     href: "/tools/tikz-generator",
     icon: "🎨",
   },
+  {
+    id: 5,
+    title: "LaTeX Preview",
+    description: "Live LaTeX editor with PDF preview",
+    href: "/tools/latex-preview",
+    icon: "👁️",
+  },
 ];
 
 export default function Home() {
