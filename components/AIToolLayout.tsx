@@ -238,7 +238,7 @@ export default function AIToolLayout({
 
       // Render PDF page to canvas
       if (context) {
-        // @ts-ignore - pdfjs types are incomplete
+        // @ts-expect-error - pdfjs types are incomplete
         await page.render({
           canvasContext: context,
           viewport: viewport,
