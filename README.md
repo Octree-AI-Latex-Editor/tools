@@ -4,7 +4,7 @@ Free online conversion tools for LaTeX, HTML, and Math powered by AI.
 
 ## Tools
 
-- **Notes to LaTeX** - Convert handwritten notes and mathematical expressions to clean LaTeX code using GPT-4o-mini
+- **Image to LaTeX** - Convert images of handwritten math and equations to clean LaTeX code using GPT-4o-mini
 - **LaTeX to Text** - Convert LaTeX documents to plain text
 - **HTML to Text** - Extract plain text from HTML content
 
@@ -36,7 +36,7 @@ Open [http://localhost:3000](http://localhost:3000) to view the tools.
 
 ## AI Features
 
-The Notes to LaTeX converter uses **GPT-4o-mini** to process handwritten notes and mathematical expressions:
+The Image to LaTeX converter uses **GPT-4o-mini** to process images of handwritten math and equations:
 
 - Drag and drop images or click to upload
 - Supports JPEG, PNG, PDF formats

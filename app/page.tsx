@@ -3,8 +3,8 @@ import Link from "next/link";
 const tools = [
   {
     id: 1,
-    title: "Notes to LaTeX",
-    description: "Convert handwritten notes to LaTeX format",
+    title: "Image to LaTeX",
+    description: "Convert images to LaTeX format",
     href: "/tools/math-to-latex",
     icon: "∑",
   },

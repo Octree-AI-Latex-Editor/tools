@@ -3,8 +3,8 @@ import AIToolLayout from '@/components/AIToolLayout';
 export default function MathToLatex() {
   return (
     <AIToolLayout
-      title="Notes to LaTeX Converter"
-      description="Convert handwritten notes and mathematical expressions to clean LaTeX code"
+      title="Image to LaTeX Converter"
+      description="Convert images of handwritten math and equations to clean LaTeX code"
       apiEndpoint="/api/convert"
       inputLabel="Your Handwritten Notes"
       outputLabel="Clean LaTeX Code"
