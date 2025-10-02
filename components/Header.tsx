@@ -14,7 +14,7 @@ export default function Header() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex h-14 items-center justify-between">
           <div className="flex items-center">
-            <Link href="https://useoctree.com" className="flex items-center space-x-2">
+            <Link href="https://app.useoctree.com" className="flex items-center space-x-2">
               <OctreeLogo className="h-7 w-7" />
               <span
                 className={cn(
@@ -27,7 +27,15 @@ export default function Header() {
             </Link>
           </div>
           <div className="flex items-center">
-            {/* Empty div to maintain same structure as ai-latex-editor navbar */}
+            <Link 
+              href="https://app.useoctree.com/settings" 
+              className={cn(
+                'text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors',
+                dmSans.className
+              )}
+            >
+              Settings
+            </Link>
           </div>
         </div>
       </div>
