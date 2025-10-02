@@ -2,6 +2,7 @@ import Link from "next/link";
 import { OctreeLogo } from '@/components/icons/octree-logo';
 import { DM_Sans } from 'next/font/google';
 import { cn } from '@/lib/utils';
+import { UserDropdown } from '@/components/user-dropdown';
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -27,15 +28,7 @@ export default function Header() {
             </Link>
           </div>
           <div className="flex items-center">
-            <Link 
-              href="https://app.useoctree.com/settings" 
-              className={cn(
-                'text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors',
-                dmSans.className
-              )}
-            >
-              Settings
-            </Link>
+            <UserDropdown />
           </div>
         </div>
       </div>
