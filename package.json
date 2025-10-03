@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@monaco-editor/react": "^4.7.0",
+    "@supabase/supabase-js": "2.45.4",
     "@types/react-syntax-highlighter": "^15.5.13",
     "clsx": "^2.1.1",
     "lucide-react": "^0.544.0",
