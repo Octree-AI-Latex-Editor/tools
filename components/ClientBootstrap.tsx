@@ -8,6 +8,14 @@ export default function ClientBootstrap() {
     // If we have a pending draft intent and are now authenticated on tools, complete SSO and post
     (async () => {
       try {
+        // Strip OAuth hash tokens from URL to avoid leaking into any next params
+        if (typeof window !== 'undefined' && window.location.hash) {
+          const hash = window.location.hash;
+          if (hash.startsWith('#access_token') || hash.includes('provider_token')) {
+            history.replaceState(null, '', window.location.pathname + window.location.search);
+          }
+        }
+
         const { createClient } = await import('@supabase/supabase-js');
         const supabase = createClient(
           process.env.NEXT_PUBLIC_SUPABASE_URL as string,
