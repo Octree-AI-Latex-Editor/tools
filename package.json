@@ -13,6 +13,8 @@
     "@monaco-editor/react": "^4.7.0",
     "@supabase/supabase-js": "2.45.4",
     "@types/react-syntax-highlighter": "^15.5.13",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.544.0",
     "monaco-editor": "^0.53.0",
