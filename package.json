@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "compile-templates": "node scripts/compile-templates.mjs"
   },
   "dependencies": {
     "@monaco-editor/react": "^4.7.0",
