@@ -36,7 +36,7 @@ export default function CitationGenerator() {
   const [bibtexCode, setBibtexCode] = useState<string>('');
   const [isProcessing, setIsProcessing] = useState(false);
   const [error, setError] = useState<string>('');
-  const [activeTab, setActiveTab] = useState<'code' | 'preview'>('preview');
+  const [activeTab, setActiveTab] = useState<'code' | 'preview'>('code');
   const [previewUrl, setPreviewUrl] = useState<string>('');
   const [isCompiling, setIsCompiling] = useState(false);
   const [lastCompiledBibtex, setLastCompiledBibtex] = useState<string>('');
@@ -67,6 +67,7 @@ export default function CitationGenerator() {
     
     setIsProcessing(true);
     setError('');
+    setBibtexCode(''); // Clear previous content
 
     try {
       const response = await fetch('/api/generate-citation', {
@@ -77,8 +78,21 @@ export default function CitationGenerator() {
 
       if (!response.ok) throw new Error('Citation generation failed');
 
-      const data = await response.json();
-      setBibtexCode(data.bibtex || '');
+      const reader = response.body?.getReader();
+      const decoder = new TextDecoder();
+
+      if (!reader) throw new Error('No response body');
+
+      let accumulatedText = '';
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+
+        const chunk = decoder.decode(value, { stream: true });
+        accumulatedText += chunk;
+        setBibtexCode(accumulatedText);
+      }
     } catch (err) {
       setError('Failed to generate citation. Please try again.');
       console.error(err);
@@ -138,11 +152,11 @@ ${bibtex.replace(/@\w+\{[^,]+,/, '').replace(/}/g, '').split('\n').filter(line =
   };
 
   useEffect(() => {
-    if (bibtexCode && activeTab === 'preview') {
+    if (bibtexCode && activeTab === 'preview' && !isProcessing) {
       compileBibtex(bibtexCode);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [bibtexCode, activeTab]);
+  }, [bibtexCode, activeTab, isProcessing]);
 
   const exportAsBibtex = () => {
     const blob = new Blob([bibtexCode], { type: 'text/plain' });
@@ -252,7 +266,7 @@ ${bibtex.replace(/@\w+\{[^,]+,/, '').replace(/}/g, '').split('\n').filter(line =
               </div>
 
               <div className="p-6 flex-1 flex flex-col overflow-hidden">
-                {isProcessing ? (
+                {!bibtexCode && isProcessing ? (
                   <div className="flex items-center justify-center flex-1">
                     <div className="text-center">
                       <Loader2 className="mx-auto h-12 w-12 text-blue-500 animate-spin mb-4" />
@@ -261,7 +275,7 @@ ${bibtex.replace(/@\w+\{[^,]+,/, '').replace(/}/g, '').split('\n').filter(line =
                   </div>
                 ) : bibtexCode ? (
                   activeTab === 'code' ? (
-                    <div className="flex-1 overflow-hidden rounded-lg">
+                    <div className="flex-1 overflow-hidden rounded-lg relative">
                       <Editor
                         height="100%"
                         language="bibtex"
@@ -277,6 +291,12 @@ ${bibtex.replace(/@\w+\{[^,]+,/, '').replace(/}/g, '').split('\n').filter(line =
                           padding: { top: 8, bottom: 8 },
                         }}
                       />
+                      {isProcessing && (
+                        <div className="absolute top-2 right-2 flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1.5 rounded-md text-sm shadow-sm">
+                          <Loader2 className="h-4 w-4 animate-spin" />
+                          Generating...
+                        </div>
+                      )}
                     </div>
                   ) : (
                     <div className="flex-1 overflow-hidden rounded-lg">

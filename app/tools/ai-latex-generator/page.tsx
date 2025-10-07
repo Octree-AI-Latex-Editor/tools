@@ -36,7 +36,7 @@ export default function AILatexGenerator() {
   const [latexCode, setLatexCode] = useState<string>('');
   const [isProcessing, setIsProcessing] = useState(false);
   const [error, setError] = useState<string>('');
-  const [activeTab, setActiveTab] = useState<'code' | 'preview'>('preview');
+  const [activeTab, setActiveTab] = useState<'code' | 'preview'>('code');
   const [previewUrl, setPreviewUrl] = useState<string>('');
   const [isCompiling, setIsCompiling] = useState(false);
   const [lastCompiledLatex, setLastCompiledLatex] = useState<string>('');
@@ -56,6 +56,7 @@ export default function AILatexGenerator() {
     
     setIsProcessing(true);
     setError('');
+    setLatexCode(''); // Clear previous content
 
     try {
       const response = await fetch('/api/generate-latex', {
@@ -66,8 +67,21 @@ export default function AILatexGenerator() {
 
       if (!response.ok) throw new Error('Generation failed');
 
-      const data = await response.json();
-      setLatexCode(data.latex || '');
+      const reader = response.body?.getReader();
+      const decoder = new TextDecoder();
+
+      if (!reader) throw new Error('No response body');
+
+      let accumulatedText = '';
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+
+        const chunk = decoder.decode(value, { stream: true });
+        accumulatedText += chunk;
+        setLatexCode(accumulatedText);
+      }
     } catch (err) {
       setError('Failed to generate LaTeX. Please try again.');
       console.error(err);
@@ -100,11 +114,11 @@ export default function AILatexGenerator() {
   };
 
   useEffect(() => {
-    if (latexCode && activeTab === 'preview') {
+    if (latexCode && activeTab === 'preview' && !isProcessing) {
       compileLatex(latexCode);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [latexCode, activeTab]);
+  }, [latexCode, activeTab, isProcessing]);
 
   const exportAsLatex = () => {
     const blob = new Blob([latexCode], { type: 'text/plain' });
@@ -235,7 +249,7 @@ export default function AILatexGenerator() {
               </div>
 
               <div className="p-6 flex-1 flex flex-col overflow-hidden">
-                {isProcessing ? (
+                {!latexCode && isProcessing ? (
                   <div className="flex items-center justify-center flex-1">
                     <div className="text-center">
                       <Loader2 className="mx-auto h-12 w-12 text-blue-500 animate-spin mb-4" />
@@ -244,7 +258,7 @@ export default function AILatexGenerator() {
                   </div>
                 ) : latexCode ? (
                   activeTab === 'code' ? (
-                    <div className="flex-1 overflow-hidden rounded-lg">
+                    <div className="flex-1 overflow-hidden rounded-lg relative">
                       <Editor
                         height="100%"
                         language="latex"
@@ -260,6 +274,12 @@ export default function AILatexGenerator() {
                           padding: { top: 8, bottom: 8 },
                         }}
                       />
+                      {isProcessing && (
+                        <div className="absolute top-2 right-2 flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1.5 rounded-md text-sm shadow-sm">
+                          <Loader2 className="h-4 w-4 animate-spin" />
+                          Generating...
+                        </div>
+                      )}
                     </div>
                   ) : (
                     <div className="flex-1 overflow-hidden rounded-lg">

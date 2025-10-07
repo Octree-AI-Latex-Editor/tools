@@ -12,13 +12,13 @@ const tools = [
     href: "/tools/math-to-latex",
     icon: "🖼️",
   },
-  {
-    id: 2,
-    title: "PDF to LaTeX",
-    description: "Convert PDF documents to LaTeX format",
-    href: "/tools/pdf-to-latex",
-    icon: "📄",
-  },
+  // {
+  //   id: 2,
+  //   title: "PDF to LaTeX",
+  //   description: "Convert PDF documents to LaTeX format",
+  //   href: "/tools/pdf-to-latex",
+  //   icon: "📄",
+  // },
   {
     id: 3,
     title: "Excel to LaTeX",
