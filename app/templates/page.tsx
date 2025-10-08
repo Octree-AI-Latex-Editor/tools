@@ -65,8 +65,8 @@ Summarize your contributions and future work.
     title: "Presentation (Beamer)",
     description: "Professional slide deck template",
     icon: "📊",
-    previewUrl: "/templates/presentation-beamer.pdf",
-    slug: "presentation-beamer",
+    previewUrl: "/templates/beamer-presentation.pdf",
+    slug: "beamer-presentation",
     code: `\\documentclass{beamer}
 \\usetheme{Madrid}
 \\usecolortheme{default}
