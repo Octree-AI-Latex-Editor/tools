@@ -22,11 +22,40 @@ export const metadata: Metadata = {
     "math text to LaTeX converter",
     "free LaTeX converter",
     "online math to LaTeX",
+    "AI LaTeX generator",
+    "LaTeX citation generator",
+    "TikZ generator",
+    "Markdown to LaTeX",
+    "HTML to LaTeX",
+    "MathML to LaTeX",
   ],
+  metadataBase: new URL('https://tools.useoctree.com'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: "Convert Handwritten Math to LaTeX - Free Online Tool",
     description: "AI-powered tool to convert handwritten math equations and formulas to LaTeX code with instant PDF preview",
+    url: 'https://tools.useoctree.com',
+    siteName: 'Octree LaTeX Tools',
+    locale: 'en_US',
     type: "website",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Convert Handwritten Math to LaTeX - Free Online Tool",
+    description: "AI-powered tool to convert handwritten math equations and formulas to LaTeX code with instant PDF preview",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 

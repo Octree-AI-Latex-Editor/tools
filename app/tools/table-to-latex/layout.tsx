@@ -12,11 +12,24 @@ export const metadata: Metadata = {
     "free Excel to LaTeX converter",
     "CSV to LaTeX table",
     "Excel to LaTeX table",
+    "spreadsheet to LaTeX",
+    "table to LaTeX",
   ],
+  alternates: {
+    canonical: '/tools/table-to-latex',
+  },
   openGraph: {
     title: "Convert Excel to LaTeX - Free Online Converter",
     description: "AI-powered converter for CSV, JSON, and Excel spreadsheets to LaTeX code with instant preview",
+    url: 'https://tools.useoctree.com/tools/table-to-latex',
+    siteName: 'Octree LaTeX Tools',
+    locale: 'en_US',
     type: "website",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Convert Excel to LaTeX - Free Online Converter",
+    description: "AI-powered converter for CSV, JSON, and Excel spreadsheets to LaTeX code with instant preview",
   },
 };
 

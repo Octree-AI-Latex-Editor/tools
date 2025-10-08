@@ -11,11 +11,24 @@ export const metadata: Metadata = {
     "PDF LaTeX converter",
     "free PDF to LaTeX converter",
     "AI PDF to LaTeX converter",
+    "PDF math to LaTeX",
+    "extract LaTeX from PDF",
   ],
+  alternates: {
+    canonical: '/tools/pdf-to-latex',
+  },
   openGraph: {
     title: "Convert PDF to LaTeX - Free Online Converter",
     description: "AI-powered converter for PDF documents to LaTeX code with instant preview",
+    url: 'https://tools.useoctree.com/tools/pdf-to-latex',
+    siteName: 'Octree LaTeX Tools',
+    locale: 'en_US',
     type: "website",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Convert PDF to LaTeX - Free Online Converter",
+    description: "AI-powered converter for PDF documents to LaTeX code with instant preview",
   },
 };
 

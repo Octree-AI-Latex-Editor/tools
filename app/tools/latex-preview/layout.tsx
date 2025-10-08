@@ -11,11 +11,24 @@ export const metadata: Metadata = {
     "free LaTeX editor",
     "LaTeX PDF preview",
     "LaTeX online",
+    "real-time LaTeX compiler",
+    "LaTeX playground",
   ],
+  alternates: {
+    canonical: '/tools/latex-preview',
+  },
   openGraph: {
     title: "LaTeX Preview - Live Online LaTeX Editor",
     description: "Free LaTeX editor with instant PDF preview - write and compile LaTeX in real-time",
+    url: 'https://tools.useoctree.com/tools/latex-preview',
+    siteName: 'Octree LaTeX Tools',
+    locale: 'en_US',
     type: "website",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "LaTeX Preview - Live Online LaTeX Editor",
+    description: "Free LaTeX editor with instant PDF preview - write and compile LaTeX in real-time",
   },
 };
 

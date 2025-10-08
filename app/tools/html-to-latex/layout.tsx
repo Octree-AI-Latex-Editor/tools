@@ -11,11 +11,23 @@ export const metadata: Metadata = {
     "HTML LaTeX converter",
     "free HTML to LaTeX converter",
     "AI HTML to LaTeX converter",
+    "web to LaTeX converter",
   ],
+  alternates: {
+    canonical: '/tools/html-to-latex',
+  },
   openGraph: {
     title: "Convert HTML to LaTeX - Free Online Converter",
     description: "AI-powered converter for HTML markup to LaTeX code with instant preview",
+    url: 'https://tools.useoctree.com/tools/html-to-latex',
+    siteName: 'Octree LaTeX Tools',
+    locale: 'en_US',
     type: "website",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Convert HTML to LaTeX - Free Online Converter",
+    description: "AI-powered converter for HTML markup to LaTeX code with instant preview",
   },
 };
 

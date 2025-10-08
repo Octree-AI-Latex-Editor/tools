@@ -12,11 +12,23 @@ export const metadata: Metadata = {
     "free Markdown to LaTeX converter",
     "AI Markdown to LaTeX converter",
     "Markdown math to LaTeX",
+    "MD to LaTeX",
   ],
+  alternates: {
+    canonical: '/tools/markdown-to-latex',
+  },
   openGraph: {
     title: "Convert Markdown to LaTeX - Free Online Converter",
     description: "AI-powered converter for Markdown documents to LaTeX code with instant preview",
+    url: 'https://tools.useoctree.com/tools/markdown-to-latex',
+    siteName: 'Octree LaTeX Tools',
+    locale: 'en_US',
     type: "website",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Convert Markdown to LaTeX - Free Online Converter",
+    description: "AI-powered converter for Markdown documents to LaTeX code with instant preview",
   },
 };
 

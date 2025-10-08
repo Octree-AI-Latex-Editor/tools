@@ -12,11 +12,24 @@ export const metadata: Metadata = {
     "text to LaTeX",
     "LaTeX document generator",
     "free LaTeX generator",
+    "GPT LaTeX generator",
+    "AI academic paper generator",
   ],
+  alternates: {
+    canonical: '/tools/ai-latex-generator',
+  },
   openGraph: {
     title: "AI LaTeX Generator - Generate LaTeX from Text",
     description: "AI-powered tool to generate complete LaTeX documents from text descriptions",
+    url: 'https://tools.useoctree.com/tools/ai-latex-generator',
+    siteName: 'Octree LaTeX Tools',
+    locale: 'en_US',
     type: "website",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "AI LaTeX Generator - Generate LaTeX from Text",
+    description: "AI-powered tool to generate complete LaTeX documents from text descriptions",
   },
 };
 

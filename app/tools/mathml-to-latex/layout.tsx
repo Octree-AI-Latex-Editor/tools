@@ -11,11 +11,23 @@ export const metadata: Metadata = {
     "MathML LaTeX converter",
     "free MathML to LaTeX converter",
     "AI MathML to LaTeX converter",
+    "MathML parser",
   ],
+  alternates: {
+    canonical: '/tools/mathml-to-latex',
+  },
   openGraph: {
     title: "Convert MathML to LaTeX - Free Online Converter",
     description: "AI-powered converter for MathML markup to LaTeX code with instant preview",
+    url: 'https://tools.useoctree.com/tools/mathml-to-latex',
+    siteName: 'Octree LaTeX Tools',
+    locale: 'en_US',
     type: "website",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Convert MathML to LaTeX - Free Online Converter",
+    description: "AI-powered converter for MathML markup to LaTeX code with instant preview",
   },
 };
 

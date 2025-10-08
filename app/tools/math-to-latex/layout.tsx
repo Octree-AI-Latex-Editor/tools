@@ -14,11 +14,24 @@ export const metadata: Metadata = {
     "math text to LaTeX",
     "free math to LaTeX converter",
     "AI LaTeX converter",
+    "image to LaTeX math",
+    "photo to LaTeX",
   ],
+  alternates: {
+    canonical: '/tools/math-to-latex',
+  },
   openGraph: {
     title: "Convert Handwritten Math to LaTeX - Free Online Converter",
     description: "AI-powered converter for handwritten math equations and formulas to LaTeX code with instant preview",
+    url: 'https://tools.useoctree.com/tools/math-to-latex',
+    siteName: 'Octree LaTeX Tools',
+    locale: 'en_US',
     type: "website",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Convert Handwritten Math to LaTeX - Free Online Converter",
+    description: "AI-powered converter for handwritten math equations and formulas to LaTeX code with instant preview",
   },
 };
 
