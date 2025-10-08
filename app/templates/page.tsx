@@ -412,10 +412,8 @@ export default function TemplatesPage() {
               <ArrowLeft className="h-4 w-4" />
               Back to Tools
             </Link>
-            <h1 className="text-4xl font-bold text-gray-900 mb-2">
-              LaTeX Templates
-            </h1>
-            <p className="text-lg text-gray-600">
+            <h1 className="text-2xl font-light text-gray-900">LaTeX Templates</h1>
+            <p className="text-sm text-gray-500 mt-1">
               Professional templates for research papers, presentations, CVs, and more
             </p>
           </div>
