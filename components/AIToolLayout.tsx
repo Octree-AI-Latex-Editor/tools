@@ -452,15 +452,28 @@ export default function AIToolLayout({
                     Code
                   </button>
                   <button
-                    onClick={() => setActiveTab('preview')}
+                    onClick={(e) => {
+                      if (isCompiling || isProcessing) {
+                        e.preventDefault();
+                        return;
+                      }
+                      setActiveTab('preview');
+                    }}
+                    disabled={isCompiling || isProcessing}
                     className={`flex items-center gap-2 px-4 py-2.5 text-sm font-medium border-b-2 transition-colors ${
                       activeTab === 'preview'
                         ? 'border-blue-600 text-gray-900 bg-blue-50'
                         : 'border-transparent text-gray-500 hover:text-gray-700'
-                    }`}
+                    } ${(isCompiling || isProcessing) ? 'opacity-50 cursor-not-allowed' : ''}`}
                   >
                     <Eye className="h-4 w-4" />
                     Preview
+                    {isProcessing && (
+                      <span className="text-xs text-gray-400">(Generating...)</span>
+                    )}
+                    {!isProcessing && isCompiling && (
+                      <span className="text-xs text-gray-400">(Compiling...)</span>
+                    )}
                   </button>
                 </div>
               </div>
