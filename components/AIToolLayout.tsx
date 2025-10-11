@@ -56,7 +56,7 @@ export default function AIToolLayout({
 
   // Convert acceptedFormats to file accept attribute
   const getAcceptAttribute = () => {
-    if (acceptedFormats.includes('CSV')) return '.csv,.json,.xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+    if (acceptedFormats.includes('CSV')) return '.csv,text/csv';
     if (acceptedFormats.includes('PDF')) return 'application/pdf';
     return 'image/*,.pdf';
   };
@@ -150,35 +150,24 @@ export default function AIToolLayout({
 
     const file = e.dataTransfer.files[0];
     if (file) {
+      if (!file.name.toLowerCase().endsWith('.csv') && file.type !== 'text/csv') {
+        setError('Only CSV files are supported for this tool.');
+        return;
+      }
+
       setUploadedFileName(file.name);
       const reader = new FileReader();
-      
-      // Detect file type
-      let detectedType = 'math';
-      if (file.name.endsWith('.csv') || file.type === 'text/csv') {
-        detectedType = 'csv';
-      } else if (file.name.endsWith('.json') || file.type === 'application/json') {
-        detectedType = 'json';
-      } else if (file.name.endsWith('.xlsx') || file.type === 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') {
-        detectedType = 'xlsx';
-      }
-      
-      const isTable = detectedType === 'csv' || detectedType === 'json' || detectedType === 'xlsx';
-      setIsTableFile(isTable);
-      setFileType(detectedType);
-      
+
+      setIsTableFile(true);
+      setFileType('csv');
+
       reader.onload = (event) => {
         const data = event.target?.result as string;
         setImageData(data);
         processImage(data);
       };
-      
-      // Handle different file types
-      if (isTable) {
-        reader.readAsText(file);
-      } else {
-        reader.readAsDataURL(file);
-      }
+
+      reader.readAsText(file);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -195,35 +184,24 @@ export default function AIToolLayout({
   const handleFileInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
+      if (!file.name.toLowerCase().endsWith('.csv') && file.type !== 'text/csv') {
+        setError('Only CSV files are supported for this tool.');
+        return;
+      }
+
       setUploadedFileName(file.name);
       const reader = new FileReader();
-      
-      // Detect file type
-      let detectedType = 'math';
-      if (file.name.endsWith('.csv') || file.type === 'text/csv') {
-        detectedType = 'csv';
-      } else if (file.name.endsWith('.json') || file.type === 'application/json') {
-        detectedType = 'json';
-      } else if (file.name.endsWith('.xlsx') || file.type === 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') {
-        detectedType = 'xlsx';
-      }
-      
-      const isTable = detectedType === 'csv' || detectedType === 'json' || detectedType === 'xlsx';
-      setIsTableFile(isTable);
-      setFileType(detectedType);
-      
+
+      setIsTableFile(true);
+      setFileType('csv');
+
       reader.onload = (event) => {
         const data = event.target?.result as string;
         setImageData(data);
         processImage(data);
       };
-      
-      // Handle different file types
-      if (isTable) {
-        reader.readAsText(file);
-      } else {
-        reader.readAsDataURL(file);
-      }
+
+      reader.readAsText(file);
     }
   };
 

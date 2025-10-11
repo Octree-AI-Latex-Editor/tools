@@ -5,12 +5,12 @@ import AIToolLayout from '@/components/AIToolLayout';
 export default function TableToLatex() {
   return (
     <AIToolLayout
-      title="Excel to LaTeX Converter"
-      description="Convert CSV, JSON, and Excel tables to clean LaTeX code"
+      title="CSV to LaTeX Converter"
+      description="Upload a .csv file and instantly get clean LaTeX table code."
       apiEndpoint="/api/convert-table"
-      inputLabel="Your Table File"
-      outputLabel="Clean LaTeX Code"
-      acceptedFormats="CSV, JSON, XLSX"
+      inputLabel="Upload CSV File"
+      outputLabel="LaTeX Table Output"
+      acceptedFormats="CSV"
     />
   );
 } 
