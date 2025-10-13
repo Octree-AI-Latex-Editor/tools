@@ -89,6 +89,13 @@ const tools = [
     href: "/tools/mermaid-to-latex",
     icon: "🔷",
   },
+  {
+    id: 12,
+    title: "Pgfplots Generator",
+    description: "Generate pgfplots graphs and charts with AI",
+    href: "/tools/pgfplots-generator",
+    icon: "📈",
+  },
 ];
 
 const templates = [
