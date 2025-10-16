@@ -28,6 +28,7 @@ The following PDF files should be in this directory:
 - `letter.pdf` - Formal letter template
 - `book-chapter.pdf` - Book chapter template
 - `algorithm-pseudocode.pdf` - Algorithm pseudocode template
+- `grading-rubric.pdf` - Assessment criteria and grading template
 
 ## Manual Generation
 

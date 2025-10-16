@@ -346,6 +346,138 @@ Final thoughts and future directions.
 
 \\end{document}`,
   },
+  {
+    id: 7,
+    title: "Grading Rubric",
+    description: "Assessment criteria and grading template",
+    icon: "✓",
+    previewUrl: "/templates/grading-rubric.pdf",
+    slug: "grading-rubric",
+    code: `\\documentclass[11pt]{article}
+\\usepackage[utf8]{inputenc}
+\\usepackage[margin=0.75in]{geometry}
+\\usepackage{array}
+\\usepackage{xcolor}
+\\usepackage{colortbl}
+
+\\setlength{\\parindent}{0pt}
+
+\\begin{document}
+
+\\begin{center}
+{\\Large \\textbf{Assignment Grading Rubric}}\\\\[0.3cm]
+Course: CS 101 | Assignment: Final Project | Total Points: 100
+\\end{center}
+
+\\vspace{0.5cm}
+
+\\textbf{Student Name:} \\underline{\\hspace{3in}} \\textbf{Score:} \\underline{\\hspace{0.5in}}/100
+
+\\vspace{0.5cm}
+
+\\begin{table}[h]
+\\renewcommand{\\arraystretch}{1.5}
+\\begin{tabular}{|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{1.5cm}|}
+\\hline
+\\rowcolor{gray!30}
+\\textbf{Criteria} & \\textbf{Excellent (4)} & \\textbf{Good (3)} & \\textbf{Fair (2)} & \\textbf{Poor (1)} & \\textbf{Score} \\\\
+\\hline
+
+\\textbf{Content \\& Accuracy} (20 pts) & 
+All information accurate and comprehensive & 
+Most information accurate and complete & 
+Some inaccuracies or gaps & 
+Major errors or missing content & 
+\\underline{\\hspace{0.5cm}}/20 \\\\
+\\hline
+
+\\textbf{Organization} (15 pts) & 
+Excellent structure, logical flow & 
+Good structure, mostly clear & 
+Some organization issues & 
+Poorly organized & 
+\\underline{\\hspace{0.5cm}}/15 \\\\
+\\hline
+
+\\textbf{Technical Implementation} (25 pts) & 
+Code works perfectly, well-documented & 
+Code works with minor issues & 
+Code has significant bugs & 
+Code doesn't work & 
+\\underline{\\hspace{0.5cm}}/25 \\\\
+\\hline
+
+\\textbf{Analysis \\& Critical Thinking} (15 pts) & 
+Deep analysis and insight & 
+Good analysis & 
+Basic analysis & 
+Little to no analysis & 
+\\underline{\\hspace{0.5cm}}/15 \\\\
+\\hline
+
+\\textbf{Presentation \\& Style} (10 pts) & 
+Professional, clear, engaging & 
+Well-presented & 
+Adequate presentation & 
+Poor presentation & 
+\\underline{\\hspace{0.5cm}}/10 \\\\
+\\hline
+
+\\textbf{Citations \\& References} (10 pts) & 
+All sources cited properly & 
+Most sources cited & 
+Some citations missing & 
+Few or no citations & 
+\\underline{\\hspace{0.5cm}}/10 \\\\
+\\hline
+
+\\textbf{Creativity \\& Innovation} (5 pts) & 
+Highly creative approach & 
+Some creativity shown & 
+Limited creativity & 
+No creativity & 
+\\underline{\\hspace{0.5cm}}/5 \\\\
+\\hline
+
+\\end{tabular}
+\\end{table}
+
+\\vspace{0.5cm}
+
+\\textbf{Deductions:}
+\\begin{itemize}
+\\item Late submission: \\underline{\\hspace{0.5cm}} points
+\\item Formatting issues: \\underline{\\hspace{0.5cm}} points
+\\item Other: \\underline{\\hspace{0.5cm}} points
+\\end{itemize}
+
+\\vspace{0.5cm}
+
+\\textbf{Strengths:}\\\\
+\\underline{\\hspace{\\textwidth}}\\\\
+\\underline{\\hspace{\\textwidth}}\\\\
+\\underline{\\hspace{\\textwidth}}
+
+\\vspace{0.5cm}
+
+\\textbf{Areas for Improvement:}\\\\
+\\underline{\\hspace{\\textwidth}}\\\\
+\\underline{\\hspace{\\textwidth}}\\\\
+\\underline{\\hspace{\\textwidth}}
+
+\\vspace{0.5cm}
+
+\\textbf{Additional Comments:}\\\\
+\\underline{\\hspace{\\textwidth}}\\\\
+\\underline{\\hspace{\\textwidth}}\\\\
+\\underline{\\hspace{\\textwidth}}
+
+\\vspace{1cm}
+
+\\textbf{Grader:} \\underline{\\hspace{2in}} \\textbf{Date:} \\underline{\\hspace{1.5in}}
+
+\\end{document}`,
+  },
 ];
 
 export default function TemplatesPage() {
