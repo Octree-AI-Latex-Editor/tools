@@ -478,6 +478,91 @@ No creativity &
 
 \\end{document}`,
   },
+  {
+    id: 8,
+    title: "Assignment",
+    description: "Homework and assignment template",
+    icon: "📚",
+    previewUrl: "/templates/assignment.pdf",
+    slug: "assignment",
+    code: `\\documentclass[12pt]{article}
+\\usepackage[utf8]{inputenc}
+\\usepackage[margin=1in]{geometry}
+\\usepackage{amsmath,amssymb}
+\\usepackage{fancyhdr}
+\\usepackage{enumerate}
+
+\\pagestyle{fancy}
+\\fancyhf{}
+\\lhead{Student Name}
+\\chead{Assignment Title}
+\\rhead{Due Date}
+\\cfoot{\\thepage}
+
+\\setlength{\\parindent}{0pt}
+\\setlength{\\parskip}{10pt}
+
+\\begin{document}
+
+\\begin{center}
+{\\Large \\textbf{Assignment 1: Introduction to Calculus}}\\\\[0.3cm]
+Course: MATH 101 | Instructor: Dr. Smith | Due: October 20, 2025
+\\end{center}
+
+\\section*{Problem 1}
+Find the derivative of $f(x) = 3x^2 + 5x - 2$.
+
+\\textbf{Solution:}\\\\
+Using the power rule:
+\\begin{align*}
+f'(x) &= \\frac{d}{dx}(3x^2 + 5x - 2)\\\\
+&= 3 \\cdot 2x + 5 - 0\\\\
+&= 6x + 5
+\\end{align*}
+
+\\section*{Problem 2}
+Evaluate the following integral:
+\\[
+\\int (2x + 3) \\, dx
+\\]
+
+\\textbf{Solution:}\\\\
+Using the power rule for integration:
+\\[
+\\int (2x + 3) \\, dx = x^2 + 3x + C
+\\]
+where $C$ is the constant of integration.
+
+\\section*{Problem 3}
+Solve the following limit:
+\\[
+\\lim_{x \\to 2} \\frac{x^2 - 4}{x - 2}
+\\]
+
+\\textbf{Solution:}\\\\
+We can factor the numerator:
+\\begin{align*}
+\\lim_{x \\to 2} \\frac{x^2 - 4}{x - 2} &= \\lim_{x \\to 2} \\frac{(x-2)(x+2)}{x - 2}\\\\
+&= \\lim_{x \\to 2} (x + 2)\\\\
+&= 4
+\\end{align*}
+
+\\section*{Problem 4}
+Find the equation of the tangent line to $f(x) = x^3 - 2x$ at the point $(1, -1)$.
+
+\\textbf{Solution:}\\\\
+First, find the derivative: $f'(x) = 3x^2 - 2$
+
+At $x = 1$: $f'(1) = 3(1)^2 - 2 = 1$
+
+Using point-slope form:
+\\begin{align*}
+y - (-1) &= 1(x - 1)\\\\
+y &= x - 2
+\\end{align*}
+
+\\end{document}`,
+  },
 ];
 
 export default function TemplatesPage() {
