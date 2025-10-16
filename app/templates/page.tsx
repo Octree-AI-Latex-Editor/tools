@@ -563,6 +563,102 @@ y &= x - 2
 
 \\end{document}`,
   },
+  {
+    id: 9,
+    title: "Worksheet",
+    description: "Practice problems and exercises template",
+    icon: "✏️",
+    previewUrl: "/templates/worksheet.pdf",
+    slug: "worksheet",
+    code: `\\documentclass[12pt]{article}
+\\usepackage[utf8]{inputenc}
+\\usepackage[margin=1in]{geometry}
+\\usepackage{amsmath,amssymb}
+\\usepackage{enumitem}
+
+\\setlength{\\parindent}{0pt}
+
+\\begin{document}
+
+\\begin{center}
+{\\Large \\textbf{Algebra Worksheet}}\\\\[0.2cm]
+Name: \\underline{\\hspace{3in}} Date: \\underline{\\hspace{1.5in}}
+\\end{center}
+
+\\vspace{0.5cm}
+
+\\textbf{Instructions:} Solve each problem. Show all work for full credit.
+
+\\vspace{0.5cm}
+
+\\section*{Part A: Linear Equations}
+
+\\begin{enumerate}[leftmargin=*, itemsep=1.5cm]
+
+\\item Solve for $x$: $2x + 5 = 13$
+
+\\vspace{2cm}
+
+\\item Solve for $y$: $3y - 7 = 2y + 4$
+
+\\vspace{2cm}
+
+\\item Solve for $x$: $\\frac{x}{4} + 2 = 7$
+
+\\vspace{2cm}
+
+\\end{enumerate}
+
+\\section*{Part B: Quadratic Equations}
+
+\\begin{enumerate}[leftmargin=*, itemsep=1.5cm, resume]
+
+\\item Factor completely: $x^2 + 5x + 6$
+
+\\vspace{2cm}
+
+\\item Solve using the quadratic formula: $x^2 - 3x - 4 = 0$
+
+\\vspace{3cm}
+
+\\item Find the vertex of $f(x) = x^2 - 4x + 3$
+
+\\vspace{2cm}
+
+\\end{enumerate}
+
+\\section*{Part C: Word Problems}
+
+\\begin{enumerate}[leftmargin=*, itemsep=2cm, resume]
+
+\\item A rectangle has a length that is 3 cm more than twice its width. If the perimeter is 48 cm, find the dimensions.
+
+\\vspace{3cm}
+
+\\item John is 5 years older than Mary. The sum of their ages is 35. How old is each person?
+
+\\vspace{3cm}
+
+\\end{enumerate}
+
+\\section*{Part D: Challenge Problems}
+
+\\begin{enumerate}[leftmargin=*, itemsep=2.5cm, resume]
+
+\\item Solve the system of equations:
+\\begin{align*}
+2x + y &= 7\\\\
+x - y &= 2
+\\end{align*}
+
+\\vspace{3cm}
+
+\\item Simplify: $(x^2 - 9) \\div (x - 3)$
+
+\\end{enumerate}
+
+\\end{document}`,
+  },
 ];
 
 export default function TemplatesPage() {

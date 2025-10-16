@@ -30,6 +30,7 @@ The following PDF files should be in this directory:
 - `algorithm-pseudocode.pdf` - Algorithm pseudocode template
 - `grading-rubric.pdf` - Assessment criteria and grading template
 - `assignment.pdf` - Homework and assignment template
+- `worksheet.pdf` - Practice problems and exercises template
 
 ## Manual Generation
 
