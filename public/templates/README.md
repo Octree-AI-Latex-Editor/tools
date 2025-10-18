@@ -29,6 +29,8 @@ The following PDF files should be in this directory:
 - `book-chapter.pdf` - Book chapter template
 - `algorithm-pseudocode.pdf` - Algorithm pseudocode template
 - `resume.pdf` - Professional resume template (Jake's format)
+- `grading-rubric.pdf` - Assessment criteria and grading template
+- `assignment.pdf` - Homework and assignment template
 
 ## Manual Generation
 
