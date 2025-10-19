@@ -57,8 +57,9 @@ export default function AIToolLayout({
   // Convert acceptedFormats to file accept attribute
   const getAcceptAttribute = () => {
     if (acceptedFormats.includes('CSV')) return '.csv,text/csv';
-    if (acceptedFormats.includes('PDF')) return 'application/pdf';
-    return 'image/*,.pdf';
+    if (acceptedFormats.includes('HTML')) return '.html,text/html';
+    // For image formats (JPEG, PNG) with or without PDF
+    return 'image/*,application/pdf,.pdf';
   };
 
   // Initialize Monaco with LaTeX syntax highlighting
