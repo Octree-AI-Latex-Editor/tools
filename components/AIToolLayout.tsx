@@ -151,27 +151,51 @@ export default function AIToolLayout({
 
     const file = e.dataTransfer.files[0];
     if (file) {
-      if (!file.name.toLowerCase().endsWith('.csv') && file.type !== 'text/csv') {
-        setError('Only CSV files are supported for this tool.');
-        return;
+      // Check if it's a CSV file tool
+      const isCSVTool = acceptedFormats.includes('CSV');
+      const isImageTool = acceptedFormats.includes('JPEG') || acceptedFormats.includes('PNG');
+      
+      if (isCSVTool) {
+        if (!file.name.toLowerCase().endsWith('.csv') && file.type !== 'text/csv') {
+          setError('Only CSV files are supported for this tool.');
+          return;
+        }
+
+        setUploadedFileName(file.name);
+        const reader = new FileReader();
+        setIsTableFile(true);
+        setFileType('csv');
+
+        reader.onload = (event) => {
+          const data = event.target?.result as string;
+          setImageData(data);
+          processImage(data);
+        };
+
+        reader.readAsText(file);
+      } else if (isImageTool) {
+        // Handle images and PDFs
+        if (!file.type.startsWith('image/') && file.type !== 'application/pdf') {
+          setError('Only image files (JPEG, PNG) and PDF files are supported.');
+          return;
+        }
+
+        setUploadedFileName(file.name);
+        const reader = new FileReader();
+        setIsTableFile(false);
+        setFileType('math');
+
+        reader.onload = (event) => {
+          const data = event.target?.result as string;
+          setImageData(data);
+          processImage(data);
+        };
+
+        reader.readAsDataURL(file);
       }
-
-      setUploadedFileName(file.name);
-      const reader = new FileReader();
-
-      setIsTableFile(true);
-      setFileType('csv');
-
-      reader.onload = (event) => {
-        const data = event.target?.result as string;
-        setImageData(data);
-        processImage(data);
-      };
-
-      reader.readAsText(file);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [acceptedFormats]);
 
   const handleDragOver = useCallback((e: React.DragEvent) => {
     e.preventDefault();
@@ -185,24 +209,48 @@ export default function AIToolLayout({
   const handleFileInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
-      if (!file.name.toLowerCase().endsWith('.csv') && file.type !== 'text/csv') {
-        setError('Only CSV files are supported for this tool.');
-        return;
+      // Check if it's a CSV file tool
+      const isCSVTool = acceptedFormats.includes('CSV');
+      const isImageTool = acceptedFormats.includes('JPEG') || acceptedFormats.includes('PNG');
+      
+      if (isCSVTool) {
+        if (!file.name.toLowerCase().endsWith('.csv') && file.type !== 'text/csv') {
+          setError('Only CSV files are supported for this tool.');
+          return;
+        }
+
+        setUploadedFileName(file.name);
+        const reader = new FileReader();
+        setIsTableFile(true);
+        setFileType('csv');
+
+        reader.onload = (event) => {
+          const data = event.target?.result as string;
+          setImageData(data);
+          processImage(data);
+        };
+
+        reader.readAsText(file);
+      } else if (isImageTool) {
+        // Handle images and PDFs
+        if (!file.type.startsWith('image/') && file.type !== 'application/pdf') {
+          setError('Only image files (JPEG, PNG) and PDF files are supported.');
+          return;
+        }
+
+        setUploadedFileName(file.name);
+        const reader = new FileReader();
+        setIsTableFile(false);
+        setFileType('math');
+
+        reader.onload = (event) => {
+          const data = event.target?.result as string;
+          setImageData(data);
+          processImage(data);
+        };
+
+        reader.readAsDataURL(file);
       }
-
-      setUploadedFileName(file.name);
-      const reader = new FileReader();
-
-      setIsTableFile(true);
-      setFileType('csv');
-
-      reader.onload = (event) => {
-        const data = event.target?.result as string;
-        setImageData(data);
-        processImage(data);
-      };
-
-      reader.readAsText(file);
     }
   };
 
