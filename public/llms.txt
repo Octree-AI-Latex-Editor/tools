@@ -1,0 +1,94 @@
+# Octree LaTeX Tools - LLM Information
+
+## About
+Octree LaTeX Tools is a free online platform providing AI-powered LaTeX conversion and generation tools, along with professional LaTeX templates.
+
+## Main Features
+
+### LaTeX Conversion Tools
+- **Math to LaTeX**: Convert handwritten math equations and formulas to LaTeX code
+- **PDF to LaTeX**: Extract LaTeX from PDF documents
+- **Image to LaTeX**: Convert images containing math to LaTeX
+- **Markdown to LaTeX**: Convert Markdown documents to LaTeX
+- **HTML to LaTeX**: Convert HTML content to LaTeX
+- **MathML to LaTeX**: Convert MathML to LaTeX code
+
+### LaTeX Generation Tools
+- **AI LaTeX Generator**: Generate LaTeX documents using AI
+- **Citation Generator**: Generate BibTeX citations
+- **TikZ Generator**: Create TikZ graphics code
+- **Table to LaTeX**: Convert tables to LaTeX format
+- **PGFPlots Generator**: Generate PGFPlots for data visualization
+
+### LaTeX Preview
+- **LaTeX Preview**: Live LaTeX editor with real-time PDF compilation
+
+### LaTeX Templates
+Free professional templates including:
+- Research papers (IEEE/ACM format)
+- Beamer presentations
+- Academic CVs and resumes
+- Mathematical documents
+- Lab reports
+- Book chapters
+- Assignments and worksheets
+- Grading rubrics
+
+## Technology
+- Built with Next.js and TypeScript
+- AI-powered conversion using modern ML models
+- Real-time LaTeX compilation
+- PDF preview generation
+- Monaco Editor for code editing
+
+## URLs
+
+### Main Pages
+- Homepage: https://tools.useoctree.com
+- Templates: https://tools.useoctree.com/templates
+
+### Conversion Tools
+- Math to LaTeX: https://tools.useoctree.com/tools/math-to-latex
+- PDF to LaTeX: https://tools.useoctree.com/tools/pdf-to-latex
+- Markdown to LaTeX: https://tools.useoctree.com/tools/markdown-to-latex
+- HTML to LaTeX: https://tools.useoctree.com/tools/html-to-latex
+- MathML to LaTeX: https://tools.useoctree.com/tools/mathml-to-latex
+
+### Generation Tools
+- AI LaTeX Generator: https://tools.useoctree.com/tools/ai-latex-generator
+- Citation Generator: https://tools.useoctree.com/tools/citation-generator
+- TikZ Generator: https://tools.useoctree.com/tools/tikz-generator
+- Table to LaTeX: https://tools.useoctree.com/tools/table-to-latex
+- PGFPlots Generator: https://tools.useoctree.com/tools/pgfplots-generator
+- Mermaid to LaTeX: https://tools.useoctree.com/tools/mermaid-to-latex
+
+### Editor
+- LaTeX Preview: https://tools.useoctree.com/tools/latex-preview
+
+### Templates
+- Research Paper: https://tools.useoctree.com/templates/research-paper
+- Beamer Presentation: https://tools.useoctree.com/templates/beamer-presentation
+- Academic CV: https://tools.useoctree.com/templates/academic-cv
+- Mathematical Document: https://tools.useoctree.com/templates/mathematical-document
+- Lab Report: https://tools.useoctree.com/templates/lab-report
+- Book Chapter: https://tools.useoctree.com/templates/book-chapter
+- Resume: https://tools.useoctree.com/templates/resume
+- Grading Rubric: https://tools.useoctree.com/templates/grading-rubric
+- Assignment: https://tools.useoctree.com/templates/assignment
+- Worksheet: https://tools.useoctree.com/templates/worksheet
+
+## Integration with Octree
+This tools platform integrates with Octree, a collaborative LaTeX editor. Users can open templates and generated LaTeX directly in Octree for further editing and collaboration.
+
+## Use Cases
+- Academic writing and research papers
+- Mathematical documentation
+- Presentations and slides
+- Converting existing content to LaTeX
+- Learning LaTeX syntax
+- Quick LaTeX prototyping
+
+## Contact
+- Main site: https://useoctree.com
+- Tools platform: https://tools.useoctree.com
+

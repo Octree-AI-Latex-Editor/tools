@@ -14,8 +14,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'mathml-to-latex',
     'mermaid-to-latex',
     'pdf-to-latex',
+    'pgfplots-generator',
     'table-to-latex',
     'tikz-generator',
+  ]
+
+  // All template routes
+  const templates = [
+    'research-paper',
+    'beamer-presentation',
+    'academic-cv',
+    'mathematical-document',
+    'lab-report',
+    'book-chapter',
+    'resume',
+    'grading-rubric',
+    'assignment',
+    'worksheet',
   ]
 
   const toolUrls = tools.map(tool => ({
@@ -23,6 +38,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.8,
+  }))
+
+  const templateUrls = templates.map(template => ({
+    url: `${baseUrl}/templates/${template}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
   }))
 
   return [
@@ -39,6 +61,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     ...toolUrls,
+    ...templateUrls,
   ]
 }
 

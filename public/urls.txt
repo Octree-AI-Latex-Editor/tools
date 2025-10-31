@@ -1,0 +1,37 @@
+# Octree LaTeX Tools - Complete URL List
+# Last updated: 2025
+
+## Main Pages
+https://tools.useoctree.com
+https://tools.useoctree.com/templates
+
+## Conversion Tools
+https://tools.useoctree.com/tools/math-to-latex
+https://tools.useoctree.com/tools/pdf-to-latex
+https://tools.useoctree.com/tools/markdown-to-latex
+https://tools.useoctree.com/tools/html-to-latex
+https://tools.useoctree.com/tools/mathml-to-latex
+
+## Generation Tools
+https://tools.useoctree.com/tools/ai-latex-generator
+https://tools.useoctree.com/tools/citation-generator
+https://tools.useoctree.com/tools/tikz-generator
+https://tools.useoctree.com/tools/table-to-latex
+https://tools.useoctree.com/tools/pgfplots-generator
+https://tools.useoctree.com/tools/mermaid-to-latex
+
+## Editor & Preview
+https://tools.useoctree.com/tools/latex-preview
+
+## LaTeX Templates
+https://tools.useoctree.com/templates/research-paper
+https://tools.useoctree.com/templates/beamer-presentation
+https://tools.useoctree.com/templates/academic-cv
+https://tools.useoctree.com/templates/mathematical-document
+https://tools.useoctree.com/templates/lab-report
+https://tools.useoctree.com/templates/book-chapter
+https://tools.useoctree.com/templates/resume
+https://tools.useoctree.com/templates/grading-rubric
+https://tools.useoctree.com/templates/assignment
+https://tools.useoctree.com/templates/worksheet
+

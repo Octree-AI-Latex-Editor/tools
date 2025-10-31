@@ -1,0 +1,13 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow admin or private routes if any
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://tools.useoctree.com/sitemap.xml
+
+# LLM-specific file for AI assistants
+# See llms.txt for more information about this site
+

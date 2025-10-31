@@ -76,9 +76,43 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Octree LaTeX Tools',
+    description: 'Free online tools to convert images and PDFs to LaTeX code. AI-powered LaTeX converter with PDF preview.',
+    url: 'https://tools.useoctree.com',
+    applicationCategory: 'DeveloperApplication',
+    operatingSystem: 'Any',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+    author: {
+      '@type': 'Organization',
+      name: 'Octree',
+      url: 'https://useoctree.com',
+    },
+    featureList: [
+      'Math to LaTeX converter',
+      'PDF to LaTeX converter',
+      'Image to LaTeX converter',
+      'AI LaTeX generator',
+      'LaTeX templates',
+      'Live LaTeX preview',
+      'Citation generator',
+      'TikZ generator',
+    ],
+  };
+
   return (
     <html lang="en">
       <body className={satoshi.className}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <ClientBootstrap />
         <Header />
         {children}
