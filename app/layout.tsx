@@ -1,12 +1,24 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import localFont from 'next/font/local';
 import "./globals.css";
 import Header from "@/components/Header";
 import ClientBootstrap from "@/components/ClientBootstrap";
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-const inter = Inter({ subsets: ["latin"] });
+const satoshi = localFont({
+  src: [
+    {
+      path: './fonts/Satoshi-Variable.woff2',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Satoshi-VariableItalic.woff2',
+      style: 'italic',
+    },
+  ],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: "Convert Image & PDF to LaTeX - Free Online Math Equation Converter | Octree Tools",
@@ -66,7 +78,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={satoshi.className}>
         <ClientBootstrap />
         <Header />
         {children}

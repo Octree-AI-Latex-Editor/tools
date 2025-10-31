@@ -1,11 +1,20 @@
 'use client';
 
-import { useState } from "react";
-import { Search, ArrowLeft } from "lucide-react";
-import dynamic from 'next/dynamic';
+import { useState, useEffect, use } from 'react';
+import { ArrowLeft, Loader2 } from 'lucide-react';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
+import { openInOctree } from '@/lib/open-in-octree';
+import { OctreeLogo } from '@/components/icons/octree-logo';
+import { loader } from '@monaco-editor/react';
+import {
+  latexLanguageConfiguration,
+  latexTokenProvider,
+  registerLatexCompletions,
+} from '@/lib/editor-config';
 
-const PDFPreview = dynamic(() => import("@/components/PDFPreview"), { ssr: false });
+const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
+const PDFPreview = dynamic(() => import('@/components/PDFPreview'), { ssr: false });
 
 const templates = [
   {
@@ -13,7 +22,6 @@ const templates = [
     title: "Research Paper",
     description: "IEEE/ACM conference paper template with sections",
     icon: "📄",
-    previewUrl: "/templates/research-paper.pdf",
     slug: "research-paper",
     code: `\\documentclass[conference]{IEEEtran}
 \\usepackage{cite}
@@ -63,7 +71,6 @@ Summarize your contributions and future work.
     title: "Presentation (Beamer)",
     description: "Professional slide deck template",
     icon: "📊",
-    previewUrl: "/templates/beamer-presentation.pdf",
     slug: "beamer-presentation",
     code: `\\documentclass{beamer}
 \\usetheme{Madrid}
@@ -119,7 +126,6 @@ Thank you for your attention!
     title: "Academic CV",
     description: "Professional curriculum vitae template",
     icon: "📋",
-    previewUrl: "/templates/academic-cv.pdf",
     slug: "academic-cv",
     code: `\\documentclass[11pt,a4paper]{article}
 \\usepackage[utf8]{inputenc}
@@ -176,7 +182,6 @@ Best Paper Award, Conference Name, 2023
     title: "Mathematical Document",
     description: "Document with advanced math equations",
     icon: "∑",
-    previewUrl: "/templates/mathematical-document.pdf",
     slug: "mathematical-document",
     code: `\\documentclass{article}
 \\usepackage{amsmath,amssymb,amsthm}
@@ -236,7 +241,6 @@ a_{21} & a_{22}
     title: "Lab Report",
     description: "Scientific lab report template",
     icon: "🔬",
-    previewUrl: "/templates/lab-report.pdf",
     slug: "lab-report",
     code: `\\documentclass[12pt]{article}
 \\usepackage{graphicx}
@@ -295,7 +299,6 @@ List all references used.
     title: "Book Chapter",
     description: "Book or thesis chapter template",
     icon: "📖",
-    previewUrl: "/templates/book-chapter.pdf",
     slug: "book-chapter",
     code: `\\documentclass[12pt]{book}
 \\usepackage[utf8]{inputenc}
@@ -349,7 +352,6 @@ Final thoughts and future directions.
     title: "Resume",
     description: "Professional resume template (Jake's format)",
     icon: "📝",
-    previewUrl: "/templates/resume.pdf",
     slug: "resume",
     code: `\\documentclass[letterpaper,11pt]{article}
 
@@ -503,7 +505,6 @@ Final thoughts and future directions.
     title: "Grading Rubric",
     description: "Assessment criteria and grading template",
     icon: "✓",
-    previewUrl: "/templates/grading-rubric.pdf",
     slug: "grading-rubric",
     code: `\\documentclass[11pt]{article}
 \\usepackage[utf8]{inputenc}
@@ -635,7 +636,6 @@ No creativity &
     title: "Assignment",
     description: "Homework and assignment template",
     icon: "📚",
-    previewUrl: "/templates/assignment.pdf",
     slug: "assignment",
     code: `\\documentclass[12pt]{article}
 \\usepackage[utf8]{inputenc}
@@ -720,7 +720,6 @@ y &= x - 2
     title: "Worksheet",
     description: "Practice problems and exercises template",
     icon: "✏️",
-    previewUrl: "/templates/worksheet.pdf",
     slug: "worksheet",
     code: `\\documentclass[12pt]{article}
 \\usepackage[utf8]{inputenc}
@@ -813,126 +812,173 @@ x - y &= 2
   },
 ];
 
-export default function TemplatesPage() {
-  const [searchQuery, setSearchQuery] = useState("");
+export default function TemplatePage({ params }: { params: Promise<{ slug: string }> }) {
+  const [mounted, setMounted] = useState(false);
+  const [previewUrl, setPreviewUrl] = useState<string>('');
+  const [isCompiling, setIsCompiling] = useState(false);
+  const { slug } = use(params);
+  
+  const template = templates.find((t) => t.slug === slug);
 
-  const filteredTemplates = templates.filter((template) =>
-    template.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    template.description.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  // Initialize Monaco with LaTeX syntax highlighting
+  useEffect(() => {
+    setMounted(true);
+    loader.init().then((monaco) => {
+      monaco.languages.register({ id: 'latex' });
+      monaco.languages.setLanguageConfiguration(
+        'latex',
+        latexLanguageConfiguration
+      );
+      monaco.languages.setMonarchTokensProvider('latex', latexTokenProvider);
+      registerLatexCompletions(monaco);
+    });
+  }, []);
 
-  // JSON-LD structured data for SEO
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Free LaTeX Templates",
-    "description": "Professional LaTeX templates for research papers, presentations, CVs, and more",
-    "url": "https://tools.useoctree.com/templates",
-    "mainEntity": {
-      "@type": "ItemList",
-      "itemListElement": templates.map((template, index) => ({
-        "@type": "ListItem",
-        "position": index + 1,
-        "item": {
-          "@type": "SoftwareSourceCode",
-          "name": template.title,
-          "description": template.description,
-          "codeSampleType": "full",
-          "programmingLanguage": "LaTeX",
-          "author": {
-            "@type": "Organization",
-            "name": "Octree"
-          }
-        }
-      }))
+  // Compile LaTeX to PDF
+  const compileLatex = async (latex: string) => {
+    if (!latex.trim()) return;
+    
+    setIsCompiling(true);
+    try {
+      const response = await fetch('/api/compile', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ latex }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setPreviewUrl(data.previewUrl || data.pdfUrl || '');
+      }
+    } catch (err) {
+      console.error('Compilation error:', err);
+    } finally {
+      setIsCompiling(false);
     }
   };
 
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          {/* Header with back button */}
-          <div className="mb-8">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 mb-4 transition-colors"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              Back to Tools
-            </Link>
-            <h1 className="text-2xl font-light text-gray-900">LaTeX Templates</h1>
-            <p className="text-sm text-gray-500 mt-1">
-              Professional templates for research papers, presentations, CVs, and more
-            </p>
-          </div>
+  // Initial compile when template loads
+  useEffect(() => {
+    if (template?.code && mounted) {
+      compileLatex(template.code);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [template?.code, mounted]);
 
-          {/* Search */}
-          <div className="relative mb-8">
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
-            <input
-              type="text"
-              placeholder="Search templates..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            />
-          </div>
-
-          {/* Templates Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredTemplates.map((template) => (
-              <div
-                key={template.id}
-                className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-200 overflow-hidden border border-gray-200"
-              >
-                {/* PDF Preview */}
-                <div className="relative h-80 bg-gray-50 overflow-hidden">
-                  <div className="w-full h-full">
-                    <PDFPreview pdfUrl={template.previewUrl} width={350} compact={true} />
-                  </div>
-                  <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-sm z-10">
-                    <span className="text-xl">{template.icon}</span>
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="p-5">
-                  <h3 className="text-base font-semibold text-gray-900 mb-1">
-                    {template.title}
-                  </h3>
-                  <p className="text-sm text-gray-500 mb-4">
-                    {template.description}
-                  </p>
-
-                  {/* Actions */}
-                  <div className="flex flex-col gap-2">
-                    <Link
-                      href={`/templates/${template.slug}`}
-                      className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 bg-white text-gray-900 text-sm font-medium rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm"
-                    >
-                      View Template
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* No Results */}
-          {filteredTemplates.length === 0 && (
-            <div className="text-center py-12">
-              <p className="text-gray-500">No templates found matching &ldquo;{searchQuery}&rdquo;</p>
-            </div>
-          )}
+  if (!template) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">Template Not Found</h1>
+          <Link
+            href="/templates"
+            className="text-blue-600 hover:text-blue-700 underline"
+          >
+            Back to Templates
+          </Link>
         </div>
       </div>
-    </>
+    );
+  }
+
+  return (
+    <div className="h-screen bg-gray-50 flex flex-col">
+      <div className="flex-none px-4 sm:px-6 lg:px-8 py-4">
+        {/* Header with back button */}
+        <div className="max-w-7xl mx-auto">
+          <Link
+            href="/templates"
+            className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 mb-3 transition-colors"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            Back to Templates
+          </Link>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">{template.icon}</span>
+              <div>
+                <h1 className="text-2xl font-light text-gray-900">{template.title}</h1>
+                <p className="text-sm text-gray-600">{template.description}</p>
+              </div>
+            </div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+
+      {/* Two-column layout: Editor + Preview - fills remaining space */}
+      <div className="flex-1 overflow-hidden px-4 sm:px-6 lg:px-8 py-4">
+        <div className="h-full max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 h-full">
+            {/* Editor Container */}
+            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+              <div className="h-full w-full">
+                {mounted ? (
+                  <Editor
+                    height="100%"
+                    language="latex"
+                    value={template.code}
+                    theme="vs-light"
+                    options={{
+                      readOnly: true,
+                      minimap: { enabled: false },
+                      scrollBeyondLastLine: false,
+                      fontSize: 13,
+                      lineNumbers: 'on',
+                      wordWrap: 'on',
+                      padding: { top: 12, bottom: 12 },
+                      renderLineHighlight: 'none',
+                      cursorStyle: 'line',
+                    }}
+                  />
+                ) : (
+                  <div className="flex items-center justify-center h-full">
+                    <Loader2 className="h-8 w-8 text-blue-500 animate-spin" />
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* PDF Preview Container */}
+            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+              <div className="h-full w-full">
+                {isCompiling && !previewUrl ? (
+                  <div className="flex items-center justify-center h-full">
+                    <Loader2 className="h-8 w-8 text-blue-500 animate-spin" />
+                  </div>
+                ) : previewUrl ? (
+                  <PDFPreview pdfUrl={previewUrl} width={500} compact />
+                ) : null}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Action Button */}
+      <div className="flex-none px-4 sm:px-6 lg:px-8 py-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div></div>
+            <div>
+              <button
+                onClick={() =>
+                  openInOctree({
+                    latex: template.code,
+                    title: template.title,
+                    source: 'tools:templates',
+                  })
+                }
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 text-base font-medium rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors w-full"
+              >
+                <OctreeLogo className="h-5 w-5" />
+                Open in Octree
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 
