@@ -96,6 +96,13 @@ const tools = [
     href: "/tools/pgfplots-generator",
     icon: "📈",
   },
+  {
+    id: 13,
+    title: "LaTeX to Markdown",
+    description: "Convert LaTeX documents or snippets to Markdown",
+    href: "/tools/latex-to-markdown",
+    icon: "🔁",
+  },
 ];
 
 const templates = [
