@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { templates as templateList } from '@/lib/templates'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://tools.useoctree.com'
@@ -19,34 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'tikz-generator',
   ]
 
-  // All template routes
-  const templates = [
-    'research-paper',
-    'beamer-presentation',
-    'academic-cv',
-    'mathematical-document',
-    'lab-report',
-    'book-chapter',
-    'resume',
-    'grading-rubric',
-    'assignment',
-    'worksheet',
-    'homework',
-    'poster',
-    'thesis',
-    'letter',
-    'algorithm',
-    'cover-letter',
-    'journal-article',
-    'syllabus',
-    'research-proposal',
-    'essay',
-    'research-statement',
-    'dissertation',
-    'white-paper',
-    'leaflet',
-    'technical-report',
-  ]
+  // Get all template slugs from shared source
+  const templates = templateList.map(t => t.slug)
 
   const toolUrls = tools.map(tool => ({
     url: `${baseUrl}/tools/${tool}`,

@@ -1,107 +1,5 @@
 import { Metadata } from 'next';
-
-const templates = [
-  {
-    slug: "research-paper",
-    title: "Research Paper",
-    description: "IEEE/ACM conference paper template with sections",
-  },
-  {
-    slug: "beamer-presentation",
-    title: "Presentation (Beamer)",
-    description: "Professional slide deck template",
-  },
-  {
-    slug: "academic-cv",
-    title: "Academic CV",
-    description: "Professional curriculum vitae template",
-  },
-  {
-    slug: "mathematical-document",
-    title: "Mathematical Document",
-    description: "Document with advanced math equations",
-  },
-  {
-    slug: "lab-report",
-    title: "Lab Report",
-    description: "Scientific lab report template",
-  },
-  {
-    slug: "book-chapter",
-    title: "Book Chapter",
-    description: "Book or thesis chapter template",
-  },
-  {
-    slug: "resume",
-    title: "Resume",
-    description: "Professional resume template (Jake's format)",
-  },
-  {
-    slug: "grading-rubric",
-    title: "Grading Rubric",
-    description: "Assessment criteria and grading template",
-  },
-  {
-    slug: "assignment",
-    title: "Assignment",
-    description: "Homework and assignment template",
-  },
-  {
-    slug: "worksheet",
-    title: "Worksheet",
-    description: "Practice problems and exercises template",
-  },
-  {
-    slug: "homework",
-    title: "Homework Template",
-    description: "Structured homework assignment",
-  },
-  {
-    slug: "poster",
-    title: "Research Poster",
-    description: "Academic conference poster template",
-  },
-  {
-    slug: "thesis",
-    title: "PhD Thesis",
-    description: "Comprehensive thesis template with chapters",
-  },
-  {
-    slug: "letter",
-    title: "Formal Letter",
-    description: "Professional business letter template",
-  },
-  {
-    slug: "algorithm",
-    title: "Algorithm Pseudocode",
-    description: "Algorithm documentation with pseudocode",
-  },
-  {
-    slug: "cover-letter",
-    title: "Cover Letter",
-    description: "Professional academic and job application cover letter",
-  },
-  {
-    slug: "journal-article",
-    title: "Journal Article",
-    description: "Academic journal article template with sections",
-  },
-  {
-    slug: "syllabus",
-    title: "Course Syllabus",
-    description: "Comprehensive course syllabus template",
-  },
-  {
-    slug: "research-proposal",
-    title: "Research Proposal",
-    description: "Grant and research proposal template",
-  },
-  {
-    slug: "essay",
-    title: "Academic Essay",
-    description: "Structured essay with argument and analysis",
-  },
-];
+import { templates } from '@/lib/templates';
 
 // Generate static params for all template pages at build time
 export function generateStaticParams() {
@@ -336,6 +234,114 @@ export async function generateMetadata({
       'latex report template',
       'report template latex',
       'latex research report template',
+    ],
+    'math-exercises': [
+      'latex template math exercises',
+      'latex math exercises template',
+      'math exercises template latex',
+      'latex template for math exercises',
+      'latex exercise template',
+    ],
+    'math-notes': [
+      'latex math notes template',
+      'latex template math notes',
+      'math notes latex template',
+      'latex template for math notes',
+      'latex math lecture notes template',
+      'latex lecture notes template',
+    ],
+    'math-exam': [
+      'latex math exam template',
+      'latex template math exam',
+      'math exam template latex',
+      'latex exam template',
+      'exam template latex',
+    ],
+    'math-problem-set': [
+      'latex math problem set template',
+      'math problem set latex template',
+      'latex problem set template',
+      'problem set template latex',
+    ],
+    'math-cheat-sheet': [
+      'latex math cheat sheet template',
+      'latex cheat sheet template',
+      'cheat sheet template latex',
+      'latex template cheat sheet',
+      'math cheat sheet latex',
+    ],
+    'lecture-notes': [
+      'latex lecture notes template',
+      'lecture notes template latex',
+      'latex template lecture notes',
+      'latex template for notes',
+      'latex template notes',
+      'course notes latex template',
+    ],
+    'quiz-template': [
+      'latex quiz template',
+      'quiz template latex',
+      'latex template quiz',
+      'math quiz template latex',
+    ],
+    'formula-sheet': [
+      'latex formula sheet template',
+      'formula sheet template latex',
+      'latex equation sheet template',
+      'equation sheet latex template',
+    ],
+    'project-report': [
+      'latex project report template',
+      'project report latex template',
+      'latex template project report',
+      'latex report template',
+      'report template latex',
+      'latex template report',
+    ],
+    'article-template': [
+      'latex article template',
+      'latex template article',
+      'article template latex',
+      'scientific article latex template',
+      'latex academic article template',
+      'latex template article journal',
+    ],
+    'statement-of-purpose': [
+      'latex statement of purpose template',
+      'statement of purpose latex template',
+      'latex template statement of purpose',
+      'sop latex template',
+      'grad school statement latex',
+    ],
+    'literature-review': [
+      'latex literature review template',
+      'literature review latex template',
+      'latex template literature review',
+    ],
+    'meeting-minutes': [
+      'latex meeting minutes template',
+      'meeting minutes latex template',
+      'minutes template latex',
+    ],
+    'certificate': [
+      'latex certificate template',
+      'certificate template latex',
+      'latex template certificate',
+      'award certificate latex',
+    ],
+    'invoice': [
+      'latex invoice template',
+      'invoice template latex',
+      'latex template invoice',
+      'business invoice latex',
+    ],
+    'grant-proposal': [
+      'latex grant proposal template',
+      'grant proposal latex template',
+      'latex template grant proposal',
+      'latex proposal template',
+      'latex template project proposal',
+      'project proposal latex template',
     ],
   };
 
