@@ -5,7 +5,6 @@ export interface Template {
   id: number;
   title: string;
   description: string;
-  icon: string;
   slug: string;
   previewUrl: string;
   code: string;
@@ -16,7 +15,6 @@ export const templates: Template[] = [
     id: 1,
     title: "Research Paper",
     description: "IEEE-style research paper template",
-    icon: "📄",
     slug: "research-paper",
     previewUrl: "/templates/research-paper.pdf",
     code: String.raw`\documentclass[conference]{IEEEtran}
@@ -66,7 +64,6 @@ We have demonstrated [conclusion].
     id: 2,
     title: "Beamer Presentation",
     description: "Academic presentation slides",
-    icon: "📊",
     slug: "beamer-presentation",
     previewUrl: "/templates/beamer-presentation.pdf",
     code: String.raw`\documentclass{beamer}
@@ -115,7 +112,6 @@ Summary of key points.
     id: 3,
     title: "Academic CV",
     description: "Professional academic curriculum vitae",
-    icon: "👔",
     slug: "academic-cv",
     previewUrl: "/templates/academic-cv.pdf",
     code: String.raw`\documentclass[11pt,a4paper]{article}
@@ -159,7 +155,6 @@ Machine Learning, Artificial Intelligence, Computer Vision
     id: 4,
     title: "Mathematical Document",
     description: "Math-heavy document with theorems",
-    icon: "∑",
     slug: "mathematical-document",
     previewUrl: "/templates/mathematical-document.pdf",
     code: String.raw`\documentclass{article}
@@ -209,7 +204,6 @@ Consider the equation:
     id: 5,
     title: "Lab Report",
     description: "Scientific lab report template",
-    icon: "🔬",
     slug: "lab-report",
     previewUrl: "/templates/lab-report.pdf",
     code: String.raw`\documentclass[12pt]{article}
@@ -269,7 +263,6 @@ In conclusion...
     id: 6,
     title: "Book Chapter",
     description: "Book or thesis chapter template",
-    icon: "📖",
     slug: "book-chapter",
     previewUrl: "/templates/book-chapter.pdf",
     code: String.raw`\documentclass[12pt]{report}
@@ -308,7 +301,6 @@ This chapter has presented...
     id: 7,
     title: "Resume",
     description: "Professional resume template",
-    icon: "📝",
     slug: "resume",
     previewUrl: "/templates/resume.pdf",
     code: String.raw`\documentclass[11pt]{article}
@@ -350,7 +342,6 @@ Description of project and technologies used.
     id: 8,
     title: "Grading Rubric",
     description: "Assessment criteria and grading template",
-    icon: "✅",
     slug: "grading-rubric",
     previewUrl: "/templates/grading-rubric.pdf",
     code: String.raw`\documentclass{article}
@@ -403,7 +394,6 @@ Formatting & 10 & Follows assignment guidelines \\
     id: 9,
     title: "Assignment",
     description: "Homework and assignment template",
-    icon: "📋",
     slug: "assignment",
     previewUrl: "/templates/assignment.pdf",
     code: String.raw`\documentclass{article}
@@ -448,7 +438,6 @@ Submit via course portal by due date.
     id: 10,
     title: "Worksheet",
     description: "Practice problems and exercises template",
-    icon: "📑",
     slug: "worksheet",
     previewUrl: "/templates/worksheet.pdf",
     code: String.raw`\documentclass{article}
@@ -498,7 +487,6 @@ x - y &= 1
     id: 11,
     title: "Homework Template",
     description: "Structured homework assignment",
-    icon: "📓",
     slug: "homework",
     previewUrl: "/templates/homework.pdf",
     code: String.raw`\documentclass[12pt]{article}
@@ -551,7 +539,6 @@ Assume $\sqrt{2}$ is rational. Then $\sqrt{2} = \frac{p}{q}$ where $p,q$ are int
     id: 12,
     title: "Research Poster",
     description: "Academic conference poster template",
-    icon: "🖼️",
     slug: "poster",
     previewUrl: "/templates/poster.pdf",
     code: String.raw`\documentclass[25pt,a0paper,portrait]{tikzposter}
@@ -603,7 +590,6 @@ Summary of contributions and future work.
     id: 13,
     title: "PhD Thesis",
     description: "Comprehensive thesis template with chapters",
-    icon: "🎓",
     slug: "thesis",
     previewUrl: "/templates/thesis.pdf",
     code: String.raw`\documentclass[12pt,oneside]{book}
@@ -666,7 +652,6 @@ In conclusion...
     id: 14,
     title: "Formal Letter",
     description: "Professional business letter template",
-    icon: "✉️",
     slug: "letter",
     previewUrl: "/templates/letter.pdf",
     code: String.raw`\documentclass[11pt]{letter}
@@ -699,7 +684,6 @@ In the final paragraph, restate your main point and indicate next steps or call 
     id: 15,
     title: "Algorithm Pseudocode",
     description: "Algorithm documentation with pseudocode",
-    icon: "⚙️",
     slug: "algorithm",
     previewUrl: "/templates/algorithm.pdf",
     code: String.raw`\documentclass[12pt]{article}
@@ -761,7 +745,6 @@ This document presents the [Algorithm Name] algorithm for solving [problem].
     id: 16,
     title: "Cover Letter",
     description: "Professional academic and job application cover letter",
-    icon: "💼",
     slug: "cover-letter",
     previewUrl: "/templates/cover-letter.pdf",
     code: String.raw`\documentclass[11pt]{letter}
@@ -795,7 +778,6 @@ I would welcome the opportunity to discuss how my background, skills, and enthus
     id: 17,
     title: "Journal Article",
     description: "Academic journal article template with sections",
-    icon: "📰",
     slug: "journal-article",
     previewUrl: "/templates/journal-article.pdf",
     code: String.raw`\documentclass[12pt]{article}
@@ -852,7 +834,6 @@ This research contributes [contribution] to the field.
     id: 18,
     title: "Course Syllabus",
     description: "Comprehensive course syllabus template",
-    icon: "📋",
     slug: "syllabus",
     previewUrl: "/templates/syllabus.pdf",
     code: String.raw`\documentclass[11pt]{article}
@@ -924,7 +905,6 @@ Project & 20\% \\
     id: 19,
     title: "Research Proposal",
     description: "Grant and research proposal template",
-    icon: "📑",
     slug: "research-proposal",
     previewUrl: "/templates/research-proposal.pdf",
     code: String.raw`\documentclass[12pt]{article}
@@ -992,7 +972,6 @@ Travel & \$X,XXX \\
     id: 20,
     title: "Academic Essay",
     description: "Structured essay with argument and analysis",
-    icon: "✍️",
     slug: "essay",
     previewUrl: "/templates/essay.pdf",
     code: String.raw`\documentclass[12pt]{article}
@@ -1046,7 +1025,6 @@ Ultimately, [final thought]. As \citet{author} reminds us, "[quote]" (p. XX).
     id: 21,
     title: "Research Statement",
     description: "Academic research statement for job applications",
-    icon: "🔬",
     slug: "research-statement",
     previewUrl: "/templates/research-statement.pdf",
     code: String.raw`\documentclass[11pt]{article}
@@ -1109,7 +1087,6 @@ My research program addresses fundamental questions in AI while maintaining stro
     id: 22,
     title: "Dissertation",
     description: "Complete PhD dissertation template",
-    icon: "🎓",
     slug: "dissertation",
     previewUrl: "/templates/dissertation.pdf",
     code: String.raw`\documentclass[12pt,oneside]{book}
@@ -1232,7 +1209,6 @@ This dissertation has presented novel approaches to neural network design that a
     id: 23,
     title: "White Paper",
     description: "Professional white paper template",
-    icon: "📄",
     slug: "white-paper",
     previewUrl: "/templates/white-paper.pdf",
     code: String.raw`\documentclass[11pt]{article}
@@ -1315,7 +1291,6 @@ The AI landscape is changing rapidly. Organizations that take action now will be
     id: 24,
     title: "Leaflet/Brochure",
     description: "Professional marketing leaflet template",
-    icon: "📰",
     slug: "leaflet",
     previewUrl: "/templates/leaflet.pdf",
     code: String.raw`\documentclass[a4paper,12pt]{article}
@@ -1404,7 +1379,6 @@ ISO 9001 certified with 99\% satisfaction
     id: 25,
     title: "Technical Report",
     description: "Technical research report template",
-    icon: "📊",
     slug: "technical-report",
     previewUrl: "/templates/technical-report.pdf",
     code: String.raw`\documentclass[11pt]{report}

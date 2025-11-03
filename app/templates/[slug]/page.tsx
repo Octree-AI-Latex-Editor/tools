@@ -98,7 +98,6 @@ export default function TemplatePage({ params }: { params: Promise<{ slug: strin
           </Link>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div className="flex items-center gap-3">
-              <span className="text-2xl">{template.icon}</span>
               <div>
                 <h1 className="text-2xl font-light text-gray-900">{template.title}</h1>
                 <p className="text-sm text-gray-600">{template.description}</p>

@@ -102,9 +102,6 @@ export default function TemplatesPage() {
                     compact
                     firstPageOnly
                   />
-                  <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-sm">
-                    <span className="text-xl">{template.icon}</span>
-                  </div>
                 </div>
 
                 {/* Template info */}

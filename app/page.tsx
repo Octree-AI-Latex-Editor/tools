@@ -753,9 +753,6 @@ export default function Home() {
                   <div className="w-full h-full">
                     <PDFPreview pdfUrl={template.previewUrl} width={350} compact={true} />
                   </div>
-                  <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-sm z-10">
-                    <span className="text-xl">{template.icon}</span>
-                  </div>
                 </div>
                 
                 {/* Content */}
