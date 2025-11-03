@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Free LaTeX Templates - Research Papers, Presentations & More | Octree Tools",
-  description: "Free professional LaTeX templates for research papers, presentations, CVs, mathematical documents, and more. Download ready-to-use LaTeX code with PDF previews. Perfect for academics and students.",
+  description: "57 free professional LaTeX templates for research papers, presentations, CVs, business reports, recipes, flyers, calendars, and more. Download ready-to-use LaTeX code with PDF previews. Perfect for academics, students, and professionals.",
   keywords: [
     // High-volume keywords (1000+ searches)
     "latex templates",
@@ -43,13 +43,31 @@ export const metadata: Metadata = {
     "phd thesis latex template",
     "overleaf latex templates",
     "academic templates latex",
+    
+    // Business & professional templates
+    "latex business plan template",
+    "latex business report template",
+    "latex invoice template",
+    "latex newsletter template",
+    "latex questionnaire template",
+    "latex table template",
+    "letter of recommendation latex",
+    "motivation letter latex template",
+    "internship report latex",
+    "latex memo template",
+    "latex manuscript template",
+    "latex recipe template",
+    "latex cookbook template",
+    "latex flyer template",
+    "latex business card template",
+    "latex calendar template",
   ],
   alternates: {
     canonical: '/templates',
   },
   openGraph: {
     title: "Free LaTeX Templates - Research Papers, Presentations & More",
-    description: "Professional LaTeX templates for research papers, presentations, CVs, and mathematical documents. Free download with PDF previews.",
+    description: "57 professional LaTeX templates for research papers, presentations, CVs, business reports, recipes, flyers, and more. Free download with PDF previews.",
     url: 'https://tools.useoctree.com/templates',
     siteName: 'Octree LaTeX Tools',
     locale: 'en_US',
@@ -58,7 +76,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "Free LaTeX Templates - Research Papers, Presentations & More",
-    description: "Professional LaTeX templates for research papers, presentations, CVs, and mathematical documents. Free download with PDF previews.",
+    description: "57 professional LaTeX templates for research papers, presentations, CVs, business reports, recipes, flyers, and more. Free download with PDF previews.",
   },
 };
 
@@ -73,7 +91,7 @@ const templatesList = [
   { name: "Grading Rubric", slug: "grading-rubric", description: "Assessment criteria and grading template" },
   { name: "Assignment", slug: "assignment", description: "Homework and assignment template" },
   { name: "Worksheet", slug: "worksheet", description: "Practice problems and exercises template" },
-  { name: "Homework Template", slug: "homework", description: "Structured homework assignment with problems and solutions" },
+  { name: "Homework Template", slug: "homework", description: "Structured homework assignment" },
   { name: "Research Poster", slug: "poster", description: "Academic conference poster template" },
   { name: "PhD Thesis", slug: "thesis", description: "Comprehensive thesis template with chapters" },
   { name: "Formal Letter", slug: "letter", description: "Professional business letter template" },
@@ -88,6 +106,38 @@ const templatesList = [
   { name: "White Paper", slug: "white-paper", description: "Professional white paper template" },
   { name: "Leaflet/Brochure", slug: "leaflet", description: "Professional marketing leaflet template" },
   { name: "Technical Report", slug: "technical-report", description: "Technical research report template" },
+  { name: "Math Exercises", slug: "math-exercises", description: "Mathematics exercise and practice problems template" },
+  { name: "Math Notes", slug: "math-notes", description: "Mathematical notes and lecture template" },
+  { name: "Math Exam", slug: "math-exam", description: "Mathematics examination template" },
+  { name: "Math Problem Set", slug: "math-problem-set", description: "Mathematics problem set template" },
+  { name: "Math Cheat Sheet", slug: "math-cheat-sheet", description: "Compact mathematics reference sheet" },
+  { name: "Lecture Notes", slug: "lecture-notes", description: "Academic lecture notes template" },
+  { name: "Quiz Template", slug: "quiz-template", description: "Educational quiz and test template" },
+  { name: "Formula Sheet", slug: "formula-sheet", description: "Compact formula reference sheet" },
+  { name: "Project Report", slug: "project-report", description: "Comprehensive project documentation template" },
+  { name: "Article Template", slug: "article-template", description: "General article writing template" },
+  { name: "Statement of Purpose", slug: "statement-of-purpose", description: "Graduate school application statement" },
+  { name: "Literature Review", slug: "literature-review", description: "Academic literature review template" },
+  { name: "Meeting Minutes", slug: "meeting-minutes", description: "Professional meeting minutes template" },
+  { name: "Certificate", slug: "certificate", description: "Award and achievement certificate template" },
+  { name: "Invoice", slug: "invoice", description: "Professional business invoice template" },
+  { name: "Grant Proposal", slug: "grant-proposal", description: "Research grant proposal template" },
+  { name: "Letter of Recommendation", slug: "letter-of-recommendation", description: "Professional recommendation letter template" },
+  { name: "Motivation Letter", slug: "motivation-letter", description: "Academic or professional motivation letter template" },
+  { name: "Business Plan", slug: "business-plan", description: "Professional business plan template" },
+  { name: "Business Report", slug: "business-report", description: "Corporate business report template" },
+  { name: "Scientific Report", slug: "scientific-report", description: "Scientific research report template" },
+  { name: "Internship Report", slug: "internship-report", description: "Student internship report template" },
+  { name: "Newsletter", slug: "newsletter", description: "Professional newsletter template" },
+  { name: "Questionnaire", slug: "questionnaire", description: "Research survey and questionnaire template" },
+  { name: "Table Template", slug: "table-template", description: "Professional table layouts and formatting" },
+  { name: "Bibliography", slug: "bibliography", description: "Standalone bibliography and references template" },
+  { name: "Memo", slug: "memo", description: "Professional business memo template" },
+  { name: "Manuscript", slug: "manuscript", description: "Book manuscript template for novels and non-fiction" },
+  { name: "Recipe Book", slug: "recipe-book", description: "Cookbook and recipe collection template" },
+  { name: "Flyer", slug: "flyer", description: "Marketing flyer and promotional one-page template" },
+  { name: "Business Card", slug: "business-card", description: "Professional business card template" },
+  { name: "Calendar", slug: "calendar", description: "Monthly and yearly calendar template" },
 ];
 
 export default function TemplatesLayout({
@@ -99,7 +149,7 @@ export default function TemplatesLayout({
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     name: 'Free LaTeX Templates',
-    description: 'Professional LaTeX templates for research papers, presentations, CVs, and more',
+    description: '57 professional LaTeX templates for research papers, presentations, CVs, business reports, recipes, flyers, calendars, and more',
     url: 'https://tools.useoctree.com/templates',
     hasPart: templatesList.map((template) => ({
       '@type': 'SoftwareSourceCode',

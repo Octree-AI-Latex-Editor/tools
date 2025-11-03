@@ -3117,5 +3117,2119 @@ The PI has extensive experience in [area] with [number] publications and \$[amou
 
 \end{document}`,
   },
+  {
+    id: 42,
+    title: "Letter of Recommendation",
+    description: "Professional recommendation letter template",
+    slug: "letter-of-recommendation",
+    previewUrl: "/templates/letter-of-recommendation.pdf",
+    code: String.raw`\documentclass[11pt]{letter}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+
+\signature{Professor Name\\Title\\Department}
+\address{Department Name\\University Name\\Address\\City, State ZIP\\Email: professor@university.edu}
+
+\begin{document}
+
+\begin{letter}{Admissions Committee\\Graduate Program Name\\University Name\\Address\\City, State ZIP}
+
+\opening{Dear Members of the Admissions Committee,}
+
+I am writing to enthusiastically recommend Student Name for admission to your Program Name at University Name. I have known Student Name for duration in my capacity as their professor/advisor/supervisor at Institution, and I can state with confidence that he/she/they is one of the most outstanding students I have encountered in my X years of teaching.
+
+\textbf{Academic Excellence}
+
+Student Name was a student in my Course Name course during semester/year, where he/she/they consistently demonstrated exceptional intellectual curiosity and analytical abilities. His/Her/Their performance in the class was exemplary, earning grade/recognition. What particularly impressed me was specific example of academic achievement or insight.
+
+Beyond raw academic talent, Student Name possesses the rare ability to specific strength. For example, concrete example demonstrating this strength.
+
+\textbf{Research Capabilities}
+
+I had the privilege of supervising Student Name's research on topic. His/Her/Their work demonstrated qualities such as methodological rigor, creativity, and independence. The resulting thesis/paper/project made significant contributions to field/area, and outcome: published, presented, etc.
+
+Student Name's research skills include specific skills. He/She/They showed particular aptitude for specific research methods or approaches.
+
+\textbf{Personal Qualities}
+
+Beyond academic credentials, Student Name is mature, responsible, and collaborative. He/She/They worked effectively with peers, demonstrated leadership in context, and showed commitment to relevant activities or values.
+
+Specific examples of these qualities include concrete examples.
+
+\textbf{Recommendation}
+
+In summary, I give Student Name my highest recommendation without reservation. He/She/They has the intellectual capability, research skills, work ethic, and personal qualities to excel in your program and make significant contributions to field.
+
+I am confident that Student Name will be an outstanding addition to your program. If you require any additional information, please do not hesitate to contact me at email or phone.
+
+\closing{Sincerely,}
+
+\end{letter}
+
+\end{document}`,
+  },
+  {
+    id: 43,
+    title: "Motivation Letter",
+    description: "Academic or professional motivation letter template",
+    slug: "motivation-letter",
+    previewUrl: "/templates/motivation-letter.pdf",
+    code: String.raw`\documentclass[11pt]{letter}
+\usepackage[margin=1in]{geometry}
+
+\signature{Your Name}
+\address{Your Address\\City, State ZIP\\Email: your.email@example.com\\Phone: +1 (555) 123-4567}
+
+\begin{document}
+
+\begin{letter}{Admissions Committee\\Program Name\\University Name\\Address\\City, Country}
+
+\opening{Dear Members of the Selection Committee,}
+
+I am writing to express my strong interest in the Program Name at University Name. With my background in field and passion for specific interest, I am confident that this program aligns perfectly with my academic and professional goals.
+
+\textbf{Academic Background and Motivation}
+
+My interest in field began when/how. During my undergraduate studies in major at university, I developed a strong foundation in relevant areas. I was particularly drawn to specific aspect and achieved relevant accomplishments.
+
+What motivates me to pursue graduate studies is specific motivation. I am fascinated by research area/topic and believe that University Name's program offers the ideal environment to explore these interests.
+
+\textbf{Relevant Experience}
+
+My experience includes relevant experience 1, where I accomplishments and learnings. This opportunity allowed me to skills developed.
+
+Additionally, I have relevant experience 2, which involved description. Through this work, I gained expertise in specific skills/knowledge and developed qualities.
+
+These experiences have prepared me to contribute meaningfully to program/research area and have confirmed my commitment to career goal/field.
+
+\textbf{Why This Program}
+
+I am particularly attracted to University Name because of specific reasons: faculty, research opportunities, facilities, location, etc. The opportunity to work with Professor Name on their research would be invaluable to my development.
+
+Furthermore, Program Name's emphasis on program features aligns with my goal to career objective. The program's specific resources or opportunities would enable me to how you would benefit.
+
+\textbf{Future Goals}
+
+My long-term goal is to career objective. I envision myself future plans. I believe that Program Name at University Name is the ideal stepping stone toward achieving these goals because reasons.
+
+\textbf{Conclusion}
+
+I am highly motivated, dedicated, and prepared to contribute to the academic community at University Name. I am excited about the prospect of joining Program Name and am confident that I would be a valuable addition to your program.
+
+Thank you for considering my application. I look forward to the opportunity to discuss my qualifications further.
+
+\closing{Sincerely,}
+
+\end{letter}
+
+\end{document}`,
+  },
+  {
+    id: 44,
+    title: "Business Plan",
+    description: "Professional business plan template",
+    slug: "business-plan",
+    previewUrl: "/templates/business-plan.pdf",
+    code: String.raw`\documentclass[12pt]{report}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\definecolor{businessblue}{RGB}{0,71,171}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\vspace*{2cm}
+
+{\Huge \textbf{Business Plan}}\\[0.5cm]
+{\LARGE \color{businessblue} Company Name}\\[1.5cm]
+
+{\large Prepared by}\\[0.3cm]
+{\Large Founder Name}\\
+{\large Title}\\[2cm]
+
+{\large \today}\\[1cm]
+
+\textbf{Confidential}
+
+\end{center}
+\end{titlepage}
+
+\tableofcontents
+
+\chapter{Executive Summary}
+
+\section{Business Concept}
+[Company Name] is a [type of business] focused on [mission/purpose]. We provide [products/services] to [target market].
+
+\section{Key Success Factors}
+\begin{itemize}
+\item Factor 1: [Description]
+\item Factor 2: [Description]
+\item Factor 3: [Description]
+\end{itemize}
+
+\section{Financial Highlights}
+\begin{itemize}
+\item Projected Year 1 Revenue: \$[amount]
+\item Break-even: Month [X]
+\item Funding Required: \$[amount]
+\end{itemize}
+
+\chapter{Company Description}
+
+\section{Company Overview}
+[Company Name] was founded in [year] to address [problem/opportunity]. Our vision is to [vision statement].
+
+\section{Mission Statement}
+[Mission statement]
+
+\section{Legal Structure}
+[Company Name] is registered as a [LLC/Corporation/etc.] in [location].
+
+\section{Location and Facilities}
+Our headquarters are located at [address]. The facility includes [description].
+
+\chapter{Products and Services}
+
+\section{Product/Service Description}
+We offer the following products and services:
+
+\subsection{Product/Service 1}
+[Description, features, benefits]
+
+\subsection{Product/Service 2}
+[Description, features, benefits]
+
+\section{Competitive Advantage}
+Our competitive advantages include:
+\begin{itemize}
+\item [Advantage 1]
+\item [Advantage 2]
+\item [Advantage 3]
+\end{itemize}
+
+\chapter{Market Analysis}
+
+\section{Industry Overview}
+The [industry] market is valued at \$[amount] and growing at [X]\% annually.
+
+\section{Target Market}
+Our target customers are [description]. This market segment represents [size/characteristics].
+
+\section{Market Needs}
+Key customer needs include:
+\begin{enumerate}
+\item [Need 1]
+\item [Need 2]
+\item [Need 3]
+\end{enumerate}
+
+\chapter{Competitive Analysis}
+
+\section{Competitors}
+\begin{center}
+\begin{tabular}{|p{3cm}|p{4cm}|p{4cm}|}
+\hline
+\textbf{Competitor} & \textbf{Strengths} & \textbf{Weaknesses} \\
+\hline
+Competitor A & [Strengths] & [Weaknesses] \\
+\hline
+Competitor B & [Strengths] & [Weaknesses] \\
+\hline
+\end{tabular}
+\end{center}
+
+\chapter{Marketing Strategy}
+
+\section{Marketing Objectives}
+\begin{itemize}
+\item Acquire [X] customers in Year 1
+\item Achieve [X]\% market share by Year 3
+\item Build brand awareness to [metric]
+\end{itemize}
+
+\section{Pricing Strategy}
+[Pricing model and rationale]
+
+\section{Distribution Channels}
+[How products/services will reach customers]
+
+\section{Promotion Strategy}
+[Marketing and promotional activities]
+
+\chapter{Operations Plan}
+
+\section{Production/Service Delivery}
+[How products will be produced or services delivered]
+
+\section{Suppliers}
+[Key suppliers and partnerships]
+
+\section{Technology}
+[Technology infrastructure and systems]
+
+\chapter{Management Team}
+
+\section{Organizational Structure}
+[Description of organizational structure]
+
+\section{Key Personnel}
+\textbf{Name, Title}\\
+Background and qualifications
+
+\chapter{Financial Projections}
+
+\section{Sales Forecast}
+\begin{center}
+\begin{tabular}{|l|r|r|r|}
+\hline
+\textbf{Year} & \textbf{Year 1} & \textbf{Year 2} & \textbf{Year 3} \\
+\hline
+Revenue & \$[amount] & \$[amount] & \$[amount] \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Funding Requirements}
+We are seeking \$[amount] in funding to [purpose].
+
+\section{Use of Funds}
+\begin{itemize}
+\item Product Development: \$[amount]
+\item Marketing: \$[amount]
+\item Operations: \$[amount]
+\item Working Capital: \$[amount]
+\end{itemize}
+
+\chapter{Appendix}
+
+\section{Supporting Documents}
+[Additional documentation and exhibits]
+
+\end{document}`,
+  },
+  {
+    id: 45,
+    title: "Business Report",
+    description: "Corporate business report template",
+    slug: "business-report",
+    previewUrl: "/templates/business-report.pdf",
+    code: String.raw`\documentclass[11pt]{report}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+
+\definecolor{corpblue}{RGB}{0,51,102}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\color{corpblue}\textbf{Business Report}}
+\rhead{\color{corpblue}\today}
+\cfoot{\thepage}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\vspace*{2cm}
+
+{\color{corpblue}\rule{\linewidth}{2pt}}\\[0.5cm]
+{\Huge \textbf{Business Report}}\\[0.3cm]
+{\Large Report Title}\\[0.3cm]
+{\color{corpblue}\rule{\linewidth}{2pt}}\\[1.5cm]
+
+{\large Prepared for}\\[0.3cm]
+{\Large Company Name}\\[2cm]
+
+{\large Prepared by}\\[0.3cm]
+{\Large Author Name}\\
+{\large Department/Team}\\[2cm]
+
+{\large \today}
+
+\end{center}
+\end{titlepage}
+
+\chapter*{Executive Summary}
+\addcontentsline{toc}{chapter}{Executive Summary}
+
+This report presents [brief overview of report content]. Key findings include [summary of main findings]. Based on this analysis, we recommend [primary recommendations].
+
+\textbf{Key Findings:}
+\begin{itemize}
+\item Finding 1
+\item Finding 2
+\item Finding 3
+\end{itemize}
+
+\textbf{Recommendations:}
+\begin{itemize}
+\item Recommendation 1
+\item Recommendation 2
+\item Recommendation 3
+\end{itemize}
+
+\tableofcontents
+
+\chapter{Introduction}
+
+\section{Purpose}
+The purpose of this report is to [objective].
+
+\section{Scope}
+This report covers [scope description] for the period of [time period].
+
+\section{Methodology}
+Data was collected through [methods]. Analysis included [analytical approaches].
+
+\chapter{Background}
+
+\section{Context}
+[Relevant background information and context]
+
+\section{Current Situation}
+[Description of current state]
+
+\chapter{Analysis}
+
+\section{Findings}
+
+\subsection{Finding 1: [Title]}
+[Detailed description of finding]
+
+\begin{table}[h]
+\centering
+\caption{Supporting Data}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Metric} & \textbf{Current} & \textbf{Target} \\
+\midrule
+Metric 1 & Value & Value \\
+Metric 2 & Value & Value \\
+Metric 3 & Value & Value \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Finding 2: [Title]}
+[Detailed description]
+
+\subsection{Finding 3: [Title]}
+[Detailed description]
+
+\section{Implications}
+The findings have the following implications:
+\begin{enumerate}
+\item Implication 1
+\item Implication 2
+\item Implication 3
+\end{enumerate}
+
+\chapter{Recommendations}
+
+\section{Recommendation 1: [Title]}
+\textbf{Description:} [What should be done]
+
+\textbf{Rationale:} [Why this recommendation is being made]
+
+\textbf{Implementation:} [How to implement]
+
+\textbf{Timeline:} [Expected timeline]
+
+\textbf{Resources Required:} [What is needed]
+
+\section{Recommendation 2: [Title]}
+[Same structure as above]
+
+\section{Recommendation 3: [Title]}
+[Same structure as above]
+
+\chapter{Conclusion}
+
+\section{Summary}
+This report has examined [topic] and identified [key findings]. The analysis reveals [insights].
+
+\section{Next Steps}
+Immediate next steps include:
+\begin{enumerate}
+\item Action 1 - Timeline
+\item Action 2 - Timeline
+\item Action 3 - Timeline
+\end{enumerate}
+
+\chapter*{Appendices}
+\addcontentsline{toc}{chapter}{Appendices}
+
+\section*{Appendix A: Data Sources}
+[List of data sources]
+
+\section*{Appendix B: Detailed Calculations}
+[Supporting calculations]
+
+\end{document}`,
+  },
+  {
+    id: 46,
+    title: "Scientific Report",
+    description: "Scientific research report template",
+    slug: "scientific-report",
+    previewUrl: "/templates/scientific-report.pdf",
+    code: String.raw`\documentclass[12pt]{report}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{abstract}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\vspace*{2cm}
+
+{\Large \textbf{Scientific Report}}\\[1cm]
+{\Huge \textbf{Report Title}}\\[1.5cm]
+
+{\large Author Name$^1$, Co-Author Name$^2$}\\[0.5cm]
+{\normalsize $^1$Department, Institution}\\
+{\normalsize $^2$Department, Institution}\\[2cm]
+
+{\large \today}
+
+\end{center}
+\end{titlepage}
+
+\begin{abstract}
+This report presents findings from research on [topic]. We investigated [research question] using [methodology]. Results indicate [main findings]. These findings have implications for [field/application].
+\end{abstract}
+
+\tableofcontents
+
+\chapter{Introduction}
+
+\section{Background}
+The field of [topic] has seen significant advances in [context]. However, questions remain about [gap in knowledge].
+
+\section{Objectives}
+The objectives of this research were to:
+\begin{enumerate}
+\item Objective 1
+\item Objective 2
+\item Objective 3
+\end{enumerate}
+
+\section{Significance}
+This research is significant because [importance].
+
+\chapter{Literature Review}
+
+\section{Theoretical Framework}
+Previous work by [citations] established that [background]. Recent studies have demonstrated [recent findings].
+
+\section{Research Gap}
+Despite these advances, [gap that this research addresses].
+
+\chapter{Methodology}
+
+\section{Experimental Design}
+We employed a [type of study] design to investigate [question].
+
+\section{Materials}
+Materials included:
+\begin{itemize}
+\item Material 1
+\item Material 2
+\item Material 3
+\end{itemize}
+
+\section{Procedures}
+\subsection{Data Collection}
+Data was collected through [methods]. Measurements included [parameters].
+
+\subsection{Data Analysis}
+Statistical analysis was performed using [software/methods]. Significance was determined using [statistical tests] with $\alpha = 0.05$.
+
+\section{Ethical Considerations}
+This research was approved by [ethics board]. All participants provided [informed consent/ethical approval details].
+
+\chapter{Results}
+
+\section{Primary Findings}
+
+\subsection{Result 1}
+[Description of first major result]
+
+\begin{figure}[h]
+\centering
+\caption{Results visualization}
+\label{fig:results1}
+\end{figure}
+
+Statistical analysis revealed [statistical findings] ($p < 0.05$).
+
+\subsection{Result 2}
+[Description of second major result]
+
+\subsection{Result 3}
+[Description of third major result]
+
+\section{Secondary Findings}
+Additional observations included [secondary findings].
+
+\chapter{Discussion}
+
+\section{Interpretation of Results}
+The findings support [interpretation]. This is consistent with [theory/previous work].
+
+\subsection{Comparison with Previous Studies}
+Our results are similar to [previous work] in that [similarity]. However, we found [difference].
+
+\section{Implications}
+These findings have several implications:
+\begin{enumerate}
+\item Theoretical implication
+\item Practical implication
+\item Methodological implication
+\end{enumerate}
+
+\section{Limitations}
+This study has several limitations:
+\begin{itemize}
+\item Limitation 1
+\item Limitation 2
+\item Limitation 3
+\end{itemize}
+
+\section{Future Research}
+Future research should address [recommendations for future work].
+
+\chapter{Conclusion}
+
+This research investigated [topic] and found that [summary of main findings]. These results suggest [conclusions]. The findings contribute to [field] by [contribution].
+
+\section{Recommendations}
+Based on these findings, we recommend:
+\begin{enumerate}
+\item Recommendation 1
+\item Recommendation 2
+\item Recommendation 3
+\end{enumerate}
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}`,
+  },
+  {
+    id: 47,
+    title: "Internship Report",
+    description: "Student internship report template",
+    slug: "internship-report",
+    previewUrl: "/templates/internship-report.pdf",
+    code: String.raw`\documentclass[12pt]{report}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\vspace*{2cm}
+
+{\Large \textbf{Internship Report}}\\[1cm]
+{\Huge \textbf{Report Title}}\\[1.5cm]
+
+{\large Submitted by}\\[0.3cm]
+{\Large Student Name}\\
+{\large Student ID: 12345}\\[1cm]
+
+{\large Internship at}\\[0.3cm]
+{\Large Company Name}\\
+{\large Department}\\[1cm]
+
+{\large Duration: [Start Date] - [End Date]}\\[2cm]
+
+{\large Submitted to}\\[0.3cm]
+{\large Department of [Department]}\\
+{\large University Name}\\[1cm]
+
+{\large \today}
+
+\end{center}
+\end{titlepage}
+
+\chapter*{Acknowledgments}
+\addcontentsline{toc}{chapter}{Acknowledgments}
+
+I would like to express my sincere gratitude to [Supervisor Name] for their guidance and support throughout my internship. I am also grateful to [other people] for [their contributions].
+
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+This report documents my internship experience at [Company Name] in the [Department] from [dates]. During this period, I worked on [main projects/responsibilities]. The internship provided valuable experience in [skills/areas] and enhanced my understanding of [field/industry].
+
+\tableofcontents
+
+\chapter{Introduction}
+
+\section{Background}
+This internship was undertaken as part of the requirements for [degree/program] at [University Name].
+
+\section{Objectives}
+The main objectives of this internship were to:
+\begin{enumerate}
+\item Gain practical experience in [field]
+\item Develop skills in [specific skills]
+\item Apply theoretical knowledge to real-world problems
+\item Explore career opportunities in [industry]
+\end{enumerate}
+
+\chapter{Company Overview}
+
+\section{Company Profile}
+[Company Name] is a [type of company] founded in [year]. The company specializes in [services/products] and serves [market/clients].
+
+\section{Department Description}
+I was assigned to the [Department Name] which is responsible for [department functions].
+
+\section{Organizational Structure}
+[Description of relevant organizational structure]
+
+\chapter{Internship Activities}
+
+\section{Week-by-Week Summary}
+
+\subsection{Weeks 1-2: Orientation and Initial Training}
+During the first two weeks, I underwent orientation and training in [areas]. This included [specific activities].
+
+\subsection{Weeks 3-6: Main Project Work}
+The main phase of my internship involved [description of main work]. My responsibilities included:
+\begin{itemize}
+\item Task 1
+\item Task 2
+\item Task 3
+\end{itemize}
+
+\subsection{Weeks 7-8: Project Completion}
+The final weeks focused on [final activities and wrap-up].
+
+\section{Major Projects}
+
+\subsection{Project 1: [Title]}
+\textbf{Description:} [What the project was about]
+
+\textbf{My Role:} [What you did]
+
+\textbf{Skills Used:} [Technical and soft skills applied]
+
+\textbf{Outcome:} [Results and impact]
+
+\subsection{Project 2: [Title]}
+[Same structure as above]
+
+\section{Daily Responsibilities}
+My regular responsibilities included [daily tasks].
+
+\chapter{Skills and Learning Outcomes}
+
+\section{Technical Skills Acquired}
+\begin{itemize}
+\item Skill 1: [Description and proficiency level]
+\item Skill 2: [Description and proficiency level]
+\item Skill 3: [Description and proficiency level]
+\end{itemize}
+
+\section{Professional Skills Developed}
+\begin{itemize}
+\item Communication skills
+\item Teamwork and collaboration
+\item Time management
+\item Problem-solving
+\end{itemize}
+
+\section{Application of Academic Knowledge}
+I was able to apply knowledge from [specific courses] to [practical situations]. For example, [specific example].
+
+\chapter{Challenges and Solutions}
+
+\section{Challenges Encountered}
+During my internship, I faced several challenges:
+
+\subsection{Challenge 1}
+[Description of challenge and how it was addressed]
+
+\subsection{Challenge 2}
+[Description of challenge and how it was addressed]
+
+\section{Problem-Solving Approaches}
+I learned to approach problems by [methodology].
+
+\chapter{Conclusions and Recommendations}
+
+\section{Overall Experience}
+My internship at [Company Name] was extremely valuable. I gained [key takeaways].
+
+\section{Connection to Academic Studies}
+The internship reinforced concepts from [courses] and provided practical context for [theories/concepts].
+
+\section{Career Insights}
+This experience has clarified my career goals. I now understand that [insights about career path].
+
+\section{Recommendations}
+\subsection{For the Company}
+[Suggestions for the company, if appropriate]
+
+\subsection{For Future Interns}
+I would recommend that future interns:
+\begin{itemize}
+\item Recommendation 1
+\item Recommendation 2
+\item Recommendation 3
+\end{itemize}
+
+\chapter*{Appendices}
+\addcontentsline{toc}{chapter}{Appendices}
+
+\section*{Appendix A: Work Samples}
+[Description or inclusion of work samples, if appropriate]
+
+\section*{Appendix B: Photos/Documentation}
+[Any relevant documentation]
+
+\end{document}`,
+  },
+  {
+    id: 48,
+    title: "Newsletter",
+    description: "Professional newsletter template",
+    slug: "newsletter",
+    previewUrl: "/templates/newsletter.pdf",
+    code: String.raw`\documentclass[11pt]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+
+\definecolor{headerblue}{RGB}{0,102,204}
+\definecolor{lightgray}{RGB}{240,240,240}
+
+\pagestyle{empty}
+
+\begin{document}
+
+% Header
+\begin{center}
+{\color{headerblue}\rule{\linewidth}{3pt}}\\[0.2cm]
+{\Huge \textbf{Organization Newsletter}}\\[0.2cm]
+{\Large Month Year | Volume X, Issue X}\\[0.2cm]
+{\color{headerblue}\rule{\linewidth}{3pt}}
+\end{center}
+
+\vspace{0.3cm}
+
+% Main Story
+\begin{tcolorbox}[colback=lightgray,colframe=headerblue,title=\textbf{Feature Story}]
+{\Large \textbf{Headline Goes Here}}
+
+\vspace{0.2cm}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. This is the main feature article that highlights the most important news or announcement.
+
+Key points include:
+\begin{itemize}
+\item Important point 1
+\item Important point 2
+\item Important point 3
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{0.5cm}
+
+\begin{multicols}{2}
+
+\section*{{\color{headerblue}News \& Updates}}
+
+\subsection*{Update Title 1}
+Brief description of this update or news item. Include relevant details and any action items for readers.
+
+\subsection*{Update Title 2}
+Another important update for the community. This could be an event announcement, policy change, or achievement.
+
+\subsection*{Update Title 3}
+Additional news item with relevant information for the audience.
+
+\columnbreak
+
+\section*{{\color{headerblue}Upcoming Events}}
+
+\textbf{Event Name 1}\\
+Date: January 15, 2025\\
+Time: 2:00 PM - 4:00 PM\\
+Location: Main Hall\\
+Description: Brief event description.
+
+\vspace{0.3cm}
+
+\textbf{Event Name 2}\\
+Date: January 22, 2025\\
+Time: 10:00 AM - 12:00 PM\\
+Location: Conference Room\\
+Description: Brief event description.
+
+\end{multicols}
+
+\vspace{0.3cm}
+
+\begin{center}
+{\color{headerblue}\rule{\linewidth}{1pt}}
+\end{center}
+
+\begin{multicols}{2}
+
+\section*{{\color{headerblue}Spotlight}}
+
+\textbf{Member/Employee Spotlight}
+
+This month we recognize [Name] for [achievement or contribution]. [Brief description of their work and impact].
+
+''Quote from the person being featured about their experience or perspective.''
+
+\columnbreak
+
+\section*{{\color{headerblue}Tips \& Resources}}
+
+\begin{itemize}
+\item \textbf{Tip 1:} Helpful advice or resource
+\item \textbf{Tip 2:} Another useful tip
+\item \textbf{Tip 3:} Additional resource
+\item \textbf{Tip 4:} More helpful information
+\end{itemize}
+
+\end{multicols}
+
+\vspace{0.3cm}
+
+\begin{center}
+{\color{headerblue}\rule{\linewidth}{1pt}}
+\end{center}
+
+\vspace{0.3cm}
+
+\section*{{\color{headerblue}Did You Know?}}
+
+\begin{tcolorbox}[colback=white,colframe=headerblue]
+Interesting fact or statistic related to your organization or field. This section can be used to educate or engage readers with surprising or useful information.
+\end{tcolorbox}
+
+\vspace{0.3cm}
+
+\begin{multicols}{3}
+
+\section*{{\color{headerblue}Quick Links}}
+
+\begin{itemize}
+\item Website
+\item Portal
+\item Resources
+\item Contact
+\end{itemize}
+
+\columnbreak
+
+\section*{{\color{headerblue}Contact Info}}
+
+Email: info@org.com\\
+Phone: (555) 123-4567\\
+Address: 123 Main St
+
+\columnbreak
+
+\section*{{\color{headerblue}Follow Us}}
+
+\begin{itemize}
+\item Twitter
+\item LinkedIn
+\item Facebook
+\item Instagram
+\end{itemize}
+
+\end{multicols}
+
+\vspace{0.3cm}
+
+\begin{center}
+{\color{headerblue}\rule{\linewidth}{3pt}}\\[0.1cm]
+{\small \textit{Organization Name | www.organization.com | info@organization.com}}
+\end{center}
+
+\end{document}`,
+  },
+  {
+    id: 49,
+    title: "Questionnaire",
+    description: "Research survey and questionnaire template",
+    slug: "questionnaire",
+    previewUrl: "/templates/questionnaire.pdf",
+    code: String.raw`\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+
+\begin{center}
+{\Large \textbf{Research Questionnaire}}\\[0.3cm]
+{\large Study Title}\\[0.5cm]
+\end{center}
+
+\section*{Participant Information}
+
+\noindent
+Thank you for participating in this study. This questionnaire should take approximately [X] minutes to complete. Your responses will be kept confidential and used only for research purposes.
+
+\vspace{0.3cm}
+
+\noindent
+\textbf{Participant ID:} \underline{\hspace{5cm}}\\
+\textbf{Date:} \underline{\hspace{5cm}}
+
+\section*{Instructions}
+
+Please answer all questions honestly. There are no right or wrong answers. For multiple choice questions, select the option that best represents your view. For open-ended questions, please provide detailed responses.
+
+\section*{Part 1: Demographic Information}
+
+\begin{enumerate}[leftmargin=*]
+
+\item Age: 
+\begin{itemize}[label=$\square$]
+\item 18-24
+\item 25-34
+\item 35-44
+\item 45-54
+\item 55-64
+\item 65+
+\end{itemize}
+
+\item Gender:
+\begin{itemize}[label=$\square$]
+\item Male
+\item Female
+\item Non-binary
+\item Prefer not to say
+\item Other: \underline{\hspace{4cm}}
+\end{itemize}
+
+\item Education Level:
+\begin{itemize}[label=$\square$]
+\item High School
+\item Some College
+\item Bachelor's Degree
+\item Master's Degree
+\item Doctoral Degree
+\item Other: \underline{\hspace{4cm}}
+\end{itemize}
+
+\item Occupation: \underline{\hspace{10cm}}
+
+\end{enumerate}
+
+\section*{Part 2: Main Questions}
+
+\begin{enumerate}[leftmargin=*, resume]
+
+\item On a scale of 1-5, how would you rate [topic]?\\
+(1 = Very Poor, 5 = Excellent)
+
+\begin{center}
+\begin{tabular}{ccccc}
+1 $\square$ & 2 $\square$ & 3 $\square$ & 4 $\square$ & 5 $\square$
+\end{tabular}
+\end{center}
+
+\item How often do you [activity]?
+\begin{itemize}[label=$\square$]
+\item Daily
+\item Several times a week
+\item Once a week
+\item Several times a month
+\item Rarely
+\item Never
+\end{itemize}
+
+\item Please indicate your level of agreement with the following statements:
+
+\begin{center}
+\begin{tabular}{|p{6cm}|c|c|c|c|c|}
+\hline
+\textbf{Statement} & \textbf{Strongly Disagree} & \textbf{Disagree} & \textbf{Neutral} & \textbf{Agree} & \textbf{Strongly Agree} \\
+\hline
+Statement 1 & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+Statement 2 & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+Statement 3 & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\item Which of the following apply to you? (Select all that apply)
+\begin{itemize}[label=$\square$]
+\item Option A
+\item Option B
+\item Option C
+\item Option D
+\item None of the above
+\end{itemize}
+
+\item In your opinion, what is the most important factor regarding [topic]?
+
+\vspace{3cm}
+
+\item Please describe your experience with [topic]:
+
+\vspace{3cm}
+
+\item What improvements would you suggest?
+
+\vspace{3cm}
+
+\end{enumerate}
+
+\section*{Part 3: Additional Comments}
+
+\begin{enumerate}[leftmargin=*, resume]
+
+\item Is there anything else you would like to share about [topic]?
+
+\vspace{4cm}
+
+\end{enumerate}
+
+\vspace{1cm}
+
+\begin{center}
+\textbf{Thank you for your participation!}\\[0.3cm]
+For questions about this study, please contact:\\
+Researcher Name | Email | Phone
+\end{center}
+
+\end{document}`,
+  },
+  {
+    id: 50,
+    title: "Table Template",
+    description: "Professional table layouts and formatting",
+    slug: "table-template",
+    previewUrl: "/templates/table-template.pdf",
+    code: String.raw`\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage[table]{xcolor}
+\usepackage{multirow}
+
+\title{LaTeX Table Examples}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Basic Table}
+
+\begin{table}[h]
+\centering
+\caption{Simple table example}
+\begin{tabular}{|l|c|r|}
+\hline
+\textbf{Left} & \textbf{Center} & \textbf{Right} \\
+\hline
+Data 1 & Data 2 & Data 3 \\
+Data 4 & Data 5 & Data 6 \\
+Data 7 & Data 8 & Data 9 \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Professional Table with Booktabs}
+
+\begin{table}[h]
+\centering
+\caption{Professional table with booktabs}
+\begin{tabular}{@{}llr@{}}
+\toprule
+\textbf{Item} & \textbf{Description} & \textbf{Value} \\
+\midrule
+Item A & First item & 100 \\
+Item B & Second item & 200 \\
+Item C & Third item & 300 \\
+\midrule
+\textbf{Total} & & \textbf{600} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Table with Custom Column Widths}
+
+\begin{table}[h]
+\centering
+\caption{Table with paragraph columns}
+\begin{tabular}{|p{3cm}|p{5cm}|p{3cm}|}
+\hline
+\textbf{Name} & \textbf{Description} & \textbf{Status} \\
+\hline
+Project A & This is a longer description that will wrap within the column & Complete \\
+\hline
+Project B & Another description that demonstrates text wrapping & In Progress \\
+\hline
+Project C & Final project description & Pending \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Colored Table}
+
+\begin{table}[h]
+\centering
+\caption{Table with colored rows}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\rowcolor{blue!20}
+\textbf{Category} & \textbf{Q1} & \textbf{Q2} & \textbf{Q3} \\
+\hline
+Sales & \$10,000 & \$12,000 & \$15,000 \\
+\rowcolor{gray!10}
+Marketing & \$5,000 & \$6,000 & \$7,000 \\
+Operations & \$8,000 & \$8,500 & \$9,000 \\
+\rowcolor{gray!10}
+R\&D & \$15,000 & \$16,000 & \$17,000 \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Table with Multirow and Multicolumn}
+
+\begin{table}[h]
+\centering
+\caption{Complex table with merged cells}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\multirow{2}{*}{\textbf{Item}} & \multicolumn{3}{c|}{\textbf{Quarters}} \\
+\cline{2-4}
+& Q1 & Q2 & Q3 \\
+\hline
+Revenue & 100 & 120 & 150 \\
+Costs & 60 & 70 & 80 \\
+\hline
+\textbf{Profit} & \textbf{40} & \textbf{50} & \textbf{70} \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Data Table}
+
+\begin{table}[h]
+\centering
+\caption{Scientific data table}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Experiment} & \textbf{Trial 1} & \textbf{Trial 2} & \textbf{Trial 3} & \textbf{Mean} \\
+\midrule
+Test A & 5.2 & 5.4 & 5.3 & 5.3 \\
+Test B & 7.1 & 7.3 & 7.0 & 7.1 \\
+Test C & 9.8 & 9.9 & 9.7 & 9.8 \\
+\midrule
+\textbf{Average} & \textbf{7.4} & \textbf{7.5} & \textbf{7.3} & \textbf{7.4} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Comparison Table}
+
+\begin{table}[h]
+\centering
+\caption{Feature comparison}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Feature} & \textbf{Plan A} & \textbf{Plan B} & \textbf{Plan C} \\
+\hline
+Storage & 10 GB & 100 GB & Unlimited \\
+Users & 1 & 5 & Unlimited \\
+Support & Email & Email + Chat & 24/7 Phone \\
+Price & \$10/mo & \$50/mo & \$100/mo \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Schedule Table}
+
+\begin{table}[h]
+\centering
+\caption{Weekly schedule}
+\begin{tabular}{|l|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Time} & \textbf{Monday} & \textbf{Tuesday} & \textbf{Wednesday} & \textbf{Thursday} \\
+\hline
+9:00 AM & Meeting & Project Work & Meeting & Review \\
+\hline
+11:00 AM & Development & Development & Development & Testing \\
+\hline
+2:00 PM & Testing & Documentation & Client Call & Planning \\
+\hline
+4:00 PM & Email & Meetings & Code Review & Wrap-up \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}`,
+  },
+  {
+    id: 51,
+    title: "Bibliography",
+    description: "Standalone bibliography and references template",
+    slug: "bibliography",
+    previewUrl: "/templates/bibliography.pdf",
+    code: String.raw`\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{natbib}
+
+\title{Bibliography and References Guide}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+This document demonstrates various citation and bibliography styles in LaTeX. Below are examples of how to cite different types of sources and how they appear in the bibliography.
+
+\section{Citation Examples}
+
+\subsection{Books}
+According to \citet{knuth1984}, typesetting is an art. The seminal work on algorithms \citep{cormen2009} provides comprehensive coverage.
+
+\subsection{Journal Articles}
+Recent research \citep{smith2020} has shown significant advances. Multiple studies \citep{jones2019,brown2021} support this conclusion.
+
+\subsection{Conference Papers}
+The methodology was first presented at a conference \citep{anderson2018}.
+
+\subsection{Web Resources}
+Online documentation \citep{latex2023} is available for reference.
+
+\section{Different Citation Formats}
+
+\begin{itemize}
+\item Parenthetical: \citep{knuth1984}
+\item Textual: \citet{knuth1984}
+\item Author only: \citeauthor{knuth1984}
+\item Year only: \citeyear{knuth1984}
+\item Multiple citations: \citep{smith2020,jones2019}
+\end{itemize}
+
+\section{References Section}
+
+The bibliography below is automatically generated from the citations in the document. Different bibliography styles (APA, IEEE, Chicago, etc.) can be used by changing the bibliographystyle command.
+
+% Bibliography
+\bibliographystyle{apalike}
+
+\begin{thebibliography}{99}
+
+\bibitem[Knuth, 1984]{knuth1984}
+Knuth, D. E. (1984).
+\textit{The TeXbook}.
+Addison-Wesley Professional.
+
+\bibitem[Cormen et al., 2009]{cormen2009}
+Cormen, T. H., Leiserson, C. E., Rivest, R. L., and Stein, C. (2009).
+\textit{Introduction to Algorithms}, 3rd edition.
+MIT Press.
+
+\bibitem[Smith, 2020]{smith2020}
+Smith, J. (2020).
+Recent advances in computational methods.
+\textit{Journal of Computer Science}, 45(3), 123-145.
+
+\bibitem[Jones, 2019]{jones2019}
+Jones, M. (2019).
+A survey of modern techniques.
+\textit{ACM Computing Surveys}, 52(1), 1-35.
+
+\bibitem[Brown and Davis, 2021]{brown2021}
+Brown, R. and Davis, S. (2021).
+New perspectives on machine learning.
+\textit{IEEE Transactions on Pattern Analysis and Machine Intelligence}, 43(7), 2456-2470.
+
+\bibitem[Anderson et al., 2018]{anderson2018}
+Anderson, P., Wilson, K., and Lee, C. (2018).
+Novel approaches to data analysis.
+In \textit{Proceedings of the International Conference on Data Science}, pages 234-241.
+
+\bibitem[LaTeX Project, 2023]{latex2023}
+LaTeX Project (2023).
+\textit{LaTeX Documentation}.
+Available at: https://www.latex-project.org/help/documentation/
+[Accessed: January 2023].
+
+\bibitem[Miller, 2022]{miller2022}
+Miller, T. (2022).
+\textit{Advanced Topics in Computer Science}.
+PhD thesis, University of Example.
+
+\bibitem[Taylor and Clark, 2020]{taylor2020}
+Taylor, A. and Clark, B. (2020).
+Statistical methods in research.
+Technical Report TR-2020-01, Research Institute.
+
+\bibitem[White, 2019]{white2019}
+White, E. (2019).
+Introduction to LaTeX.
+In Johnson, R., editor, \textit{Academic Writing Tools}, chapter 3, pages 45-78.
+Academic Press.
+
+\end{thebibliography}
+
+\section{Notes on Bibliography Management}
+
+For larger projects, consider using BibTeX or BibLaTeX with external .bib files. This allows for:
+
+\begin{itemize}
+\item Centralized reference management
+\item Automatic formatting
+\item Easy reuse across documents
+\item Integration with reference managers (Zotero, Mendeley, etc.)
+\end{itemize}
+
+\subsection{Common Bibliography Styles}
+
+\begin{itemize}
+\item \texttt{plain}: Basic style, sorted alphabetically
+\item \texttt{apalike}: APA-like style
+\item \texttt{ieeetr}: IEEE Transaction style
+\item \texttt{acm}: ACM style
+\item \texttt{chicago}: Chicago Manual of Style
+\end{itemize}
+
+\end{document}`,
+  },
+  {
+    id: 52,
+    title: "Memo",
+    description: "Professional business memo template",
+    slug: "memo",
+    previewUrl: "/templates/memo.pdf",
+    code: String.raw`\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+{\Large \textbf{MEMORANDUM}}
+\end{center}
+
+\vspace{0.5cm}
+
+\noindent
+\textbf{TO:} Recipients Name, Title\\
+\textbf{FROM:} Your Name, Title\\
+\textbf{DATE:} \today\\
+\textbf{RE:} Subject of Memo
+
+\vspace{0.5cm}
+
+\noindent
+\rule{\linewidth}{0.5pt}
+
+\vspace{0.5cm}
+
+\section*{Purpose}
+
+This memo is to inform you about topic. The purpose of this communication is to briefly describe the main purpose or reason for the memo.
+
+\section*{Background}
+
+Provide relevant background information or context. Explain the situation or issue that prompted this memo. Include any necessary details that will help recipients understand the matter at hand.
+
+\section*{Discussion}
+
+Present the main points or details:
+
+\begin{itemize}
+\item \textbf{Point 1:} First key point or finding
+\item \textbf{Point 2:} Second important consideration
+\item \textbf{Point 3:} Additional relevant information
+\item \textbf{Point 4:} Further details as needed
+\end{itemize}
+
+Additional analysis or explanation of the situation. Provide any data, evidence, or reasoning that supports your points.
+
+\section*{Recommendation/Action Items}
+
+Based on the discussion above, the following actions are recommended:
+
+\begin{enumerate}
+\item Action item 1 - Responsible party and deadline
+\item Action item 2 - Responsible party and deadline
+\item Action item 3 - Responsible party and deadline
+\end{enumerate}
+
+\section*{Conclusion}
+
+Summarize the key takeaway or next steps. Provide any final thoughts or emphasize the importance of the matter.
+
+\vspace{1cm}
+
+\noindent
+If you have any questions or need additional information, please contact me at email@company.com or extension 1234.
+
+\end{document}`,
+  },
+  {
+    id: 53,
+    title: "Manuscript",
+    description: "Book manuscript template for novels and non-fiction",
+    slug: "manuscript",
+    previewUrl: "/templates/manuscript.pdf",
+    code: String.raw`\documentclass[12pt]{book}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\doublespacing
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RO]{\thepage}
+\fancyhead[LE]{\thepage}
+\fancyhead[LO]{Author Last Name / BOOK TITLE}
+\fancyhead[RE]{Author Last Name / BOOK TITLE}
+\renewcommand{\headrulewidth}{0pt}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{flushleft}
+Your Name\\
+Street Address\\
+City, State ZIP\\
+Phone Number\\
+Email Address\\
+Word Count: Approximately XX,XXX words
+\end{flushleft}
+
+\vspace{3cm}
+
+\begin{center}
+{\Huge \textbf{BOOK TITLE}}\\[1cm]
+{\Large by}\\[1cm]
+{\LARGE Your Name}
+\end{center}
+\end{titlepage}
+
+\frontmatter
+
+\chapter*{Dedication}
+To those who inspire us to write.
+
+\chapter*{Acknowledgments}
+I would like to thank individuals who helped bring this book to life.
+
+\tableofcontents
+
+\mainmatter
+
+\chapter{Chapter One Title}
+
+The opening paragraph of your first chapter should hook the reader immediately. It should establish the tone, introduce key elements, and draw the reader into your story or subject matter.
+
+Continue with the narrative or exposition. Each paragraph should flow naturally into the next, building your story or argument systematically.
+
+New scenes or major transitions can be indicated with extra spacing or section breaks.
+
+\section*{}
+
+When you need a scene break within a chapter, you can use a centered symbol or simply extra white space.
+
+The story continues with the new scene. Maintain consistency in your narrative voice and style throughout.
+
+\chapter{Chapter Two Title}
+
+The second chapter continues the narrative, building on what was established in the first chapter. Character development, plot progression, and thematic elements should continue to unfold naturally.
+
+Each chapter should have a clear purpose in advancing your story or argument. Consider pacing, tension, and reader engagement as you write.
+
+\chapter{Chapter Three Title}
+
+Continue building your narrative or exposition. Develop characters, advance plot points, or present your arguments and evidence systematically.
+
+Remember to:
+\begin{itemize}
+\item Show, don't tell (for fiction)
+\item Maintain consistent point of view
+\item Develop compelling characters or clear arguments
+\item Create engaging dialogue (for fiction)
+\item Build appropriate pacing and tension
+\end{itemize}
+
+\chapter{Conclusion or Final Chapter}
+
+Bring your narrative or argument to a satisfying conclusion. Resolve major plot points or synthesize your key arguments. Leave the reader with something meaningful to consider.
+
+\backmatter
+
+\chapter*{Author Bio}
+Your Name is a writer who background and credentials. Previous publications or relevant experience.
+
+\end{document}`,
+  },
+  {
+    id: 54,
+    title: "Recipe Book",
+    description: "Cookbook and recipe collection template",
+    slug: "recipe-book",
+    previewUrl: "/templates/recipe-book.pdf",
+    code: String.raw`\documentclass[11pt]{book}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{xcolor}
+
+\definecolor{recipecolor}{RGB}{139,69,19}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\vspace*{2cm}
+
+{\Huge \textbf{My Recipe Collection}}\\[1cm]
+{\Large Delicious Recipes for Every Occasion}\\[2cm]
+
+{\large Compiled by}\\[0.5cm]
+{\Large Your Name}\\[3cm]
+
+\today
+\end{center}
+\end{titlepage}
+
+\tableofcontents
+
+\chapter{Appetizers \& Starters}
+
+\section*{Bruschetta}
+
+\textbf{Servings:} 6 | \textbf{Prep Time:} 15 min | \textbf{Cook Time:} 5 min
+
+\subsection*{Ingredients}
+
+\begin{itemize}[leftmargin=*]
+\item 1 French baguette, sliced
+\item 4 ripe tomatoes, diced
+\item 3 cloves garlic (1 whole, 2 minced)
+\item 1/4 cup fresh basil, chopped
+\item 2 tablespoons olive oil
+\item 1 tablespoon balsamic vinegar
+\item Salt and pepper to taste
+\end{itemize}
+
+\subsection*{Instructions}
+
+\begin{enumerate}[leftmargin=*]
+\item Preheat oven to 400°F (200°C).
+\item Brush bread slices with olive oil and toast in oven until golden, about 5 minutes.
+\item Mix tomatoes, minced garlic, basil, vinegar, salt, and pepper in a bowl.
+\item Rub toasted bread with whole garlic clove.
+\item Top with tomato mixture and serve immediately.
+\end{enumerate}
+
+\subsection*{Notes}
+
+Best served fresh. Can prepare tomato mixture 1 hour ahead and refrigerate.
+
+\chapter{Main Courses}
+
+\section*{Classic Spaghetti Carbonara}
+
+\textbf{Servings:} 4 | \textbf{Prep Time:} 10 min | \textbf{Cook Time:} 20 min
+
+\subsection*{Ingredients}
+
+\begin{itemize}[leftmargin=*]
+\item 1 lb spaghetti
+\item 6 oz pancetta or bacon, diced
+\item 4 large eggs
+\item 1 cup Parmesan cheese, grated
+\item 2 cloves garlic, minced
+\item Salt and black pepper to taste
+\item Fresh parsley for garnish
+\end{itemize}
+
+\subsection*{Instructions}
+
+\begin{enumerate}[leftmargin=*]
+\item Bring large pot of salted water to boil. Cook spaghetti according to package directions.
+\item Meanwhile, cook pancetta in large skillet over medium heat until crispy, about 8 minutes.
+\item In bowl, whisk together eggs, Parmesan, and black pepper.
+\item Reserve 1 cup pasta water, then drain pasta.
+\item Add hot pasta to skillet with pancetta. Remove from heat.
+\item Quickly stir in egg mixture, adding pasta water as needed to create creamy sauce.
+\item Serve immediately with extra Parmesan and parsley.
+\end{enumerate}
+
+\subsection*{Tips}
+
+The key is to work quickly and off heat when adding eggs to prevent scrambling.
+
+\chapter{Desserts}
+
+\section*{Chocolate Chip Cookies}
+
+\textbf{Servings:} 24 cookies | \textbf{Prep Time:} 15 min | \textbf{Cook Time:} 12 min
+
+\subsection*{Ingredients}
+
+\begin{multicols}{2}
+\begin{itemize}[leftmargin=*]
+\item 2 1/4 cups all-purpose flour
+\item 1 tsp baking soda
+\item 1 tsp salt
+\item 1 cup butter, softened
+\item 3/4 cup granulated sugar
+\item 3/4 cup brown sugar
+\item 2 large eggs
+\item 2 tsp vanilla extract
+\item 2 cups chocolate chips
+\end{itemize}
+\end{multicols}
+
+\subsection*{Instructions}
+
+\begin{enumerate}[leftmargin=*]
+\item Preheat oven to 375°F (190°C).
+\item Mix flour, baking soda, and salt in bowl.
+\item Beat butter and both sugars until creamy.
+\item Add eggs and vanilla, beat well.
+\item Gradually blend in flour mixture.
+\item Stir in chocolate chips.
+\item Drop rounded tablespoons onto ungreased cookie sheets.
+\item Bake 9-11 minutes or until golden brown.
+\item Cool on baking sheets for 2 minutes, then transfer to wire rack.
+\end{enumerate}
+
+\subsection*{Variations}
+
+Try adding nuts, using different chocolate types, or substituting half the chocolate chips with M\&Ms.
+
+\chapter{Index}
+
+\begin{multicols}{2}
+\textbf{A}\\
+Appetizers, 1
+
+\textbf{B}\\
+Bruschetta, 1
+
+\textbf{C}\\
+Carbonara, 2\\
+Chocolate Chip Cookies, 3
+
+\textbf{D}\\
+Desserts, 3
+
+\textbf{M}\\
+Main Courses, 2
+
+\textbf{P}\\
+Pasta, 2
+
+\textbf{S}\\
+Spaghetti, 2
+\end{multicols}
+
+\end{document}`,
+  },
+  {
+    id: 55,
+    title: "Flyer",
+    description: "Marketing flyer and promotional one-page template",
+    slug: "flyer",
+    previewUrl: "/templates/flyer.pdf",
+    code: String.raw`\documentclass[11pt]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+\definecolor{primarycolor}{RGB}{33,150,243}
+\definecolor{accentcolor}{RGB}{255,193,7}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+
+% Header
+\colorbox{primarycolor}{%
+\begin{minipage}{\dimexpr\textwidth-2\fboxsep}
+\centering
+\vspace{0.5cm}
+{\Huge \textcolor{white}{\textbf{EVENT TITLE}}}\\[0.3cm]
+{\Large \textcolor{white}{Catchy Subtitle or Tagline Here}}\\[0.5cm]
+\end{minipage}
+}
+
+\vspace{1cm}
+
+% Main content
+\begin{minipage}{0.9\textwidth}
+
+{\LARGE \textcolor{primarycolor}{\textbf{Join Us for an Amazing Experience!}}}
+
+\vspace{0.8cm}
+
+{\large
+Don't miss this incredible opportunity to be part of something special. Whether you're a first-timer or a regular participant, this event promises to deliver excitement, learning, and unforgettable memories.
+}
+
+\vspace{1cm}
+
+% Event details box
+\colorbox{accentcolor!20}{%
+\begin{minipage}{\dimexpr\textwidth-2\fboxsep}
+\vspace{0.3cm}
+\begin{center}
+
+{\Large \textbf{EVENT DETAILS}}
+
+\vspace{0.5cm}
+
+\begin{tabular}{rl}
+\textbf{Date:} & Saturday, March 15, 2025 \\[0.3cm]
+\textbf{Time:} & 2:00 PM - 6:00 PM \\[0.3cm]
+\textbf{Location:} & Main Event Center \\
+& 123 Main Street \\
+& City, State 12345 \\[0.3cm]
+\textbf{Admission:} & Free (Registration Required) \\
+\end{tabular}
+
+\end{center}
+\vspace{0.3cm}
+\end{minipage}
+}
+
+\vspace{1cm}
+
+% Features or highlights
+{\Large \textcolor{primarycolor}{\textbf{What to Expect:}}}
+
+\vspace{0.5cm}
+
+\begin{itemize}
+\item \textbf{Amazing Activities:} Hands-on workshops and interactive sessions
+\item \textbf{Expert Speakers:} Learn from industry leaders and professionals
+\item \textbf{Networking:} Connect with like-minded individuals
+\item \textbf{Refreshments:} Complimentary food and beverages
+\item \textbf{Prizes:} Exciting giveaways and competitions
+\end{itemize}
+
+\vspace{1cm}
+
+% Call to action
+\colorbox{primarycolor}{%
+\begin{minipage}{\dimexpr\textwidth-2\fboxsep}
+\begin{center}
+\vspace{0.5cm}
+{\Huge \textcolor{white}{\textbf{REGISTER NOW!}}}\\[0.3cm]
+{\Large \textcolor{white}{Visit: www.eventwebsite.com}}\\
+{\Large \textcolor{white}{Email: info@event.com}}\\
+{\Large \textcolor{white}{Phone: (555) 123-4567}}\\[0.5cm]
+\end{center}
+\end{minipage}
+}
+
+\vspace{0.5cm}
+
+{\footnotesize Limited spaces available. Early registration recommended.}
+
+\end{minipage}
+
+\end{center}
+
+\end{document}`,
+  },
+  {
+    id: 56,
+    title: "Business Card",
+    description: "Professional business card template",
+    slug: "business-card",
+    previewUrl: "/templates/business-card.pdf",
+    code: String.raw`\documentclass[11pt]{article}
+\usepackage[margin=0in, paperwidth=3.5in, paperheight=2in]{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+\definecolor{cardcolor}{RGB}{41,128,185}
+\pagestyle{empty}
+
+\begin{document}
+
+% Front of card
+\noindent
+\colorbox{cardcolor}{%
+\begin{minipage}[c][2in][c]{3.5in}
+\centering
+\vspace{0.3in}
+{\Huge \textcolor{white}{\textbf{YOUR NAME}}}\\[0.1in]
+{\Large \textcolor{white}{Professional Title}}\\[0.3in]
+\end{minipage}
+}
+
+\vfill
+\pagebreak
+
+% Back of card
+\noindent
+\begin{minipage}[c][2in][c]{3.5in}
+\centering
+\vspace{0.2in}
+
+{\large \textbf{CONTACT INFORMATION}}\\[0.2in]
+
+\begin{tabular}{rl}
+\textbf{Phone:} & (555) 123-4567 \\
+\textbf{Email:} & your.name@email.com \\
+\textbf{Website:} & www.yourwebsite.com \\
+\textbf{LinkedIn:} & linkedin.com/in/yourname \\
+\end{tabular}
+
+\vspace{0.2in}
+
+\textbf{Company Name}\\
+123 Business Street\\
+City, State 12345
+
+\vspace{0.1in}
+\end{minipage}
+
+\vfill
+
+% Alternative single-sided design
+\pagebreak
+
+\noindent
+\begin{minipage}[c][2in][c]{3.5in}
+\vspace{0.15in}
+
+\begin{minipage}{0.6\textwidth}
+{\LARGE \textbf{Your Name}}\\[0.05in]
+{\large Professional Title}\\[0.15in]
+
+{\small
+\textbf{Company Name}\\[0.05in]
+Phone: (555) 123-4567\\
+Email: your.name@email.com\\
+Website: www.yourwebsite.com\\[0.05in]
+123 Business Street\\
+City, State 12345
+}
+\end{minipage}
+\hfill
+\begin{minipage}{0.35\textwidth}
+\raggedleft
+\colorbox{cardcolor}{%
+\begin{minipage}[c][1.5in][c]{1in}
+\centering
+\textcolor{white}{\textbf{LOGO}}
+\end{minipage}
+}
+\end{minipage}
+
+\vspace{0.15in}
+\end{minipage}
+
+\end{document}`,
+  },
+  {
+    id: 57,
+    title: "Calendar",
+    description: "Monthly and yearly calendar template",
+    slug: "calendar",
+    previewUrl: "/templates/calendar.pdf",
+    code: String.raw`\documentclass[11pt]{article}
+\usepackage[margin=0.5in, landscape]{geometry}
+\usepackage{tikz}
+\usepackage[table]{xcolor}
+\usepackage{array}
+
+\definecolor{headercolor}{RGB}{52,73,94}
+\definecolor{weekendcolor}{RGB}{236,240,241}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+
+{\Huge \textbf{March 2025}}
+
+\vspace{0.5cm}
+
+\begin{tabular}{|>{\centering\arraybackslash}p{1.3in}|>{\centering\arraybackslash}p{1.3in}|>{\centering\arraybackslash}p{1.3in}|>{\centering\arraybackslash}p{1.3in}|>{\centering\arraybackslash}p{1.3in}|>{\centering\arraybackslash}p{1.3in}|>{\centering\arraybackslash}p{1.3in}|}
+\hline
+\rowcolor{headercolor}
+\textcolor{white}{\textbf{Sunday}} & \textcolor{white}{\textbf{Monday}} & \textcolor{white}{\textbf{Tuesday}} & \textcolor{white}{\textbf{Wednesday}} & \textcolor{white}{\textbf{Thursday}} & \textcolor{white}{\textbf{Friday}} & \textcolor{white}{\textbf{Saturday}} \\
+\hline
+\cellcolor{weekendcolor} & & & & & & \cellcolor{weekendcolor} 1 \\[1.8cm]
+\hline
+\cellcolor{weekendcolor} 2 & 3 & 4 & 5 & 6 & 7 & \cellcolor{weekendcolor} 8 \\[1.8cm]
+\hline
+\cellcolor{weekendcolor} 9 & 10 & 11 & 12 & 13 & 14 & \cellcolor{weekendcolor} 15 \\[1.8cm]
+\hline
+\cellcolor{weekendcolor} 16 & 17 & 18 & 19 & 20 & 21 & \cellcolor{weekendcolor} 22 \\[1.8cm]
+\hline
+\cellcolor{weekendcolor} 23 & 24 & 25 & 26 & 27 & 28 & \cellcolor{weekendcolor} 29 \\[1.8cm]
+\hline
+\cellcolor{weekendcolor} 30 & 31 & & & & & \cellcolor{weekendcolor} \\[1.8cm]
+\hline
+\end{tabular}
+
+\end{center}
+
+\vfill
+
+\textbf{Notes:}\\[0.2cm]
+\rule{\linewidth}{0.5pt}\\[0.3cm]
+\rule{\linewidth}{0.5pt}\\[0.3cm]
+\rule{\linewidth}{0.5pt}
+
+\pagebreak
+
+% Yearly calendar
+\begin{center}
+
+{\Huge \textbf{2025 Year Calendar}}
+
+\vspace{0.5cm}
+
+\begin{minipage}{0.3\textwidth}
+\centering
+\textbf{January}\\
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+S & M & T & W & T & F & S \\
+\hline
+& & & 1 & 2 & 3 & 4 \\
+5 & 6 & 7 & 8 & 9 & 10 & 11 \\
+12 & 13 & 14 & 15 & 16 & 17 & 18 \\
+19 & 20 & 21 & 22 & 23 & 24 & 25 \\
+26 & 27 & 28 & 29 & 30 & 31 & \\
+\hline
+\end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\textbf{February}\\
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+S & M & T & W & T & F & S \\
+\hline
+& & & & & & 1 \\
+2 & 3 & 4 & 5 & 6 & 7 & 8 \\
+9 & 10 & 11 & 12 & 13 & 14 & 15 \\
+16 & 17 & 18 & 19 & 20 & 21 & 22 \\
+23 & 24 & 25 & 26 & 27 & 28 & \\
+\hline
+\end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\textbf{March}\\
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+S & M & T & W & T & F & S \\
+\hline
+& & & & & & 1 \\
+2 & 3 & 4 & 5 & 6 & 7 & 8 \\
+9 & 10 & 11 & 12 & 13 & 14 & 15 \\
+16 & 17 & 18 & 19 & 20 & 21 & 22 \\
+23 & 24 & 25 & 26 & 27 & 28 & 29 \\
+30 & 31 & & & & & \\
+\hline
+\end{tabular}
+\end{minipage}
+
+\vspace{0.5cm}
+
+\begin{minipage}{0.3\textwidth}
+\centering
+\textbf{April}\\
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+S & M & T & W & T & F & S \\
+\hline
+& & 1 & 2 & 3 & 4 & 5 \\
+6 & 7 & 8 & 9 & 10 & 11 & 12 \\
+13 & 14 & 15 & 16 & 17 & 18 & 19 \\
+20 & 21 & 22 & 23 & 24 & 25 & 26 \\
+27 & 28 & 29 & 30 & & & \\
+\hline
+\end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\textbf{May}\\
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+S & M & T & W & T & F & S \\
+\hline
+& & & & 1 & 2 & 3 \\
+4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+11 & 12 & 13 & 14 & 15 & 16 & 17 \\
+18 & 19 & 20 & 21 & 22 & 23 & 24 \\
+25 & 26 & 27 & 28 & 29 & 30 & 31 \\
+\hline
+\end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\textbf{June}\\
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+S & M & T & W & T & F & S \\
+\hline
+1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+8 & 9 & 10 & 11 & 12 & 13 & 14 \\
+15 & 16 & 17 & 18 & 19 & 20 & 21 \\
+22 & 23 & 24 & 25 & 26 & 27 & 28 \\
+29 & 30 & & & & & \\
+\hline
+\end{tabular}
+\end{minipage}
+
+\end{center}
+
+\end{document}`,
+  },
 ];
 
