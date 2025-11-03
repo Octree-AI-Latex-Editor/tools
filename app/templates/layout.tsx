@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free LaTeX Templates - Research Papers, Presentations & More | Octree Tools",
-  description: "57 free professional LaTeX templates for research papers, presentations, CVs, business reports, recipes, flyers, calendars, and more. Download ready-to-use LaTeX code with PDF previews. Perfect for academics, students, and professionals.",
+  title: "57 Free LaTeX Templates - Resume, CV, Research Paper, Beamer & More | Octree",
+  description: "Download 57 free professional LaTeX templates: resume, CV, research paper, thesis, beamer presentation, homework, poster, business report, flyer, calendar & more. Ready-to-use code with live PDF previews. Perfect for academics, students & professionals.",
   keywords: [
     // High-volume keywords (1000+ searches)
     "latex templates",
     "latex resume template",
     "latex cv template",
+    "overleaf template",
     "ieee latex template",
     "latex resume templates",
     "latex template",
@@ -22,18 +23,25 @@ export const metadata: Metadata = {
     "latex thesis template",
     "arxiv latex template",
     "acm latex template",
+    "latex book template",
+    "latex beamer template",
+    "latex presentation template",
+    "latex report template",
+    "latex letter template",
     
     // Specific high-intent keywords
     "free latex templates",
     "best latex templates",
-    "latex beamer template",
-    "latex presentation template",
-    "academic cv latex template",
     "latex document templates",
     "latex algorithm template",
-    "latex letter template",
     "latex research paper template",
     "mathematical document template",
+    "latex notes template",
+    "latex exam template",
+    "latex assignment template",
+    "latex slide template",
+    "modern latex cv template",
+    "professional latex templates",
     
     // Long-tail keywords
     "latex resume template reddit",
@@ -43,6 +51,9 @@ export const metadata: Metadata = {
     "phd thesis latex template",
     "overleaf latex templates",
     "academic templates latex",
+    "latex cv template overleaf",
+    "latex resume template free",
+    "latex resume template github",
     
     // Business & professional templates
     "latex business plan template",
@@ -61,13 +72,28 @@ export const metadata: Metadata = {
     "latex flyer template",
     "latex business card template",
     "latex calendar template",
+    
+    // Publisher & conference templates
+    "latex springer template",
+    "latex ieee conference template",
+    "latex springer book template",
+    "latex apa template",
+    "latex two column article template",
+    
+    // Academic workflows
+    "latex template with bibliography",
+    "latex template for machine learning paper",
+    "latex template for computer science thesis",
+    "latex poster template a0",
+    "latex thesis template with chapters",
+    "best latex cv template",
   ],
   alternates: {
     canonical: '/templates',
   },
   openGraph: {
-    title: "Free LaTeX Templates - Research Papers, Presentations & More",
-    description: "57 professional LaTeX templates for research papers, presentations, CVs, business reports, recipes, flyers, and more. Free download with PDF previews.",
+    title: "57 Free LaTeX Templates - Resume, CV, Research Paper & More",
+    description: "Download 57 free LaTeX templates: resume, CV, thesis, beamer, homework, poster, business report, flyer, calendar. Ready-to-use code with live PDF previews.",
     url: 'https://tools.useoctree.com/templates',
     siteName: 'Octree LaTeX Tools',
     locale: 'en_US',
@@ -75,8 +101,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Free LaTeX Templates - Research Papers, Presentations & More",
-    description: "57 professional LaTeX templates for research papers, presentations, CVs, business reports, recipes, flyers, and more. Free download with PDF previews.",
+    title: "57 Free LaTeX Templates - Resume, CV, Research Paper & More",
+    description: "Download 57 free LaTeX templates: resume, CV, thesis, beamer, homework, poster, business report, flyer, calendar. Ready-to-use code with live PDF previews.",
   },
 };
 
@@ -148,9 +174,10 @@ export default function TemplatesLayout({
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: 'Free LaTeX Templates',
-    description: '57 professional LaTeX templates for research papers, presentations, CVs, business reports, recipes, flyers, calendars, and more',
+    name: '57 Free LaTeX Templates - Resume, CV, Research Paper & More',
+    description: '57 professional LaTeX templates including resume, CV, research paper, thesis, beamer presentation, homework, poster, business report, flyer, calendar, and more. Free download with PDF previews.',
     url: 'https://tools.useoctree.com/templates',
+    numberOfItems: 57,
     hasPart: templatesList.map((template) => ({
       '@type': 'SoftwareSourceCode',
       name: `${template.name} LaTeX Template`,

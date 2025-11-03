@@ -5074,8 +5074,8 @@ City, State 12345
     previewUrl: "/templates/calendar.pdf",
     code: String.raw`\documentclass[11pt]{article}
 \usepackage[margin=0.5in, landscape]{geometry}
-\usepackage{tikz}
 \usepackage[table]{xcolor}
+\usepackage{tikz}
 \usepackage{array}
 
 \definecolor{headercolor}{RGB}{52,73,94}
