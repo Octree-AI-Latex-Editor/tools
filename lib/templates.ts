@@ -1511,5 +1511,1611 @@ This report presented our cloud-native architecture which successfully met all p
 
 \end{document}`,
   },
+  {
+    id: 26,
+    title: "Math Exercises",
+    description: "Practice problems and exercises for mathematics",
+    slug: "math-exercises",
+    previewUrl: "/templates/math-exercises.pdf",
+    code: String.raw`\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+
+\title{Math Exercises}
+\author{Course Name}
+\date{}
+
+\newtheorem{exercise}{Exercise}
+
+\begin{document}
+\maketitle
+
+\section{Algebra}
+
+\begin{exercise}
+Solve for $x$: $2x^2 - 5x + 3 = 0$
+\end{exercise}
+
+\vspace{1cm}
+
+\begin{exercise}
+Simplify: $\frac{x^2 - 4}{x^2 + 4x + 4}$
+\end{exercise}
+
+\vspace{1cm}
+
+\section{Calculus}
+
+\begin{exercise}
+Find the derivative of $f(x) = \sin(x^2) \cdot e^x$
+\end{exercise}
+
+\vspace{1cm}
+
+\begin{exercise}
+Evaluate: $\int_0^{\pi} \sin^2(x) dx$
+\end{exercise}
+
+\vspace{1cm}
+
+\section{Linear Algebra}
+
+\begin{exercise}
+Find the eigenvalues of the matrix:
+\[
+A = \begin{pmatrix}
+2 & 1 \\
+1 & 2
+\end{pmatrix}
+\]
+\end{exercise}
+
+\vspace{1cm}
+
+\begin{exercise}
+Determine if the following vectors are linearly independent:
+\[
+\mathbf{v}_1 = \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix}, \quad
+\mathbf{v}_2 = \begin{pmatrix} 2 \\ 4 \\ 5 \end{pmatrix}
+\]
+\end{exercise}
+
+\end{document}`,
+  },
+  {
+    id: 27,
+    title: "Math Notes",
+    description: "Structured lecture notes for mathematics courses",
+    slug: "math-notes",
+    previewUrl: "/templates/math-notes.pdf",
+    code: String.raw`\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Math Course}
+\chead{Lecture Notes}
+\rhead{Date}
+\cfoot{\thepage}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{note}[theorem]{Note}
+
+\title{Lecture X: Topic Name}
+\author{Professor Name}
+\date{Lecture Date}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+Today we will study [topic]. The main goal is to understand [objective].
+
+\section{Main Concepts}
+
+\begin{definition}
+A function $f: X \to Y$ is called \textbf{continuous} if for every open set $V \subseteq Y$, the preimage $f^{-1}(V)$ is open in $X$.
+\end{definition}
+
+\begin{theorem}
+Every continuous function from a compact space to a Hausdorff space is closed.
+\end{theorem}
+
+\begin{proof}
+Let $f: X \to Y$ be continuous where $X$ is compact and $Y$ is Hausdorff...
+\end{proof}
+
+\begin{example}
+Consider the function $f(x) = x^2$ on $\mathbb{R}$. This function is continuous because...
+\end{example}
+
+\begin{remark}
+The converse of the theorem is not always true.
+\end{remark}
+
+\section{Important Results}
+
+\begin{lemma}
+If $f$ is continuous and $K$ is compact, then $f(K)$ is compact.
+\end{lemma}
+
+\section{Exercises}
+
+\begin{enumerate}
+\item Prove that composition of continuous functions is continuous.
+\item Show that $f(x) = \sin(x)$ is uniformly continuous on $\mathbb{R}$.
+\end{enumerate}
+
+\end{document}`,
+  },
+  {
+    id: 28,
+    title: "Math Exam",
+    description: "Formal mathematics examination template",
+    slug: "math-exam",
+    previewUrl: "/templates/math-exam.pdf",
+    code: String.raw`\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Math 101}
+\chead{Final Exam}
+\rhead{Fall 2025}
+\cfoot{\thepage}
+
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+\begin{center}
+{\Large \textbf{Mathematics 101 - Final Examination}}\\[0.3cm]
+{\large Fall Semester 2025}\\[0.5cm]
+\end{center}
+
+\noindent
+\textbf{Name:} \underline{\hspace{8cm}}\\[0.3cm]
+\textbf{Student ID:} \underline{\hspace{8cm}}\\[0.5cm]
+
+\noindent
+\textbf{Instructions:}
+\begin{itemize}
+\item This exam has 5 problems worth 100 points total.
+\item Show all work for full credit.
+\item You have 120 minutes to complete this exam.
+\item No calculators or notes allowed.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Problem} & \textbf{Points} & \textbf{Score} \\
+\hline
+1 & 20 & \\
+\hline
+2 & 20 & \\
+\hline
+3 & 20 & \\
+\hline
+4 & 20 & \\
+\hline
+5 & 20 & \\
+\hline
+\textbf{Total} & \textbf{100} & \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{1cm}
+
+\noindent
+\textbf{Problem 1.} (20 points) Solve the following equation for $x$:
+\[
+3x^2 - 7x + 2 = 0
+\]
+
+\vspace{4cm}
+
+\noindent
+\textbf{Problem 2.} (20 points) Find the derivative of:
+\[
+f(x) = \frac{\sin(x)}{x^2 + 1}
+\]
+
+\vspace{4cm}
+
+\noindent
+\textbf{Problem 3.} (20 points) Evaluate the integral:
+\[
+\int_0^1 x e^{x^2} dx
+\]
+
+\newpage
+
+\noindent
+\textbf{Problem 4.} (20 points) Prove that if $a$ and $b$ are even integers, then $a + b$ is even.
+
+\vspace{6cm}
+
+\noindent
+\textbf{Problem 5.} (20 points) Find the limit:
+\[
+\lim_{x \to 0} \frac{\sin(3x)}{2x}
+\]
+
+\end{document}`,
+  },
+  {
+    id: 29,
+    title: "Math Problem Set",
+    description: "Weekly problem set assignments for mathematics",
+    slug: "math-problem-set",
+    previewUrl: "/templates/math-problem-set.pdf",
+    code: String.raw`\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+
+\title{Problem Set X}
+\author{Math Course\\Due: Date}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Instructions}
+\begin{itemize}
+\item Write your solutions clearly and legibly.
+\item Show all work for full credit.
+\item Collaboration is allowed, but write your own solutions.
+\item Due at the beginning of class on the due date.
+\end{itemize}
+
+\section*{Problems}
+
+\begin{enumerate}[leftmargin=*]
+\item \textbf{(10 points)} 
+Let $f(x) = x^3 - 3x^2 + 2x - 1$. Find all critical points and determine their nature (local maximum, local minimum, or neither).
+
+\item \textbf{(15 points)}
+Prove that for all $n \geq 1$:
+\[
+1 + 2 + 3 + \cdots + n = \frac{n(n+1)}{2}
+\]
+
+\item \textbf{(15 points)}
+Let $A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}$. Find $A^{-1}$ and verify your answer.
+
+\item \textbf{(20 points)}
+Determine whether the series converges or diverges:
+\[
+\sum_{n=1}^{\infty} \frac{n^2}{n^3 + 1}
+\]
+Justify your answer.
+
+\item \textbf{(20 points)}
+Let $f: \mathbb{R} \to \mathbb{R}$ be defined by $f(x) = x^2$.
+\begin{enumerate}[label=(\alph*)]
+\item Show that $f$ is continuous at every point.
+\item Is $f$ uniformly continuous on $\mathbb{R}$? Prove or give a counterexample.
+\end{enumerate}
+
+\item \textbf{(20 points)}
+Evaluate the following integral:
+\[
+\int_0^{\pi/2} \frac{\sin(x)}{1 + \cos^2(x)} dx
+\]
+
+\end{enumerate}
+
+\section*{Bonus Problem (Optional)}
+
+\textbf{(10 points)} Prove or disprove: If $f$ and $g$ are uniformly continuous functions on $\mathbb{R}$, then $f \cdot g$ is uniformly continuous on $\mathbb{R}$.
+
+\end{document}`,
+  },
+  {
+    id: 30,
+    title: "Math Cheat Sheet",
+    description: "Compact reference sheet for formulas and theorems",
+    slug: "math-cheat-sheet",
+    previewUrl: "/templates/math-cheat-sheet.pdf",
+    code: String.raw`\documentclass[10pt,landscape]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{xcolor}
+
+\setlength{\parindent}{0pt}
+\setlength{\columnseprule}{0.4pt}
+
+\begin{document}
+
+\begin{center}
+{\Large \textbf{Mathematics Cheat Sheet}}
+\end{center}
+
+\begin{multicols}{3}
+
+\section*{Algebra}
+
+\textbf{Quadratic Formula:}
+\[
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\]
+
+\textbf{Binomial Theorem:}
+\[
+(a+b)^n = \sum_{k=0}^n \binom{n}{k} a^{n-k} b^k
+\]
+
+\textbf{Logarithm Laws:}
+\begin{align*}
+\log(xy) &= \log x + \log y\\
+\log(x/y) &= \log x - \log y\\
+\log(x^n) &= n \log x
+\end{align*}
+
+\section*{Trigonometry}
+
+\textbf{Basic Identities:}
+\begin{align*}
+\sin^2\theta + \cos^2\theta &= 1\\
+1 + \tan^2\theta &= \sec^2\theta\\
+1 + \cot^2\theta &= \csc^2\theta
+\end{align*}
+
+\textbf{Angle Sum:}
+\begin{align*}
+\sin(\alpha \pm \beta) &= \sin\alpha\cos\beta \pm \cos\alpha\sin\beta\\
+\cos(\alpha \pm \beta) &= \cos\alpha\cos\beta \mp \sin\alpha\sin\beta
+\end{align*}
+
+\textbf{Double Angle:}
+\begin{align*}
+\sin(2\theta) &= 2\sin\theta\cos\theta\\
+\cos(2\theta) &= \cos^2\theta - \sin^2\theta
+\end{align*}
+
+\section*{Calculus}
+
+\textbf{Derivatives:}
+\begin{align*}
+\frac{d}{dx}x^n &= nx^{n-1}\\
+\frac{d}{dx}e^x &= e^x\\
+\frac{d}{dx}\ln x &= \frac{1}{x}\\
+\frac{d}{dx}\sin x &= \cos x\\
+\frac{d}{dx}\cos x &= -\sin x
+\end{align*}
+
+\textbf{Product Rule:}
+\[
+(fg)' = f'g + fg'
+\]
+
+\textbf{Quotient Rule:}
+\[
+\left(\frac{f}{g}\right)' = \frac{f'g - fg'}{g^2}
+\]
+
+\textbf{Chain Rule:}
+\[
+\frac{d}{dx}f(g(x)) = f'(g(x)) \cdot g'(x)
+\]
+
+\textbf{Integration:}
+\begin{align*}
+\int x^n dx &= \frac{x^{n+1}}{n+1} + C\\
+\int e^x dx &= e^x + C\\
+\int \frac{1}{x} dx &= \ln|x| + C\\
+\int \sin x dx &= -\cos x + C\\
+\int \cos x dx &= \sin x + C
+\end{align*}
+
+\textbf{Integration by Parts:}
+\[
+\int u\, dv = uv - \int v\, du
+\]
+
+\section*{Series}
+
+\textbf{Geometric Series:}
+\[
+\sum_{n=0}^{\infty} ar^n = \frac{a}{1-r}, \quad |r| < 1
+\]
+
+\textbf{Taylor Series:}
+\[
+f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n
+\]
+
+\textbf{Common Series:}
+\begin{align*}
+e^x &= \sum_{n=0}^{\infty} \frac{x^n}{n!}\\
+\sin x &= \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{(2n+1)!}\\
+\cos x &= \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n}}{(2n)!}
+\end{align*}
+
+\section*{Linear Algebra}
+
+\textbf{Matrix Multiplication:}\\
+$(AB)_{ij} = \sum_k A_{ik}B_{kj}$
+
+\textbf{Determinant (2×2):}
+\[
+\det\begin{pmatrix} a & b \\ c & d \end{pmatrix} = ad - bc
+\]
+
+\textbf{Inverse (2×2):}
+\[
+A^{-1} = \frac{1}{\det A}\begin{pmatrix} d & -b \\ -c & a \end{pmatrix}
+\]
+
+\section*{Probability}
+
+\textbf{Conditional Probability:}
+\[
+P(A|B) = \frac{P(A \cap B)}{P(B)}
+\]
+
+\textbf{Bayes' Theorem:}
+\[
+P(A|B) = \frac{P(B|A)P(A)}{P(B)}
+\]
+
+\textbf{Expected Value:}
+\[
+E[X] = \sum_i x_i P(X = x_i)
+\]
+
+\end{multicols}
+
+\end{document}`,
+  },
+  {
+    id: 31,
+    title: "Lecture Notes",
+    description: "Clean academic lecture notes template",
+    slug: "lecture-notes",
+    previewUrl: "/templates/lecture-notes.pdf",
+    code: String.raw`\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Course Code}
+\chead{Lecture Notes}
+\rhead{\today}
+\cfoot{\thepage}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{example}{Example}[section]
+
+\title{Lecture X: Topic Name}
+\author{Instructor: Professor Name}
+\date{Date}
+
+\begin{document}
+\maketitle
+
+\section{Overview}
+
+In this lecture, we will cover [main topics]. The key learning objectives are:
+\begin{itemize}
+\item Objective 1
+\item Objective 2
+\item Objective 3
+\end{itemize}
+
+\section{Introduction}
+
+The field of [subject] has evolved significantly. We begin by reviewing fundamental concepts.
+
+\begin{definition}
+A [concept] is defined as...
+\end{definition}
+
+\begin{example}
+Consider the case where...
+\end{example}
+
+\section{Main Content}
+
+\subsection{First Topic}
+
+The relationship between [concept A] and [concept B] can be expressed as:
+\[
+f(x) = \int_0^x g(t) dt
+\]
+
+\begin{theorem}
+Under the conditions [conditions], we have [result].
+\end{theorem}
+
+\begin{proof}
+To prove this, we first observe that...
+\end{proof}
+
+\subsection{Second Topic}
+
+Building on the previous section, we now examine...
+
+\section{Applications}
+
+These concepts have important applications in:
+\begin{enumerate}
+\item Application 1
+\item Application 2
+\item Application 3
+\end{enumerate}
+
+\section{Summary}
+
+Key takeaways from today's lecture:
+\begin{itemize}
+\item Point 1
+\item Point 2
+\item Point 3
+\end{itemize}
+
+\section{Further Reading}
+
+\begin{itemize}
+\item Textbook Chapter X
+\item Research paper by Author (Year)
+\end{itemize}
+
+\end{document}`,
+  },
+  {
+    id: 32,
+    title: "Quiz Template",
+    description: "Short quiz or test template",
+    slug: "quiz-template",
+    previewUrl: "/templates/quiz-template.pdf",
+    code: String.raw`\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\begin{document}
+
+\begin{center}
+{\Large \textbf{Quiz - Topic Name}}\\[0.2cm]
+{\large Course Name}\\[0.5cm]
+\end{center}
+
+\noindent
+\textbf{Name:} \underline{\hspace{8cm}}\\[0.3cm]
+\textbf{Date:} \underline{\hspace{8cm}}\\[0.5cm]
+
+\noindent
+\textbf{Instructions:} Answer all questions. Show your work for full credit. Time limit: 20 minutes.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[leftmargin=*]
+
+\item \textbf{(5 points)} Multiple Choice: What is $2 + 2$?
+\begin{enumerate}[label=(\alph*)]
+\item 3
+\item 4
+\item 5
+\item 6
+\end{enumerate}
+
+\vspace{1cm}
+
+\item \textbf{(10 points)} True or False: The derivative of $x^2$ is $2x$.
+
+\vspace{2cm}
+
+\item \textbf{(15 points)} Short Answer: Solve for $x$:
+\[
+3x + 7 = 22
+\]
+
+\vspace{3cm}
+
+\item \textbf{(20 points)} Show your work: Evaluate the integral:
+\[
+\int_0^1 2x dx
+\]
+
+\vspace{4cm}
+
+\item \textbf{(10 points)} Explain in one sentence: What is the Pythagorean theorem?
+
+\vspace{2cm}
+
+\end{enumerate}
+
+\end{document}`,
+  },
+  {
+    id: 33,
+    title: "Formula Sheet",
+    description: "Reference sheet for important formulas",
+    slug: "formula-sheet",
+    previewUrl: "/templates/formula-sheet.pdf",
+    code: String.raw`\documentclass[11pt]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\begin{center}
+{\Large \textbf{Formula Sheet}}\\[0.2cm]
+{\large Course Name - Exam}
+\end{center}
+
+\vspace{0.3cm}
+
+\begin{multicols}{2}
+
+\section*{Calculus}
+
+\textbf{Derivatives:}
+\begin{align*}
+\frac{d}{dx}[x^n] &= nx^{n-1}\\
+\frac{d}{dx}[e^x] &= e^x\\
+\frac{d}{dx}[\ln x] &= \frac{1}{x}\\
+\frac{d}{dx}[\sin x] &= \cos x\\
+\frac{d}{dx}[\cos x] &= -\sin x\\
+\frac{d}{dx}[\tan x] &= \sec^2 x
+\end{align*}
+
+\textbf{Rules:}
+\begin{align*}
+(f \pm g)' &= f' \pm g'\\
+(fg)' &= f'g + fg'\\
+\left(\frac{f}{g}\right)' &= \frac{f'g - fg'}{g^2}\\
+\frac{d}{dx}[f(g(x))] &= f'(g(x)) \cdot g'(x)
+\end{align*}
+
+\textbf{Integrals:}
+\begin{align*}
+\int x^n dx &= \frac{x^{n+1}}{n+1} + C, \, n \neq -1\\
+\int e^x dx &= e^x + C\\
+\int \frac{1}{x} dx &= \ln|x| + C\\
+\int \sin x dx &= -\cos x + C\\
+\int \cos x dx &= \sin x + C\\
+\int \sec^2 x dx &= \tan x + C
+\end{align*}
+
+\textbf{Fundamental Theorem:}
+\[
+\int_a^b f(x) dx = F(b) - F(a)
+\]
+
+\section*{Trigonometry}
+
+\textbf{Pythagorean Identity:}
+\[
+\sin^2\theta + \cos^2\theta = 1
+\]
+
+\textbf{Angle Sum Formulas:}
+\begin{align*}
+\sin(\alpha + \beta) &= \sin\alpha\cos\beta + \cos\alpha\sin\beta\\
+\cos(\alpha + \beta) &= \cos\alpha\cos\beta - \sin\alpha\sin\beta
+\end{align*}
+
+\textbf{Double Angle Formulas:}
+\begin{align*}
+\sin(2\theta) &= 2\sin\theta\cos\theta\\
+\cos(2\theta) &= \cos^2\theta - \sin^2\theta\\
+&= 2\cos^2\theta - 1\\
+&= 1 - 2\sin^2\theta
+\end{align*}
+
+\section*{Algebra}
+
+\textbf{Quadratic Formula:}
+\[
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\]
+
+\textbf{Exponent Rules:}
+\begin{align*}
+a^m \cdot a^n &= a^{m+n}\\
+\frac{a^m}{a^n} &= a^{m-n}\\
+(a^m)^n &= a^{mn}\\
+(ab)^n &= a^n b^n
+\end{align*}
+
+\textbf{Logarithm Rules:}
+\begin{align*}
+\log(xy) &= \log x + \log y\\
+\log(x/y) &= \log x - \log y\\
+\log(x^n) &= n\log x\\
+\log_a a &= 1
+\end{align*}
+
+\section*{Geometry}
+
+\textbf{Area Formulas:}
+\begin{align*}
+\text{Circle:} \quad A &= \pi r^2\\
+\text{Triangle:} \quad A &= \frac{1}{2}bh\\
+\text{Rectangle:} \quad A &= lw
+\end{align*}
+
+\textbf{Volume Formulas:}
+\begin{align*}
+\text{Sphere:} \quad V &= \frac{4}{3}\pi r^3\\
+\text{Cylinder:} \quad V &= \pi r^2 h\\
+\text{Cone:} \quad V &= \frac{1}{3}\pi r^2 h
+\end{align*}
+
+\section*{Statistics}
+
+\textbf{Mean:}
+\[
+\bar{x} = \frac{1}{n}\sum_{i=1}^n x_i
+\]
+
+\textbf{Variance:}
+\[
+s^2 = \frac{1}{n-1}\sum_{i=1}^n (x_i - \bar{x})^2
+\]
+
+\textbf{Standard Deviation:}
+\[
+s = \sqrt{s^2}
+\]
+
+\end{multicols}
+
+\end{document}`,
+  },
+  {
+    id: 34,
+    title: "Project Report",
+    description: "Professional project report with chapters and sections",
+    slug: "project-report",
+    previewUrl: "/templates/project-report.pdf",
+    code: String.raw`\documentclass[12pt]{report}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\leftmark}
+\rhead{Page \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\vspace*{2cm}
+
+{\Huge \textbf{Project Title}}\\[1cm]
+
+{\Large Project Report}\\[1.5cm]
+
+{\large Submitted by}\\[0.5cm]
+{\Large \textbf{Student Name}}\\[0.3cm]
+{\large Student ID: 12345}\\[2cm]
+
+{\large in partial fulfillment of the requirements for}\\[0.5cm]
+{\Large Course Name}\\[2cm]
+
+{\large Department Name\\
+University Name}\\[1cm]
+
+{\large \today}
+
+\end{center}
+\end{titlepage}
+
+\tableofcontents
+
+\chapter{Introduction}
+
+\section{Background}
+This project addresses the problem of [problem statement].
+
+\section{Objectives}
+The main objectives of this project are:
+\begin{enumerate}
+\item Objective 1
+\item Objective 2
+\item Objective 3
+\end{enumerate}
+
+\section{Scope}
+The scope of this project includes [scope description].
+
+\chapter{Literature Review}
+
+\section{Related Work}
+Previous research in this area has focused on [related work].
+
+\section{Theoretical Framework}
+The theoretical foundation of this project is based on [theory].
+
+\chapter{Methodology}
+
+\section{System Design}
+The system architecture consists of [design description].
+
+\section{Implementation}
+We implemented the solution using [technologies and tools].
+
+\chapter{Results and Analysis}
+
+\section{Experimental Setup}
+The experiments were conducted using [setup description].
+
+\section{Results}
+Our implementation achieved [results].
+
+\chapter{Conclusion}
+
+\section{Summary}
+This project successfully [accomplishments].
+
+\section{Future Work}
+Future enhancements could include [future work].
+
+\begin{thebibliography}{9}
+\bibitem{ref1} Author, A. (2023). Title. \textit{Journal}, 1(1), 1-10.
+\end{thebibliography}
+
+\end{document}`,
+  },
+  {
+    id: 35,
+    title: "Article Template",
+    description: "Scientific article with abstract and sections",
+    slug: "article-template",
+    previewUrl: "/templates/article-template.pdf",
+    code: String.raw`\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{authblk}
+
+\title{Article Title: A Study of [Topic]}
+\author[1]{First Author}
+\author[2]{Second Author}
+\affil[1]{Department, Institution}
+\affil[2]{Department, Institution}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This article investigates [research question]. We present [methodology] and demonstrate [findings]. Our results show [conclusion] with implications for [field].
+\end{abstract}
+
+\textbf{Keywords:} keyword1, keyword2, keyword3, keyword4
+
+\section{Introduction}
+
+The study of [topic] has gained significant attention in recent years. This article addresses [research gap] by [contribution].
+
+\section{Background}
+
+\subsection{Historical Context}
+Previous work in this area includes [background].
+
+\subsection{Current State}
+The current understanding of [topic] is characterized by [state].
+
+\section{Methods}
+
+\subsection{Data Collection}
+We collected data using [methods].
+
+\subsection{Analysis Approach}
+Our analysis employed [techniques].
+
+\section{Results}
+
+\subsection{Main Findings}
+The primary results indicate [findings].
+
+\begin{figure}[h]
+\centering
+\caption{Results visualization}
+\label{fig:results}
+\end{figure}
+
+\subsection{Statistical Analysis}
+Statistical tests revealed [statistics].
+
+\section{Discussion}
+
+\subsection{Interpretation}
+These findings suggest [interpretation].
+
+\subsection{Limitations}
+This study has several limitations including [limitations].
+
+\section{Conclusion}
+
+In conclusion, this work has demonstrated [conclusion]. Future research should explore [future directions].
+
+\section*{Acknowledgments}
+The authors thank [acknowledgments].
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}`,
+  },
+  {
+    id: 36,
+    title: "Statement of Purpose",
+    description: "Graduate school application statement template",
+    slug: "statement-of-purpose",
+    previewUrl: "/templates/statement-of-purpose.pdf",
+    code: String.raw`\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+
+\begin{document}
+
+\begin{center}
+{\Large \textbf{Statement of Purpose}}\\[0.3cm]
+{\large Your Name}\\[0.2cm]
+Application for Program Name\\
+University Name
+\end{center}
+
+\vspace{0.5cm}
+
+My passion for [field] began when [opening story or experience]. This experience shaped my academic trajectory and solidified my desire to pursue graduate studies in [field] at [University Name].
+
+\section*{Academic Background}
+
+I completed my Bachelor's degree in [Major] at [University] in [Year], where I developed a strong foundation in [subjects]. During my undergraduate years, I maintained a [GPA] GPA and was particularly drawn to courses in [relevant courses]. My senior thesis on [thesis topic] allowed me to explore [research area] and sparked my interest in [specific interest].
+
+\section*{Research Experience}
+
+My research experience includes [describe research experience]. Working with Professor [Name], I contributed to [project description]. This experience taught me [skills/lessons learned] and resulted in [outcomes such as publications, presentations].
+
+Additionally, I worked as a research assistant in [lab/project] where I [responsibilities and accomplishments]. These experiences have prepared me to conduct independent research and contribute meaningfully to [field].
+
+\section*{Professional Experience}
+
+Beyond academia, I have gained valuable industry experience at [Company] as a [Position]. In this role, I [responsibilities and achievements]. This professional experience complemented my academic pursuits by [connection to academic goals].
+
+\section*{Research Interests}
+
+My primary research interests lie at the intersection of [topic A] and [topic B]. Specifically, I am fascinated by [specific research questions]. I am particularly interested in [Professor Name]'s work on [their research] and would be honored to contribute to ongoing projects in [lab/group name].
+
+I envision my graduate research exploring [research direction]. My long-term goal is to [career goals].
+
+\section*{Why [University Name]}
+
+[University Name] is uniquely positioned to support my academic goals. The program's strength in [specific strengths] aligns perfectly with my interests. The opportunity to work with faculty members such as [Professor Names] whose research in [their work] directly relates to my interests would be invaluable.
+
+Furthermore, [University]'s collaborative environment, resources such as [specific resources], and location in [location benefits] make it the ideal place for my graduate studies.
+
+\section*{Conclusion}
+
+I am confident that my academic background, research experience, and passion for [field] make me a strong candidate for the [Program] at [University]. I am eager to contribute to the intellectual community and advance the field through rigorous research and collaboration.
+
+Thank you for considering my application.
+
+\end{document}`,
+  },
+  {
+    id: 37,
+    title: "Literature Review",
+    description: "Academic literature review with citations",
+    slug: "literature-review",
+    previewUrl: "/templates/literature-review.pdf",
+    code: String.raw`\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{natbib}
+\doublespacing
+
+\title{Literature Review:\\
+{[}Topic Name{]}}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+This literature review examines the current state of research on [topic]. The review synthesizes findings from [time period] and identifies key themes, methodologies, and gaps in the literature.
+
+\subsection{Purpose and Scope}
+
+The purpose of this review is to [purpose]. This review covers [scope] and focuses on [specific aspects].
+
+\section{Methodology}
+
+\subsection{Search Strategy}
+
+A systematic search was conducted using databases including [databases]. Search terms included: [keywords]. The initial search yielded [N] papers, which were reduced to [M] after applying inclusion criteria.
+
+\subsection{Inclusion Criteria}
+
+Papers were included if they: (1) [criterion 1]; (2) [criterion 2]; (3) [criterion 3].
+
+\section{Theoretical Framework}
+
+\subsection{Key Concepts}
+
+The literature on [topic] is grounded in several theoretical frameworks \citep{author2020}. The dominant paradigm suggests that [theoretical perspective].
+
+\subsection{Evolution of the Field}
+
+Early work by \citet{pioneer1990} established the foundation by [contribution]. This was extended by \citet{developer2000} who demonstrated [advancement].
+
+\section{Major Themes}
+
+\subsection{Theme 1: [Theme Name]}
+
+Research on [theme 1] has shown that [findings]. \citet{author2019} found that [specific finding], while \citet{author2021} argued that [contrasting view].
+
+Key findings include:
+\begin{itemize}
+\item Finding 1 \citep{ref1}
+\item Finding 2 \citep{ref2}
+\item Finding 3 \citep{ref3}
+\end{itemize}
+
+\subsection{Theme 2: [Theme Name]}
+
+Another significant area of research focuses on [theme 2]. Studies have demonstrated \citep{author2018,author2020} that [findings].
+
+\subsection{Theme 3: [Theme Name]}
+
+Recent investigations into [theme 3] reveal [findings]. However, \citet{critic2022} cautions that [limitation or critique].
+
+\section{Methodological Approaches}
+
+\subsection{Quantitative Studies}
+
+Quantitative research employing [methods] has been predominant \citep{author2017}. These studies typically [characteristics].
+
+\subsection{Qualitative Studies}
+
+Qualitative approaches, including [methods], have provided rich insights into [aspects] \citep{author2019}.
+
+\subsection{Mixed Methods}
+
+Recent work has increasingly adopted mixed methods approaches \citep{author2021} to capture [advantages].
+
+\section{Gaps and Future Directions}
+
+\subsection{Identified Gaps}
+
+Despite extensive research, several gaps remain:
+\begin{enumerate}
+\item Limited research on [gap 1]
+\item Insufficient attention to [gap 2]
+\item Need for [gap 3]
+\end{enumerate}
+
+\subsection{Recommendations for Future Research}
+
+Future research should:
+\begin{itemize}
+\item Address [recommendation 1]
+\item Investigate [recommendation 2]
+\item Develop [recommendation 3]
+\end{itemize}
+
+\section{Conclusion}
+
+This literature review has synthesized current knowledge on [topic]. The review reveals that [summary of findings]. Moving forward, research should address identified gaps and explore [future directions].
+
+\bibliographystyle{apalike}
+\bibliography{references}
+
+\end{document}`,
+  },
+  {
+    id: 38,
+    title: "Meeting Minutes",
+    description: "Professional meeting minutes and notes template",
+    slug: "meeting-minutes",
+    previewUrl: "/templates/meeting-minutes.pdf",
+    code: String.raw`\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{booktabs}
+
+\begin{document}
+
+\begin{center}
+{\Large \textbf{Meeting Minutes}}\\[0.3cm]
+{\large [Organization/Department Name]}
+\end{center}
+
+\vspace{0.5cm}
+
+\noindent
+\begin{tabular}{ll}
+\textbf{Date:} & [Meeting Date] \\
+\textbf{Time:} & [Start Time] - [End Time] \\
+\textbf{Location:} & [Location/Virtual] \\
+\textbf{Facilitator:} & [Name] \\
+\textbf{Note Taker:} & [Name] \\
+\end{tabular}
+
+\section*{Attendees}
+
+\textbf{Present:}
+\begin{itemize}[noitemsep]
+\item Name 1 - Title
+\item Name 2 - Title
+\item Name 3 - Title
+\end{itemize}
+
+\textbf{Absent:}
+\begin{itemize}[noitemsep]
+\item Name 4 - Title (excused)
+\end{itemize}
+
+\section*{Agenda}
+
+\begin{enumerate}
+\item Review of previous meeting minutes
+\item Project status updates
+\item New business
+\item Action items
+\item Next meeting
+\end{enumerate}
+
+\section*{Discussion}
+
+\subsection*{1. Review of Previous Meeting Minutes}
+
+The minutes from the [previous date] meeting were reviewed and approved without changes.
+
+\subsection*{2. Project Status Updates}
+
+\textbf{Project A:}
+\begin{itemize}
+\item Current status: [status]
+\item Progress: [progress description]
+\item Challenges: [any issues]
+\end{itemize}
+
+\textbf{Project B:}
+\begin{itemize}
+\item Current status: [status]
+\item Progress: [progress description]
+\item Next steps: [upcoming tasks]
+\end{itemize}
+
+\subsection*{3. New Business}
+
+\textbf{Topic 1:}
+[Discussion summary]. Decision: [decision made].
+
+\textbf{Topic 2:}
+[Discussion summary]. Action required: [action needed].
+
+\section*{Decisions Made}
+
+\begin{enumerate}
+\item Decision 1: [description]
+\item Decision 2: [description]
+\item Decision 3: [description]
+\end{enumerate}
+
+\section*{Action Items}
+
+\begin{center}
+\begin{tabular}{|p{5cm}|p{3cm}|p{2.5cm}|}
+\hline
+\textbf{Action Item} & \textbf{Responsible} & \textbf{Due Date} \\
+\hline
+Complete project proposal & John Smith & 2025-01-15 \\
+\hline
+Review budget document & Jane Doe & 2025-01-20 \\
+\hline
+Schedule follow-up meeting & Sarah Johnson & 2025-01-10 \\
+\hline
+\end{tabular}
+\end{center}
+
+\section*{Next Meeting}
+
+\begin{tabular}{ll}
+\textbf{Date:} & [Next Meeting Date] \\
+\textbf{Time:} & [Time] \\
+\textbf{Location:} & [Location] \\
+\textbf{Agenda Items:} & [Preview of topics] \\
+\end{tabular}
+
+\vspace{1cm}
+
+\noindent
+\textbf{Minutes prepared by:} [Name]\\
+\textbf{Date:} [Date]\\
+\textbf{Approved by:} [Name, Title]
+
+\end{document}`,
+  },
+  {
+    id: 39,
+    title: "Certificate",
+    description: "Award or completion certificate template",
+    slug: "certificate",
+    previewUrl: "/templates/certificate.pdf",
+    code: String.raw`\documentclass[landscape]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+\definecolor{certgold}{RGB}{218,165,32}
+\definecolor{certblue}{RGB}{0,51,102}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+
+\vspace*{1.5cm}
+
+% Decorative border
+{\color{certgold}\rule{\linewidth}{3pt}}\\[0.2cm]
+{\color{certblue}\rule{\linewidth}{1pt}}
+
+\vspace{1cm}
+
+{\Huge \textsc{Certificate of Achievement}}
+
+\vspace{0.5cm}
+
+{\color{certgold}\rule{10cm}{2pt}}
+
+\vspace{1cm}
+
+{\Large \textit{This is to certify that}}
+
+\vspace{0.5cm}
+
+{\Huge \textbf{[Recipient Name]}}
+
+\vspace{0.5cm}
+
+{\Large \textit{has successfully completed}}
+
+\vspace{0.5cm}
+
+{\LARGE \textbf{[Course/Program Name]}}
+
+\vspace{0.3cm}
+
+{\large with distinction}
+
+\vspace{1cm}
+
+{\large Awarded on: \textbf{[Date]}}
+
+\vspace{1.5cm}
+
+\begin{minipage}{0.4\textwidth}
+\centering
+\rule{6cm}{0.5pt}\\
+{\small Instructor Name}\\
+{\small \textit{Title}}
+\end{minipage}
+\hfill
+\begin{minipage}{0.4\textwidth}
+\centering
+\rule{6cm}{0.5pt}\\
+{\small Director Name}\\
+{\small \textit{Title}}
+\end{minipage}
+
+\vspace{0.5cm}
+
+{\color{certblue}\rule{\linewidth}{1pt}}\\[0.1cm]
+{\color{certgold}\rule{\linewidth}{3pt}}
+
+\vspace{0.5cm}
+
+{\small \textit{[Organization Name] | [Website] | [Date]}}
+
+\end{center}
+
+\end{document}`,
+  },
+  {
+    id: 40,
+    title: "Invoice",
+    description: "Professional invoice for services or products",
+    slug: "invoice",
+    previewUrl: "/templates/invoice.pdf",
+    code: String.raw`\documentclass[11pt]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{xcolor}
+
+\definecolor{headerblue}{RGB}{0,71,171}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{minipage}[t]{0.5\textwidth}
+{\Large \textbf{INVOICE}}\\[0.3cm]
+{\color{headerblue}\rule{5cm}{2pt}}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+\raggedleft
+{\large \textbf{Your Company Name}}\\
+123 Business Street\\
+City, State 12345\\
+Phone: (555) 123-4567\\
+Email: info@company.com
+\end{minipage}
+
+\vspace{1cm}
+
+\noindent
+\begin{minipage}[t]{0.5\textwidth}
+\textbf{Bill To:}\\
+Client Name\\
+Company Name\\
+456 Client Avenue\\
+City, State 67890
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+\raggedleft
+\begin{tabular}{rl}
+\textbf{Invoice \#:} & INV-2025-001 \\
+\textbf{Date:} & January 15, 2025 \\
+\textbf{Due Date:} & February 14, 2025 \\
+\textbf{Terms:} & Net 30 \\
+\end{tabular}
+\end{minipage}
+
+\vspace{1cm}
+
+\begin{center}
+\begin{tabular}{p{6cm}ccc}
+\toprule
+\textbf{Description} & \textbf{Quantity} & \textbf{Rate} & \textbf{Amount} \\
+\midrule
+Consulting Services - January & 40 hrs & \$150.00 & \$6,000.00 \\
+Project Development & 1 & \$2,500.00 & \$2,500.00 \\
+Research and Analysis & 20 hrs & \$125.00 & \$2,500.00 \\
+\\
+\midrule
+& & \textbf{Subtotal:} & \$11,000.00 \\
+& & \textbf{Tax (8\%):} & \$880.00 \\
+\midrule
+& & \textbf{Total Due:} & \textbf{\$11,880.00} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{1cm}
+
+\noindent
+\textbf{Payment Information:}
+
+\begin{tabular}{ll}
+Bank Name: & ABC Bank \\
+Account Number: & 1234567890 \\
+Routing Number: & 987654321 \\
+SWIFT Code: & ABCDEFGH \\
+\end{tabular}
+
+\vspace{0.5cm}
+
+\noindent
+\textbf{Notes:}
+\begin{itemize}
+\item Payment is due within 30 days of invoice date
+\item Please include invoice number with payment
+\item Late payments subject to 1.5\% monthly interest charge
+\end{itemize}
+
+\vspace{1cm}
+
+\begin{center}
+\textit{Thank you for your business!}\\[0.3cm]
+{\color{headerblue}\rule{10cm}{1pt}}
+\end{center}
+
+\end{document}`,
+  },
+  {
+    id: 41,
+    title: "Grant Proposal",
+    description: "Research grant proposal template",
+    slug: "grant-proposal",
+    previewUrl: "/templates/grant-proposal.pdf",
+    code: String.raw`\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{natbib}
+
+\title{Grant Proposal:\\
+Project Title}
+\author{Principal Investigator: Your Name\\
+Co-Investigators: Names\\
+Department of Department Name\\
+University Name}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Project Summary}
+
+This proposal requests \$[amount] over [duration] to investigate [research question]. The project will [brief description of what will be done] and is expected to [impact].
+
+\textbf{Keywords:} keyword1, keyword2, keyword3
+
+\section{Background and Significance}
+
+\subsection{Context}
+
+The problem of [problem] represents a significant challenge in [field]. Current approaches are limited by [limitations].
+
+\subsection{Significance}
+
+This research is significant because:
+\begin{enumerate}
+\item It addresses [importance 1]
+\item It will contribute [importance 2]
+\item It has potential to [importance 3]
+\end{enumerate}
+
+\section{Specific Aims}
+
+\textbf{Aim 1:} [Title of Aim 1]
+
+We will [what you will do]. Expected outcome: [outcome].
+
+\textbf{Aim 2:} [Title of Aim 2]
+
+We will [what you will do]. Expected outcome: [outcome].
+
+\textbf{Aim 3:} [Title of Aim 3]
+
+We will [what you will do]. Expected outcome: [outcome].
+
+\section{Research Design and Methods}
+
+\subsection{Overall Approach}
+
+Our approach integrates [methods] to address [research question].
+
+\subsection{Aim 1 Methods}
+
+We will employ [specific methods]. Data will be collected through [procedures].
+
+\textbf{Analysis Plan:} We will analyze data using [statistical methods].
+
+\subsection{Aim 2 Methods}
+
+[Detailed methodology for second aim]
+
+\subsection{Aim 3 Methods}
+
+[Detailed methodology for third aim]
+
+\subsection{Anticipated Challenges}
+
+Potential challenges include [challenges]. We will mitigate these by [mitigation strategies].
+
+\section{Expected Outcomes and Impact}
+
+\subsection{Expected Results}
+
+This project will produce:
+\begin{itemize}
+\item [Deliverable 1]
+\item [Deliverable 2]
+\item [Deliverable 3]
+\end{itemize}
+
+\subsection{Broader Impact}
+
+The findings will impact [field] by [impact description]. Potential applications include [applications].
+
+\section{Timeline}
+
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Period} & \textbf{Activities} \\
+\hline
+Year 1, Q1-Q2 & Literature review, preliminary studies \\
+\hline
+Year 1, Q3-Q4 & Aim 1 experiments and data collection \\
+\hline
+Year 2, Q1-Q2 & Aim 2 experiments and analysis \\
+\hline
+Year 2, Q3-Q4 & Aim 3 and manuscript preparation \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Budget}
+
+\subsection{Budget Summary}
+
+\begin{tabular}{lr}
+\textbf{Category} & \textbf{Amount} \\
+\hline
+Personnel & \$[amount] \\
+Equipment & \$[amount] \\
+Supplies & \$[amount] \\
+Travel & \$[amount] \\
+Other & \$[amount] \\
+\hline
+\textbf{Total Direct Costs} & \$[amount] \\
+Indirect Costs (XX\%) & \$[amount] \\
+\hline
+\textbf{Total} & \$[amount] \\
+\end{tabular}
+
+\subsection{Budget Justification}
+
+\textbf{Personnel:} [Justification for personnel costs]
+
+\textbf{Equipment:} [Justification for equipment]
+
+\textbf{Supplies:} [Justification for supplies]
+
+\section{Qualifications}
+
+The PI has extensive experience in [area] with [number] publications and \$[amount] in prior funding. The research team includes experts in [areas].
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}`,
+  },
 ];
 
