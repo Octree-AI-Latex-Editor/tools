@@ -11,14 +11,17 @@ interface PDFPreviewProps {
   pdfUrl: string;
   width?: number;
   compact?: boolean;
+  firstPageOnly?: boolean;
 }
 
-export default function PDFPreview({ pdfUrl, width = 500, compact = false }: PDFPreviewProps) {
+export default function PDFPreview({ pdfUrl, width = 500, compact = false, firstPageOnly = false }: PDFPreviewProps) {
   const [numPages, setNumPages] = useState<number>(0);
 
   function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
     setNumPages(numPages);
   }
+
+  const pagesToRender = firstPageOnly ? 1 : numPages;
 
   return (
     <div className={`w-full h-full overflow-auto bg-gray-50 flex justify-center ${compact ? 'py-2' : 'py-6'}`}>
@@ -27,7 +30,7 @@ export default function PDFPreview({ pdfUrl, width = 500, compact = false }: PDF
         onLoadSuccess={onDocumentLoadSuccess}
         className={compact ? '' : 'shadow-lg'}
       >
-        {Array.from(new Array(numPages), (el, index) => (
+        {Array.from(new Array(pagesToRender), (el, index) => (
           <Page
             key={`page_${index + 1}`}
             pageNumber={index + 1}

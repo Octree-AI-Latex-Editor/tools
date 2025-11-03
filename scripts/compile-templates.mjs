@@ -14,8 +14,16 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Template LaTeX code - synced from app/page.tsx templates array
-const templates = [
+// Import templates from shared source of truth
+const templatesModule = await import('../lib/templates.ts');
+const templates = templatesModule.templates.map(t => ({
+  id: t.id,
+  filename: `${t.slug}.pdf`,
+  code: t.code,
+}));
+
+// Original templates array (now unused - delete later):
+const _oldTemplates = [
   {
     id: 1,
     filename: 'research-paper.pdf',
@@ -820,7 +828,7 @@ y &= x - 2
 \end{document}`,
   },
   {
-    id: 11,
+    id: 12,
     filename: 'worksheet.pdf',
     code: String.raw`\documentclass[12pt]{article}
 \usepackage[utf8]{inputenc}
@@ -908,6 +916,830 @@ x - y &= 2
 \item Simplify: $(x^2 - 9) \div (x - 3)$
 
 \end{enumerate}
+
+\end{document}`,
+  },
+  {
+    id: 13,
+    filename: 'homework.pdf',
+    code: String.raw`\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Course Name}
+\chead{Homework \#X}
+\rhead{Due Date}
+\lfoot{Your Name}
+\rfoot{Page \thepage}
+
+\title{Homework Assignment \#X}
+\author{Your Name \\ Student ID: XXXXXXX}
+\date{Due: Month Day, Year}
+
+\newtheorem{problem}{Problem}
+
+\begin{document}
+
+\maketitle
+
+\section*{Instructions}
+Show all work for full credit. Write legibly and organize your solutions clearly.
+
+\begin{problem}
+State the first problem here. For example: Prove that $\sqrt{2}$ is irrational.
+\end{problem}
+
+\begin{proof}
+Your solution goes here. Use proper mathematical notation and explain your reasoning step by step.
+\end{proof}
+
+\begin{problem}
+Compute the following limit:
+\[
+\lim_{x \to 0} \frac{\sin(x)}{x}
+\]
+\end{problem}
+
+\textbf{Solution:}
+
+Your detailed solution with steps...
+
+\begin{problem}
+Solve the differential equation:
+\[
+\frac{dy}{dx} = x^2 + y
+\]
+\end{problem}
+
+\textbf{Solution:}
+
+Step-by-step solution here...
+
+\end{document}`,
+  },
+  {
+    id: 14,
+    filename: 'poster.pdf',
+    code: String.raw`\documentclass[25pt, a0paper, portrait]{tikzposter}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+
+\title{Your Research Title Here}
+\author{Author Name$^1$, Co-Author Name$^2$}
+\institute{$^1$Department, University, $^2$Department, Institution}
+
+\usetheme{Default}
+\usecolorstyle[colorPalette=BlueGrayOrange]{Germany}
+
+\begin{document}
+
+\maketitle
+
+\begin{columns}
+\column{0.5}
+
+\block{Abstract}{
+This poster presents our research on [topic]. We demonstrate that [main finding]. Our approach involves [methodology] and shows [results]. This work has implications for [applications].
+}
+
+\block{Introduction}{
+\begin{itemize}
+\item Background and motivation
+\item Research question
+\item Why this matters
+\item Our contribution
+\end{itemize}
+}
+
+\block{Methodology}{
+\textbf{Approach:}
+\begin{enumerate}
+\item Data collection from [source]
+\item Analysis using [methods]
+\item Validation through [process]
+\end{enumerate}
+
+\textbf{Key Innovation:} Our novel approach to [technique]
+}
+
+\column{0.5}
+
+\block{Results}{
+\textbf{Main Findings:}
+\begin{itemize}
+\item Finding 1: [description]
+\item Finding 2: [description]
+\item Finding 3: [description]
+\end{itemize}
+}
+
+\block{Conclusions}{
+\begin{itemize}
+\item We demonstrated [achievement]
+\item Our results show [implication]
+\item Future work includes [direction]
+\end{itemize}
+}
+
+\block{References}{
+\small
+[1] Author A. et al. (2023). Title. \textit{Journal}, vol(issue), pages.
+
+[2] Author B. et al. (2022). Title. \textit{Conference}, pages.
+}
+
+\end{columns}
+
+\node[above right,opacity=0.8] at (bottomleft) {
+\texttt{email@university.edu} $\mid$ \texttt{@username}
+};
+
+\end{document}`,
+  },
+  {
+    id: 15,
+    filename: 'thesis.pdf',
+    code: String.raw`\documentclass[12pt,oneside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{setspace}
+\usepackage{tocbibind}
+
+\doublespacing
+
+\title{Thesis Title: \\
+A Comprehensive Study}
+\author{Your Name}
+\date{Month Year}
+
+\begin{document}
+
+\frontmatter
+
+\maketitle
+
+\chapter*{Abstract}
+This thesis investigates [topic]. We present [contribution] and demonstrate [results]. Our findings have implications for [field].
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\chapter*{Acknowledgments}
+I would like to thank my advisor, committee members, and colleagues for their support and guidance throughout this research.
+
+\mainmatter
+
+\chapter{Introduction}
+\section{Background}
+Context and motivation for the research...
+
+\section{Research Questions}
+\begin{enumerate}
+\item Primary research question
+\item Secondary questions
+\end{enumerate}
+
+\section{Contributions}
+This thesis makes the following contributions:
+\begin{itemize}
+\item Contribution 1
+\item Contribution 2
+\item Contribution 3
+\end{itemize}
+
+\section{Thesis Organization}
+Chapter overview...
+
+\chapter{Literature Review}
+\section{Related Work}
+Survey of existing research...
+
+\section{Theoretical Framework}
+Foundational concepts...
+
+\chapter{Methodology}
+\section{Research Design}
+Description of methods...
+
+\section{Data Collection}
+How data was gathered...
+
+\section{Analysis Approach}
+Analytical framework...
+
+\chapter{Results}
+\section{Findings}
+Presentation of results...
+
+\section{Analysis}
+Interpretation of findings...
+
+\chapter{Discussion}
+\section{Implications}
+What the results mean...
+
+\section{Limitations}
+Constraints and boundaries...
+
+\chapter{Conclusion}
+\section{Summary}
+Recap of contributions...
+
+\section{Future Work}
+Directions for continued research...
+
+\backmatter
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}`,
+  },
+  {
+    id: 16,
+    filename: 'algorithm.pdf',
+    code: String.raw`\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\title{Algorithm Documentation: \\
+{[}Algorithm Name{]}}
+\author{Your Name}
+\date{\today}
+
+\lstset{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  language=Python
+}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+Brief description of the problem this algorithm solves.
+
+\section{Algorithm Description}
+
+\subsection{Overview}
+High-level explanation of the approach.
+
+\subsection{Pseudocode}
+
+\begin{algorithm}
+\caption{Algorithm Name}
+\begin{algorithmic}[1]
+\Procedure{AlgorithmName}{$input$}
+    \State $result \gets 0$
+    \State $n \gets \text{length}(input)$
+    \For{$i \gets 1$ \textbf{to} $n$}
+        \If{$condition$}
+            \State $result \gets result + input[i]$
+        \Else
+            \State $result \gets result - input[i]$
+        \EndIf
+    \EndFor
+    \State \Return $result$
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Complexity Analysis}
+\begin{itemize}
+\item \textbf{Time Complexity:} $O(n)$ where $n$ is the size of input
+\item \textbf{Space Complexity:} $O(1)$ constant extra space
+\end{itemize}
+
+\section{Example}
+
+\subsection{Input}
+\texttt{input = [1, 2, 3, 4, 5]}
+
+\subsection{Execution Trace}
+\begin{enumerate}
+\item Initialize: $result = 0$, $n = 5$
+\item Iteration 1: $i = 1$, condition true, $result = 1$
+\item Iteration 2: $i = 2$, condition false, $result = -1$
+\item Continue for remaining iterations...
+\end{enumerate}
+
+\subsection{Output}
+\texttt{result = 15}
+
+\section{Implementation}
+
+\begin{lstlisting}
+def algorithm_name(input):
+    result = 0
+    n = len(input)
+    for i in range(n):
+        if condition:
+            result += input[i]
+        else:
+            result -= input[i]
+    return result
+\end{lstlisting}
+
+\section{Correctness Proof}
+
+\textbf{Theorem:} The algorithm correctly computes [what it computes].
+
+\textbf{Proof:} By induction on the size of the input...
+
+\section{Applications}
+\begin{itemize}
+\item Application 1: [description]
+\item Application 2: [description]
+\end{itemize}
+
+\end{document}`,
+  },
+  {
+    id: 17,
+    filename: 'research-statement.pdf',
+    code: String.raw`\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{titlesec}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+
+\title{\textbf{Research Statement}}
+\author{Your Name\\
+Department of Computer Science\\
+University Name\\
+your.email@university.edu}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Overview}
+
+My research focuses on machine learning with particular emphasis on neural networks. Over the past 5 years, I have developed expertise in deep learning, contributing 15 publications to leading journals and conferences. My work addresses fundamental questions about model interpretability, with applications in healthcare and autonomous systems.
+
+The central theme unifying my research is developing trustworthy AI systems. This work has been supported by NSF and NIH grants and has led to collaborations with researchers at MIT and Stanford.
+
+\section{Research Background and Motivation}
+
+The field of artificial intelligence has seen remarkable advances in recent years. My research is motivated by the observation that current AI systems lack transparency and explainability.
+
+\section{Past Research}
+
+My doctoral dissertation examined interpretable machine learning methods. The key contribution was developing a novel approach to neural network visualization that improved model understanding by 40\%.
+
+\section{Current Research}
+
+My current research program consists of three interconnected projects investigating robust AI, fair machine learning, and explainable AI systems.
+
+\section{Future Research Directions}
+
+Looking ahead 3-5 years, I plan to pursue research in trustworthy AI, focusing on safety, fairness, and interpretability.
+
+\section{Conclusion}
+
+My research program addresses fundamental questions in AI while maintaining strong connections to real-world applications in healthcare and autonomous systems.
+
+\section*{Selected Publications}
+
+\begin{enumerate}
+\item Author, A. (2023). Novel Approaches to Neural Network Interpretability. \textit{Journal of Machine Learning Research}, 24(1), 1-25.
+\item Author, A., \& Collaborator, B. (2022). Trustworthy AI Systems. \textit{Conference on Neural Information Processing Systems}.
+\end{enumerate}
+
+\end{document}`,
+  },
+  {
+    id: 18,
+    filename: 'dissertation.pdf',
+    code: String.raw`\documentclass[12pt,oneside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{setspace}
+\usepackage{tocbibind}
+
+\doublespacing
+
+\title{Advances in Machine Learning}
+\author{Your Full Name}
+\date{May 2025}
+
+\begin{document}
+
+\frontmatter
+
+\begin{titlepage}
+\begin{center}
+\vspace*{1cm}
+
+{\Large \textbf{ADVANCES IN MACHINE LEARNING:\\
+A COMPREHENSIVE INVESTIGATION}}
+
+\vspace{1.5cm}
+
+by
+
+\vspace{0.5cm}
+
+{\large Your Full Name}
+
+\vfill
+
+A dissertation submitted in partial fulfillment\\
+of the requirements for the degree of
+
+\vspace{0.5cm}
+
+Doctor of Philosophy
+
+\vspace{0.5cm}
+
+in
+
+\vspace{0.5cm}
+
+Computer Science
+
+\vspace{1cm}
+
+{\large University Name}
+
+{\large May 2025}
+
+\end{center}
+\end{titlepage}
+
+\chapter*{Acknowledgments}
+
+I would like to express my deepest gratitude to my advisor, Dr. Smith, for their guidance and support throughout this journey.
+
+\chapter*{Abstract}
+
+This dissertation investigates novel approaches to deep learning. The primary objective is to develop more efficient and interpretable neural network architectures.
+
+\tableofcontents
+
+\mainmatter
+
+\chapter{Introduction}
+
+\section{Background and Motivation}
+
+The field of machine learning has undergone significant transformation in recent years with the rise of deep learning.
+
+\chapter{Literature Review}
+
+\section{Theoretical Frameworks}
+
+This chapter reviews existing work in neural network theory and optimization.
+
+\chapter{Methodology}
+
+\section{Research Design}
+
+This dissertation employs a mixed-methods approach combining theoretical analysis and empirical evaluation.
+
+\chapter{Results}
+
+\section{Findings}
+
+Our experiments demonstrate significant improvements in model accuracy and efficiency.
+
+\chapter{Discussion}
+
+\section{Implications}
+
+These findings have important implications for both theory and practice in machine learning.
+
+\chapter{Conclusion}
+
+\section{Summary}
+
+This dissertation has presented novel approaches to neural network design that achieve state-of-the-art results.
+
+\backmatter
+
+\begin{thebibliography}{9}
+\bibitem{example} Author, A. (2023). Example Paper. \textit{Journal}, 1(1), 1-10.
+\end{thebibliography}
+
+\end{document}`,
+  },
+  {
+    id: 19,
+    filename: 'white-paper.pdf',
+    code: String.raw`\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{tcolorbox}
+
+\definecolor{primarycolor}{RGB}{0,51,102}
+
+\titleformat{\section}{\Large\bfseries\color{primarycolor}}{\thesection}{1em}{}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\vspace*{2cm}
+
+{\Huge \textbf{\color{primarycolor} AI-Powered Solutions:\\
+Transform Your Business}}
+
+\vspace{1cm}
+
+{\Large \textit{A Comprehensive Guide to Modern AI}}
+
+\vspace{2cm}
+
+{\large TechCorp Industries}
+
+\vspace{0.5cm}
+
+{\large November 2025}
+
+\vfill
+
+\begin{tcolorbox}[colback=gray!10,colframe=primarycolor,width=0.8\textwidth]
+\textbf{Executive Summary}\\[0.2cm]
+This white paper examines how artificial intelligence is transforming business operations and presents practical solutions for implementation.
+\end{tcolorbox}
+
+\end{center}
+\end{titlepage}
+
+\section{Executive Summary}
+
+In today's rapidly evolving technology landscape, organizations face mounting pressure to adopt AI and automation. This white paper explores practical AI solutions and demonstrates how they can drive business value.
+
+\section{The Challenge}
+
+Organizations today struggle with increasing data volumes, competitive pressure, and the need for faster decision-making.
+
+\section{The Solution}
+
+Our AI platform addresses these challenges through intelligent automation, predictive analytics, and real-time insights.
+
+\section{Benefits}
+
+Organizations implementing our solution can expect:
+\begin{itemize}
+\item 40\% reduction in operational costs
+\item 60\% improvement in decision-making speed
+\item 25\% increase in customer satisfaction
+\end{itemize}
+
+\section{Case Study}
+
+Company XYZ implemented our solution and achieved \$5M in annual savings within the first year.
+
+\section{Conclusion}
+
+The AI landscape is changing rapidly. Organizations that take action now will be well-positioned for future success.
+
+\end{document}`,
+  },
+  {
+    id: 20,
+    filename: 'leaflet.pdf',
+    code: String.raw`\documentclass[a4paper,12pt]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+
+\definecolor{maincolor}{RGB}{0,102,204}
+
+\setlength{\parindent}{0pt}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+{\Huge \textbf{\color{maincolor} TECHSOLUTIONS}}\\[0.3cm]
+{\Large \textit{Your Partner in Digital Transformation}}
+\end{center}
+
+\vspace{0.5cm}
+
+\begin{multicols}{2}
+
+\section*{\color{maincolor} What We Do}
+
+We help businesses leverage technology to achieve their goals through custom software development, cloud solutions, and AI consulting.
+
+We specialize in:
+\begin{itemize}
+\item Custom Software Development
+\item Cloud Migration \& Management
+\item AI \& Machine Learning Solutions
+\item Digital Transformation Consulting
+\end{itemize}
+
+\columnbreak
+
+\section*{\color{maincolor} Contact Us}
+
+Ready to transform your business?
+
+\textbf{Phone:} (555) 123-4567\\
+\textbf{Email:} info@techsolutions.com\\
+\textbf{Website:} www.techsolutions.com\\
+\textbf{Address:} 123 Tech Street\\
+San Francisco, CA 94102
+
+\end{multicols}
+
+\vspace{0.5cm}
+
+\begin{center}
+\begin{tcolorbox}[colback=maincolor,colframe=maincolor,colupper=white,width=0.8\textwidth]
+\centering
+\textbf{\Large Special Offer: 20\% Off First Project!}\\[0.2cm]
+{\Huge Call Now: (555) 123-4567}\\[0.2cm]
+Limited time - Book your free consultation today
+\end{tcolorbox}
+\end{center}
+
+\vspace{0.3cm}
+
+\section*{\color{maincolor} Why Choose Us?}
+
+\begin{multicols}{3}
+\textbf{Experience}\\
+15+ years serving Fortune 500 companies
+
+\columnbreak
+
+\textbf{Quality}\\
+ISO 9001 certified with 99\% satisfaction
+
+\columnbreak
+
+\textbf{Support}\\
+24/7 dedicated customer support team
+\end{multicols}
+
+\end{document}`,
+  },
+  {
+    id: 21,
+    filename: 'technical-report.pdf',
+    code: String.raw`\documentclass[11pt]{report}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+
+\lstdefinestyle{codestyle}{
+    backgroundcolor=\color{gray!10},   
+    basicstyle=\ttfamily\footnotesize,
+    breaklines=true,
+    numbers=left
+}
+
+\lstset{style=codestyle}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+
+\vspace*{2cm}
+
+{\Large \textbf{TECHNICAL REPORT}}
+
+\vspace{1cm}
+
+{\Huge \textbf{System Architecture Analysis:\\
+Cloud-Native Platform}}
+
+\vspace{1.5cm}
+
+{\large Report No.: TR-2025-001}
+
+\vspace{1cm}
+
+{\large Prepared by:\\
+Engineering Team}
+
+\vspace{1cm}
+
+{\large November 2025}
+
+\vfill
+
+\textbf{Classification:} Internal\\
+\textbf{Project Code:} CN-2025-Q4
+
+\end{center}
+\end{titlepage}
+
+\tableofcontents
+
+\chapter{Executive Summary}
+
+This technical report describes the architecture and implementation of our cloud-native platform.
+
+\textbf{Key Findings:}
+\begin{itemize}
+\item Achieved 99.9\% uptime across all services
+\item Reduced latency by 45\% through optimization
+\item Successfully scaled to handle 10M requests/day
+\end{itemize}
+
+\chapter{Introduction}
+
+\section{Background}
+
+Our organization needed a scalable, reliable platform to support growing user demand.
+
+\section{Objectives}
+
+The primary objectives are:
+\begin{enumerate}
+\item Design highly available microservices architecture
+\item Implement automated deployment pipeline
+\item Ensure security and compliance standards
+\end{enumerate}
+
+\chapter{System Architecture}
+
+\section{Overview}
+
+The system consists of multiple microservices deployed on Kubernetes, with Redis caching and PostgreSQL databases.
+
+\chapter{Implementation}
+
+\section{Technology Stack}
+
+\begin{itemize}
+\item Backend: Node.js, Python
+\item Frontend: React, Next.js
+\item Infrastructure: AWS, Kubernetes
+\item Monitoring: Prometheus, Grafana
+\end{itemize}
+
+\chapter{Results}
+
+\section{Performance Metrics}
+
+\begin{table}[h]
+\centering
+\caption{System Performance}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Metric} & \textbf{Target} & \textbf{Actual} \\
+\midrule
+Uptime & 99.9\% & 99.95\% \\
+Latency & <100ms & 65ms \\
+Throughput & 10M/day & 12M/day \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\chapter{Conclusion}
+
+\section{Summary}
+
+This report presented our cloud-native architecture which successfully met all performance and reliability targets.
+
+\begin{thebibliography}{9}
+\bibitem{k8s} Kubernetes Documentation. (2025). \textit{kubernetes.io}
+\end{thebibliography}
 
 \end{document}`,
   },

@@ -31,6 +31,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'grading-rubric',
     'assignment',
     'worksheet',
+    'homework',
+    'poster',
+    'thesis',
+    'letter',
+    'algorithm',
+    'cover-letter',
+    'journal-article',
+    'syllabus',
+    'research-proposal',
+    'essay',
+    'research-statement',
+    'dissertation',
+    'white-paper',
+    'leaflet',
+    'technical-report',
   ]
 
   const toolUrls = tools.map(tool => ({
