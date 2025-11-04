@@ -103,6 +103,13 @@ const tools = [
     href: "/tools/latex-to-markdown",
     icon: "🔁",
   },
+  {
+    id: 14,
+    title: "LaTeX Word Counter",
+    description: "Count the exact number of words in PDF documents",
+    href: "/tools/latex-word-counter",
+    icon: "🔢",
+  },
 ];
 
 const templates = [
