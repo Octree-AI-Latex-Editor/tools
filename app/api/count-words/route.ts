@@ -46,6 +46,14 @@ export async function POST(request: NextRequest) {
     const paragraphs = cleanedText.split(/\n\s*\n/).filter((p: string) => p.trim().length > 0);
     const paragraphCount = paragraphs.length || 1;
 
+    // Format extracted text as LaTeX document
+    const latexCode = `\\documentclass{article}
+\\begin{document}
+
+${cleanedText.split('\n').map(line => line.trim() ? line : '').join('\n')}
+
+\\end{document}`;
+
     return NextResponse.json({
       success: true,
       wordCount,
@@ -53,7 +61,9 @@ export async function POST(request: NextRequest) {
       charCountWithoutSpaces,
       pageCount: numPages,
       paragraphCount,
-      textPreview: cleanedText.substring(0, 500), // First 500 characters for preview
+      fullText: cleanedText,
+      latexCode,
+      pdfData: pdfData, // Return original PDF data for preview (from request)
     });
   } catch (error) {
     console.error('Word counting error:', error);

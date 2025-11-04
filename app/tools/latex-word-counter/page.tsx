@@ -1,10 +1,22 @@
 'use client';
 
-import { useState, useCallback } from 'react';
-import { Upload, Loader2, FileText, ArrowLeft } from 'lucide-react';
+import { useState, useCallback, useEffect } from 'react';
+import { Upload, Code2, Eye, Loader2, ArrowLeft } from 'lucide-react';
 import { DM_Sans } from 'next/font/google';
 import { cn } from '@/lib/utils';
+import { OctreeLogo } from '@/components/icons/octree-logo';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
+import { loader } from '@monaco-editor/react';
+import {
+  latexLanguageConfiguration,
+  latexTokenProvider,
+  registerLatexCompletions,
+} from '@/lib/editor-config';
+import { openInOctree } from '@/lib/open-in-octree';
+
+const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
+const PDFPreview = dynamic(() => import('@/components/PDFPreview'), { ssr: false });
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -17,7 +29,9 @@ interface WordCountResult {
   charCountWithoutSpaces: number;
   pageCount: number;
   paragraphCount: number;
-  textPreview: string;
+  fullText: string;
+  latexCode: string;
+  pdfData: string;
 }
 
 export default function LatexWordCounter() {
@@ -27,6 +41,19 @@ export default function LatexWordCounter() {
   const [error, setError] = useState<string>('');
   const [result, setResult] = useState<WordCountResult | null>(null);
   const [uploadedFileName, setUploadedFileName] = useState<string>('');
+  const [activeTab, setActiveTab] = useState<'code' | 'preview'>('code');
+  const [previewUrl, setPreviewUrl] = useState<string>('');
+  const [isCompiling, setIsCompiling] = useState(false);
+  const [lastCompiledLatex, setLastCompiledLatex] = useState<string>('');
+
+  useEffect(() => {
+    loader.init().then((monaco) => {
+      monaco.languages.register({ id: 'latex' });
+      monaco.languages.setLanguageConfiguration('latex', latexLanguageConfiguration);
+      monaco.languages.setMonarchTokensProvider('latex', latexTokenProvider);
+      registerLatexCompletions(monaco);
+    });
+  }, []);
 
   const countWords = async (pdfBase64: string) => {
     setIsProcessing(true);
@@ -58,6 +85,43 @@ export default function LatexWordCounter() {
       setIsProcessing(false);
     }
   };
+
+  const compileLatex = async (latex: string) => {
+    if (lastCompiledLatex === latex && previewUrl) return;
+
+    setIsCompiling(true);
+    try {
+      const response = await fetch('/api/compile', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ latex }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setPreviewUrl(data.previewUrl || data.pdfUrl || '');
+        setLastCompiledLatex(latex);
+      } else {
+        // Handle compilation failure gracefully
+        setPreviewUrl('');
+        setLastCompiledLatex('');
+      }
+    } catch (err) {
+      // Handle compilation errors gracefully - server may be unavailable
+      console.error('Compilation error:', err);
+      setPreviewUrl('');
+      setLastCompiledLatex('');
+    } finally {
+      setIsCompiling(false);
+    }
+  };
+
+  useEffect(() => {
+    if (result?.latexCode && activeTab === 'preview' && !isProcessing) {
+      compileLatex(result.latexCode);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [result?.latexCode, activeTab, isProcessing]);
 
   const handleDrop = useCallback((e: React.DragEvent) => {
     e.preventDefault();
@@ -132,78 +196,144 @@ export default function LatexWordCounter() {
           <p className="text-lg text-gray-600">Count the exact number of words in your PDF documents</p>
         </div>
 
-        <div className="grid grid-cols-2 gap-8">
-          {/* Input Section */}
+        <div className="grid grid-cols-2 gap-8 mb-8">
+          {/* LaTeX Preview Section */}
           <div className="flex flex-col">
             <div className="h-[72px] mb-6 flex flex-col justify-start">
               <div className="mb-2 flex items-center gap-3">
                 <span className="inline-flex items-center rounded-md bg-orange-50 px-3 py-1.5 text-sm font-medium text-orange-900 border border-orange-200">
                   INPUT
                 </span>
-                <h2 className="text-xl font-medium text-gray-900">PDF Document</h2>
+                <h2 className="text-xl font-medium text-gray-900">LaTeX Preview</h2>
               </div>
               <p className="text-sm text-gray-600">
                 Upload your PDF file to count words
               </p>
             </div>
 
-            <div
-              onDrop={handleDrop}
-              onDragOver={handleDragOver}
-              onDragLeave={handleDragLeave}
-              className={`relative border-2 border-dashed rounded-xl p-16 text-center transition-all h-[520px] w-full flex flex-col items-center justify-center ${
-                isDragging
-                  ? 'border-blue-500 bg-blue-50'
-                  : 'border-gray-300 bg-white hover:border-gray-400'
-              } ${isProcessing ? 'opacity-50 pointer-events-none' : ''}`}
-            >
-              {pdfData ? (
-                <div className="relative w-full h-full flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="mb-4 flex justify-center">
-                      <div className="bg-blue-50 rounded-full p-6">
-                        <FileText className="w-16 h-16 text-blue-500" />
-                      </div>
-                    </div>
-                    <p className="text-lg font-medium text-gray-900 mb-1">{uploadedFileName}</p>
-                    <p className="text-sm text-gray-500">PDF uploaded successfully</p>
-                    {isProcessing && (
-                      <div className="mt-4 flex items-center justify-center gap-2 text-blue-600">
-                        <Loader2 className="h-4 w-4 animate-spin" />
-                        <span className="text-sm">Counting words...</span>
-                      </div>
+            <div className="bg-white border border-gray-200 rounded-xl h-[520px] w-full flex flex-col overflow-hidden">
+              <div className="border-b border-gray-200 flex-shrink-0">
+                <div className="flex gap-1 px-6 pt-4">
+                  <button
+                    onClick={() => setActiveTab('code')}
+                    className={`flex items-center gap-2 px-4 py-2.5 text-sm font-medium border-b-2 transition-colors ${
+                      activeTab === 'code'
+                        ? 'border-gray-900 text-gray-900'
+                        : 'border-transparent text-gray-500 hover:text-gray-700'
+                    }`}
+                  >
+                    <Code2 className="h-4 w-4" />
+                    Code
+                  </button>
+                  <button
+                    onClick={(e) => {
+                      if (isCompiling || isProcessing) {
+                        e.preventDefault();
+                        return;
+                      }
+                      setActiveTab('preview');
+                    }}
+                    disabled={isCompiling || isProcessing}
+                    className={`flex items-center gap-2 px-4 py-2.5 text-sm font-medium border-b-2 transition-colors ${
+                      activeTab === 'preview'
+                        ? 'border-blue-600 text-gray-900 bg-blue-50'
+                        : 'border-transparent text-gray-500 hover:text-gray-700'
+                    } ${(isCompiling || isProcessing) ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  >
+                    <Eye className="h-4 w-4" />
+                    Preview
+                    {!isProcessing && isCompiling && (
+                      <span className="text-xs text-gray-400">(Compiling...)</span>
                     )}
-                  </div>
+                  </button>
                 </div>
-              ) : (
-                <>
-                  {isProcessing ? (
-                    <Loader2 className="h-16 w-16 text-blue-500 animate-spin mb-4" />
-                  ) : (
-                    <Upload className="h-16 w-16 text-gray-400 mb-4" />
-                  )}
-                  <p className="text-base text-gray-900 font-normal mb-2">
-                    {isProcessing ? 'Processing...' : 'Drop your PDF here'}
-                  </p>
-                  <p className="text-sm text-gray-500 mb-4">
-                    or{' '}
-                    <label className="text-blue-600 hover:text-blue-500 cursor-pointer font-medium">
-                      browse files
-                      <input
-                        type="file"
-                        className="hidden"
-                        accept="application/pdf,.pdf"
-                        onChange={handleFileInput}
-                        disabled={isProcessing}
-                      />
-                    </label>
-                  </p>
-                  <div className="inline-block bg-gray-100 rounded-full px-4 py-1.5 text-xs font-medium text-gray-700">
-                    PDF
+              </div>
+
+              <div className="p-6 flex-1 flex flex-col overflow-hidden">
+                {!result?.latexCode && isProcessing ? (
+                  <div className="flex items-center justify-center flex-1">
+                    <div className="text-center">
+                      <Loader2 className="mx-auto h-12 w-12 text-blue-500 animate-spin mb-4" />
+                      <p className="text-gray-600">Analyzing PDF and counting words...</p>
+                    </div>
                   </div>
-                </>
-              )}
+                ) : result?.latexCode ? (
+                  activeTab === 'code' ? (
+                    <div className="flex-1 overflow-hidden rounded-lg relative">
+                      <Editor
+                        height="100%"
+                        language="latex"
+                        value={result.latexCode}
+                        theme="vs-light"
+                        options={{
+                          readOnly: true,
+                          minimap: { enabled: false },
+                          scrollBeyondLastLine: false,
+                          fontSize: 14,
+                          lineNumbers: 'on',
+                          wordWrap: 'on',
+                          padding: { top: 8, bottom: 8 },
+                        }}
+                      />
+                    </div>
+                  ) : (
+                    <div className="flex-1 overflow-hidden rounded-lg">
+                      {isCompiling ? (
+                        <div className="flex items-center justify-center h-full">
+                          <div className="text-center">
+                            <Loader2 className="mx-auto h-8 w-8 text-blue-500 animate-spin mb-2" />
+                            <p className="text-sm text-gray-600">Generating preview...</p>
+                          </div>
+                        </div>
+                      ) : previewUrl ? (
+                        <PDFPreview pdfUrl={previewUrl} />
+                      ) : (
+                        <div className="flex items-center justify-center h-full">
+                          <div className="text-center">
+                            <p className="text-gray-600 mb-2">LaTeX compilation is currently unavailable</p>
+                            <p className="text-sm text-gray-400">View the original PDF on the right side</p>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  )
+                ) : (
+                  <div className="flex items-center justify-center flex-1">
+                    <div className="text-center">
+                      <Upload className="mx-auto h-12 w-12 text-gray-400 mb-4" />
+                      <p className="text-gray-400">Upload a PDF to extract text and count words</p>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
+
+            {!result && (
+              <div
+                onDrop={handleDrop}
+                onDragOver={handleDragOver}
+                onDragLeave={handleDragLeave}
+                className={`mt-6 relative border-2 border-dashed rounded-xl p-8 text-center transition-all ${
+                  isDragging
+                    ? 'border-blue-500 bg-blue-50'
+                    : 'border-gray-300 bg-white hover:border-gray-400'
+                } ${isProcessing ? 'opacity-50 pointer-events-none' : ''}`}
+              >
+                <p className="text-sm text-gray-500 mb-2">
+                  Drag and drop your PDF here or{' '}
+                  <label className="text-blue-600 hover:text-blue-500 cursor-pointer font-medium">
+                    browse files
+                    <input
+                      type="file"
+                      className="hidden"
+                      accept="application/pdf,.pdf"
+                      onChange={handleFileInput}
+                      disabled={isProcessing}
+                    />
+                  </label>
+                </p>
+              </div>
+            )}
 
             {error && (
               <div className="mt-4 rounded-lg bg-red-50 border border-red-200 p-4">
@@ -212,77 +342,81 @@ export default function LatexWordCounter() {
             )}
           </div>
 
-          {/* Output Section */}
+          {/* PDF Preview Section */}
           <div className="flex flex-col">
             <div className="h-[72px] mb-6 flex flex-col justify-start">
               <div className="mb-2 flex items-center gap-3">
                 <span className="inline-flex items-center rounded-md bg-green-50 px-3 py-1.5 text-sm font-medium text-green-900 border border-green-200">
                   OUTPUT
                 </span>
-                <h2 className="text-xl font-medium text-gray-900">Word Count Statistics</h2>
+                <h2 className="text-xl font-medium text-gray-900">PDF Preview</h2>
               </div>
               <p className="text-sm text-gray-600">
-                Detailed statistics from your PDF
+                Original PDF document
               </p>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-xl h-[520px] w-full flex flex-col overflow-hidden p-6">
+            <div className="bg-white border border-gray-200 rounded-xl h-[520px] w-full flex flex-col overflow-hidden">
               {isProcessing ? (
                 <div className="flex items-center justify-center flex-1">
                   <div className="text-center">
                     <Loader2 className="mx-auto h-12 w-12 text-blue-500 animate-spin mb-4" />
-                    <p className="text-gray-600">Analyzing PDF and counting words...</p>
+                    <p className="text-gray-600">Loading PDF...</p>
                   </div>
                 </div>
-              ) : result ? (
-                <div className="flex flex-col h-full">
-                  <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 border border-blue-200">
-                      <div className="text-sm font-medium text-blue-700 mb-1">Words</div>
-                      <div className="text-3xl font-bold text-blue-900">{formatNumber(result.wordCount)}</div>
-                    </div>
-                    <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 border border-green-200">
-                      <div className="text-sm font-medium text-green-700 mb-1">Pages</div>
-                      <div className="text-3xl font-bold text-green-900">{formatNumber(result.pageCount)}</div>
-                    </div>
-                    <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-6 border border-purple-200">
-                      <div className="text-sm font-medium text-purple-700 mb-1">Characters (with spaces)</div>
-                      <div className="text-3xl font-bold text-purple-900">{formatNumber(result.charCountWithSpaces)}</div>
-                    </div>
-                    <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-6 border border-orange-200">
-                      <div className="text-sm font-medium text-orange-700 mb-1">Characters (no spaces)</div>
-                      <div className="text-3xl font-bold text-orange-900">{formatNumber(result.charCountWithoutSpaces)}</div>
-                    </div>
-                  </div>
-
-                  <div className="bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
-                    <div className="text-sm font-medium text-gray-700 mb-2">Paragraphs</div>
-                    <div className="text-2xl font-bold text-gray-900">{formatNumber(result.paragraphCount)}</div>
-                  </div>
-
-                  <div className="flex-1 overflow-auto">
-                    <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
-                      <div className="text-sm font-medium text-gray-700 mb-2">Text Preview</div>
-                      <div className="text-sm text-gray-600 leading-relaxed whitespace-pre-wrap">
-                        {result.textPreview}
-                        {result.textPreview.length >= 500 && '...'}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              ) : pdfData ? (
+                <PDFPreview pdfUrl={pdfData} />
               ) : (
                 <div className="flex items-center justify-center flex-1">
                   <div className="text-center">
-                    <FileText className="mx-auto h-12 w-12 text-gray-400 mb-4" />
-                    <p className="text-gray-400">Word count statistics will appear here</p>
+                    <p className="text-gray-400">PDF preview will appear here</p>
                   </div>
                 </div>
               )}
             </div>
           </div>
         </div>
+
+        {/* Word Count Statistics - Below the grid, not in a box */}
+        {result && (
+          <div className="mt-8">
+            <div className="grid grid-cols-5 gap-6">
+              <div>
+                <div className="text-sm text-gray-600 mb-1">Words</div>
+                <div className="text-2xl font-normal text-gray-900">{formatNumber(result.wordCount)}</div>
+              </div>
+              <div>
+                <div className="text-sm text-gray-600 mb-1">Pages</div>
+                <div className="text-2xl font-normal text-gray-900">{formatNumber(result.pageCount)}</div>
+              </div>
+              <div>
+                <div className="text-sm text-gray-600 mb-1">Characters (with spaces)</div>
+                <div className="text-2xl font-normal text-gray-900">{formatNumber(result.charCountWithSpaces)}</div>
+              </div>
+              <div>
+                <div className="text-sm text-gray-600 mb-1">Characters (no spaces)</div>
+                <div className="text-2xl font-normal text-gray-900">{formatNumber(result.charCountWithoutSpaces)}</div>
+              </div>
+              <div>
+                <div className="text-sm text-gray-600 mb-1">Paragraphs</div>
+                <div className="text-2xl font-normal text-gray-900">{formatNumber(result.paragraphCount)}</div>
+              </div>
+            </div>
+
+            {result.latexCode && (
+              <div className="mt-6 flex gap-3">
+                <button
+                  onClick={() => openInOctree({ latex: result.latexCode, title: 'PDF Word Count', source: 'tools:word-counter' })}
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 text-base font-medium rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm"
+                >
+                  <OctreeLogo className="h-5 w-5" />
+                  Open in Octree
+                </button>
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );
 }
-
