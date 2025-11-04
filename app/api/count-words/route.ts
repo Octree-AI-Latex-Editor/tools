@@ -19,7 +19,9 @@ export async function POST(request: NextRequest) {
 
     // Use pdf-parse v2 for server-side PDF parsing (Node.js compatible)
     // pdf-parse v2 uses PDFParse class instead of direct function
-    const { PDFParse } = require('pdf-parse');
+    // Use dynamic import to avoid ESLint no-require-imports error
+    const pdfParseModule = await import('pdf-parse');
+    const PDFParse = pdfParseModule.PDFParse;
     const parser = new PDFParse({ data: pdfBuffer });
     const result = await parser.getText();
     
