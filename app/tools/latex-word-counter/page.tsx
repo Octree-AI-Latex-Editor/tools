@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useCallback, useEffect } from 'react';
-import { Upload, Code2, Eye, Loader2, ArrowLeft } from 'lucide-react';
+import { Upload, Loader2, ArrowLeft } from 'lucide-react';
 import { DM_Sans } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import { OctreeLogo } from '@/components/icons/octree-logo';
@@ -41,10 +41,6 @@ export default function LatexWordCounter() {
   const [error, setError] = useState<string>('');
   const [result, setResult] = useState<WordCountResult | null>(null);
   const [uploadedFileName, setUploadedFileName] = useState<string>('');
-  const [activeTab, setActiveTab] = useState<'code' | 'preview'>('code');
-  const [previewUrl, setPreviewUrl] = useState<string>('');
-  const [isCompiling, setIsCompiling] = useState(false);
-  const [lastCompiledLatex, setLastCompiledLatex] = useState<string>('');
 
   useEffect(() => {
     loader.init().then((monaco) => {
@@ -86,42 +82,6 @@ export default function LatexWordCounter() {
     }
   };
 
-  const compileLatex = async (latex: string) => {
-    if (lastCompiledLatex === latex && previewUrl) return;
-
-    setIsCompiling(true);
-    try {
-      const response = await fetch('/api/compile', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ latex }),
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        setPreviewUrl(data.previewUrl || data.pdfUrl || '');
-        setLastCompiledLatex(latex);
-      } else {
-        // Handle compilation failure gracefully
-        setPreviewUrl('');
-        setLastCompiledLatex('');
-      }
-    } catch (err) {
-      // Handle compilation errors gracefully - server may be unavailable
-      console.error('Compilation error:', err);
-      setPreviewUrl('');
-      setLastCompiledLatex('');
-    } finally {
-      setIsCompiling(false);
-    }
-  };
-
-  useEffect(() => {
-    if (result?.latexCode && activeTab === 'preview' && !isProcessing) {
-      compileLatex(result.latexCode);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [result?.latexCode, activeTab, isProcessing]);
 
   const handleDrop = useCallback((e: React.DragEvent) => {
     e.preventDefault();
@@ -204,7 +164,7 @@ export default function LatexWordCounter() {
                 <span className="inline-flex items-center rounded-md bg-orange-50 px-3 py-1.5 text-sm font-medium text-orange-900 border border-orange-200">
                   INPUT
                 </span>
-                <h2 className="text-xl font-medium text-gray-900">LaTeX Preview</h2>
+                <h2 className="text-xl font-medium text-gray-900">LaTeX Code</h2>
               </div>
               <p className="text-sm text-gray-600">
                 Upload your PDF file to count words
@@ -212,43 +172,6 @@ export default function LatexWordCounter() {
             </div>
 
             <div className="bg-white border border-gray-200 rounded-xl h-[520px] w-full flex flex-col overflow-hidden">
-              <div className="border-b border-gray-200 flex-shrink-0">
-                <div className="flex gap-1 px-6 pt-4">
-                  <button
-                    onClick={() => setActiveTab('code')}
-                    className={`flex items-center gap-2 px-4 py-2.5 text-sm font-medium border-b-2 transition-colors ${
-                      activeTab === 'code'
-                        ? 'border-gray-900 text-gray-900'
-                        : 'border-transparent text-gray-500 hover:text-gray-700'
-                    }`}
-                  >
-                    <Code2 className="h-4 w-4" />
-                    Code
-                  </button>
-                  <button
-                    onClick={(e) => {
-                      if (isCompiling || isProcessing) {
-                        e.preventDefault();
-                        return;
-                      }
-                      setActiveTab('preview');
-                    }}
-                    disabled={isCompiling || isProcessing}
-                    className={`flex items-center gap-2 px-4 py-2.5 text-sm font-medium border-b-2 transition-colors ${
-                      activeTab === 'preview'
-                        ? 'border-blue-600 text-gray-900 bg-blue-50'
-                        : 'border-transparent text-gray-500 hover:text-gray-700'
-                    } ${(isCompiling || isProcessing) ? 'opacity-50 cursor-not-allowed' : ''}`}
-                  >
-                    <Eye className="h-4 w-4" />
-                    Preview
-                    {!isProcessing && isCompiling && (
-                      <span className="text-xs text-gray-400">(Compiling...)</span>
-                    )}
-                  </button>
-                </div>
-              </div>
-
               <div className="p-6 flex-1 flex flex-col overflow-hidden">
                 {!result?.latexCode && isProcessing ? (
                   <div className="flex items-center justify-center flex-1">
@@ -258,45 +181,23 @@ export default function LatexWordCounter() {
                     </div>
                   </div>
                 ) : result?.latexCode ? (
-                  activeTab === 'code' ? (
-                    <div className="flex-1 overflow-hidden rounded-lg relative">
-                      <Editor
-                        height="100%"
-                        language="latex"
-                        value={result.latexCode}
-                        theme="vs-light"
-                        options={{
-                          readOnly: true,
-                          minimap: { enabled: false },
-                          scrollBeyondLastLine: false,
-                          fontSize: 14,
-                          lineNumbers: 'on',
-                          wordWrap: 'on',
-                          padding: { top: 8, bottom: 8 },
-                        }}
-                      />
-                    </div>
-                  ) : (
-                    <div className="flex-1 overflow-hidden rounded-lg">
-                      {isCompiling ? (
-                        <div className="flex items-center justify-center h-full">
-                          <div className="text-center">
-                            <Loader2 className="mx-auto h-8 w-8 text-blue-500 animate-spin mb-2" />
-                            <p className="text-sm text-gray-600">Generating preview...</p>
-                          </div>
-                        </div>
-                      ) : previewUrl ? (
-                        <PDFPreview pdfUrl={previewUrl} />
-                      ) : (
-                        <div className="flex items-center justify-center h-full">
-                          <div className="text-center">
-                            <p className="text-gray-600 mb-2">LaTeX compilation is currently unavailable</p>
-                            <p className="text-sm text-gray-400">View the original PDF on the right side</p>
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  )
+                  <div className="flex-1 overflow-hidden rounded-lg relative">
+                    <Editor
+                      height="100%"
+                      language="latex"
+                      value={result.latexCode}
+                      theme="vs-light"
+                      options={{
+                        readOnly: true,
+                        minimap: { enabled: false },
+                        scrollBeyondLastLine: false,
+                        fontSize: 14,
+                        lineNumbers: 'on',
+                        wordWrap: 'on',
+                        padding: { top: 8, bottom: 8 },
+                      }}
+                    />
+                  </div>
                 ) : (
                   <div className="flex items-center justify-center flex-1">
                     <div className="text-center">
