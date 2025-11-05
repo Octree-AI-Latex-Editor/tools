@@ -257,7 +257,13 @@ export default function LatexWordCounter() {
               </p>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-xl h-[520px] w-full flex flex-col overflow-hidden">
+            <div className="bg-white border border-gray-200 rounded-xl h-[520px] w-full flex flex-col overflow-hidden relative">
+              {/* Word count at top */}
+              {result && (
+                <div className="absolute top-2 left-2 z-10 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded text-sm font-medium text-gray-900 shadow-sm">
+                  {formatNumber(result.wordCount)} words
+                </div>
+              )}
               {isProcessing ? (
                 <div className="flex items-center justify-center flex-1">
                   <div className="text-center">
@@ -277,46 +283,6 @@ export default function LatexWordCounter() {
             </div>
           </div>
         </div>
-
-        {/* Word Count Statistics - Below the grid, not in a box */}
-        {result && (
-          <div className="mt-8">
-            <div className="grid grid-cols-5 gap-6">
-              <div>
-                <div className="text-sm text-gray-600 mb-1">Words</div>
-                <div className="text-2xl font-normal text-gray-900">{formatNumber(result.wordCount)}</div>
-              </div>
-              <div>
-                <div className="text-sm text-gray-600 mb-1">Pages</div>
-                <div className="text-2xl font-normal text-gray-900">{formatNumber(result.pageCount)}</div>
-              </div>
-              <div>
-                <div className="text-sm text-gray-600 mb-1">Characters (with spaces)</div>
-                <div className="text-2xl font-normal text-gray-900">{formatNumber(result.charCountWithSpaces)}</div>
-              </div>
-              <div>
-                <div className="text-sm text-gray-600 mb-1">Characters (no spaces)</div>
-                <div className="text-2xl font-normal text-gray-900">{formatNumber(result.charCountWithoutSpaces)}</div>
-              </div>
-              <div>
-                <div className="text-sm text-gray-600 mb-1">Paragraphs</div>
-                <div className="text-2xl font-normal text-gray-900">{formatNumber(result.paragraphCount)}</div>
-              </div>
-            </div>
-
-            {result.latexCode && (
-              <div className="mt-6 flex gap-3">
-                <button
-                  onClick={() => openInOctree({ latex: result.latexCode, title: 'PDF Word Count', source: 'tools:word-counter' })}
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 text-base font-medium rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm"
-                >
-                  <OctreeLogo className="h-5 w-5" />
-                  Open in Octree
-                </button>
-              </div>
-            )}
-          </div>
-        )}
       </div>
     </div>
   );
