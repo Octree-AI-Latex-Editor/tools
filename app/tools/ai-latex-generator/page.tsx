@@ -13,6 +13,7 @@ import {
   latexTokenProvider,
   registerLatexCompletions,
 } from '@/lib/editor-config';
+import { openInOctree } from '@/lib/open-in-octree';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
 const PDFPreview = dynamic(() => import('@/components/PDFPreview'), { ssr: false });
@@ -322,15 +323,20 @@ export default function AILatexGenerator() {
 
             {latexCode && !isProcessing && (
               <div className="mt-6 flex gap-3">
-                <a
-                  href="https://useoctree.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  type="button"
+                  onClick={() =>
+                    openInOctree({
+                      latex: latexCode,
+                      title: 'AI Generated LaTeX',
+                      source: 'tools:ai-latex-generator',
+                    })
+                  }
                   className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 text-base font-medium rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm"
                 >
                   <OctreeLogo className="h-5 w-5" />
                   Open in Octree
-                </a>
+                </button>
                 
                 <div className="relative">
                   <button
