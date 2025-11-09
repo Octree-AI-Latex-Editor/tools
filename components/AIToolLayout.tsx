@@ -14,6 +14,7 @@ import {
   registerLatexCompletions,
 } from '@/lib/editor-config';
 import { openInOctree } from '@/lib/open-in-octree';
+import { CompileErrorModal } from '@/components/CompileErrorModal';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
 const PDFPreview = dynamic(() => import('@/components/PDFPreview'), { ssr: false });
@@ -53,6 +54,9 @@ export default function AIToolLayout({
   const [uploadedFileName, setUploadedFileName] = useState<string>('');
   const [isTableFile, setIsTableFile] = useState(false);
   const [fileType, setFileType] = useState<string>('math');
+  const [compileError, setCompileError] = useState<string>('');
+  const [showCompileErrorModal, setShowCompileErrorModal] = useState(false);
+  const [latestLatexDocument, setLatestLatexDocument] = useState<string>('');
 
   // Convert acceptedFormats to file accept attribute
   const getAcceptAttribute = () => {
@@ -119,6 +123,8 @@ export default function AIToolLayout({
     }
 
     setIsCompiling(true);
+    setCompileError('');
+    setLatestLatexDocument(latex);
     try {
       const response = await fetch('/api/compile', {
         method: 'POST',
@@ -126,13 +132,30 @@ export default function AIToolLayout({
         body: JSON.stringify({ latex }),
       });
 
-      if (response.ok) {
-        const data = await response.json();
-        setPreviewUrl(data.previewUrl || data.pdfUrl || '');
-        setLastCompiledLatex(latex);
+      if (!response.ok) {
+        let message = 'Failed to compile LaTeX.';
+        try {
+          const data = await response.json();
+          if (data?.error) {
+            message = data.error;
+          }
+        } catch {
+          // ignore parse errors
+        }
+        throw new Error(message);
       }
+
+      const data = await response.json();
+      setPreviewUrl(data.previewUrl || data.pdfUrl || '');
+      setLastCompiledLatex(latex);
     } catch (err) {
       console.error('Compilation error:', err);
+      setPreviewUrl('');
+      setLastCompiledLatex('');
+      const fallbackMessage =
+        err instanceof Error ? err.message : 'Failed to compile LaTeX.';
+      setCompileError(fallbackMessage);
+      setShowCompileErrorModal(true);
     } finally {
       setIsCompiling(false);
     }
@@ -337,54 +360,55 @@ export default function AIToolLayout({
     setShowExportMenu(false);
   };
 
-    return (
-    <div className={cn("min-h-screen bg-gray-50", dmSans.className)}>
-      <div className="mx-auto max-w-7xl px-6 py-12">
-        {/* Back Button */}
-        <div className="mb-8">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
-          >
-            <ArrowLeft className="h-5 w-5" />
-            <span className="text-sm font-medium">Back to Tools</span>
-          </Link>
-        </div>
-
-        {/* Header */}
-        <div className="mb-12 text-center">
-          <h1 className="text-4xl font-light text-gray-900 mb-3">{title}</h1>
-          <p className="text-lg text-gray-600">{description}</p>
-        </div>
-
-        {/* Main Grid - Fixed 2 columns, no responsive breakpoints */}
-        <div className="grid grid-cols-2 gap-8">
-          {/* Input Section */}
-          <div className="flex flex-col">
-            {/* Header - Fixed height container */}
-            <div className="h-[72px] mb-6 flex flex-col justify-start">
-              <div className="mb-2 flex items-center gap-3">
-                <span className="inline-flex items-center rounded-md bg-orange-50 px-3 py-1.5 text-sm font-medium text-orange-900 border border-orange-200">
-                  INPUT
-                </span>
-                <h2 className="text-xl font-medium text-gray-900">{inputLabel}</h2>
-              </div>
-              <p className="text-sm text-gray-600">
-                Upload any image containing mathematical expressions
-              </p>
-            </div>
-
-            {/* Drop Zone - Fixed dimensions */}
-            <div
-              onDrop={handleDrop}
-              onDragOver={handleDragOver}
-              onDragLeave={handleDragLeave}
-              className={`relative border-2 border-dashed rounded-xl p-16 text-center transition-all h-[520px] w-full flex flex-col items-center justify-center ${
-                isDragging
-                  ? 'border-blue-500 bg-blue-50'
-                  : 'border-gray-300 bg-white hover:border-gray-400'
-              } ${isProcessing ? 'opacity-50 pointer-events-none' : ''}`}
+  return (
+    <>
+      <div className={cn("min-h-screen bg-gray-50", dmSans.className)}>
+        <div className="mx-auto max-w-7xl px-6 py-12">
+          {/* Back Button */}
+          <div className="mb-8">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
             >
+              <ArrowLeft className="h-5 w-5" />
+              <span className="text-sm font-medium">Back to Tools</span>
+            </Link>
+          </div>
+
+          {/* Header */}
+          <div className="mb-12 text-center">
+            <h1 className="text-4xl font-light text-gray-900 mb-3">{title}</h1>
+            <p className="text-lg text-gray-600">{description}</p>
+          </div>
+
+          {/* Main Grid - Fixed 2 columns, no responsive breakpoints */}
+          <div className="grid grid-cols-2 gap-8">
+            {/* Input Section */}
+            <div className="flex flex-col">
+              {/* Header - Fixed height container */}
+              <div className="h-[72px] mb-6 flex flex-col justify-start">
+                <div className="mb-2 flex items-center gap-3">
+                  <span className="inline-flex items-center rounded-md bg-orange-50 px-3 py-1.5 text-sm font-medium text-orange-900 border border-orange-200">
+                    INPUT
+                  </span>
+                  <h2 className="text-xl font-medium text-gray-900">{inputLabel}</h2>
+                </div>
+                <p className="text-sm text-gray-600">
+                  Upload any image containing mathematical expressions
+                </p>
+              </div>
+
+              {/* Drop Zone - Fixed dimensions */}
+              <div
+                onDrop={handleDrop}
+                onDragOver={handleDragOver}
+                onDragLeave={handleDragLeave}
+                className={`relative border-2 border-dashed rounded-xl p-16 text-center transition-all h-[520px] w-full flex flex-col items-center justify-center ${
+                  isDragging
+                    ? 'border-blue-500 bg-blue-50'
+                    : 'border-gray-300 bg-white hover:border-gray-400'
+                } ${isProcessing ? 'opacity-50 pointer-events-none' : ''}`}
+              >
                                    {imageData ? (
                        <div className="relative w-full h-full flex items-center justify-center">
                          {isTableFile ? (
@@ -614,6 +638,16 @@ export default function AIToolLayout({
           </div>
         </div>
       </div>
-    </div>
+      </div>
+
+      <CompileErrorModal
+        isOpen={showCompileErrorModal}
+        errorMessage={compileError}
+        latex={latestLatexDocument || latexCode}
+        onClose={() => setShowCompileErrorModal(false)}
+        source="tools:ai"
+        title={title}
+      />
+    </>
   );
 } 

@@ -14,6 +14,7 @@ import {
   registerLatexCompletions,
 } from '@/lib/editor-config';
 import { openInOctree } from '@/lib/open-in-octree';
+import { CompileErrorModal } from '@/components/CompileErrorModal';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
 const PDFPreview = dynamic(() => import('@/components/PDFPreview'), { ssr: false });
@@ -40,6 +41,8 @@ export default function MermaidToLatex() {
   const [isCompiling, setIsCompiling] = useState(false);
   const [lastCompiledLatex, setLastCompiledLatex] = useState<string>('');
   const [showExportMenu, setShowExportMenu] = useState(false);
+  const [compileError, setCompileError] = useState<string>('');
+  const [showCompileErrorModal, setShowCompileErrorModal] = useState(false);
 
   useEffect(() => {
     loader.init().then((monaco) => {
@@ -93,6 +96,7 @@ export default function MermaidToLatex() {
     if (lastCompiledLatex === latex && previewUrl) return;
 
     setIsCompiling(true);
+    setCompileError('');
     try {
       const response = await fetch('/api/compile', {
         method: 'POST',
@@ -100,13 +104,30 @@ export default function MermaidToLatex() {
         body: JSON.stringify({ latex }),
       });
 
-      if (response.ok) {
-        const data = await response.json();
-        setPreviewUrl(data.previewUrl || data.pdfUrl || '');
-        setLastCompiledLatex(latex);
+      if (!response.ok) {
+        let message = 'Failed to compile LaTeX.';
+        try {
+          const data = await response.json();
+          if (data?.error) {
+            message = data.error;
+          }
+        } catch {
+          // ignore parse errors
+        }
+        throw new Error(message);
       }
+
+      const data = await response.json();
+      setPreviewUrl(data.previewUrl || data.pdfUrl || '');
+      setLastCompiledLatex(latex);
     } catch (err) {
       console.error('Compilation error:', err);
+      setPreviewUrl('');
+      setLastCompiledLatex('');
+      const fallbackMessage =
+        err instanceof Error ? err.message : 'Failed to compile LaTeX.';
+      setCompileError(fallbackMessage);
+      setShowCompileErrorModal(true);
     } finally {
       setIsCompiling(false);
     }
@@ -371,6 +392,15 @@ export default function MermaidToLatex() {
           </div>
         </div>
       </div>
+
+      <CompileErrorModal
+        isOpen={showCompileErrorModal}
+        errorMessage={compileError}
+        latex={latexCode}
+        onClose={() => setShowCompileErrorModal(false)}
+        source="tools:mermaid"
+        title="Mermaid Diagram"
+      />
     </div>
   );
 } 

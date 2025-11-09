@@ -14,6 +14,7 @@ import {
   registerLatexCompletions,
 } from '@/lib/editor-config';
 import { openInOctree } from '@/lib/open-in-octree';
+import { CompileErrorModal } from '@/components/CompileErrorModal';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
 const PDFPreview = dynamic(() => import('@/components/PDFPreview'), { ssr: false });
@@ -47,6 +48,9 @@ export default function LatexPreview() {
   const [previewUrl, setPreviewUrl] = useState<string>('');
   const [isCompiling, setIsCompiling] = useState(false);
   const [lastCompiledLatex, setLastCompiledLatex] = useState<string>('');
+  const [compileError, setCompileError] = useState<string>('');
+  const [showCompileErrorModal, setShowCompileErrorModal] = useState(false);
+  const [latestLatexDocument, setLatestLatexDocument] = useState<string>(DEFAULT_LATEX);
 
   useEffect(() => {
     loader.init().then((monaco) => {
@@ -62,6 +66,8 @@ export default function LatexPreview() {
     if (!latex.trim()) return;
 
     setIsCompiling(true);
+    setCompileError('');
+    setLatestLatexDocument(latex);
     try {
       const response = await fetch('/api/compile', {
         method: 'POST',
@@ -69,13 +75,30 @@ export default function LatexPreview() {
         body: JSON.stringify({ latex }),
       });
 
-      if (response.ok) {
-        const data = await response.json();
-        setPreviewUrl(data.previewUrl || data.pdfUrl || '');
-        setLastCompiledLatex(latex);
+      if (!response.ok) {
+        let message = 'Failed to compile LaTeX.';
+        try {
+          const data = await response.json();
+          if (data?.error) {
+            message = data.error;
+          }
+        } catch {
+          // ignore parse errors
+        }
+        throw new Error(message);
       }
+
+      const data = await response.json();
+      setPreviewUrl(data.previewUrl || data.pdfUrl || '');
+      setLastCompiledLatex(latex);
     } catch (err) {
       console.error('Compilation error:', err);
+      setPreviewUrl('');
+      setLastCompiledLatex('');
+      const fallbackMessage =
+        err instanceof Error ? err.message : 'Failed to compile LaTeX.';
+      setCompileError(fallbackMessage);
+      setShowCompileErrorModal(true);
     } finally {
       setIsCompiling(false);
     }
@@ -194,6 +217,14 @@ export default function LatexPreview() {
           </div>
         </div>
       </div>
+      <CompileErrorModal
+        isOpen={showCompileErrorModal}
+        errorMessage={compileError}
+        latex={latestLatexDocument}
+        onClose={() => setShowCompileErrorModal(false)}
+        source="tools:latex-preview"
+        title="LaTeX Preview"
+      />
     </div>
   );
 } 
