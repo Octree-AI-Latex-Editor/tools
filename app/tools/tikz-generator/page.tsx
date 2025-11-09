@@ -279,7 +279,7 @@ export default function TikzGenerator() {
                   <div className="flex items-center justify-center flex-1">
                     <div className="text-center">
                       <Loader2 className="mx-auto h-12 w-12 text-blue-500 animate-spin mb-4" />
-                      <p className="text-gray-600 font-medium">GPT-5 is thinking …</p>
+                      <p className="text-gray-600 font-medium">AI Model is thinking …</p>
                       <p className="mt-1 text-sm text-gray-500">Give it a moment to craft your TikZ diagram.</p>
                     </div>
                   </div>
@@ -305,7 +305,7 @@ export default function TikzGenerator() {
                         <div className="absolute top-2 right-2 flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1.5 rounded-md text-sm shadow-sm">
                           <Loader2 className="h-4 w-4 animate-spin" />
                           <div className="flex flex-col">
-                            <span className="font-medium">GPT-5 is thinking …</span>
+                            <span className="font-medium">AI Model is thinking …</span>
                             <span className="text-[11px] leading-tight text-blue-600/80">Hang tight while the code streams in.</span>
                           </div>
                         </div>

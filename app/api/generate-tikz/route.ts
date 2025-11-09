@@ -11,7 +11,7 @@ export async function POST(request: NextRequest) {
         'Authorization': `Bearer ${process.env.OPENAI_API_KEY || ''}`,
       },
       body: JSON.stringify({
-        model: 'gpt-5',
+        model: 'gpt-4.1-mini',
         messages: [
           {
             role: 'user',
@@ -26,7 +26,7 @@ Create a complete LaTeX document with:
 Return ONLY the complete LaTeX code, no explanations or markdown formatting.`,
           },
         ],
-        max_completion_tokens: 10000,
+        max_completion_tokens: 4000,
         stream: true,
       }),
     });
