@@ -236,6 +236,24 @@ export default function LatexWordCounter() {
               </div>
             )}
 
+            {result?.latexCode && !isProcessing && (
+              <div className="mt-6">
+                <button
+                  onClick={() =>
+                    openInOctree({
+                      latex: result.latexCode,
+                      title: 'LaTeX Word Counter',
+                      source: 'tools:word-counter',
+                    })
+                  }
+                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 text-base font-medium rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm"
+                >
+                  <OctreeLogo className="h-5 w-5" />
+                  Open in Octree
+                </button>
+              </div>
+            )}
+
             {error && (
               <div className="mt-4 rounded-lg bg-red-50 border border-red-200 p-4">
                 <p className="text-sm text-red-800">{error}</p>
