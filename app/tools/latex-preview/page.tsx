@@ -14,6 +14,7 @@ import {
   registerLatexCompletions,
 } from '@/lib/editor-config';
 import { openInOctree } from '@/lib/open-in-octree';
+import { CompileErrorModal } from '@/components/CompileErrorModal';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
 
@@ -43,6 +44,12 @@ x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}
 
 export default function LatexPreview() {
   const [latexCode, setLatexCode] = useState<string>(DEFAULT_LATEX);
+  const [previewUrl, setPreviewUrl] = useState<string>('');
+  const [isCompiling, setIsCompiling] = useState(false);
+  const [lastCompiledLatex, setLastCompiledLatex] = useState<string>('');
+  const [compileError, setCompileError] = useState<string>('');
+  const [showCompileErrorModal, setShowCompileErrorModal] = useState(false);
+  const [latestLatexDocument, setLatestLatexDocument] = useState<string>(DEFAULT_LATEX);
 
   useEffect(() => {
     loader.init().then((monaco) => {
@@ -51,6 +58,64 @@ export default function LatexPreview() {
       monaco.languages.setMonarchTokensProvider('latex', latexTokenProvider);
       registerLatexCompletions(monaco);
     });
+  }, []);
+
+  const compileLatex = async (latex: string) => {
+    if (lastCompiledLatex === latex && previewUrl) return;
+    if (!latex.trim()) return;
+
+    setIsCompiling(true);
+    setCompileError('');
+    setLatestLatexDocument(latex);
+    try {
+      const response = await fetch('/api/compile', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ latex }),
+      });
+
+      if (!response.ok) {
+        let message = 'Failed to compile LaTeX.';
+        try {
+          const data = await response.json();
+          if (data?.error) {
+            message = data.error;
+          }
+        } catch {
+          // ignore parse errors
+        }
+        throw new Error(message);
+      }
+
+      const data = await response.json();
+      setPreviewUrl(data.previewUrl || data.pdfUrl || '');
+      setLastCompiledLatex(latex);
+    } catch (err) {
+      console.error('Compilation error:', err);
+      setPreviewUrl('');
+      setLastCompiledLatex('');
+      const fallbackMessage =
+        err instanceof Error ? err.message : 'Failed to compile LaTeX.';
+      setCompileError(fallbackMessage);
+      setShowCompileErrorModal(true);
+    } finally {
+      setIsCompiling(false);
+    }
+  };
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      compileLatex(latexCode);
+    }, 1000);
+
+    return () => clearTimeout(timeoutId);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [latexCode]);
+
+  // Initial compile
+  useEffect(() => {
+    compileLatex(DEFAULT_LATEX);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -115,6 +180,14 @@ export default function LatexPreview() {
           </div>
         </div>
       </div>
+      <CompileErrorModal
+        isOpen={showCompileErrorModal}
+        errorMessage={compileError}
+        latex={latestLatexDocument}
+        onClose={() => setShowCompileErrorModal(false)}
+        source="tools:latex-preview"
+        title="LaTeX Preview"
+      />
     </div>
   );
 } 

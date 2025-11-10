@@ -14,6 +14,7 @@ import {
   registerLatexCompletions,
 } from '@/lib/editor-config';
 import { openInOctree } from '@/lib/open-in-octree';
+import { CompileErrorModal } from '@/components/CompileErrorModal';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
 const PDFPreview = dynamic(() => import('@/components/PDFPreview'), { ssr: false });
@@ -33,6 +34,8 @@ export default function TikzGenerator() {
   const [isCompiling, setIsCompiling] = useState(false);
   const [lastCompiledLatex, setLastCompiledLatex] = useState<string>('');
   const [showExportMenu, setShowExportMenu] = useState(false);
+  const [compileError, setCompileError] = useState<string>('');
+  const [showCompileErrorModal, setShowCompileErrorModal] = useState(false);
 
   useEffect(() => {
     loader.init().then((monaco) => {
@@ -86,6 +89,7 @@ export default function TikzGenerator() {
     if (lastCompiledLatex === latex && previewUrl) return;
 
     setIsCompiling(true);
+    setCompileError('');
     try {
       const response = await fetch('/api/compile', {
         method: 'POST',
@@ -93,13 +97,30 @@ export default function TikzGenerator() {
         body: JSON.stringify({ latex }),
       });
 
-      if (response.ok) {
-        const data = await response.json();
-        setPreviewUrl(data.previewUrl || data.pdfUrl || '');
-        setLastCompiledLatex(latex);
+      if (!response.ok) {
+        let message = 'Failed to compile TikZ document.';
+        try {
+          const data = await response.json();
+          if (data?.error) {
+            message = data.error;
+          }
+        } catch {
+          // ignore json parse errors
+        }
+        throw new Error(message);
       }
+
+      const data = await response.json();
+      setPreviewUrl(data.previewUrl || data.pdfUrl || '');
+      setLastCompiledLatex(latex);
     } catch (err) {
       console.error('Compilation error:', err);
+      setPreviewUrl('');
+      setLastCompiledLatex('');
+      const fallbackMessage =
+        err instanceof Error ? err.message : 'Failed to compile TikZ document.';
+      setCompileError(fallbackMessage);
+      setShowCompileErrorModal(true);
     } finally {
       setIsCompiling(false);
     }
@@ -258,7 +279,8 @@ export default function TikzGenerator() {
                   <div className="flex items-center justify-center flex-1">
                     <div className="text-center">
                       <Loader2 className="mx-auto h-12 w-12 text-blue-500 animate-spin mb-4" />
-                      <p className="text-gray-600">Generating TikZ code...</p>
+                      <p className="text-gray-600 font-medium">AI Model is thinking …</p>
+                      <p className="mt-1 text-sm text-gray-500">Give it a moment to craft your TikZ diagram.</p>
                     </div>
                   </div>
                 ) : latexCode ? (
@@ -282,7 +304,10 @@ export default function TikzGenerator() {
                       {isProcessing && (
                         <div className="absolute top-2 right-2 flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1.5 rounded-md text-sm shadow-sm">
                           <Loader2 className="h-4 w-4 animate-spin" />
-                          Generating...
+                          <div className="flex flex-col">
+                            <span className="font-medium">AI Model is thinking …</span>
+                            <span className="text-[11px] leading-tight text-blue-600/80">Hang tight while the code streams in.</span>
+                          </div>
                         </div>
                       )}
                     </div>
@@ -354,6 +379,15 @@ export default function TikzGenerator() {
           </div>
         </div>
       </div>
+
+      <CompileErrorModal
+        isOpen={showCompileErrorModal}
+        errorMessage={compileError}
+        latex={latexCode}
+        onClose={() => setShowCompileErrorModal(false)}
+        source="tools:tikz"
+        title="TikZ Diagram"
+      />
     </div>
   );
 } 

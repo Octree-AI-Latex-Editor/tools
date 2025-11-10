@@ -8,6 +8,7 @@ import { OctreeLogo } from '@/components/icons/octree-logo';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { loader } from '@monaco-editor/react';
+import { CompileErrorModal } from '@/components/CompileErrorModal';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
 const PDFPreview = dynamic(() => import('@/components/PDFPreview'), { ssr: false });
@@ -40,6 +41,9 @@ export default function CitationGenerator() {
   const [previewUrl, setPreviewUrl] = useState<string>('');
   const [isCompiling, setIsCompiling] = useState(false);
   const [lastCompiledBibtex, setLastCompiledBibtex] = useState<string>('');
+  const [compileError, setCompileError] = useState<string>('');
+  const [showCompileErrorModal, setShowCompileErrorModal] = useState(false);
+  const [latestLatexDocument, setLatestLatexDocument] = useState<string>('');
 
   useEffect(() => {
     loader.init().then((monaco) => {
@@ -105,6 +109,7 @@ export default function CitationGenerator() {
     if (lastCompiledBibtex === bibtex && previewUrl) return;
 
     setIsCompiling(true);
+    setCompileError('');
     try {
       // Create a complete LaTeX document that uses the BibTeX citation
       const citationKey = bibtex.match(/@\w+\{([^,]+),/)?.[1] || 'citation';
@@ -133,19 +138,38 @@ ${bibtex.replace(/@\w+\{[^,]+,/, '').replace(/}/g, '').split('\n').filter(line =
 
 \\end{document}`;
 
+      setLatestLatexDocument(latexDocument);
+
       const response = await fetch('/api/compile', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ latex: latexDocument }),
       });
 
-      if (response.ok) {
-        const data = await response.json();
-        setPreviewUrl(data.previewUrl || data.pdfUrl || '');
-        setLastCompiledBibtex(bibtex);
+      if (!response.ok) {
+        let message = 'Failed to compile LaTeX.';
+        try {
+          const data = await response.json();
+          if (data?.error) {
+            message = data.error;
+          }
+        } catch {
+          // Ignore parse errors
+        }
+        throw new Error(message);
       }
+
+      const data = await response.json();
+      setPreviewUrl(data.previewUrl || data.pdfUrl || '');
+      setLastCompiledBibtex(bibtex);
     } catch (err) {
       console.error('Compilation error:', err);
+      setPreviewUrl('');
+      setLastCompiledBibtex('');
+      const fallbackMessage =
+        err instanceof Error ? err.message : 'Failed to compile LaTeX.';
+      setCompileError(fallbackMessage);
+      setShowCompileErrorModal(true);
     } finally {
       setIsCompiling(false);
     }
@@ -361,6 +385,15 @@ ${bibtex.replace(/@\w+\{[^,]+,/, '').replace(/}/g, '').split('\n').filter(line =
           </div>
         </div>
       </div>
+
+      <CompileErrorModal
+        isOpen={showCompileErrorModal}
+        errorMessage={compileError}
+        latex={latestLatexDocument}
+        onClose={() => setShowCompileErrorModal(false)}
+        source="tools:citation-generator"
+        title="Citation Generator Output"
+      />
     </div>
   );
 } 

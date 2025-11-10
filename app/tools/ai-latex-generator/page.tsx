@@ -13,6 +13,8 @@ import {
   latexTokenProvider,
   registerLatexCompletions,
 } from '@/lib/editor-config';
+import { openInOctree } from '@/lib/open-in-octree';
+import { CompileErrorModal } from '@/components/CompileErrorModal';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
 const PDFPreview = dynamic(() => import('@/components/PDFPreview'), { ssr: false });
@@ -41,6 +43,8 @@ export default function AILatexGenerator() {
   const [isCompiling, setIsCompiling] = useState(false);
   const [lastCompiledLatex, setLastCompiledLatex] = useState<string>('');
   const [showExportMenu, setShowExportMenu] = useState(false);
+  const [compileError, setCompileError] = useState<string>('');
+  const [showCompileErrorModal, setShowCompileErrorModal] = useState(false);
 
   useEffect(() => {
     loader.init().then((monaco) => {
@@ -94,6 +98,7 @@ export default function AILatexGenerator() {
     if (lastCompiledLatex === latex && previewUrl) return;
 
     setIsCompiling(true);
+    setCompileError('');
     try {
       const response = await fetch('/api/compile', {
         method: 'POST',
@@ -101,13 +106,30 @@ export default function AILatexGenerator() {
         body: JSON.stringify({ latex }),
       });
 
-      if (response.ok) {
-        const data = await response.json();
-        setPreviewUrl(data.previewUrl || data.pdfUrl || '');
-        setLastCompiledLatex(latex);
+      if (!response.ok) {
+        let message = 'Failed to compile LaTeX.';
+        try {
+          const data = await response.json();
+          if (data?.error) {
+            message = data.error;
+          }
+        } catch {
+          // Ignore parse errors
+        }
+        throw new Error(message);
       }
+
+      const data = await response.json();
+      setPreviewUrl(data.previewUrl || data.pdfUrl || '');
+      setLastCompiledLatex(latex);
     } catch (err) {
       console.error('Compilation error:', err);
+      setPreviewUrl('');
+      setLastCompiledLatex('');
+      const fallbackMessage =
+        err instanceof Error ? err.message : 'Failed to compile LaTeX.';
+      setCompileError(fallbackMessage);
+      setShowCompileErrorModal(true);
     } finally {
       setIsCompiling(false);
     }
@@ -322,15 +344,20 @@ export default function AILatexGenerator() {
 
             {latexCode && !isProcessing && (
               <div className="mt-6 flex gap-3">
-                <a
-                  href="https://useoctree.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  type="button"
+                  onClick={() =>
+                    openInOctree({
+                      latex: latexCode,
+                      title: 'AI Generated LaTeX',
+                      source: 'tools:ai-latex-generator',
+                    })
+                  }
                   className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 text-base font-medium rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm"
                 >
                   <OctreeLogo className="h-5 w-5" />
                   Open in Octree
-                </a>
+                </button>
                 
                 <div className="relative">
                   <button
@@ -364,6 +391,15 @@ export default function AILatexGenerator() {
           </div>
         </div>
       </div>
+
+      <CompileErrorModal
+        isOpen={showCompileErrorModal}
+        errorMessage={compileError}
+        latex={latexCode}
+        onClose={() => setShowCompileErrorModal(false)}
+        source="tools:ai-latex-generator"
+        title="AI Generated LaTeX"
+      />
     </div>
   );
 } 
