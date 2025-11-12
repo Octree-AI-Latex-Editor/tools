@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Code2, Eye, Loader2, Download, ChevronDown, ArrowLeft } from 'lucide-react';
 import { DM_Sans } from 'next/font/google';
 import { cn } from '@/lib/utils';

@@ -19,24 +19,6 @@ const PDFPreview = dynamic(() => import("@/components/PDFPreview"), { ssr: false
 // Templates now imported from shared source of truth (@/lib/templates.ts)
 // This eliminates duplication and makes maintenance easier!
 
-// Count words in LaTeX code (extract actual text content, excluding LaTeX commands)
-function countWords(latex: string): number {
-  // Remove LaTeX commands and environments
-  const text = latex
-    .replace(/\\[a-zA-Z]+\*?(\[.*?\])?(\{.*?\})*/g, '') // Remove commands like \section, \textbf{text}, etc.
-    .replace(/\\begin\{.*?\}[\s\S]*?\\end\{.*?\}/g, '') // Remove environments
-    .replace(/%.*$/gm, '') // Remove comments
-    .replace(/\$.*?\$/g, '') // Remove inline math
-    .replace(/\\\[[\s\S]*?\\\]/g, '') // Remove display math
-    .replace(/\\\([\s\S]*?\\\)/g, '') // Remove inline math (alternative)
-    .replace(/[{}[\]\\]/g, ' ') // Replace LaTeX delimiters with spaces
-    .trim();
-  
-  // Split by whitespace and filter out empty strings
-  const words = text.split(/\s+/).filter(word => word.length > 0);
-  return words.length;
-}
-
 export default function TemplatesPage() {
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -127,13 +109,13 @@ export default function TemplatesPage() {
           <div className="mb-6">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
-            <input
-              type="text"
-              placeholder="Search templates..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              <input
+                type="text"
+                placeholder="Search templates..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
                 className="block w-full pl-10 pr-3 py-2.5 border border-gray-200 rounded-lg text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            />
+              />
             </div>
           </div>
 
@@ -146,10 +128,6 @@ export default function TemplatesPage() {
               >
                 {/* PDF Preview - fixed height */}
                 <div className="relative h-64 bg-gray-50 overflow-hidden">
-                  {/* Word count at top */}
-                  <div className="absolute top-2 left-2 z-10 bg-white/90 backdrop-blur-sm px-2 py-1 rounded text-xs text-gray-600">
-                    {countWords(template.code)} words
-                  </div>
                   <PDFPreview
                     pdfUrl={template.previewUrl}
                     width={280}
@@ -185,9 +163,9 @@ export default function TemplatesPage() {
                           source: 'tools:templates',
                         });
                       }}
-                      className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 text-base font-medium rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm"
+                      className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white text-gray-900 text-sm font-normal rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors shadow-sm"
                     >
-                      <OctreeLogo className="h-5 w-5" />
+                      <OctreeLogo className="h-4 w-4" />
                       Open in Octree
                     </button>
                   </div>

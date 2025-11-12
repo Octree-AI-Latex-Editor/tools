@@ -96,7 +96,7 @@ Data 4 & Data 5 & Data 6 \\\\
                   if (content) {
                     controller.enqueue(encoder.encode(content));
                   }
-                } catch {
+                } catch (e) {
                   // Skip invalid JSON
                 }
               }

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Search, FileText, Copy, Check } from "lucide-react";
+import { Search, FileText, Copy, Check, Star } from "lucide-react";
 import dynamic from 'next/dynamic';
 import { openInOctree } from '@/lib/open-in-octree';
 import { OctreeLogo } from '@/components/icons/octree-logo';
@@ -102,13 +102,6 @@ const tools = [
     description: "Convert LaTeX documents or snippets to Markdown",
     href: "/tools/latex-to-markdown",
     icon: "🔁",
-  },
-  {
-    id: 14,
-    title: "LaTeX Word Counter",
-    description: "Count the exact number of words in PDF documents",
-    href: "/tools/latex-word-counter",
-    icon: "🔢",
   },
 ];
 

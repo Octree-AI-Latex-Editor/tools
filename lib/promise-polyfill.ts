@@ -6,12 +6,8 @@
 if (!Promise.withResolvers) {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   (Promise as any).withResolvers = function <T>() {
-    let resolve: (value: T | PromiseLike<T>) => void = () => {
-      throw new Error('Promise resolver accessed before initialization.');
-    };
-    let reject: (reason?: unknown) => void = () => {
-      throw new Error('Promise rejector accessed before initialization.');
-    };
+    let resolve: (value: T | PromiseLike<T>) => void;
+    let reject: (reason?: unknown) => void;
 
     const promise = new Promise<T>((res, rej) => {
       resolve = res;
@@ -20,8 +16,10 @@ if (!Promise.withResolvers) {
 
     return {
       promise,
-      resolve,
-      reject,
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      resolve: resolve!,
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      reject: reject!,
     };
   };
 }
