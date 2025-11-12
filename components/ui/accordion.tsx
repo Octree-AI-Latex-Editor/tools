@@ -65,7 +65,7 @@ export function Accordion({ type = 'single', defaultValue, className, children }
 }
 
 export function AccordionItem({ value, children }: AccordionItemProps) {
-  const { openItems } = React.useContext(AccordionContext);
+  const { openItems, toggleItem } = React.useContext(AccordionContext);
   const isOpen = openItems.includes(value);
 
   return (

@@ -96,7 +96,7 @@ Return ONLY the complete LaTeX code, no explanations or markdown formatting.`,
                   if (content) {
                     controller.enqueue(encoder.encode(content));
                   }
-                } catch {
+                } catch (e) {
                   // Skip invalid JSON
                 }
               }

@@ -94,7 +94,7 @@ This is a fallback LaTeX document.
                   if (content) {
                     controller.enqueue(encoder.encode(content));
                   }
-                } catch {
+                } catch (e) {
                   // Skip invalid JSON
                 }
               }

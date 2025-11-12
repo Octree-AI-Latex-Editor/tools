@@ -95,7 +95,7 @@ This is a sample LaTeX document converted from HTML.
                   if (content) {
                     controller.enqueue(encoder.encode(content));
                   }
-                } catch {
+                } catch (e) {
                   // Skip invalid JSON
                 }
               }
