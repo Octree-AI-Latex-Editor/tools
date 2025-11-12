@@ -104,7 +104,7 @@ This is a sample LaTeX document.
                   if (content) {
                     controller.enqueue(encoder.encode(content));
                   }
-                } catch (e) {
+                } catch {
                   // Skip invalid JSON
                 }
               }

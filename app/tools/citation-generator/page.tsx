@@ -128,7 +128,7 @@ This is a sample document showing how the citation will appear in your LaTeX doc
 ${bibtex.replace(/@\w+\{[^,]+,/, '').replace(/}/g, '').split('\n').filter(line => line.trim()).map(line => {
   const match = line.match(/(\w+)\s*=\s*[{"](.*?)["}]/);
   if (match) {
-    const [, field, value] = match;
+    const [, , value] = match;
     return value;
   }
   return '';

@@ -89,7 +89,7 @@ export async function POST(request: NextRequest) {
                   if (content) {
                     controller.enqueue(encoder.encode(content));
                   }
-                } catch (e) {
+                } catch {
                   // Skip invalid JSON
                 }
               }
