@@ -45,7 +45,6 @@ x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}
 export default function LatexPreview() {
   const [latexCode, setLatexCode] = useState<string>(DEFAULT_LATEX);
   const [previewUrl, setPreviewUrl] = useState<string>('');
-  const [isCompiling, setIsCompiling] = useState(false);
   const [lastCompiledLatex, setLastCompiledLatex] = useState<string>('');
   const [compileError, setCompileError] = useState<string>('');
   const [showCompileErrorModal, setShowCompileErrorModal] = useState(false);
@@ -64,7 +63,6 @@ export default function LatexPreview() {
     if (lastCompiledLatex === latex && previewUrl) return;
     if (!latex.trim()) return;
 
-    setIsCompiling(true);
     setCompileError('');
     setLatestLatexDocument(latex);
     try {
@@ -98,8 +96,6 @@ export default function LatexPreview() {
         err instanceof Error ? err.message : 'Failed to compile LaTeX.';
       setCompileError(fallbackMessage);
       setShowCompileErrorModal(true);
-    } finally {
-      setIsCompiling(false);
     }
   };
 

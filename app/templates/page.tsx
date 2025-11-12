@@ -22,13 +22,13 @@ const PDFPreview = dynamic(() => import("@/components/PDFPreview"), { ssr: false
 // Count words in LaTeX code (extract actual text content, excluding LaTeX commands)
 function countWords(latex: string): number {
   // Remove LaTeX commands and environments
-  let text = latex
+  const text = latex
     .replace(/\\[a-zA-Z]+\*?(\[.*?\])?(\{.*?\})*/g, '') // Remove commands like \section, \textbf{text}, etc.
-    .replace(/\\begin\{.*?\}.*?\\end\{.*?\}/gs, '') // Remove environments
+    .replace(/\\begin\{.*?\}[\s\S]*?\\end\{.*?\}/g, '') // Remove environments
     .replace(/%.*$/gm, '') // Remove comments
     .replace(/\$.*?\$/g, '') // Remove inline math
-    .replace(/\\\[.*?\\\]/gs, '') // Remove display math
-    .replace(/\\\(.*?\\\)/gs, '') // Remove inline math (alternative)
+    .replace(/\\\[[\s\S]*?\\\]/g, '') // Remove display math
+    .replace(/\\\([\s\S]*?\\\)/g, '') // Remove inline math (alternative)
     .replace(/[{}[\]\\]/g, ' ') // Replace LaTeX delimiters with spaces
     .trim();
   

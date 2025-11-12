@@ -40,7 +40,6 @@ export default function LatexWordCounter() {
   const [isProcessing, setIsProcessing] = useState(false);
   const [error, setError] = useState<string>('');
   const [result, setResult] = useState<WordCountResult | null>(null);
-  const [uploadedFileName, setUploadedFileName] = useState<string>('');
 
   useEffect(() => {
     loader.init().then((monaco) => {
@@ -94,7 +93,6 @@ export default function LatexWordCounter() {
         return;
       }
 
-      setUploadedFileName(file.name);
       const reader = new FileReader();
 
       reader.onload = (event) => {
@@ -124,7 +122,6 @@ export default function LatexWordCounter() {
         return;
       }
 
-      setUploadedFileName(file.name);
       const reader = new FileReader();
 
       reader.onload = (event) => {

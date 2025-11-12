@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Search, FileText, Copy, Check, Star } from "lucide-react";
+import { Search, FileText, Copy, Check } from "lucide-react";
 import dynamic from 'next/dynamic';
 import { openInOctree } from '@/lib/open-in-octree';
 import { OctreeLogo } from '@/components/icons/octree-logo';
