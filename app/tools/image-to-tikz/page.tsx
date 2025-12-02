@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { Code2, Eye, Loader2, Download, ChevronDown, ArrowLeft, Upload, X, Image as ImageIcon } from 'lucide-react';
+import { Code2, Eye, Loader2, Download, ChevronDown, ArrowLeft, Upload } from 'lucide-react';
 import { DM_Sans } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import { OctreeLogo } from '@/components/icons/octree-logo';
@@ -25,7 +25,6 @@ const dmSans = DM_Sans({
 });
 
 export default function ImageToTikz() {
-  const [imageFile, setImageFile] = useState<File | null>(null);
   const [imagePreview, setImagePreview] = useState<string>('');
   const [latexCode, setLatexCode] = useState<string>('');
   const [isProcessing, setIsProcessing] = useState(false);
@@ -48,80 +47,20 @@ export default function ImageToTikz() {
     });
   }, []);
 
-  const handleFileSelect = useCallback((file: File) => {
-    if (!file.type.startsWith('image/')) {
-      setError('Please upload an image file (PNG, JPEG, GIF, WebP)');
-      return;
-    }
-
-    const maxSize = 20 * 1024 * 1024; // 20MB
-    if (file.size > maxSize) {
-      setError('Image size must be less than 20MB');
-      return;
-    }
-
-    setImageFile(file);
-    setError('');
-
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      setImagePreview(e.target?.result as string);
-    };
-    reader.readAsDataURL(file);
-  }, []);
-
-  const handleDrop = useCallback((e: React.DragEvent) => {
-    e.preventDefault();
-    setIsDragging(false);
-
-    const file = e.dataTransfer.files[0];
-    if (file) {
-      handleFileSelect(file);
-    }
-  }, [handleFileSelect]);
-
-  const handleDragOver = useCallback((e: React.DragEvent) => {
-    e.preventDefault();
-    setIsDragging(true);
-  }, []);
-
-  const handleDragLeave = useCallback((e: React.DragEvent) => {
-    e.preventDefault();
-    setIsDragging(false);
-  }, []);
-
-  const clearImage = () => {
-    setImageFile(null);
-    setImagePreview('');
-    setLatexCode('');
-    setPreviewUrl('');
-    setLastCompiledLatex('');
-  };
-
-  const convertToTikz = async () => {
-    if (!imageFile) return;
-
+  const processImage = async (file: File, preview: string) => {
     setIsProcessing(true);
     setError('');
     setLatexCode('');
 
     try {
-      const reader = new FileReader();
-      const base64Promise = new Promise<string>((resolve) => {
-        reader.onload = () => {
-          const base64 = (reader.result as string).split(',')[1];
-          resolve(base64);
-        };
-      });
-      reader.readAsDataURL(imageFile);
-      const base64Image = await base64Promise;
+      const base64 = preview.split(',')[1];
 
       const response = await fetch('/api/convert-image-to-tikz', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          image: base64Image,
-          mimeType: imageFile.type,
+          image: base64,
+          mimeType: file.type,
         }),
       });
 
@@ -149,6 +88,51 @@ export default function ImageToTikz() {
       setIsProcessing(false);
     }
   };
+
+  const handleFileSelect = useCallback((file: File) => {
+    if (!file.type.startsWith('image/')) {
+      setError('Please upload an image file (PNG, JPEG, GIF, WebP)');
+      return;
+    }
+
+    const maxSize = 20 * 1024 * 1024; // 20MB
+    if (file.size > maxSize) {
+      setError('Image size must be less than 20MB');
+      return;
+    }
+
+    setError('');
+
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const data = e.target?.result as string;
+      setImagePreview(data);
+      processImage(file, data);
+    };
+    reader.readAsDataURL(file);
+  }, []);
+
+  const handleDrop = useCallback((e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragging(false);
+
+    const file = e.dataTransfer.files[0];
+    if (file) {
+      handleFileSelect(file);
+    }
+  }, [handleFileSelect]);
+
+  const handleDragOver = useCallback((e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragging(true);
+  }, []);
+
+  const handleDragLeave = useCallback((e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragging(false);
+  }, []);
+
+
 
   const compileLatex = async (latex: string) => {
     if (lastCompiledLatex === latex && previewUrl) return;
@@ -195,6 +179,7 @@ export default function ImageToTikz() {
     if (latexCode && activeTab === 'preview' && !isProcessing) {
       compileLatex(latexCode);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [latexCode, activeTab, isProcessing]);
 
   const exportAsLatex = () => {
@@ -259,61 +244,53 @@ export default function ImageToTikz() {
             </div>
 
             <div
-              className={cn(
-                "bg-white border-2 border-dashed rounded-xl h-[520px] w-full flex flex-col overflow-hidden transition-colors",
-                isDragging ? "border-blue-500 bg-blue-50" : "border-gray-300",
-                imagePreview ? "border-solid" : ""
-              )}
               onDrop={handleDrop}
               onDragOver={handleDragOver}
               onDragLeave={handleDragLeave}
+              className={`relative border-2 border-dashed rounded-xl p-16 text-center transition-all h-[520px] w-full flex flex-col items-center justify-center ${
+                isDragging
+                  ? 'border-blue-500 bg-blue-50'
+                  : 'border-gray-300 bg-white hover:border-gray-400'
+              } ${isProcessing ? 'opacity-50 pointer-events-none' : ''}`}
             >
               {imagePreview ? (
-                <div className="relative h-full w-full p-4">
-                  <button
-                    onClick={clearImage}
-                    className="absolute top-4 right-4 z-10 p-2 bg-white rounded-full shadow-md hover:bg-gray-100 transition-colors"
-                    disabled={isProcessing}
-                  >
-                    <X className="h-5 w-5 text-gray-600" />
-                  </button>
-                  <div className="h-full w-full flex items-center justify-center">
-                    <img
-                      src={imagePreview}
-                      alt="Uploaded diagram"
-                      className="max-h-full max-w-full object-contain rounded-lg"
-                    />
-                  </div>
+                <div className="relative w-full h-full flex items-center justify-center">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={imagePreview}
+                    alt="Uploaded diagram"
+                    className="max-w-full max-h-full object-contain rounded-lg relative z-10"
+                  />
                 </div>
               ) : (
-                <label className="flex-1 flex flex-col items-center justify-center cursor-pointer p-6">
-                  <input
-                    type="file"
-                    accept="image/*"
-                    onChange={(e) => e.target.files?.[0] && handleFileSelect(e.target.files[0])}
-                    className="hidden"
-                    disabled={isProcessing}
-                  />
-                  <div className="p-4 bg-gray-100 rounded-full mb-4">
-                    <ImageIcon className="h-10 w-10 text-gray-400" />
+                <>
+                  {isProcessing ? (
+                    <Loader2 className="h-16 w-16 text-blue-500 animate-spin mb-4" />
+                  ) : (
+                    <Upload className="h-16 w-16 text-gray-400 mb-4" />
+                  )}
+                  <p className="text-base text-gray-900 font-normal mb-2">
+                    {isProcessing ? 'Processing...' : 'Drop your file here'}
+                  </p>
+                  <p className="text-sm text-gray-500 mb-4">
+                    or{' '}
+                    <label className="text-blue-600 hover:text-blue-500 cursor-pointer font-medium">
+                      browse files
+                      <input
+                        type="file"
+                        className="hidden"
+                        accept="image/*"
+                        onChange={(e) => e.target.files?.[0] && handleFileSelect(e.target.files[0])}
+                        disabled={isProcessing}
+                      />
+                    </label>
+                  </p>
+                  <div className="inline-block bg-gray-100 rounded-full px-4 py-1.5 text-xs font-medium text-gray-700">
+                    JPEG, PNG, GIF, WebP
                   </div>
-                  <p className="text-gray-700 font-medium mb-2">
-                    Drop your image here or click to browse
-                  </p>
-                  <p className="text-sm text-gray-500">
-                    Supports PNG, JPEG, GIF, WebP (max 20MB)
-                  </p>
-                </label>
+                </>
               )}
             </div>
-
-            <button
-              onClick={convertToTikz}
-              disabled={isProcessing || !imageFile}
-              className="mt-6 w-full px-6 py-3 bg-blue-600 text-white text-base font-medium rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {isProcessing ? 'Converting...' : 'Convert to TikZ'}
-            </button>
 
             {error && (
               <div className="mt-4 rounded-lg bg-red-50 border border-red-200 p-4">
