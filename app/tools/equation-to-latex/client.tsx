@@ -32,7 +32,6 @@ import { useCopyToClipboard } from '@/hooks/use-copy-to-clipboard';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
 const PDFPreview = dynamic(() => import('@/components/PDFPreview'), { ssr: false });
-const KatexPreview = dynamic(() => import('@/components/KatexPreview'), { ssr: false });
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -54,7 +53,6 @@ ${equationContent}
 export default function EquationToLatexClient() {
   const [equationText, setEquationText] = useState<string>('');
   const [latexCode, setLatexCode] = useState<string>('');
-  const [rawEquation, setRawEquation] = useState<string>('');
   const [isProcessing, setIsProcessing] = useState(false);
   const [error, setError] = useState<string>('');
   const [activeTab, setActiveTab] = useState<'code' | 'preview'>('code');
@@ -103,7 +101,6 @@ export default function EquationToLatexClient() {
     setIsProcessing(true);
     setError('');
     setLatexCode('');
-    setRawEquation('');
 
     try {
       const response = await fetch('/api/equation-to-latex', {
@@ -130,7 +127,6 @@ export default function EquationToLatexClient() {
 
         const chunk = decoder.decode(value, { stream: true });
         accumulatedText += chunk;
-        setRawEquation(accumulatedText);
         setLatexCode(LATEX_TEMPLATE(accumulatedText));
       }
     } catch (err) {
@@ -478,22 +474,8 @@ export default function EquationToLatexClient() {
                             <p className="text-sm text-gray-600">Generating preview...</p>
                           </div>
                         </div>
-                      ) : rawEquation ? (
-                        <div className="h-full flex flex-col gap-4">
-                          {/* KaTeX Preview */}
-                          <div className="flex-1 bg-gray-50 rounded-lg p-6 flex items-center justify-center overflow-auto">
-                            <KatexPreview
-                              latex={rawEquation}
-                              displayMode={true}
-                              className="text-2xl"
-                            />
-                          </div>
-                          {previewUrl && (
-                            <div className="h-32 rounded-lg overflow-hidden border border-gray-200">
-                              <PDFPreview pdfUrl={previewUrl} />
-                            </div>
-                          )}
-                        </div>
+                      ) : previewUrl ? (
+                        <PDFPreview pdfUrl={previewUrl} />
                       ) : (
                         <div className="flex items-center justify-center h-full">
                           <p className="text-gray-400">Preview will appear here...</p>
