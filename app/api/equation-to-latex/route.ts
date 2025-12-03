@@ -29,6 +29,7 @@ export async function POST(request: NextRequest) {
         content: `You are a LaTeX equation generator. Your task is to convert mathematical descriptions or images into valid LaTeX code.
 
 Rules:
+- Write the code as a chat message NOT a code cell
 - Output ONLY valid LaTeX equations
 - Use display math mode with \\[ \\] for main equations
 - Use inline math mode with $ $ only when appropriate for inline expressions
