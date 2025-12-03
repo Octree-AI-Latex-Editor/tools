@@ -83,4 +83,11 @@ export const tools = [
     href: "/tools/latex-to-markdown",
     icon: "🔁",
   },
+  {
+    id: 15,
+    title: "Image to TikZ",
+    description: "Convert images to TikZ diagrams with AI",
+    href: "/tools/image-to-tikz",
+    icon: "🖼️",
+  },
 ];

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { Code2, Eye, Loader2, Download, ChevronDown, ArrowLeft, Upload } from 'lucide-react';
+import { Code2, Eye, Loader2, Download, ChevronDown, ArrowLeft, Upload, Copy, Check, X } from 'lucide-react';
 import { DM_Sans } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import { OctreeLogo } from '@/components/icons/octree-logo';
@@ -37,6 +37,25 @@ export default function ImageToTikz() {
   const [compileError, setCompileError] = useState<string>('');
   const [showCompileErrorModal, setShowCompileErrorModal] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(latexCode);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy:', err);
+    }
+  };
+
+  const clearImage = () => {
+    setImagePreview('');
+    setLatexCode('');
+    setPreviewUrl('');
+    setLastCompiledLatex('');
+    setError('');
+  };
 
   useEffect(() => {
     loader.init().then((monaco) => {
@@ -261,6 +280,13 @@ export default function ImageToTikz() {
                     alt="Uploaded diagram"
                     className="max-w-full max-h-full object-contain rounded-lg relative z-10"
                   />
+                  <button
+                    onClick={clearImage}
+                    className="absolute top-2 right-2 p-1.5 bg-white rounded-full shadow-md hover:bg-gray-100 transition-colors z-20"
+                    title="Remove image"
+                  >
+                    <X className="h-4 w-4 text-gray-600" />
+                  </button>
                 </div>
               ) : (
                 <>
@@ -381,8 +407,19 @@ export default function ImageToTikz() {
                           padding: { top: 8, bottom: 8 },
                         }}
                       />
+                      <button
+                        onClick={copyToClipboard}
+                        className="absolute top-2 right-2 p-2 bg-white border border-gray-200 rounded-md shadow-sm hover:bg-gray-50 transition-colors"
+                        title="Copy to clipboard"
+                      >
+                        {copied ? (
+                          <Check className="h-4 w-4 text-green-600" />
+                        ) : (
+                          <Copy className="h-4 w-4 text-gray-600" />
+                        )}
+                      </button>
                       {isProcessing && (
-                        <div className="absolute top-2 right-2 flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1.5 rounded-md text-sm shadow-sm">
+                        <div className="absolute top-2 right-12 flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1.5 rounded-md text-sm shadow-sm">
                           <Loader2 className="h-4 w-4 animate-spin" />
                           <div className="flex flex-col">
                             <span className="font-medium">Analyzing image...</span>
