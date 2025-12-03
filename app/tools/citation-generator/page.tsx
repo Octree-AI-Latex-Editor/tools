@@ -195,16 +195,15 @@ ${bibtex.replace(/@\w+\{[^,]+,/, '').replace(/}/g, '').split('\n').filter(line =
   return (
     <div className={cn("min-h-screen bg-gray-50", dmSans.className)}>
       <div className="mx-auto max-w-7xl px-6 py-12">
-        <div className="mb-8">
-          <Link href="/" className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
-            <ArrowLeft className="h-5 w-5" />
-            <span className="text-sm font-medium">Back to Tools</span>
-          </Link>
-        </div>
-
-        <div className="mb-12 text-center">
-          <h1 className="text-4xl font-light text-gray-900 mb-3">LaTeX Citation Generator</h1>
-          <p className="text-lg text-gray-600">Generate BibTeX citations from article details, DOIs, or URLs</p>
+        <div className="mb-12">
+          <div className="relative flex items-start justify-center mb-3">
+            <Link href="/" className="absolute left-0 inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
+              <ArrowLeft className="h-5 w-5" />
+              <span className="text-sm font-medium">Back to Tools</span>
+            </Link>
+            <h1 className="text-4xl font-light text-gray-900">LaTeX Citation Generator</h1>
+          </div>
+          <p className="text-lg text-gray-600 text-center">Generate BibTeX citations from article details, DOIs, or URLs</p>
         </div>
 
         <div className="grid grid-cols-2 gap-8">
