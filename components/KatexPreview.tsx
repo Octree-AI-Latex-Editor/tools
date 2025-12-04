@@ -9,7 +9,7 @@ interface KatexPreviewProps {
   className?: string;
 }
 
-function cleanLatex(latex: string): string {
+function cleanLatex(latex: string): string[] {
   let cleaned = latex;
 
   // Remove common document structure commands
@@ -31,7 +31,9 @@ function cleanLatex(latex: string): string {
     cleaned = cleaned.replace(pattern, '');
   }
 
-  // Extract content from display math delimiters
+  // Extract all content from display math delimiters
+  const equations: string[] = [];
+  
   const displayMathPatterns = [
     /\\\[([\s\S]*?)\\\]/g,
     /\$\$([\s\S]*?)\$\$/g,
@@ -42,19 +44,34 @@ function cleanLatex(latex: string): string {
   ];
 
   for (const pattern of displayMathPatterns) {
-    const match = pattern.exec(cleaned);
-    if (match && match[1]) {
-      return match[1].trim();
+    let match;
+    while ((match = pattern.exec(cleaned)) !== null) {
+      if (match[1]?.trim()) {
+        equations.push(match[1].trim());
+      }
     }
-    pattern.lastIndex = 0;
   }
 
-  const inlineMathMatch = /\$((?!\$)[\s\S]*?)\$/g.exec(cleaned);
-  if (inlineMathMatch && inlineMathMatch[1]) {
-    return inlineMathMatch[1].trim();
+  if (equations.length > 0) {
+    return equations;
   }
 
-  return cleaned.trim();
+  // Try inline math as fallback
+  const inlineMathPattern = /\$((?!\$)[\s\S]*?)\$/g;
+  let match;
+  while ((match = inlineMathPattern.exec(cleaned)) !== null) {
+    if (match[1]?.trim()) {
+      equations.push(match[1].trim());
+    }
+  }
+
+  if (equations.length > 0) {
+    return equations;
+  }
+
+  // Return the cleaned text as a single item if no math delimiters found
+  const trimmed = cleaned.trim();
+  return trimmed ? [trimmed] : [];
 }
 
 export default function KatexPreview({
@@ -62,37 +79,39 @@ export default function KatexPreview({
   displayMode = true,
   className = '',
 }: KatexPreviewProps) {
-  const { html, error } = useMemo(() => {
+  const { htmlParts, error } = useMemo(() => {
     if (!latex || !latex.trim()) {
-      return { html: '', error: null };
+      return { htmlParts: [], error: null };
     }
 
     try {
-      const cleanedLatex = cleanLatex(latex);
+      const equations = cleanLatex(latex);
       
-      if (!cleanedLatex) {
-        return { html: '', error: null };
+      if (equations.length === 0) {
+        return { htmlParts: [], error: null };
       }
 
-      const renderedHtml = katex.renderToString(cleanedLatex, {
-        displayMode,
-        throwOnError: false,
-        errorColor: '#ef4444',
-        trust: true,
-        strict: false,
-        macros: {
-          '\\R': '\\mathbb{R}',
-          '\\N': '\\mathbb{N}',
-          '\\Z': '\\mathbb{Z}',
-          '\\Q': '\\mathbb{Q}',
-          '\\C': '\\mathbb{C}',
-        },
-      });
+      const renderedParts = equations.map((eq) =>
+        katex.renderToString(eq, {
+          displayMode,
+          throwOnError: false,
+          errorColor: '#ef4444',
+          trust: true,
+          strict: false,
+          macros: {
+            '\\R': '\\mathbb{R}',
+            '\\N': '\\mathbb{N}',
+            '\\Z': '\\mathbb{Z}',
+            '\\Q': '\\mathbb{Q}',
+            '\\C': '\\mathbb{C}',
+          },
+        })
+      );
 
-      return { html: renderedHtml, error: null };
+      return { htmlParts: renderedParts, error: null };
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Failed to render LaTeX';
-      return { html: '', error: errorMessage };
+      return { htmlParts: [], error: errorMessage };
     }
   }, [latex, displayMode]);
 
@@ -108,7 +127,7 @@ export default function KatexPreview({
     );
   }
 
-  if (!html) {
+  if (htmlParts.length === 0) {
     return (
       <div className={`flex items-center justify-center h-full ${className}`}>
         <p className="text-gray-400">Enter an equation to see the preview</p>
@@ -118,8 +137,16 @@ export default function KatexPreview({
 
   return (
     <div
-      className={`katex-preview overflow-auto ${className}`}
-      dangerouslySetInnerHTML={{ __html: html }}
-    />
+      className={`katex-preview overflow-auto text-gray-900 ${className}`}
+      style={{ color: '#111827' }}
+    >
+      {htmlParts.map((html, index) => (
+        <div
+          key={index}
+          className="my-4 first:mt-0 last:mb-0"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
+      ))}
+    </div>
   );
 }

@@ -31,7 +31,7 @@ import { useImageUpload } from '@/hooks/use-image-upload';
 import { useCopyToClipboard } from '@/hooks/use-copy-to-clipboard';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
-const PDFPreview = dynamic(() => import('@/components/PDFPreview'), { ssr: false });
+const KatexPreview = dynamic(() => import('@/components/KatexPreview'), { ssr: false });
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -56,12 +56,10 @@ export default function EquationToLatexClient() {
   const [isProcessing, setIsProcessing] = useState(false);
   const [error, setError] = useState<string>('');
   const [activeTab, setActiveTab] = useState<'code' | 'preview'>('code');
-  const [previewUrl, setPreviewUrl] = useState<string>('');
-  const [isCompiling, setIsCompiling] = useState(false);
-  const [lastCompiledLatex, setLastCompiledLatex] = useState<string>('');
   const [showExportMenu, setShowExportMenu] = useState(false);
   const [compileError, setCompileError] = useState<string>('');
   const [showCompileErrorModal, setShowCompileErrorModal] = useState(false);
+  const [isExporting, setIsExporting] = useState(false);
 
   const {
     imageData,
@@ -137,16 +135,29 @@ export default function EquationToLatexClient() {
     }
   }, [equationText, imageData]);
 
-  const compileLatex = useCallback(async (latex: string) => {
-    if (lastCompiledLatex === latex && previewUrl) return;
 
-    setIsCompiling(true);
+
+  const exportAsLatex = () => {
+    const blob = new Blob([latexCode], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'equation.tex';
+    a.click();
+    URL.revokeObjectURL(url);
+    setShowExportMenu(false);
+  };
+
+  const exportAsPDF = async () => {
+    if (!latexCode) return;
+
+    setIsExporting(true);
     setCompileError('');
     try {
       const response = await fetch('/api/compile', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ latex }),
+        body: JSON.stringify({ latex: latexCode }),
       });
 
       if (!response.ok) {
@@ -163,61 +174,36 @@ export default function EquationToLatexClient() {
       }
 
       const data = await response.json();
-      setPreviewUrl(data.previewUrl || data.pdfUrl || '');
-      setLastCompiledLatex(latex);
+      const pdfUrl = data.previewUrl || data.pdfUrl || '';
+      
+      if (!pdfUrl) {
+        throw new Error('No PDF URL returned');
+      }
+
+      const base64Data = pdfUrl.split(',')[1];
+      const binaryData = atob(base64Data);
+      const bytes = new Uint8Array(binaryData.length);
+      for (let i = 0; i < binaryData.length; i++) {
+        bytes[i] = binaryData.charCodeAt(i);
+      }
+
+      const blob = new Blob([bytes], { type: 'application/pdf' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'equation.pdf';
+      a.click();
+      URL.revokeObjectURL(url);
     } catch (err) {
-      console.error('Compilation error:', err);
-      setPreviewUrl('');
-      setLastCompiledLatex('');
+      console.error('Export error:', err);
       const fallbackMessage =
-        err instanceof Error ? err.message : 'Failed to compile LaTeX.';
+        err instanceof Error ? err.message : 'Failed to export PDF.';
       setCompileError(fallbackMessage);
       setShowCompileErrorModal(true);
     } finally {
-      setIsCompiling(false);
+      setIsExporting(false);
+      setShowExportMenu(false);
     }
-  }, [lastCompiledLatex, previewUrl]);
-
-  useEffect(() => {
-    if (latexCode && activeTab === 'preview' && !isProcessing) {
-      compileLatex(latexCode);
-    }
-  }, [latexCode, activeTab, isProcessing, compileLatex]);
-
-  const exportAsLatex = () => {
-    const blob = new Blob([latexCode], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'equation.tex';
-    a.click();
-    URL.revokeObjectURL(url);
-    setShowExportMenu(false);
-  };
-
-  const exportAsPDF = async () => {
-    if (!previewUrl) {
-      // Compile first if not already done
-      await compileLatex(latexCode);
-    }
-    
-    if (!previewUrl) return;
-
-    const base64Data = previewUrl.split(',')[1];
-    const binaryData = atob(base64Data);
-    const bytes = new Uint8Array(binaryData.length);
-    for (let i = 0; i < binaryData.length; i++) {
-      bytes[i] = binaryData.charCodeAt(i);
-    }
-
-    const blob = new Blob([bytes], { type: 'application/pdf' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'equation.pdf';
-    a.click();
-    URL.revokeObjectURL(url);
-    setShowExportMenu(false);
   };
 
   const displayError = error || imageError;
@@ -393,29 +379,20 @@ export default function EquationToLatexClient() {
                     Code
                   </button>
                   <button
-                    onClick={(e) => {
-                      if (isCompiling || isProcessing) {
-                        e.preventDefault();
-                        return;
-                      }
-                      setActiveTab('preview');
-                    }}
-                    disabled={isCompiling || isProcessing}
+                    onClick={() => setActiveTab('preview')}
+                    disabled={isProcessing}
                     className={cn(
                       'flex items-center gap-2 px-4 py-2.5 text-sm font-medium border-b-2 transition-colors',
                       activeTab === 'preview'
                         ? 'border-blue-600 text-gray-900 bg-blue-50'
                         : 'border-transparent text-gray-500 hover:text-gray-700',
-                      (isCompiling || isProcessing) && 'opacity-50 cursor-not-allowed'
+                      isProcessing && 'opacity-50 cursor-not-allowed'
                     )}
                   >
                     <Eye className="h-4 w-4" />
                     Preview
                     {isProcessing && (
                       <span className="text-xs text-gray-400">(Generating...)</span>
-                    )}
-                    {!isProcessing && isCompiling && (
-                      <span className="text-xs text-gray-400">(Compiling...)</span>
                     )}
                   </button>
                 </div>
@@ -466,21 +443,12 @@ export default function EquationToLatexClient() {
                       )}
                     </div>
                   ) : (
-                    <div className="flex-1 overflow-hidden rounded-lg">
-                      {isCompiling ? (
-                        <div className="flex items-center justify-center h-full">
-                          <div className="text-center">
-                            <Loader2 className="mx-auto h-8 w-8 text-blue-500 animate-spin mb-2" />
-                            <p className="text-sm text-gray-600">Generating preview...</p>
-                          </div>
-                        </div>
-                      ) : previewUrl ? (
-                        <PDFPreview pdfUrl={previewUrl} />
-                      ) : (
-                        <div className="flex items-center justify-center h-full">
-                          <p className="text-gray-400">Preview will appear here...</p>
-                        </div>
-                      )}
+                    <div className="flex-1 min-h-0 rounded-lg bg-white border border-gray-100">
+                      <KatexPreview
+                        latex={latexCode}
+                        displayMode={true}
+                        className="p-6 text-2xl text-gray-900 h-full w-full"
+                      />
                     </div>
                   )
                 ) : (
@@ -528,9 +496,17 @@ export default function EquationToLatexClient() {
                       </button>
                       <button
                         onClick={exportAsPDF}
-                        className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
+                        disabled={isExporting}
+                        className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors disabled:opacity-50 flex items-center gap-2"
                       >
-                        Export as PDF
+                        {isExporting ? (
+                          <>
+                            <Loader2 className="h-3 w-3 animate-spin" />
+                            Compiling...
+                          </>
+                        ) : (
+                          'Export as PDF'
+                        )}
                       </button>
                     </div>
                   )}
