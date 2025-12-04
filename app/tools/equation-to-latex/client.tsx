@@ -246,17 +246,29 @@ export default function EquationToLatexClient() {
               </p>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-xl mb-4 overflow-hidden">
+            <div className={cn(
+              "bg-white border border-gray-200 rounded-xl mb-4 overflow-hidden transition-opacity",
+              imageData && "opacity-50"
+            )}>
               <textarea
                 value={equationText}
                 onChange={(e) => setEquationText(e.target.value)}
-                placeholder="Example: quadratic formula, integral of x squared from 0 to 1, sum of n from 1 to infinity of 1 over n squared..."
-                className="w-full h-32 p-4 resize-none focus:outline-none text-gray-900 placeholder:text-gray-400 text-sm"
-                disabled={isProcessing}
+                placeholder={imageData 
+                  ? "Text input disabled while image is uploaded" 
+                  : "Example: quadratic formula, integral of x squared from 0 to 1, sum of n from 1 to infinity of 1 over n squared..."}
+                className={cn(
+                  "w-full h-32 p-4 resize-none focus:outline-none text-gray-900 placeholder:text-gray-400 text-sm",
+                  imageData && "cursor-not-allowed bg-gray-50"
+                )}
+                disabled={isProcessing || !!imageData}
                 maxLength={2000}
               />
               <div className="px-4 py-2 border-t border-gray-100 text-xs text-gray-400 text-right">
-                {equationText.length}/2000
+                {imageData ? (
+                  <span className="text-orange-600">Image uploaded, text input disabled</span>
+                ) : (
+                  `${equationText.length}/2000`
+                )}
               </div>
             </div>
 
