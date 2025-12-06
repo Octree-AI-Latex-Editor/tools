@@ -91,7 +91,7 @@ export const tools = [
     icon: "🔁",
   },
   {
-    id: 14,
+    id: 15,
     title: "Equation to LaTeX",
     description: "Convert math equations from text or images to LaTeX",
     href: "/tools/equation-to-latex",
