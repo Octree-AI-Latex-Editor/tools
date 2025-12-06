@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import { Search, ExternalLink } from "lucide-react";
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { templates, templateCategories, type TemplateCategory } from "@/lib/templates";
 import { openInOctree } from "@/lib/open-in-octree";
 import { OctreeLogo } from "@/components/icons/octree-logo";
@@ -111,16 +112,17 @@ export default function TemplatesPage() {
               Professional LaTeX templates for academic papers, presentations, resumes, and more.
             </p>
 
-            <div className="flex items-center justify-center gap-1 mb-8">
-              <Link
-                href="/"
-                className="px-6 py-2.5 text-sm font-medium rounded-lg bg-white text-gray-600 hover:bg-gray-100 border border-gray-200 transition-colors"
-              >
-                Tools
-              </Link>
-              <div className="px-6 py-2.5 text-sm font-medium rounded-lg bg-gray-900 text-white">
-                Templates
-              </div>
+            <div className="flex items-center justify-center mb-8">
+              <Tabs defaultValue="templates" className="w-auto">
+                <TabsList>
+                  <TabsTrigger value="tools" asChild>
+                    <Link href="/">Tools</Link>
+                  </TabsTrigger>
+                  <TabsTrigger value="templates" asChild>
+                    <Link href="/templates">Templates</Link>
+                  </TabsTrigger>
+                </TabsList>
+              </Tabs>
             </div>
 
             <div className="max-w-xl mx-auto">

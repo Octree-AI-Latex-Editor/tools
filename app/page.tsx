@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Search, ArrowRight } from "lucide-react";
 import { tools } from "@/lib/tools";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { RedditIcon } from "@/components/icons/reddit";
 import { DiscordIcon } from "@/components/icons/discord";
 import { GitHubIcon } from "@/components/icons/github";
@@ -59,16 +60,17 @@ export default function Home() {
             citations, and explore professional templates.
           </p>
 
-          <div className="flex items-center justify-center gap-1 mb-8">
-            <div className="px-6 py-2.5 text-sm font-medium rounded-lg bg-gray-900 text-white">
-              Tools
-            </div>
-            <Link
-              href="/templates"
-              className="px-6 py-2.5 text-sm font-medium rounded-lg bg-white text-gray-600 hover:bg-gray-100 border border-gray-200 transition-colors"
-            >
-              Templates
-            </Link>
+          <div className="flex items-center justify-center mb-8">
+            <Tabs defaultValue="tools" className="w-auto">
+              <TabsList>
+                <TabsTrigger value="tools" asChild>
+                  <Link href="/">Tools</Link>
+                </TabsTrigger>
+                <TabsTrigger value="templates" asChild>
+                  <Link href="/templates">Templates</Link>
+                </TabsTrigger>
+              </TabsList>
+            </Tabs>
           </div>
 
           <div className="max-w-xl mx-auto">
