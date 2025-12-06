@@ -5,18 +5,39 @@ import { useState } from "react";
 import { Search, ArrowRight } from "lucide-react";
 import { tools } from "@/lib/tools";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
 import { RedditIcon } from "@/components/icons/reddit";
 import { DiscordIcon } from "@/components/icons/discord";
 import { GitHubIcon } from "@/components/icons/github";
 
+const ITEMS_PER_PAGE = 10;
+
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
 
   const filteredTools = tools.filter(
     (tool) =>
       tool.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       tool.description.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+  const totalPages = Math.ceil(filteredTools.length / ITEMS_PER_PAGE);
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const endIndex = startIndex + ITEMS_PER_PAGE;
+  const paginatedTools = filteredTools.slice(startIndex, endIndex);
+
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(e.target.value);
+    setCurrentPage(1);
+  };
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -81,7 +102,7 @@ export default function Home() {
               <input
                 type="text"
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={handleSearchChange}
                 className="block w-full pl-11 pr-4 py-3 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm"
                 placeholder="Search tools..."
               />
@@ -92,7 +113,7 @@ export default function Home() {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredTools.map((tool) => (
+          {paginatedTools.map((tool) => (
             <Link
               key={tool.id}
               href={tool.href}
@@ -123,6 +144,38 @@ export default function Home() {
         {filteredTools.length === 0 && (
           <div className="text-center py-12">
             <p className="text-gray-500">No tools found matching your search.</p>
+          </div>
+        )}
+
+        {filteredTools.length > 0 && totalPages > 1 && (
+          <div className="mt-12 flex justify-center">
+            <Pagination>
+              <PaginationContent>
+                <PaginationItem>
+                  <PaginationPrevious
+                    onClick={() => currentPage > 1 && setCurrentPage(currentPage - 1)}
+                    className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                  />
+                </PaginationItem>
+                {[...Array(totalPages)].map((_, i) => (
+                  <PaginationItem key={i + 1}>
+                    <PaginationLink
+                      onClick={() => setCurrentPage(i + 1)}
+                      isActive={currentPage === i + 1}
+                      className="cursor-pointer"
+                    >
+                      {i + 1}
+                    </PaginationLink>
+                  </PaginationItem>
+                ))}
+                <PaginationItem>
+                  <PaginationNext
+                    onClick={() => currentPage < totalPages && setCurrentPage(currentPage + 1)}
+                    className={currentPage === totalPages ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                  />
+                </PaginationItem>
+              </PaginationContent>
+            </Pagination>
           </div>
         )}
       </div>

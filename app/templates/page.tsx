@@ -5,6 +5,14 @@ import { Search, ExternalLink } from "lucide-react";
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
 import { templates, templateCategories, type TemplateCategory } from "@/lib/templates";
 import { openInOctree } from "@/lib/open-in-octree";
 import { OctreeLogo } from "@/components/icons/octree-logo";
@@ -14,11 +22,14 @@ import { GitHubIcon } from "@/components/icons/github";
 
 const PDFPreview = dynamic(() => import("@/components/PDFPreview"), { ssr: false });
 
+const ITEMS_PER_PAGE = 10;
+
 type CategoryFilter = TemplateCategory | "All Templates";
 
 export default function TemplatesPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<CategoryFilter>("All Templates");
+  const [currentPage, setCurrentPage] = useState(1);
 
   const filteredTemplates = useMemo(() => {
     return templates.filter((template) => {
@@ -30,6 +41,21 @@ export default function TemplatesPage() {
       return matchesSearch && matchesCategory;
     });
   }, [searchQuery, selectedCategory]);
+
+  const totalPages = Math.ceil(filteredTemplates.length / ITEMS_PER_PAGE);
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const endIndex = startIndex + ITEMS_PER_PAGE;
+  const paginatedTemplates = filteredTemplates.slice(startIndex, endIndex);
+
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(e.target.value);
+    setCurrentPage(1);
+  };
+
+  const handleCategoryChange = (category: CategoryFilter) => {
+    setSelectedCategory(category);
+    setCurrentPage(1);
+  };
 
   const categoryCounts = useMemo(() => {
     const counts: Record<string, number> = { "All Templates": templates.length };
@@ -133,7 +159,7 @@ export default function TemplatesPage() {
                 <input
                   type="text"
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={handleSearchChange}
                   className="block w-full pl-11 pr-4 py-3 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm"
                   placeholder="Search templates..."
                 />
@@ -156,7 +182,7 @@ export default function TemplatesPage() {
                     return (
                       <button
                         key={cat.name}
-                        onClick={() => setSelectedCategory(cat.name)}
+                        onClick={() => handleCategoryChange(cat.name)}
                         className={`w-full flex items-center justify-between px-3 py-2 text-sm rounded-lg transition-colors ${
                           isActive
                             ? "bg-gray-100 text-gray-900 font-medium"
@@ -185,7 +211,7 @@ export default function TemplatesPage() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                {filteredTemplates.map((template) => (
+                {paginatedTemplates.map((template) => (
                   <div
                     key={template.id}
                     className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:border-gray-300 hover:shadow-md transition-all duration-200 flex flex-col"
@@ -235,6 +261,38 @@ export default function TemplatesPage() {
               {filteredTemplates.length === 0 && (
                 <div className="text-center py-12">
                   <p className="text-gray-500">No templates found matching your search.</p>
+                </div>
+              )}
+
+              {filteredTemplates.length > 0 && totalPages > 1 && (
+                <div className="mt-12 flex justify-center">
+                  <Pagination>
+                    <PaginationContent>
+                      <PaginationItem>
+                        <PaginationPrevious
+                          onClick={() => currentPage > 1 && setCurrentPage(currentPage - 1)}
+                          className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                        />
+                      </PaginationItem>
+                      {[...Array(totalPages)].map((_, i) => (
+                        <PaginationItem key={i + 1}>
+                          <PaginationLink
+                            onClick={() => setCurrentPage(i + 1)}
+                            isActive={currentPage === i + 1}
+                            className="cursor-pointer"
+                          >
+                            {i + 1}
+                          </PaginationLink>
+                        </PaginationItem>
+                      ))}
+                      <PaginationItem>
+                        <PaginationNext
+                          onClick={() => currentPage < totalPages && setCurrentPage(currentPage + 1)}
+                          className={currentPage === totalPages ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                        />
+                      </PaginationItem>
+                    </PaginationContent>
+                  </Pagination>
                 </div>
               )}
             </div>
