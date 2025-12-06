@@ -90,4 +90,11 @@ export const tools = [
     href: "/tools/latex-to-markdown",
     icon: "🔁",
   },
+  {
+    id: 14,
+    title: "Equation to LaTeX",
+    description: "Convert math equations from text or images to LaTeX",
+    href: "/tools/equation-to-latex",
+    icon: "🔢",
+  },
 ];
