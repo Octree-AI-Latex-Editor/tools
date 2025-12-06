@@ -98,7 +98,7 @@ export default function TemplatePage({
                       source: "tools:templates",
                     })
                   }
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-gray-700 text-sm font-medium rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors"
                 >
                   <OctreeLogo className="h-4 w-4" />
                   Open as Template
