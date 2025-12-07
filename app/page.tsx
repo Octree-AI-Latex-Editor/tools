@@ -133,9 +133,9 @@ export default function Home() {
               <p className="text-sm text-gray-500 mb-4 line-clamp-2 flex-grow">
                 {tool.description}
               </p>
-              <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-gradient-to-b from-[#6B9FFF] to-[#478eff] text-white text-sm font-medium group-hover:from-[#5A8FEE] group-hover:to-[#3a7ae0] transition-all w-fit">
+              <span className="inline-flex items-center text-blue-600 text-sm font-medium transition-all w-fit">
                 Try Now
-                <span className="max-w-0 overflow-hidden transition-all duration-200 group-hover:max-w-6 group-hover:ml-1">
+                <span className="w-0 overflow-hidden transition-all duration-200 group-hover:w-6 group-hover:ml-1">
                   <ArrowRight className="size-4 opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
                 </span>
               </span>
@@ -145,7 +145,9 @@ export default function Home() {
 
         {filteredTools.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-gray-500">No tools found matching your search.</p>
+            <p className="text-gray-500">
+              No tools found matching your search.
+            </p>
           </div>
         )}
 
@@ -155,8 +157,14 @@ export default function Home() {
               <PaginationContent>
                 <PaginationItem>
                   <PaginationPrevious
-                    onClick={() => currentPage > 1 && setCurrentPage(currentPage - 1)}
-                    className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                    onClick={() =>
+                      currentPage > 1 && setCurrentPage(currentPage - 1)
+                    }
+                    className={
+                      currentPage === 1
+                        ? "pointer-events-none opacity-50"
+                        : "cursor-pointer"
+                    }
                   />
                 </PaginationItem>
                 {[...Array(totalPages)].map((_, i) => (
@@ -172,8 +180,15 @@ export default function Home() {
                 ))}
                 <PaginationItem>
                   <PaginationNext
-                    onClick={() => currentPage < totalPages && setCurrentPage(currentPage + 1)}
-                    className={currentPage === totalPages ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                    onClick={() =>
+                      currentPage < totalPages &&
+                      setCurrentPage(currentPage + 1)
+                    }
+                    className={
+                      currentPage === totalPages
+                        ? "pointer-events-none opacity-50"
+                        : "cursor-pointer"
+                    }
                   />
                 </PaginationItem>
               </PaginationContent>

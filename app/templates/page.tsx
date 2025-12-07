@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
 import { useState, useMemo } from "react";
 import { Search, ExternalLink } from "lucide-react";
-import dynamic from 'next/dynamic';
-import Link from 'next/link';
+import dynamic from "next/dynamic";
+import Link from "next/link";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Pagination,
@@ -13,14 +13,20 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-import { templates, templateCategories, type TemplateCategory } from "@/lib/templates";
+import {
+  templates,
+  templateCategories,
+  type TemplateCategory,
+} from "@/lib/templates";
 import { openInOctree } from "@/lib/open-in-octree";
 import { OctreeLogo } from "@/components/icons/octree-logo";
 import { RedditIcon } from "@/components/icons/reddit";
 import { DiscordIcon } from "@/components/icons/discord";
 import { GitHubIcon } from "@/components/icons/github";
 
-const PDFPreview = dynamic(() => import("@/components/PDFPreview"), { ssr: false });
+const PDFPreview = dynamic(() => import("@/components/PDFPreview"), {
+  ssr: false,
+});
 
 const ITEMS_PER_PAGE = 10;
 
@@ -28,7 +34,8 @@ type CategoryFilter = TemplateCategory | "All Templates";
 
 export default function TemplatesPage() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState<CategoryFilter>("All Templates");
+  const [selectedCategory, setSelectedCategory] =
+    useState<CategoryFilter>("All Templates");
   const [currentPage, setCurrentPage] = useState(1);
 
   const filteredTemplates = useMemo(() => {
@@ -37,7 +44,8 @@ export default function TemplatesPage() {
         template.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         template.description.toLowerCase().includes(searchQuery.toLowerCase());
       const matchesCategory =
-        selectedCategory === "All Templates" || template.category === selectedCategory;
+        selectedCategory === "All Templates" ||
+        template.category === selectedCategory;
       return matchesSearch && matchesCategory;
     });
   }, [searchQuery, selectedCategory]);
@@ -58,7 +66,9 @@ export default function TemplatesPage() {
   };
 
   const categoryCounts = useMemo(() => {
-    const counts: Record<string, number> = { "All Templates": templates.length };
+    const counts: Record<string, number> = {
+      "All Templates": templates.length,
+    };
     templates.forEach((template) => {
       counts[template.category] = (counts[template.category] || 0) + 1;
     });
@@ -68,27 +78,28 @@ export default function TemplatesPage() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "Free LaTeX Templates",
-    "description": "Professional LaTeX templates for research papers, presentations, CVs, and more",
-    "url": "https://tools.useoctree.com/templates",
-    "mainEntity": {
+    name: "Free LaTeX Templates",
+    description:
+      "Professional LaTeX templates for research papers, presentations, CVs, and more",
+    url: "https://tools.useoctree.com/templates",
+    mainEntity: {
       "@type": "ItemList",
-      "itemListElement": templates.map((template, index) => ({
+      itemListElement: templates.map((template, index) => ({
         "@type": "ListItem",
-        "position": index + 1,
-        "item": {
+        position: index + 1,
+        item: {
           "@type": "SoftwareSourceCode",
-          "name": template.title,
-          "description": template.description,
-          "codeSampleType": "full",
-          "programmingLanguage": "LaTeX",
-          "author": {
+          name: template.title,
+          description: template.description,
+          codeSampleType: "full",
+          programmingLanguage: "LaTeX",
+          author: {
             "@type": "Organization",
-            "name": "Octree"
-          }
-        }
-      }))
-    }
+            name: "Octree",
+          },
+        },
+      })),
+    },
   };
 
   return (
@@ -97,7 +108,7 @@ export default function TemplatesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
+
       <div className="min-h-screen bg-gray-50">
         <div className="bg-gradient-to-b from-gray-100 to-gray-50 pt-16 pb-12">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -135,7 +146,8 @@ export default function TemplatesPage() {
               Free LaTeX Tools & Templates
             </h1>
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              Professional LaTeX templates for academic papers, presentations, resumes, and more.
+              Professional LaTeX templates for academic papers, presentations,
+              resumes, and more.
             </p>
 
             <div className="flex items-center justify-center mb-8">
@@ -190,7 +202,11 @@ export default function TemplatesPage() {
                         }`}
                       >
                         <span>{cat.name}</span>
-                        <span className={`text-xs ${isActive ? "text-gray-700" : "text-gray-400"}`}>
+                        <span
+                          className={`text-xs ${
+                            isActive ? "text-gray-700" : "text-gray-400"
+                          }`}
+                        >
                           ({count})
                         </span>
                       </button>
@@ -203,10 +219,13 @@ export default function TemplatesPage() {
             <div className="flex-1 min-w-0">
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-lg font-semibold text-gray-900">
-                  {selectedCategory === "All Templates" ? "All Templates" : selectedCategory}
+                  {selectedCategory === "All Templates"
+                    ? "All Templates"
+                    : selectedCategory}
                 </h2>
                 <span className="text-sm text-gray-500">
-                  {filteredTemplates.length} template{filteredTemplates.length !== 1 ? "s" : ""}
+                  {filteredTemplates.length} template
+                  {filteredTemplates.length !== 1 ? "s" : ""}
                 </span>
               </div>
 
@@ -236,7 +255,6 @@ export default function TemplatesPage() {
                           href={`/templates/${template.slug}`}
                           className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 bg-white text-gray-700 text-sm font-medium rounded-lg border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-colors"
                         >
-                          <ExternalLink className="h-3.5 w-3.5" />
                           View
                         </Link>
                         <button
@@ -244,12 +262,12 @@ export default function TemplatesPage() {
                             openInOctree({
                               latex: template.code,
                               title: template.title,
-                              source: 'tools:templates',
+                              source: "tools:templates",
                             });
                           }}
-                          className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 bg-white text-gray-700 text-sm font-medium rounded-lg border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-colors"
+                          className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 bg-white text-gray-700 text-sm font-medium rounded-lg border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-colors cursor-pointer"
                         >
-                          <OctreeLogo className="h-3.5 w-3.5" />
+                          <OctreeLogo className="h-4 w-4" />
                           Open
                         </button>
                       </div>
@@ -260,7 +278,9 @@ export default function TemplatesPage() {
 
               {filteredTemplates.length === 0 && (
                 <div className="text-center py-12">
-                  <p className="text-gray-500">No templates found matching your search.</p>
+                  <p className="text-gray-500">
+                    No templates found matching your search.
+                  </p>
                 </div>
               )}
 
@@ -270,8 +290,14 @@ export default function TemplatesPage() {
                     <PaginationContent>
                       <PaginationItem>
                         <PaginationPrevious
-                          onClick={() => currentPage > 1 && setCurrentPage(currentPage - 1)}
-                          className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                          onClick={() =>
+                            currentPage > 1 && setCurrentPage(currentPage - 1)
+                          }
+                          className={
+                            currentPage === 1
+                              ? "pointer-events-none opacity-50"
+                              : "cursor-pointer"
+                          }
                         />
                       </PaginationItem>
                       {[...Array(totalPages)].map((_, i) => (
@@ -287,8 +313,15 @@ export default function TemplatesPage() {
                       ))}
                       <PaginationItem>
                         <PaginationNext
-                          onClick={() => currentPage < totalPages && setCurrentPage(currentPage + 1)}
-                          className={currentPage === totalPages ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                          onClick={() =>
+                            currentPage < totalPages &&
+                            setCurrentPage(currentPage + 1)
+                          }
+                          className={
+                            currentPage === totalPages
+                              ? "pointer-events-none opacity-50"
+                              : "cursor-pointer"
+                          }
                         />
                       </PaginationItem>
                     </PaginationContent>
