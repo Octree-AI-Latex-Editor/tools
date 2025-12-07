@@ -117,10 +117,10 @@ export default function Home() {
             <Link
               key={tool.id}
               href={tool.href}
-              className="group bg-white border border-gray-200 rounded-xl p-6 hover:shadow-md hover:border-gray-300 transition-all duration-200"
+              className="group flex flex-col bg-white border border-gray-200 rounded-xl p-6 hover:shadow-md hover:border-gray-300 transition-all duration-200 h-full"
             >
               <div className="flex items-start justify-between mb-4">
-                <div className="text-2xl">{tool.icon}</div>
+                <tool.icon className="size-6 text-gray-900" />
                 {tool.badge && (
                   <span className="text-xs font-medium px-2 py-1 rounded bg-blue-100 text-blue-700 border border-blue-200">
                     {tool.badge}
@@ -130,13 +130,15 @@ export default function Home() {
               <h3 className="text-base font-semibold text-gray-900 mb-2">
                 {tool.title}
               </h3>
-              <p className="text-sm text-gray-500 mb-4 line-clamp-2">
+              <p className="text-sm text-gray-500 mb-4 line-clamp-2 flex-grow">
                 {tool.description}
               </p>
-              <div className="flex items-center text-sm font-medium text-blue-600 group-hover:text-blue-700">
+              <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-gradient-to-b from-[#6B9FFF] to-[#478eff] text-white text-sm font-medium group-hover:from-[#5A8FEE] group-hover:to-[#3a7ae0] transition-all w-fit">
                 Try Now
-                <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </div>
+                <span className="max-w-0 overflow-hidden transition-all duration-200 group-hover:max-w-6 group-hover:ml-1">
+                  <ArrowRight className="size-4 opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
+                </span>
+              </span>
             </Link>
           ))}
         </div>
