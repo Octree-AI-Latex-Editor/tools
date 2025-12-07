@@ -16,18 +16,25 @@ export const tools: Tool[] = [
     icon: "🖼️",
   },
   {
-    id: 3,
+    id: 2,
     title: "Excel to LaTeX",
     description: "Convert CSV, JSON, Excel to LaTeX tables",
     href: "/tools/table-to-latex",
     icon: "📊",
   },
   {
-    id: 4,
+    id: 3,
     title: "TikZ Generator",
     description: "Generate TikZ diagrams with AI",
     href: "/tools/tikz-generator",
     icon: "🎨",
+  },
+  {
+    id: 4,
+    title: "Image to TikZ",
+    description: "Convert images to TikZ diagrams with AI",
+    href: "/tools/image-to-tikz",
+    icon: "📐",
   },
   {
     id: 5,
@@ -91,5 +98,19 @@ export const tools: Tool[] = [
     description: "Convert LaTeX documents or snippets to Markdown",
     href: "/tools/latex-to-markdown",
     icon: "🔁",
+  },
+  {
+    id: 14,
+    title: "Equation to LaTeX",
+    description: "Convert math equations from text or images to LaTeX",
+    href: "/tools/equation-to-latex",
+    icon: "🔢",
+  },
+  {
+    id: 15,
+    title: "ArXiv to LaTeX",
+    description: "Import arXiv papers directly into Octree",
+    href: "/tools/arxiv-to-latex",
+    icon: "📄",
   },
 ];
