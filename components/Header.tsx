@@ -2,7 +2,6 @@ import Link from "next/link";
 import { OctreeLogo } from '@/components/icons/octree-logo';
 import { DM_Sans } from 'next/font/google';
 import { cn } from '@/lib/utils';
-import { UserDropdown } from '@/components/user-dropdown';
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -15,7 +14,7 @@ export default function Header() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex h-14 items-center justify-between">
           <div className="flex items-center">
-            <Link href="https://app.useoctree.com" className="flex items-center space-x-2">
+            <Link href="https://tools.useoctree.com" className="flex items-center space-x-2">
               <OctreeLogo className="h-7 w-7" />
               <span
                 className={cn(
@@ -26,9 +25,6 @@ export default function Header() {
                 Octree
               </span>
             </Link>
-          </div>
-          <div className="flex items-center">
-            <UserDropdown />
           </div>
         </div>
       </div>
