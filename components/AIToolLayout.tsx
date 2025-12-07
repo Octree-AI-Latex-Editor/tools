@@ -364,21 +364,19 @@ export default function AIToolLayout({
     <>
       <div className={cn("min-h-screen bg-gray-50", dmSans.className)}>
         <div className="mx-auto max-w-7xl px-6 py-12">
-          {/* Back Button */}
-          <div className="mb-8">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
-            >
-              <ArrowLeft className="h-5 w-5" />
-              <span className="text-sm font-medium">Back to Tools</span>
-            </Link>
-          </div>
-
-          {/* Header */}
-          <div className="mb-12 text-center">
-            <h1 className="text-4xl font-light text-gray-900 mb-3">{title}</h1>
-            <p className="text-lg text-gray-600">{description}</p>
+          {/* Header with Back Button and Title */}
+          <div className="mb-12">
+            <div className="relative flex items-start justify-center mb-3">
+              <Link
+                href="/"
+                className="absolute left-0 inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                <ArrowLeft className="h-5 w-5" />
+                <span className="text-sm font-medium">Back to Tools</span>
+              </Link>
+              <h1 className="text-4xl font-light text-gray-900">{title}</h1>
+            </div>
+            <p className="text-lg text-gray-600 text-center">{description}</p>
           </div>
 
           {/* Main Grid - Fixed 2 columns, no responsive breakpoints */}

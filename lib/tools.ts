@@ -1,4 +1,13 @@
-export const tools = [
+export interface Tool {
+  id: number;
+  title: string;
+  description: string;
+  href: string;
+  icon: string;
+  badge?: string;
+}
+
+export const tools: Tool[] = [
   {
     id: 1,
     title: "Image to LaTeX",

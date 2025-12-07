@@ -1,25 +1,42 @@
 "use client";
 
-import { use, useState, useEffect, useCallback } from "react";
-import { ArrowLeft, Loader2 } from "lucide-react";
+import { use, useState, useEffect } from "react";
+import { ArrowLeft, Code, FileText } from "lucide-react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { templates } from "@/lib/templates";
 import { openInOctree } from "@/lib/open-in-octree";
 import { OctreeLogo } from "@/components/icons/octree-logo";
-import { getTemplateContent } from "@/lib/template-content";
 import { getTemplateJsonLd } from "@/lib/json-ld";
-import { Editor } from "@monaco-editor/react";
-import loader from "@monaco-editor/loader";
-import {
-  latexLanguageConfiguration,
-  latexTokenProvider,
-  registerLatexCompletions,
-} from "@/lib/editor-config";
 
 const PDFPreview = dynamic(() => import("@/components/PDFPreview"), {
   ssr: false,
 });
+
+const abstracts: Record<string, string> = {
+  "research-paper": "IEEE-style research paper template with two-column layout, abstract section, and bibliography support. Perfect for conference and journal submissions.",
+  "beamer-presentation": "Professional Beamer presentation template with Madrid theme. Includes title slide, table of contents, and section formatting for academic presentations.",
+  "academic-cv": "Comprehensive academic curriculum vitae template with sections for education, publications, research experience, teaching, and awards.",
+  "resume": "Modern one-page resume template with clean formatting. Ideal for job applications in tech, engineering, and professional fields.",
+  "thesis": "Complete PhD/Master's thesis template with multi-chapter structure, automatic table of contents, list of figures, bibliography, and appendices.",
+  "lab-report": "Scientific lab report template with sections for abstract, introduction, methodology, results, discussion, and references.",
+  "cover-letter": "Professional cover letter template with formal letterhead, recipient information, and signature block.",
+};
+
+function getTags(title: string, category: string) {
+  const tags = [category];
+  const t = title.toLowerCase();
+  
+  if (t.includes("paper")) tags.push("Research");
+  if (t.includes("presentation") || t.includes("beamer")) tags.push("Slides");
+  if (t.includes("cv") || t.includes("resume")) tags.push("Career");
+  if (t.includes("math") || t.includes("formula")) tags.push("Mathematics");
+  if (t.includes("report")) tags.push("Documentation");
+  if (t.includes("letter")) tags.push("Correspondence");
+  if (t.includes("thesis") || t.includes("dissertation")) tags.push("Graduate");
+  
+  return tags;
+}
 
 export default function TemplatePage({
   params,
@@ -27,52 +44,11 @@ export default function TemplatePage({
   params: Promise<{ slug: string }>;
 }) {
   const [mounted, setMounted] = useState(false);
-  const [previewUrl, setPreviewUrl] = useState<string>("");
-  const [isCompiling, setIsCompiling] = useState(false);
+  const [showSource, setShowSource] = useState(false);
   const { slug } = use(params);
-
   const template = templates.find((t) => t.slug === slug);
 
-  useEffect(() => {
-    setMounted(true);
-    loader.init().then((monaco) => {
-      monaco.languages.register({ id: "latex" });
-      monaco.languages.setLanguageConfiguration(
-        "latex",
-        latexLanguageConfiguration
-      );
-      monaco.languages.setMonarchTokensProvider("latex", latexTokenProvider);
-      registerLatexCompletions(monaco);
-    });
-  }, []);
-
-  const compileLatex = useCallback(async (latex: string) => {
-    if (!latex.trim()) return;
-
-    setIsCompiling(true);
-    try {
-      const response = await fetch("/api/compile", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ latex }),
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        setPreviewUrl(data.previewUrl || data.pdfUrl || "");
-      }
-    } catch (err) {
-      console.error("Compilation error:", err);
-    } finally {
-      setIsCompiling(false);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (template?.code && mounted) {
-      compileLatex(template.code);
-    }
-  }, [template?.code, mounted, compileLatex]);
+  useEffect(() => setMounted(true), []);
 
   if (!template) {
     return (
@@ -92,109 +68,109 @@ export default function TemplatePage({
     );
   }
 
-  const templateContent = getTemplateContent(slug, template.title);
+  const tags = getTags(template.title, template.category);
+  const abstract = abstracts[slug] || template.description;
 
   return (
     <>
-      <div className="min-h-screen bg-gray-50 flex flex-col">
-        <div className="flex-none px-4 sm:px-6 lg:px-8 py-4">
-          <div className="max-w-7xl mx-auto">
-            <Link
-              href="/templates"
-              className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 mb-3 transition-colors"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              Back to Templates
-            </Link>
+      <div className="min-h-screen bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <Link
+            href="/templates"
+            className="inline-flex items-center gap-2 text-gray-500 hover:text-gray-900 mb-8 transition-colors text-sm"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            Back to all templates
+          </Link>
 
-            <div className="flex flex-col lg:flex-row gap-8 mb-6">
-              <div className="flex-2">
-                <h1 className="text-3xl font-bold text-gray-900 mb-2">
-                  {template.title} - Free LaTeX Template
-                </h1>
-                <p className="text-base text-gray-700 mb-3">
-                  {template.description}
-                </p>
-                <p className="text-sm text-gray-600 mb-4">
-                  {templateContent.usage}
-                </p>
+          <div className="flex flex-col lg:flex-row gap-12">
+            <div className="lg:w-1/2">
+              <h1 className="text-3xl font-bold text-gray-900 mb-6">
+                {template.title}
+              </h1>
+
+              <div className="flex flex-wrap gap-3 mb-8">
+                <button
+                  onClick={() =>
+                    openInOctree({
+                      latex: template.code,
+                      title: template.title,
+                      source: "tools:templates",
+                    })
+                  }
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-gray-700 text-sm font-medium rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors"
+                >
+                  <OctreeLogo className="h-4 w-4" />
+                  Open as Template
+                </button>
+                <button
+                  onClick={() => setShowSource(!showSource)}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-gray-700 text-sm font-medium rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors"
+                >
+                  <Code className="h-4 w-4" />
+                  {showSource ? "Hide Source" : "View Source"}
+                </button>
+                <Link
+                  href={template.previewUrl}
+                  target="_blank"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-gray-700 text-sm font-medium rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors"
+                >
+                  <FileText className="h-4 w-4" />
+                  View PDF
+                </Link>
               </div>
-              <div className="flex-1">
-                <div className="bg-blue-50 p-4 rounded-lg">
-                  <h2 className="text-lg font-semibold text-gray-900 mb-2">
-                    Template Features
-                  </h2>
-                  <ul className="space-y-1 text-sm text-gray-700">
-                    {templateContent.features.map((feature, idx) => (
-                      <li key={idx}>• {feature}</li>
-                    ))}
-                  </ul>
+
+              <div className="space-y-4 mb-8">
+                <div className="flex">
+                  <span className="w-32 text-gray-500 text-sm">Category:</span>
+                  <span className="text-gray-900 text-sm">{template.category}</span>
+                </div>
+                <div className="flex">
+                  <span className="w-32 text-gray-500 text-sm">License:</span>
+                  <span className="text-gray-900 text-sm">Free to use (MIT)</span>
+                </div>
+                <div className="flex flex-col">
+                  <span className="w-32 text-gray-500 text-sm mb-1">Abstract:</span>
+                  <p className="text-gray-700 text-sm leading-relaxed">{abstract}</p>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
 
-        <div className="flex-1 overflow-hidden px-4 sm:px-6 lg:px-8 py-4">
-          <div className="h-full max-w-7xl mx-auto flex flex-col">
-            <div className="flex justify-end mb-4">
-              <button
-                onClick={() =>
-                  openInOctree({
-                    latex: template.code,
-                    title: template.title,
-                    source: "tools:templates",
-                  })
-                }
-                className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-white text-gray-900 font-medium rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm"
-              >
-                <OctreeLogo className="h-4 w-4" />
-                Open in Octree
-              </button>
+              <div className="flex flex-wrap gap-2">
+                <span className="text-gray-500 text-sm mr-2">Tags:</span>
+                {tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full hover:bg-gray-200 transition-colors"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              {showSource && (
+                <div className="mt-8">
+                  <h2 className="text-lg font-semibold text-gray-900 mb-3">
+                    LaTeX Source Code
+                  </h2>
+                  <div className="bg-gray-50 border border-gray-200 rounded-lg overflow-hidden">
+                    <pre className="p-4 text-sm text-gray-800 overflow-x-auto max-h-96">
+                      <code>{template.code}</code>
+                    </pre>
+                  </div>
+                </div>
+              )}
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 flex-1 min-h-0">
-              <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-                <div className="h-[600px] w-full">
+
+            <div className="lg:w-1/2">
+              <div className="sticky top-8">
+                <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
                   {mounted ? (
-                    <Editor
-                      height="600px"
-                      language="latex"
-                      value={template.code}
-                      theme="vs-light"
-                      options={{
-                        readOnly: true,
-                        minimap: { enabled: false },
-                        scrollBeyondLastLine: false,
-                        fontSize: 13,
-                        lineNumbers: "on",
-                        wordWrap: "on",
-                        padding: { top: 12, bottom: 12 },
-                        renderLineHighlight: "none",
-                        cursorStyle: "line",
-                      }}
-                    />
+                    <PDFPreview pdfUrl={template.previewUrl} width={500} />
                   ) : (
-                    <div className="flex items-center justify-center h-full">
-                      <Loader2 className="h-8 w-8 text-blue-500 animate-spin" />
+                    <div className="flex items-center justify-center h-[600px] bg-gray-50">
+                      <span className="text-gray-400">Loading preview...</span>
                     </div>
                   )}
-                </div>
-              </div>
-
-              <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-                <div className="h-full w-full">
-                  {isCompiling && !previewUrl ? (
-                    <div className="flex items-center justify-center h-full">
-                      <Loader2 className="h-8 w-8 text-blue-500 animate-spin" />
-                    </div>
-                  ) : previewUrl ? (
-                    <PDFPreview
-                      pdfUrl={previewUrl}
-                      width={500}
-                      compact
-                      firstPageOnly
-                    />
-                  ) : null}
                 </div>
               </div>
             </div>

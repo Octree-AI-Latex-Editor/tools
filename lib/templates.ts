@@ -1,6 +1,17 @@
 // Single source of truth for all LaTeX templates
 // Used by both frontend and compilation script
 
+export type TemplateCategory = 
+  | "Academic"
+  | "Presentations"
+  | "Resume & CV"
+  | "Math"
+  | "Reports"
+  | "Business"
+  | "Letters"
+  | "Education"
+  | "Other";
+
 export interface Template {
   id: number;
   title: string;
@@ -8,7 +19,21 @@ export interface Template {
   slug: string;
   previewUrl: string;
   code: string;
+  category: TemplateCategory;
 }
+
+export const templateCategories: { name: TemplateCategory | "All Templates"; count?: number }[] = [
+  { name: "All Templates" },
+  { name: "Academic" },
+  { name: "Presentations" },
+  { name: "Resume & CV" },
+  { name: "Math" },
+  { name: "Reports" },
+  { name: "Business" },
+  { name: "Letters" },
+  { name: "Education" },
+  { name: "Other" },
+];
 
 export const templates: Template[] = [
   {
@@ -17,6 +42,7 @@ export const templates: Template[] = [
     description: "IEEE-style research paper template",
     slug: "research-paper",
     previewUrl: "/templates/research-paper.pdf",
+    category: "Academic",
     code: String.raw`\documentclass[conference]{IEEEtran}
 \usepackage{amsmath,amssymb}
 \usepackage{graphicx}
@@ -66,6 +92,7 @@ We have demonstrated [conclusion].
     description: "Academic presentation slides",
     slug: "beamer-presentation",
     previewUrl: "/templates/beamer-presentation.pdf",
+    category: "Presentations",
     code: String.raw`\documentclass{beamer}
 \usetheme{Madrid}
 \usecolortheme{default}
@@ -114,6 +141,7 @@ Summary of key points.
     description: "Professional academic curriculum vitae",
     slug: "academic-cv",
     previewUrl: "/templates/academic-cv.pdf",
+    category: "Resume & CV",
     code: String.raw`\documentclass[11pt,a4paper]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{enumitem}
@@ -157,6 +185,7 @@ Machine Learning, Artificial Intelligence, Computer Vision
     description: "Math-heavy document with theorems",
     slug: "mathematical-document",
     previewUrl: "/templates/mathematical-document.pdf",
+    category: "Math",
     code: String.raw`\documentclass{article}
 \usepackage{amsmath,amsthm,amssymb}
 \usepackage[margin=1in]{geometry}
@@ -206,6 +235,7 @@ Consider the equation:
     description: "Scientific lab report template",
     slug: "lab-report",
     previewUrl: "/templates/lab-report.pdf",
+    category: "Reports",
     code: String.raw`\documentclass[12pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
@@ -265,6 +295,7 @@ In conclusion...
     description: "Book or thesis chapter template",
     slug: "book-chapter",
     previewUrl: "/templates/book-chapter.pdf",
+    category: "Academic",
     code: String.raw`\documentclass[12pt]{report}
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
@@ -303,6 +334,7 @@ This chapter has presented...
     description: "Professional resume template",
     slug: "resume",
     previewUrl: "/templates/resume.pdf",
+    category: "Resume & CV",
     code: String.raw`\documentclass[11pt]{article}
 \usepackage[margin=0.75in]{geometry}
 \usepackage{enumitem}
@@ -344,6 +376,7 @@ Description of project and technologies used.
     description: "Assessment criteria and grading template",
     slug: "grading-rubric",
     previewUrl: "/templates/grading-rubric.pdf",
+    category: "Education",
     code: String.raw`\documentclass{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{array}
@@ -396,6 +429,7 @@ Formatting & 10 & Follows assignment guidelines \\
     description: "Homework and assignment template",
     slug: "assignment",
     previewUrl: "/templates/assignment.pdf",
+    category: "Education",
     code: String.raw`\documentclass{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath}
@@ -440,6 +474,7 @@ Submit via course portal by due date.
     description: "Practice problems and exercises template",
     slug: "worksheet",
     previewUrl: "/templates/worksheet.pdf",
+    category: "Education",
     code: String.raw`\documentclass{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath}
@@ -489,6 +524,7 @@ x - y &= 1
     description: "Structured homework assignment",
     slug: "homework",
     previewUrl: "/templates/homework.pdf",
+    category: "Education",
     code: String.raw`\documentclass[12pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb,amsthm}
@@ -541,6 +577,7 @@ Assume $\sqrt{2}$ is rational. Then $\sqrt{2} = \frac{p}{q}$ where $p,q$ are int
     description: "Academic conference poster template",
     slug: "poster",
     previewUrl: "/templates/poster.pdf",
+    category: "Presentations",
     code: String.raw`\documentclass[25pt,a0paper,portrait]{tikzposter}
 \usepackage{amsmath}
 
@@ -592,6 +629,7 @@ Summary of contributions and future work.
     description: "Comprehensive thesis template with chapters",
     slug: "thesis",
     previewUrl: "/templates/thesis.pdf",
+    category: "Academic",
     code: String.raw`\documentclass[12pt,oneside]{book}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amsthm,amssymb}
@@ -654,6 +692,7 @@ In conclusion...
     description: "Professional business letter template",
     slug: "letter",
     previewUrl: "/templates/letter.pdf",
+    category: "Letters",
     code: String.raw`\documentclass[11pt]{letter}
 \usepackage[margin=1in]{geometry}
 
@@ -686,6 +725,7 @@ In the final paragraph, restate your main point and indicate next steps or call 
     description: "Algorithm documentation with pseudocode",
     slug: "algorithm",
     previewUrl: "/templates/algorithm.pdf",
+    category: "Math",
     code: String.raw`\documentclass[12pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb}
@@ -747,6 +787,7 @@ This document presents the [Algorithm Name] algorithm for solving [problem].
     description: "Professional academic and job application cover letter",
     slug: "cover-letter",
     previewUrl: "/templates/cover-letter.pdf",
+    category: "Resume & CV",
     code: String.raw`\documentclass[11pt]{letter}
 \usepackage[margin=1in]{geometry}
 \usepackage{hyperref}
@@ -780,6 +821,7 @@ I would welcome the opportunity to discuss how my background, skills, and enthus
     description: "Academic journal article template with sections",
     slug: "journal-article",
     previewUrl: "/templates/journal-article.pdf",
+    category: "Academic",
     code: String.raw`\documentclass[12pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb}
@@ -836,6 +878,7 @@ This research contributes [contribution] to the field.
     description: "Comprehensive course syllabus template",
     slug: "syllabus",
     previewUrl: "/templates/syllabus.pdf",
+    category: "Education",
     code: String.raw`\documentclass[11pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{hyperref}
@@ -907,6 +950,7 @@ Project & 20\% \\
     description: "Grant and research proposal template",
     slug: "research-proposal",
     previewUrl: "/templates/research-proposal.pdf",
+    category: "Academic",
     code: String.raw`\documentclass[12pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath}
@@ -974,6 +1018,7 @@ Travel & \$X,XXX \\
     description: "Structured essay with argument and analysis",
     slug: "essay",
     previewUrl: "/templates/essay.pdf",
+    category: "Academic",
     code: String.raw`\documentclass[12pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{setspace}
@@ -1027,6 +1072,7 @@ Ultimately, [final thought]. As \citet{author} reminds us, "[quote]" (p. XX).
     description: "Academic research statement for job applications",
     slug: "research-statement",
     previewUrl: "/templates/research-statement.pdf",
+    category: "Academic",
     code: String.raw`\documentclass[11pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb}
@@ -1089,6 +1135,7 @@ My research program addresses fundamental questions in AI while maintaining stro
     description: "Complete PhD dissertation template",
     slug: "dissertation",
     previewUrl: "/templates/dissertation.pdf",
+    category: "Academic",
     code: String.raw`\documentclass[12pt,oneside]{book}
 \usepackage[utf8]{inputenc}
 \usepackage[margin=1in]{geometry}
@@ -1211,6 +1258,7 @@ This dissertation has presented novel approaches to neural network design that a
     description: "Professional white paper template",
     slug: "white-paper",
     previewUrl: "/templates/white-paper.pdf",
+    category: "Academic",
     code: String.raw`\documentclass[11pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
@@ -1293,6 +1341,7 @@ The AI landscape is changing rapidly. Organizations that take action now will be
     description: "Professional marketing leaflet template",
     slug: "leaflet",
     previewUrl: "/templates/leaflet.pdf",
+    category: "Business",
     code: String.raw`\documentclass[a4paper,12pt]{article}
 \usepackage[margin=0.5in]{geometry}
 \usepackage{multicol}
@@ -1381,6 +1430,7 @@ ISO 9001 certified with 99\% satisfaction
     description: "Technical research report template",
     slug: "technical-report",
     previewUrl: "/templates/technical-report.pdf",
+    category: "Reports",
     code: String.raw`\documentclass[11pt]{report}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb}
@@ -1517,6 +1567,7 @@ This report presented our cloud-native architecture which successfully met all p
     description: "Practice problems and exercises for mathematics",
     slug: "math-exercises",
     previewUrl: "/templates/math-exercises.pdf",
+    category: "Math",
     code: String.raw`\documentclass[12pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb,amsthm}
@@ -1589,6 +1640,7 @@ Determine if the following vectors are linearly independent:
     description: "Structured lecture notes for mathematics courses",
     slug: "math-notes",
     previewUrl: "/templates/math-notes.pdf",
+    category: "Math",
     code: String.raw`\documentclass[11pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb,amsthm}
@@ -1669,6 +1721,7 @@ If $f$ is continuous and $K$ is compact, then $f(K)$ is compact.
     description: "Formal mathematics examination template",
     slug: "math-exam",
     previewUrl: "/templates/math-exam.pdf",
+    category: "Math",
     code: String.raw`\documentclass[12pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb,amsthm}
@@ -1770,6 +1823,7 @@ f(x) = \frac{\sin(x)}{x^2 + 1}
     description: "Weekly problem set assignments for mathematics",
     slug: "math-problem-set",
     previewUrl: "/templates/math-problem-set.pdf",
+    category: "Math",
     code: String.raw`\documentclass[12pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb,amsthm}
@@ -1839,6 +1893,7 @@ Evaluate the following integral:
     description: "Compact reference sheet for formulas and theorems",
     slug: "math-cheat-sheet",
     previewUrl: "/templates/math-cheat-sheet.pdf",
+    category: "Math",
     code: String.raw`\documentclass[10pt,landscape]{article}
 \usepackage[margin=0.5in]{geometry}
 \usepackage{amsmath,amssymb}
@@ -1997,6 +2052,7 @@ E[X] = \sum_i x_i P(X = x_i)
     description: "Clean academic lecture notes template",
     slug: "lecture-notes",
     previewUrl: "/templates/lecture-notes.pdf",
+    category: "Education",
     code: String.raw`\documentclass[11pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb,amsthm}
@@ -2098,6 +2154,7 @@ Key takeaways from today's lecture:
     description: "Short quiz or test template",
     slug: "quiz-template",
     previewUrl: "/templates/quiz-template.pdf",
+    category: "Education",
     code: String.raw`\documentclass[12pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath}
@@ -2163,6 +2220,7 @@ Key takeaways from today's lecture:
     description: "Reference sheet for important formulas",
     slug: "formula-sheet",
     previewUrl: "/templates/formula-sheet.pdf",
+    category: "Math",
     code: String.raw`\documentclass[11pt]{article}
 \usepackage[margin=0.75in]{geometry}
 \usepackage{amsmath,amssymb}
@@ -2303,6 +2361,7 @@ s = \sqrt{s^2}
     description: "Professional project report with chapters and sections",
     slug: "project-report",
     previewUrl: "/templates/project-report.pdf",
+    category: "Reports",
     code: String.raw`\documentclass[12pt]{report}
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
@@ -2402,6 +2461,7 @@ Future enhancements could include [future work].
     description: "Scientific article with abstract and sections",
     slug: "article-template",
     previewUrl: "/templates/article-template.pdf",
+    category: "Academic",
     code: String.raw`\documentclass[11pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb}
@@ -2486,6 +2546,7 @@ The authors thank [acknowledgments].
     description: "Graduate school application statement template",
     slug: "statement-of-purpose",
     previewUrl: "/templates/statement-of-purpose.pdf",
+    category: "Resume & CV",
     code: String.raw`\documentclass[11pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{setspace}
@@ -2544,6 +2605,7 @@ Thank you for considering my application.
     description: "Academic literature review with citations",
     slug: "literature-review",
     previewUrl: "/templates/literature-review.pdf",
+    category: "Academic",
     code: String.raw`\documentclass[12pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{setspace}
@@ -2657,6 +2719,7 @@ This literature review has synthesized current knowledge on [topic]. The review 
     description: "Professional meeting minutes and notes template",
     slug: "meeting-minutes",
     previewUrl: "/templates/meeting-minutes.pdf",
+    category: "Business",
     code: String.raw`\documentclass[11pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{enumitem}
@@ -2782,6 +2845,7 @@ Schedule follow-up meeting & Sarah Johnson & 2025-01-10 \\
     description: "Award or completion certificate template",
     slug: "certificate",
     previewUrl: "/templates/certificate.pdf",
+    category: "Business",
     code: String.raw`\documentclass[landscape]{article}
 \usepackage[margin=0.5in]{geometry}
 \usepackage{graphicx}
@@ -2869,6 +2933,7 @@ Schedule follow-up meeting & Sarah Johnson & 2025-01-10 \\
     description: "Professional invoice for services or products",
     slug: "invoice",
     previewUrl: "/templates/invoice.pdf",
+    category: "Business",
     code: String.raw`\documentclass[11pt]{article}
 \usepackage[margin=0.75in]{geometry}
 \usepackage{graphicx}
@@ -2971,6 +3036,7 @@ SWIFT Code: & ABCDEFGH \\
     description: "Research grant proposal template",
     slug: "grant-proposal",
     previewUrl: "/templates/grant-proposal.pdf",
+    category: "Academic",
     code: String.raw`\documentclass[12pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath}
@@ -3123,6 +3189,7 @@ The PI has extensive experience in [area] with [number] publications and \$[amou
     description: "Professional recommendation letter template",
     slug: "letter-of-recommendation",
     previewUrl: "/templates/letter-of-recommendation.pdf",
+    category: "Letters",
     code: String.raw`\documentclass[11pt]{letter}
 \usepackage[margin=1in]{geometry}
 \usepackage{hyperref}
@@ -3174,6 +3241,7 @@ I am confident that Student Name will be an outstanding addition to your program
     description: "Academic or professional motivation letter template",
     slug: "motivation-letter",
     previewUrl: "/templates/motivation-letter.pdf",
+    category: "Resume & CV",
     code: String.raw`\documentclass[11pt]{letter}
 \usepackage[margin=1in]{geometry}
 
@@ -3230,6 +3298,7 @@ Thank you for considering my application. I look forward to the opportunity to d
     description: "Professional business plan template",
     slug: "business-plan",
     previewUrl: "/templates/business-plan.pdf",
+    category: "Business",
     code: String.raw`\documentclass[12pt]{report}
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
@@ -3419,6 +3488,7 @@ We are seeking \$[amount] in funding to [purpose].
     description: "Corporate business report template",
     slug: "business-report",
     previewUrl: "/templates/business-report.pdf",
+    category: "Business",
     code: String.raw`\documentclass[11pt]{report}
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
@@ -3581,6 +3651,7 @@ Immediate next steps include:
     description: "Scientific research report template",
     slug: "scientific-report",
     previewUrl: "/templates/scientific-report.pdf",
+    category: "Academic",
     code: String.raw`\documentclass[12pt]{report}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb}
@@ -3733,6 +3804,7 @@ Based on these findings, we recommend:
     description: "Student internship report template",
     slug: "internship-report",
     previewUrl: "/templates/internship-report.pdf",
+    category: "Reports",
     code: String.raw`\documentclass[12pt]{report}
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
@@ -3912,6 +3984,7 @@ I would recommend that future interns:
     description: "Professional newsletter template",
     slug: "newsletter",
     previewUrl: "/templates/newsletter.pdf",
+    category: "Business",
     code: String.raw`\documentclass[11pt]{article}
 \usepackage[margin=0.75in]{geometry}
 \usepackage{multicol}
@@ -4079,6 +4152,7 @@ Address: 123 Main St
     description: "Research survey and questionnaire template",
     slug: "questionnaire",
     previewUrl: "/templates/questionnaire.pdf",
+    category: "Other",
     code: String.raw`\documentclass[11pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{enumitem}
@@ -4232,6 +4306,7 @@ Researcher Name | Email | Phone
     description: "Professional table layouts and formatting",
     slug: "table-template",
     previewUrl: "/templates/table-template.pdf",
+    category: "Other",
     code: String.raw`\documentclass[11pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{booktabs}
@@ -4400,6 +4475,7 @@ Price & \$10/mo & \$50/mo & \$100/mo \\
     description: "Standalone bibliography and references template",
     slug: "bibliography",
     previewUrl: "/templates/bibliography.pdf",
+    category: "Academic",
     code: String.raw`\documentclass[11pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{natbib}
@@ -4531,6 +4607,7 @@ For larger projects, consider using BibTeX or BibLaTeX with external .bib files.
     description: "Professional business memo template",
     slug: "memo",
     previewUrl: "/templates/memo.pdf",
+    category: "Business",
     code: String.raw`\documentclass[11pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
@@ -4606,6 +4683,7 @@ If you have any questions or need additional information, please contact me at e
     description: "Book manuscript template for novels and non-fiction",
     slug: "manuscript",
     previewUrl: "/templates/manuscript.pdf",
+    category: "Academic",
     code: String.raw`\documentclass[12pt]{book}
 \usepackage[margin=1in]{geometry}
 \usepackage{setspace}
@@ -4703,6 +4781,7 @@ Your Name is a writer who background and credentials. Previous publications or r
     description: "Cookbook and recipe collection template",
     slug: "recipe-book",
     previewUrl: "/templates/recipe-book.pdf",
+    category: "Other",
     code: String.raw`\documentclass[11pt]{book}
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
@@ -4870,6 +4949,7 @@ Spaghetti, 2
     description: "Marketing flyer and promotional one-page template",
     slug: "flyer",
     previewUrl: "/templates/flyer.pdf",
+    category: "Business",
     code: String.raw`\documentclass[11pt]{article}
 \usepackage[margin=0.5in]{geometry}
 \usepackage{graphicx}
@@ -4980,6 +5060,7 @@ Don't miss this incredible opportunity to be part of something special. Whether 
     description: "Professional business card template",
     slug: "business-card",
     previewUrl: "/templates/business-card.pdf",
+    category: "Business",
     code: String.raw`\documentclass[11pt]{article}
 \usepackage[margin=0in, paperwidth=3.5in, paperheight=2in]{geometry}
 \usepackage{xcolor}
@@ -5072,6 +5153,7 @@ City, State 12345
     description: "Monthly and yearly calendar template",
     slug: "calendar",
     previewUrl: "/templates/calendar.pdf",
+    category: "Other",
     code: String.raw`\documentclass[11pt]{article}
 \usepackage[margin=0.5in, landscape]{geometry}
 \usepackage[table]{xcolor}
