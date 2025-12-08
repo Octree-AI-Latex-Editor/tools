@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import { Code2, Eye, Loader2, Download, ArrowLeft } from 'lucide-react';
 import { DM_Sans } from 'next/font/google';
 import { cn } from '@/lib/utils';
-import { OctreeLogo } from '@/components/icons/octree-logo';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { loader } from '@monaco-editor/react';
@@ -383,23 +382,13 @@ export default function CitationGenerator() {
             </div>
 
             {bibtexCode && !isProcessing && (
-              <div className="mt-6 flex gap-3">
-                <a
-                  href="https://useoctree.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 text-base font-medium rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm"
-                >
-                  <OctreeLogo className="h-5 w-5" />
-                  Open in Octree
-                </a>
-                
+              <div className="mt-6">
                 <button
                   onClick={exportAsBibtex}
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 text-base font-medium rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm"
+                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 text-base font-medium rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm"
                 >
                   <Download className="h-5 w-5" />
-                  Export
+                  Export as .bib
                 </button>
               </div>
             )}
