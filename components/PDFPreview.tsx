@@ -46,7 +46,7 @@ export default function PDFPreview({
         "w-full h-full bg-gray-50 flex justify-center",
         compact
           ? "py-2 overflow-hidden items-start"
-          : "py-6 overflow-auto items-center"
+          : "py-4 overflow-auto items-start"
       )}
     >
       {isLoading && (

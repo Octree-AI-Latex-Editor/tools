@@ -111,39 +111,61 @@ export default function CitationGenerator() {
     setIsCompiling(true);
     setCompileError('');
     try {
-      // Create a complete LaTeX document that uses the BibTeX citation
-      const citationKey = bibtex.match(/@\w+\{([^,]+),/)?.[1] || 'citation';
-      const latexDocument = `\\documentclass{article}
-\\usepackage{cite}
+      // Extract ALL citation keys from BibTeX
+      const citationKeys: string[] = [];
+      const keyRegex = /@\w+\{([^,]+),/g;
+      let match;
+      while ((match = keyRegex.exec(bibtex)) !== null) {
+        citationKeys.push(match[1].trim());
+      }
+      
+      if (citationKeys.length === 0) {
+        citationKeys.push('citation');
+      }
+      
+      // Create citation commands for all keys
+      const allKeys = citationKeys.join(',');
+      const individualCites = citationKeys.map(key => `\\cite{${key}}`).join(', ');
+      
+      // Create a clean LaTeX document that uses BibTeX
+      const latexDocument = `\\documentclass[12pt]{article}
+\\usepackage[utf8]{inputenc}
+\\usepackage[margin=1in]{geometry}
+\\usepackage{natbib}
+
 \\begin{document}
 
-\\section{Sample Citation}
+\\noindent\\textbf{In-text:} ${individualCites}
 
-This is a sample document showing how the citation will appear in your LaTeX document~\\cite{${citationKey}}.
+\\vspace{0.5em}
 
-\\bibliographystyle{plain}
-\\begin{thebibliography}{1}
+\\noindent\\textbf{Grouped:} \\citep{${allKeys}}
 
-\\bibitem{${citationKey}}
-${bibtex.replace(/@\w+\{[^,]+,/, '').replace(/}/g, '').split('\n').filter(line => line.trim()).map(line => {
-  const match = line.match(/(\w+)\s*=\s*[{"](.*?)["}]/);
-  if (match) {
-    const [, field, value] = match;
-    return value;
-  }
-  return '';
-}).filter(Boolean).join(', ')}
+\\vspace{1.5em}
 
-\\end{thebibliography}
+\\renewcommand{\\refname}{References}
+\\bibliographystyle{plainnat}
+\\bibliography{references}
 
 \\end{document}`;
 
       setLatestLatexDocument(latexDocument);
 
-      const response = await fetch('/api/compile', {
+      // Create a unique projectId based on bibtex content hash
+      const projectHash = btoa(bibtex).slice(0, 16).replace(/[^a-zA-Z0-9]/g, '');
+      
+      // Send both files to compile-prod endpoint
+      const response = await fetch('/api/compile-prod', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ latex: latexDocument }),
+        body: JSON.stringify({
+          files: [
+            { path: 'main.tex', content: latexDocument },
+            { path: 'references.bib', content: bibtex },
+          ],
+          projectId: `citation-${projectHash}`,
+          lastModifiedFile: 'references.bib',
+        }),
       });
 
       if (!response.ok) {
@@ -335,7 +357,7 @@ ${bibtex.replace(/@\w+\{[^,]+,/, '').replace(/}/g, '').split('\n').filter(line =
                       )}
                     </div>
                   ) : (
-                    <div className="flex-1 overflow-hidden rounded-lg">
+                    <div className="flex-1 overflow-auto rounded-lg">
                       {isCompiling ? (
                         <div className="flex items-center justify-center h-full">
                           <div className="text-center">
@@ -344,7 +366,7 @@ ${bibtex.replace(/@\w+\{[^,]+,/, '').replace(/}/g, '').split('\n').filter(line =
                           </div>
                         </div>
                       ) : previewUrl ? (
-                        <PDFPreview pdfUrl={previewUrl} />
+                        <PDFPreview pdfUrl={previewUrl} width={420} />
                       ) : (
                         <div className="flex items-center justify-center h-full">
                           <p className="text-gray-400">Preview will appear here...</p>
