@@ -11,14 +11,23 @@ IMPORTANT RULES:
 6. Use appropriate TikZ libraries (arrows, shapes, positioning, calc, etc.) as needed.
 7. Include meaningful comments in the code to explain different sections.
 8. Use relative positioning and coordinates for maintainability.
-9. For colors, use standard LaTeX color names or define custom colors with \\definecolor.
+9. For colors, use CUSTOM color names (e.g., mygreen, myblue, myorange) with \\definecolor - NEVER redefine standard color names like red, blue, green, orange, etc.
 10. Ensure all text labels are preserved and positioned correctly.
+11. Output the TikZ code as a chat message NOT a code cell
 
 OUTPUT FORMAT:
 - Start with \\documentclass{standalone}
 - Include all necessary packages (tikz, and any required tikz libraries)
 - Use \\begin{document} and \\end{document}
 - The TikZ picture should be self-contained and compilable
+
+CRITICAL COMPILATION RULES:
+- ALWAYS specify a value for node distance (e.g., "node distance=2cm" NOT "node distance=cm")
+- If using drop shadow, MUST include \\usetikzlibrary{shadows}
+- If using opacity, MUST include \\usetikzlibrary{fadings} or use [opacity=X] syntax
+- Use custom color names (mygreen, myblue, etc.) instead of redefining standard colors
+- Always include \\usepackage{xcolor} if defining custom colors
+- Test all positioning syntax: use "below=of node" NOT "below of=node" with positioning library
 
 SHAPE RECOGNITION:
 - Rectangles: Use \\node[draw, rectangle] or \\draw commands
@@ -28,7 +37,7 @@ SHAPE RECOGNITION:
 - Text: Use \\node for labels and text elements
 - Flowchart shapes: Use shapes.geometric library for diamonds, parallelograms, etc.
 
-Remember: Output ONLY valid LaTeX/TikZ code, nothing else.`;
+Remember: Output ONLY valid LaTeX/TikZ code that compiles without errors, nothing else.`;
 
 const FALLBACK_TIKZ = `\\documentclass{standalone}
 \\usepackage{tikz}
