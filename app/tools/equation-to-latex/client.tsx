@@ -99,7 +99,7 @@ export default function EquationToLatexClient() {
     setIsProcessing(true);
     setError('');
     setLatexCode('');
-
+    setActiveTab('code');
     try {
       const response = await fetch('/api/equation-to-latex', {
         method: 'POST',

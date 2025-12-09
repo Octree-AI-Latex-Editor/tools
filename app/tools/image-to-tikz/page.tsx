@@ -70,6 +70,9 @@ export default function ImageToTikz() {
     setIsProcessing(true);
     setError('');
     setLatexCode('');
+    setActiveTab('code');
+    setPreviewUrl('');
+    setLastCompiledLatex('');
 
     try {
       const base64 = preview.split(',')[1];

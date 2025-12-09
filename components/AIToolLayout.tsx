@@ -82,7 +82,10 @@ export default function AIToolLayout({
   const processImage = async (image: string) => {
     setIsProcessing(true);
     setError('');
-    setLatexCode(''); // Clear previous content
+    setLatexCode('');
+    setActiveTab('code');
+    setPreviewUrl('');
+    setLastCompiledLatex('');
 
     try {
       const response = await fetch(apiEndpoint, {
