@@ -247,6 +247,11 @@ export default function LatexToMarkdown() {
           </div>
         </div>
       </div>
+
+      {/* Call to Action */}
+      <div className="mt-16">
+        <OctreeCTA source="tools:latex-to-markdown" />
+      </div>
     </div>
   );
 }
