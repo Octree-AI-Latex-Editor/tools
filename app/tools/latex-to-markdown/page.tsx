@@ -6,6 +6,7 @@ import { DM_Sans } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
+import { OctreeCTA } from '@/components/OctreeCTA';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
 
@@ -246,6 +247,11 @@ export default function LatexToMarkdown() {
             )}
           </div>
         </div>
+      </div>
+
+      {/* Call to Action */}
+      <div className="mt-16">
+        <OctreeCTA source="tools:latex-to-markdown" />
       </div>
     </div>
   );

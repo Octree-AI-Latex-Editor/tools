@@ -8,6 +8,7 @@ import { templates } from "@/lib/templates";
 import { openInOctree } from "@/lib/open-in-octree";
 import { OctreeLogo } from "@/components/icons/octree-logo";
 import { getTemplateJsonLd } from "@/lib/json-ld";
+import { OctreeCTA } from "@/components/OctreeCTA";
 
 const PDFPreview = dynamic(() => import("@/components/PDFPreview"), {
   ssr: false,
@@ -175,6 +176,11 @@ export default function TemplatePage({
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="mt-16">
+          <OctreeCTA source={`templates:${slug}`} />
         </div>
       </div>
 
