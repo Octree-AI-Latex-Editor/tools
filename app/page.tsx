@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Search, ArrowRight } from "lucide-react";
+import { Search, ArrowRight, Wrench, FileText } from "lucide-react";
 import { tools } from "@/lib/tools";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -85,10 +85,16 @@ export default function Home() {
             <Tabs defaultValue="tools" className="w-auto">
               <TabsList>
                 <TabsTrigger value="tools" asChild>
-                  <Link href="/">Tools</Link>
+                  <Link href="/" className="inline-flex items-center gap-2">
+                    <Wrench className="h-4 w-4" />
+                    Tools
+                  </Link>
                 </TabsTrigger>
                 <TabsTrigger value="templates" asChild>
-                  <Link href="/templates">Templates</Link>
+                  <Link href="/templates" className="inline-flex items-center gap-2">
+                    <FileText className="h-4 w-4" />
+                    Templates
+                  </Link>
                 </TabsTrigger>
               </TabsList>
             </Tabs>

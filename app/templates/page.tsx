@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { Search, ExternalLink } from "lucide-react";
+import { Search, ExternalLink, Wrench, FileText } from "lucide-react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -154,10 +154,16 @@ export default function TemplatesPage() {
               <Tabs defaultValue="templates" className="w-auto">
                 <TabsList>
                   <TabsTrigger value="tools" asChild>
-                    <Link href="/">Tools</Link>
+                    <Link href="/" className="inline-flex items-center gap-2">
+                      <Wrench className="h-4 w-4" />
+                      Tools
+                    </Link>
                   </TabsTrigger>
                   <TabsTrigger value="templates" asChild>
-                    <Link href="/templates">Templates</Link>
+                    <Link href="/templates" className="inline-flex items-center gap-2">
+                      <FileText className="h-4 w-4" />
+                      Templates
+                    </Link>
                   </TabsTrigger>
                 </TabsList>
               </Tabs>
