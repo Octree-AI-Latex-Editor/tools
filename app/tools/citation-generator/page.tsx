@@ -8,7 +8,6 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { loader } from '@monaco-editor/react';
 import { CompileErrorModal } from '@/components/CompileErrorModal';
-import { OctreeCTA } from '@/components/OctreeCTA';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
 const PDFPreview = dynamic(() => import('@/components/PDFPreview'), { ssr: false });
@@ -395,11 +394,6 @@ export default function CitationGenerator() {
             )}
           </div>
         </div>
-      </div>
-
-      {/* Call to Action */}
-      <div className="mt-16">
-        <OctreeCTA source="tools:citation-generator" />
       </div>
 
       <CompileErrorModal

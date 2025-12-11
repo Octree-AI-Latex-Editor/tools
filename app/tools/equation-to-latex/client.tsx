@@ -27,7 +27,6 @@ import {
 } from '@/lib/editor-config';
 import { openInOctree } from '@/lib/open-in-octree';
 import { CompileErrorModal } from '@/components/CompileErrorModal';
-import { OctreeCTA } from '@/components/OctreeCTA';
 import { useImageUpload } from '@/hooks/use-image-upload';
 import { useCopyToClipboard } from '@/hooks/use-copy-to-clipboard';
 
@@ -527,11 +526,6 @@ export default function EquationToLatexClient() {
             )}
           </div>
         </div>
-
-        {/* Call to Action */}
-        <div className="mt-16">
-          <OctreeCTA source="tools:equation-to-latex" />
-        </div>
       </div>
 
       <CompileErrorModal
@@ -540,7 +534,7 @@ export default function EquationToLatexClient() {
         latex={latexCode}
         onClose={() => setShowCompileErrorModal(false)}
         source="tools:equation-to-latex"
-        title="Equation"
+        title="Equation to LaTeX"
       />
     </div>
   );

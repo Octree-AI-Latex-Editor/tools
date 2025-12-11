@@ -15,7 +15,6 @@ import {
 } from '@/lib/editor-config';
 import { openInOctree } from '@/lib/open-in-octree';
 import { CompileErrorModal } from '@/components/CompileErrorModal';
-import { OctreeCTA } from '@/components/OctreeCTA';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
 const PDFPreview = dynamic(() => import('@/components/PDFPreview'), { ssr: false });
@@ -378,11 +377,6 @@ export default function TikzGenerator() {
             )}
           </div>
         </div>
-
-        {/* Call to Action */}
-        <div className="mt-16">
-          <OctreeCTA source="tools:tikz-generator" />
-        </div>
       </div>
 
       <CompileErrorModal
@@ -390,7 +384,7 @@ export default function TikzGenerator() {
         errorMessage={compileError}
         latex={latexCode}
         onClose={() => setShowCompileErrorModal(false)}
-        source="tools:tikz-generator"
+        source="tools:tikz"
         title="TikZ Diagram"
       />
     </div>
