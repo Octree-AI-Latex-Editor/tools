@@ -15,7 +15,6 @@ import {
 } from '@/lib/editor-config';
 import { openInOctree } from '@/lib/open-in-octree';
 import { CompileErrorModal } from '@/components/CompileErrorModal';
-import { OctreeCTA } from '@/components/OctreeCTA';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
 const PDFPreview = dynamic(() => import('@/components/PDFPreview'), { ssr: false });
@@ -217,12 +216,6 @@ export default function LatexPreview() {
           </div>
         </div>
       </div>
-
-      {/* Call to Action */}
-      <div className="mt-16">
-        <OctreeCTA source="tools:latex-preview" />
-      </div>
-
       <CompileErrorModal
         isOpen={showCompileErrorModal}
         errorMessage={compileError}
