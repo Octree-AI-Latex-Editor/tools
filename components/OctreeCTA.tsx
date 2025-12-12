@@ -2,6 +2,13 @@ import { ArrowRight, Zap } from 'lucide-react';
 import { OctreeLogo } from '@/components/icons/octree-logo';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { DM_Sans } from 'next/font/google';
+import { cn } from '@/lib/utils';
+
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+});
 
 interface OctreeCTAProps {
   source?: string;
@@ -11,40 +18,48 @@ export function OctreeCTA({ source = '' }: OctreeCTAProps) {
   const trackingParam = source ? `?ref=${source}` : '';
 
   return (
-    <div className="max-w-7xl mx-auto px-6">
-      <div className="bg-blue-600 rounded-2xl p-8 md:p-12 text-white">
-        <div className="max-w-3xl mx-auto text-center">
-        <div className="inline-flex items-center gap-2 bg-white/20 rounded-full px-4 py-2 mb-6">
-          <Zap className="h-4 w-4" />
-          <span className="text-sm font-medium">Supercharge Your LaTeX Workflow</span>
-        </div>
-        
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          Continue Editing in Octree
-        </h2>
-        
-        <p className="text-lg md:text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-          Experience the full power of collaborative LaTeX editing with real-time preview, 
-          AI-powered assistance, version control, and seamless team collaboration.
-        </p>
+    <div className="py-2">
+      <div className="mx-auto max-w-7xl rounded-3xl border bg-card px-6 py-8 md:py-20 lg:py-32 text-card-foreground">
+        <div className="text-center">
+          <div className="inline-flex items-center gap-2 bg-muted rounded-full px-4 py-2 mb-6">
+            <Zap className="h-4 w-4" />
+            <span className="text-sm font-medium">Supercharge Your LaTeX Workflow</span>
+          </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-blue-50 font-semibold">
-            <Link href={`https://app.useoctree.com${trackingParam}`}>
-              <OctreeLogo className="h-5 w-5" />
-              Get Started Free
-              <ArrowRight className="h-5 w-5" />
-            </Link>
-          </Button>
-          
-          <Button asChild variant="outline" size="lg" className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border-white/30 hover:text-white">
-            <Link href="https://useoctree.com">
-              Learn More
-            </Link>
-          </Button>
+          <h2 className={cn("text-balance text-4xl font-semibold lg:text-5xl mb-4", dmSans.className)}>
+            Continue Editing in Octree
+          </h2>
+
+          <div className="mt-4 flex flex-col items-center gap-2 text-muted-foreground">
+            <ul className="list-disc text-left inline-block">
+              <li>Real-time preview</li>
+              <li>AI-powered assistance</li>
+              <li>Version control</li>
+              <li>Seamless team collaboration</li>
+            </ul>
+          </div>
+
+          <div className="mt-12 flex flex-wrap justify-center gap-4">
+            <Button
+              asChild
+              size="lg"
+              className="bg-blue-600 hover:bg-blue-700 text-white border-transparent">
+              <Link href={`https://app.useoctree.com${trackingParam}`}>
+                <span>Use in Octree</span>
+              </Link>
+            </Button>
+
+            <Button
+              asChild
+              size="lg"
+              variant="outline">
+              <Link href="https://useoctree.com">
+                <span>Learn More</span>
+              </Link>
+            </Button>
+          </div>
         </div>
       </div>
-    </div>
     </div>
   );
 }
