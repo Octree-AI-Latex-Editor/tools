@@ -24,7 +24,7 @@ export function SymbolCard({ latex, name }: SymbolCardProps) {
 
     return (
         <div
-            className="group relative flex flex-col bg-white border border-gray-200 rounded-xl p-6 hover:shadow-md hover:border-gray-300 transition-all duration-200 cursor-pointer"
+            className="group relative flex flex-col bg-white border border-gray-200 rounded-xl p-6 pb-11 hover:shadow-md hover:border-gray-300 transition-all duration-200 cursor-pointer"
             onClick={copyToClipboard}
         >
             <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
