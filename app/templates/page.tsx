@@ -19,10 +19,10 @@ import {
   type TemplateCategory,
 } from "@/lib/templates";
 import { openInOctree } from "@/lib/open-in-octree";
-import { OctreeLogo } from "@/components/icons/octree-logo";
 import { RedditIcon } from "@/components/icons/reddit";
 import { DiscordIcon } from "@/components/icons/discord";
 import { GitHubIcon } from "@/components/icons/github";
+import { Button } from "@/components/ui/button";
 
 const PDFPreview = dynamic(() => import("@/components/PDFPreview"), {
   ssr: false,
@@ -257,7 +257,8 @@ export default function TemplatesPage() {
                         >
                           View
                         </Link>
-                        <button
+                        <Button
+                          variant="gradient"
                           onClick={() => {
                             openInOctree({
                               latex: template.code,
@@ -265,11 +266,9 @@ export default function TemplatesPage() {
                               source: "tools:templates",
                             });
                           }}
-                          className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 bg-white text-gray-700 text-sm font-medium rounded-lg border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-colors cursor-pointer"
                         >
-                          <OctreeLogo className="h-4 w-4" />
-                          Open
-                        </button>
+                          Open in Octree
+                        </Button>
                       </div>
                     </div>
                   </div>
