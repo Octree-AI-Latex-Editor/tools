@@ -1,17 +1,45 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Wrench, FileText, Sigma } from "lucide-react";
+import { Wrench, FileText, Sigma, Search } from "lucide-react";
 import { GitHubIcon } from "@/components/icons/github";
 import { RedditIcon } from "@/components/icons/reddit";
 import { DiscordIcon } from "@/components/icons/discord";
+
+const SearchInput = () => {
+    const router = useRouter();
+    const searchParams = useSearchParams();
+    const currentQuery = searchParams?.get("q") ?? "";
+
+    const handleSearch = (term: string) => {
+        const params = new URLSearchParams(searchParams?.toString());
+        if (term) {
+            params.set("q", term);
+        } else {
+            params.delete("q");
+        }
+        router.replace(`?${params.toString()}`, { scroll: false });
+    };
+
+    return (
+        <input
+            type="text"
+            defaultValue={currentQuery}
+            onChange={(e) => handleSearch(e.target.value)}
+            className="block w-full pl-11 pr-4 py-3 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm"
+            placeholder="Search symbols..."
+        />
+    );
+};
 
 export default function SymbolsLayout({
     children,
 }: {
     children: React.ReactNode;
 }) {
+    const pathname = usePathname();
     return (
         <div className="min-h-screen bg-gray-50">
             <div className="bg-gradient-to-b from-gray-100 to-gray-50 pt-16 pb-12">
@@ -73,6 +101,17 @@ export default function SymbolsLayout({
                                 </TabsTrigger>
                             </TabsList>
                         </Tabs>
+                    </div>
+
+                    <div className="max-w-xl mx-auto">
+                        {pathname !== "/symbols" && (
+                            <div className="relative">
+                                <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                    <Search className="h-5 w-5 text-gray-400" />
+                                </div>
+                                <SearchInput key={pathname} />
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

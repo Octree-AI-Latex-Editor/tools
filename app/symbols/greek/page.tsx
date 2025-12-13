@@ -2,8 +2,17 @@
 
 import { SymbolCard } from "@/components/SymbolCard";
 import { greekSymbols } from "@/lib/symbols";
+import { useSearchParams } from "next/navigation";
 
 export default function GreekSymbolsPage() {
+    const searchParams = useSearchParams();
+    const searchQuery = searchParams.get("q") || "";
+
+    const filteredSymbols = greekSymbols.filter((symbol) =>
+        symbol.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        symbol.latex.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+
     return (
         <>
             <div className="flex items-center justify-between mb-6">
@@ -11,15 +20,23 @@ export default function GreekSymbolsPage() {
                     Greek Letters
                 </h2>
                 <span className="text-sm text-gray-500">
-                    {greekSymbols.length} symbols
+                    {filteredSymbols.length} symbol{filteredSymbols.length !== 1 ? 's' : ''}
                 </span>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                {greekSymbols.map((symbol) => (
-                    <SymbolCard key={symbol.latex} latex={symbol.latex} name={symbol.name} />
-                ))}
-            </div>
+            {filteredSymbols.length > 0 ? (
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                    {filteredSymbols.map((symbol) => (
+                        <SymbolCard key={symbol.latex} latex={symbol.latex} name={symbol.name} />
+                    ))}
+                </div>
+            ) : (
+                <div className="text-center py-12">
+                    <p className="text-gray-500">
+                        No symbols found matching "{searchQuery}"
+                    </p>
+                </div>
+            )}
         </>
     );
 }
