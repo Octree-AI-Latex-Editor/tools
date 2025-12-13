@@ -1,9 +1,10 @@
 "use client";
 
+import { Suspense } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Wrench, FileText, Sigma, Search } from "lucide-react";
+import { Search } from "lucide-react";
 import { GitHubIcon } from "@/components/icons/github";
 import { RedditIcon } from "@/components/icons/reddit";
 import { DiscordIcon } from "@/components/icons/discord";
@@ -109,7 +110,9 @@ export default function SymbolsLayout({
                                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                                     <Search className="h-5 w-5 text-gray-400" />
                                 </div>
-                                <SearchInput key={pathname} />
+                                <Suspense fallback={<div className="h-10 w-full bg-gray-100 rounded-lg animate-pulse" />}>
+                                    <SearchInput key={pathname} />
+                                </Suspense>
                             </div>
                         )}
                     </div>

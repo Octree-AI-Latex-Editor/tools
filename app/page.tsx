@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Search, ArrowRight, Wrench, FileText, Sigma } from "lucide-react";
+import { Search, ArrowRight } from "lucide-react";
 import { tools } from "@/lib/tools";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {

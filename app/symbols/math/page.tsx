@@ -1,11 +1,11 @@
 "use client";
 
-import { useRef } from "react";
+import { Suspense } from "react";
 import { SymbolCard } from "@/components/SymbolCard";
 import { mathSymbols } from "@/lib/symbols";
 import { useSearchParams } from "next/navigation";
 
-export default function MathSymbolsPage() {
+function MathSymbolsContent() {
     const searchParams = useSearchParams();
     const searchQuery = searchParams.get("q") || "";
 
@@ -34,10 +34,18 @@ export default function MathSymbolsPage() {
             ) : (
                 <div className="text-center py-12">
                     <p className="text-gray-500">
-                        No symbols found matching "{searchQuery}"
+                        No symbols found matching &quot;{searchQuery}&quot;
                     </p>
                 </div>
             )}
         </>
+    );
+}
+
+export default function MathSymbolsPage() {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <MathSymbolsContent />
+        </Suspense>
     );
 }
