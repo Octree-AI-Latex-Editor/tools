@@ -4,7 +4,7 @@ import { useState, useMemo } from "react";
 import { Search, ExternalLink, Wrench, FileText, Sigma } from "lucide-react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
 import {
   Pagination,
   PaginationContent,
@@ -150,27 +150,7 @@ export default function TemplatesPage() {
               resumes, and more.
             </p>
 
-            <div className="flex items-center justify-center mb-8">
-              <Tabs defaultValue="templates" className="w-auto">
-                <TabsList>
-                  <TabsTrigger value="tools" asChild>
-                    <Link href="/" className="inline-flex items-center gap-2">
-                      Tools
-                    </Link>
-                  </TabsTrigger>
-                  <TabsTrigger value="templates" asChild>
-                    <Link href="/templates" className="inline-flex items-center gap-2">
-                      Templates
-                    </Link>
-                  </TabsTrigger>
-                  <TabsTrigger value="symbols" asChild>
-                    <Link href="/symbols" className="inline-flex items-center gap-2">
-                      Symbols
-                    </Link>
-                  </TabsTrigger>
-                </TabsList>
-              </Tabs>
-            </div>
+
 
             <div className="max-w-xl mx-auto">
               <div className="relative">

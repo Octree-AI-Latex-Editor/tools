@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Search, ArrowRight } from "lucide-react";
 import { tools } from "@/lib/tools";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
 import {
   Pagination,
   PaginationContent,
@@ -81,27 +81,7 @@ export default function Home() {
             citations, and explore professional templates.
           </p>
 
-          <div className="flex items-center justify-center mb-8">
-            <Tabs defaultValue="tools" className="w-auto">
-              <TabsList>
-                <TabsTrigger value="tools" asChild>
-                  <Link href="/" className="inline-flex items-center gap-2">
-                    Tools
-                  </Link>
-                </TabsTrigger>
-                <TabsTrigger value="templates" asChild>
-                  <Link href="/templates" className="inline-flex items-center gap-2">
-                    Templates
-                  </Link>
-                </TabsTrigger>
-                <TabsTrigger value="symbols" asChild>
-                  <Link href="/symbols" className="inline-flex items-center gap-2">
-                    Symbols
-                  </Link>
-                </TabsTrigger>
-              </TabsList>
-            </Tabs>
-          </div>
+
 
           <div className="max-w-xl mx-auto">
             <div className="relative">

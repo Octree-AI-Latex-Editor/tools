@@ -3,7 +3,7 @@
 import { Suspense } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
 import { Search } from "lucide-react";
 import { GitHubIcon } from "@/components/icons/github";
 import { RedditIcon } from "@/components/icons/reddit";
@@ -82,27 +82,7 @@ export default function SymbolsLayout({
                         Browse common mathematical operators and Greek letters for your LaTeX documents.
                     </p>
 
-                    <div className="flex items-center justify-center mb-8">
-                        <Tabs defaultValue="symbols" className="w-auto">
-                            <TabsList>
-                                <TabsTrigger value="tools" asChild>
-                                    <Link href="/" className="inline-flex items-center gap-2">
-                                        Tools
-                                    </Link>
-                                </TabsTrigger>
-                                <TabsTrigger value="templates" asChild>
-                                    <Link href="/templates" className="inline-flex items-center gap-2">
-                                        Templates
-                                    </Link>
-                                </TabsTrigger>
-                                <TabsTrigger value="symbols" asChild>
-                                    <Link href="/symbols" className="inline-flex items-center gap-2">
-                                        Symbols
-                                    </Link>
-                                </TabsTrigger>
-                            </TabsList>
-                        </Tabs>
-                    </div>
+
 
                     <div className="max-w-xl mx-auto">
                         {pathname !== "/symbols" && (
