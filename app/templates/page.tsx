@@ -1,10 +1,10 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { Search, ExternalLink } from "lucide-react";
+import { Search, ExternalLink, Wrench, FileText, Sigma } from "lucide-react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
 import {
   Pagination,
   PaginationContent,
@@ -150,18 +150,7 @@ export default function TemplatesPage() {
               resumes, and more.
             </p>
 
-            <div className="flex items-center justify-center mb-8">
-              <Tabs defaultValue="templates" className="w-auto">
-                <TabsList>
-                  <TabsTrigger value="tools" asChild>
-                    <Link href="/">Tools</Link>
-                  </TabsTrigger>
-                  <TabsTrigger value="templates" asChild>
-                    <Link href="/templates">Templates</Link>
-                  </TabsTrigger>
-                </TabsList>
-              </Tabs>
-            </div>
+
 
             <div className="max-w-xl mx-auto">
               <div className="relative">
@@ -195,17 +184,15 @@ export default function TemplatesPage() {
                       <button
                         key={cat.name}
                         onClick={() => handleCategoryChange(cat.name)}
-                        className={`w-full flex items-center justify-between px-3 py-2 text-sm rounded-lg transition-colors ${
-                          isActive
-                            ? "bg-gray-100 text-gray-900 font-medium"
-                            : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
-                        }`}
+                        className={`w-full flex items-center justify-between px-3 py-2 text-sm rounded-lg transition-colors ${isActive
+                          ? "bg-gray-100 text-gray-900 font-medium"
+                          : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+                          }`}
                       >
                         <span>{cat.name}</span>
                         <span
-                          className={`text-xs ${
-                            isActive ? "text-gray-700" : "text-gray-400"
-                          }`}
+                          className={`text-xs ${isActive ? "text-gray-700" : "text-gray-400"
+                            }`}
                         >
                           ({count})
                         </span>
