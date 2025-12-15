@@ -40,7 +40,7 @@ const DEFAULT_MERMAID = `graph TD
     D --> B
     C --> E[End]`;
 
-export default function MermaidToLatex() {
+export default function MermaidToLatex({ dict, lang }: mermaidToLatexClientProps) {
   const [mermaidInput, setMermaidInput] = useState<string>(DEFAULT_MERMAID);
   const [latexCode, setLatexCode] = useState<string>('');
   const [isProcessing, setIsProcessing] = useState(false);

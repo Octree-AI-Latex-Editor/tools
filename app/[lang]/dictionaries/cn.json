@@ -73,7 +73,8 @@
     "conversionFailed": "转换失败",
     "exportAsLatex": "导出为 LaTeX",
     "exportAsPdf": "导出为 PDF",
-    "exportAsImage": "导出为图像"
+    "exportAsImage": "导出为图像",
+    "readyToUseInLatex": "可在您的 LaTeX 文档中使用"
   },
   "toolsSpecific": {
     "imageToLatex": {

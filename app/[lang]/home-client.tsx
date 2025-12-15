@@ -32,7 +32,10 @@ export default function HomeClient({ dict, lang }: HomeClientProps) {
   const [currentPage, setCurrentPage] = useState(1);
 
   // Get localized tools
-  const localizedTools = getLocalizedTools(dict as any);
+  const localizedTools = getLocalizedTools({
+    toolsList: (dict as Record<string, unknown>).toolsList as Record<string, { title: string; description: string }> | undefined,
+    toolsSpecific: (dict as Record<string, unknown>).toolsSpecific as Record<string, { title: string; description: string }> | undefined,
+  });
 
   const filteredTools = localizedTools.filter((tool) => {
     return (

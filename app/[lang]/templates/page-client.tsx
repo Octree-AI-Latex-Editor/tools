@@ -51,8 +51,16 @@ export default function TemplatesPageClient({ dict, lang }: TemplatesPageClientP
   const [currentPage, setCurrentPage] = useState(1);
 
   // Get localized templates
-  const localizedTemplates = useMemo(() => getLocalizedTemplates(dict as any), [dict]);
-  const localizedCategories = useMemo(() => getLocalizedTemplateCategories(dict as any), [dict]);
+  const localizedTemplates = useMemo(() => getLocalizedTemplates({
+    templatesList: (dict as Record<string, unknown>).templatesList as Record<string, { title: string; description: string }> | undefined,
+    categories: (dict as Record<string, unknown>).categories as Record<string, string> | undefined,
+    templateCode: (dict as Record<string, unknown>).templateCode as { placeholders?: Record<string, string> } | undefined,
+  }), [dict]);
+  const localizedCategories = useMemo(() => getLocalizedTemplateCategories({
+    templatesList: (dict as Record<string, unknown>).templatesList as Record<string, { title: string; description: string }> | undefined,
+    categories: (dict as Record<string, unknown>).categories as Record<string, string> | undefined,
+    templateCode: (dict as Record<string, unknown>).templateCode as { placeholders?: Record<string, string> } | undefined,
+  }), [dict]);
 
   const filteredTemplates = useMemo(() => {
     return localizedTemplates.filter((template) => {

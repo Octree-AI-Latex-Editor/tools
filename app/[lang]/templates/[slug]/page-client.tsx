@@ -60,7 +60,11 @@ export default function TemplatePageClient({ dict, lang, slug }: TemplatePageCli
   const [showSource, setShowSource] = useState(false);
   
   // Get localized templates
-  const localizedTemplates = getLocalizedTemplates(dict as any);
+  const localizedTemplates = getLocalizedTemplates({
+    templatesList: (dict as Record<string, unknown>).templatesList as Record<string, { title: string; description: string }> | undefined,
+    categories: (dict as Record<string, unknown>).categories as Record<string, string> | undefined,
+    templateCode: (dict as Record<string, unknown>).templateCode as { placeholders?: Record<string, string> } | undefined,
+  });
   const template = localizedTemplates.find((t) => t.slug === slug);
   const t = dict.templates as Record<string, string>;
 

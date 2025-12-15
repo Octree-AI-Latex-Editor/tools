@@ -1,6 +1,5 @@
 import { notFound } from 'next/navigation';
 import { getDictionary, hasLocale } from '../dictionaries';
-import type { PageProps } from 'next';
 import TemplatesPageClient from './page-client';
 
 type PageParams = {

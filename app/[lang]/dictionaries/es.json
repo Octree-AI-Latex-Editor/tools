@@ -73,7 +73,8 @@
     "conversionFailed": "Error en la conversión",
     "exportAsLatex": "Exportar como LaTeX",
     "exportAsPdf": "Exportar como PDF",
-    "exportAsImage": "Exportar como imagen"
+    "exportAsImage": "Exportar como imagen",
+    "readyToUseInLatex": "Listo para usar en tus documentos LaTeX"
   },
   "toolsSpecific": {
     "imageToLatex": {
