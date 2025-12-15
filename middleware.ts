@@ -84,3 +84,4 @@ export const config = {
     '/((?!api|_next|favicon.ico|robots.txt|sitemap).*)',
   ],
 };
+
