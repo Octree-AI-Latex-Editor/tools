@@ -6,9 +6,10 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { templates, getLocalizedTemplates } from "@/lib/templates";
 import { openInOctree } from "@/lib/open-in-octree";
-import { OctreeLogo } from "@/components/icons/octree-logo";
 import { getTemplateJsonLd } from "@/lib/json-ld";
 import type { Locale } from "../../dictionaries";
+import { OctreeCTA } from "@/components/OctreeCTA";
+import { Button } from "@/components/ui/button";
 
 type Dictionary = Awaited<ReturnType<typeof import('../../dictionaries').getDictionary>>;
 
@@ -23,19 +24,26 @@ const PDFPreview = dynamic(() => import("@/components/PDFPreview"), {
 });
 
 const abstracts: Record<string, string> = {
-  "research-paper": "IEEE-style research paper template with two-column layout, abstract section, and bibliography support. Perfect for conference and journal submissions.",
-  "beamer-presentation": "Professional Beamer presentation template with Madrid theme. Includes title slide, table of contents, and section formatting for academic presentations.",
-  "academic-cv": "Comprehensive academic curriculum vitae template with sections for education, publications, research experience, teaching, and awards.",
-  "resume": "Modern one-page resume template with clean formatting. Ideal for job applications in tech, engineering, and professional fields.",
-  "thesis": "Complete PhD/Master's thesis template with multi-chapter structure, automatic table of contents, list of figures, bibliography, and appendices.",
-  "lab-report": "Scientific lab report template with sections for abstract, introduction, methodology, results, discussion, and references.",
-  "cover-letter": "Professional cover letter template with formal letterhead, recipient information, and signature block.",
+  "research-paper":
+    "IEEE-style research paper template with two-column layout, abstract section, and bibliography support. Perfect for conference and journal submissions.",
+  "beamer-presentation":
+    "Professional Beamer presentation template with Madrid theme. Includes title slide, table of contents, and section formatting for academic presentations.",
+  "academic-cv":
+    "Comprehensive academic curriculum vitae template with sections for education, publications, research experience, teaching, and awards.",
+  resume:
+    "Modern one-page resume template with clean formatting. Ideal for job applications in tech, engineering, and professional fields.",
+  thesis:
+    "Complete PhD/Master's thesis template with multi-chapter structure, automatic table of contents, list of figures, bibliography, and appendices.",
+  "lab-report":
+    "Scientific lab report template with sections for abstract, introduction, methodology, results, discussion, and references.",
+  "cover-letter":
+    "Professional cover letter template with formal letterhead, recipient information, and signature block.",
 };
 
 function getTags(title: string, category: string) {
   const tags = [category];
   const t = title.toLowerCase();
-  
+
   if (t.includes("paper")) tags.push("Research");
   if (t.includes("presentation") || t.includes("beamer")) tags.push("Slides");
   if (t.includes("cv") || t.includes("resume")) tags.push("Career");
@@ -43,7 +51,7 @@ function getTags(title: string, category: string) {
   if (t.includes("report")) tags.push("Documentation");
   if (t.includes("letter")) tags.push("Correspondence");
   if (t.includes("thesis") || t.includes("dissertation")) tags.push("Graduate");
-  
+
   return tags;
 }
 
@@ -98,7 +106,8 @@ export default function TemplatePageClient({ dict, lang, slug }: TemplatePageCli
               </h1>
 
               <div className="flex flex-wrap gap-3 mb-8">
-                <button
+                <Button
+                  variant="gradient"
                   onClick={() =>
                     openInOctree({
                       latex: template.code,
@@ -106,11 +115,9 @@ export default function TemplatePageClient({ dict, lang, slug }: TemplatePageCli
                       source: "tools:templates",
                     })
                   }
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-gray-700 text-sm font-medium rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors"
                 >
-                  <OctreeLogo className="h-4 w-4" />
                   {t.openAsTemplate}
-                </button>
+                </Button>
                 <button
                   onClick={() => setShowSource(!showSource)}
                   className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-gray-700 text-sm font-medium rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors"
@@ -183,6 +190,11 @@ export default function TemplatePageClient({ dict, lang, slug }: TemplatePageCli
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="mt-16">
+          <OctreeCTA source={`templates:${slug}`} />
         </div>
       </div>
 

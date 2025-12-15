@@ -1,10 +1,10 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { Search, ExternalLink } from "lucide-react";
+import { Search, ExternalLink, Wrench, FileText, Sigma } from "lucide-react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
 import {
   Pagination,
   PaginationContent,
@@ -21,11 +21,12 @@ import {
   type TemplateCategory,
 } from "@/lib/templates";
 import { openInOctree } from "@/lib/open-in-octree";
-import { OctreeLogo } from "@/components/icons/octree-logo";
 import { RedditIcon } from "@/components/icons/reddit";
 import { DiscordIcon } from "@/components/icons/discord";
 import { GitHubIcon } from "@/components/icons/github";
 import type { Locale } from "../dictionaries";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const PDFPreview = dynamic(() => import("@/components/PDFPreview"), {
   ssr: false,
@@ -225,17 +226,15 @@ export default function TemplatesPageClient({ dict, lang }: TemplatesPageClientP
                       <button
                         key={cat.name}
                         onClick={() => handleCategoryChange(cat.name)}
-                        className={`w-full flex items-center justify-between px-3 py-2 text-sm rounded-lg transition-colors ${
-                          isActive
-                            ? "bg-gray-100 text-gray-900 font-medium"
-                            : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
-                        }`}
+                        className={`w-full flex items-center justify-between px-3 py-2 text-sm rounded-lg transition-colors ${isActive
+                          ? "bg-gray-100 text-gray-900 font-medium"
+                          : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+                          }`}
                       >
                         <span>{getCategoryLabel(cat.name)}</span>
                         <span
-                          className={`text-xs ${
-                            isActive ? "text-gray-700" : "text-gray-400"
-                          }`}
+                          className={`text-xs ${isActive ? "text-gray-700" : "text-gray-400"
+                            }`}
                         >
                           ({count})
                         </span>
@@ -288,7 +287,8 @@ export default function TemplatesPageClient({ dict, lang }: TemplatesPageClientP
                         >
                           {dict.common.view}
                         </Link>
-                        <button
+                        <Button
+                          variant="gradient"
                           onClick={() => {
                             openInOctree({
                               latex: template.code,
@@ -296,11 +296,9 @@ export default function TemplatesPageClient({ dict, lang }: TemplatesPageClientP
                               source: "tools:templates",
                             });
                           }}
-                          className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 bg-white text-gray-700 text-sm font-medium rounded-lg border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-colors cursor-pointer"
                         >
-                          <OctreeLogo className="h-4 w-4" />
                           {dict.common.open}
-                        </button>
+                        </Button>
                       </div>
                     </div>
                   </div>

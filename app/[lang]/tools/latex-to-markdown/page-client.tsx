@@ -7,6 +7,7 @@ import { cn } from '@/lib/utils';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import type { Locale } from '../../dictionaries';
+import { OctreeCTA } from '@/components/OctreeCTA';
 
 type Dictionary = Awaited<ReturnType<typeof import('../../dictionaries').getDictionary>>;
 
@@ -257,6 +258,11 @@ export default function LatexToMarkdownClient({ dict, lang }: LatexToMarkdownCli
             )}
           </div>
         </div>
+      </div>
+
+      {/* Call to Action */}
+      <div className="mt-16">
+        <OctreeCTA source="tools:latex-to-markdown" />
       </div>
     </div>
   );

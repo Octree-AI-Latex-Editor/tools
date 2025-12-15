@@ -15,6 +15,7 @@ import {
 import { openInOctree } from '@/lib/open-in-octree';
 import { CompileErrorModal } from '@/components/CompileErrorModal';
 import { useLocale } from '@/hooks/use-locale';
+import { OctreeCTA } from '@/components/OctreeCTA';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
 const PDFPreview = dynamic(() => import('@/components/PDFPreview'), { ssr: false });
@@ -633,6 +634,11 @@ export default function AIToolLayout({
                      </div>
                    )}
           </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="mt-16">
+          <OctreeCTA source="tools:ai" />
         </div>
       </div>
       </div>

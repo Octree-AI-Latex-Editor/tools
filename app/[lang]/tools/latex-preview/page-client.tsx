@@ -16,6 +16,7 @@ import {
 import { openInOctree } from '@/lib/open-in-octree';
 import { CompileErrorModal } from '@/components/CompileErrorModal';
 import type { Locale } from '../../dictionaries';
+import { OctreeCTA } from '@/components/OctreeCTA';
 
 type Dictionary = Awaited<ReturnType<typeof import('../../dictionaries').getDictionary>>;
 
@@ -227,6 +228,12 @@ export default function LatexPreviewClient({ dict, lang }: LatexPreviewClientPro
           </div>
         </div>
       </div>
+
+      {/* Call to Action */}
+      <div className="mt-16">
+        <OctreeCTA source="tools:latex-preview" />
+      </div>
+
       <CompileErrorModal
         isOpen={showCompileErrorModal}
         errorMessage={compileError}

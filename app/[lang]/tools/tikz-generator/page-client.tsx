@@ -16,6 +16,7 @@ import {
 import { openInOctree } from '@/lib/open-in-octree';
 import { CompileErrorModal } from '@/components/CompileErrorModal';
 import type { Locale } from '../../dictionaries';
+import { OctreeCTA } from '@/components/OctreeCTA';
 
 type Dictionary = Awaited<ReturnType<typeof import('../../dictionaries').getDictionary>>;
 
@@ -388,6 +389,11 @@ export default function TikzGeneratorClient({ dict, lang }: TikzGeneratorClientP
             )}
           </div>
         </div>
+
+        {/* Call to Action */}
+        <div className="mt-16">
+          <OctreeCTA source="tools:tikz-generator" />
+        </div>
       </div>
 
       <CompileErrorModal
@@ -395,7 +401,7 @@ export default function TikzGeneratorClient({ dict, lang }: TikzGeneratorClientP
         errorMessage={compileError}
         latex={latexCode}
         onClose={() => setShowCompileErrorModal(false)}
-        source="tools:tikz"
+        source="tools:tikz-generator"
         title="TikZ Diagram"
       />
     </div>

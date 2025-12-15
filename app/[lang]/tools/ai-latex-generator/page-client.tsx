@@ -23,6 +23,7 @@ import {
 } from '@/lib/editor-config';
 import { openInOctree } from '@/lib/open-in-octree';
 import { CompileErrorModal } from '@/components/CompileErrorModal';
+import { OctreeCTA } from '@/components/OctreeCTA';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
 const PDFPreview = dynamic(() => import('@/components/PDFPreview'), { ssr: false });
@@ -397,6 +398,11 @@ export default function AILatexGeneratorClient({ dict, lang }: AILatexGeneratorC
               </div>
             )}
           </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="mt-16">
+          <OctreeCTA source="tools:ai-latex-generator" />
         </div>
       </div>
 
