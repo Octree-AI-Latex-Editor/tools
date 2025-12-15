@@ -133,3 +133,52 @@ export const tools: Tool[] = [
     icon: FileDown,
   },
 ];
+
+// Type for dictionary with tool translations
+type ToolDictionary = {
+  toolsSpecific?: Record<string, { title: string; description: string }>;
+  toolsList?: Record<string, { title: string; description: string }>;
+};
+
+/**
+ * Get localized tools based on dictionary
+ * Falls back to English if translation is missing
+ */
+export function getLocalizedTools(dict?: ToolDictionary): Tool[] {
+  // Use toolsSpecific if available (existing structure), otherwise use toolsList
+  const translations = dict?.toolsSpecific || dict?.toolsList;
+  
+  if (!translations) {
+    return tools;
+  }
+
+  // Map href to dictionary key
+  const hrefToKey: Record<string, string> = {
+    '/tools/math-to-latex': 'imageToLatex',
+    '/tools/table-to-latex': 'tableToLatex',
+    '/tools/tikz-generator': 'tikzGenerator',
+    '/tools/image-to-tikz': 'imageToTikz',
+    '/tools/latex-preview': 'latexPreview',
+    '/tools/markdown-to-latex': 'markdownToLatex',
+    '/tools/citation-generator': 'citationGenerator',
+    '/tools/mathml-to-latex': 'mathmlToLatex',
+    '/tools/ai-latex-generator': 'aiLatexGenerator',
+    '/tools/html-to-latex': 'htmlToLatex',
+    '/tools/mermaid-to-latex': 'mermaidToLatex',
+    '/tools/pgfplots-generator': 'pgfplotsGenerator',
+    '/tools/latex-to-markdown': 'latexToMarkdown',
+    '/tools/equation-to-latex': 'equationToLatex',
+    '/tools/arxiv-to-latex': 'pdfToLatex', // Fallback for arxiv
+  };
+
+  return tools.map((tool) => {
+    const key = hrefToKey[tool.href];
+    const translation = key ? translations[key] : undefined;
+
+    return {
+      ...tool,
+      title: translation?.title || tool.title,
+      description: translation?.description || tool.description,
+    };
+  });
+}

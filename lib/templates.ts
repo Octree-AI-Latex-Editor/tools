@@ -5315,3 +5315,167 @@ S & M & T & W & T & F & S \\
   },
 ];
 
+// Type for dictionary with template translations
+type TemplateDictionary = {
+  templatesList?: Record<string, { title: string; description: string }>;
+  categories?: Record<string, string>;
+  templateCode?: {
+    placeholders?: {
+      authorName?: string;
+      yourName?: string;
+      department?: string;
+      universityName?: string;
+      email?: string;
+      presentationTitle?: string;
+      researchPaperTitle?: string;
+      courseName?: string;
+      instructorName?: string;
+      yourAddress?: string;
+      cityStateZip?: string;
+      phone?: string;
+      point1?: string;
+      point2?: string;
+      point3?: string;
+      contentGoesHere?: string;
+      summaryOfKeyPoints?: string;
+      [key: string]: string | undefined;
+    };
+  };
+};
+
+/**
+ * Localize LaTeX code by replacing English placeholders with localized versions
+ * This handles common placeholders in LaTeX templates like "Author Name", "University Name", etc.
+ */
+function localizeLatexCode(code: string, dict?: TemplateDictionary): string {
+  if (!dict?.templateCode?.placeholders) {
+    return code;
+  }
+
+  const placeholders = dict.templateCode.placeholders;
+  let localizedCode = code;
+
+  // Replace common placeholders - be careful with regex to avoid breaking LaTeX syntax
+  // Replace in title commands
+  if (placeholders.researchPaperTitle) {
+    localizedCode = localizedCode.replace(/\{Research Paper Title\}/g, `{${placeholders.researchPaperTitle}}`);
+  }
+  if (placeholders.presentationTitle) {
+    localizedCode = localizedCode.replace(/\{Presentation Title\}/g, `{${placeholders.presentationTitle}}`);
+  }
+  
+  // Replace author names (in various contexts)
+  if (placeholders.authorName) {
+    localizedCode = localizedCode.replace(/\\IEEEauthorblockN\{Author Name\}/g, `\\IEEEauthorblockN{${placeholders.authorName}}`);
+    localizedCode = localizedCode.replace(/\\author\{Author Name\}/g, `\\author{${placeholders.authorName}}`);
+  }
+  if (placeholders.yourName) {
+    localizedCode = localizedCode.replace(/\\author\{Your Name\}/g, `\\author{${placeholders.yourName}}`);
+    localizedCode = localizedCode.replace(/\{\\LARGE \\textbf\{Your Name\}\}/g, `{\\LARGE \\textbf{${placeholders.yourName}}}`);
+    localizedCode = localizedCode.replace(/\\signature\{Your Name\}/g, `\\signature{${placeholders.yourName}}`);
+  }
+  
+  // Replace department and university
+  if (placeholders.department) {
+    localizedCode = localizedCode.replace(/Department\\/g, `${placeholders.department}\\\\`);
+    localizedCode = localizedCode.replace(/Department \|/g, `${placeholders.department} |`);
+  }
+  if (placeholders.universityName) {
+    localizedCode = localizedCode.replace(/University Name\\/g, `${placeholders.universityName}\\\\`);
+    localizedCode = localizedCode.replace(/University Name/g, placeholders.universityName);
+    localizedCode = localizedCode.replace(/\\institute\{University Name\}/g, `\\institute{${placeholders.universityName}}`);
+  }
+  
+  // Replace email addresses
+  if (placeholders.email) {
+    localizedCode = localizedCode.replace(/author@university\.edu/g, placeholders.email);
+    localizedCode = localizedCode.replace(/your\.email@university\.edu/g, placeholders.email);
+    localizedCode = localizedCode.replace(/instructor@university\.edu/g, placeholders.email);
+    localizedCode = localizedCode.replace(/your\.email@example\.com/g, placeholders.email);
+    localizedCode = localizedCode.replace(/Email: author@university\.edu/g, `Email: ${placeholders.email}`);
+    localizedCode = localizedCode.replace(/Email: instructor@university\.edu/g, `Email: ${placeholders.email}`);
+  }
+  
+  // Replace other common placeholders
+  if (placeholders.courseName) {
+    localizedCode = localizedCode.replace(/\\textbf\{Course Name\}/g, `\\textbf{${placeholders.courseName}}`);
+  }
+  if (placeholders.instructorName) {
+    localizedCode = localizedCode.replace(/Instructor Name\\/g, `${placeholders.instructorName}\\\\`);
+    localizedCode = localizedCode.replace(/Email: instructor@university\.edu/g, `Email: ${placeholders.email || 'instructor@university.edu'}`);
+  }
+  if (placeholders.yourAddress) {
+    localizedCode = localizedCode.replace(/Your Address\\/g, `${placeholders.yourAddress}\\\\`);
+  }
+  if (placeholders.cityStateZip) {
+    localizedCode = localizedCode.replace(/City, State ZIP\\/g, `${placeholders.cityStateZip}\\\\`);
+  }
+  if (placeholders.phone) {
+    localizedCode = localizedCode.replace(/\(555\) 123-4567/g, placeholders.phone);
+  }
+  
+  // Replace list items
+  if (placeholders.point1) {
+    localizedCode = localizedCode.replace(/\\item Point 1/g, `\\item ${placeholders.point1}`);
+  }
+  if (placeholders.point2) {
+    localizedCode = localizedCode.replace(/\\item Point 2/g, `\\item ${placeholders.point2}`);
+  }
+  if (placeholders.point3) {
+    localizedCode = localizedCode.replace(/\\item Point 3/g, `\\item ${placeholders.point3}`);
+  }
+  
+  // Replace content placeholders
+  if (placeholders.contentGoesHere) {
+    localizedCode = localizedCode.replace(/Content goes here\./g, placeholders.contentGoesHere);
+  }
+  if (placeholders.summaryOfKeyPoints) {
+    localizedCode = localizedCode.replace(/Summary of key points\./g, placeholders.summaryOfKeyPoints);
+  }
+
+  return localizedCode;
+}
+
+/**
+ * Get localized templates based on dictionary
+ * Falls back to English if translation is missing
+ */
+export function getLocalizedTemplates(dict?: TemplateDictionary): Template[] {
+  if (!dict?.templatesList && !dict?.templateCode) {
+    return templates;
+  }
+
+  return templates.map((template) => {
+    const translation = dict.templatesList?.[template.slug];
+    const localizedCode = localizeLatexCode(template.code, dict);
+    
+    return {
+      ...template,
+      title: translation?.title || template.title,
+      description: translation?.description || template.description,
+      category: (dict.categories?.[template.category.toLowerCase()] || template.category) as TemplateCategory,
+      code: localizedCode,
+    };
+  });
+}
+
+/**
+ * Get localized template categories
+ */
+export function getLocalizedTemplateCategories(dict?: TemplateDictionary) {
+  if (!dict?.categories) {
+    return templateCategories;
+  }
+
+  return templateCategories.map((cat) => {
+    if (cat.name === "All Templates") {
+      return cat; // Keep "All Templates" as is or use dict.common.allTemplates if available
+    }
+    const translated = dict.categories?.[cat.name.toLowerCase()];
+    return {
+      ...cat,
+      name: (translated || cat.name) as TemplateCategory | "All Templates",
+    };
+  });
+}
+

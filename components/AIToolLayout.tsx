@@ -2,7 +2,6 @@
 
 import { useState, useCallback, useEffect } from 'react';
 import { Upload, Code2, Eye, Loader2, Download, ChevronDown, ArrowLeft } from 'lucide-react';
-import { DM_Sans } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import { OctreeLogo } from '@/components/icons/octree-logo';
 import dynamic from 'next/dynamic';
@@ -15,14 +14,10 @@ import {
 } from '@/lib/editor-config';
 import { openInOctree } from '@/lib/open-in-octree';
 import { CompileErrorModal } from '@/components/CompileErrorModal';
+import { useLocale } from '@/hooks/use-locale';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
 const PDFPreview = dynamic(() => import('@/components/PDFPreview'), { ssr: false });
-
-const dmSans = DM_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'],
-});
 
 interface AIToolLayoutProps {
   title: string;
@@ -57,6 +52,7 @@ export default function AIToolLayout({
   const [compileError, setCompileError] = useState<string>('');
   const [showCompileErrorModal, setShowCompileErrorModal] = useState(false);
   const [latestLatexDocument, setLatestLatexDocument] = useState<string>('');
+  const locale = useLocale();
 
   // Convert acceptedFormats to file accept attribute
   const getAcceptAttribute = () => {
@@ -365,13 +361,13 @@ export default function AIToolLayout({
 
   return (
     <>
-      <div className={cn("min-h-screen bg-gray-50", dmSans.className)}>
+      <div className="min-h-screen bg-gray-50">
         <div className="mx-auto max-w-7xl px-6 py-12">
           {/* Header with Back Button and Title */}
           <div className="mb-12">
             <div className="relative flex items-start justify-center mb-3">
               <Link
-                href="/"
+                href={`/${locale}`}
                 className="absolute left-0 inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
               >
                 <ArrowLeft className="h-5 w-5" />

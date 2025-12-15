@@ -33,8 +33,17 @@ export default function PDFPreview({
   }
 
   function onDocumentLoadError(error: Error) {
-    console.error("PDF load error:", error);
-    setError("Failed to load PDF");
+    // Suppress console errors for invalid PDFs - this is expected for some templates
+    // InvalidPDFException is common when PDF files don't exist or are corrupted
+    const isInvalidPDF = 
+      error.message?.includes("Invalid PDF") || 
+      error.message?.includes("InvalidPDFException") ||
+      error.name === "InvalidPDFException";
+    
+    if (!isInvalidPDF) {
+      console.error("PDF load error:", error);
+    }
+    setError("Preview unavailable");
     setIsLoading(false);
   }
 
@@ -60,39 +69,39 @@ export default function PDFPreview({
         </div>
       )}
 
-      {error && (
+      {error ? (
         <div className="flex flex-col items-center justify-center gap-2 p-4 w-full h-full min-h-[200px]">
-          <AlertCircle className="w-10 h-10 text-red-400" />
-          <p className="text-sm text-red-600 font-medium">{error}</p>
+          <AlertCircle className="w-10 h-10 text-gray-400" />
+          <p className="text-sm text-gray-500 font-medium">Preview unavailable</p>
         </div>
+      ) : (
+        <Document
+          file={pdfUrl}
+          onLoadSuccess={onDocumentLoadSuccess}
+          onLoadError={onDocumentLoadError}
+          className={cn(!compact && "shadow-lg", isLoading && "hidden")}
+          loading=""
+        >
+          {Array.from(new Array(pagesToRender), (el, index) => (
+            <Page
+              key={`page_${index + 1}`}
+              pageNumber={index + 1}
+              renderTextLayer={false}
+              renderAnnotationLayer={false}
+              className={cn("bg-white", compact ? "mb-2" : "mb-4 shadow-md")}
+              width={width}
+              loading={
+                <div
+                  className="flex items-center justify-center bg-gray-100"
+                  style={{ width, height: width * 1.4 }}
+                >
+                  <Loader2 className="size-8 animate-spin text-gray-400" />
+                </div>
+              }
+            />
+          ))}
+        </Document>
       )}
-
-      <Document
-        file={pdfUrl}
-        onLoadSuccess={onDocumentLoadSuccess}
-        onLoadError={onDocumentLoadError}
-        className={cn(!compact && "shadow-lg", isLoading && "hidden")}
-        loading=""
-      >
-        {Array.from(new Array(pagesToRender), (el, index) => (
-          <Page
-            key={`page_${index + 1}`}
-            pageNumber={index + 1}
-            renderTextLayer={false}
-            renderAnnotationLayer={false}
-            className={cn("bg-white", compact ? "mb-2" : "mb-4 shadow-md")}
-            width={width}
-            loading={
-              <div
-                className="flex items-center justify-center bg-gray-100"
-                style={{ width, height: width * 1.4 }}
-              >
-                <Loader2 className="size-8 animate-spin text-gray-400" />
-              </div>
-            }
-          />
-        ))}
-      </Document>
     </div>
   );
 }

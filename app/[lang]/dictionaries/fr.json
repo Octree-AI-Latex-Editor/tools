@@ -1,0 +1,431 @@
+{
+  "common": {
+    "backToTools": "Retour aux outils",
+    "tryNow": "Essayer maintenant",
+    "view": "Voir",
+    "open": "Ouvrir",
+    "openInOctree": "Ouvrir dans Octree",
+    "search": "Rechercher",
+    "searchTools": "Rechercher des outils...",
+    "searchTemplates": "Rechercher des modèles...",
+    "noResults": "Aucun résultat trouvé",
+    "loading": "Chargement...",
+    "processing": "Traitement en cours...",
+    "generating": "Génération...",
+    "compiling": "Compilation...",
+    "error": "Erreur",
+    "success": "Succès",
+    "close": "Fermer",
+    "copy": "Copier",
+    "copied": "Copié !",
+    "download": "Télécharger",
+    "export": "Exporter",
+    "exportAs": "Exporter en tant que",
+    "browseFiles": "parcourir les fichiers",
+    "dropFileHere": "Déposez votre fichier ici",
+    "fileUploaded": "Fichier téléchargé avec succès",
+    "categories": "Catégories",
+    "all": "Tous",
+    "tools": "Outils",
+    "templates": "Modèles",
+    "template": "modèle",
+    "templatesCount": "{count} modèle{plural}",
+    "starOnGitHub": "Étoile sur GitHub",
+    "joinUsOnReddit": "Rejoignez-nous sur Reddit",
+    "joinOurDiscord": "Rejoignez notre Discord"
+  },
+  "home": {
+    "title": "Outils et modèles LaTeX gratuits",
+    "description": "Convertissez des équations mathématiques manuscrites et des tableaux en LaTeX, générez des citations et explorez des modèles professionnels.",
+    "noToolsFound": "Aucun outil trouvé correspondant à votre recherche."
+  },
+  "templates": {
+    "title": "Outils et modèles LaTeX gratuits",
+    "description": "Modèles LaTeX professionnels pour articles académiques, présentations, CV et plus encore.",
+    "allTemplates": "Tous les modèles",
+    "noTemplatesFound": "Aucun modèle trouvé correspondant à votre recherche.",
+    "viewTemplate": "Voir le modèle"
+  },
+  "tools": {
+    "input": "ENTRÉE",
+    "output": "SORTIE",
+    "code": "CODE",
+    "preview": "APERÇU",
+    "yourHandwrittenNotes": "Vos notes manuscrites",
+    "cleanLatexCode": "Code LaTeX propre",
+    "uploadImageDescription": "Téléchargez une image contenant des expressions mathématiques",
+    "readyToCopy": "Prêt à copier dans n'importe quel éditeur LaTeX",
+    "editLatexCode": "Modifiez votre code LaTeX ici",
+    "livePreview": "Aperçu en direct de votre document",
+    "previewWillAppear": "L'aperçu apparaîtra ici...",
+    "generatedCodeWillAppear": "Le code généré apparaîtra ici...",
+    "compilingLatex": "Compilation de LaTeX...",
+    "generatingPreview": "Génération de l'aperçu...",
+    "aiThinking": "Le modèle IA réfléchit …",
+    "giveItAMoment": "Donnez-lui un moment pour créer votre diagramme TikZ.",
+    "codeStreaming": "Attendez pendant que le code arrive.",
+    "generatingPgfplots": "Génération du code pgfplots...",
+    "onlyCsvFiles": "Seuls les fichiers CSV sont pris en charge pour cet outil.",
+    "onlyImageFiles": "Seuls les fichiers image (JPEG, PNG) et les fichiers PDF sont pris en charge.",
+    "failedToProcess": "Échec du traitement de l'image. Veuillez réessayer.",
+    "failedToCompile": "Échec de la compilation de LaTeX.",
+    "failedToGenerate": "Échec de la génération de citation. Veuillez réessayer.",
+    "conversionFailed": "Échec de la conversion",
+    "exportAsLatex": "Exporter en LaTeX",
+    "exportAsPdf": "Exporter en PDF",
+    "exportAsImage": "Exporter en image"
+  },
+  "toolsSpecific": {
+    "imageToLatex": {
+      "title": "Image vers LaTeX",
+      "description": "Convertissez des images de mathématiques manuscrites et d'équations en code LaTeX propre"
+    },
+    "tikzGenerator": {
+      "title": "Générateur de diagrammes TikZ",
+      "description": "Décrivez votre diagramme et laissez l'IA générer le code TikZ",
+      "diagramDescription": "Description du diagramme",
+      "generatedTikzCode": "Code TikZ généré",
+      "placeholder": "Exemple : Dessinez un organigramme simple avec 3 nœuds reliés par des flèches. Le premier nœud doit dire 'Début', le second 'Processus' et le troisième 'Fin'."
+    },
+    "pgfplotsGenerator": {
+      "title": "Générateur Pgfplots",
+      "description": "Décrivez votre graphique et laissez l'IA générer le code pgfplots",
+      "plotDescription": "Description du graphique",
+      "generatedPgfplotsCode": "Code Pgfplots généré",
+      "placeholder": "Exemple : Créez un graphique linéaire montrant y = x^2 de x = -5 à x = 5, avec une ligne bleue et une grille. Ajoutez des étiquettes d'axes."
+    },
+    "mermaidToLatex": {
+      "title": "Convertisseur Mermaid vers LaTeX",
+      "description": "Convertissez des diagrammes Mermaid en code LaTeX",
+      "mermaidCode": "Code Mermaid",
+      "generatedLatexCode": "Code LaTeX généré"
+    },
+    "citationGenerator": {
+      "title": "Générateur de citations LaTeX",
+      "description": "Générez des citations BibTeX à partir de détails d'article, DOI ou URL",
+      "citationDetails": "Détails de la citation",
+      "enterDetails": "Entrez les détails de l'article, DOI ou URL",
+      "generatedBibtex": "BibTeX généré",
+      "preview": "Aperçu"
+    },
+    "latexPreview": {
+      "title": "Aperçu LaTeX",
+      "description": "Éditeur LaTeX en direct avec aperçu PDF instantané",
+      "latexEditor": "Éditeur LaTeX",
+      "pdfOutput": "Sortie PDF"
+    },
+    "aiLatexGenerator": {
+      "title": "Générateur LaTeX IA",
+      "description": "Générez du code LaTeX à partir de descriptions textuelles",
+      "descriptionLabel": "Description",
+      "enterDescription": "Entrez votre description ici"
+    },
+    "htmlToLatex": {
+      "title": "Convertisseur HTML vers LaTeX",
+      "description": "Convertissez le balisage HTML au format LaTeX",
+      "htmlCode": "Code HTML",
+      "generatedLatexCode": "Code LaTeX généré"
+    },
+    "markdownToLatex": {
+      "title": "Convertisseur Markdown vers LaTeX",
+      "description": "Convertissez des documents Markdown au format LaTeX",
+      "markdownCode": "Code Markdown",
+      "generatedLatexCode": "Code LaTeX généré"
+    },
+    "mathmlToLatex": {
+      "title": "Convertisseur MathML vers LaTeX",
+      "description": "Convertissez le balisage MathML au format LaTeX",
+      "mathmlCode": "Code MathML",
+      "generatedLatexCode": "Code LaTeX généré"
+    },
+    "latexToMarkdown": {
+      "title": "Convertisseur LaTeX vers Markdown",
+      "description": "Convertissez des documents ou extraits LaTeX en Markdown",
+      "latexCode": "Code LaTeX",
+      "generatedMarkdown": "Markdown généré"
+    },
+    "tableToLatex": {
+      "title": "Excel vers LaTeX",
+      "description": "Convertissez CSV, JSON, Excel en tableaux LaTeX",
+      "tableData": "Données du tableau",
+      "generatedLatexCode": "Code LaTeX généré"
+    },
+    "equationToLatex": {
+      "title": "Équation vers LaTeX",
+      "description": "Convertissez des équations mathématiques à partir de texte ou d'images en LaTeX",
+      "equationInput": "Entrée d'équation",
+      "generatedLatexCode": "Code LaTeX généré"
+    },
+    "imageToTikz": {
+      "title": "Image vers TikZ",
+      "description": "Convertissez des images en diagrammes TikZ avec l'IA",
+      "imageInput": "Entrée d'image",
+      "generatedTikzCode": "Code TikZ généré"
+    }
+  },
+  "categories": {
+    "academic": "Académique",
+    "professional": "Professionnel",
+    "creative": "Créatif",
+    "business": "Entreprise",
+    "education": "Éducation",
+    "presentations": "Présentations",
+    "resumeCv": "CV et Résumé",
+    "math": "Mathématiques",
+    "reports": "Rapports",
+    "letters": "Lettres",
+    "other": "Autre"
+  },
+  "templatesList": {
+    "research-paper": {
+      "title": "Article de recherche",
+      "description": "Modèle d'article de recherche style IEEE"
+    },
+    "beamer-presentation": {
+      "title": "Présentation Beamer",
+      "description": "Diapositives de présentation académique"
+    },
+    "academic-cv": {
+      "title": "CV académique",
+      "description": "Curriculum vitae académique professionnel"
+    },
+    "mathematical-document": {
+      "title": "Document mathématique",
+      "description": "Document riche en mathématiques avec théorèmes"
+    },
+    "lab-report": {
+      "title": "Rapport de laboratoire",
+      "description": "Modèle de rapport de laboratoire scientifique"
+    },
+    "book-chapter": {
+      "title": "Chapitre de livre",
+      "description": "Modèle de chapitre de livre ou de thèse"
+    },
+    "resume": {
+      "title": "Résumé",
+      "description": "Modèle de résumé professionnel"
+    },
+    "grading-rubric": {
+      "title": "Grille d'évaluation",
+      "description": "Modèle de critères d'évaluation et de notation"
+    },
+    "assignment": {
+      "title": "Devoir",
+      "description": "Modèle de devoir et de travail à domicile"
+    },
+    "worksheet": {
+      "title": "Feuille d'exercices",
+      "description": "Modèle de problèmes pratiques et d'exercices"
+    },
+    "homework": {
+      "title": "Modèle de devoir",
+      "description": "Devoir structuré"
+    },
+    "poster": {
+      "title": "Affiche de recherche",
+      "description": "Modèle d'affiche de conférence académique"
+    },
+    "thesis": {
+      "title": "Thèse de doctorat",
+      "description": "Modèle de thèse complet avec chapitres"
+    },
+    "letter": {
+      "title": "Lettre formelle",
+      "description": "Modèle de lettre professionnelle"
+    },
+    "algorithm": {
+      "title": "Pseudocode d'algorithme",
+      "description": "Documentation d'algorithme avec pseudocode"
+    },
+    "cover-letter": {
+      "title": "Lettre de motivation",
+      "description": "Lettre de motivation académique et professionnelle"
+    },
+    "journal-article": {
+      "title": "Article de revue",
+      "description": "Modèle d'article de revue académique avec sections"
+    },
+    "syllabus": {
+      "title": "Programme de cours",
+      "description": "Modèle de programme de cours complet"
+    },
+    "research-proposal": {
+      "title": "Proposition de recherche",
+      "description": "Modèle de proposition de recherche et de subvention"
+    },
+    "essay": {
+      "title": "Dissertation académique",
+      "description": "Dissertation structurée avec argumentation et analyse"
+    },
+    "research-statement": {
+      "title": "Déclaration de recherche",
+      "description": "Déclaration de recherche académique pour candidatures"
+    },
+    "dissertation": {
+      "title": "Dissertation",
+      "description": "Modèle de dissertation de doctorat complet"
+    },
+    "white-paper": {
+      "title": "Livre blanc",
+      "description": "Modèle de livre blanc professionnel"
+    },
+    "leaflet": {
+      "title": "Dépliant/Brochure",
+      "description": "Modèle de dépliant marketing professionnel"
+    },
+    "technical-report": {
+      "title": "Rapport technique",
+      "description": "Modèle de rapport de recherche technique"
+    },
+    "math-exercises": {
+      "title": "Exercices de mathématiques",
+      "description": "Problèmes pratiques et exercices de mathématiques"
+    },
+    "math-notes": {
+      "title": "Notes de mathématiques",
+      "description": "Notes de cours structurées pour les cours de mathématiques"
+    },
+    "math-exam": {
+      "title": "Examen de mathématiques",
+      "description": "Modèle d'examen de mathématiques formel"
+    },
+    "math-problem-set": {
+      "title": "Série de problèmes de mathématiques",
+      "description": "Devoirs de série de problèmes hebdomadaires en mathématiques"
+    },
+    "math-cheat-sheet": {
+      "title": "Aide-mémoire de mathématiques",
+      "description": "Feuille de référence compacte pour formules et théorèmes"
+    },
+    "lecture-notes": {
+      "title": "Notes de cours",
+      "description": "Modèle de notes de cours académiques propres"
+    },
+    "quiz-template": {
+      "title": "Modèle de quiz",
+      "description": "Modèle de quiz ou de test court"
+    },
+    "formula-sheet": {
+      "title": "Feuille de formules",
+      "description": "Feuille de référence pour formules importantes"
+    },
+    "project-report": {
+      "title": "Rapport de projet",
+      "description": "Rapport de projet professionnel avec chapitres et sections"
+    },
+    "article-template": {
+      "title": "Modèle d'article",
+      "description": "Article scientifique avec résumé et sections"
+    },
+    "statement-of-purpose": {
+      "title": "Déclaration d'intention",
+      "description": "Modèle de déclaration d'intention pour candidature en études supérieures"
+    },
+    "literature-review": {
+      "title": "Revue de littérature",
+      "description": "Revue de littérature académique avec citations"
+    },
+    "meeting-minutes": {
+      "title": "Procès-verbal de réunion",
+      "description": "Modèle de procès-verbal et de notes de réunion professionnel"
+    },
+    "certificate": {
+      "title": "Certificat",
+      "description": "Modèle de certificat de récompense ou d'achèvement"
+    },
+    "invoice": {
+      "title": "Facture",
+      "description": "Facture professionnelle pour services ou produits"
+    },
+    "grant-proposal": {
+      "title": "Proposition de subvention",
+      "description": "Modèle de proposition de subvention de recherche"
+    },
+    "letter-of-recommendation": {
+      "title": "Lettre de recommandation",
+      "description": "Modèle de lettre de recommandation professionnelle"
+    },
+    "motivation-letter": {
+      "title": "Lettre de motivation",
+      "description": "Modèle de lettre de motivation académique ou professionnelle"
+    },
+    "business-plan": {
+      "title": "Plan d'affaires",
+      "description": "Modèle de plan d'affaires professionnel"
+    },
+    "business-report": {
+      "title": "Rapport d'entreprise",
+      "description": "Modèle de rapport d'entreprise"
+    },
+    "scientific-report": {
+      "title": "Rapport scientifique",
+      "description": "Modèle de rapport de recherche scientifique"
+    },
+    "internship-report": {
+      "title": "Rapport de stage",
+      "description": "Modèle de rapport de stage étudiant"
+    },
+    "newsletter": {
+      "title": "Bulletin d'information",
+      "description": "Modèle de bulletin d'information professionnel"
+    },
+    "questionnaire": {
+      "title": "Questionnaire",
+      "description": "Modèle d'enquête et de questionnaire de recherche"
+    },
+    "table-template": {
+      "title": "Modèle de tableau",
+      "description": "Mises en page et formatage de tableaux professionnels"
+    },
+    "bibliography": {
+      "title": "Bibliographie",
+      "description": "Modèle de bibliographie et de références autonome"
+    },
+    "memo": {
+      "title": "Mémorandum",
+      "description": "Modèle de mémorandum professionnel"
+    },
+    "manuscript": {
+      "title": "Manuscrit",
+      "description": "Modèle de manuscrit de livre pour romans et non-fiction"
+    },
+    "recipe-book": {
+      "title": "Livre de recettes",
+      "description": "Modèle de livre de cuisine et de collection de recettes"
+    },
+    "flyer": {
+      "title": "Dépliant",
+      "description": "Modèle de dépliant marketing et promotionnel d'une page"
+    },
+    "business-card": {
+      "title": "Carte de visite",
+      "description": "Modèle de carte de visite professionnelle"
+    },
+    "calendar": {
+      "title": "Calendrier",
+      "description": "Modèle de calendrier mensuel et annuel"
+    }
+  },
+  "templateCode": {
+    "placeholders": {
+      "authorName": "Nom de l'auteur",
+      "yourName": "Votre nom",
+      "department": "Département",
+      "universityName": "Nom de l'université",
+      "email": "auteur@universite.edu",
+      "presentationTitle": "Titre de la présentation",
+      "researchPaperTitle": "Titre de l'article de recherche",
+      "courseName": "Nom du cours",
+      "instructorName": "Nom de l'instructeur",
+      "yourAddress": "Votre adresse",
+      "cityStateZip": "Ville, Code postal",
+      "phone": "(555) 123-4567",
+      "point1": "Point 1",
+      "point2": "Point 2",
+      "point3": "Point 3",
+      "contentGoesHere": "Le contenu va ici.",
+      "summaryOfKeyPoints": "Résumé des points clés."
+    }
+  }
+}
+

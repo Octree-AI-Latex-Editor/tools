@@ -1,12 +1,6 @@
 import Link from "next/link";
 import { OctreeLogo } from '@/components/icons/octree-logo';
-import { DM_Sans } from 'next/font/google';
 import { cn } from '@/lib/utils';
-
-const dmSans = DM_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'],
-});
 
 export default function Header() {
   return (
@@ -17,10 +11,7 @@ export default function Header() {
             <Link href="https://tools.useoctree.com" className="flex items-center space-x-2">
               <OctreeLogo className="h-7 w-7" />
               <span
-                className={cn(
-                  'text-lg font-medium tracking-tight text-neutral-900',
-                  dmSans.className
-                )}
+                className="text-lg font-medium tracking-tight text-neutral-900"
               >
                 Octree
               </span>
