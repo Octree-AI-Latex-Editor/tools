@@ -75,12 +75,13 @@ export const greekSymbols: SymbolItem[] = [
 ];
 
 export const arrowSymbols: SymbolItem[] = [
+    { name: "Left Arrow", latex: "\\leftarrow" },
     { name: "Right Arrow", latex: "\\rightarrow" },
     { name: "Up Arrow", latex: "\\uparrow" },
     { name: "Long Left Arrow", latex: "\\longleftarrow" },
     { name: "Long Right Arrow", latex: "\\longrightarrow" },
     { name: "Down Arrow", latex: "\\downarrow" },
-    { name: "Left Arrow", latex: "\\leftarrow" },
+    { name: "Left Arrow (Double)", latex: "\\Leftarrow" },
     { name: "Right Arrow (Double)", latex: "\\Rightarrow" },
     { name: "Up Arrow (Double)", latex: "\\Uparrow" },
     { name: "Long Left Arrow (Double)", latex: "\\Longleftarrow" },
@@ -116,6 +117,11 @@ export const latinSymbols: SymbolItem[] = [
     { name: "ȯ", latex: "\\dot{o}" },
     { name: "ŏ", latex: "\\breve{o}" },
     { name: "ǒ", latex: "\\check{o}" },
+    { name: "ő", latex: "\\H{o}" },
+    { name: "o̧", latex: "\\text{o̧}" },
+    { name: "ọ", latex: "\\text{ọ}" },
+    { name: "o̲", latex: "\\underline{o}" },
+    { name: "oo", latex: "o\\!\\!-\\!\\!o" },
     { name: "œ", latex: "\\text{œ}" },
     { name: "Œ", latex: "\\text{Œ}" },
     { name: "æ", latex: "\\text{æ}" },
@@ -128,9 +134,6 @@ export const latinSymbols: SymbolItem[] = [
     { name: "Ł", latex: "\\text{Ł}" },
     { name: "ı", latex: "\\imath" },
     { name: "ȷ", latex: "\\jmath" },
-    { name: "ß", latex: "\\text{ß}" },
-    { name: "ñ", latex: "\\tilde{n}" },
-    { name: "Ñ", latex: "\\tilde{N}" },
-    { name: "ç", latex: "\\text{ç}" },
-    { name: "Ç", latex: "\\text{Ç}" },
+    { name: "¿", latex: "\\text{¿}" },
+    { name: "¡", latex: "\\text{¡}" },
 ];
