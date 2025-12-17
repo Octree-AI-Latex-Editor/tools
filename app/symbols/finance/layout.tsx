@@ -4,6 +4,11 @@ export const metadata: Metadata = {
   title: "LaTeX Currency & Finance Symbols - Dollar, Euro, Formulas | Free Symbol Reference",
   description: "Complete list of LaTeX currency and finance symbols. Copy-paste $, €, £, ¥, ₹, ₿, %, NPV, IRR, compound interest formulas with LaTeX commands.",
   keywords: [
+    // Core keywords
+    "latex symbols",
+    "symbol copy paste",
+    "unicode math symbols",
+    // Finance keywords
     "latex currency symbols",
     "latex finance symbols",
     "latex dollar sign",
@@ -21,6 +26,8 @@ export const metadata: Metadata = {
     "latex summation finance",
     "latex interest rate",
     "money symbols latex",
+    "academic symbols",
+    "research symbols",
   ],
   openGraph: {
     title: "LaTeX Currency & Finance Symbols - Complete Symbol Reference",
@@ -35,4 +42,3 @@ export default function FinanceLayout({
 }) {
   return <>{children}</>;
 }
-

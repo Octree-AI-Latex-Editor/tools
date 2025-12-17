@@ -4,6 +4,18 @@ export const metadata: Metadata = {
   title: "LaTeX Probability & Statistics Symbols - Expectation, Variance | Free Symbol Reference",
   description: "Complete list of LaTeX probability and statistics symbols. Copy-paste P(A), E[X], Var, σ, μ, ~, ⊥, binomial coefficients with LaTeX commands.",
   keywords: [
+    // Probability & statistics keywords
+    "probability symbols",
+    "statistics symbols",
+    "expectation symbol",
+    "variance symbol",
+    "standard deviation symbol",
+    "conditional probability symbol",
+    "distribution symbols",
+    "random variable notation",
+    "covariance symbol",
+    "correlation symbol",
+    // LaTeX specific
     "latex probability",
     "latex statistics",
     "latex expectation",
@@ -22,6 +34,8 @@ export const metadata: Metadata = {
     "latex conditional probability",
     "binom latex",
     "latex binomial coefficient",
+    "math symbols",
+    "scientific symbols",
   ],
   openGraph: {
     title: "LaTeX Probability & Statistics Symbols - Complete Symbol Reference",
@@ -36,4 +50,3 @@ export default function ProbabilityLayout({
 }) {
   return <>{children}</>;
 }
-

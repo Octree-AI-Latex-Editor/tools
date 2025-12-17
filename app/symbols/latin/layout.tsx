@@ -4,6 +4,12 @@ export const metadata: Metadata = {
   title: "LaTeX Latin Letters & Accents - Special Characters | Free Symbol Reference",
   description: "Complete list of LaTeX Latin letters and accented characters. Copy-paste ö, é, ñ, ç, å, ø, æ, œ and special Latin characters with LaTeX commands.",
   keywords: [
+    // Core keywords
+    "latex symbols",
+    "symbol copy paste",
+    "unicode math symbols",
+    "academic symbols",
+    // Latin letter keywords
     "latex accented letters",
     "latex special characters",
     "latex umlaut",
@@ -22,6 +28,8 @@ export const metadata: Metadata = {
     "latex o slash",
     "imath jmath latex",
     "dotless i latex",
+    "how to type math symbols",
+    "how to write symbols in latex",
   ],
   openGraph: {
     title: "LaTeX Latin Letters & Accents - Complete Symbol Reference",
@@ -36,4 +44,3 @@ export default function LatinLayout({
 }) {
   return <>{children}</>;
 }
-

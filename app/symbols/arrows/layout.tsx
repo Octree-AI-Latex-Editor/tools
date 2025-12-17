@@ -4,6 +4,12 @@ export const metadata: Metadata = {
   title: "LaTeX Arrow Symbols - Left, Right, Double Arrows & More | Free Symbol Reference",
   description: "Complete list of LaTeX arrow symbols. Copy-paste →, ←, ↔, ⇒, ⇐, ⇔, ↑, ↓, ↗, ↘ and all directional arrows with LaTeX commands.",
   keywords: [
+    // Core keywords
+    "latex symbols",
+    "math symbols",
+    "symbol copy paste",
+    "unicode math symbols",
+    // Arrow keywords
     "latex arrows",
     "latex arrow symbols",
     "latex right arrow",
@@ -22,6 +28,8 @@ export const metadata: Metadata = {
     "latex harpoon",
     "latex hook arrow",
     "directional arrows latex",
+    "inference symbols",
+    "logical equivalence symbol",
   ],
   openGraph: {
     title: "LaTeX Arrow Symbols - Complete Symbol Reference",
@@ -36,4 +44,3 @@ export default function ArrowsLayout({
 }) {
   return <>{children}</>;
 }
-

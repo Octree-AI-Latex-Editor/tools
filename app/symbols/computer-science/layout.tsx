@@ -4,6 +4,16 @@ export const metadata: Metadata = {
   title: "LaTeX Computer Science Symbols - Big O, Logic, Algorithms | Free Symbol Reference",
   description: "Complete list of LaTeX computer science symbols. Copy-paste O(n), Ω(n), Θ(n), :=, ≡, ⊕, ∧, ∨, ⌊x⌋, ⌈x⌉ with LaTeX commands.",
   keywords: [
+    // Computer science keywords
+    "computer science symbols",
+    "algorithm symbols",
+    "big o notation symbols",
+    "complexity notation symbols",
+    "logical symbols cs",
+    "programming math symbols",
+    "lambda calculus symbols",
+    "recursion notation symbols",
+    // LaTeX specific
     "latex computer science",
     "latex big o notation",
     "latex algorithm symbols",
@@ -22,6 +32,7 @@ export const metadata: Metadata = {
     "land lor latex",
     "latex logarithm",
     "latex natural log",
+    "academic symbols",
   ],
   openGraph: {
     title: "LaTeX Computer Science Symbols - Complete Symbol Reference",
@@ -36,4 +47,3 @@ export default function ComputerScienceLayout({
 }) {
   return <>{children}</>;
 }
-

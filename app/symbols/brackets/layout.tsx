@@ -4,6 +4,17 @@ export const metadata: Metadata = {
   title: "LaTeX Brackets & Delimiters - Angle Brackets, Floor, Ceiling, Norms | Free Symbol Reference",
   description: "Complete list of LaTeX bracket and delimiter symbols. Copy-paste angle brackets ⟨⟩, floor ⌊⌋, ceiling ⌈⌉, norms ‖‖, double brackets ⟦⟧, and all delimiter pairs with LaTeX code.",
   keywords: [
+    // Brackets & delimiters keywords
+    "bracket symbols",
+    "parentheses symbols",
+    "delimiter symbols",
+    "angle bracket symbol",
+    "floor symbol",
+    "ceiling symbol",
+    "absolute value symbol",
+    "norm symbol",
+    "double bracket symbol",
+    // LaTeX specific
     "latex brackets",
     "latex delimiters",
     "latex angle brackets",
@@ -18,11 +29,11 @@ export const metadata: Metadata = {
     "latex left right",
     "latex big brackets",
     "math delimiters latex",
-    "bracket symbols latex",
     "latex parentheses",
     "latex curly braces",
     "latex vertical bar",
-    "absolute value latex",
+    "math symbols copy paste",
+    "unicode math symbols",
   ],
   openGraph: {
     title: "LaTeX Brackets & Delimiters - Complete Symbol Reference",
@@ -37,4 +48,3 @@ export default function BracketsLayout({
 }) {
   return <>{children}</>;
 }
-

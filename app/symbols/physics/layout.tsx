@@ -4,6 +4,17 @@ export const metadata: Metadata = {
   title: "LaTeX Physics Symbols - Quantum Mechanics, Vectors, Tensors | Free Symbol Reference",
   description: "Complete list of LaTeX physics symbols. Copy-paste ℏ, ⟨ψ|, |ψ⟩, ∇, ∇², □, Lagrangian, Hamiltonian with LaTeX commands.",
   keywords: [
+    // Physics keywords
+    "physics symbols",
+    "quantum mechanics symbols",
+    "vector field symbols",
+    "physical constants symbols",
+    "planck constant symbol",
+    "h bar symbol",
+    "electric field symbol",
+    "magnetic field symbol",
+    "wave function symbol",
+    // LaTeX specific
     "latex physics symbols",
     "latex quantum mechanics",
     "latex bra ket",
@@ -22,6 +33,8 @@ export const metadata: Metadata = {
     "latex divergence curl",
     "nabla cdot times latex",
     "latex d'alembertian",
+    "scientific symbols",
+    "research symbols",
   ],
   openGraph: {
     title: "LaTeX Physics Symbols - Complete Symbol Reference",
@@ -36,4 +49,3 @@ export default function PhysicsLayout({
 }) {
   return <>{children}</>;
 }
-

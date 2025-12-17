@@ -4,6 +4,11 @@ export const metadata: Metadata = {
   title: "LaTeX Number Theory Symbols - Divisibility, Modular Arithmetic | Free Symbol Reference",
   description: "Complete list of LaTeX number theory symbols. Copy-paste |, ∤, gcd, lcm, ≡, φ(n), Legendre symbol with LaTeX commands.",
   keywords: [
+    // Core keywords
+    "math symbols",
+    "latex symbols",
+    "academic symbols",
+    // Number theory keywords
     "latex number theory",
     "latex divisibility",
     "latex modular arithmetic",
@@ -21,6 +26,8 @@ export const metadata: Metadata = {
     "latex mobius function",
     "latex divisor function",
     "latex fractional part",
+    "mathematical symbols list",
+    "complete list of latex symbols",
   ],
   openGraph: {
     title: "LaTeX Number Theory Symbols - Complete Symbol Reference",
@@ -35,4 +42,3 @@ export default function NumberTheoryLayout({
 }) {
   return <>{children}</>;
 }
-

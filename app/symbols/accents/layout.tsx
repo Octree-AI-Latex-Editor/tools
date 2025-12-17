@@ -4,7 +4,17 @@ export const metadata: Metadata = {
   title: "LaTeX Accents & Modifiers - Hat, Tilde, Vector, Bar Symbols | Free Symbol Reference",
   description: "Complete list of LaTeX accent and modifier symbols. Copy-paste hat ˆ, tilde ˜, dot ˙, bar ¯, vector arrows →, overbrace, underbrace with LaTeX code for mathematical notation.",
   keywords: [
+    // Accents & modifiers keywords
+    "math accents",
     "latex accents",
+    "vector arrow symbol",
+    "hat symbol math",
+    "tilde symbol math",
+    "dot notation symbol",
+    "bar notation symbol",
+    "overline symbol",
+    "underline symbol",
+    // LaTeX specific
     "latex modifiers",
     "latex hat symbol",
     "latex tilde",
@@ -24,10 +34,10 @@ export const metadata: Metadata = {
     "widetilde latex",
     "overrightarrow latex",
     "ddot latex",
-    "latex acute grave",
-    "latex breve check",
     "boxed latex",
     "cancel latex",
+    "math symbols",
+    "symbol copy paste",
   ],
   openGraph: {
     title: "LaTeX Accents & Modifiers - Complete Symbol Reference",
@@ -42,4 +52,3 @@ export default function AccentsLayout({
 }) {
   return <>{children}</>;
 }
-

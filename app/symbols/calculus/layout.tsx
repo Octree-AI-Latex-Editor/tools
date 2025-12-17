@@ -4,6 +4,18 @@ export const metadata: Metadata = {
   title: "LaTeX Calculus Symbols - Derivatives, Integrals, Limits | Free Symbol Reference",
   description: "Complete list of LaTeX calculus and analysis symbols. Copy-paste ∂, ∇, ∫, ∬, ∮, limits, derivatives, summations with LaTeX commands.",
   keywords: [
+    // Calculus & analysis keywords
+    "calculus symbols",
+    "derivative symbols",
+    "integral symbols",
+    "partial derivative symbol",
+    "gradient symbol",
+    "divergence symbol",
+    "laplacian symbol",
+    "limit notation symbols",
+    "summation symbol",
+    "product notation symbol",
+    // LaTeX specific
     "latex calculus",
     "latex derivative",
     "latex integral",
@@ -22,6 +34,8 @@ export const metadata: Metadata = {
     "frac d dx latex",
     "latex infinity",
     "latex contour integral",
+    "math symbols",
+    "scientific symbols",
   ],
   openGraph: {
     title: "LaTeX Calculus Symbols - Complete Symbol Reference",
@@ -36,4 +50,3 @@ export default function CalculusLayout({
 }) {
   return <>{children}</>;
 }
-

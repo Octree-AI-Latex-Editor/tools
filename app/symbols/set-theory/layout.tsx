@@ -4,14 +4,23 @@ export const metadata: Metadata = {
   title: "LaTeX Set Theory Symbols - Union, Intersection, Subset | Free Symbol Reference",
   description: "Complete list of LaTeX set theory symbols. Copy-paste ∅, ∈, ∉, ⊂, ⊆, ∪, ∩, ℕ, ℤ, ℚ, ℝ, ℂ and all set notation with LaTeX commands.",
   keywords: [
+    // Set theory keywords
+    "set notation symbols",
+    "set theory symbols",
+    "empty set symbol",
+    "element of symbol",
+    "not element of symbol",
+    "union symbol",
+    "intersection symbol",
+    "power set symbol",
+    "cardinality symbol",
+    "set builder notation",
+    "subset symbol",
+    "superset symbol",
+    "set membership symbol",
+    "belongs to symbol",
+    // LaTeX specific
     "latex set theory",
-    "latex set symbols",
-    "latex empty set",
-    "latex element of",
-    "latex subset",
-    "latex union",
-    "latex intersection",
-    "latex superset",
     "emptyset latex",
     "in notin latex",
     "cup cap latex",
@@ -21,7 +30,10 @@ export const metadata: Metadata = {
     "latex real numbers",
     "mathbb latex",
     "latex number sets",
-    "set notation latex",
+    "varnothing latex",
+    "latex element symbol",
+    "unicode math symbols",
+    "copy math symbols",
   ],
   openGraph: {
     title: "LaTeX Set Theory Symbols - Complete Symbol Reference",
@@ -36,4 +48,3 @@ export default function SetTheoryLayout({
 }) {
   return <>{children}</>;
 }
-
