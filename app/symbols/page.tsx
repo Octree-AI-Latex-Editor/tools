@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import {
@@ -45,6 +45,14 @@ import {
 } from "lucide-react";
 import { SymbolCard } from "@/components/SymbolCard";
 import {
+    Pagination,
+    PaginationContent,
+    PaginationItem,
+    PaginationLink,
+    PaginationNext,
+    PaginationPrevious,
+} from "@/components/ui/pagination";
+import {
     mathSymbols,
     greekSymbols,
     arrowSymbols,
@@ -83,6 +91,8 @@ import {
     modalSymbols,
     gameTheorySymbols,
 } from "@/lib/symbols";
+
+const ITEMS_PER_PAGE = 12;
 
 const categories = [
     {
@@ -359,6 +369,7 @@ const uniqueSymbols = allSymbols.filter(
 function SymbolsContent() {
     const searchParams = useSearchParams();
     const searchQuery = searchParams.get("q") || "";
+    const [currentPage, setCurrentPage] = useState(1);
 
     // If there's a search query, show filtered symbols
     if (searchQuery) {
@@ -367,7 +378,7 @@ function SymbolsContent() {
             symbol.latex.toLowerCase().includes(searchQuery.toLowerCase())
         );
 
-    return (
+        return (
             <>
                 <div className="flex items-center justify-between mb-6">
                     <h2 className="text-lg font-semibold text-gray-900">
@@ -383,7 +394,7 @@ function SymbolsContent() {
                         {filteredSymbols.map((symbol) => (
                             <SymbolCard key={symbol.latex} latex={symbol.latex} name={symbol.name} />
                         ))}
-                </div>
+                    </div>
                 ) : (
                     <div className="text-center py-12">
                         <p className="text-gray-500">
@@ -395,36 +406,89 @@ function SymbolsContent() {
         );
     }
 
-    // Otherwise show category cards
+    // Pagination for categories
+    const totalPages = Math.ceil(categories.length / ITEMS_PER_PAGE);
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const endIndex = startIndex + ITEMS_PER_PAGE;
+    const paginatedCategories = categories.slice(startIndex, endIndex);
+
+    // Otherwise show category cards with pagination
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto pb-12">
-            {categories.map((category) => {
-                const Icon = category.icon;
-                return (
-            <Link
-                        key={category.href}
-                        href={category.href}
-                className="group flex flex-col bg-white border border-gray-200 rounded-xl p-6 hover:shadow-md hover:border-gray-300 transition-all duration-200 h-full"
-            >
-                <div className="flex items-start justify-between mb-4">
-                            <Icon className="size-6 text-gray-900" />
+        <>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                {paginatedCategories.map((category) => {
+                    const Icon = category.icon;
+                    return (
+                        <Link
+                            key={category.href}
+                            href={category.href}
+                            className="group flex flex-col bg-white border border-gray-200 rounded-xl p-6 hover:shadow-md hover:border-gray-300 transition-all duration-200 h-full"
+                        >
+                            <div className="flex items-start justify-between mb-4">
+                                <Icon className="size-6 text-gray-900" />
+                            </div>
+                            <h3 className="text-base font-semibold text-gray-900 mb-2">
+                                {category.title}
+                            </h3>
+                            <p className="text-sm text-gray-500 mb-4 line-clamp-2 flex-grow">
+                                {category.description}
+                            </p>
+                            <span className="inline-flex items-center text-blue-600 text-sm font-medium transition-all w-fit">
+                                View Symbols
+                                <span className="w-0 overflow-hidden transition-all duration-200 group-hover:w-6 group-hover:ml-1">
+                                    <ArrowRight className="size-4 opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
+                                </span>
+                            </span>
+                        </Link>
+                    );
+                })}
+            </div>
+
+            {totalPages > 1 && (
+                <div className="mt-12 flex justify-center pb-12">
+                    <Pagination>
+                        <PaginationContent>
+                            <PaginationItem>
+                                <PaginationPrevious
+                                    onClick={() =>
+                                        currentPage > 1 && setCurrentPage(currentPage - 1)
+                                    }
+                                    className={
+                                        currentPage === 1
+                                            ? "pointer-events-none opacity-50"
+                                            : "cursor-pointer"
+                                    }
+                                />
+                            </PaginationItem>
+                            {[...Array(totalPages)].map((_, i) => (
+                                <PaginationItem key={i + 1}>
+                                    <PaginationLink
+                                        onClick={() => setCurrentPage(i + 1)}
+                                        isActive={currentPage === i + 1}
+                                        className="cursor-pointer"
+                                    >
+                                        {i + 1}
+                                    </PaginationLink>
+                                </PaginationItem>
+                            ))}
+                            <PaginationItem>
+                                <PaginationNext
+                                    onClick={() =>
+                                        currentPage < totalPages &&
+                                        setCurrentPage(currentPage + 1)
+                                    }
+                                    className={
+                                        currentPage === totalPages
+                                            ? "pointer-events-none opacity-50"
+                                            : "cursor-pointer"
+                                    }
+                                />
+                            </PaginationItem>
+                        </PaginationContent>
+                    </Pagination>
                 </div>
-                <h3 className="text-base font-semibold text-gray-900 mb-2">
-                            {category.title}
-                </h3>
-                <p className="text-sm text-gray-500 mb-4 line-clamp-2 flex-grow">
-                            {category.description}
-                </p>
-                <span className="inline-flex items-center text-blue-600 text-sm font-medium transition-all w-fit">
-                    View Symbols
-                    <span className="w-0 overflow-hidden transition-all duration-200 group-hover:w-6 group-hover:ml-1">
-                        <ArrowRight className="size-4 opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
-                    </span>
-                </span>
-            </Link>
-                );
-            })}
-        </div>
+            )}
+        </>
     );
 }
 
