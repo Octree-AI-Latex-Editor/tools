@@ -4,7 +4,7 @@ import { Suspense } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
 
-import { Search } from "lucide-react";
+import { Search, ArrowLeft } from "lucide-react";
 import { GitHubIcon } from "@/components/icons/github";
 import { RedditIcon } from "@/components/icons/reddit";
 import { DiscordIcon } from "@/components/icons/discord";
@@ -44,62 +44,69 @@ export default function SymbolsLayout({
     return (
         <div className="min-h-screen bg-gray-50">
             <div className="bg-gradient-to-b from-gray-100 to-gray-50 pt-16 pb-12">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <div className="flex items-center justify-center gap-2 mb-6">
-                        <Link
-                            href="https://github.com/Octree-AI-Latex-Editor"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-200 rounded-lg transition-colors"
-                            title="Star on GitHub"
-                        >
-                            <GitHubIcon className="h-5 w-5" />
-                        </Link>
-                        <Link
-                            href="https://www.reddit.com/r/Octree/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-200 rounded-lg transition-colors"
-                            title="Join us on Reddit"
-                        >
-                            <RedditIcon className="h-5 w-5" />
-                        </Link>
-                        <Link
-                            href="https://discord.gg/hGB7jnxB3m"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-200 rounded-lg transition-colors"
-                            title="Join our Discord"
-                        >
-                            <DiscordIcon className="h-5 w-5" />
-                        </Link>
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="relative flex items-center justify-center mb-6">
+                        {pathname !== "/symbols" && (
+                            <Link
+                                href="/symbols"
+                                className="absolute left-0 inline-flex items-center gap-2 text-gray-500 hover:text-gray-900 transition-colors text-sm"
+                            >
+                                <ArrowLeft className="h-4 w-4" />
+                                Back to Symbols
+                            </Link>
+                        )}
+                        <div className="flex items-center gap-2">
+                            <Link
+                                href="https://github.com/Octree-AI-Latex-Editor"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center justify-center p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-200 rounded-lg transition-colors"
+                                title="Star on GitHub"
+                            >
+                                <GitHubIcon className="h-5 w-5" />
+                            </Link>
+                            <Link
+                                href="https://www.reddit.com/r/Octree/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center justify-center p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-200 rounded-lg transition-colors"
+                                title="Join us on Reddit"
+                            >
+                                <RedditIcon className="h-5 w-5" />
+                            </Link>
+                            <Link
+                                href="https://discord.gg/hGB7jnxB3m"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center justify-center p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-200 rounded-lg transition-colors"
+                                title="Join our Discord"
+                            >
+                                <DiscordIcon className="h-5 w-5" />
+                            </Link>
+                        </div>
                     </div>
 
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4 text-center">
                         LaTeX Symbols
                     </h1>
-                    <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+                    <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto text-center">
                         Browse common mathematical operators and Greek letters for your LaTeX documents.
                     </p>
 
-
-
                     <div className="max-w-xl mx-auto">
-                        {pathname !== "/symbols" && (
-                            <div className="relative">
-                                <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                                    <Search className="h-5 w-5 text-gray-400" />
-                                </div>
-                                <Suspense fallback={<div className="h-10 w-full bg-gray-100 rounded-lg animate-pulse" />}>
-                                    <SearchInput key={pathname} />
-                                </Suspense>
+                        <div className="relative">
+                            <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                <Search className="h-5 w-5 text-gray-400" />
                             </div>
-                        )}
+                            <Suspense fallback={<div className="h-10 w-full bg-gray-100 rounded-lg animate-pulse" />}>
+                                <SearchInput key={pathname} />
+                            </Suspense>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
                 {children}
             </div>
         </div>
