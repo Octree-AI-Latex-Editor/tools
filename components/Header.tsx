@@ -37,7 +37,12 @@ export default function Header() {
               Symbols
             </Link>
           </div>
-          <div />
+          <Link
+            href="https://app.useoctree.com"
+            className="inline-flex h-10 items-center justify-center rounded-lg bg-[#5B8DEF] px-5 text-sm font-medium text-white transition-colors hover:bg-[#4a7de0]"
+          >
+            Get Started
+          </Link>
         </div>
       </div>
     </nav>

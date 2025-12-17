@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import localFont from 'next/font/local';
 import "./globals.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import ClientBootstrap from "@/components/ClientBootstrap";
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import {NextIntlClientProvider} from 'next-intl';
+import {getLocale, getMessages} from 'next-intl/server';
 
 const satoshi = localFont({
   src: [
@@ -104,11 +107,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Get locale and messages for next-intl (without changing URLs)
+  const locale = await getLocale();
+  const messages = await getMessages();
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
@@ -141,17 +148,20 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className={satoshi.className}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <ClientBootstrap />
-        <Header />
-        {children}
-        <Analytics />
-        <SpeedInsights />
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <ClientBootstrap />
+          <Header />
+          {children}
+          <Footer />
+          <Analytics />
+          <SpeedInsights />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
