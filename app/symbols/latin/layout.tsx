@@ -1,0 +1,39 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "LaTeX Latin Letters & Accents - Special Characters | Free Symbol Reference",
+  description: "Complete list of LaTeX Latin letters and accented characters. Copy-paste ö, é, ñ, ç, å, ø, æ, œ and special Latin characters with LaTeX commands.",
+  keywords: [
+    "latex accented letters",
+    "latex special characters",
+    "latex umlaut",
+    "latex acute accent",
+    "latex grave accent",
+    "latex tilde accent",
+    "latex cedilla",
+    "latex scandinavian letters",
+    "latex french accents",
+    "latex german umlaut",
+    "ddot latex",
+    "acute latex",
+    "grave latex",
+    "latex ae ligature",
+    "latex oe ligature",
+    "latex o slash",
+    "imath jmath latex",
+    "dotless i latex",
+  ],
+  openGraph: {
+    title: "LaTeX Latin Letters & Accents - Complete Symbol Reference",
+    description: "Copy-paste LaTeX code for accented Latin letters and special characters.",
+  },
+};
+
+export default function LatinLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return <>{children}</>;
+}
+

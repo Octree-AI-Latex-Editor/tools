@@ -1,0 +1,40 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "LaTeX Brackets & Delimiters - Angle Brackets, Floor, Ceiling, Norms | Free Symbol Reference",
+  description: "Complete list of LaTeX bracket and delimiter symbols. Copy-paste angle brackets ⟨⟩, floor ⌊⌋, ceiling ⌈⌉, norms ‖‖, double brackets ⟦⟧, and all delimiter pairs with LaTeX code.",
+  keywords: [
+    "latex brackets",
+    "latex delimiters",
+    "latex angle brackets",
+    "latex floor symbol",
+    "latex ceiling symbol",
+    "latex norm symbol",
+    "langle rangle latex",
+    "lfloor rfloor latex",
+    "lceil rceil latex",
+    "latex double brackets",
+    "llbracket latex",
+    "latex left right",
+    "latex big brackets",
+    "math delimiters latex",
+    "bracket symbols latex",
+    "latex parentheses",
+    "latex curly braces",
+    "latex vertical bar",
+    "absolute value latex",
+  ],
+  openGraph: {
+    title: "LaTeX Brackets & Delimiters - Complete Symbol Reference",
+    description: "Copy-paste LaTeX code for angle brackets, floor, ceiling, norms, and all delimiter pairs.",
+  },
+};
+
+export default function BracketsLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return <>{children}</>;
+}
+

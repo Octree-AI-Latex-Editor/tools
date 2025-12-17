@@ -366,6 +366,60 @@ export const chemistrySymbols: SymbolItem[] = [
     { name: "Gas", latex: "\\text{(g)}" },
 ];
 
+// Brackets & Delimiters
+export const bracketSymbols: SymbolItem[] = [
+    { name: "Angle Bracket Left", latex: "\\langle" },
+    { name: "Angle Bracket Right", latex: "\\rangle" },
+    { name: "Angle Brackets", latex: "\\langle x \\rangle" },
+    { name: "Ceiling Left", latex: "\\lceil" },
+    { name: "Ceiling Right", latex: "\\rceil" },
+    { name: "Ceiling", latex: "\\lceil x \\rceil" },
+    { name: "Floor Left", latex: "\\lfloor" },
+    { name: "Floor Right", latex: "\\rfloor" },
+    { name: "Floor", latex: "\\lfloor x \\rfloor" },
+    { name: "Double Vertical Bar", latex: "\\|" },
+    { name: "Norm", latex: "\\| x \\|" },
+    { name: "Double Bracket Left", latex: "\\llbracket" },
+    { name: "Double Bracket Right", latex: "\\rrbracket" },
+    { name: "Double Brackets", latex: "\\llbracket x \\rrbracket" },
+    { name: "Parentheses", latex: "\\left( x \\right)" },
+    { name: "Square Brackets", latex: "\\left[ x \\right]" },
+    { name: "Curly Braces", latex: "\\left\\{ x \\right\\}" },
+    { name: "Vertical Bar", latex: "\\left| x \\right|" },
+    { name: "Big Parentheses", latex: "\\Big( x \\Big)" },
+    { name: "Bigg Parentheses", latex: "\\Bigg( x \\Bigg)" },
+    { name: "Left Only", latex: "\\left( x \\right." },
+    { name: "Right Only", latex: "\\left. x \\right)" },
+    { name: "Mixed Brackets", latex: "\\left[ x \\right)" },
+];
+
+// Accents & Modifiers
+export const accentSymbols: SymbolItem[] = [
+    { name: "Hat", latex: "\\hat{x}" },
+    { name: "Wide Hat", latex: "\\widehat{xyz}" },
+    { name: "Tilde", latex: "\\tilde{x}" },
+    { name: "Wide Tilde", latex: "\\widetilde{xyz}" },
+    { name: "Dot", latex: "\\dot{x}" },
+    { name: "Double Dot", latex: "\\ddot{x}" },
+    { name: "Triple Dot", latex: "\\dddot{x}" },
+    { name: "Bar", latex: "\\bar{x}" },
+    { name: "Overline", latex: "\\overline{xyz}" },
+    { name: "Underline", latex: "\\underline{xyz}" },
+    { name: "Vector Arrow", latex: "\\vec{x}" },
+    { name: "Wide Vector", latex: "\\overrightarrow{AB}" },
+    { name: "Left Vector", latex: "\\overleftarrow{AB}" },
+    { name: "Double Arrow", latex: "\\overleftrightarrow{AB}" },
+    { name: "Acute", latex: "\\acute{x}" },
+    { name: "Grave", latex: "\\grave{x}" },
+    { name: "Breve", latex: "\\breve{x}" },
+    { name: "Check", latex: "\\check{x}" },
+    { name: "Ring", latex: "\\mathring{x}" },
+    { name: "Overbrace", latex: "\\overbrace{x+y}^{\\text{sum}}" },
+    { name: "Underbrace", latex: "\\underbrace{x+y}_{\\text{sum}}" },
+    { name: "Cancel", latex: "\\cancel{x}" },
+    { name: "Box", latex: "\\boxed{x}" },
+];
+
 // Currency & Finance Symbols
 export const financeSymbols: SymbolItem[] = [
     { name: "Dollar", latex: "\\$" },

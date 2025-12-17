@@ -18,7 +18,9 @@ import {
     Hash,
     Atom,
     FlaskConical,
-    DollarSign
+    DollarSign,
+    Brackets,
+    Sparkles
 } from "lucide-react";
 import { SymbolCard } from "@/components/SymbolCard";
 import {
@@ -36,6 +38,8 @@ import {
     physicsSymbols,
     chemistrySymbols,
     financeSymbols,
+    bracketSymbols,
+    accentSymbols,
 } from "@/lib/symbols";
 
 const categories = [
@@ -123,6 +127,18 @@ const categories = [
         title: "Currency & Finance",
         description: "Currency symbols, financial formulas, and notation.",
     },
+    {
+        href: "/symbols/brackets",
+        icon: Brackets,
+        title: "Brackets & Delimiters",
+        description: "Angle brackets, floor, ceiling, norms, and delimiter pairs.",
+    },
+    {
+        href: "/symbols/accents",
+        icon: Sparkles,
+        title: "Accents & Modifiers",
+        description: "Hats, tildes, dots, bars, vectors, and text decorations.",
+    },
 ];
 
 // Combine all symbols for global search
@@ -141,6 +157,8 @@ const allSymbols = [
     ...physicsSymbols,
     ...chemistrySymbols,
     ...financeSymbols,
+    ...bracketSymbols,
+    ...accentSymbols,
 ];
 
 // Remove duplicates based on latex command
