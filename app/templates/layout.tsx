@@ -13,6 +13,25 @@ export const metadata: Metadata = {
     "latex resume templates",
     "latex template",
     "resume template latex",
+    "templates latex",
+    "cv template latex",
+    
+    // Beamer & Presentations (500-1000 searches)
+    "latex beamer",
+    "beamer latex",
+    "beamer theme",
+    "beamer in latex",
+    "beamer for latex",
+    "beamer en latex",
+    "beamerposter latex",
+    "beamer slideshow",
+    "beamer for presentation",
+    "latex beamer template",
+    "latex presentation template",
+    "latex presentation slides",
+    "presentation slides latex",
+    "latex slide template",
+    "latex for presentation",
     
     // Medium-volume keywords (500-1000 searches)
     "elsevier latex template",
@@ -24,10 +43,13 @@ export const metadata: Metadata = {
     "arxiv latex template",
     "acm latex template",
     "latex book template",
-    "latex beamer template",
-    "latex presentation template",
     "latex report template",
     "latex letter template",
+    "latex template report",
+    "cv templates in latex",
+    "cv template in latex",
+    "cv latex templates",
+    "latex template for cv",
     
     // Specific high-intent keywords
     "free latex templates",
@@ -39,7 +61,6 @@ export const metadata: Metadata = {
     "latex notes template",
     "latex exam template",
     "latex assignment template",
-    "latex slide template",
     "modern latex cv template",
     "professional latex templates",
     
@@ -62,6 +83,7 @@ export const metadata: Metadata = {
     "latex newsletter template",
     "latex questionnaire template",
     "latex table template",
+    "latex tables templates",
     "letter of recommendation latex",
     "motivation letter latex template",
     "internship report latex",
