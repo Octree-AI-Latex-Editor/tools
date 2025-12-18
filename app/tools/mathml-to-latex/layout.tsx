@@ -12,6 +12,13 @@ export const metadata: Metadata = {
     "free MathML to LaTeX converter",
     "AI MathML to LaTeX converter",
     "MathML parser",
+    "mathml to tex",
+    "word equation to latex",
+    "microsoft equation to latex",
+    "office math to latex",
+    "omml to latex",
+    "mathtype to latex",
+    "xml math to latex",
   ],
   alternates: {
     canonical: '/tools/mathml-to-latex',

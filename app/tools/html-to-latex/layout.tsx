@@ -12,6 +12,13 @@ export const metadata: Metadata = {
     "free HTML to LaTeX converter",
     "AI HTML to LaTeX converter",
     "web to LaTeX converter",
+    "webpage to latex",
+    "html table to latex",
+    "html math to latex",
+    "website to latex",
+    "copy html to latex",
+    "pandoc html to latex",
+    "html code to tex",
   ],
   alternates: {
     canonical: '/tools/html-to-latex',
