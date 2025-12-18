@@ -1,4 +1,13 @@
 {
+    "language": {
+      "label": "Idioma",
+      "en": "Inglês",
+      "fr": "Francês",
+      "es": "Espanhol",
+      "pt": "Português",
+      "cn": "Chinês",
+      "ar": "Árabe"
+    },
     "common": {
       "backToTools": "Voltar para ferramentas",
       "tryNow": "Experimentar agora",
@@ -77,6 +86,17 @@
       "readyToUseInLatex": "Pronto para usar em seus documentos LaTeX"
     },
     "toolsSpecific": {
+      "mathToLatex": {
+        "title": "Matemática para LaTeX",
+        "subtitle": "Converta matemática digitada em LaTeX limpo.",
+        "inputLabel": "Entrada matemática",
+        "inputPlaceholder": "ex. integral de 0 a 1 de x^2 dx",
+        "convert": "Converter",
+        "clear": "Limpar",
+        "outputLabel": "Saída LaTeX",
+        "copy": "Copiar",
+        "copied": "Copiado!"
+      },
       "imageToLatex": {
         "title": "Imagem para LaTeX",
         "description": "Converta imagens de matemática escrita à mão e equações para código LaTeX limpo"

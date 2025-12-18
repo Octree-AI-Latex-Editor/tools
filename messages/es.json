@@ -1,4 +1,13 @@
 {
+    "language": {
+      "label": "Idioma",
+      "en": "Inglés",
+      "fr": "Francés",
+      "es": "Español",
+      "pt": "Portugués",
+      "cn": "Chino",
+      "ar": "Árabe"
+    },
     "common": {
       "backToTools": "Back to Tools",
       "tryNow": "Try Now",
@@ -101,6 +110,17 @@
       "failedToExportPdf": "Failed to export PDF."
     },
     "toolsSpecific": {
+      "mathToLatex": {
+        "title": "Matemáticas a LaTeX",
+        "subtitle": "Convierte matemáticas escritas en LaTeX limpio.",
+        "inputLabel": "Entrada matemática",
+        "inputPlaceholder": "ej. integral de 0 a 1 de x^2 dx",
+        "convert": "Convertir",
+        "clear": "Limpiar",
+        "outputLabel": "Salida LaTeX",
+        "copy": "Copiar",
+        "copied": "¡Copiado!"
+      },
       "imageToLatex": {
         "title": "Image to LaTeX",
         "description": "Convert images of handwritten math and equations to clean LaTeX code"

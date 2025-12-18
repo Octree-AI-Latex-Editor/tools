@@ -1,4 +1,13 @@
 {
+    "language": {
+      "label": "Langue",
+      "en": "Anglais",
+      "fr": "Français",
+      "es": "Espagnol",
+      "pt": "Portugais",
+      "cn": "Chinois",
+      "ar": "Arabe"
+    },
     "common": {
       "backToTools": "Retour aux outils",
       "tryNow": "Essayer maintenant",
@@ -77,6 +86,17 @@
       "readyToUseInLatex": "Prêt à utiliser dans vos documents LaTeX"
     },
     "toolsSpecific": {
+      "mathToLatex": {
+        "title": "Math vers LaTeX",
+        "subtitle": "Convertissez des mathématiques tapées en LaTeX propre.",
+        "inputLabel": "Entrée mathématique",
+        "inputPlaceholder": "ex. intégrale de 0 à 1 de x^2 dx",
+        "convert": "Convertir",
+        "clear": "Effacer",
+        "outputLabel": "Sortie LaTeX",
+        "copy": "Copier",
+        "copied": "Copié !"
+      },
       "imageToLatex": {
         "title": "Image vers LaTeX",
         "description": "Convertissez des images de mathématiques manuscrites et d'équations en code LaTeX propre"

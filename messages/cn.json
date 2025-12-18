@@ -1,4 +1,13 @@
 {
+    "language": {
+      "label": "语言",
+      "en": "英语",
+      "fr": "法语",
+      "es": "西班牙语",
+      "pt": "葡萄牙语",
+      "cn": "中文",
+      "ar": "阿拉伯语"
+    },
     "common": {
       "backToTools": "返回工具",
       "tryNow": "立即试用",
@@ -77,6 +86,17 @@
       "readyToUseInLatex": "可在您的 LaTeX 文档中使用"
     },
     "toolsSpecific": {
+      "mathToLatex": {
+        "title": "数学转 LaTeX",
+        "subtitle": "将输入的数学转换为干净的 LaTeX。",
+        "inputLabel": "数学输入",
+        "inputPlaceholder": "例如：从 0 到 1 的 x^2 dx 的积分",
+        "convert": "转换",
+        "clear": "清除",
+        "outputLabel": "LaTeX 输出",
+        "copy": "复制",
+        "copied": "已复制！"
+      },
       "imageToLatex": {
         "title": "图像转 LaTeX",
         "description": "将手写数学和方程的图像转换为干净的 LaTeX 代码"

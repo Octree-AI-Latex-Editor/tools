@@ -1,4 +1,13 @@
 {
+    "language": {
+      "label": "اللغة",
+      "en": "الإنجليزية",
+      "fr": "الفرنسية",
+      "es": "الإسبانية",
+      "pt": "البرتغالية",
+      "cn": "الصينية",
+      "ar": "العربية"
+    },
     "common": {
       "backToTools": "العودة إلى الأدوات",
       "tryNow": "جرب الآن",
@@ -77,6 +86,17 @@
       "readyToUseInLatex": "جاهز للاستخدام في مستندات LaTeX الخاصة بك"
     },
     "toolsSpecific": {
+      "mathToLatex": {
+        "title": "الرياضيات إلى LaTeX",
+        "subtitle": "تحويل الرياضيات المكتوبة إلى LaTeX نظيف.",
+        "inputLabel": "إدخال الرياضيات",
+        "inputPlaceholder": "مثال: تكامل من 0 إلى 1 لـ x^2 dx",
+        "convert": "تحويل",
+        "clear": "مسح",
+        "outputLabel": "مخرجات LaTeX",
+        "copy": "نسخ",
+        "copied": "تم النسخ!"
+      },
       "imageToLatex": {
         "title": "تحويل الصورة إلى LaTeX",
         "description": "قم بتحويل صور الرياضيات المكتوبة بخط اليد والمعادلات إلى كود LaTeX نظيف"
