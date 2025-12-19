@@ -1,7 +1,6 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { useTranslations } from 'next-intl';
 import { LOCALES, LANG_COOKIE, type Locale } from '@/lib/i18n/config';
 
 interface LanguageSwitcherProps {
@@ -14,9 +13,18 @@ function setCookie(name: string, value: string, days: number = 365) {
   document.cookie = `${name}=${value}; path=/; max-age=${days * 24 * 60 * 60}; samesite=lax`;
 }
 
+// Language names in their native form (not translated)
+const LANGUAGE_NAMES: Record<Locale, string> = {
+  en: 'English',
+  fr: 'Français',
+  es: 'Español',
+  pt: 'Português',
+  cn: '中文',
+  ar: 'العربية',
+};
+
 export default function LanguageSwitcher({ currentLocale }: LanguageSwitcherProps) {
   const router = useRouter();
-  const t = useTranslations('language');
 
   const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newLocale = e.target.value as Locale;
@@ -27,7 +35,7 @@ export default function LanguageSwitcher({ currentLocale }: LanguageSwitcherProp
   return (
     <div className="flex items-center gap-2">
       <label htmlFor="language-select" className="text-sm text-gray-600">
-        {t('label')}:
+        Language:
       </label>
       <select
         id="language-select"
@@ -37,7 +45,7 @@ export default function LanguageSwitcher({ currentLocale }: LanguageSwitcherProp
       >
         {LOCALES.map((locale) => (
           <option key={locale} value={locale}>
-            {t(locale)}
+            {LANGUAGE_NAMES[locale]}
           </option>
         ))}
       </select>

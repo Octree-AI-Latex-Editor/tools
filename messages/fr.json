@@ -83,7 +83,15 @@
       "exportAsLatex": "Exporter en LaTeX",
       "exportAsPdf": "Exporter en PDF",
       "exportAsImage": "Exporter en image",
-      "readyToUseInLatex": "Prêt à utiliser dans vos documents LaTeX"
+      "readyToUseInLatex": "Prêt à utiliser dans vos documents LaTeX",
+      "dropFileHere": "Déposez votre fichier ici",
+      "orBrowseFiles": "ou parcourir les fichiers",
+      "processing": "Traitement en cours...",
+      "convertingToLatex": "Conversion en LaTeX...",
+      "converting": "Conversion...",
+      "outputWillAppear": "La sortie apparaîtra ici...",
+      "codeTab": "Code",
+      "previewTab": "Aperçu"
     },
     "toolsSpecific": {
       "mathToLatex": {

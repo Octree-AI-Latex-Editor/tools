@@ -83,7 +83,15 @@
       "exportAsLatex": "导出为 LaTeX",
       "exportAsPdf": "导出为 PDF",
       "exportAsImage": "导出为图像",
-      "readyToUseInLatex": "可在您的 LaTeX 文档中使用"
+      "readyToUseInLatex": "可在您的 LaTeX 文档中使用",
+      "dropFileHere": "将文件拖放到此处",
+      "orBrowseFiles": "或浏览文件",
+      "processing": "处理中...",
+      "convertingToLatex": "正在转换为 LaTeX...",
+      "converting": "转换中...",
+      "outputWillAppear": "输出将显示在这里...",
+      "codeTab": "代码",
+      "previewTab": "预览"
     },
     "toolsSpecific": {
       "mathToLatex": {
