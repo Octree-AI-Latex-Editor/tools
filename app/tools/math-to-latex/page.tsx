@@ -9,9 +9,9 @@ export default async function MathToLatex() {
 
   return (
     <div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-4">
+      {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-4">
         <LanguageSwitcher currentLocale={locale} />
-      </div>
+      </div> */}
       <AIToolLayout
         title={t('title')}
         description={t('subtitle')}
