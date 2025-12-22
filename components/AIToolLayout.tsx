@@ -16,6 +16,7 @@ import {
 import { openInOctree } from '@/lib/open-in-octree';
 import { CompileErrorModal } from '@/components/CompileErrorModal';
 import { OctreeCTA } from '@/components/OctreeCTA';
+import { useTranslations } from 'next-intl';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
 const PDFPreview = dynamic(() => import('@/components/PDFPreview'), { ssr: false });
@@ -42,6 +43,9 @@ export default function AIToolLayout({
   outputLabel = 'Clean LaTeX Code',
   acceptedFormats = 'JPEG, PNG, PDF',
 }: AIToolLayoutProps) {
+  const t = useTranslations('tools');
+  const tCommon = useTranslations('common');
+  
   const [imageData, setImageData] = useState<string>('');
   const [latexCode, setLatexCode] = useState<string>('');
   const [isDragging, setIsDragging] = useState(false);
@@ -113,7 +117,7 @@ export default function AIToolLayout({
         setLatexCode(accumulatedText);
       }
     } catch (err) {
-      setError('Failed to process image. Please try again.');
+      setError(t('failedToProcess'));
       console.error(err);
     } finally {
       setIsProcessing(false);
@@ -137,7 +141,7 @@ export default function AIToolLayout({
       });
 
       if (!response.ok) {
-        let message = 'Failed to compile LaTeX.';
+        let message = t('failedToCompile');
         try {
           const data = await response.json();
           if (data?.error) {
@@ -157,7 +161,7 @@ export default function AIToolLayout({
       setPreviewUrl('');
       setLastCompiledLatex('');
       const fallbackMessage =
-        err instanceof Error ? err.message : 'Failed to compile LaTeX.';
+        err instanceof Error ? err.message : t('failedToCompile');
       setCompileError(fallbackMessage);
       setShowCompileErrorModal(true);
     } finally {
@@ -184,7 +188,7 @@ export default function AIToolLayout({
       
       if (isCSVTool) {
         if (!file.name.toLowerCase().endsWith('.csv') && file.type !== 'text/csv') {
-          setError('Only CSV files are supported for this tool.');
+          setError(t('onlyCsvFiles'));
           return;
         }
 
@@ -203,7 +207,7 @@ export default function AIToolLayout({
       } else if (isImageTool) {
         // Handle images and PDFs
         if (!file.type.startsWith('image/') && file.type !== 'application/pdf') {
-          setError('Only image files (JPEG, PNG) and PDF files are supported.');
+          setError(t('onlyImageFiles'));
           return;
         }
 
@@ -242,7 +246,7 @@ export default function AIToolLayout({
       
       if (isCSVTool) {
         if (!file.name.toLowerCase().endsWith('.csv') && file.type !== 'text/csv') {
-          setError('Only CSV files are supported for this tool.');
+          setError(t('onlyCsvFiles'));
           return;
         }
 
@@ -261,7 +265,7 @@ export default function AIToolLayout({
       } else if (isImageTool) {
         // Handle images and PDFs
         if (!file.type.startsWith('image/') && file.type !== 'application/pdf') {
-          setError('Only image files (JPEG, PNG) and PDF files are supported.');
+          setError(t('onlyImageFiles'));
           return;
         }
 
@@ -376,7 +380,7 @@ export default function AIToolLayout({
                 className="absolute left-0 inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
               >
                 <ArrowLeft className="h-5 w-5" />
-                <span className="text-sm font-medium">Back to Tools</span>
+                <span className="text-sm font-medium">{tCommon('backToTools')}</span>
               </Link>
               <h1 className="text-4xl font-light text-gray-900">{title}</h1>
             </div>
@@ -391,12 +395,12 @@ export default function AIToolLayout({
               <div className="h-[72px] mb-6 flex flex-col justify-start">
                 <div className="mb-2 flex items-center gap-3">
                   <span className="inline-flex items-center rounded-md bg-orange-50 px-3 py-1.5 text-sm font-medium text-orange-900 border border-orange-200">
-                    INPUT
+                    {t('input')}
                   </span>
                   <h2 className="text-xl font-medium text-gray-900">{inputLabel}</h2>
                 </div>
                 <p className="text-sm text-gray-600">
-                  Upload any image containing mathematical expressions
+                  {t('uploadImageDescription')}
                 </p>
               </div>
 
@@ -423,7 +427,7 @@ export default function AIToolLayout({
                                </div>
                              </div>
                              <p className="text-lg font-medium text-gray-900 mb-1">{uploadedFileName}</p>
-                             <p className="text-sm text-gray-500">File uploaded successfully</p>
+                             <p className="text-sm text-gray-500">{tCommon('fileUploaded')}</p>
                            </div>
                          ) : (
                            <>
@@ -444,12 +448,11 @@ export default function AIToolLayout({
                     <Upload className="h-16 w-16 text-gray-400 mb-4" />
                   )}
                   <p className="text-base text-gray-900 font-normal mb-2">
-                    {isProcessing ? 'Processing...' : 'Drop your file here'}
+                    {isProcessing ? t('processing') : t('dropFileHere')}
                   </p>
                   <p className="text-sm text-gray-500 mb-4">
-                    or{' '}
                     <label className="text-blue-600 hover:text-blue-500 cursor-pointer font-medium">
-                      browse files
+                      {t('orBrowseFiles')}
                       <input
                         type="file"
                         className="hidden"
@@ -479,12 +482,12 @@ export default function AIToolLayout({
             <div className="h-[72px] mb-6 flex flex-col justify-start">
               <div className="mb-2 flex items-center gap-3">
                 <span className="inline-flex items-center rounded-md bg-green-50 px-3 py-1.5 text-sm font-medium text-green-900 border border-green-200">
-                  OUTPUT
+                  {t('output')}
                 </span>
                 <h2 className="text-xl font-medium text-gray-900">{outputLabel}</h2>
               </div>
               <p className="text-sm text-gray-600">
-                Ready to copy into any LaTeX editor
+                {t('readyToCopy')}
               </p>
             </div>
 
@@ -502,7 +505,7 @@ export default function AIToolLayout({
                     }`}
                   >
                     <Code2 className="h-4 w-4" />
-                    Code
+                    {t('codeTab')}
                   </button>
                   <button
                     onClick={(e) => {
@@ -520,12 +523,12 @@ export default function AIToolLayout({
                     } ${(isCompiling || isProcessing) ? 'opacity-50 cursor-not-allowed' : ''}`}
                   >
                     <Eye className="h-4 w-4" />
-                    Preview
+                    {t('previewTab')}
                     {isProcessing && (
-                      <span className="text-xs text-gray-400">(Generating...)</span>
+                      <span className="text-xs text-gray-400">({t('generatingPreview')})</span>
                     )}
                     {!isProcessing && isCompiling && (
-                      <span className="text-xs text-gray-400">(Compiling...)</span>
+                      <span className="text-xs text-gray-400">({t('compilingLatex')})</span>
                     )}
                   </button>
                 </div>
@@ -537,7 +540,7 @@ export default function AIToolLayout({
                   <div className="flex items-center justify-center flex-1">
                     <div className="text-center">
                       <Loader2 className="mx-auto h-12 w-12 text-blue-500 animate-spin mb-4" />
-                      <p className="text-gray-600">Converting to LaTeX...</p>
+                      <p className="text-gray-600">{t('convertingToLatex')}</p>
                     </div>
                   </div>
                 ) : latexCode ? (
@@ -561,7 +564,7 @@ export default function AIToolLayout({
                       {isProcessing && (
                         <div className="absolute top-2 right-2 flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1.5 rounded-md text-sm shadow-sm">
                           <Loader2 className="h-4 w-4 animate-spin" />
-                          Converting...
+                          {t('converting')}
                         </div>
                       )}
                     </div>
@@ -571,21 +574,21 @@ export default function AIToolLayout({
                                <div className="flex items-center justify-center h-full">
                                  <div className="text-center">
                                    <Loader2 className="mx-auto h-8 w-8 text-blue-500 animate-spin mb-2" />
-                                   <p className="text-sm text-gray-600">Generating preview...</p>
+                                   <p className="text-sm text-gray-600">{t('generatingPreview')}</p>
                                  </div>
                                </div>
                              ) : previewUrl ? (
                                <PDFPreview pdfUrl={previewUrl} />
                              ) : (
                                <div className="flex items-center justify-center h-full">
-                                 <p className="text-gray-400">Preview will appear here...</p>
+                                 <p className="text-gray-400">{t('previewWillAppear')}</p>
                                </div>
                              )}
                            </div>
                          )
                 ) : (
                   <div className="flex items-center justify-center flex-1">
-                    <p className="text-gray-400">Output will appear here...</p>
+                    <p className="text-gray-400">{t('outputWillAppear')}</p>
                   </div>
                 )}
               </div>
@@ -599,7 +602,7 @@ export default function AIToolLayout({
                          className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 text-base font-medium rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm"
                        >
                          <OctreeLogo className="h-5 w-5" />
-                         Open in Octree
+                         {tCommon('openInOctree')}
                        </button>
                        
                        <div className="relative">
@@ -608,7 +611,7 @@ export default function AIToolLayout({
                            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 text-base font-medium rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm"
                          >
                            <Download className="h-5 w-5" />
-                           Export
+                           {tCommon('export')}
                            <ChevronDown className="h-4 w-4" />
                          </button>
                          
@@ -618,19 +621,19 @@ export default function AIToolLayout({
                                onClick={exportAsLatex}
                                className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
                              >
-                               Export as LaTeX
+                               {t('exportAsLatex')}
                              </button>
                              <button
                                onClick={exportAsPDF}
                                className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
                              >
-                               Export as PDF
+                               {t('exportAsPdf')}
                              </button>
                              <button
                                onClick={exportAsImage}
                                className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
                              >
-                               Export as Image
+                               {t('exportAsImage')}
                              </button>
                            </div>
                          )}
