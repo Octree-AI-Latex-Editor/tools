@@ -1,0 +1,460 @@
+{
+    "language": {
+      "label": "语言",
+      "en": "英语",
+      "fr": "法语",
+      "es": "西班牙语",
+      "pt": "葡萄牙语",
+      "cn": "中文",
+      "ar": "阿拉伯语"
+    },
+    "common": {
+      "backToTools": "返回工具",
+      "tryNow": "立即试用",
+      "view": "查看",
+      "open": "打开",
+      "openInOctree": "在 Octree 中打开",
+      "search": "搜索",
+      "searchTools": "搜索工具...",
+      "searchTemplates": "搜索模板...",
+      "noResults": "未找到结果",
+      "loading": "加载中...",
+      "processing": "处理中...",
+      "generating": "生成中...",
+      "compiling": "编译中...",
+      "error": "错误",
+      "success": "成功",
+      "close": "关闭",
+      "copy": "复制",
+      "copied": "已复制！",
+      "download": "下载",
+      "export": "导出",
+      "exportAs": "导出为",
+      "browseFiles": "浏览文件",
+      "dropFileHere": "将文件拖放到此处",
+      "fileUploaded": "文件上传成功",
+      "categories": "分类",
+      "all": "全部",
+      "tools": "工具",
+      "templates": "模板",
+      "template": "模板",
+      "templatesCount": "{count} 个模板",
+      "starOnGitHub": "在 GitHub 上标星",
+      "joinUsOnReddit": "在 Reddit 上加入我们",
+      "joinOurDiscord": "加入我们的 Discord"
+    },
+    "home": {
+      "title": "免费 LaTeX 工具和模板",
+      "description": "将手写数学方程和表格转换为 LaTeX，生成引用，并探索专业模板。",
+      "noToolsFound": "未找到匹配您搜索的工具。"
+    },
+    "templates": {
+      "title": "免费 LaTeX 工具和模板",
+      "description": "用于学术论文、演示文稿、简历等的专业 LaTeX 模板。",
+      "allTemplates": "所有模板",
+      "noTemplatesFound": "未找到匹配您搜索的模板。",
+      "viewTemplate": "查看模板"
+    },
+    "tools": {
+      "input": "输入",
+      "output": "输出",
+      "code": "代码",
+      "preview": "预览",
+      "yourHandwrittenNotes": "您的手写笔记",
+      "cleanLatexCode": "干净的 LaTeX 代码",
+      "uploadImageDescription": "上传包含数学表达式的任何图像",
+      "readyToCopy": "准备复制到任何 LaTeX 编辑器",
+      "editLatexCode": "在此编辑您的 LaTeX 代码",
+      "livePreview": "文档的实时预览",
+      "previewWillAppear": "预览将在此显示...",
+      "generatedCodeWillAppear": "生成的代码将在此显示...",
+      "compilingLatex": "正在编译 LaTeX...",
+      "generatingPreview": "正在生成预览...",
+      "aiThinking": "AI 模型正在思考 …",
+      "giveItAMoment": "请稍候，让它为您制作 TikZ 图表。",
+      "codeStreaming": "请稍候，代码正在传输中。",
+      "generatingPgfplots": "正在生成 pgfplots 代码...",
+      "onlyCsvFiles": "此工具仅支持 CSV 文件。",
+      "onlyImageFiles": "仅支持图像文件（JPEG、PNG）和 PDF 文件。",
+      "failedToProcess": "处理图像失败。请重试。",
+      "failedToCompile": "编译 LaTeX 失败。",
+      "failedToGenerate": "生成引用失败。请重试。",
+      "conversionFailed": "转换失败",
+      "exportAsLatex": "导出为 LaTeX",
+      "exportAsPdf": "导出为 PDF",
+      "exportAsImage": "导出为图像",
+      "readyToUseInLatex": "可在您的 LaTeX 文档中使用",
+      "dropFileHere": "将文件拖放到此处",
+      "orBrowseFiles": "或浏览文件",
+      "processing": "处理中...",
+      "convertingToLatex": "正在转换为 LaTeX...",
+      "converting": "转换中...",
+      "outputWillAppear": "输出将显示在这里...",
+      "codeTab": "代码",
+      "previewTab": "预览"
+    },
+    "toolsSpecific": {
+      "mathToLatex": {
+        "title": "数学转 LaTeX",
+        "subtitle": "将输入的数学转换为干净的 LaTeX。",
+        "inputLabel": "数学输入",
+        "inputPlaceholder": "例如：从 0 到 1 的 x^2 dx 的积分",
+        "convert": "转换",
+        "clear": "清除",
+        "outputLabel": "LaTeX 输出",
+        "copy": "复制",
+        "copied": "已复制！"
+      },
+      "imageToLatex": {
+        "title": "图像转 LaTeX",
+        "description": "将手写数学和方程的图像转换为干净的 LaTeX 代码"
+      },
+      "tikzGenerator": {
+        "title": "TikZ 图表生成器",
+        "description": "描述您的图表，让 AI 生成 TikZ 代码",
+        "diagramDescription": "图表描述",
+        "generatedTikzCode": "生成的 TikZ 代码",
+        "placeholder": "示例：绘制一个简单的流程图，包含 3 个由箭头连接的节点。第一个节点应显示“开始”，第二个“处理”，第三个“结束”。"
+      },
+      "pgfplotsGenerator": {
+        "title": "Pgfplots 生成器",
+        "description": "描述您的图表，让 AI 生成 pgfplots 代码",
+        "plotDescription": "图表描述",
+        "generatedPgfplotsCode": "生成的 Pgfplots 代码",
+        "placeholder": "示例：创建一个线图，显示从 x = -5 到 x = 5 的 y = x^2，使用蓝线和网格。添加轴标签。"
+      },
+      "mermaidToLatex": {
+        "title": "Mermaid 转 LaTeX 转换器",
+        "description": "将 Mermaid 图表转换为 LaTeX 代码",
+        "mermaidCode": "Mermaid 代码",
+        "generatedLatexCode": "生成的 LaTeX 代码"
+      },
+      "citationGenerator": {
+        "title": "LaTeX 引用生成器",
+        "description": "从文章详情、DOI 或 URL 生成 BibTeX 引用",
+        "citationDetails": "引用详情",
+        "enterDetails": "输入文章详情、DOI 或 URL",
+        "generatedBibtex": "生成的 BibTeX",
+        "preview": "预览"
+      },
+      "latexPreview": {
+        "title": "LaTeX 预览",
+        "description": "带即时 PDF 预览的实时 LaTeX 编辑器",
+        "latexEditor": "LaTeX 编辑器",
+        "pdfOutput": "PDF 输出"
+      },
+      "aiLatexGenerator": {
+        "title": "AI LaTeX 生成器",
+        "description": "从文本描述生成 LaTeX 代码",
+        "descriptionLabel": "描述",
+        "enterDescription": "在此输入您的描述"
+      },
+      "htmlToLatex": {
+        "title": "HTML 转 LaTeX 转换器",
+        "description": "将 HTML 标记转换为 LaTeX 格式",
+        "htmlCode": "HTML 代码",
+        "generatedLatexCode": "生成的 LaTeX 代码"
+      },
+      "markdownToLatex": {
+        "title": "Markdown 转 LaTeX 转换器",
+        "description": "将 Markdown 文档转换为 LaTeX 格式",
+        "markdownCode": "Markdown 代码",
+        "generatedLatexCode": "生成的 LaTeX 代码"
+      },
+      "mathmlToLatex": {
+        "title": "MathML 转 LaTeX 转换器",
+        "description": "将 MathML 标记转换为 LaTeX 格式",
+        "mathmlCode": "MathML 代码",
+        "generatedLatexCode": "生成的 LaTeX 代码"
+      },
+      "latexToMarkdown": {
+        "title": "LaTeX 转 Markdown 转换器",
+        "description": "将 LaTeX 文档或片段转换为 Markdown",
+        "latexCode": "LaTeX 代码",
+        "generatedMarkdown": "生成的 Markdown"
+      },
+      "tableToLatex": {
+        "title": "Excel 转 LaTeX",
+        "description": "将 CSV、JSON、Excel 转换为 LaTeX 表格",
+        "tableData": "表格数据",
+        "generatedLatexCode": "生成的 LaTeX 代码"
+      },
+      "equationToLatex": {
+        "title": "方程转 LaTeX",
+        "description": "将文本或图像中的数学方程转换为 LaTeX",
+        "equationInput": "方程输入",
+        "generatedLatexCode": "生成的 LaTeX 代码"
+      },
+      "imageToTikz": {
+        "title": "图像转 TikZ",
+        "description": "使用 AI 将图像转换为 TikZ 图表",
+        "imageInput": "图像输入",
+        "generatedTikzCode": "生成的 TikZ 代码"
+      }
+    },
+    "categories": {
+      "academic": "学术",
+      "professional": "专业",
+      "creative": "创意",
+      "business": "商业",
+      "education": "教育",
+      "presentations": "演示文稿",
+      "resumeCv": "简历",
+      "math": "数学",
+      "reports": "报告",
+      "letters": "信件",
+      "other": "其他"
+    },
+    "templatesList": {
+      "research-paper": {
+        "title": "研究论文",
+        "description": "IEEE 风格的研究论文模板"
+      },
+      "beamer-presentation": {
+        "title": "Beamer 演示文稿",
+        "description": "学术演示幻灯片"
+      },
+      "academic-cv": {
+        "title": "学术简历",
+        "description": "专业学术履历"
+      },
+      "mathematical-document": {
+        "title": "数学文档",
+        "description": "包含定理的数学文档"
+      },
+      "lab-report": {
+        "title": "实验报告",
+        "description": "科学实验报告模板"
+      },
+      "book-chapter": {
+        "title": "书籍章节",
+        "description": "书籍或论文章节模板"
+      },
+      "resume": {
+        "title": "简历",
+        "description": "专业简历模板"
+      },
+      "grading-rubric": {
+        "title": "评分标准",
+        "description": "评估标准和评分模板"
+      },
+      "assignment": {
+        "title": "作业",
+        "description": "作业和任务模板"
+      },
+      "worksheet": {
+        "title": "练习册",
+        "description": "练习题和练习模板"
+      },
+      "homework": {
+        "title": "作业模板",
+        "description": "结构化作业"
+      },
+      "poster": {
+        "title": "研究海报",
+        "description": "学术会议海报模板"
+      },
+      "thesis": {
+        "title": "博士论文",
+        "description": "包含章节的完整论文模板"
+      },
+      "letter": {
+        "title": "正式信件",
+        "description": "专业商务信函模板"
+      },
+      "algorithm": {
+        "title": "算法伪代码",
+        "description": "带伪代码的算法文档"
+      },
+      "cover-letter": {
+        "title": "求职信",
+        "description": "专业学术和求职申请信"
+      },
+      "journal-article": {
+        "title": "期刊文章",
+        "description": "带章节的学术期刊文章模板"
+      },
+      "syllabus": {
+        "title": "课程大纲",
+        "description": "完整课程大纲模板"
+      },
+      "research-proposal": {
+        "title": "研究提案",
+        "description": "资助和研究提案模板"
+      },
+      "essay": {
+        "title": "学术论文",
+        "description": "带论证和分析的结构化论文"
+      },
+      "research-statement": {
+        "title": "研究陈述",
+        "description": "求职申请的学术研究陈述"
+      },
+      "dissertation": {
+        "title": "学位论文",
+        "description": "完整的博士论文模板"
+      },
+      "white-paper": {
+        "title": "白皮书",
+        "description": "专业白皮书模板"
+      },
+      "leaflet": {
+        "title": "传单/小册子",
+        "description": "专业营销传单模板"
+      },
+      "technical-report": {
+        "title": "技术报告",
+        "description": "技术研究报告模板"
+      },
+      "math-exercises": {
+        "title": "数学练习",
+        "description": "数学练习题和练习"
+      },
+      "math-notes": {
+        "title": "数学笔记",
+        "description": "数学课程的结构化课堂笔记"
+      },
+      "math-exam": {
+        "title": "数学考试",
+        "description": "正式数学考试模板"
+      },
+      "math-problem-set": {
+        "title": "数学习题集",
+        "description": "数学周习题作业"
+      },
+      "math-cheat-sheet": {
+        "title": "数学速查表",
+        "description": "公式和定理的紧凑参考表"
+      },
+      "lecture-notes": {
+        "title": "课堂笔记",
+        "description": "干净的学术课堂笔记模板"
+      },
+      "quiz-template": {
+        "title": "测验模板",
+        "description": "简短测验或测试模板"
+      },
+      "formula-sheet": {
+        "title": "公式表",
+        "description": "重要公式参考表"
+      },
+      "project-report": {
+        "title": "项目报告",
+        "description": "带章节和部分的专业项目报告"
+      },
+      "article-template": {
+        "title": "文章模板",
+        "description": "带摘要和部分的科学文章"
+      },
+      "statement-of-purpose": {
+        "title": "目的陈述",
+        "description": "研究生院申请目的陈述模板"
+      },
+      "literature-review": {
+        "title": "文献综述",
+        "description": "带引用的学术文献综述"
+      },
+      "meeting-minutes": {
+        "title": "会议记录",
+        "description": "专业会议记录和笔记模板"
+      },
+      "certificate": {
+        "title": "证书",
+        "description": "奖励或完成证书模板"
+      },
+      "invoice": {
+        "title": "发票",
+        "description": "服务或产品的专业发票"
+      },
+      "grant-proposal": {
+        "title": "资助提案",
+        "description": "研究资助提案模板"
+      },
+      "letter-of-recommendation": {
+        "title": "推荐信",
+        "description": "专业推荐信模板"
+      },
+      "motivation-letter": {
+        "title": "动机信",
+        "description": "学术或专业动机信模板"
+      },
+      "business-plan": {
+        "title": "商业计划",
+        "description": "专业商业计划模板"
+      },
+      "business-report": {
+        "title": "商业报告",
+        "description": "企业商业报告模板"
+      },
+      "scientific-report": {
+        "title": "科学报告",
+        "description": "科学研究报告模板"
+      },
+      "internship-report": {
+        "title": "实习报告",
+        "description": "学生实习报告模板"
+      },
+      "newsletter": {
+        "title": "通讯",
+        "description": "专业通讯模板"
+      },
+      "questionnaire": {
+        "title": "问卷",
+        "description": "研究调查和问卷模板"
+      },
+      "table-template": {
+        "title": "表格模板",
+        "description": "专业表格布局和格式"
+      },
+      "bibliography": {
+        "title": "参考文献",
+        "description": "独立的参考文献和引用模板"
+      },
+      "memo": {
+        "title": "备忘录",
+        "description": "专业商务备忘录模板"
+      },
+      "manuscript": {
+        "title": "手稿",
+        "description": "小说和非小说类书籍手稿模板"
+      },
+      "recipe-book": {
+        "title": "食谱书",
+        "description": "食谱和食谱集合模板"
+      },
+      "flyer": {
+        "title": "传单",
+        "description": "营销传单和促销单页模板"
+      },
+      "business-card": {
+        "title": "名片",
+        "description": "专业名片模板"
+      },
+      "calendar": {
+        "title": "日历",
+        "description": "月度和年度日历模板"
+      }
+    },
+    "templateCode": {
+      "placeholders": {
+        "authorName": "作者姓名",
+        "yourName": "您的姓名",
+        "department": "部门",
+        "universityName": "大学名称",
+        "email": "author@university.edu",
+        "presentationTitle": "演示标题",
+        "researchPaperTitle": "研究论文标题",
+        "courseName": "课程名称",
+        "instructorName": "教师姓名",
+        "yourAddress": "您的地址",
+        "cityStateZip": "城市，省/州 邮编",
+        "phone": "(555) 123-4567",
+        "point1": "要点 1",
+        "point2": "要点 2",
+        "point3": "要点 3",
+        "contentGoesHere": "内容在这里。",
+        "summaryOfKeyPoints": "关键点摘要。"
+      }
+    }
+  }
+  

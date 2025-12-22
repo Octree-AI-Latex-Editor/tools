@@ -1,0 +1,557 @@
+{
+    "language": {
+      "label": "Idioma",
+      "en": "Inglés",
+      "fr": "Francés",
+      "es": "Español",
+      "pt": "Portugués",
+      "cn": "Chino",
+      "ar": "Árabe"
+    },
+    "common": {
+      "backToTools": "Back to Tools",
+      "tryNow": "Try Now",
+      "view": "View",
+      "open": "Open",
+      "openInOctree": "Open in Octree",
+      "search": "Search",
+      "searchTools": "Search tools...",
+      "searchTemplates": "Search templates...",
+      "noResults": "No results found",
+      "loading": "Loading...",
+      "processing": "Processing...",
+      "generating": "Generating...",
+      "compiling": "Compiling...",
+      "error": "Error",
+      "success": "Success",
+      "close": "Close",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "download": "Download",
+      "export": "Export",
+      "exportAs": "Export as",
+      "browseFiles": "browse files",
+      "dropFileHere": "Drop your file here",
+      "fileUploaded": "File uploaded successfully",
+      "categories": "Categories",
+      "all": "All",
+      "tools": "Tools",
+      "templates": "Templates",
+      "template": "template",
+      "templatesCount": "{count} template{plural}",
+      "starOnGitHub": "Star on GitHub",
+      "joinUsOnReddit": "Join us on Reddit",
+      "joinOurDiscord": "Join our Discord"
+    },
+    "home": {
+      "title": "Free LaTeX Tools & Templates",
+      "description": "Convert handwritten math equations and tables to LaTeX, generate citations, and explore professional templates.",
+      "noToolsFound": "No tools found matching your search."
+    },
+    "templates": {
+      "title": "Free LaTeX Tools & Templates",
+      "description": "Professional LaTeX templates for academic papers, presentations, resumes, and more.",
+      "allTemplates": "All Templates",
+      "noTemplatesFound": "No templates found matching your search.",
+      "viewTemplate": "View Template",
+      "backToAllTemplates": "Back to all templates",
+      "templateNotFound": "Template Not Found",
+      "backToTemplates": "Back to Templates",
+      "download": "Download",
+      "copyCode": "Copy Code",
+      "sourceCode": "Source Code",
+      "preview": "Preview",
+      "openAsTemplate": "Open as Template",
+      "viewSource": "View Source",
+      "hideSource": "Hide Source",
+      "viewPdf": "View PDF",
+      "category": "Category",
+      "license": "License",
+      "freeToUse": "Free to use (MIT)",
+      "abstract": "Abstract",
+      "tags": "Tags",
+      "latexSourceCode": "LaTeX Source Code",
+      "loadingPreview": "Loading preview..."
+    },
+    "tools": {
+      "input": "INPUT",
+      "output": "OUTPUT",
+      "code": "CODE",
+      "preview": "PREVIEW",
+      "yourHandwrittenNotes": "Your Handwritten Notes",
+      "cleanLatexCode": "Clean LaTeX Code",
+      "uploadImageDescription": "Upload any image containing mathematical expressions",
+      "readyToCopy": "Ready to copy into any LaTeX editor",
+      "readyToUseInLatex": "Ready to use in your LaTeX documents",
+      "readyToUseInMarkdown": "Ready to use in your Markdown files",
+      "editLatexCode": "Edit your LaTeX code here",
+      "livePreview": "Live preview of your document",
+      "previewWillAppear": "Preview will appear here...",
+      "generatedCodeWillAppear": "Generated code will appear here...",
+      "compilingLatex": "Compiling LaTeX...",
+      "generatingPreview": "Generating preview...",
+      "aiThinking": "AI Model is thinking …",
+      "giveItAMoment": "Give it a moment to craft your TikZ diagram.",
+      "codeStreaming": "Hang tight while the code streams in.",
+      "generatingPgfplots": "Generating pgfplots code...",
+      "onlyCsvFiles": "Only CSV files are supported for this tool.",
+      "onlyImageFiles": "Only image files (JPEG, PNG) and PDF files are supported.",
+      "failedToProcess": "Failed to process image. Please try again.",
+      "failedToCompile": "Failed to compile LaTeX.",
+      "failedToGenerate": "Failed to generate citation. Please try again.",
+      "conversionFailed": "Conversion failed",
+      "exportAsLatex": "Export as LaTeX",
+      "exportAsPdf": "Export as PDF",
+      "exportAsImage": "Exportar como imagen",
+      "dropFileHere": "Suelta tu archivo aquí",
+      "orBrowseFiles": "o explorar archivos",
+      "processing": "Procesando...",
+      "convertingToLatex": "Convirtiendo a LaTeX...",
+      "converting": "Convirtiendo...",
+      "outputWillAppear": "La salida aparecerá aquí...",
+      "codeTab": "Código",
+      "previewTab": "Vista previa",
+      "pleaseEnterEquation": "Please enter an equation description or upload an image",
+      "equationTooLong": "Equation description must be 2000 characters or less",
+      "failedToConvert": "Failed to convert equation. Please try again.",
+      "noPdfUrl": "No PDF URL returned",
+      "failedToExportPdf": "Failed to export PDF."
+    },
+    "toolsSpecific": {
+      "mathToLatex": {
+        "title": "Matemáticas a LaTeX",
+        "subtitle": "Convierte matemáticas escritas en LaTeX limpio.",
+        "inputLabel": "Entrada matemática",
+        "inputPlaceholder": "ej. integral de 0 a 1 de x^2 dx",
+        "convert": "Convertir",
+        "clear": "Limpiar",
+        "outputLabel": "Salida LaTeX",
+        "copy": "Copiar",
+        "copied": "¡Copiado!"
+      },
+      "imageToLatex": {
+        "title": "Image to LaTeX",
+        "description": "Convert images of handwritten math and equations to clean LaTeX code"
+      },
+      "tikzGenerator": {
+        "title": "TikZ Diagram Generator",
+        "description": "Describe your diagram and let AI generate TikZ code",
+        "diagramDescription": "Diagram Description",
+        "generatedTikzCode": "Generated TikZ Code",
+        "placeholder": "Example: Draw a simple flowchart with 3 nodes connected by arrows. The first node should say 'Start', the second 'Process', and the third 'End'."
+      },
+      "pgfplotsGenerator": {
+        "title": "Pgfplots Generator",
+        "description": "Describe your plot and let AI generate pgfplots code",
+        "plotDescription": "Plot Description",
+        "generatedPgfplotsCode": "Generated Pgfplots Code",
+        "placeholder": "Example: Create a line plot showing y = x^2 from x = -5 to x = 5, with a blue line and grid. Add axis labels."
+      },
+      "mermaidToLatex": {
+        "title": "Mermaid to LaTeX Converter",
+        "description": "Convert Mermaid diagrams to LaTeX code",
+        "mermaidCode": "Mermaid Code",
+        "generatedLatexCode": "Generated LaTeX Code"
+      },
+      "citationGenerator": {
+        "title": "LaTeX Citation Generator",
+        "description": "Generate BibTeX citations from article details, DOIs, or URLs",
+        "citationDetails": "Citation Details",
+        "enterDetails": "Enter article details, DOI, or URL",
+        "generatedBibtex": "Generated BibTeX",
+        "preview": "Preview"
+      },
+      "latexPreview": {
+        "title": "LaTeX Preview",
+        "description": "Live LaTeX editor with instant PDF preview",
+        "latexEditor": "LaTeX Editor",
+        "pdfOutput": "PDF Output"
+      },
+      "aiLatexGenerator": {
+        "title": "AI LaTeX Generator",
+        "description": "Generate LaTeX code from text descriptions",
+        "descriptionLabel": "Description",
+        "enterDescription": "Enter your description here"
+      },
+      "htmlToLatex": {
+        "title": "HTML to LaTeX Converter",
+        "description": "Convert HTML markup to LaTeX format",
+        "htmlCode": "HTML Code",
+        "generatedLatexCode": "Generated LaTeX Code"
+      },
+      "markdownToLatex": {
+        "title": "Markdown to LaTeX Converter",
+        "description": "Convert Markdown documents to LaTeX format",
+        "markdownCode": "Markdown Code",
+        "generatedLatexCode": "Generated LaTeX Code",
+        "markdownContent": "Markdown Content",
+        "pasteMarkdown": "Paste your Markdown text here"
+      },
+      "mathmlToLatex": {
+        "title": "MathML to LaTeX Converter",
+        "description": "Convert MathML markup to LaTeX format",
+        "mathmlCode": "MathML Code",
+        "generatedLatexCode": "Generated LaTeX Code"
+      },
+      "latexToMarkdown": {
+        "title": "LaTeX to Markdown Converter",
+        "description": "Convert LaTeX documents or snippets to Markdown",
+        "latexCode": "LaTeX Code",
+        "generatedMarkdown": "Generated Markdown",
+        "latexContent": "LaTeX Content",
+        "pasteLatex": "Paste your LaTeX code here"
+      },
+      "tableToLatex": {
+        "title": "Excel to LaTeX",
+        "description": "Upload a .csv file and instantly get clean LaTeX table code.",
+        "tableData": "Upload CSV File",
+        "generatedLatexCode": "LaTeX Table Output"
+      },
+      "equationToLatex": {
+        "title": "Equation to LaTeX",
+        "description": "Convert mathematical expressions to LaTeX from text descriptions or images",
+        "equationInput": "Equation Input",
+        "generatedLatexCode": "Generated LaTeX Code",
+        "enterEquationOrUpload": "Enter equation description or upload an image",
+        "equationTooLong": "Equation description must be 2000 characters or less"
+      },
+      "imageToTikz": {
+        "title": "Image to TikZ",
+        "description": "Convert images to TikZ diagrams with AI",
+        "imageInput": "Image Input",
+        "generatedTikzCode": "Generated TikZ Code"
+      },
+      "pdfToLatex": {
+        "title": "PDF to LaTeX Converter",
+        "description": "Convert PDF documents with math and equations to clean LaTeX code",
+        "pdfDocument": "Your PDF Document"
+      }
+    },
+    "categories": {
+      "academic": "Academic",
+      "professional": "Professional",
+      "creative": "Creative",
+      "business": "Business",
+      "education": "Education",
+      "presentations": "Presentations",
+      "resumeCv": "Resume & CV",
+      "math": "Math",
+      "reports": "Reports",
+      "letters": "Letters",
+      "other": "Other"
+    },
+    "templatesList": {
+      "research-paper": {
+        "title": "Research Paper",
+        "description": "IEEE-style research paper template"
+      },
+      "beamer-presentation": {
+        "title": "Beamer Presentation",
+        "description": "Academic presentation slides"
+      },
+      "academic-cv": {
+        "title": "Academic CV",
+        "description": "Professional academic curriculum vitae"
+      },
+      "mathematical-document": {
+        "title": "Mathematical Document",
+        "description": "Math-heavy document with theorems"
+      },
+      "lab-report": {
+        "title": "Lab Report",
+        "description": "Scientific lab report template"
+      },
+      "book-chapter": {
+        "title": "Book Chapter",
+        "description": "Book or thesis chapter template"
+      },
+      "resume": {
+        "title": "Resume",
+        "description": "Professional resume template"
+      },
+      "grading-rubric": {
+        "title": "Grading Rubric",
+        "description": "Assessment criteria and grading template"
+      },
+      "assignment": {
+        "title": "Assignment",
+        "description": "Homework and assignment template"
+      },
+      "worksheet": {
+        "title": "Worksheet",
+        "description": "Practice problems and exercises template"
+      },
+      "homework": {
+        "title": "Homework Template",
+        "description": "Structured homework assignment"
+      },
+      "poster": {
+        "title": "Research Poster",
+        "description": "Academic conference poster template"
+      },
+      "thesis": {
+        "title": "PhD Thesis",
+        "description": "Comprehensive thesis template with chapters"
+      },
+      "letter": {
+        "title": "Formal Letter",
+        "description": "Professional business letter template"
+      },
+      "algorithm": {
+        "title": "Algorithm Pseudocode",
+        "description": "Algorithm documentation with pseudocode"
+      },
+      "cover-letter": {
+        "title": "Cover Letter",
+        "description": "Professional academic and job application cover letter"
+      },
+      "journal-article": {
+        "title": "Journal Article",
+        "description": "Academic journal article template with sections"
+      },
+      "syllabus": {
+        "title": "Course Syllabus",
+        "description": "Comprehensive course syllabus template"
+      },
+      "research-proposal": {
+        "title": "Research Proposal",
+        "description": "Grant and research proposal template"
+      },
+      "essay": {
+        "title": "Academic Essay",
+        "description": "Structured essay with argument and analysis"
+      },
+      "research-statement": {
+        "title": "Research Statement",
+        "description": "Academic research statement for job applications"
+      },
+      "dissertation": {
+        "title": "Dissertation",
+        "description": "Complete PhD dissertation template"
+      },
+      "white-paper": {
+        "title": "White Paper",
+        "description": "Professional white paper template"
+      },
+      "leaflet": {
+        "title": "Leaflet/Brochure",
+        "description": "Professional marketing leaflet template"
+      },
+      "technical-report": {
+        "title": "Technical Report",
+        "description": "Technical research report template"
+      },
+      "math-exercises": {
+        "title": "Math Exercises",
+        "description": "Practice problems and exercises for mathematics"
+      },
+      "math-notes": {
+        "title": "Math Notes",
+        "description": "Structured lecture notes for mathematics courses"
+      },
+      "math-exam": {
+        "title": "Math Exam",
+        "description": "Formal mathematics examination template"
+      },
+      "math-problem-set": {
+        "title": "Math Problem Set",
+        "description": "Weekly problem set assignments for mathematics"
+      },
+      "math-cheat-sheet": {
+        "title": "Math Cheat Sheet",
+        "description": "Compact reference sheet for formulas and theorems"
+      },
+      "lecture-notes": {
+        "title": "Lecture Notes",
+        "description": "Clean academic lecture notes template"
+      },
+      "quiz-template": {
+        "title": "Quiz Template",
+        "description": "Short quiz or test template"
+      },
+      "formula-sheet": {
+        "title": "Formula Sheet",
+        "description": "Reference sheet for important formulas"
+      },
+      "project-report": {
+        "title": "Project Report",
+        "description": "Professional project report with chapters and sections"
+      },
+      "article-template": {
+        "title": "Article Template",
+        "description": "Scientific article with abstract and sections"
+      },
+      "statement-of-purpose": {
+        "title": "Statement of Purpose",
+        "description": "Graduate school application statement template"
+      },
+      "literature-review": {
+        "title": "Literature Review",
+        "description": "Academic literature review with citations"
+      },
+      "meeting-minutes": {
+        "title": "Meeting Minutes",
+        "description": "Professional meeting minutes and notes template"
+      },
+      "certificate": {
+        "title": "Certificate",
+        "description": "Award or completion certificate template"
+      },
+      "invoice": {
+        "title": "Invoice",
+        "description": "Professional invoice for services or products"
+      },
+      "grant-proposal": {
+        "title": "Grant Proposal",
+        "description": "Research grant proposal template"
+      },
+      "letter-of-recommendation": {
+        "title": "Letter of Recommendation",
+        "description": "Professional recommendation letter template"
+      },
+      "motivation-letter": {
+        "title": "Motivation Letter",
+        "description": "Academic or professional motivation letter template"
+      },
+      "business-plan": {
+        "title": "Business Plan",
+        "description": "Professional business plan template"
+      },
+      "business-report": {
+        "title": "Business Report",
+        "description": "Corporate business report template"
+      },
+      "scientific-report": {
+        "title": "Scientific Report",
+        "description": "Scientific research report template"
+      },
+      "internship-report": {
+        "title": "Internship Report",
+        "description": "Student internship report template"
+      },
+      "newsletter": {
+        "title": "Newsletter",
+        "description": "Professional newsletter template"
+      },
+      "questionnaire": {
+        "title": "Questionnaire",
+        "description": "Research survey and questionnaire template"
+      },
+      "table-template": {
+        "title": "Table Template",
+        "description": "Professional table layouts and formatting"
+      },
+      "bibliography": {
+        "title": "Bibliography",
+        "description": "Standalone bibliography and references template"
+      },
+      "memo": {
+        "title": "Memo",
+        "description": "Professional business memo template"
+      },
+      "manuscript": {
+        "title": "Manuscript",
+        "description": "Book manuscript template for novels and non-fiction"
+      },
+      "recipe-book": {
+        "title": "Recipe Book",
+        "description": "Cookbook and recipe collection template"
+      },
+      "flyer": {
+        "title": "Flyer",
+        "description": "Marketing flyer and promotional one-page template"
+      },
+      "business-card": {
+        "title": "Business Card",
+        "description": "Professional business card template"
+      },
+      "calendar": {
+        "title": "Calendar",
+        "description": "Monthly and yearly calendar template"
+      }
+    },
+    "toolsList": {
+      "imageToLatex": {
+        "title": "Image to LaTeX",
+        "description": "Convert images to LaTeX format"
+      },
+      "tableToLatex": {
+        "title": "Excel to LaTeX",
+        "description": "Convert CSV, JSON, Excel to LaTeX tables"
+      },
+      "tikzGenerator": {
+        "title": "TikZ Generator",
+        "description": "Generate TikZ diagrams with AI"
+      },
+      "imageToTikz": {
+        "title": "Image to TikZ",
+        "description": "Convert images to TikZ diagrams with AI"
+      },
+      "latexPreview": {
+        "title": "LaTeX Preview",
+        "description": "Live LaTeX editor with PDF preview"
+      },
+      "markdownToLatex": {
+        "title": "Markdown to LaTeX",
+        "description": "Convert Markdown documents to LaTeX format"
+      },
+      "citationGenerator": {
+        "title": "Citation Generator",
+        "description": "Generate BibTeX citations from DOIs or article details"
+      },
+      "mathmlToLatex": {
+        "title": "MathML to LaTeX",
+        "description": "Convert MathML markup to LaTeX format"
+      },
+      "aiLatexGenerator": {
+        "title": "AI LaTeX Generator",
+        "description": "Generate LaTeX code from text descriptions"
+      },
+      "htmlToLatex": {
+        "title": "HTML to LaTeX",
+        "description": "Convert HTML markup to LaTeX format"
+      },
+      "mermaidToLatex": {
+        "title": "Mermaid to LaTeX",
+        "description": "Convert Mermaid diagrams to LaTeX format"
+      },
+      "pgfplotsGenerator": {
+        "title": "Pgfplots Generator",
+        "description": "Generate pgfplots graphs and charts with AI"
+      },
+      "latexToMarkdown": {
+        "title": "LaTeX to Markdown",
+        "description": "Convert LaTeX documents or snippets to Markdown"
+      },
+      "equationToLatex": {
+        "title": "Equation to LaTeX",
+        "description": "Convert math equations from text or images to LaTeX"
+      },
+      "pdfToLatex": {
+        "title": "PDF to LaTeX",
+        "description": "Convert PDF documents with mathematical content to LaTeX"
+      }
+    },
+    "templateCode": {
+      "placeholders": {
+        "authorName": "Author Name",
+        "yourName": "Your Name",
+        "department": "Department",
+        "universityName": "University Name",
+        "email": "author@university.edu",
+        "presentationTitle": "Presentation Title",
+        "researchPaperTitle": "Research Paper Title",
+        "courseName": "Course Name",
+        "instructorName": "Instructor Name",
+        "yourAddress": "Your Address",
+        "cityStateZip": "City, State ZIP",
+        "phone": "(555) 123-4567",
+        "point1": "Point 1",
+        "point2": "Point 2",
+        "point3": "Point 3",
+        "contentGoesHere": "Content goes here.",
+        "summaryOfKeyPoints": "Summary of key points."
+      }
+    }
+  }
+  
