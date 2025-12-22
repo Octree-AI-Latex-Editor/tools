@@ -30,6 +30,8 @@ export const metadata: Metadata = {
     "varepsilon latex",
     "varphi latex",
     "greek alphabet latex",
+    "greek alphabet",
+    "greek letter alphabet",
     "mathematical symbols list",
     "academic symbols",
     "scientific symbols",
