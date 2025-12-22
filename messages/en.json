@@ -184,9 +184,17 @@
     },
     "aiLatexGenerator": {
       "title": "AI LaTeX Generator",
-      "description": "Generate LaTeX code from text descriptions",
-      "descriptionLabel": "Description",
-      "enterDescription": "Enter your description here"
+      "subtitle": "Describe what you want and let AI generate LaTeX code",
+      "descriptionLabel": "Your Description",
+      "descriptionHint": "Describe the document or content you need",
+      "placeholder": "Example: Create a beamer presentation with 5 slides about machine learning...",
+      "generateLatex": "Generate LaTeX",
+      "generating": "Generating...",
+      "generatingLatexCode": "Generating LaTeX code...",
+      "outputLabel": "Generated LaTeX Code",
+      "readyToUse": "Ready to use in your LaTeX documents",
+      "generatedLatexWillAppear": "Generated LaTeX will appear here...",
+      "failedToGenerate": "Failed to generate LaTeX. Please try again."
     },
     "htmlToLatex": {
       "title": "HTML to LaTeX Converter",

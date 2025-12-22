@@ -145,9 +145,17 @@
       },
       "aiLatexGenerator": {
         "title": "Gerador LaTeX com IA",
-        "description": "Gere código LaTeX a partir de descrições de texto",
-        "descriptionLabel": "Descrição",
-        "enterDescription": "Digite sua descrição aqui"
+        "subtitle": "Descreva o que você quer e deixe a IA gerar código LaTeX",
+        "descriptionLabel": "Sua descrição",
+        "descriptionHint": "Descreva o documento ou conteúdo que você precisa",
+        "placeholder": "Exemplo: Crie uma apresentação beamer com 5 slides sobre aprendizado de máquina...",
+        "generateLatex": "Gerar LaTeX",
+        "generating": "Gerando...",
+        "generatingLatexCode": "Gerando código LaTeX...",
+        "outputLabel": "Código LaTeX gerado",
+        "readyToUse": "Pronto para usar em seus documentos LaTeX",
+        "generatedLatexWillAppear": "O LaTeX gerado aparecerá aqui...",
+        "failedToGenerate": "Falha ao gerar LaTeX. Por favor, tente novamente."
       },
       "htmlToLatex": {
         "title": "Conversor HTML para LaTeX",
