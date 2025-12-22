@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     "parallel latex",
     "cong latex",
     "sim latex",
+    "degree symbol",
     "latex degree symbol",
     "latex arc",
     "latex line segment",
