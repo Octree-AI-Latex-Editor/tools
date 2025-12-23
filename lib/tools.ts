@@ -14,6 +14,7 @@ import {
   ArrowRightLeft,
   Sigma,
   FileDown,
+  Hash,
   type LucideIcon,
 } from "lucide-react";
 
@@ -131,5 +132,12 @@ export const tools: Tool[] = [
     description: "Import arXiv papers directly into Octree",
     href: "/tools/arxiv-to-latex",
     icon: FileDown,
+  },
+  {
+    id: 16,
+    title: "LaTeX Word Counter",
+    description: "Count words in LaTeX documents accurately",
+    href: "/tools/latex-word-counter",
+    icon: Hash,
   },
 ];
