@@ -13,6 +13,13 @@ import {
   registerLatexCompletions,
 } from '@/lib/editor-config';
 import { OctreeCTA } from '@/components/OctreeCTA';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
 
@@ -145,8 +152,8 @@ export default function LatexWordCounter() {
               </p>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-xl h-[600px] w-full flex flex-col overflow-hidden">
-              <div className="flex-1 overflow-hidden">
+            <Card className="h-[600px] p-0 overflow-hidden">
+              <div className="h-full">
                 <Editor
                   height="100%"
                   language="latex"
@@ -163,7 +170,7 @@ export default function LatexWordCounter() {
                   }}
                 />
               </div>
-            </div>
+            </Card>
           </div>
 
           {/* Results Section */}
@@ -180,62 +187,58 @@ export default function LatexWordCounter() {
               </p>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-xl p-6 flex flex-col gap-6">
+            <Card className="h-[600px] flex flex-col">
               {isCounting && !result ? (
-                <div className="flex items-center justify-center py-12">
+                <CardContent className="flex-1 flex items-center justify-center">
                   <div className="text-center">
                     <Loader2 className="mx-auto h-10 w-10 text-blue-500 animate-spin mb-4" />
                     <p className="text-gray-600">Counting words...</p>
                   </div>
-                </div>
+                </CardContent>
               ) : result?.success ? (
-                <>
-                  {/* Total Words - Large Display */}
-                  <div className="text-center py-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl border border-blue-100">
-                    <div className="text-6xl font-bold text-blue-600 mb-2">
+                <CardContent className="flex-1 flex flex-col justify-center space-y-6">
+                  {/* Total Words */}
+                  <div className="text-center py-6 bg-gray-50 rounded-xl border border-gray-200">
+                    <div className="text-6xl font-bold text-gray-900 mb-2">
                       {result.words?.toLocaleString()}
                     </div>
-                    <div className="text-sm font-medium text-blue-800 uppercase tracking-wide">
+                    <div className="text-sm font-medium text-gray-500 uppercase tracking-wide">
                       Total Words
                     </div>
                   </div>
 
                   {/* Breakdown */}
-                  <div className="space-y-4">
-                    <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Breakdown</h3>
-                    
-                    <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                  <div className="space-y-3">
+                    <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
+                      Breakdown
+                    </h3>
+
+                    <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                       <div className="flex items-center gap-3">
-                        <div className="p-2 bg-white rounded-lg border border-gray-200">
-                          <FileText className="h-5 w-5 text-gray-600" />
-                        </div>
-                        <span className="font-medium text-gray-700">Text Body</span>
+                        <FileText className="h-4 w-4 text-gray-500" />
+                        <span className="text-sm font-medium text-gray-700">Text Body</span>
                       </div>
-                      <span className="text-2xl font-semibold text-gray-900">
+                      <span className="text-lg font-semibold text-gray-900">
                         {result.textWords?.toLocaleString()}
                       </span>
                     </div>
 
-                    <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                    <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                       <div className="flex items-center gap-3">
-                        <div className="p-2 bg-white rounded-lg border border-gray-200">
-                          <Heading className="h-5 w-5 text-gray-600" />
-                        </div>
-                        <span className="font-medium text-gray-700">Headers</span>
+                        <Heading className="h-4 w-4 text-gray-500" />
+                        <span className="text-sm font-medium text-gray-700">Headers</span>
                       </div>
-                      <span className="text-2xl font-semibold text-gray-900">
+                      <span className="text-lg font-semibold text-gray-900">
                         {result.headersWords?.toLocaleString()}
                       </span>
                     </div>
 
-                    <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                    <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                       <div className="flex items-center gap-3">
-                        <div className="p-2 bg-white rounded-lg border border-gray-200">
-                          <MessageSquare className="h-5 w-5 text-gray-600" />
-                        </div>
-                        <span className="font-medium text-gray-700">Captions</span>
+                        <MessageSquare className="h-4 w-4 text-gray-500" />
+                        <span className="text-sm font-medium text-gray-700">Captions</span>
                       </div>
-                      <span className="text-2xl font-semibold text-gray-900">
+                      <span className="text-lg font-semibold text-gray-900">
                         {result.captionWords?.toLocaleString()}
                       </span>
                     </div>
@@ -243,22 +246,24 @@ export default function LatexWordCounter() {
 
                   {/* Processing Time */}
                   {result.durationMs !== undefined && (
-                    <div className="text-center text-sm text-gray-500 pt-4 border-t border-gray-100">
+                    <p className="text-center text-sm text-gray-500">
                       Processed in {result.durationMs}ms
-                    </div>
+                    </p>
                   )}
-                </>
+                </CardContent>
               ) : result?.error ? (
-                <div className="text-center py-12">
-                  <div className="text-red-500 mb-2">⚠️</div>
-                  <p className="text-gray-600">{result.error}</p>
-                </div>
+                <CardContent className="flex-1 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="text-red-500 mb-2">⚠️</div>
+                    <p className="text-gray-600">{result.error}</p>
+                  </div>
+                </CardContent>
               ) : (
-                <div className="text-center py-12">
+                <CardContent className="flex-1 flex items-center justify-center">
                   <p className="text-gray-400">Enter LaTeX to count words</p>
-                </div>
+                </CardContent>
               )}
-            </div>
+            </Card>
           </div>
         </div>
 
@@ -270,4 +275,3 @@ export default function LatexWordCounter() {
     </div>
   );
 }
-
