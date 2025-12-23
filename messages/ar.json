@@ -188,10 +188,25 @@
         "generatedLatexCode": "كود LaTeX المُنشأ"
       },
       "equationToLatex": {
-        "title": "المعادلة إلى LaTeX",
-        "description": "قم بتحويل المعادلات الرياضية من النص أو الصور إلى LaTeX",
-        "equationInput": "إدخال المعادلة",
-        "generatedLatexCode": "كود LaTeX المُنشأ"
+        "title": "محول المعادلة إلى LaTeX",
+        "subtitle": "قم بتحويل التعبيرات الرياضية إلى LaTeX من أوصاف النص أو الصور",
+        "inputLabel": "وصف المعادلة أو الصورة",
+        "inputHint": "قم بوصف معادلتك بنص عادي أو قم برفع صورة",
+        "placeholder": "مثال: الصيغة التربيعية، تكامل x تربيع من 0 إلى 1، مجموع n من 1 إلى ما لا نهاية لـ 1 على n تربيع...",
+        "placeholderWithImage": "تم تعطيل إدخال النص أثناء رفع الصورة",
+        "imageUploaded": "تم رفع الصورة، تم تعطيل إدخال النص",
+        "dropImageHere": "قم بإسقاط صورة المعادلة هنا",
+        "orBrowseFiles": "أو تصفح الملفات",
+        "fileFormats": "JPEG, PNG, GIF, WebP",
+        "convertToLatex": "تحويل إلى LaTeX",
+        "converting": "جاري التحويل...",
+        "convertingToLatex": "جاري التحويل إلى LaTeX...",
+        "outputLabel": "LaTeX المُنشأ",
+        "readyToUse": "جاهز للاستخدام في مستندات LaTeX الخاصة بك",
+        "generatedLatexWillAppear": "سيظهر LaTeX المُنشأ هنا...",
+        "pleaseEnterEquation": "يرجى إدخال وصف المعادلة أو رفع صورة",
+        "equationTooLong": "يجب أن يكون وصف المعادلة 2000 حرف أو أقل",
+        "failedToConvert": "فشل في تحويل المعادلة. يرجى المحاولة مرة أخرى."
       },
       "imageToTikz": {
         "title": "الصورة إلى TikZ",

@@ -188,10 +188,25 @@
         "generatedLatexCode": "生成的 LaTeX 代码"
       },
       "equationToLatex": {
-        "title": "方程转 LaTeX",
-        "description": "将文本或图像中的数学方程转换为 LaTeX",
-        "equationInput": "方程输入",
-        "generatedLatexCode": "生成的 LaTeX 代码"
+        "title": "方程转 LaTeX 转换器",
+        "subtitle": "将文本描述或图像中的数学表达式转换为 LaTeX",
+        "inputLabel": "方程描述或图像",
+        "inputHint": "用纯文本描述您的方程或上传图像",
+        "placeholder": "示例：二次公式、x 平方从 0 到 1 的积分、n 从 1 到无穷大的 1 除以 n 平方的和...",
+        "placeholderWithImage": "上传图像时文本输入已禁用",
+        "imageUploaded": "已上传图像，文本输入已禁用",
+        "dropImageHere": "将方程图像拖放到此处",
+        "orBrowseFiles": "或浏览文件",
+        "fileFormats": "JPEG, PNG, GIF, WebP",
+        "convertToLatex": "转换为 LaTeX",
+        "converting": "转换中...",
+        "convertingToLatex": "正在转换为 LaTeX...",
+        "outputLabel": "生成的 LaTeX",
+        "readyToUse": "可在您的 LaTeX 文档中使用",
+        "generatedLatexWillAppear": "生成的 LaTeX 将显示在这里...",
+        "pleaseEnterEquation": "请输入方程描述或上传图像",
+        "equationTooLong": "方程描述必须为 2000 个字符或更少",
+        "failedToConvert": "转换方程失败。请重试。"
       },
       "imageToTikz": {
         "title": "图像转 TikZ",

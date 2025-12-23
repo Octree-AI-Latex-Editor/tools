@@ -231,12 +231,25 @@
       "generatedLatexCode": "LaTeX Table Output"
     },
     "equationToLatex": {
-      "title": "Equation to LaTeX",
-      "description": "Convert mathematical expressions to LaTeX from text descriptions or images",
-      "equationInput": "Equation Input",
-      "generatedLatexCode": "Generated LaTeX Code",
-      "enterEquationOrUpload": "Enter equation description or upload an image",
-      "equationTooLong": "Equation description must be 2000 characters or less"
+      "title": "Equation to LaTeX Converter",
+      "subtitle": "Convert mathematical expressions to LaTeX from text descriptions or images",
+      "inputLabel": "Equation Description or Image",
+      "inputHint": "Describe your equation in plain text or upload an image",
+      "placeholder": "Example: quadratic formula, integral of x squared from 0 to 1, sum of n from 1 to infinity of 1 over n squared...",
+      "placeholderWithImage": "Text input disabled while image is uploaded",
+      "imageUploaded": "Image uploaded, text input disabled",
+      "dropImageHere": "Drop your equation image here",
+      "orBrowseFiles": "or browse files",
+      "fileFormats": "JPEG, PNG, GIF, WebP",
+      "convertToLatex": "Convert to LaTeX",
+      "converting": "Converting...",
+      "convertingToLatex": "Converting to LaTeX...",
+      "outputLabel": "Generated LaTeX",
+      "readyToUse": "Ready to use in your LaTeX documents",
+      "generatedLatexWillAppear": "Generated LaTeX will appear here...",
+      "pleaseEnterEquation": "Please enter an equation description or upload an image",
+      "equationTooLong": "Equation description must be 2000 characters or less",
+      "failedToConvert": "Failed to convert equation. Please try again."
     },
     "imageToTikz": {
       "title": "Image to TikZ",
