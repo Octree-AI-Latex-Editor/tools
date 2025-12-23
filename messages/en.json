@@ -170,11 +170,18 @@
     },
     "citationGenerator": {
       "title": "LaTeX Citation Generator",
-      "description": "Generate BibTeX citations from article details, DOIs, or URLs",
-      "citationDetails": "Citation Details",
-      "enterDetails": "Enter article details, DOI, or URL",
-      "generatedBibtex": "Generated BibTeX",
-      "preview": "Preview"
+      "subtitle": "Generate BibTeX citations from article details, DOIs, or URLs",
+      "citationDetailsLabel": "Citation Details",
+      "citationDetailsHint": "Enter article details, DOI, or URL",
+      "placeholder": "Enter citation details...",
+      "generateBibtex": "Generate BibTeX",
+      "generating": "Generating...",
+      "generatingBibtex": "Generating BibTeX...",
+      "outputLabel": "BibTeX Code",
+      "readyToAdd": "Ready to add to your .bib file",
+      "bibtexWillAppear": "BibTeX citation will appear here...",
+      "failedToGenerate": "Failed to generate citation. Please try again.",
+      "exportAsBib": "Export as .bib"
     },
     "latexPreview": {
       "title": "LaTeX Preview",

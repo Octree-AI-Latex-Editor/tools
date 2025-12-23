@@ -131,11 +131,18 @@
       },
       "citationGenerator": {
         "title": "LaTeX 引用生成器",
-        "description": "从文章详情、DOI 或 URL 生成 BibTeX 引用",
-        "citationDetails": "引用详情",
-        "enterDetails": "输入文章详情、DOI 或 URL",
-        "generatedBibtex": "生成的 BibTeX",
-        "preview": "预览"
+        "subtitle": "从文章详情、DOI 或 URL 生成 BibTeX 引用",
+        "citationDetailsLabel": "引用详情",
+        "citationDetailsHint": "输入文章详情、DOI 或 URL",
+        "placeholder": "输入引用详情...",
+        "generateBibtex": "生成 BibTeX",
+        "generating": "生成中...",
+        "generatingBibtex": "正在生成 BibTeX...",
+        "outputLabel": "BibTeX 代码",
+        "readyToAdd": "可添加到您的 .bib 文件",
+        "bibtexWillAppear": "BibTeX 引用将显示在这里...",
+        "failedToGenerate": "生成引用失败。请重试。",
+        "exportAsBib": "导出为 .bib"
       },
       "latexPreview": {
         "title": "LaTeX 预览",
