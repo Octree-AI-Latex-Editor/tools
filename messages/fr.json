@@ -139,9 +139,13 @@
       },
       "latexPreview": {
         "title": "Aperçu LaTeX",
-        "description": "Éditeur LaTeX en direct avec aperçu PDF instantané",
-        "latexEditor": "Éditeur LaTeX",
-        "pdfOutput": "Sortie PDF"
+        "subtitle": "Éditeur LaTeX en direct avec aperçu PDF instantané",
+        "codeLabel": "Éditeur LaTeX",
+        "codeHint": "Modifiez votre code LaTeX ici",
+        "previewLabel": "Sortie PDF",
+        "previewHint": "Aperçu en direct de votre document",
+        "compiling": "Compilation...",
+        "compilingLatex": "Compilation de LaTeX..."
       },
       "aiLatexGenerator": {
         "title": "Générateur LaTeX IA",
@@ -159,9 +163,16 @@
       },
       "htmlToLatex": {
         "title": "Convertisseur HTML vers LaTeX",
-        "description": "Convertissez le balisage HTML au format LaTeX",
-        "htmlCode": "Code HTML",
-        "generatedLatexCode": "Code LaTeX généré"
+        "subtitle": "Convertissez le balisage HTML en code LaTeX propre",
+        "inputLabel": "Code HTML",
+        "inputHint": "Collez votre balisage HTML ici",
+        "convertToLatex": "Convertir en LaTeX",
+        "converting": "Conversion...",
+        "convertingToLatex": "Conversion en LaTeX...",
+        "outputLabel": "Code LaTeX",
+        "readyToUse": "Prêt à utiliser dans vos documents LaTeX",
+        "convertedLatexWillAppear": "Le LaTeX converti apparaîtra ici...",
+        "failedToConvert": "Échec de la conversion HTML. Veuillez réessayer."
       },
       "markdownToLatex": {
         "title": "Convertisseur Markdown vers LaTeX",
@@ -194,10 +205,26 @@
         "generatedLatexCode": "Code LaTeX généré"
       },
       "imageToTikz": {
-        "title": "Image vers TikZ",
-        "description": "Convertissez des images en diagrammes TikZ avec l'IA",
-        "imageInput": "Entrée d'image",
-        "generatedTikzCode": "Code TikZ généré"
+        "title": "Convertisseur d'image vers TikZ",
+        "subtitle": "Téléchargez un diagramme ou une image et convertissez-la en code TikZ modifiable",
+        "inputLabel": "Télécharger une image",
+        "inputHint": "Téléchargez un diagramme, un organigramme ou une forme à convertir",
+        "dropFileHere": "Déposez votre fichier ici",
+        "orBrowseFiles": "ou parcourir les fichiers",
+        "fileFormats": "JPEG, PNG, GIF, WebP",
+        "processing": "Traitement...",
+        "analyzingImage": "Analyse de votre image...",
+        "analyzingImageSubtext": "Conversion des formes et éléments en code TikZ.",
+        "analyzingImageStatus": "Analyse de l'image...",
+        "analyzingImageStatusSubtext": "Attendez pendant que le code arrive.",
+        "converting": "Conversion...",
+        "outputLabel": "Code TikZ généré",
+        "readyToUse": "Prêt à utiliser dans vos documents LaTeX",
+        "generatedCodeWillAppear": "Le code généré apparaîtra ici...",
+        "failedToConvert": "Échec de la conversion de l'image en TikZ. Veuillez réessayer.",
+        "pleaseUploadImage": "Veuillez télécharger un fichier image (PNG, JPEG, GIF, WebP)",
+        "imageSizeTooLarge": "La taille de l'image doit être inférieure à 20 Mo",
+        "removeImage": "Supprimer l'image"
       }
     },
     "categories": {
