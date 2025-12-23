@@ -145,9 +145,17 @@
       },
       "aiLatexGenerator": {
         "title": "مولد LaTeX بالذكاء الاصطناعي",
-        "description": "قم بإنشاء كود LaTeX من أوصاف النص",
-        "descriptionLabel": "الوصف",
-        "enterDescription": "أدخل وصفك هنا"
+        "subtitle": "قم بوصف ما تريده واترك الذكاء الاصطناعي ينشئ كود LaTeX",
+        "descriptionLabel": "وصفك",
+        "descriptionHint": "قم بوصف المستند أو المحتوى الذي تحتاجه",
+        "placeholder": "مثال: أنشئ عرضًا تقديميًا beamer مع 5 شرائح حول التعلم الآلي...",
+        "generateLatex": "إنشاء LaTeX",
+        "generating": "جاري الإنشاء...",
+        "generatingLatexCode": "جاري إنشاء كود LaTeX...",
+        "outputLabel": "كود LaTeX المُنشأ",
+        "readyToUse": "جاهز للاستخدام في مستندات LaTeX الخاصة بك",
+        "generatedLatexWillAppear": "سيظهر LaTeX المُنشأ هنا...",
+        "failedToGenerate": "فشل في إنشاء LaTeX. يرجى المحاولة مرة أخرى."
       },
       "htmlToLatex": {
         "title": "محول HTML إلى LaTeX",

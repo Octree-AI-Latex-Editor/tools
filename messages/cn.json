@@ -145,9 +145,17 @@
       },
       "aiLatexGenerator": {
         "title": "AI LaTeX 生成器",
-        "description": "从文本描述生成 LaTeX 代码",
-        "descriptionLabel": "描述",
-        "enterDescription": "在此输入您的描述"
+        "subtitle": "描述您想要的内容，让 AI 生成 LaTeX 代码",
+        "descriptionLabel": "您的描述",
+        "descriptionHint": "描述您需要的文档或内容",
+        "placeholder": "示例：创建一个关于机器学习的 5 页 beamer 演示文稿...",
+        "generateLatex": "生成 LaTeX",
+        "generating": "生成中...",
+        "generatingLatexCode": "正在生成 LaTeX 代码...",
+        "outputLabel": "生成的 LaTeX 代码",
+        "readyToUse": "可在您的 LaTeX 文档中使用",
+        "generatedLatexWillAppear": "生成的 LaTeX 将显示在这里...",
+        "failedToGenerate": "生成 LaTeX 失败。请重试。"
       },
       "htmlToLatex": {
         "title": "HTML 转 LaTeX 转换器",

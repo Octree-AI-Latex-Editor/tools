@@ -168,10 +168,18 @@
         "pdfOutput": "PDF Output"
       },
       "aiLatexGenerator": {
-        "title": "AI LaTeX Generator",
-        "description": "Generate LaTeX code from text descriptions",
-        "descriptionLabel": "Description",
-        "enterDescription": "Enter your description here"
+        "title": "Generador LaTeX con IA",
+        "subtitle": "Describe lo que quieres y deja que la IA genere código LaTeX",
+        "descriptionLabel": "Tu descripción",
+        "descriptionHint": "Describe el documento o contenido que necesitas",
+        "placeholder": "Ejemplo: Crea una presentación beamer con 5 diapositivas sobre aprendizaje automático...",
+        "generateLatex": "Generar LaTeX",
+        "generating": "Generando...",
+        "generatingLatexCode": "Generando código LaTeX...",
+        "outputLabel": "Código LaTeX generado",
+        "readyToUse": "Listo para usar en tus documentos LaTeX",
+        "generatedLatexWillAppear": "El LaTeX generado aparecerá aquí...",
+        "failedToGenerate": "Error al generar LaTeX. Por favor, inténtalo de nuevo."
       },
       "htmlToLatex": {
         "title": "HTML to LaTeX Converter",
