@@ -139,9 +139,13 @@
       },
       "latexPreview": {
         "title": "LaTeX 预览",
-        "description": "带即时 PDF 预览的实时 LaTeX 编辑器",
-        "latexEditor": "LaTeX 编辑器",
-        "pdfOutput": "PDF 输出"
+        "subtitle": "带即时 PDF 预览的实时 LaTeX 编辑器",
+        "codeLabel": "LaTeX 编辑器",
+        "codeHint": "在此编辑您的 LaTeX 代码",
+        "previewLabel": "PDF 输出",
+        "previewHint": "文档的实时预览",
+        "compiling": "编译中...",
+        "compilingLatex": "正在编译 LaTeX..."
       },
       "aiLatexGenerator": {
         "title": "AI LaTeX 生成器",
@@ -159,9 +163,16 @@
       },
       "htmlToLatex": {
         "title": "HTML 转 LaTeX 转换器",
-        "description": "将 HTML 标记转换为 LaTeX 格式",
-        "htmlCode": "HTML 代码",
-        "generatedLatexCode": "生成的 LaTeX 代码"
+        "subtitle": "将 HTML 标记转换为干净的 LaTeX 代码",
+        "inputLabel": "HTML 代码",
+        "inputHint": "在此粘贴您的 HTML 标记",
+        "convertToLatex": "转换为 LaTeX",
+        "converting": "转换中...",
+        "convertingToLatex": "正在转换为 LaTeX...",
+        "outputLabel": "LaTeX 代码",
+        "readyToUse": "可在您的 LaTeX 文档中使用",
+        "convertedLatexWillAppear": "转换后的 LaTeX 将显示在这里...",
+        "failedToConvert": "转换 HTML 失败。请重试。"
       },
       "markdownToLatex": {
         "title": "Markdown 转 LaTeX 转换器",
@@ -194,10 +205,26 @@
         "generatedLatexCode": "生成的 LaTeX 代码"
       },
       "imageToTikz": {
-        "title": "图像转 TikZ",
-        "description": "使用 AI 将图像转换为 TikZ 图表",
-        "imageInput": "图像输入",
-        "generatedTikzCode": "生成的 TikZ 代码"
+        "title": "图像转 TikZ 转换器",
+        "subtitle": "上传图表或图像并将其转换为可编辑的 TikZ 代码",
+        "inputLabel": "上传图像",
+        "inputHint": "上传要转换的图表、流程图或形状",
+        "dropFileHere": "将文件拖放到此处",
+        "orBrowseFiles": "或浏览文件",
+        "fileFormats": "JPEG, PNG, GIF, WebP",
+        "processing": "处理中...",
+        "analyzingImage": "正在分析您的图像...",
+        "analyzingImageSubtext": "正在将形状和元素转换为 TikZ 代码。",
+        "analyzingImageStatus": "正在分析图像...",
+        "analyzingImageStatusSubtext": "请稍候，代码正在流入。",
+        "converting": "转换中...",
+        "outputLabel": "生成的 TikZ 代码",
+        "readyToUse": "可在您的 LaTeX 文档中使用",
+        "generatedCodeWillAppear": "生成的代码将显示在这里...",
+        "failedToConvert": "将图像转换为 TikZ 失败。请重试。",
+        "pleaseUploadImage": "请上传图像文件（PNG、JPEG、GIF、WebP）",
+        "imageSizeTooLarge": "图像大小必须小于 20MB",
+        "removeImage": "删除图像"
       }
     },
     "categories": {
