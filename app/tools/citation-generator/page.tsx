@@ -395,11 +395,11 @@ export default function CitationGenerator() {
             )}
           </div>
         </div>
-      </div>
 
-      {/* Call to Action */}
-      <div className="mt-16">
-        <OctreeCTA source="tools:citation-generator" />
+        {/* Call to Action */}
+        <div className="mt-16">
+          <OctreeCTA source="tools:citation-generator" />
+        </div>
       </div>
 
       <CompileErrorModal

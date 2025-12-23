@@ -391,11 +391,11 @@ export default function MermaidToLatex() {
             )}
           </div>
         </div>
-      </div>
 
-      {/* Call to Action */}
-      <div className="mt-16">
-        <OctreeCTA source="tools:mermaid-to-latex" />
+        {/* Call to Action */}
+        <div className="mt-16">
+          <OctreeCTA source="tools:mermaid-to-latex" />
+        </div>
       </div>
 
       <CompileErrorModal

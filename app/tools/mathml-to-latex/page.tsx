@@ -414,11 +414,11 @@ export default function MathMLToLatex() {
             )}
           </div>
         </div>
-      </div>
 
-      {/* Call to Action */}
-      <div className="mt-16">
-        <OctreeCTA source="tools:mathml-to-latex" />
+        {/* Call to Action */}
+        <div className="mt-16">
+          <OctreeCTA source="tools:mathml-to-latex" />
+        </div>
       </div>
 
       <CompileErrorModal

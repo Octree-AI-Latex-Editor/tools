@@ -417,11 +417,11 @@ export default function HtmlToLatex() {
             )}
           </div>
         </div>
-      </div>
 
-      {/* Call to Action */}
-      <div className="mt-16">
-        <OctreeCTA source="tools:html-to-latex" />
+        {/* Call to Action */}
+        <div className="mt-16">
+          <OctreeCTA source="tools:html-to-latex" />
+        </div>
       </div>
 
       <CompileErrorModal

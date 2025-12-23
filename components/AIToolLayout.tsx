@@ -647,7 +647,7 @@ export default function AIToolLayout({
         <div className="mt-16">
           <OctreeCTA source="tools:ai" />
         </div>
-      </div>
+        </div>
       </div>
 
       <CompileErrorModal

@@ -413,11 +413,11 @@ export default function MarkdownToLatex() {
             )}
           </div>
         </div>
-      </div>
 
-      {/* Call to Action */}
-      <div className="mt-16">
-        <OctreeCTA source="tools:markdown-to-latex" />
+        {/* Call to Action */}
+        <div className="mt-16">
+          <OctreeCTA source="tools:markdown-to-latex" />
+        </div>
       </div>
 
       <CompileErrorModal

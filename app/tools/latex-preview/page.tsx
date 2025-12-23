@@ -216,11 +216,11 @@ export default function LatexPreview() {
             )}
           </div>
         </div>
-      </div>
 
-      {/* Call to Action */}
-      <div className="mt-16">
-        <OctreeCTA source="tools:latex-preview" />
+        {/* Call to Action */}
+        <div className="mt-16">
+          <OctreeCTA source="tools:latex-preview" />
+        </div>
       </div>
 
       <CompileErrorModal
