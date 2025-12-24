@@ -16,6 +16,9 @@ import {
 import { openInOctree } from '@/lib/open-in-octree';
 import { CompileErrorModal } from '@/components/CompileErrorModal';
 import { OctreeCTA } from '@/components/OctreeCTA';
+import { useTranslations, useLocale } from 'next-intl';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
+import type { Locale } from '@/lib/i18n/config';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
 const PDFPreview = dynamic(() => import('@/components/PDFPreview'), { ssr: false });
@@ -45,6 +48,11 @@ x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}
 \\end{document}`;
 
 export default function LatexPreview() {
+  const t = useTranslations('toolsSpecific.latexPreview');
+  const tTools = useTranslations('tools');
+  const tCommon = useTranslations('common');
+  const locale = useLocale() as Locale;
+  
   const [latexCode, setLatexCode] = useState<string>(DEFAULT_LATEX);
   const [previewUrl, setPreviewUrl] = useState<string>('');
   const [isCompiling, setIsCompiling] = useState(false);
@@ -77,7 +85,7 @@ export default function LatexPreview() {
       });
 
       if (!response.ok) {
-        let message = 'Failed to compile LaTeX.';
+        let message = tTools('failedToCompile');
         try {
           const data = await response.json();
           if (data?.error) {
@@ -97,7 +105,7 @@ export default function LatexPreview() {
       setPreviewUrl('');
       setLastCompiledLatex('');
       const fallbackMessage =
-        err instanceof Error ? err.message : 'Failed to compile LaTeX.';
+        err instanceof Error ? err.message : tTools('failedToCompile');
       setCompileError(fallbackMessage);
       setShowCompileErrorModal(true);
     } finally {
@@ -123,15 +131,19 @@ export default function LatexPreview() {
   return (
     <div className={cn("min-h-screen bg-gray-50", dmSans.className)}>
       <div className="mx-auto max-w-7xl px-6 py-12">
+        {/* testing purposes only */}
+        {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-4">
+          <LanguageSwitcher currentLocale={locale} />
+        </div> */}
         <div className="mb-12">
           <div className="relative flex items-start justify-center mb-3">
             <Link href="/" className="absolute left-0 inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
               <ArrowLeft className="h-5 w-5" />
-              <span className="text-sm font-medium">Back to Tools</span>
+              <span className="text-sm font-medium">{tCommon('backToTools')}</span>
             </Link>
-            <h1 className="text-4xl font-light text-gray-900">LaTeX Preview</h1>
+            <h1 className="text-4xl font-light text-gray-900">{t('title')}</h1>
           </div>
-          <p className="text-lg text-gray-600 text-center">Live LaTeX editor with instant PDF preview</p>
+          <p className="text-lg text-gray-600 text-center">{t('subtitle')}</p>
         </div>
 
         <div className="grid grid-cols-2 gap-8">
@@ -142,10 +154,10 @@ export default function LatexPreview() {
                 <span className="inline-flex items-center rounded-md bg-blue-50 px-3 py-1.5 text-sm font-medium text-blue-900 border border-blue-200">
                   CODE
                 </span>
-                <h2 className="text-xl font-medium text-gray-900">LaTeX Editor</h2>
+                <h2 className="text-xl font-medium text-gray-900">{t('codeLabel')}</h2>
               </div>
               <p className="text-sm text-gray-600">
-                Edit your LaTeX code here
+                {t('codeHint')}
               </p>
             </div>
 
@@ -177,10 +189,10 @@ export default function LatexPreview() {
                 <span className="inline-flex items-center rounded-md bg-green-50 px-3 py-1.5 text-sm font-medium text-green-900 border border-green-200">
                   PREVIEW
                 </span>
-                <h2 className="text-xl font-medium text-gray-900">PDF Output</h2>
+                <h2 className="text-xl font-medium text-gray-900">{t('previewLabel')}</h2>
               </div>
               <p className="text-sm text-gray-600">
-                {isCompiling ? 'Compiling...' : 'Live preview of your document'}
+                {isCompiling ? t('compiling') : t('previewHint')}
               </p>
             </div>
 
@@ -190,7 +202,7 @@ export default function LatexPreview() {
                   <div className="flex items-center justify-center h-full">
                     <div className="text-center">
                       <Loader2 className="mx-auto h-12 w-12 text-blue-500 animate-spin mb-4" />
-                      <p className="text-gray-600">Compiling LaTeX...</p>
+                      <p className="text-gray-600">{t('compilingLatex')}</p>
                     </div>
                   </div>
                 ) : previewUrl ? (
@@ -210,7 +222,7 @@ export default function LatexPreview() {
                   className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 text-base font-medium rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm"
                 >
                   <OctreeLogo className="h-5 w-5" />
-                  Open in Octree
+                  {tCommon('openInOctree')}
                 </button>
               </div>
             )}
@@ -229,7 +241,7 @@ export default function LatexPreview() {
         latex={latestLatexDocument}
         onClose={() => setShowCompileErrorModal(false)}
         source="tools:latex-preview"
-        title="LaTeX Preview"
+        title={t('title')}
       />
     </div>
   );

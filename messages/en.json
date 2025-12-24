@@ -178,9 +178,13 @@
     },
     "latexPreview": {
       "title": "LaTeX Preview",
-      "description": "Live LaTeX editor with instant PDF preview",
-      "latexEditor": "LaTeX Editor",
-      "pdfOutput": "PDF Output"
+      "subtitle": "Live LaTeX editor with instant PDF preview",
+      "codeLabel": "LaTeX Editor",
+      "codeHint": "Edit your LaTeX code here",
+      "previewLabel": "PDF Output",
+      "previewHint": "Live preview of your document",
+      "compiling": "Compiling...",
+      "compilingLatex": "Compiling LaTeX..."
     },
     "aiLatexGenerator": {
       "title": "AI LaTeX Generator",
@@ -198,9 +202,16 @@
     },
     "htmlToLatex": {
       "title": "HTML to LaTeX Converter",
-      "description": "Convert HTML markup to LaTeX format",
-      "htmlCode": "HTML Code",
-      "generatedLatexCode": "Generated LaTeX Code"
+      "subtitle": "Convert HTML markup to clean LaTeX code",
+      "inputLabel": "HTML Code",
+      "inputHint": "Paste your HTML markup here",
+      "convertToLatex": "Convert to LaTeX",
+      "converting": "Converting...",
+      "convertingToLatex": "Converting to LaTeX...",
+      "outputLabel": "LaTeX Code",
+      "readyToUse": "Ready to use in your LaTeX documents",
+      "convertedLatexWillAppear": "Converted LaTeX will appear here...",
+      "failedToConvert": "Failed to convert HTML. Please try again."
     },
     "markdownToLatex": {
       "title": "Markdown to LaTeX Converter",
@@ -239,10 +250,26 @@
       "equationTooLong": "Equation description must be 2000 characters or less"
     },
     "imageToTikz": {
-      "title": "Image to TikZ",
-      "description": "Convert images to TikZ diagrams with AI",
-      "imageInput": "Image Input",
-      "generatedTikzCode": "Generated TikZ Code"
+      "title": "Image to TikZ Converter",
+      "subtitle": "Upload a diagram or image and convert it to editable TikZ code",
+      "inputLabel": "Upload Image",
+      "inputHint": "Upload a diagram, flowchart, or shape to convert",
+      "dropFileHere": "Drop your file here",
+      "orBrowseFiles": "or browse files",
+      "fileFormats": "JPEG, PNG, GIF, WebP",
+      "processing": "Processing...",
+      "analyzingImage": "Analyzing your image...",
+      "analyzingImageSubtext": "Converting shapes and elements to TikZ code.",
+      "analyzingImageStatus": "Analyzing image...",
+      "analyzingImageStatusSubtext": "Hang tight while the code streams in.",
+      "converting": "Converting...",
+      "outputLabel": "Generated TikZ Code",
+      "readyToUse": "Ready to use in your LaTeX documents",
+      "generatedCodeWillAppear": "Generated code will appear here...",
+      "failedToConvert": "Failed to convert image to TikZ. Please try again.",
+      "pleaseUploadImage": "Please upload an image file (PNG, JPEG, GIF, WebP)",
+      "imageSizeTooLarge": "Image size must be less than 20MB",
+      "removeImage": "Remove image"
     },
     "pdfToLatex": {
       "title": "PDF to LaTeX Converter",

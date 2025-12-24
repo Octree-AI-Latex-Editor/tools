@@ -139,9 +139,13 @@
       },
       "latexPreview": {
         "title": "معاينة LaTeX",
-        "description": "محرر LaTeX مباشر مع معاينة PDF فورية",
-        "latexEditor": "محرر LaTeX",
-        "pdfOutput": "إخراج PDF"
+        "subtitle": "محرر LaTeX مباشر مع معاينة PDF فورية",
+        "codeLabel": "محرر LaTeX",
+        "codeHint": "قم بتحرير كود LaTeX الخاص بك هنا",
+        "previewLabel": "إخراج PDF",
+        "previewHint": "معاينة مباشرة لمستندك",
+        "compiling": "جاري التجميع...",
+        "compilingLatex": "جاري تجميع LaTeX..."
       },
       "aiLatexGenerator": {
         "title": "مولد LaTeX بالذكاء الاصطناعي",
@@ -159,9 +163,16 @@
       },
       "htmlToLatex": {
         "title": "محول HTML إلى LaTeX",
-        "description": "قم بتحويل ترميز HTML إلى تنسيق LaTeX",
-        "htmlCode": "كود HTML",
-        "generatedLatexCode": "كود LaTeX المُنشأ"
+        "subtitle": "قم بتحويل ترميز HTML إلى كود LaTeX نظيف",
+        "inputLabel": "كود HTML",
+        "inputHint": "الصق ترميز HTML الخاص بك هنا",
+        "convertToLatex": "تحويل إلى LaTeX",
+        "converting": "جاري التحويل...",
+        "convertingToLatex": "جاري التحويل إلى LaTeX...",
+        "outputLabel": "كود LaTeX",
+        "readyToUse": "جاهز للاستخدام في مستندات LaTeX الخاصة بك",
+        "convertedLatexWillAppear": "سيظهر LaTeX المحول هنا...",
+        "failedToConvert": "فشل في تحويل HTML. يرجى المحاولة مرة أخرى."
       },
       "markdownToLatex": {
         "title": "محول Markdown إلى LaTeX",
@@ -194,10 +205,26 @@
         "generatedLatexCode": "كود LaTeX المُنشأ"
       },
       "imageToTikz": {
-        "title": "الصورة إلى TikZ",
-        "description": "قم بتحويل الصور إلى مخططات TikZ بالذكاء الاصطناعي",
-        "imageInput": "إدخال الصورة",
-        "generatedTikzCode": "كود TikZ المُنشأ"
+        "title": "محول الصورة إلى TikZ",
+        "subtitle": "قم برفع مخطط أو صورة وقم بتحويلها إلى كود TikZ قابل للتعديل",
+        "inputLabel": "رفع صورة",
+        "inputHint": "قم برفع مخطط أو مخطط انسيابي أو شكل للتحويل",
+        "dropFileHere": "قم بإسقاط ملفك هنا",
+        "orBrowseFiles": "أو تصفح الملفات",
+        "fileFormats": "JPEG, PNG, GIF, WebP",
+        "processing": "جاري المعالجة...",
+        "analyzingImage": "جاري تحليل صورتك...",
+        "analyzingImageSubtext": "تحويل الأشكال والعناصر إلى كود TikZ.",
+        "analyzingImageStatus": "جاري تحليل الصورة...",
+        "analyzingImageStatusSubtext": "انتظر بينما يتدفق الكود.",
+        "converting": "جاري التحويل...",
+        "outputLabel": "كود TikZ المُنشأ",
+        "readyToUse": "جاهز للاستخدام في مستندات LaTeX الخاصة بك",
+        "generatedCodeWillAppear": "سيظهر الكود المُنشأ هنا...",
+        "failedToConvert": "فشل في تحويل الصورة إلى TikZ. يرجى المحاولة مرة أخرى.",
+        "pleaseUploadImage": "يرجى رفع ملف صورة (PNG، JPEG، GIF، WebP)",
+        "imageSizeTooLarge": "يجب أن يكون حجم الصورة أقل من 20 ميجابايت",
+        "removeImage": "إزالة الصورة"
       }
     },
     "categories": {

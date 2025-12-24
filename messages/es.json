@@ -162,10 +162,14 @@
         "preview": "Preview"
       },
       "latexPreview": {
-        "title": "LaTeX Preview",
-        "description": "Live LaTeX editor with instant PDF preview",
-        "latexEditor": "LaTeX Editor",
-        "pdfOutput": "PDF Output"
+        "title": "Vista previa LaTeX",
+        "subtitle": "Editor LaTeX en vivo con vista previa PDF instantánea",
+        "codeLabel": "Editor LaTeX",
+        "codeHint": "Edite su código LaTeX aquí",
+        "previewLabel": "Salida PDF",
+        "previewHint": "Vista previa en vivo de su documento",
+        "compiling": "Compilando...",
+        "compilingLatex": "Compilando LaTeX..."
       },
       "aiLatexGenerator": {
         "title": "Generador LaTeX con IA",
@@ -182,10 +186,17 @@
         "failedToGenerate": "Error al generar LaTeX. Por favor, inténtalo de nuevo."
       },
       "htmlToLatex": {
-        "title": "HTML to LaTeX Converter",
-        "description": "Convert HTML markup to LaTeX format",
-        "htmlCode": "HTML Code",
-        "generatedLatexCode": "Generated LaTeX Code"
+        "title": "Conversor HTML a LaTeX",
+        "subtitle": "Convierta el marcado HTML a código LaTeX limpio",
+        "inputLabel": "Código HTML",
+        "inputHint": "Pegue su marcado HTML aquí",
+        "convertToLatex": "Convertir a LaTeX",
+        "converting": "Convirtiendo...",
+        "convertingToLatex": "Convirtiendo a LaTeX...",
+        "outputLabel": "Código LaTeX",
+        "readyToUse": "Listo para usar en sus documentos LaTeX",
+        "convertedLatexWillAppear": "El LaTeX convertido aparecerá aquí...",
+        "failedToConvert": "Error al convertir HTML. Por favor, inténtalo de nuevo."
       },
       "markdownToLatex": {
         "title": "Markdown to LaTeX Converter",
@@ -224,10 +235,26 @@
         "equationTooLong": "Equation description must be 2000 characters or less"
       },
       "imageToTikz": {
-        "title": "Image to TikZ",
-        "description": "Convert images to TikZ diagrams with AI",
-        "imageInput": "Image Input",
-        "generatedTikzCode": "Generated TikZ Code"
+        "title": "Conversor de imagen a TikZ",
+        "subtitle": "Suba un diagrama o imagen y conviértalo en código TikZ editable",
+        "inputLabel": "Subir imagen",
+        "inputHint": "Suba un diagrama, organigrama o forma para convertir",
+        "dropFileHere": "Arrastre su archivo aquí",
+        "orBrowseFiles": "o explorar archivos",
+        "fileFormats": "JPEG, PNG, GIF, WebP",
+        "processing": "Procesando...",
+        "analyzingImage": "Analizando su imagen...",
+        "analyzingImageSubtext": "Convirtiendo formas y elementos a código TikZ.",
+        "analyzingImageStatus": "Analizando imagen...",
+        "analyzingImageStatusSubtext": "Espere mientras el código llega.",
+        "converting": "Convirtiendo...",
+        "outputLabel": "Código TikZ generado",
+        "readyToUse": "Listo para usar en sus documentos LaTeX",
+        "generatedCodeWillAppear": "El código generado aparecerá aquí...",
+        "failedToConvert": "Error al convertir imagen a TikZ. Por favor, inténtalo de nuevo.",
+        "pleaseUploadImage": "Por favor, suba un archivo de imagen (PNG, JPEG, GIF, WebP)",
+        "imageSizeTooLarge": "El tamaño de la imagen debe ser menor a 20MB",
+        "removeImage": "Eliminar imagen"
       },
       "pdfToLatex": {
         "title": "PDF to LaTeX Converter",

@@ -139,9 +139,13 @@
       },
       "latexPreview": {
         "title": "Visualização LaTeX",
-        "description": "Editor LaTeX ao vivo com visualização PDF instantânea",
-        "latexEditor": "Editor LaTeX",
-        "pdfOutput": "Saída PDF"
+        "subtitle": "Editor LaTeX ao vivo com visualização PDF instantânea",
+        "codeLabel": "Editor LaTeX",
+        "codeHint": "Edite seu código LaTeX aqui",
+        "previewLabel": "Saída PDF",
+        "previewHint": "Visualização ao vivo do seu documento",
+        "compiling": "Compilando...",
+        "compilingLatex": "Compilando LaTeX..."
       },
       "aiLatexGenerator": {
         "title": "Gerador LaTeX com IA",
@@ -159,9 +163,16 @@
       },
       "htmlToLatex": {
         "title": "Conversor HTML para LaTeX",
-        "description": "Converta marcação HTML para formato LaTeX",
-        "htmlCode": "Código HTML",
-        "generatedLatexCode": "Código LaTeX gerado"
+        "subtitle": "Converta marcação HTML em código LaTeX limpo",
+        "inputLabel": "Código HTML",
+        "inputHint": "Cole sua marcação HTML aqui",
+        "convertToLatex": "Converter para LaTeX",
+        "converting": "Convertendo...",
+        "convertingToLatex": "Convertendo para LaTeX...",
+        "outputLabel": "Código LaTeX",
+        "readyToUse": "Pronto para usar em seus documentos LaTeX",
+        "convertedLatexWillAppear": "O LaTeX convertido aparecerá aqui...",
+        "failedToConvert": "Falha ao converter HTML. Por favor, tente novamente."
       },
       "markdownToLatex": {
         "title": "Conversor Markdown para LaTeX",
@@ -194,10 +205,26 @@
         "generatedLatexCode": "Código LaTeX gerado"
       },
       "imageToTikz": {
-        "title": "Imagem para TikZ",
-        "description": "Converta imagens para diagramas TikZ com IA",
-        "imageInput": "Entrada de imagem",
-        "generatedTikzCode": "Código TikZ gerado"
+        "title": "Conversor de imagem para TikZ",
+        "subtitle": "Faça upload de um diagrama ou imagem e converta em código TikZ editável",
+        "inputLabel": "Fazer upload de imagem",
+        "inputHint": "Faça upload de um diagrama, fluxograma ou forma para converter",
+        "dropFileHere": "Solte seu arquivo aqui",
+        "orBrowseFiles": "ou navegar arquivos",
+        "fileFormats": "JPEG, PNG, GIF, WebP",
+        "processing": "Processando...",
+        "analyzingImage": "Analisando sua imagem...",
+        "analyzingImageSubtext": "Convertendo formas e elementos em código TikZ.",
+        "analyzingImageStatus": "Analisando imagem...",
+        "analyzingImageStatusSubtext": "Aguarde enquanto o código chega.",
+        "converting": "Convertendo...",
+        "outputLabel": "Código TikZ gerado",
+        "readyToUse": "Pronto para usar em seus documentos LaTeX",
+        "generatedCodeWillAppear": "O código gerado aparecerá aqui...",
+        "failedToConvert": "Falha ao converter imagem para TikZ. Por favor, tente novamente.",
+        "pleaseUploadImage": "Por favor, faça upload de um arquivo de imagem (PNG, JPEG, GIF, WebP)",
+        "imageSizeTooLarge": "O tamanho da imagem deve ser menor que 20MB",
+        "removeImage": "Remover imagem"
       }
     },
     "categories": {
