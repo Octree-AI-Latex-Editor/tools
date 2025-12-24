@@ -154,12 +154,19 @@
         "generatedLatexCode": "Generated LaTeX Code"
       },
       "citationGenerator": {
-        "title": "LaTeX Citation Generator",
-        "description": "Generate BibTeX citations from article details, DOIs, or URLs",
-        "citationDetails": "Citation Details",
-        "enterDetails": "Enter article details, DOI, or URL",
-        "generatedBibtex": "Generated BibTeX",
-        "preview": "Preview"
+        "title": "Generador de citas LaTeX",
+        "subtitle": "Genere citas BibTeX a partir de detalles de artículos, DOI o URL",
+        "citationDetailsLabel": "Detalles de la cita",
+        "citationDetailsHint": "Ingrese los detalles del artículo, DOI o URL",
+        "placeholder": "Ingrese los detalles de la cita...",
+        "generateBibtex": "Generar BibTeX",
+        "generating": "Generando...",
+        "generatingBibtex": "Generando BibTeX...",
+        "outputLabel": "Código BibTeX",
+        "readyToAdd": "Listo para agregar a su archivo .bib",
+        "bibtexWillAppear": "La cita BibTeX aparecerá aquí...",
+        "failedToGenerate": "Error al generar la cita. Por favor, inténtalo de nuevo.",
+        "exportAsBib": "Exportar como .bib"
       },
       "latexPreview": {
         "title": "Vista previa LaTeX",

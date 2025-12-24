@@ -131,11 +131,18 @@
       },
       "citationGenerator": {
         "title": "Générateur de citations LaTeX",
-        "description": "Générez des citations BibTeX à partir de détails d'article, DOI ou URL",
-        "citationDetails": "Détails de la citation",
-        "enterDetails": "Entrez les détails de l'article, DOI ou URL",
-        "generatedBibtex": "BibTeX généré",
-        "preview": "Aperçu"
+        "subtitle": "Générez des citations BibTeX à partir de détails d'article, DOI ou URL",
+        "citationDetailsLabel": "Détails de la citation",
+        "citationDetailsHint": "Entrez les détails de l'article, DOI ou URL",
+        "placeholder": "Entrez les détails de la citation...",
+        "generateBibtex": "Générer BibTeX",
+        "generating": "Génération...",
+        "generatingBibtex": "Génération de BibTeX...",
+        "outputLabel": "Code BibTeX",
+        "readyToAdd": "Prêt à ajouter à votre fichier .bib",
+        "bibtexWillAppear": "La citation BibTeX apparaîtra ici...",
+        "failedToGenerate": "Échec de la génération de citation. Veuillez réessayer.",
+        "exportAsBib": "Exporter en .bib"
       },
       "latexPreview": {
         "title": "Aperçu LaTeX",

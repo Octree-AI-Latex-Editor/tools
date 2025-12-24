@@ -9,6 +9,9 @@ import Link from 'next/link';
 import { loader } from '@monaco-editor/react';
 import { CompileErrorModal } from '@/components/CompileErrorModal';
 import { OctreeCTA } from '@/components/OctreeCTA';
+import { useTranslations, useLocale } from 'next-intl';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
+import type { Locale } from '@/lib/i18n/config';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
 const PDFPreview = dynamic(() => import('@/components/PDFPreview'), { ssr: false });
@@ -33,6 +36,11 @@ by John Smith and Jane Doe
 Published in IEEE Transactions 2023`;
 
 export default function CitationGenerator() {
+  const t = useTranslations('toolsSpecific.citationGenerator');
+  const tTools = useTranslations('tools');
+  const tCommon = useTranslations('common');
+  const locale = useLocale() as Locale;
+  
   const [citationInput, setCitationInput] = useState<string>(DEFAULT_INPUT);
   const [bibtexCode, setBibtexCode] = useState<string>('');
   const [isProcessing, setIsProcessing] = useState(false);
@@ -98,7 +106,7 @@ export default function CitationGenerator() {
         setBibtexCode(accumulatedText);
       }
     } catch (err) {
-      setError('Failed to generate citation. Please try again.');
+      setError(t('failedToGenerate'));
       console.error(err);
     } finally {
       setIsProcessing(false);
@@ -169,7 +177,7 @@ export default function CitationGenerator() {
       });
 
       if (!response.ok) {
-        let message = 'Failed to compile LaTeX.';
+        let message = tTools('failedToCompile');
         try {
           const data = await response.json();
           if (data?.error) {
@@ -189,7 +197,7 @@ export default function CitationGenerator() {
       setPreviewUrl('');
       setLastCompiledBibtex('');
       const fallbackMessage =
-        err instanceof Error ? err.message : 'Failed to compile LaTeX.';
+        err instanceof Error ? err.message : tTools('failedToCompile');
       setCompileError(fallbackMessage);
       setShowCompileErrorModal(true);
     } finally {
@@ -217,15 +225,19 @@ export default function CitationGenerator() {
   return (
     <div className={cn("min-h-screen bg-gray-50", dmSans.className)}>
       <div className="mx-auto max-w-7xl px-6 py-12">
+        {/* testing purposes only */}
+        {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-4">
+          <LanguageSwitcher currentLocale={locale} />
+        </div> */}
         <div className="mb-12">
           <div className="relative flex items-start justify-center mb-3">
             <Link href="/" className="absolute left-0 inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
               <ArrowLeft className="h-5 w-5" />
-              <span className="text-sm font-medium">Back to Tools</span>
+              <span className="text-sm font-medium">{tCommon('backToTools')}</span>
             </Link>
-            <h1 className="text-4xl font-light text-gray-900">LaTeX Citation Generator</h1>
+            <h1 className="text-4xl font-light text-gray-900">{t('title')}</h1>
           </div>
-          <p className="text-lg text-gray-600 text-center">Generate BibTeX citations from article details, DOIs, or URLs</p>
+          <p className="text-lg text-gray-600 text-center">{t('subtitle')}</p>
         </div>
 
         <div className="grid grid-cols-2 gap-8">
@@ -234,12 +246,12 @@ export default function CitationGenerator() {
             <div className="h-[72px] mb-6 flex flex-col justify-start">
               <div className="mb-2 flex items-center gap-3">
                 <span className="inline-flex items-center rounded-md bg-orange-50 px-3 py-1.5 text-sm font-medium text-orange-900 border border-orange-200">
-                  INPUT
+                  {tTools('input')}
                 </span>
-                <h2 className="text-xl font-medium text-gray-900">Citation Details</h2>
+                <h2 className="text-xl font-medium text-gray-900">{t('citationDetailsLabel')}</h2>
               </div>
               <p className="text-sm text-gray-600">
-                Enter article details, DOI, or URL
+                {t('citationDetailsHint')}
               </p>
             </div>
 
@@ -247,7 +259,7 @@ export default function CitationGenerator() {
               <textarea
                 value={citationInput}
                 onChange={(e) => setCitationInput(e.target.value)}
-                placeholder="Enter citation details..."
+                placeholder={t('placeholder')}
                 className="flex-1 p-6 resize-none focus:outline-none text-gray-900 placeholder:text-gray-400 text-sm"
                 disabled={isProcessing}
               />
@@ -258,7 +270,7 @@ export default function CitationGenerator() {
               disabled={isProcessing || !citationInput.trim()}
               className="mt-6 w-full px-6 py-3 bg-blue-600 text-white text-base font-medium rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isProcessing ? 'Generating...' : 'Generate BibTeX'}
+              {isProcessing ? t('generating') : t('generateBibtex')}
             </button>
 
             {error && (
@@ -273,12 +285,12 @@ export default function CitationGenerator() {
             <div className="h-[72px] mb-6 flex flex-col justify-start">
               <div className="mb-2 flex items-center gap-3">
                 <span className="inline-flex items-center rounded-md bg-green-50 px-3 py-1.5 text-sm font-medium text-green-900 border border-green-200">
-                  OUTPUT
+                  {tTools('output')}
                 </span>
-                <h2 className="text-xl font-medium text-gray-900">BibTeX Code</h2>
+                <h2 className="text-xl font-medium text-gray-900">{t('outputLabel')}</h2>
               </div>
               <p className="text-sm text-gray-600">
-                Ready to add to your .bib file
+                {t('readyToAdd')}
               </p>
             </div>
 
@@ -294,7 +306,7 @@ export default function CitationGenerator() {
                     }`}
                   >
                     <Code2 className="h-4 w-4" />
-                    Code
+                    {tTools('codeTab')}
                   </button>
                   <button
                     onClick={(e) => {
@@ -312,12 +324,12 @@ export default function CitationGenerator() {
                     } ${(isCompiling || isProcessing) ? 'opacity-50 cursor-not-allowed' : ''}`}
                   >
                     <Eye className="h-4 w-4" />
-                    Preview
+                    {tTools('previewTab')}
                     {isProcessing && (
-                      <span className="text-xs text-gray-400">(Generating...)</span>
+                      <span className="text-xs text-gray-400">({t('generating')})</span>
                     )}
                     {!isProcessing && isCompiling && (
-                      <span className="text-xs text-gray-400">(Compiling...)</span>
+                      <span className="text-xs text-gray-400">({tTools('compilingLatex')})</span>
                     )}
                   </button>
                 </div>
@@ -328,7 +340,7 @@ export default function CitationGenerator() {
                   <div className="flex items-center justify-center flex-1">
                     <div className="text-center">
                       <Loader2 className="mx-auto h-12 w-12 text-blue-500 animate-spin mb-4" />
-                      <p className="text-gray-600">Generating BibTeX...</p>
+                      <p className="text-gray-600">{t('generatingBibtex')}</p>
                     </div>
                   </div>
                 ) : bibtexCode ? (
@@ -352,7 +364,7 @@ export default function CitationGenerator() {
                       {isProcessing && (
                         <div className="absolute top-2 right-2 flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1.5 rounded-md text-sm shadow-sm">
                           <Loader2 className="h-4 w-4 animate-spin" />
-                          Generating...
+                          {t('generating')}
                         </div>
                       )}
                     </div>
@@ -362,21 +374,21 @@ export default function CitationGenerator() {
                         <div className="flex items-center justify-center h-full">
                           <div className="text-center">
                             <Loader2 className="mx-auto h-8 w-8 text-blue-500 animate-spin mb-2" />
-                            <p className="text-sm text-gray-600">Generating preview...</p>
+                            <p className="text-sm text-gray-600">{tTools('generatingPreview')}</p>
                           </div>
                         </div>
                       ) : previewUrl ? (
                         <PDFPreview pdfUrl={previewUrl} width={420} />
                       ) : (
                         <div className="flex items-center justify-center h-full">
-                          <p className="text-gray-400">Preview will appear here...</p>
+                          <p className="text-gray-400">{tTools('previewWillAppear')}</p>
                         </div>
                       )}
                     </div>
                   )
                 ) : (
                   <div className="flex items-center justify-center flex-1">
-                    <p className="text-gray-400">BibTeX citation will appear here...</p>
+                    <p className="text-gray-400">{t('bibtexWillAppear')}</p>
                   </div>
                 )}
               </div>
@@ -389,7 +401,7 @@ export default function CitationGenerator() {
                   className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 text-base font-medium rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm"
                 >
                   <Download className="h-5 w-5" />
-                  Export as .bib
+                  {t('exportAsBib')}
                 </button>
               </div>
             )}
@@ -408,7 +420,7 @@ export default function CitationGenerator() {
         latex={latestLatexDocument}
         onClose={() => setShowCompileErrorModal(false)}
         source="tools:citation-generator"
-        title="Citation Generator Output"
+        title={t('title')}
       />
     </div>
   );

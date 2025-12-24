@@ -131,11 +131,18 @@
       },
       "citationGenerator": {
         "title": "مولد استشهادات LaTeX",
-        "description": "قم بإنشاء استشهادات BibTeX من تفاصيل المقال أو DOI أو URL",
-        "citationDetails": "تفاصيل الاستشهاد",
-        "enterDetails": "أدخل تفاصيل المقال أو DOI أو URL",
-        "generatedBibtex": "BibTeX المُنشأ",
-        "preview": "معاينة"
+        "subtitle": "قم بإنشاء استشهادات BibTeX من تفاصيل المقال أو DOI أو URL",
+        "citationDetailsLabel": "تفاصيل الاستشهاد",
+        "citationDetailsHint": "أدخل تفاصيل المقال أو DOI أو URL",
+        "placeholder": "أدخل تفاصيل الاستشهاد...",
+        "generateBibtex": "إنشاء BibTeX",
+        "generating": "جاري الإنشاء...",
+        "generatingBibtex": "جاري إنشاء BibTeX...",
+        "outputLabel": "كود BibTeX",
+        "readyToAdd": "جاهز للإضافة إلى ملف .bib الخاص بك",
+        "bibtexWillAppear": "سيظهر استشهاد BibTeX هنا...",
+        "failedToGenerate": "فشل في إنشاء الاستشهاد. يرجى المحاولة مرة أخرى.",
+        "exportAsBib": "تصدير كـ .bib"
       },
       "latexPreview": {
         "title": "معاينة LaTeX",
