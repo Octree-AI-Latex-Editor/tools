@@ -227,12 +227,25 @@
         "generatedLatexCode": "LaTeX Table Output"
       },
       "equationToLatex": {
-        "title": "Equation to LaTeX",
-        "description": "Convert mathematical expressions to LaTeX from text descriptions or images",
-        "equationInput": "Equation Input",
-        "generatedLatexCode": "Generated LaTeX Code",
-        "enterEquationOrUpload": "Enter equation description or upload an image",
-        "equationTooLong": "Equation description must be 2000 characters or less"
+        "title": "Conversor de ecuación a LaTeX",
+        "subtitle": "Convierta expresiones matemáticas a LaTeX desde descripciones de texto o imágenes",
+        "inputLabel": "Descripción de la ecuación o imagen",
+        "inputHint": "Describa su ecuación en texto plano o suba una imagen",
+        "placeholder": "Ejemplo: fórmula cuadrática, integral de x al cuadrado de 0 a 1, suma de n de 1 a infinito de 1 sobre n al cuadrado...",
+        "placeholderWithImage": "Entrada de texto deshabilitada mientras se sube la imagen",
+        "imageUploaded": "Imagen subida, entrada de texto deshabilitada",
+        "dropImageHere": "Arrastre su imagen de ecuación aquí",
+        "orBrowseFiles": "o explorar archivos",
+        "fileFormats": "JPEG, PNG, GIF, WebP",
+        "convertToLatex": "Convertir a LaTeX",
+        "converting": "Convirtiendo...",
+        "convertingToLatex": "Convirtiendo a LaTeX...",
+        "outputLabel": "LaTeX generado",
+        "readyToUse": "Listo para usar en sus documentos LaTeX",
+        "generatedLatexWillAppear": "El LaTeX generado aparecerá aquí...",
+        "pleaseEnterEquation": "Por favor, ingrese una descripción de ecuación o suba una imagen",
+        "equationTooLong": "La descripción de la ecuación debe tener 2000 caracteres o menos",
+        "failedToConvert": "Error al convertir la ecuación. Por favor, inténtalo de nuevo."
       },
       "imageToTikz": {
         "title": "Conversor de imagen a TikZ",

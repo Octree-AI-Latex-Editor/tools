@@ -199,10 +199,25 @@
         "generatedLatexCode": "Code LaTeX généré"
       },
       "equationToLatex": {
-        "title": "Équation vers LaTeX",
-        "description": "Convertissez des équations mathématiques à partir de texte ou d'images en LaTeX",
-        "equationInput": "Entrée d'équation",
-        "generatedLatexCode": "Code LaTeX généré"
+        "title": "Convertisseur d'équation vers LaTeX",
+        "subtitle": "Convertissez des expressions mathématiques en LaTeX à partir de descriptions textuelles ou d'images",
+        "inputLabel": "Description de l'équation ou image",
+        "inputHint": "Décrivez votre équation en texte brut ou téléchargez une image",
+        "placeholder": "Exemple : formule quadratique, intégrale de x au carré de 0 à 1, somme de n de 1 à l'infini de 1 sur n au carré...",
+        "placeholderWithImage": "Saisie de texte désactivée pendant le téléchargement de l'image",
+        "imageUploaded": "Image téléchargée, saisie de texte désactivée",
+        "dropImageHere": "Déposez votre image d'équation ici",
+        "orBrowseFiles": "ou parcourir les fichiers",
+        "fileFormats": "JPEG, PNG, GIF, WebP",
+        "convertToLatex": "Convertir en LaTeX",
+        "converting": "Conversion...",
+        "convertingToLatex": "Conversion en LaTeX...",
+        "outputLabel": "LaTeX généré",
+        "readyToUse": "Prêt à utiliser dans vos documents LaTeX",
+        "generatedLatexWillAppear": "Le LaTeX généré apparaîtra ici...",
+        "pleaseEnterEquation": "Veuillez entrer une description d'équation ou télécharger une image",
+        "equationTooLong": "La description de l'équation doit contenir 2000 caractères ou moins",
+        "failedToConvert": "Échec de la conversion de l'équation. Veuillez réessayer."
       },
       "imageToTikz": {
         "title": "Convertisseur d'image vers TikZ",

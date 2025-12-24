@@ -199,10 +199,25 @@
         "generatedLatexCode": "Código LaTeX gerado"
       },
       "equationToLatex": {
-        "title": "Equação para LaTeX",
-        "description": "Converta equações matemáticas de texto ou imagens para LaTeX",
-        "equationInput": "Entrada de equação",
-        "generatedLatexCode": "Código LaTeX gerado"
+        "title": "Conversor de equação para LaTeX",
+        "subtitle": "Converta expressões matemáticas para LaTeX a partir de descrições de texto ou imagens",
+        "inputLabel": "Descrição da equação ou imagem",
+        "inputHint": "Descreva sua equação em texto simples ou faça upload de uma imagem",
+        "placeholder": "Exemplo: fórmula quadrática, integral de x ao quadrado de 0 a 1, soma de n de 1 ao infinito de 1 sobre n ao quadrado...",
+        "placeholderWithImage": "Entrada de texto desabilitada enquanto a imagem é carregada",
+        "imageUploaded": "Imagem carregada, entrada de texto desabilitada",
+        "dropImageHere": "Solte sua imagem de equação aqui",
+        "orBrowseFiles": "ou navegar arquivos",
+        "fileFormats": "JPEG, PNG, GIF, WebP",
+        "convertToLatex": "Converter para LaTeX",
+        "converting": "Convertendo...",
+        "convertingToLatex": "Convertendo para LaTeX...",
+        "outputLabel": "LaTeX gerado",
+        "readyToUse": "Pronto para usar em seus documentos LaTeX",
+        "generatedLatexWillAppear": "O LaTeX gerado aparecerá aqui...",
+        "pleaseEnterEquation": "Por favor, digite uma descrição de equação ou faça upload de uma imagem",
+        "equationTooLong": "A descrição da equação deve ter 2000 caracteres ou menos",
+        "failedToConvert": "Falha ao converter a equação. Por favor, tente novamente."
       },
       "imageToTikz": {
         "title": "Conversor de imagem para TikZ",
