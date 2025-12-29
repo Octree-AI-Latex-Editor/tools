@@ -150,23 +150,47 @@
     },
     "tikzGenerator": {
       "title": "TikZ Diagram Generator",
-      "description": "Describe your diagram and let AI generate TikZ code",
-      "diagramDescription": "Diagram Description",
-      "generatedTikzCode": "Generated TikZ Code",
-      "placeholder": "Example: Draw a simple flowchart with 3 nodes connected by arrows. The first node should say 'Start', the second 'Process', and the third 'End'."
+      "subtitle": "Describe your diagram and let AI generate TikZ code",
+      "inputLabel": "Diagram Description",
+      "inputHint": "Describe the diagram you want to create",
+      "placeholder": "Example: Draw a simple flowchart with 3 nodes connected by arrows. The first node should say 'Start', the second 'Process', and the third 'End'.",
+      "generateTikz": "Generate TikZ",
+      "generating": "Generating...",
+      "aiModelThinking": "AI Model is thinking …",
+      "giveItAMoment": "Give it a moment to craft your TikZ diagram.",
+      "hangTight": "Hang tight while the code streams in.",
+      "outputLabel": "Generated TikZ Code",
+      "readyToUse": "Ready to use in your LaTeX documents",
+      "generatedCodeWillAppear": "Generated code will appear here...",
+      "failedToGenerate": "Failed to generate TikZ. Please try again.",
+      "failedToCompile": "Failed to compile TikZ document."
     },
     "pgfplotsGenerator": {
       "title": "Pgfplots Generator",
-      "description": "Describe your plot and let AI generate pgfplots code",
-      "plotDescription": "Plot Description",
-      "generatedPgfplotsCode": "Generated Pgfplots Code",
-      "placeholder": "Example: Create a line plot showing y = x^2 from x = -5 to x = 5, with a blue line and grid. Add axis labels."
+      "subtitle": "Describe your plot and let AI generate pgfplots code",
+      "inputLabel": "Plot Description",
+      "inputHint": "Describe the plot or graph you want to create",
+      "placeholder": "Example: Create a line plot showing y = x^2 from x = -5 to x = 5, with a blue line and grid. Add axis labels.",
+      "generatePlot": "Generate Plot",
+      "generating": "Generating...",
+      "generatingPgfplotsCode": "Generating pgfplots code...",
+      "outputLabel": "Generated Pgfplots Code",
+      "readyToUse": "Ready to use in your LaTeX documents",
+      "generatedCodeWillAppear": "Generated code will appear here...",
+      "failedToGenerate": "Failed to generate pgfplots. Please try again."
     },
     "mermaidToLatex": {
       "title": "Mermaid to LaTeX Converter",
-      "description": "Convert Mermaid diagrams to LaTeX code",
-      "mermaidCode": "Mermaid Code",
-      "generatedLatexCode": "Generated LaTeX Code"
+      "subtitle": "Convert Mermaid diagrams to LaTeX code",
+      "inputLabel": "Mermaid Code",
+      "inputHint": "Paste your Mermaid diagram syntax here",
+      "convertToLatex": "Convert to LaTeX",
+      "converting": "Converting...",
+      "convertingToLatex": "Converting to LaTeX...",
+      "outputLabel": "LaTeX Code",
+      "readyToUse": "Ready to use in your LaTeX documents",
+      "convertedLatexWillAppear": "Converted LaTeX will appear here...",
+      "failedToConvert": "Failed to convert Mermaid. Please try again."
     },
     "citationGenerator": {
       "title": "LaTeX Citation Generator",
@@ -279,10 +303,10 @@
       "failedToCount": "Failed to count words"
     },
     "tableToLatex": {
-      "title": "Excel to LaTeX",
-      "description": "Upload a .csv file and instantly get clean LaTeX table code.",
-      "tableData": "Upload CSV File",
-      "generatedLatexCode": "LaTeX Table Output"
+      "title": "CSV to LaTeX Converter",
+      "subtitle": "Upload a .csv file and instantly get clean LaTeX table code.",
+      "inputLabel": "Upload CSV File",
+      "outputLabel": "LaTeX Table Output"
     },
     "equationToLatex": {
       "title": "Equation to LaTeX Converter",
@@ -329,8 +353,46 @@
     },
     "pdfToLatex": {
       "title": "PDF to LaTeX Converter",
-      "description": "Convert PDF documents with math and equations to clean LaTeX code",
-      "pdfDocument": "Your PDF Document"
+      "subtitle": "Convert PDF documents with math and equations to clean LaTeX code",
+      "inputLabel": "Your PDF Document",
+      "outputLabel": "Clean LaTeX Code"
+    },
+    "pgfplotsGenerator": {
+      "title": "Pgfplots Generator",
+      "subtitle": "Describe your plot and let AI generate pgfplots code",
+      "inputLabel": "Plot Description",
+      "inputHint": "Describe the plot or graph you want to create",
+      "placeholder": "Example: Create a line plot showing y = x^2 from x = -5 to x = 5, with a blue line and grid. Add axis labels.",
+      "generatePlot": "Generate Plot",
+      "generating": "Generating...",
+      "generatingPgfplotsCode": "Generating pgfplots code...",
+      "outputLabel": "Generated Pgfplots Code",
+      "readyToUse": "Ready to use in your LaTeX documents",
+      "generatedCodeWillAppear": "Generated code will appear here...",
+      "failedToGenerate": "Failed to generate pgfplots. Please try again."
+    },
+    "tableToLatex": {
+      "title": "CSV to LaTeX Converter",
+      "subtitle": "Upload a .csv file and instantly get clean LaTeX table code.",
+      "inputLabel": "Upload CSV File",
+      "outputLabel": "LaTeX Table Output"
+    },
+    "tikzGenerator": {
+      "title": "TikZ Diagram Generator",
+      "subtitle": "Describe your diagram and let AI generate TikZ code",
+      "inputLabel": "Diagram Description",
+      "inputHint": "Describe the diagram you want to create",
+      "placeholder": "Example: Draw a simple flowchart with 3 nodes connected by arrows. The first node should say 'Start', the second 'Process', and the third 'End'.",
+      "generateTikz": "Generate TikZ",
+      "generating": "Generating...",
+      "aiModelThinking": "AI Model is thinking …",
+      "giveItAMoment": "Give it a moment to craft your TikZ diagram.",
+      "hangTight": "Hang tight while the code streams in.",
+      "outputLabel": "Generated TikZ Code",
+      "readyToUse": "Ready to use in your LaTeX documents",
+      "generatedCodeWillAppear": "Generated code will appear here...",
+      "failedToGenerate": "Failed to generate TikZ. Please try again.",
+      "failedToCompile": "Failed to compile TikZ document."
     }
   },
   "categories": {

@@ -16,6 +16,9 @@ import {
 import { openInOctree } from '@/lib/open-in-octree';
 import { CompileErrorModal } from '@/components/CompileErrorModal';
 import { OctreeCTA } from '@/components/OctreeCTA';
+import { useTranslations, useLocale } from 'next-intl';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
+import type { Locale } from '@/lib/i18n/config';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
 const PDFPreview = dynamic(() => import('@/components/PDFPreview'), { ssr: false });
@@ -79,7 +82,7 @@ export default function PgfplotsGenerator() {
         setLatexCode(accumulatedText);
       }
     } catch (err) {
-      setError('Failed to generate pgfplots. Please try again.');
+      setError(t('failedToGenerate'));
       console.error(err);
     } finally {
       setIsProcessing(false);
@@ -99,7 +102,7 @@ export default function PgfplotsGenerator() {
       });
 
       if (!response.ok) {
-        let message = 'Failed to compile LaTeX.';
+        let message = tTools('failedToCompile');
         try {
           const data = await response.json();
           if (data?.error) {
@@ -119,7 +122,7 @@ export default function PgfplotsGenerator() {
       setPreviewUrl('');
       setLastCompiledLatex('');
       const fallbackMessage =
-        err instanceof Error ? err.message : 'Failed to compile LaTeX.';
+        err instanceof Error ? err.message : tTools('failedToCompile');
       setCompileError(fallbackMessage);
       setShowCompileErrorModal(true);
     } finally {
@@ -168,15 +171,19 @@ export default function PgfplotsGenerator() {
   return (
     <div className={cn("min-h-screen bg-gray-50", dmSans.className)}>
       <div className="mx-auto max-w-7xl px-6 py-12">
+        {/* testing purposes only */}
+        {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-4">
+          <LanguageSwitcher currentLocale={locale} />
+        </div> */}
         <div className="mb-12">
           <div className="relative flex items-start justify-center mb-3">
             <Link href="/" className="absolute left-0 inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
               <ArrowLeft className="h-5 w-5" />
-              <span className="text-sm font-medium">Back to Tools</span>
+              <span className="text-sm font-medium">{tCommon('backToTools')}</span>
             </Link>
-            <h1 className="text-4xl font-light text-gray-900">Pgfplots Generator</h1>
+            <h1 className="text-4xl font-light text-gray-900">{t('title')}</h1>
           </div>
-          <p className="text-lg text-gray-600 text-center">Describe your plot and let AI generate pgfplots code</p>
+          <p className="text-lg text-gray-600 text-center">{t('subtitle')}</p>
         </div>
 
         <div className="grid grid-cols-2 gap-8">
@@ -185,12 +192,12 @@ export default function PgfplotsGenerator() {
             <div className="h-[72px] mb-6 flex flex-col justify-start">
               <div className="mb-2 flex items-center gap-3">
                 <span className="inline-flex items-center rounded-md bg-orange-50 px-3 py-1.5 text-sm font-medium text-orange-900 border border-orange-200">
-                  INPUT
+                  {tTools('input')}
                 </span>
-                <h2 className="text-xl font-medium text-gray-900">Plot Description</h2>
+                <h2 className="text-xl font-medium text-gray-900">{t('inputLabel')}</h2>
               </div>
               <p className="text-sm text-gray-600">
-                Describe the plot or graph you want to create
+                {t('inputHint')}
               </p>
             </div>
 
@@ -198,7 +205,7 @@ export default function PgfplotsGenerator() {
               <textarea
                 value={instructions}
                 onChange={(e) => setInstructions(e.target.value)}
-                placeholder="Example: Create a line plot showing y = x^2 from x = -5 to x = 5, with a blue line and grid. Add axis labels."
+                placeholder={t('placeholder')}
                 className="flex-1 p-6 resize-none focus:outline-none text-gray-900 placeholder:text-gray-400"
                 disabled={isProcessing}
               />
@@ -209,7 +216,7 @@ export default function PgfplotsGenerator() {
               disabled={isProcessing || !instructions.trim()}
               className="mt-6 w-full px-6 py-3 bg-blue-600 text-white text-base font-medium rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isProcessing ? 'Generating...' : 'Generate Plot'}
+              {isProcessing ? t('generating') : t('generatePlot')}
             </button>
 
             {error && (
@@ -224,12 +231,12 @@ export default function PgfplotsGenerator() {
             <div className="h-[72px] mb-6 flex flex-col justify-start">
               <div className="mb-2 flex items-center gap-3">
                 <span className="inline-flex items-center rounded-md bg-green-50 px-3 py-1.5 text-sm font-medium text-green-900 border border-green-200">
-                  OUTPUT
+                  {tTools('output')}
                 </span>
-                <h2 className="text-xl font-medium text-gray-900">Generated Pgfplots Code</h2>
+                <h2 className="text-xl font-medium text-gray-900">{t('outputLabel')}</h2>
               </div>
               <p className="text-sm text-gray-600">
-                Ready to use in your LaTeX documents
+                {t('readyToUse')}
               </p>
             </div>
 
@@ -245,7 +252,7 @@ export default function PgfplotsGenerator() {
                     }`}
                   >
                     <Code2 className="h-4 w-4" />
-                    Code
+                    {tTools('codeTab')}
                   </button>
                   <button
                     onClick={(e) => {
@@ -263,12 +270,12 @@ export default function PgfplotsGenerator() {
                     } ${(isCompiling || isProcessing) ? 'opacity-50 cursor-not-allowed' : ''}`}
                   >
                     <Eye className="h-4 w-4" />
-                    Preview
+                    {tTools('previewTab')}
                     {isProcessing && (
-                      <span className="text-xs text-gray-400">(Generating...)</span>
+                      <span className="text-xs text-gray-400">({t('generating')})</span>
                     )}
                     {!isProcessing && isCompiling && (
-                      <span className="text-xs text-gray-400">(Compiling...)</span>
+                      <span className="text-xs text-gray-400">({tTools('compilingLatex')})</span>
                     )}
                   </button>
                 </div>
@@ -279,7 +286,7 @@ export default function PgfplotsGenerator() {
                   <div className="flex items-center justify-center flex-1">
                     <div className="text-center">
                       <Loader2 className="mx-auto h-12 w-12 text-blue-500 animate-spin mb-4" />
-                      <p className="text-gray-600">Generating pgfplots code...</p>
+                      <p className="text-gray-600">{t('generatingPgfplotsCode')}</p>
                     </div>
                   </div>
                 ) : latexCode ? (
@@ -303,7 +310,7 @@ export default function PgfplotsGenerator() {
                       {isProcessing && (
                         <div className="absolute top-2 right-2 flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1.5 rounded-md text-sm shadow-sm">
                           <Loader2 className="h-4 w-4 animate-spin" />
-                          Generating...
+                          {t('generating')}
                         </div>
                       )}
                     </div>
@@ -327,7 +334,7 @@ export default function PgfplotsGenerator() {
                   )
                 ) : (
                   <div className="flex items-center justify-center flex-1">
-                    <p className="text-gray-400">Generated code will appear here...</p>
+                    <p className="text-gray-400">{t('generatedCodeWillAppear')}</p>
                   </div>
                 )}
               </div>
@@ -340,7 +347,7 @@ export default function PgfplotsGenerator() {
                   className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 text-base font-medium rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm"
                 >
                   <OctreeLogo className="h-5 w-5" />
-                  Open in Octree
+                  {tCommon('openInOctree')}
                 </button>
                 
                 <div className="relative">
@@ -349,7 +356,7 @@ export default function PgfplotsGenerator() {
                     className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 text-base font-medium rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm"
                   >
                     <Download className="h-5 w-5" />
-                    Export
+                    {tCommon('export')}
                     <ChevronDown className="h-4 w-4" />
                   </button>
                   
@@ -359,13 +366,13 @@ export default function PgfplotsGenerator() {
                         onClick={exportAsLatex}
                         className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
                       >
-                        Export as LaTeX
+                        {tTools('exportAsLatex')}
                       </button>
                       <button
                         onClick={exportAsPDF}
                         className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
                       >
-                        Export as PDF
+                        {tTools('exportAsPdf')}
                       </button>
                     </div>
                   )}
@@ -387,7 +394,7 @@ export default function PgfplotsGenerator() {
         latex={latexCode}
         onClose={() => setShowCompileErrorModal(false)}
         source="tools:pgfplots"
-        title="Pgfplot"
+        title={t('title')}
       />
     </div>
   );

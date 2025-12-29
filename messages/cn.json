@@ -240,10 +240,16 @@
         "failedToCount": "统计字数失败"
       },
       "tableToLatex": {
-        "title": "Excel 转 LaTeX",
-        "description": "将 CSV、JSON、Excel 转换为 LaTeX 表格",
-        "tableData": "表格数据",
-        "generatedLatexCode": "生成的 LaTeX 代码"
+        "title": "CSV 转 LaTeX 转换器",
+        "subtitle": "上传 .csv 文件，立即获得干净的 LaTeX 表格代码。",
+        "inputLabel": "上传 CSV 文件",
+        "outputLabel": "LaTeX 表格输出"
+      },
+      "pdfToLatex": {
+        "title": "PDF 转 LaTeX 转换器",
+        "subtitle": "将包含数学和方程的 PDF 文档转换为干净的 LaTeX 代码",
+        "inputLabel": "您的 PDF 文档",
+        "outputLabel": "干净的 LaTeX 代码"
       },
       "equationToLatex": {
         "title": "方程转 LaTeX 转换器",

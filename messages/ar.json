@@ -111,23 +111,47 @@
       },
       "tikzGenerator": {
         "title": "مولد مخططات TikZ",
-        "description": "قم بوصف مخططك واترك الذكاء الاصطناعي ينشئ كود TikZ",
-        "diagramDescription": "وصف المخطط",
-        "generatedTikzCode": "كود TikZ المُنشأ",
-        "placeholder": "مثال: ارسم مخطط انسيابي بسيط يحتوي على 3 عقد متصلة بأسهم. يجب أن تقول العقدة الأولى 'بداية'، والثانية 'عملية'، والثالثة 'نهاية'."
+        "subtitle": "قم بوصف مخططك واترك الذكاء الاصطناعي ينشئ كود TikZ",
+        "inputLabel": "وصف المخطط",
+        "inputHint": "قم بوصف المخطط الذي تريد إنشاءه",
+        "placeholder": "مثال: ارسم مخطط انسيابي بسيط يحتوي على 3 عقد متصلة بأسهم. يجب أن تقول العقدة الأولى 'بداية'، والثانية 'عملية'، والثالثة 'نهاية'.",
+        "generateTikz": "إنشاء TikZ",
+        "generating": "جاري الإنشاء...",
+        "aiModelThinking": "نموذج الذكاء الاصطناعي يفكر …",
+        "giveItAMoment": "امنحه لحظة لإنشاء مخطط TikZ الخاص بك.",
+        "hangTight": "انتظر بينما يصل الكود.",
+        "outputLabel": "كود TikZ المُنشأ",
+        "readyToUse": "جاهز للاستخدام في مستندات LaTeX الخاصة بك",
+        "generatedCodeWillAppear": "سيظهر الكود المُنشأ هنا...",
+        "failedToGenerate": "فشل في إنشاء TikZ. يرجى المحاولة مرة أخرى.",
+        "failedToCompile": "فشل في تجميع مستند TikZ."
       },
       "pgfplotsGenerator": {
         "title": "مولد Pgfplots",
-        "description": "قم بوصف الرسم البياني الخاص بك واترك الذكاء الاصطناعي ينشئ كود pgfplots",
-        "plotDescription": "وصف الرسم البياني",
-        "generatedPgfplotsCode": "كود Pgfplots المُنشأ",
-        "placeholder": "مثال: أنشئ رسمًا بيانيًا خطيًا يوضح y = x^2 من x = -5 إلى x = 5، بخط أزرق وشبكة. أضف تسميات المحاور."
+        "subtitle": "قم بوصف الرسم البياني الخاص بك واترك الذكاء الاصطناعي ينشئ كود pgfplots",
+        "inputLabel": "وصف الرسم البياني",
+        "inputHint": "قم بوصف الرسم البياني الذي تريد إنشاءه",
+        "placeholder": "مثال: أنشئ رسمًا بيانيًا خطيًا يوضح y = x^2 من x = -5 إلى x = 5، بخط أزرق وشبكة. أضف تسميات المحاور.",
+        "generatePlot": "إنشاء الرسم البياني",
+        "generating": "جاري الإنشاء...",
+        "generatingPgfplotsCode": "جاري إنشاء كود pgfplots...",
+        "outputLabel": "كود Pgfplots المُنشأ",
+        "readyToUse": "جاهز للاستخدام في مستندات LaTeX الخاصة بك",
+        "generatedCodeWillAppear": "سيظهر الكود المُنشأ هنا...",
+        "failedToGenerate": "فشل في إنشاء pgfplots. يرجى المحاولة مرة أخرى."
       },
       "mermaidToLatex": {
         "title": "محول Mermaid إلى LaTeX",
-        "description": "قم بتحويل مخططات Mermaid إلى كود LaTeX",
-        "mermaidCode": "كود Mermaid",
-        "generatedLatexCode": "كود LaTeX المُنشأ"
+        "subtitle": "قم بتحويل مخططات Mermaid إلى كود LaTeX",
+        "inputLabel": "كود Mermaid",
+        "inputHint": "الصق صيغة مخطط Mermaid الخاصة بك هنا",
+        "convertToLatex": "تحويل إلى LaTeX",
+        "converting": "جاري التحويل...",
+        "convertingToLatex": "جاري التحويل إلى LaTeX...",
+        "outputLabel": "كود LaTeX",
+        "readyToUse": "جاهز للاستخدام في مستندات LaTeX الخاصة بك",
+        "convertedLatexWillAppear": "سيظهر LaTeX المحول هنا...",
+        "failedToConvert": "فشل في تحويل Mermaid. يرجى المحاولة مرة أخرى."
       },
       "citationGenerator": {
         "title": "مولد استشهادات LaTeX",
@@ -240,10 +264,16 @@
         "failedToCount": "فشل في عد الكلمات"
       },
       "tableToLatex": {
-        "title": "Excel إلى LaTeX",
-        "description": "قم بتحويل CSV و JSON و Excel إلى جداول LaTeX",
-        "tableData": "بيانات الجدول",
-        "generatedLatexCode": "كود LaTeX المُنشأ"
+        "title": "محول CSV إلى LaTeX",
+        "subtitle": "قم بتحميل ملف .csv واحصل على الفور على كود جدول LaTeX نظيف.",
+        "inputLabel": "تحميل ملف CSV",
+        "outputLabel": "إخراج جدول LaTeX"
+      },
+      "pdfToLatex": {
+        "title": "محول PDF إلى LaTeX",
+        "subtitle": "قم بتحويل مستندات PDF مع الرياضيات والمعادلات إلى كود LaTeX نظيف",
+        "inputLabel": "مستند PDF الخاص بك",
+        "outputLabel": "كود LaTeX نظيف"
       },
       "equationToLatex": {
         "title": "محول المعادلة إلى LaTeX",

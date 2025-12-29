@@ -111,23 +111,47 @@
       },
       "tikzGenerator": {
         "title": "Générateur de diagrammes TikZ",
-        "description": "Décrivez votre diagramme et laissez l'IA générer le code TikZ",
-        "diagramDescription": "Description du diagramme",
-        "generatedTikzCode": "Code TikZ généré",
-        "placeholder": "Exemple : Dessinez un organigramme simple avec 3 nœuds reliés par des flèches. Le premier nœud doit dire 'Début', le second 'Processus' et le troisième 'Fin'."
+        "subtitle": "Décrivez votre diagramme et laissez l'IA générer le code TikZ",
+        "inputLabel": "Description du diagramme",
+        "inputHint": "Décrivez le diagramme que vous souhaitez créer",
+        "placeholder": "Exemple : Dessinez un organigramme simple avec 3 nœuds reliés par des flèches. Le premier nœud doit dire 'Début', le second 'Processus' et le troisième 'Fin'.",
+        "generateTikz": "Générer TikZ",
+        "generating": "Génération...",
+        "aiModelThinking": "Le modèle IA réfléchit …",
+        "giveItAMoment": "Donnez-lui un moment pour créer votre diagramme TikZ.",
+        "hangTight": "Attendez pendant que le code arrive.",
+        "outputLabel": "Code TikZ généré",
+        "readyToUse": "Prêt à utiliser dans vos documents LaTeX",
+        "generatedCodeWillAppear": "Le code généré apparaîtra ici...",
+        "failedToGenerate": "Échec de la génération TikZ. Veuillez réessayer.",
+        "failedToCompile": "Échec de la compilation du document TikZ."
       },
       "pgfplotsGenerator": {
         "title": "Générateur Pgfplots",
-        "description": "Décrivez votre graphique et laissez l'IA générer le code pgfplots",
-        "plotDescription": "Description du graphique",
-        "generatedPgfplotsCode": "Code Pgfplots généré",
-        "placeholder": "Exemple : Créez un graphique linéaire montrant y = x^2 de x = -5 à x = 5, avec une ligne bleue et une grille. Ajoutez des étiquettes d'axes."
+        "subtitle": "Décrivez votre graphique et laissez l'IA générer le code pgfplots",
+        "inputLabel": "Description du graphique",
+        "inputHint": "Décrivez le graphique que vous souhaitez créer",
+        "placeholder": "Exemple : Créez un graphique linéaire montrant y = x^2 de x = -5 à x = 5, avec une ligne bleue et une grille. Ajoutez des étiquettes d'axes.",
+        "generatePlot": "Générer le graphique",
+        "generating": "Génération...",
+        "generatingPgfplotsCode": "Génération du code pgfplots...",
+        "outputLabel": "Code Pgfplots généré",
+        "readyToUse": "Prêt à utiliser dans vos documents LaTeX",
+        "generatedCodeWillAppear": "Le code généré apparaîtra ici...",
+        "failedToGenerate": "Échec de la génération pgfplots. Veuillez réessayer."
       },
       "mermaidToLatex": {
         "title": "Convertisseur Mermaid vers LaTeX",
-        "description": "Convertissez des diagrammes Mermaid en code LaTeX",
-        "mermaidCode": "Code Mermaid",
-        "generatedLatexCode": "Code LaTeX généré"
+        "subtitle": "Convertissez des diagrammes Mermaid en code LaTeX",
+        "inputLabel": "Code Mermaid",
+        "inputHint": "Collez votre syntaxe de diagramme Mermaid ici",
+        "convertToLatex": "Convertir en LaTeX",
+        "converting": "Conversion...",
+        "convertingToLatex": "Conversion en LaTeX...",
+        "outputLabel": "Code LaTeX",
+        "readyToUse": "Prêt à utiliser dans vos documents LaTeX",
+        "convertedLatexWillAppear": "Le LaTeX converti apparaîtra ici...",
+        "failedToConvert": "Échec de la conversion Mermaid. Veuillez réessayer."
       },
       "citationGenerator": {
         "title": "Générateur de citations LaTeX",
@@ -240,10 +264,16 @@
         "failedToCount": "Échec du comptage des mots"
       },
       "tableToLatex": {
-        "title": "Excel vers LaTeX",
-        "description": "Convertissez CSV, JSON, Excel en tableaux LaTeX",
-        "tableData": "Données du tableau",
-        "generatedLatexCode": "Code LaTeX généré"
+        "title": "Convertisseur CSV vers LaTeX",
+        "subtitle": "Téléchargez un fichier .csv et obtenez instantanément un code de tableau LaTeX propre.",
+        "inputLabel": "Télécharger un fichier CSV",
+        "outputLabel": "Sortie de tableau LaTeX"
+      },
+      "pdfToLatex": {
+        "title": "Convertisseur PDF vers LaTeX",
+        "subtitle": "Convertissez des documents PDF avec des mathématiques et des équations en code LaTeX propre",
+        "inputLabel": "Votre document PDF",
+        "outputLabel": "Code LaTeX propre"
       },
       "equationToLatex": {
         "title": "Convertisseur d'équation vers LaTeX",

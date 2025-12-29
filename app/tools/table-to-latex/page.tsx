@@ -1,15 +1,18 @@
 'use client';
 
 import AIToolLayout from '@/components/AIToolLayout';
+import { useTranslations } from 'next-intl';
 
 export default function TableToLatex() {
+  const t = useTranslations('toolsSpecific.tableToLatex');
+  
   return (
     <AIToolLayout
-      title="CSV to LaTeX Converter"
-      description="Upload a .csv file and instantly get clean LaTeX table code."
+      title={t('title')}
+      description={t('subtitle')}
       apiEndpoint="/api/convert-table"
-      inputLabel="Upload CSV File"
-      outputLabel="LaTeX Table Output"
+      inputLabel={t('inputLabel')}
+      outputLabel={t('outputLabel')}
       acceptedFormats="CSV"
     />
   );

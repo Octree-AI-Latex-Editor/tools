@@ -1,15 +1,18 @@
 'use client';
 
 import AIToolLayout from '@/components/AIToolLayout';
+import { useTranslations } from 'next-intl';
 
 export default function PdfToLatex() {
+  const t = useTranslations('toolsSpecific.pdfToLatex');
+  
   return (
     <AIToolLayout
-      title="PDF to LaTeX Converter"
-      description="Convert PDF documents with math and equations to clean LaTeX code"
+      title={t('title')}
+      description={t('subtitle')}
       apiEndpoint="/api/convert"
-      inputLabel="Your PDF Document"
-      outputLabel="Clean LaTeX Code"
+      inputLabel={t('inputLabel')}
+      outputLabel={t('outputLabel')}
       acceptedFormats="PDF"
     />
   );

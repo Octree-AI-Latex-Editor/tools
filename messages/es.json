@@ -134,24 +134,48 @@
         "description": "Convert images of handwritten math and equations to clean LaTeX code"
       },
       "tikzGenerator": {
-        "title": "TikZ Diagram Generator",
-        "description": "Describe your diagram and let AI generate TikZ code",
-        "diagramDescription": "Diagram Description",
-        "generatedTikzCode": "Generated TikZ Code",
-        "placeholder": "Example: Draw a simple flowchart with 3 nodes connected by arrows. The first node should say 'Start', the second 'Process', and the third 'End'."
+        "title": "Generador de diagramas TikZ",
+        "subtitle": "Describe tu diagrama y deja que la IA genere el código TikZ",
+        "inputLabel": "Descripción del diagrama",
+        "inputHint": "Describe el diagrama que quieres crear",
+        "placeholder": "Ejemplo: Dibuja un organigrama simple con 3 nodos conectados por flechas. El primer nodo debe decir 'Inicio', el segundo 'Proceso' y el tercero 'Fin'.",
+        "generateTikz": "Generar TikZ",
+        "generating": "Generando...",
+        "aiModelThinking": "El modelo de IA está pensando …",
+        "giveItAMoment": "Dale un momento para crear tu diagrama TikZ.",
+        "hangTight": "Espera mientras el código llega.",
+        "outputLabel": "Código TikZ generado",
+        "readyToUse": "Listo para usar en tus documentos LaTeX",
+        "generatedCodeWillAppear": "El código generado aparecerá aquí...",
+        "failedToGenerate": "Error al generar TikZ. Por favor, inténtalo de nuevo.",
+        "failedToCompile": "Error al compilar el documento TikZ."
       },
       "pgfplotsGenerator": {
-        "title": "Pgfplots Generator",
-        "description": "Describe your plot and let AI generate pgfplots code",
-        "plotDescription": "Plot Description",
-        "generatedPgfplotsCode": "Generated Pgfplots Code",
-        "placeholder": "Example: Create a line plot showing y = x^2 from x = -5 to x = 5, with a blue line and grid. Add axis labels."
+        "title": "Generador Pgfplots",
+        "subtitle": "Describe tu gráfico y deja que la IA genere el código pgfplots",
+        "inputLabel": "Descripción del gráfico",
+        "inputHint": "Describe el gráfico que quieres crear",
+        "placeholder": "Ejemplo: Crea un gráfico de líneas mostrando y = x^2 de x = -5 a x = 5, con una línea azul y cuadrícula. Añade etiquetas de ejes.",
+        "generatePlot": "Generar gráfico",
+        "generating": "Generando...",
+        "generatingPgfplotsCode": "Generando código pgfplots...",
+        "outputLabel": "Código Pgfplots generado",
+        "readyToUse": "Listo para usar en tus documentos LaTeX",
+        "generatedCodeWillAppear": "El código generado aparecerá aquí...",
+        "failedToGenerate": "Error al generar pgfplots. Por favor, inténtalo de nuevo."
       },
       "mermaidToLatex": {
-        "title": "Mermaid to LaTeX Converter",
-        "description": "Convert Mermaid diagrams to LaTeX code",
-        "mermaidCode": "Mermaid Code",
-        "generatedLatexCode": "Generated LaTeX Code"
+        "title": "Conversor Mermaid a LaTeX",
+        "subtitle": "Convierte diagramas Mermaid en código LaTeX",
+        "inputLabel": "Código Mermaid",
+        "inputHint": "Pega tu sintaxis de diagrama Mermaid aquí",
+        "convertToLatex": "Convertir a LaTeX",
+        "converting": "Convirtiendo...",
+        "convertingToLatex": "Convirtiendo a LaTeX...",
+        "outputLabel": "Código LaTeX",
+        "readyToUse": "Listo para usar en tus documentos LaTeX",
+        "convertedLatexWillAppear": "El LaTeX convertido aparecerá aquí...",
+        "failedToConvert": "Error al convertir Mermaid. Por favor, inténtalo de nuevo."
       },
       "citationGenerator": {
         "title": "Generador de citas LaTeX",
@@ -264,10 +288,10 @@
         "failedToCount": "Error al contar palabras"
       },
       "tableToLatex": {
-        "title": "Excel to LaTeX",
-        "description": "Upload a .csv file and instantly get clean LaTeX table code.",
-        "tableData": "Upload CSV File",
-        "generatedLatexCode": "LaTeX Table Output"
+        "title": "Conversor CSV a LaTeX",
+        "subtitle": "Sube un archivo .csv y obtén instantáneamente código de tabla LaTeX limpio.",
+        "inputLabel": "Subir archivo CSV",
+        "outputLabel": "Salida de tabla LaTeX"
       },
       "equationToLatex": {
         "title": "Conversor de ecuación a LaTeX",
@@ -313,9 +337,10 @@
         "removeImage": "Eliminar imagen"
       },
       "pdfToLatex": {
-        "title": "PDF to LaTeX Converter",
-        "description": "Convert PDF documents with math and equations to clean LaTeX code",
-        "pdfDocument": "Your PDF Document"
+        "title": "Conversor PDF a LaTeX",
+        "subtitle": "Convierte documentos PDF con matemáticas y ecuaciones en código LaTeX limpio",
+        "inputLabel": "Tu documento PDF",
+        "outputLabel": "Código LaTeX limpio"
       }
     },
     "categories": {
