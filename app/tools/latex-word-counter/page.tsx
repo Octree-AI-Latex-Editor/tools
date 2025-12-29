@@ -20,6 +20,9 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { useTranslations, useLocale } from 'next-intl';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
+import type { Locale } from '@/lib/i18n/config';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
 
@@ -72,6 +75,11 @@ interface WordCountResult {
 }
 
 export default function LatexWordCounter() {
+  const t = useTranslations('toolsSpecific.latexWordCounter');
+  const tTools = useTranslations('tools');
+  const tCommon = useTranslations('common');
+  const locale = useLocale() as Locale;
+  
   const [latexCode, setLatexCode] = useState<string>(DEFAULT_LATEX);
   const [result, setResult] = useState<WordCountResult | null>(null);
   const [isCounting, setIsCounting] = useState(false);
@@ -103,7 +111,7 @@ export default function LatexWordCounter() {
       setLastCountedLatex(latex);
     } catch (err) {
       console.error('Word count error:', err);
-      setResult({ success: false, error: 'Failed to count words' });
+      setResult({ success: false, error: t('failedToCount') });
     } finally {
       setIsCounting(false);
     }
@@ -126,15 +134,19 @@ export default function LatexWordCounter() {
   return (
     <div className={cn("min-h-screen bg-gray-50", dmSans.className)}>
       <div className="mx-auto max-w-7xl px-6 py-12">
+        {/* testing purposes only */}
+        {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-4">
+          <LanguageSwitcher currentLocale={locale} />
+        </div> */}
         <div className="mb-12">
           <div className="relative flex items-start justify-center mb-3">
             <Link href="/" className="absolute left-0 inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
               <ArrowLeft className="h-5 w-5" />
-              <span className="text-sm font-medium">Back to Tools</span>
+              <span className="text-sm font-medium">{tCommon('backToTools')}</span>
             </Link>
-            <h1 className="text-4xl font-light text-gray-900">LaTeX Word Counter</h1>
+            <h1 className="text-4xl font-light text-gray-900">{t('title')}</h1>
           </div>
-          <p className="text-lg text-gray-600 text-center">Count words in your LaTeX documents accurately</p>
+          <p className="text-lg text-gray-600 text-center">{t('subtitle')}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -143,12 +155,12 @@ export default function LatexWordCounter() {
             <div className="h-[72px] mb-6 flex flex-col justify-start">
               <div className="mb-2 flex items-center gap-3">
                 <span className="inline-flex items-center rounded-md bg-blue-50 px-3 py-1.5 text-sm font-medium text-blue-900 border border-blue-200">
-                  INPUT
+                  {tTools('input')}
                 </span>
-                <h2 className="text-xl font-medium text-gray-900">LaTeX Document</h2>
+                <h2 className="text-xl font-medium text-gray-900">{t('inputLabel')}</h2>
               </div>
               <p className="text-sm text-gray-600">
-                Paste or type your LaTeX code
+                {t('inputHint')}
               </p>
             </div>
 
@@ -180,10 +192,10 @@ export default function LatexWordCounter() {
                 <span className="inline-flex items-center rounded-md bg-green-50 px-3 py-1.5 text-sm font-medium text-green-900 border border-green-200">
                   RESULTS
                 </span>
-                <h2 className="text-xl font-medium text-gray-900">Word Count</h2>
+                <h2 className="text-xl font-medium text-gray-900">{t('resultsLabel')}</h2>
               </div>
               <p className="text-sm text-gray-600">
-                {isCounting ? 'Counting...' : 'Live word statistics'}
+                {isCounting ? t('counting') : t('resultsHint')}
               </p>
             </div>
 
@@ -192,7 +204,7 @@ export default function LatexWordCounter() {
                 <CardContent className="flex-1 flex items-center justify-center">
                   <div className="text-center">
                     <Loader2 className="mx-auto h-10 w-10 text-blue-500 animate-spin mb-4" />
-                    <p className="text-gray-600">Counting words...</p>
+                    <p className="text-gray-600">{t('countingWords')}</p>
                   </div>
                 </CardContent>
               ) : result?.success ? (
@@ -203,20 +215,20 @@ export default function LatexWordCounter() {
                       {result.words?.toLocaleString()}
                     </div>
                     <div className="text-sm font-medium text-gray-500 uppercase tracking-wide">
-                      Total Words
+                      {t('totalWords')}
                     </div>
                   </div>
 
                   {/* Breakdown */}
                   <div className="space-y-3">
                     <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
-                      Breakdown
+                      {t('breakdown')}
                     </h3>
 
                     <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                       <div className="flex items-center gap-3">
                         <FileText className="h-4 w-4 text-gray-500" />
-                        <span className="text-sm font-medium text-gray-700">Text Body</span>
+                        <span className="text-sm font-medium text-gray-700">{t('textBody')}</span>
                       </div>
                       <span className="text-lg font-semibold text-gray-900">
                         {result.textWords?.toLocaleString()}
@@ -226,7 +238,7 @@ export default function LatexWordCounter() {
                     <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                       <div className="flex items-center gap-3">
                         <Heading className="h-4 w-4 text-gray-500" />
-                        <span className="text-sm font-medium text-gray-700">Headers</span>
+                        <span className="text-sm font-medium text-gray-700">{t('headers')}</span>
                       </div>
                       <span className="text-lg font-semibold text-gray-900">
                         {result.headersWords?.toLocaleString()}
@@ -236,7 +248,7 @@ export default function LatexWordCounter() {
                     <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                       <div className="flex items-center gap-3">
                         <MessageSquare className="h-4 w-4 text-gray-500" />
-                        <span className="text-sm font-medium text-gray-700">Captions</span>
+                        <span className="text-sm font-medium text-gray-700">{t('captions')}</span>
                       </div>
                       <span className="text-lg font-semibold text-gray-900">
                         {result.captionWords?.toLocaleString()}
@@ -247,7 +259,7 @@ export default function LatexWordCounter() {
                   {/* Processing Time */}
                   {result.durationMs !== undefined && (
                     <p className="text-center text-sm text-gray-500">
-                      Processed in {result.durationMs}ms
+                      {t('processedIn')} {result.durationMs}ms
                     </p>
                   )}
                 </CardContent>
@@ -260,7 +272,7 @@ export default function LatexWordCounter() {
                 </CardContent>
               ) : (
                 <CardContent className="flex-1 flex items-center justify-center">
-                  <p className="text-gray-400">Enter LaTeX to count words</p>
+                  <p className="text-gray-400">{t('enterLatexToCount')}</p>
                 </CardContent>
               )}
             </Card>
