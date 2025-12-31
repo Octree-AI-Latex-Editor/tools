@@ -111,23 +111,47 @@
       },
       "tikzGenerator": {
         "title": "Générateur de diagrammes TikZ",
-        "description": "Décrivez votre diagramme et laissez l'IA générer le code TikZ",
-        "diagramDescription": "Description du diagramme",
-        "generatedTikzCode": "Code TikZ généré",
-        "placeholder": "Exemple : Dessinez un organigramme simple avec 3 nœuds reliés par des flèches. Le premier nœud doit dire 'Début', le second 'Processus' et le troisième 'Fin'."
+        "subtitle": "Décrivez votre diagramme et laissez l'IA générer le code TikZ",
+        "inputLabel": "Description du diagramme",
+        "inputHint": "Décrivez le diagramme que vous souhaitez créer",
+        "placeholder": "Exemple : Dessinez un organigramme simple avec 3 nœuds reliés par des flèches. Le premier nœud doit dire 'Début', le second 'Processus' et le troisième 'Fin'.",
+        "generateTikz": "Générer TikZ",
+        "generating": "Génération...",
+        "aiModelThinking": "Le modèle IA réfléchit …",
+        "giveItAMoment": "Donnez-lui un moment pour créer votre diagramme TikZ.",
+        "hangTight": "Attendez pendant que le code arrive.",
+        "outputLabel": "Code TikZ généré",
+        "readyToUse": "Prêt à utiliser dans vos documents LaTeX",
+        "generatedCodeWillAppear": "Le code généré apparaîtra ici...",
+        "failedToGenerate": "Échec de la génération TikZ. Veuillez réessayer.",
+        "failedToCompile": "Échec de la compilation du document TikZ."
       },
       "pgfplotsGenerator": {
         "title": "Générateur Pgfplots",
-        "description": "Décrivez votre graphique et laissez l'IA générer le code pgfplots",
-        "plotDescription": "Description du graphique",
-        "generatedPgfplotsCode": "Code Pgfplots généré",
-        "placeholder": "Exemple : Créez un graphique linéaire montrant y = x^2 de x = -5 à x = 5, avec une ligne bleue et une grille. Ajoutez des étiquettes d'axes."
+        "subtitle": "Décrivez votre graphique et laissez l'IA générer le code pgfplots",
+        "inputLabel": "Description du graphique",
+        "inputHint": "Décrivez le graphique que vous souhaitez créer",
+        "placeholder": "Exemple : Créez un graphique linéaire montrant y = x^2 de x = -5 à x = 5, avec une ligne bleue et une grille. Ajoutez des étiquettes d'axes.",
+        "generatePlot": "Générer le graphique",
+        "generating": "Génération...",
+        "generatingPgfplotsCode": "Génération du code pgfplots...",
+        "outputLabel": "Code Pgfplots généré",
+        "readyToUse": "Prêt à utiliser dans vos documents LaTeX",
+        "generatedCodeWillAppear": "Le code généré apparaîtra ici...",
+        "failedToGenerate": "Échec de la génération pgfplots. Veuillez réessayer."
       },
       "mermaidToLatex": {
         "title": "Convertisseur Mermaid vers LaTeX",
-        "description": "Convertissez des diagrammes Mermaid en code LaTeX",
-        "mermaidCode": "Code Mermaid",
-        "generatedLatexCode": "Code LaTeX généré"
+        "subtitle": "Convertissez des diagrammes Mermaid en code LaTeX",
+        "inputLabel": "Code Mermaid",
+        "inputHint": "Collez votre syntaxe de diagramme Mermaid ici",
+        "convertToLatex": "Convertir en LaTeX",
+        "converting": "Conversion...",
+        "convertingToLatex": "Conversion en LaTeX...",
+        "outputLabel": "Code LaTeX",
+        "readyToUse": "Prêt à utiliser dans vos documents LaTeX",
+        "convertedLatexWillAppear": "Le LaTeX converti apparaîtra ici...",
+        "failedToConvert": "Échec de la conversion Mermaid. Veuillez réessayer."
       },
       "citationGenerator": {
         "title": "Générateur de citations LaTeX",
@@ -183,27 +207,73 @@
       },
       "markdownToLatex": {
         "title": "Convertisseur Markdown vers LaTeX",
-        "description": "Convertissez des documents Markdown au format LaTeX",
-        "markdownCode": "Code Markdown",
-        "generatedLatexCode": "Code LaTeX généré"
+        "subtitle": "Convertissez des documents Markdown en code LaTeX propre",
+        "inputLabel": "Contenu Markdown",
+        "inputHint": "Collez votre texte Markdown ici",
+        "convertToLatex": "Convertir en LaTeX",
+        "converting": "Conversion...",
+        "convertingToLatex": "Conversion en LaTeX...",
+        "outputLabel": "Code LaTeX",
+        "readyToUse": "Prêt à utiliser dans vos documents LaTeX",
+        "convertedLatexWillAppear": "Le LaTeX converti apparaîtra ici...",
+        "failedToConvert": "Échec de la conversion Markdown. Veuillez réessayer."
       },
       "mathmlToLatex": {
         "title": "Convertisseur MathML vers LaTeX",
-        "description": "Convertissez le balisage MathML au format LaTeX",
-        "mathmlCode": "Code MathML",
-        "generatedLatexCode": "Code LaTeX généré"
+        "subtitle": "Convertissez le balisage MathML en code LaTeX propre",
+        "inputLabel": "Code MathML",
+        "inputHint": "Collez votre balisage MathML ici",
+        "convertToLatex": "Convertir en LaTeX",
+        "converting": "Conversion...",
+        "convertingToLatex": "Conversion en LaTeX...",
+        "outputLabel": "Code LaTeX",
+        "readyToUse": "Prêt à utiliser dans vos documents LaTeX",
+        "convertedLatexWillAppear": "Le LaTeX converti apparaîtra ici...",
+        "failedToConvert": "Échec de la conversion MathML. Veuillez réessayer."
       },
       "latexToMarkdown": {
         "title": "Convertisseur LaTeX vers Markdown",
-        "description": "Convertissez des documents ou extraits LaTeX en Markdown",
-        "latexCode": "Code LaTeX",
-        "generatedMarkdown": "Markdown généré"
+        "subtitle": "Convertissez des documents ou extraits LaTeX en Markdown propre",
+        "inputLabel": "Contenu LaTeX",
+        "inputHint": "Collez votre code LaTeX ici",
+        "convertToMarkdown": "Convertir en Markdown",
+        "converting": "Conversion...",
+        "convertingToMarkdown": "Conversion en Markdown...",
+        "outputLabel": "Markdown",
+        "readyToUse": "Prêt à utiliser dans vos fichiers Markdown",
+        "convertedMarkdownWillAppear": "Le Markdown converti apparaîtra ici...",
+        "failedToConvert": "Échec de la conversion LaTeX. Veuillez réessayer.",
+        "exportAsMarkdown": "Exporter en Markdown"
+      },
+      "latexWordCounter": {
+        "title": "Compteur de mots LaTeX",
+        "subtitle": "Comptez les mots dans vos documents LaTeX avec précision",
+        "inputLabel": "Document LaTeX",
+        "inputHint": "Collez ou tapez votre code LaTeX",
+        "resultsLabel": "Nombre de mots",
+        "resultsHint": "Statistiques de mots en direct",
+        "counting": "Comptage...",
+        "countingWords": "Comptage des mots...",
+        "totalWords": "Total de mots",
+        "breakdown": "Répartition",
+        "textBody": "Corps de texte",
+        "headers": "En-têtes",
+        "captions": "Légendes",
+        "processedIn": "Traité en",
+        "enterLatexToCount": "Entrez du LaTeX pour compter les mots",
+        "failedToCount": "Échec du comptage des mots"
       },
       "tableToLatex": {
-        "title": "Excel vers LaTeX",
-        "description": "Convertissez CSV, JSON, Excel en tableaux LaTeX",
-        "tableData": "Données du tableau",
-        "generatedLatexCode": "Code LaTeX généré"
+        "title": "Convertisseur CSV vers LaTeX",
+        "subtitle": "Téléchargez un fichier .csv et obtenez instantanément un code de tableau LaTeX propre.",
+        "inputLabel": "Télécharger un fichier CSV",
+        "outputLabel": "Sortie de tableau LaTeX"
+      },
+      "pdfToLatex": {
+        "title": "Convertisseur PDF vers LaTeX",
+        "subtitle": "Convertissez des documents PDF avec des mathématiques et des équations en code LaTeX propre",
+        "inputLabel": "Votre document PDF",
+        "outputLabel": "Code LaTeX propre"
       },
       "equationToLatex": {
         "title": "Convertisseur d'équation vers LaTeX",

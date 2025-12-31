@@ -7,6 +7,9 @@ import { cn } from '@/lib/utils';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { OctreeCTA } from '@/components/OctreeCTA';
+import { useTranslations, useLocale } from 'next-intl';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
+import type { Locale } from '@/lib/i18n/config';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
 
@@ -41,6 +44,11 @@ Row 2 & 30 & 40 \\\\
 \\end{document}`;
 
 export default function LatexToMarkdown() {
+  const t = useTranslations('toolsSpecific.latexToMarkdown');
+  const tTools = useTranslations('tools');
+  const tCommon = useTranslations('common');
+  const locale = useLocale() as Locale;
+  
   const [latexText, setLatexText] = useState<string>(DEFAULT_LATEX);
   const [markdownText, setMarkdownText] = useState<string>('');
   const [isProcessing, setIsProcessing] = useState(false);
@@ -79,7 +87,7 @@ export default function LatexToMarkdown() {
         setMarkdownText(accumulatedText);
       }
     } catch (err) {
-      setError('Failed to convert LaTeX. Please try again.');
+      setError(t('failedToConvert'));
       console.error(err);
     } finally {
       setIsProcessing(false);
@@ -100,15 +108,19 @@ export default function LatexToMarkdown() {
   return (
     <div className={cn('min-h-screen bg-gray-50', dmSans.className)}>
       <div className="mx-auto max-w-7xl px-6 py-12">
+        {/* testing purposes only */}
+        {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-4">
+          <LanguageSwitcher currentLocale={locale} />
+        </div> */}
         <div className="mb-12">
           <div className="relative flex items-start justify-center mb-3">
             <Link href="/" className="absolute left-0 inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
               <ArrowLeft className="h-5 w-5" />
-              <span className="text-sm font-medium">Back to Tools</span>
+              <span className="text-sm font-medium">{tCommon('backToTools')}</span>
             </Link>
-            <h1 className="text-4xl font-light text-gray-900">LaTeX to Markdown Converter</h1>
+            <h1 className="text-4xl font-light text-gray-900">{t('title')}</h1>
           </div>
-          <p className="text-lg text-gray-600 text-center">Convert LaTeX documents or snippets to clean Markdown</p>
+          <p className="text-lg text-gray-600 text-center">{t('subtitle')}</p>
         </div>
 
         <div className="grid grid-cols-2 gap-8">
@@ -116,11 +128,11 @@ export default function LatexToMarkdown() {
             <div className="h-[72px] mb-6 flex flex-col justify-start">
               <div className="mb-2 flex items-center gap-3">
                 <span className="inline-flex items-center rounded-md bg-orange-50 px-3 py-1.5 text-sm font-medium text-orange-900 border border-orange-200">
-                  INPUT
+                  {tTools('input')}
                 </span>
-                <h2 className="text-xl font-medium text-gray-900">LaTeX Content</h2>
+                <h2 className="text-xl font-medium text-gray-900">{t('inputLabel')}</h2>
               </div>
-              <p className="text-sm text-gray-600">Paste your LaTeX code here</p>
+              <p className="text-sm text-gray-600">{t('inputHint')}</p>
             </div>
 
             <div className="bg-white border border-gray-200 rounded-xl h-[520px] w-full flex flex-col overflow-hidden">
@@ -148,7 +160,7 @@ export default function LatexToMarkdown() {
               disabled={isProcessing || !latexText.trim()}
               className="mt-6 w-full px-6 py-3 bg-blue-600 text-white text-base font-medium rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isProcessing ? 'Converting...' : 'Convert to Markdown'}
+              {isProcessing ? t('converting') : t('convertToMarkdown')}
             </button>
 
             {error && (
@@ -162,11 +174,11 @@ export default function LatexToMarkdown() {
             <div className="h-[72px] mb-6 flex flex-col justify-start">
               <div className="mb-2 flex items-center gap-3">
                 <span className="inline-flex items-center rounded-md bg-green-50 px-3 py-1.5 text-sm font-medium text-green-900 border border-green-200">
-                  OUTPUT
+                  {tTools('output')}
                 </span>
-                <h2 className="text-xl font-medium text-gray-900">Markdown</h2>
+                <h2 className="text-xl font-medium text-gray-900">{t('outputLabel')}</h2>
               </div>
-              <p className="text-sm text-gray-600">Ready to use in your Markdown files</p>
+              <p className="text-sm text-gray-600">{t('readyToUse')}</p>
             </div>
 
             <div className="bg-white border border-gray-200 rounded-xl h-[520px] w-full flex flex-col overflow-hidden">
@@ -176,7 +188,7 @@ export default function LatexToMarkdown() {
                     className={`flex items-center gap-2 px-4 py-2.5 text-sm font-medium border-b-2 transition-colors border-gray-900 text-gray-900`}
                   >
                     <Code2 className="h-4 w-4" />
-                    Code
+                    {tTools('codeTab')}
                   </button>
                 </div>
               </div>
@@ -186,7 +198,7 @@ export default function LatexToMarkdown() {
                   <div className="flex items-center justify-center flex-1">
                     <div className="text-center">
                       <Loader2 className="mx-auto h-12 w-12 text-blue-500 animate-spin mb-4" />
-                      <p className="text-gray-600">Converting to Markdown...</p>
+                      <p className="text-gray-600">{t('convertingToMarkdown')}</p>
                     </div>
                   </div>
                 ) : markdownText ? (
@@ -206,16 +218,16 @@ export default function LatexToMarkdown() {
                         padding: { top: 8, bottom: 8 },
                       }}
                     />
-                    {isProcessing && (
-                      <div className="absolute top-2 right-2 flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1.5 rounded-md text-sm shadow-sm">
-                        <Loader2 className="h-4 w-4 animate-spin" />
-                        Converting...
-                      </div>
-                    )}
+                      {isProcessing && (
+                        <div className="absolute top-2 right-2 flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1.5 rounded-md text-sm shadow-sm">
+                          <Loader2 className="h-4 w-4 animate-spin" />
+                          {t('converting')}
+                        </div>
+                      )}
                   </div>
                 ) : (
                   <div className="flex items-center justify-center flex-1">
-                    <p className="text-gray-400">Converted Markdown will appear here...</p>
+                    <p className="text-gray-400">{t('convertedMarkdownWillAppear')}</p>
                   </div>
                 )}
               </div>
@@ -229,7 +241,7 @@ export default function LatexToMarkdown() {
                     className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 text-base font-medium rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm"
                   >
                     <Download className="h-5 w-5" />
-                    Export
+                    {tCommon('export')}
                     <ChevronDown className="h-4 w-4" />
                   </button>
                   {showExportMenu && (
@@ -238,7 +250,7 @@ export default function LatexToMarkdown() {
                         onClick={exportAsMarkdown}
                         className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
                       >
-                        Export as Markdown
+                        {t('exportAsMarkdown')}
                       </button>
                     </div>
                   )}
