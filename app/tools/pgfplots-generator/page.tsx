@@ -29,6 +29,11 @@ const dmSans = DM_Sans({
 });
 
 export default function PgfplotsGenerator() {
+  const t = useTranslations('toolsSpecific.pgfplotsGenerator');
+  const tTools = useTranslations('tools');
+  const tCommon = useTranslations('common');
+  const locale = useLocale() as Locale;
+  
   const [instructions, setInstructions] = useState<string>('');
   const [latexCode, setLatexCode] = useState<string>('');
   const [isProcessing, setIsProcessing] = useState(false);
