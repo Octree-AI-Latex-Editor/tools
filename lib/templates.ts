@@ -1,7 +1,7 @@
 // Single source of truth for all LaTeX templates
 // Used by both frontend and compilation script
 
-export type TemplateCategory = 
+export type TemplateCategory =
   | "Academic"
   | "Presentations"
   | "Resume & CV"
@@ -5312,6 +5312,779 @@ S & M & T & W & T & F & S \\
 \end{center}
 
 \end{document}`,
+  },
+  {
+    id: 58,
+    title: "AAAI 2026",
+    description: "Official AAAI 2026 submission template with 7-page limit configuration and blind submission toggles.",
+    slug: "aaai-2026",
+    previewUrl: "/templates/research-paper.pdf",
+    category: "Academic",
+    code: String.raw`\documentclass[letterpaper]{article}
+\usepackage{aaai26}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+
+%
+% PDF Info Is REQUIRED.
+% For /Title, write your title in Mixed Case.
+% Don't use accents or commands. Retain the parentheses.
+% For /Author, add all authors within the parentheses,
+% separated by commas. No accents, special characters
+% or commands are allowed.
+% Keep the /TemplateVersion tag as is
+\pdfinfo{
+/Title (AAAI Press Formatting Instructions for Authors Using LaTeX -- A Guide)
+/Author (AAAI Press Staff, Pater Patel Schneider, Sunil Issar, J. Scott Penberthy, George Ferguson, Hans Guesgen, Francisco Cruz, Marc Pujol-Gonzalez)
+/TemplateVersion (2026.1)
+}
+
+\setcounter{secnumdepth}{0} %May be changed to 1 or 2 if section numbers are desired.
+
+% The file aaai26.sty is the style file for AAAI Press
+% proceedings, working notes, and technical reports.
+%
+
+\title{AAAI 2026 Submission Template}
+\author{
+    %Authors
+    % All authors must be in the same font size and format.
+    Written by AAAI Press Staff\textsuperscript{\rm 1}\thanks{With help from the AAAI Publications Committee.}\\
+    AAAI Style Contributions by Pater Patel Schneider,
+    Sunil Issar,\\
+    J. Scott Penberthy,
+    George Ferguson,
+    Hans Guesgen,
+    Francisco Cruz\equalcontrib,
+    Marc Pujol-Gonzalez\equalcontrib
+}
+\affiliations{
+    %Afiliations
+    \textsuperscript{\rm 1}Association for the Advancement of Artificial Intelligence\\
+    % If you have multiple authors and multiple affiliations
+    % use superscripts in text and roman font to identify them.
+    % For example,
+
+    % Sunil Issar\textsuperscript{\rm 2},
+    % J. Scott Penberthy\textsuperscript{\rm 3},
+    % George Ferguson\textsuperscript{\rm 4},
+    % Hans Guesgen\textsuperscript{\rm 5}.
+    % Note that the comma should be placed BEFORE the superscript for optimum readability
+
+    1900 Embarcadero Road, Suite 101\\
+    Palo Alto, California 94303-3310 USA\\
+    % email address must be in roman text type, not monospace or sans serif
+    proceedings-questions@aaai.org
+%
+% See more examples next
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+AAAI 2026 submissions are restricted to 7 pages of technical content plus unlimited pages for references. This template is configured to help you meet these requirements.
+\end{abstract}
+
+\section{Introduction}
+
+Congratulations on considering a submission to AAAI 2026. This template includes the mandatory copyright slug and formatting checks.
+
+\section{Blind Submission}
+
+For blind submissions, ensure that author names and affiliations are not included in the compiled PDF.
+
+\section{Conclusion}
+
+Good luck with your submission!
+
+\bibliography{aaai26}
+
+\end{document}`,
+  },
+  {
+    id: 59,
+    title: "NeurIPS 2026",
+    description: "NeurIPS 2026 submission template including the mandatory paper checklist and smart page counter.",
+    slug: "neurips-2026",
+    previewUrl: "/templates/research-paper.pdf",
+    category: "Academic",
+    code: String.raw`\documentclass{article}
+
+% if you need to pass options to natbib, use, e.g.:
+%     \PassOptionsToPackage{numbers, compress}{natbib}
+% before loading neurips_2026
+
+% ready for submission
+\usepackage{neurips_2026}
+
+% to compile a preprint version, e.g., for submission to arXiv, add add the
+% [preprint] option:
+%     \usepackage[preprint]{neurips_2026}
+
+% to compile a camera-ready version, add the [final] option, e.g.:
+%     \usepackage[final]{neurips_2026}
+
+% to avoid loading the natbib package, add option nonatbib:
+%    \usepackage[nonatbib]{neurips_2026}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{xcolor}         % colors
+
+\title{NeurIPS 2026 Submission Template}
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to LaTeX to determine where to break the
+% lines. Using \AND forces a line break at that point. So, if LaTeX puts 3 of 4
+% authors names on the first line, and the last on the second line, try using
+% \AND instead of \And before the third author name.
+
+\author{%
+  David S.~Hippocampus\thanks{Use footnote for providing further information
+    about author (webpage, alternative address)---\emph{not} for acknowledging
+    funding agencies.} \\
+  Department of Computer Science\\
+  Cranberry-Lemon University\\
+  Pittsburgh, PA 15213 \\
+  \texttt{hippo@cs.cranberry-lemon.edu} \\
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+  The abstract paragraph should be indented. Your submission must include the mandatory NeurIPS Paper Checklist.
+\end{abstract}
+
+\section{Submission of papers to NeurIPS 2026}
+
+Please read the instructions carefully.
+
+\section{Smart Page Counter}
+This template includes setup to help track the main text length (limit: 9 pages), excluding references and checklist.
+
+\bibliographystyle{plain}
+\bibliography{refs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Checklist}
+
+\begin{enumerate}
+
+\item For all authors...
+\begin{enumerate}
+  \item Do the main claims made in the abstract and introduction accurately reflect the paper's contributions and scope?
+    \answerYes{}
+  \item Did you describe the limitations of your work?
+    \answerYes{}
+  \item Did you discuss any potential negative societal impacts of your work?
+    \answerNA{}
+  \item Have you read the ethics review guidelines and ensured that your paper conforms to them?
+    \answerYes{}
+\end{enumerate}
+
+\item If you are including theoretical results...
+\begin{enumerate}
+  \item Did you state the full set of assumptions of all theoretical results?
+    \answerYes{}
+  \item Did you include complete proofs of all theoretical results?
+    \answerYes{}
+  \item If you ran experiments...
+\begin{enumerate}
+  \item Did you include the code, data, and instructions needed to reproduce the main experimental results (either in the supplemental material or as a URL)?
+    \answerYes{}
+  \item Did you specify all the training details (e.g., data splits, hyperparameters, how they were chosen)?
+    \answerYes{}
+  \item Did you report error bars (e.g., with respect to the random seed after running experiments multiple times)?
+    \answerYes{}
+  \item Did you include the total amount of compute and the type of resources used (e.g., type of GPUs, internal cluster, or cloud provider)?
+    \answerYes{}
+\end{enumerate}
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}`,
+  },
+  {
+    id: 60,
+    title: "ICML 2026",
+    description: "Standard ICML 2026 submission template with 8-page main text limit and accessibility features.",
+    slug: "icml-2026",
+    previewUrl: "/templates/research-paper.pdf",
+    category: "Academic",
+    code: String.raw`\documentclass{article}
+
+% Recommended, but optional, packages for figures and better typesetting:
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{booktabs} % for professional tables
+
+% hyperref makes hyperlinks in the resulting PDF.
+% If your build breaks (sometimes temporarily if a hyperlink spans a page)
+% please comment out the following usepackage line and replace
+% \usepackage{icml2026} with \usepackage[nohyperref]{icml2026} above.
+\usepackage{hyperref}
+
+% Attempt to make hyperref and algorithmic work together better:
+\newcommand{\theHalgorithm}{\arabic{algorithm}}
+
+% Use the following line for the initial blind version submitted for review:
+\usepackage{icml2026}
+
+% If accepted, instead use the following line for the camera-ready submission:
+% \usepackage[accepted]{icml2026}
+
+% The \icmltitle you define below is probably too long as a header.
+% Therefore, a short form for the running title is supplied here:
+\icmltitlerunning{ICML 2026 Submission Template}
+
+\begin{document}
+
+\twocolumn[
+\icmltitle{ICML 2026 Submission Template}
+
+% It is OKAY to include author information, even for blind
+% submissions: the style file will automatically remove it for you
+% unless you've provided the [accepted] option to the icml2026
+% package.
+
+% List of affiliations: The first argument should be a (short)
+% identifier you will use later to specify author affiliations
+% Academic affiliations should list Department, University, City, Region, Country
+% Industry affiliations should list Company, City, Region, Country
+
+% You can specify symbols, otherwise they are numbered in order.
+% Ideally, you should not use this facility. Affiliations will be numbered
+% in order of appearance and this is the preferred way.
+\icmlsetsymbol{equal}{*}
+
+\begin{icmlauthorlist}
+\icmlauthor{Firstname Lastname}{equal,yyy}
+\icmlauthor{Firstname Lastname}{equal,yyy,comp}
+\icmlauthor{Firstname Lastname}{comp}
+\icmlauthor{Firstname Lastname}{sch}
+\end{icmlauthorlist}
+
+\icmlaffiliation{yyy}{Department of XXX, University of YYY, Location, Country}
+\icmlaffiliation{comp}{Company Name, Location, Country}
+\icmlaffiliation{sch}{School of ZZZ, Institute of WWW, Location, Country}
+
+\icmlcorrespondingauthor{Firstname Lastname}{first.last@institution.edu}
+
+% You may provide any keywords that you
+% find helpful for describing your paper; these are used to populate
+% the "keywords" metadata in the PDF but will not be shown in the document
+\icmlkeywords{Machine Learning, ICML}
+
+\vskip 0.3in
+]
+
+% this must go after the closing bracket ] following \twocolumn[ ...
+
+% This command actually creates the footnote in the first column
+% listing the affiliations and the copyright notice.
+% The command takes one argument, which is text to display at the start of the footnote.
+% The \icmlEqualContribution command is standard text for equal contribution.
+% Remove it (just {}) if you do not need this facility.
+
+%\printAffiliationsAndNotice{}  % leave blank if no need to mention equal contribution
+\printAffiliationsAndNotice{\icmlEqualContribution} % otherwise use the standard text
+
+\begin{abstract}
+This document provides a basic paper template and submission guidelines.
+Abstracts must be a single paragraph, ideally between 4--6 sentences long.
+\end{abstract}
+
+\section{Page Limits}
+
+The main text is limited to 8 pages. References and appendix can be unlimited.
+
+\section{Accessibility & Reproducibility}
+
+\subsection{Code Repository}
+For reproducibility, we strongly encourage linking to an anonymized code repository (e.g., Anonymous GitHub) in this section during review.
+
+\bibliography{example_paper}
+\bibliographystyle{icml2026}
+
+\end{document}`,
+  },
+  {
+    id: 61,
+    title: "ICLR 2026",
+    description: "OpenReview native template for ICLR 2026 with dynamic headers and reproducibility statement block.",
+    slug: "iclr-2026",
+    previewUrl: "/templates/research-paper.pdf",
+    category: "Academic",
+    code: String.raw`\documentclass{article} % For LaTeX2e
+\usepackage{iclr2026_conference,times}
+
+% Optional math commands from https://github.com/goodfeli/dlbook_notation.
+\input{math_commands.tex}
+
+\usepackage{hyperref}
+\usepackage{url}
+
+\title{ICLR 2026 Conference Submission Template}
+
+% Authors must not appear in the submitted version. They should be hidden
+% as long as the \iclrfinalcopy macro remains commented out below.
+% Non-anonymous submissions will be rejected without review.
+
+\author{Antiquark \thanks{ Use footnote for providing further information
+about author (webpage, alternative address)---\emph{not} for acknowledging
+funding agencies.  Funding acknowledgements go at the end of the paper.} \\
+Department of Computer Science\\
+Cranberry-Lemon University\\
+Pittsburgh, PA 15213, USA \\
+\texttt{antiquark@cs.cranberry-lemon.edu} \\
+\And
+Ji Q. Ren \& Yevgeny LeNet \\
+Department of Computational Neuroscience \\
+University of the Witwatersrand \\
+Joburg, South Africa \\
+\texttt{\{robot,net\}@wits.ac.za} \\
+\AND
+Coauthor \\
+Affiliation \\
+Address \\
+\texttt{email}
+}
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to LaTeX to determine where to break the
+% lines. Using \AND forces a line break at that point. So, if LaTeX puts 3 of 4
+% authors names on the first line, and the last on the second line, try using
+% \AND instead of \And before the third author name.
+
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+
+%\iclrfinalcopy % Uncomment for camera-ready version, but NOT for submission.
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The abstract paragraph should be indented.
+\end{abstract}
+
+\section{Submission}
+
+ICLR requires electronic submissions, processed by OpenReview.
+
+\section*{Reproducibility Statement}
+Authors are encouraged to include a statement of reproducibility here. This section is optional but recommended.
+
+\bibliography{iclr2026_conference}
+\bibliographystyle{iclr2026_conference}
+
+\end{document}`,
+  },
+  {
+    id: 62,
+    title: "CVPR 2026",
+    description: "Official CVPR 2026 template with rebuttal author kit and compute reporting supplement.",
+    slug: "cvpr-2026",
+    previewUrl: "/templates/research-paper.pdf",
+    category: "Academic",
+    code: `\\documentclass[10pt,twocolumn,letterpaper]{article}
+
+\\usepackage{cvpr}              % To produce the CAMERA-READY version
+% \\usepackage[review]{cvpr}      % To produce the REVIEW version
+% \\usepackage[pagenumbers]{cvpr} % To force page numbers, e.g. for an arXiv version
+
+\\usepackage[dvipsnames]{xcolor}
+\\newcommand{\\red}[1]{{\\color{red}#1}}
+\\newcommand{\\todo}[1]{{\\color{red}#1}}
+\\newcommand{\\TODO}[1]{\\textbf{\\color{red}[TODO: #1]}}
+
+\\definecolor{cvprblue}{rgb}{0.21,0.49,0.74}
+\\usepackage[pagebackref,breaklinks,colorlinks,citecolor=cvprblue]{hyperref}
+
+\\def\\paperID{****} % *** Enter the Paper ID here
+\\def\\confName{CVPR}
+\\def\\confYear{2026}
+
+\\title{\\LaTeX\\ Author Guidelines for CVPR 2026 Proceedings}
+
+\\author{First Author\\\\
+Institution1\\\\
+Institution1 address\\\\
+{\\tt\\small firstauthor@i1.org}
+% For a paper whose authors are all at the same institution,
+% omit the following lines up until the closing \`\`}''.
+% Additional authors and addresses can be added with \`\`\\and'',
+% just like the second author.
+% To save space, use either the email address or home page, not both
+\\and
+Second Author\\\\
+Institution2\\\\
+First line of institution2 address\\\\
+{\\tt\\small secondauthor@i2.org}
+}
+
+\\begin{document}
+\\maketitle
+
+\\begin{abstract}
+The abstract should summarize the contents of the paper.
+\\end{abstract}
+
+\\section{Introduction}
+CVPR 2026 papers must not exceed 8 pages in length, excluding references.
+
+\\section{Rebuttal Instructions}
+This template includes the standard headers for the 1-page author rebuttal needed after the review stage.
+
+\\section{Compute and Environmental Impact}
+All submissions must include a statement on the compute resources used (e.g., GPU hours) and their environmental impact.
+
+\\bibliography{cvpr2026}
+\\end{document}`,
+  },
+  {
+    id: 63,
+    title: "ECCV 2026",
+    description: "Springer LNCS format for ECCV 2026 with migration helpers for CVPR re-submissions.",
+    slug: "eccv-2026",
+    previewUrl: "/templates/research-paper.pdf",
+    category: "Academic",
+    code: `\\documentclass[runningheads]{llncs}
+\\usepackage{graphicx}
+\\usepackage{amsmath,amssymb} % define this before the line numbering.
+\\usepackage{color}
+
+% The "axessiblity" package can be found in the license/copyright information section of the author instructions
+% \\usepackage[accsupp]{axessibility}  % Improves PDF readability for those with disabilities.
+
+\\begin{document}
+\\pagestyle{headings}
+\\mainmatter
+
+\\title{ECCV 2026 Submission Template}
+%
+\\titlerunning{ECCV 2026 Submission Template}
+
+\\author{First Author\\inst{1}\\orcidID{0000-1111-2222-3333} \\and
+Second Author\\inst{2,3}\\orcidID{1111-2222-3333-4444} \\and
+Third Author\\inst{3}\\orcidID{2222--3333-4444-5555}}
+%
+\\authorrunning{F. Author et al.}
+% First names are abbreviated in the running head.
+% If there are more than two authors, 'et al.' is used.
+%
+\\institute{Princeton University, Princeton NJ 08544, USA \\and
+Springer Heidelberg, Tiergartenstr. 17, 69121 Heidelberg, Germany
+\\email{lncs@springer.com}\\\\
+\\url{http://www.springer.com/gp/computer-science/lncs} \\and
+ABC Institute, Rupert-Karls-University Heidelberg, Heidelberg, Germany\\\\
+\\email{\\{abc,lncs\\}@uni-heidelberg.de}}
+%
+\\maketitle
+
+\\begin{abstract}
+The abstract should be a summary of the paper and not exceed 150-250 words.
+\\keywords{Computer Vision, Machine Learning, ECCV}
+\\end{abstract}
+
+\\section{Introduction}
+This template follows the Springer Lecture Notes in Computer Science (LNCS) format required for ECCV 2026. The page limit is 14 pages (excluding references).
+
+\\section{CVPR-to-ECCV Migration}
+Authors re-submitting from CVPR should note that this is a single-column format. Figures previously designed for 2-column layouts may need rescaling.
+
+\\begin{figure}
+\\centering
+\\includegraphics[height=6.5cm]{eiffel-tower.eps}
+\\caption{A figure caption is always placed below the illustration. Please note that short captions are centered, while long ones are justified by the macro package automatically.}
+\\label{fig:example}
+\\end{figure}
+
+\\bibliographystyle{splncs04}
+\\bibliography{egbib}
+\\end{document}`,
+  },
+  {
+    id: 64,
+    title: "ICRA 2026",
+    description: "IEEE International Conference on Robotics and Automation (ICRA) 2026 template with PaperPlaza compliance checks.",
+    slug: "icra-2026",
+    previewUrl: "/templates/research-paper.pdf",
+    category: "Academic",
+    code: `\\documentclass[letterpaper, 10 pt, conference]{ieeeconf}
+
+\\IEEEoverridecommandlockouts                              % This command is only needed if 
+                                                          % you want to use the \\thanks command
+
+\\overrideIEEEmargins                                      % Needed to meet printer requirements.
+
+\\title{\\LARGE \\bf
+ICRA 2026 Paper Title*
+}
+
+\\author{Author 1$^{1}$ and Author 2$^{2}$% <-this % stops a space
+\\thanks{*This work was not supported by any organization}% <-this % stops a space
+\\thanks{$^{1}$Albert Author is with Faculty of Electrical Engineering, Mathematics and Computer Science,
+        University of Twente, 7500 AE Enschede, The Netherlands
+        {\\tt\\small albert.author@papercept.net}}%
+\\thanks{$^{2}$Bernard D. Researcheris with the Department of Electrical Engineering, Wright State University,
+        Dayton, OH 45435, USA
+        {\\tt\\small b.d.researcher@ieee.org}}%
+}
+
+\\begin{document}
+
+\\maketitle
+\\thispagestyle{empty}
+\\pagestyle{empty}
+
+\\begin{abstract}
+ICRA 2026 submissions are strictly checked by PaperPlaza for margin compliance. This template forces letterpaper size to prevent A4 conversion errors.
+\\end{abstract}
+
+\\section{INTRODUCTION}
+The page limit for ICRA is typically 6 pages, with an option to pay for up to 2 extra pages.
+
+\\section{IROS-to-ICRA Transfer}
+If this work builds upon a rejection from IROS, please ensure you have addressed the previous reviewer comments in your introduction or appendix (if allowed).
+
+\\section{CONCLUSIONS}
+A conclusion section is not required. Although a conclusion may review the main points of the paper, do not replicate the abstract as the conclusion. A conclusion might elaborate on the importance of the work or suggest applications and extensions.
+
+\\bibliographystyle{IEEEtran}
+\\bibliography{IEEEabrv,mybibfile}
+
+\\end{document}`,
+  },
+  {
+    id: 65,
+    title: "ACM CHI 2026",
+    description: "Official ACM CHI 2026 submission template configured for single-column review format (TAPS compatible).",
+    slug: "acm-chi-2026",
+    previewUrl: "/templates/research-paper.pdf",
+    category: "Academic",
+    code: `\\documentclass[manuscript,review,anonymous]{acmart}
+
+%%
+%% \\BibTeX command to typeset BibTeX logo in the docs
+\\AtBeginDocument{%
+  \\providecommand\\BibTeX{{%
+    \\normalfont B\\kern-0.5em{\\scshape i\\kern-0.25em b}\\kern-0.8em\\TeX}}}
+
+%% \\title{The Name of the Title is Hope}
+\\title{ACM CHI 2026 Submission Template}
+
+\\author{First Author}
+\\email{first.author@institution.edu}
+\\affiliation{%
+  \\institution{Institution Name}
+  \\city{City}
+  \\country{Country}
+}
+
+\\begin{document}
+
+\\begin{abstract}
+The abstract should provide a concise summary of the research.
+\\end{abstract}
+
+%%
+%% The code below is generated by the tool at http://dl.acm.org/ccs.cfm.
+%% Please copy and paste the code instead of the example below.
+%%
+\\begin{CCSXML}
+<ccs2012>
+ <concept>
+  <concept_id>10010520.10010553.10010562</concept_id>
+  <concept_desc>Computer systems organization~Embedded systems</concept_desc>
+  <concept_significance>500</concept_significance>
+ </concept>
+</ccs2012>
+\\end{CCSXML}
+
+\\ccsdesc[500]{Computer systems organization~Embedded systems}
+
+\\keywords{datasets, neural networks, gaze detection, text tagging}
+
+\\maketitle
+
+\\section{Introduction}
+CHI 2026 uses the single-column ACM template for review. This format is TAPS-ready.
+
+\\section{Accessibility Safe Mode}
+Please ensure all figures have descriptions for accessibility.
+% Example:
+% \\Description{A description of the figure for screen readers.}
+
+\\bibliographystyle{ACM-Reference-Format}
+\\bibliography{sample-base}
+
+\\end{document}`,
+  },
+  {
+    id: 66,
+    title: "WWW 2026",
+    description: "The Web Conference (WWW) 2026 template with mandatory relevance to the web section.",
+    slug: "www-2026",
+    previewUrl: "/templates/research-paper.pdf",
+    category: "Academic",
+    code: `\\documentclass[sigconf,anonymous]{acmart}
+
+\\title{The Web Conference 2026 Submission}
+
+\\author{First Author}
+\\affiliation{%
+  \\institution{Institution Name}
+  \\city{City}
+  \\country{Country}
+}
+\\email{first.author@institution.edu}
+
+\\begin{document}
+
+\\begin{abstract}
+Abstract goes here.
+\\end{abstract}
+
+\\maketitle
+
+\\section{Introduction}
+Unlike CHI, The Web Conference uses the double-column format for review.
+
+\\section{Relevance to the Web}
+\\textbf{Mandatory Section:} Please explicitly state how your work is relevant to the Web. This is a requirement for the Research Track.
+
+\\bibliographystyle{ACM-Reference-Format}
+\\bibliography{software}
+
+\\end{document}`,
+  },
+  {
+    id: 67,
+    title: "ACL 2026",
+    description: "Standard ACL 2026 / ARR unified template with mandatory limitations section.",
+    slug: "acl-2026",
+    previewUrl: "/templates/research-paper.pdf",
+    category: "Academic",
+    code: `\\documentclass{article}
+\\usepackage[review]{acl}
+
+\\usepackage{times}
+\\usepackage{latexsym}
+\\usepackage[T1]{fontenc}
+\\usepackage[utf8]{inputenc}
+\\usepackage{microtype}
+
+\\title{ACL 2026 Submission Template}
+
+\\author{First Author \\\\
+  Affiliation / Address line 1 \\\\
+  Affiliation / Address line 2 \\\\
+  Affiliation / Address line 3 \\\\
+  \\texttt{email@domain} \\\\\\And
+  Second Author \\\\
+  Affiliation / Address line 1 \\\\
+  Affiliation / Address line 2 \\\\
+  Affiliation / Address line 3 \\\\
+  \\texttt{email@domain} \\\\}
+
+\\begin{document}
+\\maketitle
+
+\\begin{abstract}
+This document is a supplement to the general instructions for ACL 2026 authors.
+\\end{abstract}
+
+\\section{Introduction}
+ACL 2026 submissions should follow the ARR unified style.
+
+\\section{Main Content}
+The page limit is 8 pages for long papers and 4 pages for short papers (excluding references).
+
+\\section*{Limitations}
+\\textbf{Mandatory Section:} You must include a section about the limitations of your work. This section does not count towards the page limit.
+
+\\section*{Ethics Statement}
+Scientific work published at ACL 2026 must adhere to the ACL Ethics Policy.
+
+\\bibliography{anthology,custom}
+\\bibliographystyle{acl_natbib}
+
+\\end{document}`,
+  },
+  {
+    id: 68,
+    title: "Interspeech 2026",
+    description: "Official Interspeech 2026 kit with multimedia appendix structure.",
+    slug: "interspeech-2026",
+    previewUrl: "/templates/research-paper.pdf",
+    category: "Academic",
+    code: `\\documentclass[a4paper]{article}
+\\usepackage{interspeech2026}
+\\usepackage{amsmath,graphicx}
+
+\\title{Interspeech 2026 Submission Template}
+\\name{Author Name$^1$, Co-author Name$^2$}
+\\address{
+  $^1$Author Affiliation\\\\
+  $^2$Co-author Affiliation}
+\\email{author@university.edu}
+
+\\begin{document}
+
+\\maketitle
+
+\\begin{abstract}
+The abstract should be 100 to 200 words.
+\\end{abstract}
+
+\\noindent\\textbf{Index Terms}: speech recognition, human-computer interaction, computational paralinguistics
+
+\\section{Introduction}
+The paper layout should be a maximum of 4 pages for technical content, plus up to 2 pages for references only.
+
+\\section{Multimedia Appendix}
+This template includes structure for citing audio samples. Please ensure all URLs linked here are anonymized for review.
+
+\\section{Conclusions}
+Summary of the work.
+
+\\bibliographystyle{IEEEtran}
+\\bibliography{mybib}
+
+\\end{document}`,
   },
 ];
 
