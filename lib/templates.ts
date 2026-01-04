@@ -5428,5 +5428,131 @@ the American Heart Association}
 
 \end{document}`,
   },
+  {
+    id: 59,
+    title: "Interactive Flashcard / Redacted Quiz",
+    description: "Click-to-reveal study guide with hidden answers - perfect for self-testing",
+    slug: "interactive-flashcard",
+    previewUrl: "/templates/interactive-flashcard.pdf",
+    category: "Education",
+    code: String.raw`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% INTERACTIVE FLASHCARD TEMPLATE
+% Click black boxes to reveal answers. Click again to hide.
+% Works in: Evince, Okular, Chrome, Firefox PDF viewers
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor}
+\usepackage{amsmath, amssymb}
+\usepackage{hyperref}
+\usepackage[tikz]{ocgx2}
+
+\usetikzlibrary{calc, fit}
+
+\hypersetup{colorlinks=true, linkcolor=blue}
+
+% Define accent color
+\definecolor{accent}{RGB}{0, 102, 204}
+
+% The reversible reveal command 
+\newsavebox{\revspoilerbox}
+\newcommand{\reveal}[2]{%
+    \sbox{\revspoilerbox}{#2}%
+    \begin{tikzpicture}[baseline=(hidden_text.base)]
+        \node[inner sep=0pt] (hidden_text) {\usebox{\revspoilerbox}};
+        \node[inner sep=0pt] at (hidden_text) {%
+            \switchocg{#1}{%
+                \begin{tikzpicture}
+                    \begin{ocg}{shutter}{#1}{on}
+                        \node[fill=black, rounded corners=2pt, fit=(hidden_text), inner sep=2pt] {};
+                    \end{ocg}
+                    \begin{ocg}{trigger}{#1_trigger}{on}
+                         \node[fill=white, opacity=0, fit=(hidden_text), inner sep=2pt] {};
+                    \end{ocg}
+                \end{tikzpicture}%
+            }%
+        };
+    \end{tikzpicture}%
+}
+
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{World History: Quick Review}}\\[0.3cm]
+{\large Interactive Study Guide}
+\end{center}
+
+\vspace{0.3cm}
+
+\noindent\textit{Instructions: Click any black box to reveal the answer. Click the revealed text again to hide it.}
+
+\vspace{0.5cm}
+
+\section*{Ancient Civilizations}
+
+\noindent \textbf{1. The Great Pyramid of Giza was built for which pharaoh?}\\
+Answer: \reveal{q1}{Pharaoh Khufu (also known as Cheops)}
+
+\vspace{0.3cm}
+
+\noindent \textbf{2. What year did the Roman Empire officially fall?}\\
+Answer: \reveal{q2}{476 AD}
+
+\vspace{0.3cm}
+
+\noindent \textbf{3. The ancient city of Babylon was located in modern-day:}\\
+Answer: \reveal{q3}{Iraq}
+
+\vspace{0.5cm}
+
+\section*{Medieval Period}
+
+\noindent \textbf{4. The Magna Carta was signed in which year?}\\
+Answer: \reveal{q4}{1215}
+
+\vspace{0.3cm}
+
+\noindent \textbf{5. Who led the Norman conquest of England?}\\
+Answer: \reveal{q5}{William the Conqueror}
+
+\vspace{0.3cm}
+
+\noindent \textbf{6. The Black Death killed approximately what percentage of Europe's population?}\\
+Answer: \reveal{q6}{30-60\% (roughly one-third to one-half)}
+
+\vspace{0.5cm}
+
+\section*{Key Formulas}
+
+\noindent \textbf{Population Growth Rate:}
+\[ r = \frac{\text{\reveal{f1}{$N_t - N_0$}}}{N_0 \times t} \times 100 \]
+
+\vspace{0.3cm}
+
+\noindent \textbf{GDP per Capita:}
+\[ \text{GDP per capita} = \frac{\text{\reveal{f2}{Total GDP}}}{\text{\reveal{f3}{Population}}} \]
+
+\vspace{0.5cm}
+
+\section*{Vocabulary}
+
+\begin{itemize}
+    \item \textbf{Feudalism}: \reveal{v1}{A hierarchical system of land ownership and duties}
+    \item \textbf{Renaissance}: \reveal{v2}{Period of cultural rebirth in Europe (14th-17th century)}
+    \item \textbf{Imperialism}: \reveal{v3}{Policy of extending a nation's power through colonization}
+    \item \textbf{Reformation}: \reveal{v4}{16th-century religious movement that led to Protestantism}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\begin{center}
+\textit{Tip: Use this template to create your own study guides!}
+\end{center}
+
+\end{document}`,
+  },
 ];
 
