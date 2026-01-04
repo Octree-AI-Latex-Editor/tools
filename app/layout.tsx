@@ -24,8 +24,8 @@ const satoshi = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Free LaTeX Tools - Convert Image to LaTeX, 57 Templates, PDF Preview | Octree",
-  description: "Free LaTeX tools: AI-powered math equation converter, 57 professional templates (resume, CV, thesis, beamer), live PDF preview. Convert handwritten math, images & PDFs to LaTeX instantly. Perfect for academics, students & researchers.",
+  title: "Free LaTeX Tools - Convert Image to LaTeX, 60+ Templates, PDF Preview | Octree",
+  description: "Free LaTeX tools: AI-powered math equation converter, 60+ professional templates (resume, CV, thesis, beamer, obituary), live PDF preview. Convert handwritten math, images & PDFs to LaTeX instantly. Perfect for academics, students & researchers.",
   keywords: [
     // Conversion tools - high intent
     "convert handwritten math to LaTeX",
@@ -76,14 +76,25 @@ export const metadata: Metadata = {
     "LaTeX assignment template",
     "LaTeX letter template",
     "LaTeX cover letter template",
+    
+    // New templates
+    "LaTeX obituary template",
+    "obituary template LaTeX",
+    "memorial template LaTeX",
+    "funeral program template LaTeX",
+    "interactive flashcard LaTeX",
+    "LaTeX quiz template",
+    "LaTeX study guide template",
+    "click to reveal LaTeX",
+    "redacted document LaTeX",
   ],
   metadataBase: new URL('https://tools.useoctree.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: "Free LaTeX Tools - Math Converter & 57 Templates",
-    description: "AI-powered math equation converter + 57 free LaTeX templates (resume, CV, thesis, beamer). Convert handwritten math, images & PDFs to LaTeX instantly with live preview.",
+    title: "Free LaTeX Tools - Math Converter & 60+ Templates",
+    description: "AI-powered math equation converter + 60+ free LaTeX templates (resume, CV, thesis, beamer, obituary). Convert handwritten math, images & PDFs to LaTeX instantly with live preview.",
     url: 'https://tools.useoctree.com',
     siteName: 'Octree LaTeX Tools',
     locale: 'en_US',
@@ -91,8 +102,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Free LaTeX Tools - Math Converter & 57 Templates",
-    description: "AI-powered math equation converter + 57 free LaTeX templates (resume, CV, thesis, beamer). Convert handwritten math, images & PDFs to LaTeX instantly with live preview.",
+    title: "Free LaTeX Tools - Math Converter & 60+ Templates",
+    description: "AI-powered math equation converter + 60+ free LaTeX templates (resume, CV, thesis, beamer, obituary). Convert handwritten math, images & PDFs to LaTeX instantly with live preview.",
   },
   robots: {
     index: true,
@@ -120,7 +131,7 @@ export default async function RootLayout({
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
     name: 'Octree LaTeX Tools',
-    description: 'Free LaTeX tools: AI-powered converter for math equations, images & PDFs. 57 professional templates for resume, CV, thesis, beamer, homework, business reports. Live PDF preview.',
+    description: 'Free LaTeX tools: AI-powered converter for math equations, images & PDFs. 60+ professional templates for resume, CV, thesis, beamer, homework, obituary, interactive flashcards. Live PDF preview.',
     url: 'https://tools.useoctree.com',
     applicationCategory: 'DeveloperApplication',
     operatingSystem: 'Any',
@@ -146,7 +157,7 @@ export default async function RootLayout({
       'PDF to LaTeX converter',
       'Image to LaTeX converter',
       'Free LaTeX equation generator',
-      '57 LaTeX templates: resume, CV, thesis, beamer presentation, homework, poster, business plan, business report, memo, manuscript, recipe book, flyer, business card, calendar, and more',
+      '60+ LaTeX templates: resume, CV, thesis, beamer presentation, homework, poster, obituary, interactive flashcards, business plan, business report, memo, manuscript, and more',
       'Live PDF preview and editor',
       'Free download with ready-to-use code',
       'Citation generator',

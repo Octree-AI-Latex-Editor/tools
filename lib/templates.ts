@@ -5341,11 +5341,11 @@ S & M & T & W & T & F & S \\
 % Decorative border
 \begin{tikzpicture}[remember picture, overlay]
   \draw[border, line width=2pt] 
-    ([shift={(0.4in,-.4in)}]current page.north west) 
+    ([shift={(0.4in,-0.4in)}]current page.north west) 
     rectangle 
-    ([shift={(-0.4in,.4in)}]current page.south east);
+    ([shift={(-0.4in,0.4in)}]current page.south east);
   \draw[border, line width=0.5pt] 
-    ([shift={(0.5in,-.5in)}]current page.north west) 
+    ([shift={(0.5in,-0.5in)}]current page.north west) 
     rectangle 
     ([shift={(-0.5in,.5in)}]current page.south east);
 \end{tikzpicture}
@@ -5422,7 +5422,7 @@ the American Heart Association}
 
 \vspace{0.2in}
 
-{\footnotesize \textit{``To live in hearts we leave behind is not to die.''}}
+{\footnotesize \textit{''To live in hearts we leave behind is not to die.''}}
 
 \end{center}
 
