@@ -5313,5 +5313,120 @@ S & M & T & W & T & F & S \\
 
 \end{document}`,
   },
+  {
+    id: 58,
+    title: "Obituary",
+    description: "Elegant memorial obituary template with decorative border",
+    slug: "obituary",
+    previewUrl: "/templates/obituary.pdf",
+    category: "Other",
+    code: String.raw`\documentclass[11pt]{article}
+\usepackage[a5paper,margin=0.75in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{parskip}
+\usepackage{tgtermes}
+
+% Colors
+\definecolor{border}{RGB}{60, 60, 60}
+\definecolor{accent}{RGB}{100, 80, 60}
+
+\pagestyle{empty}
+
+\begin{document}
+
+% Decorative border
+\begin{tikzpicture}[remember picture, overlay]
+  \draw[border, line width=2pt] 
+    ([shift={(0.4in,-.4in)}]current page.north west) 
+    rectangle 
+    ([shift={(-0.4in,.4in)}]current page.south east);
+  \draw[border, line width=0.5pt] 
+    ([shift={(0.5in,-.5in)}]current page.north west) 
+    rectangle 
+    ([shift={(-0.5in,.5in)}]current page.south east);
+\end{tikzpicture}
+
+\begin{center}
+
+% Cross symbol
+{\Large \textcolor{accent}{$\dagger$}}
+
+\vspace{0.3in}
+
+% Title
+{\fontsize{24}{28}\selectfont \textsc{In Loving Memory}}
+
+\vspace{0.3in}
+
+% Photo placeholder
+\begin{tikzpicture}
+  \draw[accent, line width=1pt] (0,0) circle (1.2in);
+  \node at (0,0) {\textcolor{gray}{[Photo]}};
+\end{tikzpicture}
+
+\vspace{0.3in}
+
+% Name
+{\fontsize{20}{24}\selectfont \textbf{John William Smith}}
+
+\vspace{0.1in}
+
+% Dates
+{\large March 15, 1945 --- December 20, 2024}
+
+\vspace{0.1in}
+
+{\textcolor{accent}{\rule{2in}{0.5pt}}}
+
+\end{center}
+
+\vspace{0.2in}
+
+% Biography
+John William Smith was born on March 15, 1945, in Springfield, Illinois, to William and Mary Smith. He was a beloved husband, father, grandfather, and friend to all who knew him.
+
+John graduated from Springfield High School in 1963 and went on to earn his degree in Engineering from the University of Illinois. He dedicated 35 years of his career to making a difference in his community.
+
+He married his high school sweetheart, Margaret, in 1968, and together they raised three wonderful children: Michael, Sarah, and Elizabeth.
+
+John was known for his warm smile, generous spirit, and unwavering love for his family. He enjoyed fishing, woodworking, and spending time with his grandchildren.
+
+\vspace{0.2in}
+
+\begin{center}
+{\textcolor{accent}{\rule{2in}{0.5pt}}}
+
+\vspace{0.15in}
+
+% Survivors
+\textbf{Survived by:}\\
+Wife Margaret Smith; Children Michael (Lisa), Sarah (David), Elizabeth (James);\\
+Grandchildren Emily, Thomas, Anna, Benjamin, and Sophia
+
+\vspace{0.2in}
+
+% Service details
+\textbf{Memorial Service}\\
+December 28, 2024 at 2:00 PM\\
+First United Methodist Church\\
+123 Main Street, Springfield, IL
+
+\vspace{0.15in}
+
+{\small In lieu of flowers, donations may be made to\\
+the American Heart Association}
+
+\vspace{0.2in}
+
+{\footnotesize \textit{``To live in hearts we leave behind is not to die.''}}
+
+\end{center}
+
+\end{document}`,
+  },
 ];
 
