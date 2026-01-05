@@ -5410,6 +5410,9 @@ For blind submissions, ensure that author names and affiliations are not include
 Good luck with your submission!
 
 \bibliography{aaai26}
+
+\end{document}`,
+  },
   {
     id: 69,
     title: "Obituary",
