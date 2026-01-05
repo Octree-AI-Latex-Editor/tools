@@ -5831,33 +5831,13 @@ Authors are encouraged to include a statement of reproducibility. We provide cod
 \usepackage{graphicx}
 \usepackage{amsmath,amssymb}
 \usepackage{booktabs}
-\usepackage[dvipsnames]{xcolor}
-\usepackage[pagebackref,breaklinks,colorlinks,citecolor=blue]{hyperref}
+\usepackage{xcolor}
+\usepackage{hyperref}
 
-% CVPR-style title
-\makeatletter
-\renewcommand{\maketitle}{%
-  \twocolumn[%
-    \begin{center}
-    {\Large\bfseries \@title \par}
-    \vspace{0.5em}
-    {\normalsize \@author \par}
-    \vspace{1em}
-    \end{center}
-  ]
-}
-\makeatother
-
-\title{CVPR 2026 Author Guidelines}
-\author{
-  First Author \\
-  Institution1 \\
-  {\tt\small firstauthor@i1.org}
-  \and
-  Second Author \\
-  Institution2 \\
-  {\tt\small secondauthor@i2.org}
-}
+\title{\Large\bfseries CVPR 2026 Author Guidelines}
+\author{First Author$^1$ \and Second Author$^2$ \\[0.5em]
+$^1$Institution1, firstauthor@i1.org \\
+$^2$Institution2, secondauthor@i2.org}
 \date{}
 
 \begin{document}
@@ -5878,15 +5858,13 @@ Discuss relevant prior work in computer vision, image processing, and related ar
 \section{Method}
 
 Describe your approach with sufficient detail for reproducibility:
-\begin{equation}
-\mathcal{L}_{total} = \mathcal{L}_{cls} + \lambda_{box}\mathcal{L}_{box} + \lambda_{mask}\mathcal{L}_{mask}
-\end{equation}
+$$\mathcal{L}_{total} = \mathcal{L}_{cls} + \lambda_{box}\mathcal{L}_{box} + \lambda_{mask}\mathcal{L}_{mask}$$
 
 \section{Experiments}
 
 Present comprehensive results on standard benchmarks:
 
-\begin{table}[t]
+\begin{table}[h]
 \centering
 \caption{Results on COCO val2017.}
 \begin{tabular}{lccc}
@@ -5901,7 +5879,7 @@ Ours & \textbf{42.7} & \textbf{63.4} & \textbf{46.2} \\
 
 \section{Compute and Environmental Impact}
 
-All submissions must include a statement on compute resources used (e.g., GPU hours) and their environmental impact. We used 8 NVIDIA A100 GPUs for 72 hours.
+All submissions must include a statement on compute resources used. We used 8 NVIDIA A100 GPUs for 72 hours.
 
 \section{Conclusion}
 
@@ -5915,116 +5893,148 @@ Summarize your contributions and discuss limitations and future work.
   {
     id: 63,
     title: "ECCV 2026",
-    description: "Springer LNCS format for ECCV 2026 with migration helpers for CVPR re-submissions.",
+    description: "ECCV 2026 European Conference on Computer Vision paper template.",
     slug: "eccv-2026",
-    previewUrl: "/templates/research-paper.pdf",
+    previewUrl: "/templates/eccv-2026.pdf",
     category: "Academic",
-    code: `\\documentclass[runningheads]{llncs}
-\\usepackage{graphicx}
-\\usepackage{amsmath,amssymb} % define this before the line numbering.
-\\usepackage{color}
+    code: String.raw`\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{hyperref}
 
-% The "axessiblity" package can be found in the license/copyright information section of the author instructions
-% \\usepackage[accsupp]{axessibility}  % Improves PDF readability for those with disabilities.
+\title{\Large\bfseries ECCV 2026 Submission Template}
+\author{First Author$^{1}$ \and Second Author$^{2,3}$ \and Third Author$^{3}$ \\[0.5em]
+$^1$Princeton University, Princeton NJ, USA \\
+$^2$Springer Heidelberg, Germany \\
+$^3$ABC Institute, Heidelberg, Germany \\
+\texttt{\{first,second,third\}@example.com}}
+\date{}
 
-\\begin{document}
-\\pagestyle{headings}
-\\mainmatter
+\begin{document}
+\maketitle
 
-\\title{ECCV 2026 Submission Template}
-%
-\\titlerunning{ECCV 2026 Submission Template}
+\begin{abstract}
+The abstract should summarize the paper in 150--250 words. ECCV follows the Springer LNCS single-column format with a 14-page limit excluding references.
 
-\\author{First Author\\inst{1}\\orcidID{0000-1111-2222-3333} \\and
-Second Author\\inst{2,3}\\orcidID{1111-2222-3333-4444} \\and
-Third Author\\inst{3}\\orcidID{2222--3333-4444-5555}}
-%
-\\authorrunning{F. Author et al.}
-% First names are abbreviated in the running head.
-% If there are more than two authors, 'et al.' is used.
-%
-\\institute{Princeton University, Princeton NJ 08544, USA \\and
-Springer Heidelberg, Tiergartenstr. 17, 69121 Heidelberg, Germany
-\\email{lncs@springer.com}\\\\
-\\url{http://www.springer.com/gp/computer-science/lncs} \\and
-ABC Institute, Rupert-Karls-University Heidelberg, Heidelberg, Germany\\\\
-\\email{\\{abc,lncs\\}@uni-heidelberg.de}}
-%
-\\maketitle
+\textbf{Keywords:} Computer Vision, Machine Learning, ECCV
+\end{abstract}
 
-\\begin{abstract}
-The abstract should be a summary of the paper and not exceed 150-250 words.
-\\keywords{Computer Vision, Machine Learning, ECCV}
-\\end{abstract}
+\section{Introduction}
 
-\\section{Introduction}
-This template follows the Springer Lecture Notes in Computer Science (LNCS) format required for ECCV 2026. The page limit is 14 pages (excluding references).
+ECCV (European Conference on Computer Vision) is a premier venue for computer vision research, held biennially. This template provides a starting point for ECCV 2026 submissions.
 
-\\section{CVPR-to-ECCV Migration}
-Authors re-submitting from CVPR should note that this is a single-column format. Figures previously designed for 2-column layouts may need rescaling.
+\section{CVPR-to-ECCV Migration}
 
-\\begin{figure}
-\\centering
-\\includegraphics[height=6.5cm]{eiffel-tower.eps}
-\\caption{A figure caption is always placed below the illustration. Please note that short captions are centered, while long ones are justified by the macro package automatically.}
-\\label{fig:example}
-\\end{figure}
+Authors re-submitting from CVPR should note that ECCV uses a single-column format. Figures previously designed for two-column layouts may need rescaling.
 
-\\bibliographystyle{splncs04}
-\\bibliography{egbib}
-\\end{document}`,
+\section{Method}
+
+Describe your proposed approach with mathematical formulation:
+$$f(x) = \text{softmax}(W_2 \cdot \text{ReLU}(W_1 x + b_1) + b_2)$$
+
+\section{Experiments}
+
+Present experimental results with proper baselines:
+
+\begin{table}[h]
+\centering
+\caption{Comparison with state-of-the-art methods.}
+\begin{tabular}{lcc}
+\toprule
+Method & mAP & FPS \\
+\midrule
+Baseline & 45.2 & 30 \\
+Prior Work & 48.7 & 25 \\
+Ours & \textbf{52.3} & 28 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Conclusion}
+
+Summarize contributions and future directions.
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}`,
   },
   {
     id: 64,
     title: "ICRA 2026",
-    description: "IEEE International Conference on Robotics and Automation (ICRA) 2026 template with PaperPlaza compliance checks.",
+    description: "IEEE ICRA 2026 robotics conference paper template with two-column format.",
     slug: "icra-2026",
-    previewUrl: "/templates/research-paper.pdf",
+    previewUrl: "/templates/icra-2026.pdf",
     category: "Academic",
-    code: `\\documentclass[letterpaper, 10 pt, conference]{ieeeconf}
+    code: String.raw`\documentclass[letterpaper, 10pt, conference]{IEEEtran}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{hyperref}
 
-\\IEEEoverridecommandlockouts                              % This command is only needed if 
-                                                          % you want to use the \\thanks command
+\title{\LARGE \bf ICRA 2026 Paper Title}
+\author{Author 1$^{1}$ and Author 2$^{2}$
+\thanks{$^{1}$A. Author is with Faculty of Electrical Engineering,
+University of Twente, Netherlands. {\tt\small albert.author@example.net}}
+\thanks{$^{2}$B. Researcher is with Dept. of Electrical Engineering,
+Wright State University, USA. {\tt\small b.researcher@example.org}}}
 
-\\overrideIEEEmargins                                      % Needed to meet printer requirements.
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
 
-\\title{\\LARGE \\bf
-ICRA 2026 Paper Title*
-}
+\begin{abstract}
+ICRA (IEEE International Conference on Robotics and Automation) is the premier robotics conference. This template follows IEEE conference formatting guidelines with a 6-page limit plus up to 2 optional extra pages.
+\end{abstract}
 
-\\author{Author 1$^{1}$ and Author 2$^{2}$% <-this % stops a space
-\\thanks{*This work was not supported by any organization}% <-this % stops a space
-\\thanks{$^{1}$Albert Author is with Faculty of Electrical Engineering, Mathematics and Computer Science,
-        University of Twente, 7500 AE Enschede, The Netherlands
-        {\\tt\\small albert.author@papercept.net}}%
-\\thanks{$^{2}$Bernard D. Researcheris with the Department of Electrical Engineering, Wright State University,
-        Dayton, OH 45435, USA
-        {\\tt\\small b.d.researcher@ieee.org}}%
-}
+\section{Introduction}
 
-\\begin{document}
+The page limit for ICRA is typically 6 pages, with an option to pay for up to 2 extra pages. Submissions are checked by PaperPlaza for margin compliance.
 
-\\maketitle
-\\thispagestyle{empty}
-\\pagestyle{empty}
+\section{Related Work}
 
-\\begin{abstract}
-ICRA 2026 submissions are strictly checked by PaperPlaza for margin compliance. This template forces letterpaper size to prevent A4 conversion errors.
-\\end{abstract}
+Discuss relevant prior work in robotics, automation, and related fields.
 
-\\section{INTRODUCTION}
-The page limit for ICRA is typically 6 pages, with an option to pay for up to 2 extra pages.
+\section{Methodology}
 
-\\section{IROS-to-ICRA Transfer}
-If this work builds upon a rejection from IROS, please ensure you have addressed the previous reviewer comments in your introduction or appendix (if allowed).
+Present your approach with appropriate formalism:
+$$\tau = J^T(q) F$$
+where $\tau$ is the joint torque, $J$ is the Jacobian, and $F$ is the end-effector force.
 
-\\section{CONCLUSIONS}
-A conclusion section is not required. Although a conclusion may review the main points of the paper, do not replicate the abstract as the conclusion. A conclusion might elaborate on the importance of the work or suggest applications and extensions.
+\section{Experiments}
 
-\\bibliographystyle{IEEEtran}
-\\bibliography{IEEEabrv,mybibfile}
+Present experimental validation:
 
-\\end{document}`,
+\begin{table}[h]
+\centering
+\caption{Experimental Results}
+\begin{tabular}{lcc}
+\toprule
+Method & Success Rate & Avg. Time (s) \\
+\midrule
+Baseline & 72\% & 15.3 \\
+Ours & \textbf{91\%} & \textbf{8.7} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Conclusions}
+
+Summarize contributions and discuss future extensions.
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}`,
   },
   {
     id: 65,
@@ -6149,30 +6159,10 @@ Unlike CHI, The Web Conference uses the double-column format for review.
 \usepackage{hyperref}
 \usepackage{natbib}
 
-% ACL-style title
-\makeatletter
-\renewcommand{\maketitle}{%
-  \twocolumn[%
-    \begin{center}
-    {\Large\bfseries \@title \par}
-    \vspace{0.5em}
-    {\normalsize \@author \par}
-    \vspace{1em}
-    \end{center}
-  ]
-}
-\makeatother
-
-\title{ACL 2026 Submission Template}
-\author{
-  First Author \\
-  Affiliation \\
-  \texttt{email@domain}
-  \and
-  Second Author \\
-  Affiliation \\
-  \texttt{email@domain}
-}
+\title{\Large\bfseries ACL 2026 Submission Template}
+\author{First Author$^1$ \and Second Author$^2$ \\[0.5em]
+$^1$Affiliation 1, email@domain \\
+$^2$Affiliation 2, email@domain}
 \date{}
 
 \begin{document}
@@ -6193,15 +6183,13 @@ Discuss relevant prior work in NLP and computational linguistics.
 \section{Method}
 
 Describe your approach:
-\begin{equation}
-P(y|x) = \frac{\exp(f(x,y))}{\sum_{y'} \exp(f(x,y'))}
-\end{equation}
+$$P(y|x) = \frac{\exp(f(x,y))}{\sum_{y'} \exp(f(x,y'))}$$
 
 \section{Experiments}
 
 Present results on standard NLP benchmarks:
 
-\begin{table}[t]
+\begin{table}[h]
 \centering
 \caption{Results on GLUE benchmark.}
 \begin{tabular}{lcc}
@@ -6220,11 +6208,11 @@ Summarize your contributions.
 
 \section*{Limitations}
 
-\textbf{Mandatory Section:} You must include a section about the limitations of your work. This section does not count towards the page limit. Our approach has the following limitations: (1) computational cost, (2) limited evaluation on low-resource languages.
+\textbf{Mandatory Section:} You must include a section about the limitations of your work. This section does not count towards the page limit.
 
 \section*{Ethics Statement}
 
-Scientific work published at ACL 2026 must adhere to the ACL Ethics Policy. We have reviewed the policy and confirm our work complies with it.
+Scientific work published at ACL 2026 must adhere to the ACL Ethics Policy.
 
 \bibliographystyle{plainnat}
 \bibliography{references}
