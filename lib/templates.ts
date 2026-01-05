@@ -5410,11 +5410,125 @@ For blind submissions, ensure that author names and affiliations are not include
 Good luck with your submission!
 
 \bibliography{aaai26}
+  {
+    id: 69,
+    title: "Obituary",
+    description: "Elegant memorial obituary template with decorative border",
+    slug: "obituary",
+    previewUrl: "/templates/obituary.pdf",
+    category: "Other",
+    code: String.raw`\documentclass[11pt]{article}
+\usepackage[a5paper,margin=0.75in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{parskip}
+\usepackage{tgtermes}
+
+% Colors
+\definecolor{border}{RGB}{60, 60, 60}
+\definecolor{accent}{RGB}{100, 80, 60}
+
+\pagestyle{empty}
+
+\begin{document}
+
+% Decorative border
+\begin{tikzpicture}[remember picture, overlay]
+  \draw[border, line width=2pt] 
+    ([shift={(0.4in,-0.4in)}]current page.north west) 
+    rectangle 
+    ([shift={(-0.4in,0.4in)}]current page.south east);
+  \draw[border, line width=0.5pt] 
+    ([shift={(0.5in,-0.5in)}]current page.north west) 
+    rectangle 
+    ([shift={(-0.5in,.5in)}]current page.south east);
+\end{tikzpicture}
+
+\begin{center}
+
+% Cross symbol
+{\Large \textcolor{accent}{$\dagger$}}
+
+\vspace{0.3in}
+
+% Title
+{\fontsize{24}{28}\selectfont \textsc{In Loving Memory}}
+
+\vspace{0.3in}
+
+% Photo placeholder
+\begin{tikzpicture}
+  \draw[accent, line width=1pt] (0,0) circle (1.2in);
+  \node at (0,0) {\textcolor{gray}{[Photo]}};
+\end{tikzpicture}
+
+\vspace{0.3in}
+
+% Name
+{\fontsize{20}{24}\selectfont \textbf{John William Smith}}
+
+\vspace{0.1in}
+
+% Dates
+{\large March 15, 1945 --- December 20, 2024}
+
+\vspace{0.1in}
+
+{\textcolor{accent}{\rule{2in}{0.5pt}}}
+
+\end{center}
+
+\vspace{0.2in}
+
+% Biography
+John William Smith was born on March 15, 1945, in Springfield, Illinois, to William and Mary Smith. He was a beloved husband, father, grandfather, and friend to all who knew him.
+
+John graduated from Springfield High School in 1963 and went on to earn his degree in Engineering from the University of Illinois. He dedicated 35 years of his career to making a difference in his community.
+
+He married his high school sweetheart, Margaret, in 1968, and together they raised three wonderful children: Michael, Sarah, and Elizabeth.
+
+John was known for his warm smile, generous spirit, and unwavering love for his family. He enjoyed fishing, woodworking, and spending time with his grandchildren.
+
+\vspace{0.2in}
+
+\begin{center}
+{\textcolor{accent}{\rule{2in}{0.5pt}}}
+
+\vspace{0.15in}
+
+% Survivors
+\textbf{Survived by:}\\
+Wife Margaret Smith; Children Michael (Lisa), Sarah (David), Elizabeth (James);\\
+Grandchildren Emily, Thomas, Anna, Benjamin, and Sophia
+
+\vspace{0.2in}
+
+% Service details
+\textbf{Memorial Service}\\
+December 28, 2024 at 2:00 PM\\
+First United Methodist Church\\
+123 Main Street, Springfield, IL
+
+\vspace{0.15in}
+
+{\small In lieu of flowers, donations may be made to\\
+the American Heart Association}
+
+\vspace{0.2in}
+
+{\footnotesize \textit{''To live in hearts we leave behind is not to die.''}}
+
+\end{center}
+
 
 \end{document}`,
   },
   {
     id: 59,
+
     title: "NeurIPS 2026",
     description: "NeurIPS 2026 submission template including the mandatory paper checklist and smart page counter.",
     slug: "neurips-2026",
@@ -6086,5 +6200,133 @@ Summary of the work.
 
 \\end{document}`,
   },
+
+  {
+    id: 70,
+    title: "Interactive Flashcard / Redacted Quiz",
+    description: "Click-to-reveal study guide with hidden answers - perfect for self-testing",
+    slug: "interactive-flashcard",
+    previewUrl: "/templates/interactive-flashcard.pdf",
+    category: "Education",
+    code: String.raw`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% INTERACTIVE FLASHCARD TEMPLATE
+% Click black boxes to reveal answers. Click again to hide.
+% Works in: Evince, Okular, Chrome, Firefox PDF viewers
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor}
+\usepackage{amsmath, amssymb}
+\usepackage{hyperref}
+\usepackage[tikz]{ocgx2}
+
+\usetikzlibrary{calc, fit}
+
+\hypersetup{colorlinks=true, linkcolor=blue}
+
+% Define accent color
+\definecolor{accent}{RGB}{0, 102, 204}
+
+% The reversible reveal command 
+\newsavebox{\revspoilerbox}
+\newcommand{\reveal}[2]{%
+    \sbox{\revspoilerbox}{#2}%
+    \begin{tikzpicture}[baseline=(hidden_text.base)]
+        \node[inner sep=0pt] (hidden_text) {\usebox{\revspoilerbox}};
+        \node[inner sep=0pt] at (hidden_text) {%
+            \switchocg{#1}{%
+                \begin{tikzpicture}
+                    \begin{ocg}{shutter}{#1}{on}
+                        \node[fill=black, rounded corners=2pt, fit=(hidden_text), inner sep=2pt] {};
+                    \end{ocg}
+                    \begin{ocg}{trigger}{#1_trigger}{on}
+                         \node[fill=white, opacity=0, fit=(hidden_text), inner sep=2pt] {};
+                    \end{ocg}
+                \end{tikzpicture}%
+            }%
+        };
+    \end{tikzpicture}%
+}
+
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{World History: Quick Review}}\\[0.3cm]
+{\large Interactive Study Guide}
+\end{center}
+
+\vspace{0.3cm}
+
+\noindent\textit{Instructions: Click any black box to reveal the answer. Click the revealed text again to hide it.}
+
+\vspace{0.5cm}
+
+\section*{Ancient Civilizations}
+
+\noindent \textbf{1. The Great Pyramid of Giza was built for which pharaoh?}\\
+Answer: \reveal{q1}{Pharaoh Khufu (also known as Cheops)}
+
+\vspace{0.3cm}
+
+\noindent \textbf{2. What year did the Roman Empire officially fall?}\\
+Answer: \reveal{q2}{476 AD}
+
+\vspace{0.3cm}
+
+\noindent \textbf{3. The ancient city of Babylon was located in modern-day:}\\
+Answer: \reveal{q3}{Iraq}
+
+\vspace{0.5cm}
+
+\section*{Medieval Period}
+
+\noindent \textbf{4. The Magna Carta was signed in which year?}\\
+Answer: \reveal{q4}{1215}
+
+\vspace{0.3cm}
+
+\noindent \textbf{5. Who led the Norman conquest of England?}\\
+Answer: \reveal{q5}{William the Conqueror}
+
+\vspace{0.3cm}
+
+\noindent \textbf{6. The Black Death killed approximately what percentage of Europe's population?}\\
+Answer: \reveal{q6}{30-60\% (roughly one-third to one-half)}
+
+\vspace{0.5cm}
+
+\section*{Key Formulas}
+
+\noindent \textbf{Population Growth Rate:}
+\[ r = \frac{\text{\reveal{f1}{$N_t - N_0$}}}{N_0 \times t} \times 100 \]
+
+\vspace{0.3cm}
+
+\noindent \textbf{GDP per Capita:}
+\[ \text{GDP per capita} = \frac{\text{\reveal{f2}{Total GDP}}}{\text{\reveal{f3}{Population}}} \]
+
+\vspace{0.5cm}
+
+\section*{Vocabulary}
+
+\begin{itemize}
+    \item \textbf{Feudalism}: \reveal{v1}{A hierarchical system of land ownership and duties}
+    \item \textbf{Renaissance}: \reveal{v2}{Period of cultural rebirth in Europe (14th-17th century)}
+    \item \textbf{Imperialism}: \reveal{v3}{Policy of extending a nation's power through colonization}
+    \item \textbf{Reformation}: \reveal{v4}{16th-century religious movement that led to Protestantism}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\begin{center}
+\textit{Tip: Use this template to create your own study guides!}
+\end{center}
+
+\end{document}`,
+  },
+
 ];
 

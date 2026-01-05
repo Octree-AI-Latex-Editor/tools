@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "57 Free LaTeX Templates - Resume, CV, Research Paper, Beamer & More | Octree",
-  description: "Download 57 free professional LaTeX templates: resume, CV, research paper, thesis, beamer presentation, homework, poster, business report, flyer, calendar & more. Ready-to-use code with live PDF previews. Perfect for academics, students & professionals.",
+  title: "60+ Free LaTeX Templates - Resume, CV, Research Paper, Beamer & More | Octree",
+  description: "Download 60+ free professional LaTeX templates: resume, CV, research paper, thesis, beamer presentation, homework, poster, obituary, interactive flashcards & more. Ready-to-use code with live PDF previews. Perfect for academics, students & professionals.",
   keywords: [
     // High-volume keywords (1000+ searches)
     "latex templates",
@@ -109,13 +109,31 @@ export const metadata: Metadata = {
     "latex poster template a0",
     "latex thesis template with chapters",
     "best latex cv template",
+    
+    // New templates - obituary
+    "latex obituary template",
+    "obituary template latex",
+    "funeral program template latex",
+    "memorial template latex",
+    "in loving memory template latex",
+    "death announcement template latex",
+    
+    // New templates - interactive/flashcard
+    "latex flashcard template",
+    "interactive latex template",
+    "latex quiz template",
+    "latex study guide template",
+    "click to reveal latex",
+    "redacted document template latex",
+    "hidden answer template latex",
+    "self-test template latex",
   ],
   alternates: {
     canonical: '/templates',
   },
   openGraph: {
-    title: "57 Free LaTeX Templates - Resume, CV, Research Paper & More",
-    description: "Download 57 free LaTeX templates: resume, CV, thesis, beamer, homework, poster, business report, flyer, calendar. Ready-to-use code with live PDF previews.",
+    title: "60+ Free LaTeX Templates - Resume, CV, Research Paper & More",
+    description: "Download 60+ free LaTeX templates: resume, CV, thesis, beamer, homework, poster, obituary, interactive flashcards. Ready-to-use code with live PDF previews.",
     url: 'https://tools.useoctree.com/templates',
     siteName: 'Octree LaTeX Tools',
     locale: 'en_US',
@@ -123,8 +141,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "57 Free LaTeX Templates - Resume, CV, Research Paper & More",
-    description: "Download 57 free LaTeX templates: resume, CV, thesis, beamer, homework, poster, business report, flyer, calendar. Ready-to-use code with live PDF previews.",
+    title: "60+ Free LaTeX Templates - Resume, CV, Research Paper & More",
+    description: "Download 60+ free LaTeX templates: resume, CV, thesis, beamer, homework, poster, obituary, interactive flashcards. Ready-to-use code with live PDF previews.",
   },
 };
 
@@ -186,6 +204,8 @@ const templatesList = [
   { name: "Flyer", slug: "flyer", description: "Marketing flyer and promotional one-page template" },
   { name: "Business Card", slug: "business-card", description: "Professional business card template" },
   { name: "Calendar", slug: "calendar", description: "Monthly and yearly calendar template" },
+  { name: "Obituary", slug: "obituary", description: "Elegant memorial obituary template with decorative border" },
+  { name: "Interactive Flashcard", slug: "interactive-flashcard", description: "Click-to-reveal study guide with hidden answers" },
 ];
 
 export default function TemplatesLayout({
@@ -196,10 +216,10 @@ export default function TemplatesLayout({
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: '57 Free LaTeX Templates - Resume, CV, Research Paper & More',
-    description: '57 professional LaTeX templates including resume, CV, research paper, thesis, beamer presentation, homework, poster, business report, flyer, calendar, and more. Free download with PDF previews.',
+    name: '60+ Free LaTeX Templates - Resume, CV, Research Paper & More',
+    description: '60+ professional LaTeX templates including resume, CV, research paper, thesis, beamer presentation, homework, poster, obituary, interactive flashcards, and more. Free download with PDF previews.',
     url: 'https://tools.useoctree.com/templates',
-    numberOfItems: 57,
+    numberOfItems: templatesList.length,
     hasPart: templatesList.map((template) => ({
       '@type': 'SoftwareSourceCode',
       name: `${template.name} LaTeX Template`,
