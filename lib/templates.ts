@@ -1,7 +1,7 @@
 // Single source of truth for all LaTeX templates
 // Used by both frontend and compilation script
 
-export type TemplateCategory = 
+export type TemplateCategory =
   | "Academic"
   | "Presentations"
   | "Resume & CV"
@@ -5314,7 +5314,110 @@ S & M & T & W & T & F & S \\
 \end{document}`,
   },
   {
-    id: 58,
+      id: 58,
+      title: "AAAI 2026",
+      description: "AAAI 2026 conference paper template with two-column format and 7-page limit.",
+      slug: "aaai-2026",
+      previewUrl: "/templates/aaai-2026.pdf",
+      category: "Academic",
+      code: String.raw`\documentclass[letterpaper,twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{caption}
+
+% AAAI-style title formatting
+\makeatletter
+\renewcommand{\maketitle}{%
+  \twocolumn[%
+    \begin{center}
+    {\LARGE\bfseries \@title \par}
+    \vspace{1em}
+    {\large \@author \par}
+    \vspace{1.5em}
+    \end{center}
+  ]
+}
+\makeatother
+
+\title{Title of Your AAAI 2026 Research Paper}
+\author{Anonymous Submission}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This is a placeholder for the abstract of your paper. The abstract should provide a concise summary of the research, including the problem statement, methodology, main results, and conclusions. It should be self-contained and generally not exceed 150 words as specified by AAAI guidelines.
+\end{abstract}
+
+\section{Introduction}
+This section introduces the research problem. It should provide context, motivation, and a clear statement of the contributions. Explain why this work is important and how it advances the state of the art in artificial intelligence.
+
+AAAI papers are limited to 7 pages of content plus additional pages for references only. This template follows the two-column format required by AAAI.
+
+\section{Related Work}
+Discuss relevant prior work in this section. Highlight the differences between your approach and existing methods. This helps position your contribution within the broader research landscape.
+
+\section{Methodology}
+Detail your proposed method, algorithm, or system architecture here. Use formal notation and provide sufficient detail for reproducibility.
+
+\begin{algorithm}[t]
+\caption{Sample Algorithm}
+\label{alg:sample}
+\textbf{Input}: Data set $\mathcal{D}$\\
+\textbf{Output}: Trained Model $\mathcal{M}$
+\begin{algorithmic}[1]
+\STATE Initialize model parameters $\theta$
+\WHILE{stopping criterion not met}
+    \STATE Sample batch $\mathcal{B}$ from $\mathcal{D}$
+    \STATE Update $\theta$ based on loss $\mathcal{L}(\mathcal{B}, \theta)$
+\ENDWHILE
+\STATE \textbf{return} $\theta$
+\end{algorithmic}
+\end{algorithm}
+
+\section{Experiments}
+Describe your experimental setup, datasets, and evaluation metrics. Present your results clearly using tables and figures.
+
+\begin{table}[t]
+\centering
+\caption{Performance comparison on the test set.}
+\label{tab:results}
+\begin{tabular}{lcc}
+\toprule
+Method & Precision & Recall \\
+\midrule
+Baseline & 0.75 & 0.70 \\
+Our Method & \textbf{0.82} & \textbf{0.78} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Conclusion}
+Summarize the key findings of the paper and suggest directions for future work.
+
+\section*{Acknowledgments}
+Acknowledgments should be omitted for anonymous submissions.
+
+\bibliographystyle{aaai}
+\bibliography{references}
+
+\end{document}`,
+  },
+  {
+    id: 69,
     title: "Obituary",
     description: "Elegant memorial obituary template with decorative border",
     slug: "obituary",
@@ -5426,10 +5529,796 @@ the American Heart Association}
 
 \end{center}
 
+
 \end{document}`,
   },
   {
     id: 59,
+    title: "NeurIPS 2026",
+    description: "NeurIPS 2026 conference paper template with 9-page limit and paper checklist.",
+    slug: "neurips-2026",
+    previewUrl: "/templates/neurips-2026.pdf",
+    category: "Academic",
+    code: String.raw`\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{times}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage{nicefrac}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{natbib}
+
+% NeurIPS-style formatting
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+
+\title{NeurIPS 2026 Submission Template}
+\author{
+  David S.~Hippocampus\thanks{Use footnote for providing further information about author.} \\
+  Department of Computer Science\\
+  Cranberry-Lemon University\\
+  Pittsburgh, PA 15213 \\
+  \texttt{hippo@cs.cranberry-lemon.edu}
+}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The abstract paragraph should be indented and provide a concise summary of your contributions. NeurIPS papers are limited to 9 pages of main content, with unlimited pages for references and supplementary checklist. Your submission must include the mandatory NeurIPS Paper Checklist.
+\end{abstract}
+
+\section{Introduction}
+
+Please read the NeurIPS 2026 submission instructions carefully. Papers that exceed the page limit or violate formatting guidelines will be desk-rejected.
+
+\section{Related Work}
+
+Discuss relevant prior work and position your contributions within the existing literature.
+
+\section{Method}
+
+Describe your proposed approach in detail. Use mathematical notation where appropriate:
+\begin{equation}
+\mathcal{L}(\theta) = \mathbb{E}_{x \sim p_{\text{data}}}[\log p_\theta(x)]
+\end{equation}
+
+\section{Experiments}
+
+Present your experimental results with appropriate baselines and ablation studies.
+
+\begin{table}[h]
+\centering
+\caption{Experimental results on benchmark datasets.}
+\begin{tabular}{lcc}
+\toprule
+Method & Accuracy & F1 Score \\
+\midrule
+Baseline & 85.2 & 84.1 \\
+Ours & \textbf{91.3} & \textbf{90.7} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Conclusion}
+
+Summarize your contributions and discuss future directions.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\appendix
+\section*{NeurIPS Paper Checklist}
+
+\begin{enumerate}
+\item \textbf{Claims:} Do the main claims accurately reflect the paper's contributions? \textbf{[Yes]}
+\item \textbf{Limitations:} Did you describe the limitations of your work? \textbf{[Yes]}
+\item \textbf{Broader Impact:} Did you discuss potential negative societal impacts? \textbf{[N/A]}
+\item \textbf{Theory:} Did you state all assumptions of theoretical results? \textbf{[Yes]}
+\item \textbf{Experiments:} Did you include code and data for reproducibility? \textbf{[Yes]}
+\item \textbf{Compute:} Did you report computational resources used? \textbf{[Yes]}
+\end{enumerate}
+
+\end{document}`,
+  },
+  {
+    id: 60,
+    title: "ICML 2026",
+    description: "ICML 2026 conference paper template with two-column format and 8-page limit.",
+    slug: "icml-2026",
+    previewUrl: "/templates/icml-2026.pdf",
+    category: "Academic",
+    code: String.raw`\documentclass[10pt,twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{times}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{amsmath,amssymb}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+% ICML-style title
+\makeatletter
+\renewcommand{\maketitle}{%
+  \twocolumn[%
+    \begin{center}
+    {\LARGE\bfseries \@title \par}
+    \vspace{0.5em}
+    {\large \@author \par}
+    \vspace{1em}
+    \end{center}
+  ]
+}
+\makeatother
+
+\title{ICML 2026 Submission Template}
+\author{
+  Firstname Lastname$^{1*}$ \quad Firstname Lastname$^{1,2*}$ \quad Firstname Lastname$^{2}$\\[0.5em]
+  $^1$Department of XXX, University of YYY \\
+  $^2$Company Name, Location \\
+  \texttt{first.last@institution.edu}\\
+  {\small $^*$Equal contribution}
+}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This document provides a basic paper template and submission guidelines for ICML 2026. Abstracts must be a single paragraph, ideally between 4--6 sentences long. The main text is limited to 8 pages, with unlimited pages for references and appendices.
+\end{abstract}
+
+\section{Introduction}
+
+ICML (International Conference on Machine Learning) is a premier venue for machine learning research. This template follows the two-column format used by ICML.
+
+\section{Related Work}
+
+Discuss relevant prior work and how your contributions differ from existing approaches.
+
+\section{Method}
+
+Describe your proposed method in detail. ICML papers should include sufficient technical depth:
+
+\begin{equation}
+\min_{\theta} \mathcal{L}(\theta) = \frac{1}{n}\sum_{i=1}^{n} \ell(f_\theta(x_i), y_i) + \lambda \|\theta\|_2^2
+\end{equation}
+
+\section{Experiments}
+
+Present comprehensive experimental results:
+
+\begin{table}[t]
+\centering
+\caption{Results on benchmark datasets.}
+\begin{tabular}{lcc}
+\toprule
+Method & Dataset A & Dataset B \\
+\midrule
+Baseline & 78.3 & 82.1 \\
+Prior Work & 81.2 & 84.5 \\
+Ours & \textbf{85.7} & \textbf{88.2} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Accessibility \& Reproducibility}
+
+For reproducibility, we encourage linking to an anonymized code repository (e.g., Anonymous GitHub) during review.
+
+\section{Conclusion}
+
+Summarize contributions and discuss future directions.
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}`,
+  },
+  {
+    id: 61,
+    title: "ICLR 2026",
+    description: "ICLR 2026 conference paper template with reproducibility statement.",
+    slug: "iclr-2026",
+    previewUrl: "/templates/iclr-2026.pdf",
+    category: "Academic",
+    code: String.raw`\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{times}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{natbib}
+
+\title{ICLR 2026 Conference Submission Template}
+\author{
+  Antiquark\thanks{Use footnote for providing further information about author---\emph{not} for acknowledging funding agencies.} \\
+  Department of Computer Science\\
+  Cranberry-Lemon University\\
+  Pittsburgh, PA 15213, USA \\
+  \texttt{antiquark@cs.cranberry-lemon.edu} \\
+  \and
+  Ji Q. Ren \quad Yevgeny LeNet \\
+  Department of Computational Neuroscience \\
+  University of the Witwatersrand \\
+  Johannesburg, South Africa \\
+  \texttt{\{robot,net\}@wits.ac.za}
+}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The abstract paragraph should provide a concise summary of your paper. ICLR submissions are processed through OpenReview, enabling open and transparent peer review. This template follows the standard single-column format for ICLR conference papers.
+\end{abstract}
+
+\section{Introduction}
+
+ICLR (International Conference on Learning Representations) focuses on deep learning and representation learning research. Submissions are reviewed through OpenReview with public discussions.
+
+\section{Related Work}
+
+Position your work within the existing literature on representation learning and deep learning.
+
+\section{Method}
+
+Describe your proposed approach:
+\begin{equation}
+h^{(l+1)} = \sigma\left(W^{(l)} h^{(l)} + b^{(l)}\right)
+\end{equation}
+
+\section{Experiments}
+
+Present your experimental results with appropriate baselines.
+
+\begin{table}[h]
+\centering
+\caption{Experimental comparison.}
+\begin{tabular}{lcc}
+\toprule
+Model & Accuracy & Parameters \\
+\midrule
+Baseline & 92.1 & 11M \\
+Ours & \textbf{94.8} & 12M \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Conclusion}
+
+Summarize your contributions and discuss future directions.
+
+\section*{Reproducibility Statement}
+Authors are encouraged to include a statement of reproducibility. We provide code at \url{https://anonymous.github.io/repo} and detail all hyperparameters in Appendix A.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}`,
+  },
+  {
+    id: 62,
+    title: "CVPR 2026",
+    description: "CVPR 2026 computer vision conference paper template with two-column format.",
+    slug: "cvpr-2026",
+    previewUrl: "/templates/cvpr-2026.pdf",
+    category: "Academic",
+    code: String.raw`\documentclass[10pt,twocolumn,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\title{\Large\bfseries CVPR 2026 Author Guidelines}
+\author{First Author$^1$ \and Second Author$^2$ \\[0.5em]
+$^1$Institution1, firstauthor@i1.org \\
+$^2$Institution2, secondauthor@i2.org}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This template provides formatting guidelines for CVPR 2026 submissions. The abstract should summarize the problem, approach, key results, and contributions of your paper in approximately 150 words.
+\end{abstract}
+
+\section{Introduction}
+
+CVPR (Conference on Computer Vision and Pattern Recognition) is a premier venue for computer vision research. Papers must not exceed 8 pages in length, excluding references.
+
+\section{Related Work}
+
+Discuss relevant prior work in computer vision, image processing, and related areas.
+
+\section{Method}
+
+Describe your approach with sufficient detail for reproducibility:
+$$\mathcal{L}_{total} = \mathcal{L}_{cls} + \lambda_{box}\mathcal{L}_{box} + \lambda_{mask}\mathcal{L}_{mask}$$
+
+\section{Experiments}
+
+Present comprehensive results on standard benchmarks:
+
+\begin{table}[h]
+\centering
+\caption{Results on COCO val2017.}
+\begin{tabular}{lccc}
+\toprule
+Method & AP & AP$_{50}$ & AP$_{75}$ \\
+\midrule
+Baseline & 38.2 & 58.1 & 41.3 \\
+Ours & \textbf{42.7} & \textbf{63.4} & \textbf{46.2} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Compute and Environmental Impact}
+
+All submissions must include a statement on compute resources used. We used 8 NVIDIA A100 GPUs for 72 hours.
+
+\section{Conclusion}
+
+Summarize your contributions and discuss limitations and future work.
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}`,
+  },
+  {
+    id: 63,
+    title: "ECCV 2026",
+    description: "ECCV 2026 European Conference on Computer Vision paper template.",
+    slug: "eccv-2026",
+    previewUrl: "/templates/eccv-2026.pdf",
+    category: "Academic",
+    code: String.raw`\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\title{\Large\bfseries ECCV 2026 Submission Template}
+\author{First Author$^{1}$ \and Second Author$^{2,3}$ \and Third Author$^{3}$ \\[0.5em]
+$^1$Princeton University, Princeton NJ, USA \\
+$^2$Springer Heidelberg, Germany \\
+$^3$ABC Institute, Heidelberg, Germany \\
+\texttt{\{first,second,third\}@example.com}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The abstract should summarize the paper in 150--250 words. ECCV follows the Springer LNCS single-column format with a 14-page limit excluding references.
+
+\textbf{Keywords:} Computer Vision, Machine Learning, ECCV
+\end{abstract}
+
+\section{Introduction}
+
+ECCV (European Conference on Computer Vision) is a premier venue for computer vision research, held biennially. This template provides a starting point for ECCV 2026 submissions.
+
+\section{CVPR-to-ECCV Migration}
+
+Authors re-submitting from CVPR should note that ECCV uses a single-column format. Figures previously designed for two-column layouts may need rescaling.
+
+\section{Method}
+
+Describe your proposed approach with mathematical formulation:
+$$f(x) = \text{softmax}(W_2 \cdot \text{ReLU}(W_1 x + b_1) + b_2)$$
+
+\section{Experiments}
+
+Present experimental results with proper baselines:
+
+\begin{table}[h]
+\centering
+\caption{Comparison with state-of-the-art methods.}
+\begin{tabular}{lcc}
+\toprule
+Method & mAP & FPS \\
+\midrule
+Baseline & 45.2 & 30 \\
+Prior Work & 48.7 & 25 \\
+Ours & \textbf{52.3} & 28 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Conclusion}
+
+Summarize contributions and future directions.
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}`,
+  },
+  {
+    id: 64,
+    title: "ICRA 2026",
+    description: "IEEE ICRA 2026 robotics conference paper template with two-column format.",
+    slug: "icra-2026",
+    previewUrl: "/templates/icra-2026.pdf",
+    category: "Academic",
+    code: String.raw`\documentclass[letterpaper, 10pt, conference]{IEEEtran}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\title{\LARGE \bf ICRA 2026 Paper Title}
+\author{Author 1$^{1}$ and Author 2$^{2}$
+\thanks{$^{1}$A. Author is with Faculty of Electrical Engineering,
+University of Twente, Netherlands. {\tt\small albert.author@example.net}}
+\thanks{$^{2}$B. Researcher is with Dept. of Electrical Engineering,
+Wright State University, USA. {\tt\small b.researcher@example.org}}}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+\begin{abstract}
+ICRA (IEEE International Conference on Robotics and Automation) is the premier robotics conference. This template follows IEEE conference formatting guidelines with a 6-page limit plus up to 2 optional extra pages.
+\end{abstract}
+
+\section{Introduction}
+
+The page limit for ICRA is typically 6 pages, with an option to pay for up to 2 extra pages. Submissions are checked by PaperPlaza for margin compliance.
+
+\section{Related Work}
+
+Discuss relevant prior work in robotics, automation, and related fields.
+
+\section{Methodology}
+
+Present your approach with appropriate formalism:
+$$\tau = J^T(q) F$$
+where $\tau$ is the joint torque, $J$ is the Jacobian, and $F$ is the end-effector force.
+
+\section{Experiments}
+
+Present experimental validation:
+
+\begin{table}[h]
+\centering
+\caption{Experimental Results}
+\begin{tabular}{lcc}
+\toprule
+Method & Success Rate & Avg. Time (s) \\
+\midrule
+Baseline & 72\% & 15.3 \\
+Ours & \textbf{91\%} & \textbf{8.7} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Conclusions}
+
+Summarize contributions and discuss future extensions.
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}`,
+  },
+  {
+    id: 65,
+    title: "ACM CHI 2026",
+    description: "Official ACM CHI 2026 submission template configured for single-column review format (TAPS compatible).",
+    slug: "acm-chi-2026",
+    previewUrl: "/templates/acm-chi-2026.pdf",
+    category: "Academic",
+    code: `\\documentclass[manuscript,review,anonymous]{acmart}
+
+%%
+%% \\BibTeX command to typeset BibTeX logo in the docs
+\\AtBeginDocument{%
+  \\providecommand\\BibTeX{{%
+    \\normalfont B\\kern-0.5em{\\scshape i\\kern-0.25em b}\\kern-0.8em\\TeX}}}
+
+%% \\title{The Name of the Title is Hope}
+\\title{ACM CHI 2026 Submission Template}
+
+\\author{First Author}
+\\email{first.author@institution.edu}
+\\affiliation{%
+  \\institution{Institution Name}
+  \\city{City}
+  \\country{Country}
+}
+
+\\begin{document}
+
+\\begin{abstract}
+The abstract should provide a concise summary of the research.
+\\end{abstract}
+
+%%
+%% The code below is generated by the tool at http://dl.acm.org/ccs.cfm.
+%% Please copy and paste the code instead of the example below.
+%%
+\\begin{CCSXML}
+<ccs2012>
+ <concept>
+  <concept_id>10010520.10010553.10010562</concept_id>
+  <concept_desc>Computer systems organization~Embedded systems</concept_desc>
+  <concept_significance>500</concept_significance>
+ </concept>
+</ccs2012>
+\\end{CCSXML}
+
+\\ccsdesc[500]{Computer systems organization~Embedded systems}
+
+\\keywords{datasets, neural networks, gaze detection, text tagging}
+
+\\maketitle
+
+\\section{Introduction}
+CHI 2026 uses the single-column ACM template for review. This format is TAPS-ready.
+
+\\section{Accessibility Safe Mode}
+Please ensure all figures have descriptions for accessibility.
+% Example:
+% \\Description{A description of the figure for screen readers.}
+
+\\bibliographystyle{ACM-Reference-Format}
+\\bibliography{sample-base}
+
+\\end{document}`,
+  },
+  {
+    id: 66,
+    title: "WWW 2026",
+    description: "The Web Conference (WWW) 2026 template with mandatory relevance to the web section.",
+    slug: "www-2026",
+    previewUrl: "/templates/www-2026.pdf",
+    category: "Academic",
+    code: `\\documentclass[sigconf,anonymous]{acmart}
+
+\\title{The Web Conference 2026 Submission}
+
+\\author{First Author}
+\\affiliation{%
+  \\institution{Institution Name}
+  \\city{City}
+  \\country{Country}
+}
+\\email{first.author@institution.edu}
+
+\\begin{document}
+
+\\begin{abstract}
+Abstract goes here.
+\\end{abstract}
+
+\\maketitle
+
+\\section{Introduction}
+Unlike CHI, The Web Conference uses the double-column format for review.
+
+\\section{Relevance to the Web}
+\\textbf{Mandatory Section:} Please explicitly state how your work is relevant to the Web. This is a requirement for the Research Track.
+
+\\bibliographystyle{ACM-Reference-Format}
+\\bibliography{software}
+
+\\end{document}`,
+  },
+  {
+    id: 67,
+    title: "ACL 2026",
+    description: "ACL 2026 NLP conference paper template with two-column format and mandatory limitations section.",
+    slug: "acl-2026",
+    previewUrl: "/templates/acl-2026.pdf",
+    category: "Academic",
+    code: String.raw`\documentclass[11pt,twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{natbib}
+
+\title{\Large\bfseries ACL 2026 Submission Template}
+\author{First Author$^1$ \and Second Author$^2$ \\[0.5em]
+$^1$Affiliation 1, email@domain \\
+$^2$Affiliation 2, email@domain}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This document provides a template for ACL 2026 submissions. ACL is a premier venue for computational linguistics and natural language processing research. The abstract should concisely describe your problem, approach, and key results.
+\end{abstract}
+
+\section{Introduction}
+
+ACL 2026 submissions should follow the ARR (ACL Rolling Review) unified style. The page limit is 8 pages for long papers and 4 pages for short papers, excluding references.
+
+\section{Related Work}
+
+Discuss relevant prior work in NLP and computational linguistics.
+
+\section{Method}
+
+Describe your approach:
+$$P(y|x) = \frac{\exp(f(x,y))}{\sum_{y'} \exp(f(x,y'))}$$
+
+\section{Experiments}
+
+Present results on standard NLP benchmarks:
+
+\begin{table}[h]
+\centering
+\caption{Results on GLUE benchmark.}
+\begin{tabular}{lcc}
+\toprule
+Model & MNLI & SST-2 \\
+\midrule
+BERT & 84.6 & 93.5 \\
+Ours & \textbf{87.2} & \textbf{95.1} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Conclusion}
+
+Summarize your contributions.
+
+\section*{Limitations}
+
+\textbf{Mandatory Section:} You must include a section about the limitations of your work. This section does not count towards the page limit.
+
+\section*{Ethics Statement}
+
+Scientific work published at ACL 2026 must adhere to the ACL Ethics Policy.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}`,
+  },
+  {
+    id: 68,
+    title: "Interspeech 2026",
+    description: "Interspeech 2026 speech and language processing conference paper template.",
+    slug: "interspeech-2026",
+    previewUrl: "/templates/interspeech-2026.pdf",
+    category: "Academic",
+    code: String.raw`\documentclass[a4paper,11pt,twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{times}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+% Interspeech-style title
+\makeatletter
+\renewcommand{\maketitle}{%
+  \twocolumn[%
+    \begin{center}
+    {\Large\bfseries \@title \par}
+    \vspace{0.5em}
+    {\normalsize \@author \par}
+    \vspace{0.3em}
+    {\small \@date \par}
+    \vspace{1em}
+    \end{center}
+  ]
+}
+\makeatother
+
+\title{Interspeech 2026 Submission Template}
+\author{
+  Author Name$^1$, Co-author Name$^2$ \\
+  $^1$Author Affiliation \\
+  $^2$Co-author Affiliation \\
+  \texttt{author@university.edu}
+}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The abstract should be 100 to 200 words and provide a concise summary of your paper. Interspeech is the world's largest conference on speech and language processing, covering topics from speech recognition to synthesis and spoken language understanding.
+\end{abstract}
+
+\noindent\textbf{Index Terms}: speech recognition, human-computer interaction, computational paralinguistics
+
+\section{Introduction}
+
+The paper layout should be a maximum of 4 pages for technical content, plus up to 2 pages for references only. Interspeech covers a wide range of topics in speech science and technology.
+
+\section{Related Work}
+
+Discuss relevant prior work in speech processing, recognition, and synthesis.
+
+\section{Method}
+
+Describe your approach:
+\begin{equation}
+y(t) = \sum_{k=1}^{K} a_k \sin(2\pi f_k t + \phi_k)
+\end{equation}
+
+\section{Experiments}
+
+Present experimental results:
+
+\begin{table}[t]
+\centering
+\caption{Word Error Rate (WER) on LibriSpeech.}
+\begin{tabular}{lcc}
+\toprule
+Model & test-clean & test-other \\
+\midrule
+Baseline & 3.2 & 7.8 \\
+Ours & \textbf{2.4} & \textbf{5.9} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Multimedia Appendix}
+
+This template includes structure for citing audio samples. Please ensure all URLs linked here are anonymized for review: \url{https://anonymous-demo.github.io/}
+
+\section{Conclusions}
+
+Summary of the work and future directions.
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}`,
+  },
+
+  {
+    id: 70,
     title: "Interactive Flashcard / Redacted Quiz",
     description: "Click-to-reveal study guide with hidden answers - perfect for self-testing",
     slug: "interactive-flashcard",
@@ -5554,5 +6443,6 @@ Answer: \reveal{q6}{30-60\% (roughly one-third to one-half)}
 
 \end{document}`,
   },
+
 ];
 
