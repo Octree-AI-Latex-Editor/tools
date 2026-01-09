@@ -468,6 +468,14 @@
     "pdfToLatex": {
       "title": "PDF to LaTeX",
       "description": "Convert PDF documents with mathematical content to LaTeX"
+    },
+    "latexWordCounter": {
+      "title": "LaTeX Word Counter",
+      "description": "Count words in LaTeX documents accurately"
+    },
+    "arxivToLatex": {
+      "title": "ArXiv to LaTeX",
+      "description": "Import arXiv papers directly into Octree"
     }
   },
   "templatesList": {

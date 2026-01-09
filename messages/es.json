@@ -44,9 +44,9 @@
       "joinOurDiscord": "Join our Discord"
     },
     "home": {
-      "title": "Free LaTeX Tools & Templates",
-      "description": "Convert handwritten math equations and tables to LaTeX, generate citations, and explore professional templates.",
-      "noToolsFound": "No tools found matching your search."
+      "title": "Herramientas y Plantillas LaTeX Gratuitas",
+      "description": "Convierte ecuaciones matemáticas escritas a mano y tablas a LaTeX, genera citas y explora plantillas profesionales.",
+      "noToolsFound": "No se encontraron herramientas que coincidan con tu búsqueda."
     },
     "templates": {
       "title": "Free LaTeX Tools & Templates",
@@ -588,64 +588,72 @@
     },
     "toolsList": {
       "imageToLatex": {
-        "title": "Image to LaTeX",
-        "description": "Convert images to LaTeX format"
+        "title": "Imagen a LaTeX",
+        "description": "Convierte imágenes al formato LaTeX"
       },
       "tableToLatex": {
-        "title": "Excel to LaTeX",
-        "description": "Convert CSV, JSON, Excel to LaTeX tables"
+        "title": "Excel a LaTeX",
+        "description": "Convierte CSV, JSON, Excel a tablas LaTeX"
       },
       "tikzGenerator": {
-        "title": "TikZ Generator",
-        "description": "Generate TikZ diagrams with AI"
+        "title": "Generador TikZ",
+        "description": "Genera diagramas TikZ con IA"
       },
       "imageToTikz": {
-        "title": "Image to TikZ",
-        "description": "Convert images to TikZ diagrams with AI"
+        "title": "Imagen a TikZ",
+        "description": "Convierte imágenes en diagramas TikZ con IA"
       },
       "latexPreview": {
-        "title": "LaTeX Preview",
-        "description": "Live LaTeX editor with PDF preview"
+        "title": "Vista previa LaTeX",
+        "description": "Editor LaTeX en vivo con vista previa PDF"
       },
       "markdownToLatex": {
-        "title": "Markdown to LaTeX",
-        "description": "Convert Markdown documents to LaTeX format"
+        "title": "Markdown a LaTeX",
+        "description": "Convierte documentos Markdown al formato LaTeX"
       },
       "citationGenerator": {
-        "title": "Citation Generator",
-        "description": "Generate BibTeX citations from DOIs or article details"
+        "title": "Generador de Citas",
+        "description": "Genera citas BibTeX a partir de DOIs o detalles de artículos"
       },
       "mathmlToLatex": {
-        "title": "MathML to LaTeX",
-        "description": "Convert MathML markup to LaTeX format"
+        "title": "MathML a LaTeX",
+        "description": "Convierte marcado MathML al formato LaTeX"
       },
       "aiLatexGenerator": {
-        "title": "AI LaTeX Generator",
-        "description": "Generate LaTeX code from text descriptions"
+        "title": "Generador LaTeX IA",
+        "description": "Genera código LaTeX a partir de descripciones de texto"
       },
       "htmlToLatex": {
-        "title": "HTML to LaTeX",
-        "description": "Convert HTML markup to LaTeX format"
+        "title": "HTML a LaTeX",
+        "description": "Convierte marcado HTML al formato LaTeX"
       },
       "mermaidToLatex": {
-        "title": "Mermaid to LaTeX",
-        "description": "Convert Mermaid diagrams to LaTeX format"
+        "title": "Mermaid a LaTeX",
+        "description": "Convierte diagramas Mermaid al formato LaTeX"
       },
       "pgfplotsGenerator": {
-        "title": "Pgfplots Generator",
-        "description": "Generate pgfplots graphs and charts with AI"
+        "title": "Generador Pgfplots",
+        "description": "Genera gráficos y diagramas pgfplots con IA"
       },
       "latexToMarkdown": {
-        "title": "LaTeX to Markdown",
-        "description": "Convert LaTeX documents or snippets to Markdown"
+        "title": "LaTeX a Markdown",
+        "description": "Convierte documentos o fragmentos LaTeX a Markdown"
       },
       "equationToLatex": {
-        "title": "Equation to LaTeX",
-        "description": "Convert math equations from text or images to LaTeX"
+        "title": "Ecuación a LaTeX",
+        "description": "Convierte ecuaciones matemáticas de texto o imágenes a LaTeX"
       },
       "pdfToLatex": {
-        "title": "PDF to LaTeX",
-        "description": "Convert PDF documents with mathematical content to LaTeX"
+        "title": "PDF a LaTeX",
+        "description": "Convierte documentos PDF con contenido matemático a LaTeX"
+      },
+      "latexWordCounter": {
+        "title": "Contador de palabras LaTeX",
+        "description": "Cuenta palabras en documentos LaTeX con precisión"
+      },
+      "arxivToLatex": {
+        "title": "ArXiv a LaTeX",
+        "description": "Importa artículos de ArXiv directamente a Octree"
       }
     },
     "templateCode": {
