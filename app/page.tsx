@@ -61,7 +61,7 @@ export default function Home() {
     const safeTranslate = (key: string, fallback: string): string => {
       try {
         return tTools(key);
-      } catch (e: any) {
+      } catch {
         // Translation key doesn't exist, use fallback
         return fallback;
       }
