@@ -28,6 +28,7 @@ import {
 import { openInOctree } from '@/lib/open-in-octree';
 import { CompileErrorModal } from '@/components/CompileErrorModal';
 import { OctreeCTA } from '@/components/OctreeCTA';
+import { Button } from '@/components/ui/button';
 import { useImageUpload } from '@/hooks/use-image-upload';
 import { useCopyToClipboard } from '@/hooks/use-copy-to-clipboard';
 import { useTranslations, useLocale } from 'next-intl';
@@ -347,10 +348,12 @@ export default function EquationToLatexClient() {
               )}
             </div>
 
-            <button
+            <Button
               onClick={convertToLatex}
               disabled={isProcessing || (!equationText.trim() && !imageData)}
-              className="mt-6 w-full px-6 py-3 bg-blue-600 text-white text-base font-medium rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              variant="gradient"
+              size="lg"
+              className="mt-2 w-full"
             >
               {isProcessing ? (
                 <>
@@ -363,7 +366,7 @@ export default function EquationToLatexClient() {
                   {t('convertToLatex')}
                 </>
               )}
-            </button>
+            </Button>
 
             {displayError && (
               <div className="mt-4 rounded-lg bg-red-50 border border-red-200 p-4">
@@ -483,7 +486,7 @@ export default function EquationToLatexClient() {
             </div>
 
             {latexCode && !isProcessing && (
-              <div className="mt-6 flex gap-3">
+              <div className="mt-2 flex gap-3">
                 <button
                   type="button"
                   onClick={() =>

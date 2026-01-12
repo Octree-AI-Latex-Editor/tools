@@ -7,6 +7,7 @@ import { cn } from '@/lib/utils';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { OctreeCTA } from '@/components/OctreeCTA';
+import { Button } from '@/components/ui/button';
 import { useTranslations, useLocale } from 'next-intl';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import type { Locale } from '@/lib/i18n/config';
@@ -155,13 +156,15 @@ export default function LatexToMarkdown() {
               </div>
             </div>
 
-            <button
+            <Button
               onClick={convertLatex}
               disabled={isProcessing || !latexText.trim()}
-              className="mt-6 w-full px-6 py-3 bg-blue-600 text-white text-base font-medium rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              variant="gradient"
+              size="lg"
+              className="mt-2 w-full"
             >
               {isProcessing ? t('converting') : t('convertToMarkdown')}
-            </button>
+            </Button>
 
             {error && (
               <div className="mt-4 rounded-lg bg-red-50 border border-red-200 p-4">
@@ -234,7 +237,7 @@ export default function LatexToMarkdown() {
             </div>
 
             {markdownText && !isProcessing && (
-              <div className="mt-6 flex gap-3">
+              <div className="mt-2 flex gap-3">
                 <div className="relative">
                   <button
                     onClick={() => setShowExportMenu(!showExportMenu)}

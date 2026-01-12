@@ -16,6 +16,7 @@ import {
 import { openInOctree } from '@/lib/open-in-octree';
 import { CompileErrorModal } from '@/components/CompileErrorModal';
 import { OctreeCTA } from '@/components/OctreeCTA';
+import { Button } from '@/components/ui/button';
 import { useTranslations, useLocale } from 'next-intl';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import type { Locale } from '@/lib/i18n/config';
@@ -216,13 +217,15 @@ export default function TikzGenerator() {
               />
             </div>
 
-            <button
+            <Button
               onClick={generateTikz}
               disabled={isProcessing || !instructions.trim()}
-              className="mt-6 w-full px-6 py-3 bg-blue-600 text-white text-base font-medium rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              variant="gradient"
+              size="lg"
+              className="mt-2 w-full"
             >
               {isProcessing ? t('generating') : t('generateTikz')}
-            </button>
+            </Button>
 
             {error && (
               <div className="mt-4 rounded-lg bg-red-50 border border-red-200 p-4">
@@ -350,7 +353,7 @@ export default function TikzGenerator() {
             </div>
 
             {latexCode && !isProcessing && (
-              <div className="mt-6 flex gap-3">
+              <div className="mt-2 flex gap-3">
                 <button
                   onClick={() => openInOctree({ latex: latexCode, title: 'TikZ Diagram', source: 'tools:tikz' })}
                   className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 text-base font-medium rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm"

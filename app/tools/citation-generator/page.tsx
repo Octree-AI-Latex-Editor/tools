@@ -9,6 +9,7 @@ import Link from 'next/link';
 import { loader } from '@monaco-editor/react';
 import { CompileErrorModal } from '@/components/CompileErrorModal';
 import { OctreeCTA } from '@/components/OctreeCTA';
+import { Button } from '@/components/ui/button';
 import { useTranslations, useLocale } from 'next-intl';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import type { Locale } from '@/lib/i18n/config';
@@ -265,13 +266,15 @@ export default function CitationGenerator() {
               />
             </div>
 
-            <button
+            <Button
               onClick={generateCitation}
               disabled={isProcessing || !citationInput.trim()}
-              className="mt-6 w-full px-6 py-3 bg-blue-600 text-white text-base font-medium rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              variant="gradient"
+              size="lg"
+              className="mt-2 w-full"
             >
               {isProcessing ? t('generating') : t('generateBibtex')}
-            </button>
+            </Button>
 
             {error && (
               <div className="mt-4 rounded-lg bg-red-50 border border-red-200 p-4">

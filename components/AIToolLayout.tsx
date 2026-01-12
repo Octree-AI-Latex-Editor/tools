@@ -596,7 +596,7 @@ export default function AIToolLayout({
 
                                {/* Action Buttons */}
                    {latexCode && !isProcessing && (
-                     <div className="mt-6 flex gap-3">
+                     <div className="mt-2 flex gap-3">
                        <button
                          onClick={() => openInOctree({ latex: latexCode, title: title, source: 'tools:ai' })}
                          className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 text-base font-medium rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm"

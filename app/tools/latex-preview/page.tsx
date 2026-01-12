@@ -216,7 +216,7 @@ export default function LatexPreview() {
             </div>
 
             {previewUrl && (
-              <div className="mt-6">
+              <div className="mt-2">
                 <button
                   onClick={() => openInOctree({ latex: latexCode, title: 'LaTeX Preview', source: 'tools:preview' })}
                   className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 text-base font-medium rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm"
