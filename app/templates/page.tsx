@@ -256,12 +256,18 @@ export default function TemplatesPage() {
                     className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:border-gray-300 hover:shadow-md transition-all duration-200 flex flex-col"
                   >
                     <div className="relative h-44 bg-gray-50 overflow-hidden">
-                      <PDFPreview
-                        pdfUrl={template.previewUrl}
-                        width={280}
-                        compact
-                        firstPageOnly
-                      />
+                      {template.previewUrl && typeof template.previewUrl === 'string' ? (
+                        <PDFPreview
+                          pdfUrl={template.previewUrl}
+                          width={280}
+                          compact
+                          firstPageOnly
+                        />
+                      ) : (
+                        <div className="flex items-center justify-center h-full text-gray-400">
+                          <p className="text-sm">Preview not available</p>
+                        </div>
+                      )}
                     </div>
                     <div className="p-4 flex flex-col flex-1">
                       <h3 className="text-sm font-semibold text-gray-900 mb-1">
