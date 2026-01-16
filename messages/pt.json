@@ -332,6 +332,76 @@
       "letters": "Cartas",
       "other": "Outro"
     },
+    "toolsList": {
+      "imageToLatex": {
+        "title": "Imagem para LaTeX",
+        "description": "Converta imagens para o formato LaTeX"
+      },
+      "tableToLatex": {
+        "title": "Excel para LaTeX",
+        "description": "Converta CSV, JSON, Excel para tabelas LaTeX"
+      },
+      "tikzGenerator": {
+        "title": "Gerador TikZ",
+        "description": "Gere diagramas TikZ com IA"
+      },
+      "imageToTikz": {
+        "title": "Imagem para TikZ",
+        "description": "Converta imagens em diagramas TikZ com IA"
+      },
+      "latexPreview": {
+        "title": "Pré-visualização LaTeX",
+        "description": "Editor LaTeX ao vivo com pré-visualização PDF"
+      },
+      "markdownToLatex": {
+        "title": "Markdown para LaTeX",
+        "description": "Converta documentos Markdown para o formato LaTeX"
+      },
+      "citationGenerator": {
+        "title": "Gerador de Citações",
+        "description": "Gere citações BibTeX a partir de DOIs ou detalhes de artigos"
+      },
+      "mathmlToLatex": {
+        "title": "MathML para LaTeX",
+        "description": "Converta marcação MathML para o formato LaTeX"
+      },
+      "aiLatexGenerator": {
+        "title": "Gerador LaTeX IA",
+        "description": "Gere código LaTeX a partir de descrições de texto"
+      },
+      "htmlToLatex": {
+        "title": "HTML para LaTeX",
+        "description": "Converta marcação HTML para o formato LaTeX"
+      },
+      "mermaidToLatex": {
+        "title": "Mermaid para LaTeX",
+        "description": "Converta diagramas Mermaid para o formato LaTeX"
+      },
+      "pgfplotsGenerator": {
+        "title": "Gerador Pgfplots",
+        "description": "Gere gráficos e diagramas pgfplots com IA"
+      },
+      "latexToMarkdown": {
+        "title": "LaTeX para Markdown",
+        "description": "Converta documentos ou trechos LaTeX para Markdown"
+      },
+      "equationToLatex": {
+        "title": "Equação para LaTeX",
+        "description": "Converta equações matemáticas de texto ou imagens para LaTeX"
+      },
+      "pdfToLatex": {
+        "title": "PDF para LaTeX",
+        "description": "Converta documentos PDF com conteúdo matemático para LaTeX"
+      },
+      "latexWordCounter": {
+        "title": "Contador de Palavras LaTeX",
+        "description": "Conte palavras em documentos LaTeX com precisão"
+      },
+      "arxivToLatex": {
+        "title": "ArXiv para LaTeX",
+        "description": "Importe artigos ArXiv diretamente no Octree"
+      }
+    },
     "templatesList": {
       "research-paper": { "title": "Artigo de pesquisa", "description": "Modelo de artigo de pesquisa estilo IEEE" },
       "beamer-presentation": { "title": "Apresentação Beamer", "description": "Slides de apresentação acadêmica" },
