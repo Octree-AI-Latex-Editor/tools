@@ -1,12 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import { Search, ArrowRight } from "lucide-react";
 import { tools } from "@/lib/tools";
-import { useTranslations, useLocale } from 'next-intl';
-import type { Locale } from '@/lib/i18n/config';
-import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 import {
   Pagination,
@@ -22,78 +19,15 @@ import { GitHubIcon } from "@/components/icons/github";
 
 const ITEMS_PER_PAGE = 10;
 
-// Helper function to map tool titles to translation keys
-const getToolTranslationKey = (title: string): string => {
-  const titleToKey: Record<string, string> = {
-    "Image to LaTeX": "imageToLatex",
-    "Excel to LaTeX": "tableToLatex",
-    "TikZ Generator": "tikzGenerator",
-    "Image to TikZ": "imageToTikz",
-    "LaTeX Preview": "latexPreview",
-    "Markdown to LaTeX": "markdownToLatex",
-    "Citation Generator": "citationGenerator",
-    "MathML to LaTeX": "mathmlToLatex",
-    "AI LaTeX Generator": "aiLatexGenerator",
-    "HTML to LaTeX": "htmlToLatex",
-    "Mermaid to LaTeX": "mermaidToLatex",
-    "Pgfplots Generator": "pgfplotsGenerator",
-    "LaTeX to Markdown": "latexToMarkdown",
-    "Equation to LaTeX": "equationToLatex",
-    "PDF to LaTeX": "pdfToLatex",
-    "LaTeX Word Counter": "latexWordCounter",
-    "ArXiv to LaTeX": "arxivToLatex",
-  };
-  return titleToKey[title] || "";
-};
-
 export default function Home() {
-  const t = useTranslations('home');
-  const tCommon = useTranslations('common');
-  const tTools = useTranslations('toolsList');
-  const locale = useLocale() as Locale;
-
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
 
-  // Get translated tools
-  const translatedTools = useMemo(() => {
-    // Helper function to safely get translation with fallback
-    const safeTranslate = (key: string, fallback: string): string => {
-      try {
-        return tTools(key);
-      } catch {
-        // Translation key doesn't exist, use fallback
-        return fallback;
-      }
-    };
-
-    return tools.map((tool) => {
-      const translationKey = getToolTranslationKey(tool.title);
-      
-      // Get translated title and description with fallbacks
-      const translatedTitle = translationKey
-        ? safeTranslate(`${translationKey}.title`, tool.title)
-        : tool.title;
-      
-      const translatedDescription = translationKey
-        ? safeTranslate(`${translationKey}.description`, tool.description)
-        : tool.description;
-      
-      return {
-        ...tool,
-        title: translatedTitle,
-        description: translatedDescription,
-      };
-    });
-  }, [tTools]);
-
-  const filteredTools = useMemo(() => {
-    return translatedTools.filter(
-      (tool) =>
-        tool.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        tool.description.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-  }, [translatedTools, searchQuery]);
+  const filteredTools = tools.filter(
+    (tool) =>
+      tool.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      tool.description.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   const totalPages = Math.ceil(filteredTools.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
@@ -107,9 +41,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-4">
-        <LanguageSwitcher currentLocale={locale} />
-      </div> */}
       <div className="bg-gradient-to-b from-gray-100 to-gray-50 pt-16 pb-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex items-center justify-center gap-2 mb-6">
@@ -118,7 +49,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-200 rounded-lg transition-colors"
-              title={tCommon('starOnGitHub')}
+              title="Star on GitHub"
             >
               <GitHubIcon className="h-5 w-5" />
             </Link>
@@ -127,7 +58,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-200 rounded-lg transition-colors"
-              title={tCommon('joinUsOnReddit')}
+              title="Join us on Reddit"
             >
               <RedditIcon className="h-5 w-5" />
             </Link>
@@ -136,17 +67,18 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-200 rounded-lg transition-colors"
-              title={tCommon('joinOurDiscord')}
+              title="Join our Discord"
             >
               <DiscordIcon className="h-5 w-5" />
             </Link>
           </div>
 
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-            {t('title')}
+            Free LaTeX Tools & Templates
           </h1>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            {t('description')}
+            Convert handwritten math equations and tables to LaTeX, generate
+            citations, and explore professional templates.
           </p>
 
 
@@ -161,7 +93,7 @@ export default function Home() {
                 value={searchQuery}
                 onChange={handleSearchChange}
                 className="block w-full pl-11 pr-4 py-3 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm"
-                placeholder={tCommon('searchTools')}
+                placeholder="Search tools..."
               />
             </div>
           </div>
@@ -191,7 +123,7 @@ export default function Home() {
                 {tool.description}
               </p>
               <span className="inline-flex items-center text-blue-600 text-sm font-medium transition-all w-fit">
-                {tCommon('tryNow')}
+                Try Now
                 <span className="w-0 overflow-hidden transition-all duration-200 group-hover:w-6 group-hover:ml-1">
                   <ArrowRight className="size-4 opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
                 </span>
@@ -203,7 +135,7 @@ export default function Home() {
         {filteredTools.length === 0 && (
           <div className="text-center py-12">
             <p className="text-gray-500">
-              {t('noToolsFound')}
+              No tools found matching your search.
             </p>
           </div>
         )}
