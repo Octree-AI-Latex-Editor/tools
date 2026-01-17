@@ -308,6 +308,76 @@
       "letters": "信件",
       "other": "其他"
     },
+    "toolsList": {
+      "imageToLatex": {
+        "title": "图片转 LaTeX",
+        "description": "将图片转换为 LaTeX 格式"
+      },
+      "tableToLatex": {
+        "title": "Excel 转 LaTeX",
+        "description": "将 CSV、JSON、Excel 转换为 LaTeX 表格"
+      },
+      "tikzGenerator": {
+        "title": "TikZ 生成器",
+        "description": "使用 AI 生成 TikZ 图表"
+      },
+      "imageToTikz": {
+        "title": "图片转 TikZ",
+        "description": "使用 AI 将图片转换为 TikZ 图表"
+      },
+      "latexPreview": {
+        "title": "LaTeX 预览",
+        "description": "带 PDF 预览的实时 LaTeX 编辑器"
+      },
+      "markdownToLatex": {
+        "title": "Markdown 转 LaTeX",
+        "description": "将 Markdown 文档转换为 LaTeX 格式"
+      },
+      "citationGenerator": {
+        "title": "引用生成器",
+        "description": "从 DOI 或文章详情生成 BibTeX 引用"
+      },
+      "mathmlToLatex": {
+        "title": "MathML 转 LaTeX",
+        "description": "将 MathML 标记转换为 LaTeX 格式"
+      },
+      "aiLatexGenerator": {
+        "title": "AI LaTeX 生成器",
+        "description": "从文本描述生成 LaTeX 代码"
+      },
+      "htmlToLatex": {
+        "title": "HTML 转 LaTeX",
+        "description": "将 HTML 标记转换为 LaTeX 格式"
+      },
+      "mermaidToLatex": {
+        "title": "Mermaid 转 LaTeX",
+        "description": "将 Mermaid 图表转换为 LaTeX 格式"
+      },
+      "pgfplotsGenerator": {
+        "title": "Pgfplots 生成器",
+        "description": "使用 AI 生成 pgfplots 图表"
+      },
+      "latexToMarkdown": {
+        "title": "LaTeX 转 Markdown",
+        "description": "将 LaTeX 文档或片段转换为 Markdown"
+      },
+      "equationToLatex": {
+        "title": "方程式转 LaTeX",
+        "description": "将文本或图片中的数学方程式转换为 LaTeX"
+      },
+      "pdfToLatex": {
+        "title": "PDF 转 LaTeX",
+        "description": "将包含数学内容的 PDF 文档转换为 LaTeX"
+      },
+      "latexWordCounter": {
+        "title": "LaTeX 字数统计",
+        "description": "准确统计 LaTeX 文档中的字数"
+      },
+      "arxivToLatex": {
+        "title": "ArXiv 转 LaTeX",
+        "description": "直接将 ArXiv 论文导入 Octree"
+      }
+    },
     "templatesList": {
       "research-paper": {
         "title": "研究论文",

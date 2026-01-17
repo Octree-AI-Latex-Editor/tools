@@ -26,6 +26,16 @@ export default function PDFPreview({
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
+  // Validate pdfUrl after hooks
+  if (!pdfUrl || typeof pdfUrl !== 'string') {
+    return (
+      <div className="flex flex-col items-center justify-center gap-2 p-4 w-full h-full min-h-[200px]">
+        <AlertCircle className="w-10 h-10 text-red-400" />
+        <p className="text-sm text-red-600 font-medium">Invalid PDF URL</p>
+      </div>
+    );
+  }
+
   function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
     setNumPages(numPages);
     setIsLoading(false);
@@ -73,6 +83,12 @@ export default function PDFPreview({
         onLoadError={onDocumentLoadError}
         className={cn(!compact && "shadow-lg", isLoading && "hidden")}
         loading=""
+        error={
+          <div className="flex flex-col items-center justify-center gap-2 p-4 w-full h-full min-h-[200px]">
+            <AlertCircle className="w-10 h-10 text-red-400" />
+            <p className="text-sm text-red-600 font-medium">Error loading PDF</p>
+          </div>
+        }
       >
         {Array.from(new Array(pagesToRender), (el, index) => (
           <Page
