@@ -4,8 +4,6 @@ import { useState, useMemo } from "react";
 import { Search, ExternalLink, Wrench, FileText, Sigma } from "lucide-react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { useTranslations, useLocale } from 'next-intl';
-import type { Locale } from '@/lib/i18n/config';
 
 import {
   Pagination,
@@ -25,7 +23,6 @@ import { RedditIcon } from "@/components/icons/reddit";
 import { DiscordIcon } from "@/components/icons/discord";
 import { GitHubIcon } from "@/components/icons/github";
 import { Button } from "@/components/ui/button";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const PDFPreview = dynamic(() => import("@/components/PDFPreview"), {
   ssr: false,
@@ -35,29 +32,7 @@ const ITEMS_PER_PAGE = 10;
 
 type CategoryFilter = TemplateCategory | "All Templates";
 
-// Helper function to map category names to translation keys
-const getCategoryTranslationKey = (category: TemplateCategory | "All Templates"): string => {
-  const categoryMap: Record<string, string> = {
-    "All Templates": "allTemplates",
-    "Academic": "academic",
-    "Presentations": "presentations",
-    "Resume & CV": "resumeCv",
-    "Math": "math",
-    "Reports": "reports",
-    "Business": "business",
-    "Letters": "letters",
-    "Education": "education",
-    "Other": "other",
-  };
-  return categoryMap[category] || category;
-};
-
 export default function TemplatesPage() {
-  const t = useTranslations('templates');
-  const tCommon = useTranslations('common');
-  const tCategories = useTranslations('categories');
-  const locale = useLocale() as Locale;
-
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] =
     useState<CategoryFilter>("All Templates");
@@ -135,9 +110,6 @@ export default function TemplatesPage() {
       />
 
       <div className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-4">
-          <LanguageSwitcher currentLocale={locale} />
-        </div>
         <div className="bg-gradient-to-b from-gray-100 to-gray-50 pt-16 pb-12">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="flex items-center justify-center gap-2 mb-6">
@@ -171,10 +143,11 @@ export default function TemplatesPage() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-              {t('title')}
+              Free LaTeX Tools & Templates
             </h1>
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              {t('description')}
+              Professional LaTeX templates for academic papers, presentations,
+              resumes, and more.
             </p>
 
 
@@ -189,7 +162,7 @@ export default function TemplatesPage() {
                   value={searchQuery}
                   onChange={handleSearchChange}
                   className="block w-full pl-11 pr-4 py-3 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm"
-                  placeholder={tCommon('searchTemplates')}
+                  placeholder="Search templates..."
                 />
               </div>
             </div>
@@ -201,16 +174,12 @@ export default function TemplatesPage() {
             <div className="lg:w-56 flex-shrink-0">
               <div className="sticky top-8">
                 <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">
-                  {tCommon('categories')}
+                  Categories
                 </h3>
                 <nav className="space-y-1">
                   {templateCategories.map((cat) => {
                     const count = categoryCounts[cat.name] || 0;
                     const isActive = selectedCategory === cat.name;
-                    const categoryKey = getCategoryTranslationKey(cat.name);
-                    const categoryLabel = cat.name === "All Templates" 
-                      ? t('allTemplates')
-                      : tCategories(categoryKey);
                     return (
                       <button
                         key={cat.name}
@@ -220,7 +189,7 @@ export default function TemplatesPage() {
                           : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
                           }`}
                       >
-                        <span>{categoryLabel}</span>
+                        <span>{cat.name}</span>
                         <span
                           className={`text-xs ${isActive ? "text-gray-700" : "text-gray-400"
                             }`}
@@ -238,14 +207,12 @@ export default function TemplatesPage() {
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-lg font-semibold text-gray-900">
                   {selectedCategory === "All Templates"
-                    ? t('allTemplates')
-                    : tCategories(getCategoryTranslationKey(selectedCategory))}
+                    ? "All Templates"
+                    : selectedCategory}
                 </h2>
                 <span className="text-sm text-gray-500">
-                  {tCommon('templatesCount', { 
-                    count: filteredTemplates.length,
-                    plural: filteredTemplates.length !== 1 ? 's' : ''
-                  })}
+                  {filteredTemplates.length} template
+                  {filteredTemplates.length !== 1 ? "s" : ""}
                 </span>
               </div>
 
@@ -256,18 +223,12 @@ export default function TemplatesPage() {
                     className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:border-gray-300 hover:shadow-md transition-all duration-200 flex flex-col"
                   >
                     <div className="relative h-44 bg-gray-50 overflow-hidden">
-                      {template.previewUrl && typeof template.previewUrl === 'string' ? (
-                        <PDFPreview
-                          pdfUrl={template.previewUrl}
-                          width={280}
-                          compact
-                          firstPageOnly
-                        />
-                      ) : (
-                        <div className="flex items-center justify-center h-full text-gray-400">
-                          <p className="text-sm">Preview not available</p>
-                        </div>
-                      )}
+                      <PDFPreview
+                        pdfUrl={template.previewUrl}
+                        width={280}
+                        compact
+                        firstPageOnly
+                      />
                     </div>
                     <div className="p-4 flex flex-col flex-1">
                       <h3 className="text-sm font-semibold text-gray-900 mb-1">
@@ -281,7 +242,7 @@ export default function TemplatesPage() {
                           href={`/templates/${template.slug}`}
                           className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 bg-white text-gray-700 text-sm font-medium rounded-lg border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-colors"
                         >
-                          {tCommon('view')}
+                          View
                         </Link>
                         <Button
                           variant="gradient"
@@ -293,7 +254,7 @@ export default function TemplatesPage() {
                             });
                           }}
                         >
-                          {tCommon('openInOctree')}
+                          Open in Octree
                         </Button>
                       </div>
                     </div>
@@ -304,7 +265,7 @@ export default function TemplatesPage() {
               {filteredTemplates.length === 0 && (
                 <div className="text-center py-12">
                   <p className="text-gray-500">
-                    {t('noTemplatesFound')}
+                    No templates found matching your search.
                   </p>
                 </div>
               )}
