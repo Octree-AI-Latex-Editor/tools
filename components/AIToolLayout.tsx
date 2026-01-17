@@ -182,6 +182,19 @@ export default function AIToolLayout({
 
     const file = e.dataTransfer.files[0];
     if (file) {
+      const isLikelyImageByName = (name: string) => {
+        const lower = name.toLowerCase();
+        return (
+          lower.endsWith('.png') ||
+          lower.endsWith('.jpg') ||
+          lower.endsWith('.jpeg') ||
+          lower.endsWith('.webp') ||
+          lower.endsWith('.gif') ||
+          lower.endsWith('.heic') ||
+          lower.endsWith('.heif')
+        );
+      };
+
       // Check if it's a CSV file tool
       const isCSVTool = acceptedFormats.includes('CSV');
       const isImageTool = acceptedFormats.includes('JPEG') || acceptedFormats.includes('PNG');
@@ -206,7 +219,12 @@ export default function AIToolLayout({
         reader.readAsText(file);
       } else if (isImageTool) {
         // Handle images and PDFs
-        if (!file.type.startsWith('image/') && file.type !== 'application/pdf') {
+        // Some browsers (or HEIC files) may provide an empty MIME type; fall back to extension.
+        const isImage =
+          file.type.startsWith('image/') || (file.type === '' && isLikelyImageByName(file.name));
+        const isPdf = file.type === 'application/pdf' || file.name.toLowerCase().endsWith('.pdf');
+
+        if (!isImage && !isPdf) {
           setError(t('onlyImageFiles'));
           return;
         }
@@ -240,6 +258,19 @@ export default function AIToolLayout({
   const handleFileInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
+      const isLikelyImageByName = (name: string) => {
+        const lower = name.toLowerCase();
+        return (
+          lower.endsWith('.png') ||
+          lower.endsWith('.jpg') ||
+          lower.endsWith('.jpeg') ||
+          lower.endsWith('.webp') ||
+          lower.endsWith('.gif') ||
+          lower.endsWith('.heic') ||
+          lower.endsWith('.heif')
+        );
+      };
+
       // Check if it's a CSV file tool
       const isCSVTool = acceptedFormats.includes('CSV');
       const isImageTool = acceptedFormats.includes('JPEG') || acceptedFormats.includes('PNG');
@@ -264,7 +295,11 @@ export default function AIToolLayout({
         reader.readAsText(file);
       } else if (isImageTool) {
         // Handle images and PDFs
-        if (!file.type.startsWith('image/') && file.type !== 'application/pdf') {
+        const isImage =
+          file.type.startsWith('image/') || (file.type === '' && isLikelyImageByName(file.name));
+        const isPdf = file.type === 'application/pdf' || file.name.toLowerCase().endsWith('.pdf');
+
+        if (!isImage && !isPdf) {
           setError(t('onlyImageFiles'));
           return;
         }
