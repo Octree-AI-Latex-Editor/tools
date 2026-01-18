@@ -314,8 +314,8 @@ export default function ImageToTikz() {
                     {isProcessing ? t('processing') : t('dropFileHere')}
                   </p>
                   <p className="text-sm text-gray-500 mb-4">
-                    {t('orBrowseFiles')}{' '}
                     <label className="text-blue-600 hover:text-blue-500 cursor-pointer font-medium">
+                      {t('orBrowseFiles')}
                       <input
                         type="file"
                         className="hidden"

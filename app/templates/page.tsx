@@ -135,9 +135,9 @@ export default function TemplatesPage() {
       />
 
       <div className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-4">
+        {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-4">
           <LanguageSwitcher currentLocale={locale} />
-        </div>
+        </div> */}
         <div className="bg-gradient-to-b from-gray-100 to-gray-50 pt-16 pb-12">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="flex items-center justify-center gap-2 mb-6">
