@@ -92,6 +92,18 @@ export const getTemplateContent = (
         "Customizable layout",
       ],
     },
+    "jakes-resume": {
+      usage:
+        "The most popular LaTeX resume template on GitHub. Jake's Resume is a clean, ATS-friendly single-column template perfect for software engineers, data scientists, and tech professionals.",
+      features: [
+        "ATS-parsable format",
+        "Clean single-column layout",
+        "Custom commands for easy editing",
+        "Sections for education, experience, projects, and skills",
+        "Professional typography",
+        "MIT licensed and widely recognized",
+      ],
+    },
   };
   return (
     content[slug] || {

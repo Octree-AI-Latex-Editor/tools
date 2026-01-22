@@ -6443,6 +6443,188 @@ Answer: \reveal{q6}{30-60\% (roughly one-third to one-half)}
 
 \end{document}`,
   },
+  {
+    id: 71,
+    title: "Jake's Resume",
+    description: "Clean, ATS-friendly single-column resume template",
+    slug: "jakes-resume",
+    previewUrl: "/templates/jakes-resume.pdf",
+    category: "Resume & CV",
+    code: String.raw`%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Your Name} \\ \vspace{1pt}
+    \small 123-456-7890 $|$ \href{mailto:your.email@example.com}{\underline{your.email@example.com}} $|$ 
+    \href{https://linkedin.com/in/yourprofile}{\underline{linkedin.com/in/yourprofile}} $|$
+    \href{https://github.com/yourusername}{\underline{github.com/yourusername}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University Name}{City, State}
+      {Bachelor of Science in Computer Science}{Sep. 20XX -- May 20XX}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Engineer}{Jan. 20XX -- Present}
+      {Company Name}{City, State}
+      \resumeItemListStart
+        \resumeItem{Developed and maintained scalable web applications using React, Node.js, and PostgreSQL}
+        \resumeItem{Collaborated with cross-functional teams to design and implement new features}
+        \resumeItem{Improved application performance by 40\% through code optimization and caching strategies}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Engineering Intern}{May 20XX -- Aug. 20XX}
+      {Another Company}{City, State}
+      \resumeItemListStart
+        \resumeItem{Built RESTful APIs and microservices using Python and Flask}
+        \resumeItem{Implemented automated testing pipelines reducing bug reports by 25\%}
+        \resumeItem{Participated in code reviews and agile development practices}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Project Name} $|$ \emph{React, Node.js, MongoDB}}{Jan. 20XX -- Present}
+          \resumeItemListStart
+            \resumeItem{Developed a full-stack web application with user authentication and real-time features}
+            \resumeItem{Implemented CI/CD pipeline using GitHub Actions for automated testing and deployment}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Another Project} $|$ \emph{Python, TensorFlow, AWS}}{Sep. 20XX -- Dec. 20XX}
+          \resumeItemListStart
+            \resumeItem{Built a machine learning model for image classification with 95\% accuracy}
+            \resumeItem{Deployed the model as a serverless API using AWS Lambda}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: JavaScript, TypeScript, Python, Java, SQL, HTML/CSS} \\
+     \textbf{Frameworks}{: React, Node.js, Express, Django, Spring Boot} \\
+     \textbf{Developer Tools}{: Git, Docker, Kubernetes, AWS, VS Code, IntelliJ} \\
+     \textbf{Libraries}{: pandas, NumPy, TensorFlow, Redux, Material-UI}
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}`,
+  },
 
 ];
 

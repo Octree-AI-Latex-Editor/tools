@@ -73,6 +73,7 @@ Free professional templates including:
 - Lab Report: https://tools.useoctree.com/templates/lab-report
 - Book Chapter: https://tools.useoctree.com/templates/book-chapter
 - Resume: https://tools.useoctree.com/templates/resume
+- Jake's Resume: https://tools.useoctree.com/templates/jakes-resume
 - Grading Rubric: https://tools.useoctree.com/templates/grading-rubric
 - Assignment: https://tools.useoctree.com/templates/assignment
 - Worksheet: https://tools.useoctree.com/templates/worksheet

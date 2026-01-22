@@ -31,6 +31,7 @@ https://tools.useoctree.com/templates/mathematical-document
 https://tools.useoctree.com/templates/lab-report
 https://tools.useoctree.com/templates/book-chapter
 https://tools.useoctree.com/templates/resume
+https://tools.useoctree.com/templates/jakes-resume
 https://tools.useoctree.com/templates/grading-rubric
 https://tools.useoctree.com/templates/assignment
 https://tools.useoctree.com/templates/worksheet

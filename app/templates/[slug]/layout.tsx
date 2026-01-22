@@ -503,6 +503,28 @@ export async function generateMetadata({
       'latex planner template',
       'printable calendar latex',
     ],
+    'jakes-resume': [
+      "jake's resume",
+      "jake's resume template",
+      'jake resume template',
+      'jakes resume template latex',
+      'jake ryan resume',
+      'jake ryan resume template',
+      'jakes resume latex',
+      "jake's resume latex template",
+      'jake gutierrez resume',
+      'jake resume latex',
+      'jakes resume overleaf',
+      'jake resume github',
+      'jakes resume template github',
+      'ats friendly resume latex',
+      'software engineer resume latex',
+      'tech resume latex template',
+      'single column resume latex',
+      'best latex resume template',
+      'clean resume latex template',
+      'minimalist resume latex',
+    ],
   };
 
   const specificKeywords = keywordMap[slug] || [
