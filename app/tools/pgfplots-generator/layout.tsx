@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: "Pgfplots Generator - AI-Powered LaTeX Plots & Graphs | Free Online Tool",
   description: "Generate pgfplots graphs and charts using AI. Describe your plot in plain text and get clean pgfplots LaTeX code instantly. Free online pgfplots generator with PDF preview.",
   keywords: [
+    // Core pgfplots keywords
     "pgfplots generator",
     "AI pgfplots generator",
     "LaTeX plot generator",
@@ -16,14 +17,24 @@ export const metadata: Metadata = {
     "scientific plot generator",
     "pgfplots examples",
     "pgfplots tutorial",
+    // Chart types
     "latex bar chart",
     "latex scatter plot",
     "latex line graph",
     "latex histogram",
     "latex data visualization",
+    // Conversion keywords
     "matlab to pgfplots",
     "python to pgfplots",
     "csv to pgfplots",
+    // TikZ/PGF related
+    "tikz plot",
+    "tikz axis",
+    "tikz graph",
+    "tikz 3d",
+    "pgf tikz",
+    "tikz data visualization",
+    "tikz chart",
   ],
   alternates: {
     canonical: '/tools/pgfplots-generator',
