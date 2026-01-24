@@ -1,8 +1,11 @@
+'use client';
+
 import { ExternalLink, Pi } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { DM_Sans } from "next/font/google";
 import { cn } from "@/lib/utils";
+import { useTranslations } from 'next-intl';
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -14,6 +17,7 @@ interface OctreeCTAProps {
 }
 
 export function OctreeCTA({ source = "" }: OctreeCTAProps) {
+  const t = useTranslations('cta');
   const trackingParam = source ? `?ref=${source}` : "";
 
   return (
@@ -33,7 +37,7 @@ export function OctreeCTA({ source = "" }: OctreeCTAProps) {
               <div className="inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 border shadow-xs">
                 <Pi className="h-4 w-4" aria-hidden="true" />
                 <span className="sr-only">Math powered</span>
-                <span>Write LaTeX using AI</span>
+                <span>{t('badge')}</span>
               </div>
 
               <h2
@@ -42,19 +46,18 @@ export function OctreeCTA({ source = "" }: OctreeCTAProps) {
                   dmSans.className
                 )}
               >
-                Best AI LaTeX Editor, Overleaf Alternative
+                {t('title')}
               </h2>
 
               <p className="text-muted-foreground">
-                Octree helps researchers from 15+ universities write research papers
-                faster using AI
+                {t('description')}
               </p>
 
               <div className="flex flex-col items-center gap-2 text-muted-foreground">
                 <ul className="list-disc text-left inline-block">
-                  <li>Generate beautiful TikZ diagrams using AI</li>
-                  <li>Upload image and convert it to LaTeX seamlessly</li>
-                  <li>Get instant assistance with writing and formatting research papers</li>
+                  <li>{t('feature1')}</li>
+                  <li>{t('feature2')}</li>
+                  <li>{t('feature3')}</li>
                 </ul>
               </div>
 
@@ -62,13 +65,13 @@ export function OctreeCTA({ source = "" }: OctreeCTAProps) {
                 <Button asChild size="lg" variant="gradient">
                   <Link href={`https://app.useoctree.com${trackingParam}`}>
                     <ExternalLink className="h-4 w-4" />
-                    <span>Use in Octree</span>
+                    <span>{t('useInOctree')}</span>
                   </Link>
                 </Button>
 
                 <Button asChild size="lg" variant="outline">
                   <Link href="https://useoctree.com">
-                    <span>Learn More</span>
+                    <span>{t('learnMore')}</span>
                   </Link>
                 </Button>
               </div>

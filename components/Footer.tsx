@@ -1,3 +1,5 @@
+'use client';
+
 import Link from "next/link";
 import { OctreeLogo } from "@/components/icons/octree-logo";
 import { LinkedInIcon } from "@/components/icons/linkedin";
@@ -5,48 +7,46 @@ import { RedditIcon } from "@/components/icons/reddit";
 import { DiscordIcon } from "@/components/icons/discord";
 import { DM_Sans } from "next/font/google";
 import { cn } from "@/lib/utils";
+import { useTranslations } from 'next-intl';
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
 });
 
-const navigation = {
-  menu: [
-    { name: "Tools", href: "/" },
-    { name: "Templates", href: "/templates" },
-    { name: "Symbols", href: "/symbols" },
-  ],
-  tools: [
-    { name: "Image to LaTeX", href: "/tools/math-to-latex" },
-    { name: "Excel to LaTeX", href: "/tools/table-to-latex" },
-    { name: "TikZ Generator", href: "/tools/tikz-generator" },
-    { name: "Image to TikZ", href: "/tools/image-to-tikz" },
-    { name: "LaTeX Preview", href: "/tools/latex-preview" },
-    { name: "Markdown to LaTeX", href: "/tools/markdown-to-latex" },
-    { name: "Citation Generator", href: "/tools/citation-generator" },
-    { name: "AI LaTeX Generator", href: "/tools/ai-latex-generator" },
-  ],
-  social: [
-    {
-      name: "LinkedIn",
-      href: "https://www.linkedin.com/company/octree-app",
-      icon: LinkedInIcon,
-    },
-    {
-      name: "Reddit",
-      href: "https://www.reddit.com/r/octree",
-      icon: RedditIcon,
-    },
-    {
-      name: "Discord",
-      href: "https://discord.gg/octree",
-      icon: DiscordIcon,
-    },
-  ],
-};
+const socialLinks = [
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/company/octree-app",
+    icon: LinkedInIcon,
+  },
+  {
+    name: "Reddit",
+    href: "https://www.reddit.com/r/octree",
+    icon: RedditIcon,
+  },
+  {
+    name: "Discord",
+    href: "https://discord.gg/octree",
+    icon: DiscordIcon,
+  },
+];
+
+const toolLinks = [
+  { key: "imageToLatex", href: "/tools/math-to-latex" },
+  { key: "excelToLatex", href: "/tools/table-to-latex" },
+  { key: "tikzGenerator", href: "/tools/tikz-generator" },
+  { key: "imageToTikz", href: "/tools/image-to-tikz" },
+  { key: "latexPreview", href: "/tools/latex-preview" },
+  { key: "markdownToLatex", href: "/tools/markdown-to-latex" },
+  { key: "citationGenerator", href: "/tools/citation-generator" },
+  { key: "aiLatexGenerator", href: "/tools/ai-latex-generator" },
+];
 
 export default function Footer() {
+  const t = useTranslations('footer');
+  const tNav = useTranslations('nav');
+
   return (
     <footer className="border-t border-gray-200 bg-white">
       <div className="mx-auto max-w-7xl px-6 py-12">
@@ -64,10 +64,10 @@ export default function Footer() {
               </span>
             </Link>
             <p className="mt-4 text-sm text-gray-600">
-              Free LaTeX tools and templates for everyone.
+              {t('tagline')}
             </p>
             <div className="mt-6 flex space-x-4">
-              {navigation.social.map((item) => (
+              {socialLinks.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
@@ -83,31 +83,45 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-gray-900">Menu</h3>
+            <h3 className="text-sm font-semibold text-gray-900">{t('menu')}</h3>
             <ul className="mt-4 space-y-3">
-              {navigation.menu.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link
+                  href="/"
+                  className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                >
+                  {tNav('tools')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/templates"
+                  className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                >
+                  {tNav('templates')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/symbols"
+                  className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                >
+                  {tNav('symbols')}
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div className="col-span-2">
-            <h3 className="text-sm font-semibold text-gray-900">Tools</h3>
+            <h3 className="text-sm font-semibold text-gray-900">{t('tools')}</h3>
             <ul className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
-              {navigation.tools.map((item) => (
-                <li key={item.name}>
+              {toolLinks.map((item) => (
+                <li key={item.key}>
                   <Link
                     href={item.href}
                     className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
                   >
-                    {item.name}
+                    {t(item.key)}
                   </Link>
                 </li>
               ))}
@@ -117,7 +131,7 @@ export default function Footer() {
 
         <div className="mt-12 border-t border-gray-200 pt-8">
           <p className="text-sm text-gray-500">
-            &copy; {new Date().getFullYear()} Octree. All rights reserved.
+            &copy; {new Date().getFullYear()} Octree. {t('allRightsReserved')}
           </p>
         </div>
       </div>

@@ -1,8 +1,11 @@
+'use client';
+
 import Link from "next/link";
 import { OctreeLogo } from "@/components/icons/octree-logo";
 import { DM_Sans } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
+import { useTranslations } from 'next-intl';
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -10,6 +13,8 @@ const dmSans = DM_Sans({
 });
 
 export default function Header() {
+  const t = useTranslations('nav');
+
   return (
     <nav className="border-b border-gray-200 bg-white">
       <div className="mx-auto max-w-7xl px-6">
@@ -35,19 +40,19 @@ export default function Header() {
               href="/"
               className="text-sm font-medium text-gray-700 hover:text-gray-900"
             >
-              Tools
+              {t('tools')}
             </Link>
             <Link
               href="/templates"
               className="text-sm font-medium text-gray-700 hover:text-gray-900"
             >
-              Templates
+              {t('templates')}
             </Link>
             <Link
               href="/symbols"
               className="text-sm font-medium text-gray-700 hover:text-gray-900"
             >
-              Symbols
+              {t('symbols')}
             </Link>
           </div>
           <Button asChild size="lg" variant="gradient">
@@ -55,7 +60,7 @@ export default function Header() {
               href="https://app.useoctree.com"
               className="inline-flex h-10 items-center justify-center rounded-lg bg-[#5B8DEF] px-5 text-sm font-medium text-white transition-colors hover:bg-[#4a7de0]"
             >
-              Get Started
+              {t('getStarted')}
             </Link>
           </Button>
         </div>

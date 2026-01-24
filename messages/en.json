@@ -660,6 +660,233 @@
       "description": "Monthly and yearly calendar template"
     }
   },
+  "symbols": {
+    "title": "LaTeX Symbols",
+    "description": "Browse common mathematical operators and Greek letters for your LaTeX documents.",
+    "searchPlaceholder": "Search symbols...",
+    "searchResults": "Search Results",
+    "symbolsFound": "{count} symbol{plural} found",
+    "noSymbolsFound": "No symbols found matching",
+    "viewSymbols": "View Symbols",
+    "backToSymbols": "Back to Symbols",
+    "symbolCount": "{count} symbol",
+    "symbolsCount": "{count} symbols",
+    "categories": {
+      "math": {
+        "title": "Math Symbols",
+        "description": "Common mathematical operators, relations, and arrows.",
+        "subtitle": "Common Mathematical Operators"
+      },
+      "greek": {
+        "title": "Greek Symbols",
+        "description": "Complete list of Greek letters and their LaTeX commands.",
+        "subtitle": "Greek Letters and Variants"
+      },
+      "arrows": {
+        "title": "Arrow Symbols",
+        "description": "Directional arrows, double arrows, and harpoons for LaTeX documents.",
+        "subtitle": "Directional and Double Arrows"
+      },
+      "latin": {
+        "title": "Latin Letters",
+        "description": "Accented characters and special Latin letters for various languages.",
+        "subtitle": "Accented Characters and Special Letters"
+      },
+      "setTheory": {
+        "title": "Set Theory",
+        "description": "Sets, subsets, unions, intersections, and number sets.",
+        "subtitle": "Sets, Subsets, and Operations"
+      },
+      "logic": {
+        "title": "Logic & Proofs",
+        "description": "Quantifiers, logical connectives, and proof notation.",
+        "subtitle": "Logical Connectives and Proof Notation"
+      },
+      "linearAlgebra": {
+        "title": "Linear Algebra",
+        "description": "Vectors, matrices, transposes, and inner products.",
+        "subtitle": "Vectors, Matrices, and Operations"
+      },
+      "calculus": {
+        "title": "Calculus & Analysis",
+        "description": "Derivatives, integrals, limits, and differential operators.",
+        "subtitle": "Derivatives, Integrals, and Limits"
+      },
+      "probability": {
+        "title": "Probability & Statistics",
+        "description": "Probability, expectation, variance, and distributions.",
+        "subtitle": "Probability and Statistical Notation"
+      },
+      "computerScience": {
+        "title": "Computer Science",
+        "description": "Big-O notation, logical operators, and algorithm symbols.",
+        "subtitle": "Big-O Notation and Algorithms"
+      },
+      "numberTheory": {
+        "title": "Number Theory",
+        "description": "Divisibility, modular arithmetic, and number-theoretic functions.",
+        "subtitle": "Divisibility and Modular Arithmetic"
+      },
+      "physics": {
+        "title": "Physics",
+        "description": "Quantum mechanics, vector fields, and physical constants."
+      },
+      "chemistry": {
+        "title": "Chemistry",
+        "description": "Reaction arrows, isotopes, bonds, and state symbols.",
+        "subtitle": "Reaction Arrows and Chemical Notation"
+      },
+      "finance": {
+        "title": "Currency & Finance",
+        "description": "Currency symbols, financial formulas, and notation."
+      },
+      "brackets": {
+        "title": "Brackets & Delimiters",
+        "description": "Angle brackets, floor, ceiling, norms, and delimiter pairs.",
+        "subtitle": "Brackets, Floor, Ceiling, and Norms"
+      },
+      "accents": {
+        "title": "Accents & Modifiers",
+        "description": "Hats, tildes, dots, bars, vectors, and text decorations."
+      },
+      "geometry": {
+        "title": "Geometry",
+        "description": "Angles, triangles, parallel, perpendicular, and congruence.",
+        "subtitle": "Angles, Triangles, and Geometric Relations"
+      },
+      "topology": {
+        "title": "Topology & Abstract Math",
+        "description": "Aleph, boundary, homology, and category theory notation.",
+        "subtitle": "Topological and Category Theory Notation"
+      },
+      "machineLearning": {
+        "title": "Machine Learning & AI",
+        "description": "Loss functions, gradients, argmax, KL divergence, and neural network notation.",
+        "subtitle": "Loss Functions and Neural Network Notation"
+      },
+      "relations": {
+        "title": "Relations & Comparisons",
+        "description": "Inequality, equivalence, subset, superset, and comparison symbols.",
+        "subtitle": "Inequality and Equivalence Symbols"
+      },
+      "operators": {
+        "title": "Advanced Operators",
+        "description": "Binary operators, tensor products, direct sums, and compositions.",
+        "subtitle": "Binary Operators and Compositions"
+      },
+      "summation": {
+        "title": "Summation & Product",
+        "description": "Sigma notation, product symbols, and indexed limits.",
+        "subtitle": "Sigma and Product Notation"
+      },
+      "functions": {
+        "title": "Functions & Mapping",
+        "description": "Function notation, maps, composition, and domain/codomain.",
+        "subtitle": "Function Notation and Composition"
+      },
+      "order": {
+        "title": "Inequalities & Order",
+        "description": "Precedes, succeeds, min, max, inf, sup, and bounds.",
+        "subtitle": "Ordering and Bound Notation"
+      },
+      "boolean": {
+        "title": "Boolean Algebra",
+        "description": "Logic gates, AND, OR, NOT, XOR, NAND, and boolean operations.",
+        "subtitle": "Logic Gates and Boolean Operations"
+      },
+      "optimization": {
+        "title": "Optimization",
+        "description": "Argmax, argmin, constraints, Lagrangian, and KKT conditions.",
+        "subtitle": "Optimization and Constraint Notation"
+      },
+      "units": {
+        "title": "Units & Measurements",
+        "description": "Degrees, SI units, physical constants, and measurement symbols.",
+        "subtitle": "SI Units and Measurement Symbols"
+      },
+      "quantifiers": {
+        "title": "Quantifiers",
+        "description": "For all, exists, element of, and set builder notation.",
+        "subtitle": "Universal and Existential Quantifiers"
+      },
+      "graphTheory": {
+        "title": "Graph Theory",
+        "description": "Vertices, edges, adjacency, paths, cycles, and chromatic numbers.",
+        "subtitle": "Vertices, Edges, and Graph Notation"
+      },
+      "combinatorics": {
+        "title": "Combinatorics",
+        "description": "Factorials, binomials, permutations, combinations, and counting.",
+        "subtitle": "Factorials, Permutations, and Combinations"
+      },
+      "specialFunctions": {
+        "title": "Special Functions",
+        "description": "Gamma, zeta, Bessel, Legendre, and error functions.",
+        "subtitle": "Gamma, Zeta, and Special Functions"
+      },
+      "complex": {
+        "title": "Complex Numbers",
+        "description": "Imaginary unit, conjugate, modulus, argument, and polar form.",
+        "subtitle": "Complex Number Notation"
+      },
+      "trigonometry": {
+        "title": "Trigonometry",
+        "description": "Sine, cosine, tangent, inverse trig, and hyperbolic functions.",
+        "subtitle": "Trigonometric and Hyperbolic Functions"
+      },
+      "differentialGeometry": {
+        "title": "Differential Geometry",
+        "description": "Manifolds, curvature, Christoffel symbols, and Riemann tensors.",
+        "subtitle": "Manifolds and Curvature Notation"
+      },
+      "tensors": {
+        "title": "Tensor Notation",
+        "description": "Einstein summation, indices, contractions, and covariant derivatives.",
+        "subtitle": "Einstein Summation and Tensor Indices"
+      },
+      "modalLogic": {
+        "title": "Modal Logic",
+        "description": "Necessity, possibility, temporal logic, and Kripke semantics.",
+        "subtitle": "Necessity and Possibility Operators"
+      },
+      "gameTheory": {
+        "title": "Game Theory",
+        "description": "Nash equilibrium, strategies, payoffs, and Shapley values.",
+        "subtitle": "Nash Equilibrium and Strategic Notation"
+      }
+    }
+  },
+  "nav": {
+    "tools": "Tools",
+    "templates": "Templates",
+    "symbols": "Symbols",
+    "getStarted": "Get Started",
+    "menu": "Menu"
+  },
+  "footer": {
+    "tagline": "Free LaTeX tools and templates for everyone.",
+    "menu": "Menu",
+    "tools": "Tools",
+    "allRightsReserved": "All rights reserved.",
+    "imageToLatex": "Image to LaTeX",
+    "excelToLatex": "Excel to LaTeX",
+    "tikzGenerator": "TikZ Generator",
+    "imageToTikz": "Image to TikZ",
+    "latexPreview": "LaTeX Preview",
+    "markdownToLatex": "Markdown to LaTeX",
+    "citationGenerator": "Citation Generator",
+    "aiLatexGenerator": "AI LaTeX Generator"
+  },
+  "cta": {
+    "badge": "Write LaTeX using AI",
+    "title": "Best AI LaTeX Editor, Overleaf Alternative",
+    "description": "Octree helps researchers from 15+ universities write research papers faster using AI",
+    "feature1": "Generate beautiful TikZ diagrams using AI",
+    "feature2": "Upload image and convert it to LaTeX seamlessly",
+    "feature3": "Get instant assistance with writing and formatting research papers",
+    "useInOctree": "Use in Octree",
+    "learnMore": "Learn More"
+  },
   "templateCode": {
     "placeholders": {
       "authorName": "Author Name",
