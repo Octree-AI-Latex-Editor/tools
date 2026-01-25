@@ -9,6 +9,7 @@ import { openInOctree } from "@/lib/open-in-octree";
 import { getTemplateJsonLd } from "@/lib/json-ld";
 import { OctreeCTA } from "@/components/OctreeCTA";
 import { Button } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
 
 const PDFPreview = dynamic(() => import("@/components/PDFPreview"), {
   ssr: false,
@@ -51,6 +52,10 @@ export default function TemplatePage({
 }: {
   params: Promise<{ slug: string }>;
 }) {
+  const t = useTranslations('templates');
+  const tTemplatesList = useTranslations('templatesList');
+  const tCategories = useTranslations('categories');
+  
   const [mounted, setMounted] = useState(false);
   const [showSource, setShowSource] = useState(false);
   const { slug } = use(params);
@@ -58,26 +63,45 @@ export default function TemplatePage({
 
   useEffect(() => setMounted(true), []);
 
+  // Helper to get translated template title/description with fallback
+  const getTemplateTitle = (templateSlug: string, fallback: string) => {
+    try {
+      return tTemplatesList(`${templateSlug}.title`);
+    } catch {
+      return fallback;
+    }
+  };
+
+  const getTemplateDescription = (templateSlug: string, fallback: string) => {
+    try {
+      return tTemplatesList(`${templateSlug}.description`);
+    } catch {
+      return fallback;
+    }
+  };
+
   if (!template) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-gray-900 mb-4">
-            Template Not Found
+            {t('templateNotFound')}
           </h1>
           <Link
             href="/templates"
             className="text-blue-600 hover:text-blue-700 underline"
           >
-            Back to Templates
+            {t('backToTemplates')}
           </Link>
         </div>
       </div>
     );
   }
 
+  const translatedTitle = getTemplateTitle(slug, template.title);
+  const translatedDescription = getTemplateDescription(slug, template.description);
   const tags = getTags(template.title, template.category);
-  const abstract = abstracts[slug] || template.description;
+  const abstract = abstracts[slug] || translatedDescription;
 
   return (
     <>
@@ -88,13 +112,13 @@ export default function TemplatePage({
             className="inline-flex items-center gap-2 text-gray-500 hover:text-gray-900 mb-8 transition-colors text-sm"
           >
             <ArrowLeft className="h-4 w-4" />
-            Back to all templates
+            {t('backToAllTemplates')}
           </Link>
 
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="lg:w-1/2">
               <h1 className="text-3xl font-bold text-gray-900 mb-6">
-                {template.title}
+                {translatedTitle}
               </h1>
 
               <div className="flex flex-wrap gap-3 mb-8">
@@ -103,19 +127,19 @@ export default function TemplatePage({
                   onClick={() =>
                     openInOctree({
                       latex: template.code,
-                      title: template.title,
+                      title: translatedTitle,
                       source: "tools:templates",
                     })
                   }
                 >
-                  Open as Template
+                  {t('openAsTemplate')}
                 </Button>
                 <button
                   onClick={() => setShowSource(!showSource)}
                   className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-gray-700 text-sm font-medium rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors"
                 >
                   <Code className="h-4 w-4" />
-                  {showSource ? "Hide Source" : "View Source"}
+                  {showSource ? t('hideSource') : t('viewSource')}
                 </button>
                 <Link
                   href={template.previewUrl}
@@ -123,26 +147,26 @@ export default function TemplatePage({
                   className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-gray-700 text-sm font-medium rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors"
                 >
                   <FileText className="h-4 w-4" />
-                  View PDF
+                  {t('viewPdf')}
                 </Link>
               </div>
 
               <div className="space-y-4 mb-8">
                 <div className="flex">
-                  <span className="w-32 text-gray-500 text-sm">Category:</span>
+                  <span className="w-32 text-gray-500 text-sm">{t('category')}:</span>
                   <span className="text-gray-900 text-sm">
                     {template.category}
                   </span>
                 </div>
                 <div className="flex">
-                  <span className="w-32 text-gray-500 text-sm">License:</span>
+                  <span className="w-32 text-gray-500 text-sm">{t('license')}:</span>
                   <span className="text-gray-900 text-sm">
-                    Free to use (MIT)
+                    {t('freeToUse')}
                   </span>
                 </div>
                 <div className="flex flex-col">
                   <span className="w-32 text-gray-500 text-sm mb-1">
-                    Abstract:
+                    {t('abstract')}:
                   </span>
                   <p className="text-gray-700 text-sm leading-relaxed">
                     {abstract}
@@ -151,7 +175,7 @@ export default function TemplatePage({
               </div>
 
               <div className="flex flex-wrap gap-2">
-                <span className="text-gray-500 text-sm mr-2">Tags:</span>
+                <span className="text-gray-500 text-sm mr-2">{t('tags')}:</span>
                 {tags.map((tag) => (
                   <span
                     key={tag}
@@ -165,7 +189,7 @@ export default function TemplatePage({
               {showSource && (
                 <div className="mt-8">
                   <h2 className="text-lg font-semibold text-gray-900 mb-3">
-                    LaTeX Source Code
+                    {t('latexSourceCode')}
                   </h2>
                   <div className="bg-gray-50 border border-gray-200 rounded-lg overflow-hidden">
                     <pre className="p-4 text-sm text-gray-800 overflow-x-auto max-h-96">
@@ -202,7 +226,7 @@ export default function TemplatePage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
-            getTemplateJsonLd(template.title, template.description)
+            getTemplateJsonLd(translatedTitle, translatedDescription)
           ),
         }}
       />

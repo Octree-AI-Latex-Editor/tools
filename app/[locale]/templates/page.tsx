@@ -56,7 +56,25 @@ export default function TemplatesPage() {
   const t = useTranslations('templates');
   const tCommon = useTranslations('common');
   const tCategories = useTranslations('categories');
+  const tTemplatesList = useTranslations('templatesList');
   const locale = useLocale() as Locale;
+
+  // Helper to get translated template title/description with fallback
+  const getTemplateTitle = (slug: string, fallback: string) => {
+    try {
+      return tTemplatesList(`${slug}.title`);
+    } catch {
+      return fallback;
+    }
+  };
+
+  const getTemplateDescription = (slug: string, fallback: string) => {
+    try {
+      return tTemplatesList(`${slug}.description`);
+    } catch {
+      return fallback;
+    }
+  };
 
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] =
@@ -271,10 +289,10 @@ export default function TemplatesPage() {
                     </div>
                     <div className="p-4 flex flex-col flex-1">
                       <h3 className="text-sm font-semibold text-gray-900 mb-1">
-                        {template.title}
+                        {getTemplateTitle(template.slug, template.title)}
                       </h3>
                       <p className="text-xs text-gray-500 mb-3 line-clamp-2">
-                        {template.description}
+                        {getTemplateDescription(template.slug, template.description)}
                       </p>
                       <div className="flex gap-2 mt-auto">
                         <Link
