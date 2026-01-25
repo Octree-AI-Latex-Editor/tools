@@ -12,8 +12,27 @@ interface PDFPreviewProps {
 }
 
 // Lazy load react-pdf components
-let Document: any = null;
-let Page: any = null;
+type PDFDocumentComponent = React.ComponentType<{
+  file: string;
+  onLoadSuccess: (data: { numPages: number }) => void;
+  onLoadError: (error: Error) => void;
+  className?: string;
+  loading?: React.ReactNode;
+  error?: React.ReactNode;
+  children?: React.ReactNode;
+}>;
+
+type PDFPageComponent = React.ComponentType<{
+  pageNumber: number;
+  renderTextLayer?: boolean;
+  renderAnnotationLayer?: boolean;
+  className?: string;
+  width?: number;
+  loading?: React.ReactNode;
+}>;
+
+let Document: PDFDocumentComponent | null = null;
+let Page: PDFPageComponent | null = null;
 let pdfjsConfigured = false;
 
 async function loadPdfJs() {
@@ -47,7 +66,7 @@ export default function PDFPreview({
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [pdfReady, setPdfReady] = useState(false);
-  const [Components, setComponents] = useState<{ Document: any; Page: any } | null>(null);
+  const [Components, setComponents] = useState<{ Document: PDFDocumentComponent; Page: PDFPageComponent } | null>(null);
   const mountedRef = useRef(true);
 
   useEffect(() => {
