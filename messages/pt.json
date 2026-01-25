@@ -547,57 +547,297 @@
       "site": {
         "title": "Ferramentas LaTeX Grátis - Converter Imagem para LaTeX, 60+ Modelos | Octree",
         "description": "Ferramentas LaTeX gratuitas: conversor de equações matemáticas com IA, 60+ modelos profissionais (currículo, CV, tese, beamer), visualização PDF ao vivo.",
-        "keywords": "converter matemática para LaTeX, imagem para LaTeX, PDF para LaTeX, equação para LaTeX, conversor LaTeX grátis, gerador LaTeX IA, gerador de citações LaTeX, gerador TikZ, modelos LaTeX grátis, modelo currículo LaTeX, modelo CV LaTeX, modelo tese LaTeX"
+        "keywords": "converter matemática para LaTeX, imagem para LaTeX, PDF para LaTeX, equação para LaTeX, conversor LaTeX grátis, gerador LaTeX IA, gerador de citações LaTeX, gerador TikZ, modelos LaTeX grátis, modelo currículo LaTeX, modelo CV LaTeX, modelo tese LaTeX, editor LaTeX online, alternativa Overleaf, LaTeX online, compilar LaTeX online, LaTeX para PDF, editor de equações, símbolos LaTeX, gerador BibTeX, tabela para LaTeX, Excel para LaTeX, markdown para LaTeX"
       },
       "tools": {
         "imageToLatex": {
           "title": "Conversor de Imagem para LaTeX - Ferramenta IA Grátis",
           "description": "Converta imagens de equações matemáticas escritas à mão para código LaTeX limpo instantaneamente. Com IA, grátis, sem cadastro.",
-          "keywords": "imagem para LaTeX, foto para LaTeX, matemática escrita para LaTeX, escanear matemática para LaTeX, OCR LaTeX, conversor de imagens matemáticas"
+          "keywords": "imagem para LaTeX, foto para LaTeX, matemática escrita para LaTeX, escanear matemática para LaTeX, OCR LaTeX, conversor de imagens matemáticas, captura de tela para LaTeX, OCR matemático, fórmula para LaTeX"
+        },
+        "mathToLatex": {
+          "title": "Conversor de Matemática para LaTeX - Ferramenta Grátis",
+          "description": "Converta expressões matemáticas para código LaTeX. Digite ou cole matemática e obtenha LaTeX.",
+          "keywords": "matemática para LaTeX, converter matemática para LaTeX, expressão matemática para LaTeX, fórmula para LaTeX, conversor matemático, conversor de equações"
+        },
+        "equationToLatex": {
+          "title": "Conversor de Equação para LaTeX - Ferramenta Grátis",
+          "description": "Converta equações matemáticas para código LaTeX instantaneamente. Digite sua equação e obtenha LaTeX.",
+          "keywords": "equação para LaTeX, converter equação para LaTeX, conversor de equações matemáticas, editor de equações LaTeX, fórmula para LaTeX"
         },
         "tikzGenerator": {
           "title": "Gerador de Diagramas TikZ - Gráficos LaTeX com IA",
           "description": "Gere diagramas TikZ usando IA. Descreva seu diagrama e obtenha código TikZ LaTeX limpo instantaneamente.",
-          "keywords": "gerador TikZ, TikZ online, exemplos TikZ, fluxograma TikZ, diagrama TikZ, rede neural TikZ, gerador TikZ IA"
+          "keywords": "gerador TikZ, TikZ online, exemplos TikZ, fluxograma TikZ, diagrama TikZ, rede neural TikZ, gerador TikZ IA, tutorial TikZ, formas TikZ, setas TikZ, gráfico TikZ, árvore TikZ"
+        },
+        "imageToTikz": {
+          "title": "Conversor de Imagem para TikZ - Imagens para Gráficos LaTeX",
+          "description": "Converta imagens e diagramas para código TikZ LaTeX com IA. Envie qualquer imagem e obtenha código TikZ editável.",
+          "keywords": "imagem para TikZ, foto para TikZ, converter imagem para TikZ, diagrama para TikZ, conversor TikZ IA, imagem para diagrama LaTeX"
         },
         "citationGenerator": {
           "title": "Gerador de Citações LaTeX - Gerador BibTeX",
           "description": "Gere citações BibTeX de DOIs, URLs ou detalhes de artigos. Ferramenta de citação LaTeX gratuita.",
-          "keywords": "gerador de citações LaTeX, gerador BibTeX, DOI para BibTeX, gerador de citações, gerador de referências, gerador de bibliografia"
+          "keywords": "gerador de citações LaTeX, gerador BibTeX, DOI para BibTeX, gerador de citações, gerador de referências, gerador de bibliografia, citação APA LaTeX, citação MLA LaTeX, citação IEEE, citação Harvard LaTeX"
         },
         "latexPreview": {
           "title": "Visualização LaTeX ao Vivo - Editor Online Grátis",
           "description": "Escreva e visualize documentos LaTeX em tempo real. Editor LaTeX online gratuito com saída PDF instantânea.",
-          "keywords": "visualização LaTeX, editor LaTeX online, visualização LaTeX ao vivo, compilador LaTeX online, LaTeX para PDF, editor LaTeX grátis"
+          "keywords": "visualização LaTeX, editor LaTeX online, visualização LaTeX ao vivo, compilador LaTeX online, LaTeX para PDF, editor LaTeX grátis, alternativa Overleaf, escrever LaTeX online, compilar LaTeX grátis"
         },
         "pdfToLatex": {
           "title": "Conversor PDF para LaTeX - Extrair LaTeX de PDF",
           "description": "Converta documentos PDF com conteúdo matemático para código LaTeX limpo. Extração com IA.",
-          "keywords": "PDF para LaTeX, converter PDF para LaTeX, extrair LaTeX de PDF, conversor de matemática PDF, extrator de equações PDF"
+          "keywords": "PDF para LaTeX, converter PDF para LaTeX, extrair LaTeX de PDF, conversor de matemática PDF, extrator de equações PDF, OCR PDF para LaTeX, escanear PDF para LaTeX"
+        },
+        "tableToLatex": {
+          "title": "Conversor de Tabela para LaTeX - Excel para LaTeX",
+          "description": "Converta tabelas do Excel, Google Sheets ou CSV para formato LaTeX. Gerador de tabelas grátis.",
+          "keywords": "tabela para LaTeX, Excel para LaTeX, CSV para LaTeX, planilha para LaTeX, gerador de tabelas LaTeX, tabular LaTeX, Google Sheets para LaTeX"
+        },
+        "markdownToLatex": {
+          "title": "Conversor Markdown para LaTeX - Ferramenta Grátis",
+          "description": "Converta arquivos Markdown para código LaTeX limpo. Preserve formatação, links e estrutura.",
+          "keywords": "markdown para LaTeX, converter markdown para LaTeX, md para tex, conversor markdown LaTeX, markdown para PDF LaTeX"
+        },
+        "latexToMarkdown": {
+          "title": "Conversor LaTeX para Markdown - Ferramenta Grátis",
+          "description": "Converta documentos LaTeX para formato Markdown. Preserve equações e formatação.",
+          "keywords": "LaTeX para markdown, converter LaTeX para markdown, tex para md, conversor LaTeX markdown, exportar LaTeX como markdown"
+        },
+        "htmlToLatex": {
+          "title": "Conversor HTML para LaTeX - Ferramenta Grátis",
+          "description": "Converta conteúdo HTML para código LaTeX limpo. Perfeito para conversão web para documento.",
+          "keywords": "HTML para LaTeX, converter HTML para LaTeX, web para LaTeX, página web para LaTeX, tabela HTML para LaTeX"
+        },
+        "mathmlToLatex": {
+          "title": "Conversor MathML para LaTeX - Ferramenta Grátis",
+          "description": "Converta equações MathML para código LaTeX. Perfeito para conversão de equações do Word.",
+          "keywords": "MathML para LaTeX, converter MathML para LaTeX, equação Word para LaTeX, Office math para LaTeX, Word matemática para LaTeX"
+        },
+        "mermaidToLatex": {
+          "title": "Conversor Mermaid para LaTeX - Diagramas para TikZ",
+          "description": "Converta diagramas Mermaid para código TikZ LaTeX. Fluxogramas, diagramas de sequência e mais.",
+          "keywords": "Mermaid para LaTeX, Mermaid para TikZ, converter diagrama Mermaid, fluxograma para LaTeX, diagrama de sequência para LaTeX"
+        },
+        "latexWordCounter": {
+          "title": "Contador de Palavras LaTeX - Ferramenta Grátis",
+          "description": "Conte palavras em documentos LaTeX excluindo comandos e comentários. Contagem acadêmica precisa.",
+          "keywords": "contador palavras LaTeX, contar palavras LaTeX, contagem palavras TeX, contador caracteres LaTeX, contador palavras tese"
+        },
+        "aiLatexGenerator": {
+          "title": "Gerador LaTeX IA - Escreva LaTeX com IA",
+          "description": "Gere código LaTeX usando IA. Descreva o que você quer e obtenha LaTeX limpo e compilável.",
+          "keywords": "gerador LaTeX IA, gerar LaTeX IA, escritor LaTeX IA, ChatGPT LaTeX, gerador de equações IA, linguagem natural para LaTeX"
+        },
+        "pgfplotsGenerator": {
+          "title": "Gerador PGFPlots - Criador de Gráficos LaTeX",
+          "description": "Crie gráficos e plots bonitos para LaTeX usando PGFPlots. Gerador de gráficos grátis.",
+          "keywords": "gerador PGFPlots, PGFPlots online, gráfico LaTeX, plot LaTeX, exemplos PGFPlots, visualização dados LaTeX, gráfico de barras LaTeX, gráfico de linhas LaTeX"
+        },
+        "arxivToLatex": {
+          "title": "arXiv para LaTeX - Baixar Código Fonte arXiv",
+          "description": "Extraia e baixe código fonte LaTeX de artigos arXiv. Obtenha os arquivos TeX originais.",
+          "keywords": "arXiv para LaTeX, código fonte arXiv, baixar LaTeX arXiv, fonte TeX arXiv, baixar fonte arXiv"
         }
       },
       "symbols": {
         "main": {
           "title": "Símbolos LaTeX - Guia de Referência Completo",
           "description": "Navegue e copie símbolos LaTeX: letras gregas, operadores matemáticos, setas e mais.",
-          "keywords": "símbolos LaTeX, símbolos matemáticos, letras gregas LaTeX, operadores LaTeX, setas LaTeX, referência de símbolos"
+          "keywords": "símbolos LaTeX, símbolos matemáticos, letras gregas LaTeX, operadores LaTeX, setas LaTeX, referência de símbolos, caracteres especiais LaTeX, todos os símbolos LaTeX"
         },
         "math": {
           "title": "Símbolos Matemáticos LaTeX - Operadores e Relações",
           "description": "Lista completa de símbolos matemáticos LaTeX. Operadores, relações, equações com código para copiar.",
-          "keywords": "símbolos matemáticos LaTeX, operadores matemáticos, LaTeX mais menos, fração LaTeX, raiz quadrada LaTeX, somatório LaTeX, integral LaTeX"
+          "keywords": "símbolos matemáticos LaTeX, operadores matemáticos, LaTeX mais menos, fração LaTeX, raiz quadrada LaTeX, somatório LaTeX, integral LaTeX, símbolo multiplicar LaTeX, símbolo dividir LaTeX"
         },
         "greek": {
           "title": "Letras Gregas em LaTeX - Alfa a Ômega",
           "description": "Lista completa de letras gregas e seus comandos LaTeX. Copie e cole alfa, beta, gama e mais.",
-          "keywords": "letras gregas LaTeX, alfa LaTeX, beta LaTeX, gama LaTeX, alfabeto grego LaTeX, símbolos gregos"
+          "keywords": "letras gregas LaTeX, alfa LaTeX, beta LaTeX, gama LaTeX, delta LaTeX, épsilon LaTeX, teta LaTeX, lambda LaTeX, pi LaTeX, sigma LaTeX, ômega LaTeX, alfabeto grego LaTeX"
+        },
+        "arrows": {
+          "title": "Símbolos de Setas LaTeX - Todos os Tipos",
+          "description": "Lista completa de símbolos de setas LaTeX. Direita, esquerda, cima, baixo, setas duplas.",
+          "keywords": "setas LaTeX, seta direita LaTeX, seta esquerda LaTeX, seta dupla LaTeX, implica LaTeX, tipos de setas LaTeX"
+        },
+        "brackets": {
+          "title": "Parênteses e Delimitadores LaTeX",
+          "description": "Parênteses, chaves, colchetes e delimitadores em LaTeX. Comandos para copiar.",
+          "keywords": "colchetes LaTeX, parênteses LaTeX, chaves LaTeX, delimitadores LaTeX, colchetes angulares LaTeX"
+        },
+        "calculus": {
+          "title": "Símbolos de Cálculo LaTeX - Derivadas e Integrais",
+          "description": "Notação de cálculo em LaTeX: derivadas, integrais, limites e operadores diferenciais.",
+          "keywords": "cálculo LaTeX, derivada LaTeX, integral LaTeX, derivada parcial LaTeX, limite LaTeX, diferencial LaTeX, nabla LaTeX, gradiente LaTeX"
+        },
+        "setTheory": {
+          "title": "Símbolos de Teoria dos Conjuntos LaTeX",
+          "description": "Notação de teoria dos conjuntos em LaTeX: união, interseção, subconjunto e mais.",
+          "keywords": "teoria conjuntos LaTeX, união LaTeX, interseção LaTeX, subconjunto LaTeX, pertence a LaTeX, conjunto vazio LaTeX"
+        },
+        "logic": {
+          "title": "Símbolos de Lógica LaTeX - Operadores Lógicos",
+          "description": "Símbolos lógicos em LaTeX: e, ou, não, implica, se e somente se, e quantificadores.",
+          "keywords": "símbolos lógica LaTeX, e LaTeX, ou LaTeX, não LaTeX, implica LaTeX, se e somente se LaTeX, negação LaTeX"
+        },
+        "relations": {
+          "title": "Símbolos de Relação LaTeX - Comparação",
+          "description": "Símbolos de relação em LaTeX: menor que, maior que, igual, diferente e equivalências.",
+          "keywords": "símbolos relação LaTeX, menor que LaTeX, maior que LaTeX, diferente LaTeX, equivalente LaTeX, aproximadamente LaTeX"
+        },
+        "operators": {
+          "title": "Operadores LaTeX - Operadores Matemáticos",
+          "description": "Operadores matemáticos em LaTeX: soma, produto, integral e notação de operadores.",
+          "keywords": "operadores LaTeX, soma LaTeX, produto LaTeX, operador integral LaTeX, somatório LaTeX"
+        },
+        "linearAlgebra": {
+          "title": "Símbolos de Álgebra Linear LaTeX - Matrizes e Vetores",
+          "description": "Notação de álgebra linear em LaTeX: matrizes, vetores, determinantes e autovalores.",
+          "keywords": "álgebra linear LaTeX, matriz LaTeX, vetor LaTeX, determinante LaTeX, transposta LaTeX, autovalor LaTeX, produto escalar LaTeX, norma LaTeX"
+        },
+        "geometry": {
+          "title": "Símbolos de Geometria LaTeX - Ângulos e Formas",
+          "description": "Notação de geometria em LaTeX: ângulos, paralelo, perpendicular, triângulos e círculos.",
+          "keywords": "geometria LaTeX, ângulo LaTeX, paralelo LaTeX, perpendicular LaTeX, triângulo LaTeX, círculo LaTeX, graus LaTeX"
+        },
+        "probability": {
+          "title": "Símbolos de Probabilidade LaTeX - Notação Estatística",
+          "description": "Símbolos de probabilidade e estatística em LaTeX: valor esperado, variância, distribuições.",
+          "keywords": "probabilidade LaTeX, valor esperado LaTeX, variância LaTeX, desvio padrão LaTeX, distribuição probabilidade LaTeX, estatística LaTeX"
+        },
+        "physics": {
+          "title": "Símbolos de Física LaTeX - Notação Científica",
+          "description": "Símbolos de física em LaTeX: vetores, operadores, mecânica quântica e constantes.",
+          "keywords": "física LaTeX, vetor LaTeX, hbar LaTeX, mecânica quântica LaTeX, bra ket LaTeX, notação Dirac LaTeX, constantes físicas LaTeX"
+        },
+        "chemistry": {
+          "title": "Símbolos de Química LaTeX - Notação Química",
+          "description": "Notação química em LaTeX: fórmulas químicas, reações e estruturas moleculares.",
+          "keywords": "química LaTeX, fórmula química LaTeX, seta reação LaTeX, subscrito LaTeX, sobrescrito LaTeX, equação química LaTeX"
+        },
+        "computerScience": {
+          "title": "Símbolos de Ciência da Computação LaTeX - Notação de Algoritmos",
+          "description": "Símbolos de ciência da computação em LaTeX: algoritmos, complexidade e notação de programação.",
+          "keywords": "ciência computação LaTeX, algoritmo LaTeX, notação O grande LaTeX, complexidade LaTeX, pseudocódigo LaTeX"
+        },
+        "functions": {
+          "title": "Símbolos de Funções LaTeX - Funções Matemáticas",
+          "description": "Notação de funções em LaTeX: trigonométricas, logarítmicas, exponenciais e mais.",
+          "keywords": "funções LaTeX, sin LaTeX, cos LaTeX, tan LaTeX, log LaTeX, ln LaTeX, exp LaTeX, lim LaTeX, min LaTeX, max LaTeX"
+        },
+        "numberTheory": {
+          "title": "Símbolos de Teoria dos Números LaTeX",
+          "description": "Notação de teoria dos números em LaTeX: divisibilidade, congruência e conjuntos numéricos.",
+          "keywords": "teoria números LaTeX, divisibilidade LaTeX, módulo LaTeX, congruência LaTeX, primo LaTeX, mdc LaTeX, mmc LaTeX"
+        },
+        "accents": {
+          "title": "Acentos e Diacríticos LaTeX",
+          "description": "Acentos LaTeX: chapéu, barra, ponto, til e outras marcas diacríticas.",
+          "keywords": "acentos LaTeX, chapéu LaTeX, barra LaTeX, ponto LaTeX, til LaTeX, vec LaTeX, sobrelinha LaTeX"
+        },
+        "boolean": {
+          "title": "Símbolos de Álgebra Booleana LaTeX",
+          "description": "Notação de álgebra booleana em LaTeX: AND, OR, NOT, XOR e valores de verdade.",
+          "keywords": "booleano LaTeX, AND LaTeX, OR LaTeX, NOT LaTeX, XOR LaTeX, verdadeiro falso LaTeX, álgebra booleana LaTeX"
+        },
+        "summation": {
+          "title": "Símbolos de Somatório e Produto LaTeX",
+          "description": "Notação de somatório e produto em LaTeX: somas, produtos e séries.",
+          "keywords": "somatório LaTeX, produto LaTeX, notação soma LaTeX, sigma LaTeX, notação pi LaTeX, série LaTeX"
+        },
+        "trigonometry": {
+          "title": "Símbolos de Trigonometria LaTeX",
+          "description": "Funções trigonométricas em LaTeX: seno, cosseno, tangente e funções inversas.",
+          "keywords": "trigonometria LaTeX, sin LaTeX, cos LaTeX, tan LaTeX, arcsin LaTeX, arccos LaTeX, arctan LaTeX, hiperbólico LaTeX"
+        },
+        "topology": {
+          "title": "Símbolos de Topologia LaTeX",
+          "description": "Notação de topologia em LaTeX: conjuntos abertos, fecho, interior e fronteira.",
+          "keywords": "topologia LaTeX, conjunto aberto LaTeX, conjunto fechado LaTeX, fecho LaTeX, interior LaTeX, fronteira LaTeX"
+        },
+        "finance": {
+          "title": "Símbolos de Finanças LaTeX - Notação Financeira",
+          "description": "Símbolos financeiros em LaTeX: moeda, juros e notação econômica.",
+          "keywords": "finanças LaTeX, moeda LaTeX, dólar LaTeX, euro LaTeX, porcentagem LaTeX, taxa juros LaTeX"
+        },
+        "machineLearning": {
+          "title": "Símbolos de Machine Learning LaTeX - Notação ML",
+          "description": "Notação de machine learning em LaTeX: redes neurais, funções de perda e otimização.",
+          "keywords": "machine learning LaTeX, rede neural LaTeX, função perda LaTeX, descida gradiente LaTeX, notação ML LaTeX"
+        },
+        "latin": {
+          "title": "Letras Latinas e Fontes LaTeX",
+          "description": "Letras latinas e estilos de fonte em LaTeX: negrito, itálico, caligráfico e mais.",
+          "keywords": "letras latinas LaTeX, negrito LaTeX, itálico LaTeX, mathcal LaTeX, mathbb LaTeX, estilos fonte LaTeX"
+        },
+        "complex": {
+          "title": "Símbolos de Números Complexos LaTeX",
+          "description": "Notação de números complexos em LaTeX: unidade imaginária, conjugado e forma polar.",
+          "keywords": "números complexos LaTeX, unidade imaginária LaTeX, conjugado LaTeX, parte real LaTeX, parte imaginária LaTeX, módulo LaTeX"
+        },
+        "graphTheory": {
+          "title": "Símbolos de Teoria dos Grafos LaTeX",
+          "description": "Notação de teoria dos grafos em LaTeX: vértices, arestas, caminhos e ciclos.",
+          "keywords": "teoria grafos LaTeX, vértice LaTeX, aresta LaTeX, caminho LaTeX, ciclo LaTeX, adjacência LaTeX, grau LaTeX"
+        },
+        "combinatorics": {
+          "title": "Símbolos de Combinatória LaTeX",
+          "description": "Notação de combinatória em LaTeX: fatoriais, binomiais e permutações.",
+          "keywords": "combinatória LaTeX, fatorial LaTeX, binomial LaTeX, permutação LaTeX, combinação LaTeX, escolher LaTeX, binom LaTeX"
+        },
+        "specialFunctions": {
+          "title": "Funções Especiais LaTeX - Gamma, Zeta, Bessel",
+          "description": "Funções especiais em LaTeX: gamma, zeta, Bessel e funções erro.",
+          "keywords": "funções especiais LaTeX, função gamma LaTeX, função zeta LaTeX, função Bessel LaTeX, função erro LaTeX"
+        },
+        "tensors": {
+          "title": "Notação Tensorial LaTeX - Soma de Einstein",
+          "description": "Notação tensorial em LaTeX: índices, contrações e derivadas covariantes.",
+          "keywords": "tensor LaTeX, soma Einstein LaTeX, índices tensoriais LaTeX, derivada covariante LaTeX, delta Kronecker LaTeX"
+        },
+        "differentialGeometry": {
+          "title": "Símbolos de Geometria Diferencial LaTeX",
+          "description": "Notação de geometria diferencial em LaTeX: variedades, curvatura e conexões.",
+          "keywords": "geometria diferencial LaTeX, variedade LaTeX, curvatura LaTeX, Christoffel LaTeX, tensor Riemann LaTeX"
+        },
+        "modalLogic": {
+          "title": "Símbolos de Lógica Modal LaTeX",
+          "description": "Notação de lógica modal em LaTeX: necessidade, possibilidade e operadores temporais.",
+          "keywords": "lógica modal LaTeX, necessidade LaTeX, possibilidade LaTeX, caixa LaTeX, diamante LaTeX, lógica temporal LaTeX"
+        },
+        "gameTheory": {
+          "title": "Símbolos de Teoria dos Jogos LaTeX",
+          "description": "Notação de teoria dos jogos em LaTeX: estratégias, pagamentos e equilíbrio.",
+          "keywords": "teoria jogos LaTeX, equilíbrio Nash LaTeX, estratégia LaTeX, pagamento LaTeX, função utilidade LaTeX"
+        },
+        "order": {
+          "title": "Símbolos de Relações de Ordem LaTeX",
+          "description": "Relações de ordem em LaTeX: ordens parciais, reticulados e supremo/ínfimo.",
+          "keywords": "relações ordem LaTeX, ordem parcial LaTeX, reticulado LaTeX, supremo LaTeX, ínfimo LaTeX"
+        },
+        "optimization": {
+          "title": "Símbolos de Otimização LaTeX",
+          "description": "Notação de otimização em LaTeX: minimizar, maximizar e restrições.",
+          "keywords": "otimização LaTeX, minimizar LaTeX, maximizar LaTeX, argmin LaTeX, argmax LaTeX, sujeito a LaTeX"
+        },
+        "quantifiers": {
+          "title": "Símbolos de Quantificadores LaTeX - Para Todo, Existe",
+          "description": "Símbolos de quantificadores em LaTeX: quantificadores universal e existencial.",
+          "keywords": "quantificadores LaTeX, para todo LaTeX, existe LaTeX, forall LaTeX, quantificador existencial LaTeX, quantificador universal LaTeX"
+        },
+        "units": {
+          "title": "Unidades e Medidas LaTeX",
+          "description": "Unidades SI e medidas em LaTeX: graus, constantes físicas e unidades.",
+          "keywords": "unidades LaTeX, unidades SI LaTeX, graus LaTeX, constantes físicas LaTeX, siunitx LaTeX, medida LaTeX"
         }
       },
       "templates": {
         "main": {
           "title": "Modelos LaTeX Grátis - Currículo, CV, Tese, Beamer",
           "description": "60+ modelos LaTeX profissionais. Currículo, CV, tese, apresentações beamer e mais. Download grátis.",
-          "keywords": "modelos LaTeX, modelos LaTeX grátis, modelo currículo LaTeX, modelo CV LaTeX, modelo tese LaTeX, modelo beamer LaTeX, modelos Overleaf"
+          "keywords": "modelos LaTeX, modelos LaTeX grátis, modelo currículo LaTeX, modelo CV LaTeX, modelo tese LaTeX, modelo beamer LaTeX, modelos Overleaf, modelos acadêmicos LaTeX, modelo apresentação LaTeX, modelo artigo LaTeX, modelo trabalho LaTeX, modelo poster LaTeX, modelo carta LaTeX"
         }
       }
     },
