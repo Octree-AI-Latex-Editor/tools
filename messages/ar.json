@@ -461,6 +461,431 @@
       "business-card": { "title": "بطاقة عمل", "description": "قالب بطاقة عمل احترافية" },
       "calendar": { "title": "تقويم", "description": "قالب تقويم شهري وسنوي" }
     },
+    "symbols": {
+    "title": "رموز LaTeX",
+    "description": "تصفح العوامل الرياضية الشائعة والحروف اليونانية لمستندات LaTeX الخاصة بك.",
+    "searchPlaceholder": "البحث عن الرموز...",
+    "searchResults": "نتائج البحث",
+    "symbolsFound": "تم العثور على {count} رمز",
+    "noSymbolsFound": "لم يتم العثور على رموز مطابقة لـ",
+    "viewSymbols": "عرض الرموز",
+    "backToSymbols": "العودة إلى الرموز",
+    "symbolCount": "{count} رمز",
+    "symbolsCount": "{count} رموز",
+    "categories": {
+      "math": { "title": "الرموز الرياضية", "description": "العوامل الرياضية الشائعة والعلاقات والأسهم.", "subtitle": "العوامل الرياضية الشائعة" },
+      "greek": { "title": "الرموز اليونانية", "description": "قائمة كاملة بالحروف اليونانية وأوامر LaTeX الخاصة بها.", "subtitle": "الحروف اليونانية والمتغيرات" },
+      "arrows": { "title": "رموز الأسهم", "description": "الأسهم الاتجاهية والأسهم المزدوجة والرماح لمستندات LaTeX.", "subtitle": "الأسهم الاتجاهية والمزدوجة" },
+      "latin": { "title": "الحروف اللاتينية", "description": "الأحرف المشكّلة والحروف اللاتينية الخاصة للغات المختلفة.", "subtitle": "الأحرف المشكّلة والخاصة" },
+      "setTheory": { "title": "نظرية المجموعات", "description": "المجموعات والمجموعات الجزئية والاتحادات والتقاطعات ومجموعات الأعداد.", "subtitle": "المجموعات والمجموعات الجزئية والعمليات" },
+      "logic": { "title": "المنطق والبراهين", "description": "المحددات الكمية والروابط المنطقية وترميز البراهين.", "subtitle": "الروابط المنطقية وترميز البراهين" },
+      "linearAlgebra": { "title": "الجبر الخطي", "description": "المتجهات والمصفوفات والمنقولات والجداء الداخلي.", "subtitle": "المتجهات والمصفوفات والعمليات" },
+      "calculus": { "title": "التفاضل والتكامل والتحليل", "description": "المشتقات والتكاملات والنهايات والمؤثرات التفاضلية.", "subtitle": "المشتقات والتكاملات والنهايات" },
+      "probability": { "title": "الاحتمالات والإحصاء", "description": "الاحتمال والتوقع والتباين والتوزيعات.", "subtitle": "ترميز الاحتمالات والإحصاء" },
+      "computerScience": { "title": "علوم الحاسوب", "description": "ترميز Big-O والمؤثرات المنطقية ورموز الخوارزميات.", "subtitle": "ترميز Big-O والخوارزميات" },
+      "numberTheory": { "title": "نظرية الأعداد", "description": "القسمة والحساب المعياري ودوال نظرية الأعداد.", "subtitle": "القسمة والحساب المعياري" },
+      "physics": { "title": "الفيزياء", "description": "ميكانيكا الكم والحقول المتجهة والثوابت الفيزيائية.", "subtitle": "ميكانيكا الكم والثوابت الفيزيائية" },
+      "chemistry": { "title": "الكيمياء", "description": "أسهم التفاعل والنظائر والروابط ورموز الحالة.", "subtitle": "أسهم التفاعل والترميز الكيميائي" },
+      "finance": { "title": "العملات والمالية", "description": "رموز العملات والصيغ المالية والترميز.", "subtitle": "ترميز العملات والمالية" },
+      "brackets": { "title": "الأقواس والمحددات", "description": "الأقواس المائلة والأرضية والسقفية والمعايير وأزواج المحددات.", "subtitle": "الأقواس والأرضية والسقفية والمعايير" },
+      "accents": { "title": "التشكيل والمعدّلات", "description": "القبعات والتلد والنقاط والخطوط والمتجهات وزخارف النص.", "subtitle": "القبعات والتلد والنقاط والزخارف" },
+      "geometry": { "title": "الهندسة", "description": "الزوايا والمثلثات والتوازي والتعامد والتطابق.", "subtitle": "الزوايا والمثلثات والعلاقات الهندسية" },
+      "topology": { "title": "التوبولوجيا والرياضيات المجردة", "description": "أليف والحدود والهومولوجي وترميز نظرية الفئات.", "subtitle": "ترميز التوبولوجيا ونظرية الفئات" },
+      "machineLearning": { "title": "التعلم الآلي والذكاء الاصطناعي", "description": "دوال الخسارة والتدرجات وargmax وتباعد KL وترميز الشبكات العصبية.", "subtitle": "دوال الخسارة وترميز الشبكات العصبية" },
+      "relations": { "title": "العلاقات والمقارنات", "description": "عدم المساواة والتكافؤ والمجموعة الجزئية والمجموعة الفوقية ورموز المقارنة.", "subtitle": "رموز عدم المساواة والتكافؤ" },
+      "operators": { "title": "المؤثرات المتقدمة", "description": "المؤثرات الثنائية والجداء التنسوري والمجموع المباشر والتركيب.", "subtitle": "المؤثرات الثنائية والتركيب" },
+      "summation": { "title": "الجمع والضرب", "description": "ترميز سيجما ورموز الضرب والحدود المفهرسة.", "subtitle": "ترميز سيجما والضرب" },
+      "functions": { "title": "الدوال والتعيين", "description": "ترميز الدالة والتعيينات والتركيب والمجال/المجال المرافق.", "subtitle": "ترميز الدالة والتركيب" },
+      "order": { "title": "عدم المساواة والترتيب", "description": "يسبق ويلي والحد الأدنى والأقصى والنهاية العظمى والصغرى والحدود.", "subtitle": "ترميز الترتيب والحدود" },
+      "boolean": { "title": "الجبر البولياني", "description": "البوابات المنطقية وAND وOR وNOT وXOR وNAND والعمليات البوليانية.", "subtitle": "البوابات المنطقية والعمليات البوليانية" },
+      "optimization": { "title": "التحسين", "description": "Argmax وargmin والقيود ولاغرانج وشروط KKT.", "subtitle": "ترميز التحسين والقيود" },
+      "units": { "title": "الوحدات والقياسات", "description": "الدرجات ووحدات SI والثوابت الفيزيائية ورموز القياس.", "subtitle": "وحدات SI ورموز القياس" },
+      "quantifiers": { "title": "المحددات الكمية", "description": "لكل ويوجد وينتمي إلى وترميز بناء المجموعة.", "subtitle": "المحددات الكمية الكلية والوجودية" },
+      "graphTheory": { "title": "نظرية البيان", "description": "الرؤوس والحواف والتجاور والمسارات والدورات والأعداد اللونية.", "subtitle": "الرؤوس والحواف وترميز البيان" },
+      "combinatorics": { "title": "التوافقيات", "description": "العوامل والثنائيات والتباديل والتوافيق والعد.", "subtitle": "العوامل والتباديل والتوافيق" },
+      "specialFunctions": { "title": "الدوال الخاصة", "description": "دوال غاما وزيتا وبيسل وليجاندر والخطأ.", "subtitle": "دوال غاما وزيتا والدوال الخاصة" },
+      "complex": { "title": "الأعداد المركبة", "description": "الوحدة التخيلية والمرافق والمعامل والوسيطة والصيغة القطبية.", "subtitle": "ترميز الأعداد المركبة" },
+      "trigonometry": { "title": "علم المثلثات", "description": "الجيب وجيب التمام والظل والدوال المثلثية العكسية والزائدية.", "subtitle": "الدوال المثلثية والزائدية" },
+      "differentialGeometry": { "title": "الهندسة التفاضلية", "description": "المتعددات والانحناء ورموز كريستوفيل وتنسورات ريمان.", "subtitle": "المتعددات وترميز الانحناء" },
+      "tensors": { "title": "ترميز التنسور", "description": "جمع أينشتاين والمؤشرات والانكماشات والمشتقات المتغايرة.", "subtitle": "جمع أينشتاين ومؤشرات التنسور" },
+      "modalLogic": { "title": "المنطق الشرطي", "description": "الضرورة والإمكانية والمنطق الزمني ودلالات كريبكي.", "subtitle": "مؤثرات الضرورة والإمكانية" },
+      "gameTheory": { "title": "نظرية الألعاب", "description": "توازن ناش والاستراتيجيات والمكافآت وقيم شابلي.", "subtitle": "توازن ناش والترميز الاستراتيجي" }
+    }
+  },
+  "nav": {
+      "tools": "الأدوات",
+      "templates": "القوالب",
+      "symbols": "الرموز",
+      "getStarted": "ابدأ الآن",
+      "menu": "القائمة"
+    },
+    "footer": {
+      "tagline": "أدوات وقوالب LaTeX مجانية للجميع.",
+      "menu": "القائمة",
+      "tools": "الأدوات",
+      "allRightsReserved": "جميع الحقوق محفوظة.",
+      "imageToLatex": "صورة إلى LaTeX",
+      "excelToLatex": "Excel إلى LaTeX",
+      "tikzGenerator": "مولد TikZ",
+      "imageToTikz": "صورة إلى TikZ",
+      "latexPreview": "معاينة LaTeX",
+      "markdownToLatex": "Markdown إلى LaTeX",
+      "citationGenerator": "مولد الاقتباسات",
+      "aiLatexGenerator": "مولد LaTeX بالذكاء الاصطناعي"
+    },
+    "cta": {
+      "badge": "اكتب LaTeX باستخدام الذكاء الاصطناعي",
+      "title": "أفضل محرر LaTeX بالذكاء الاصطناعي، بديل Overleaf",
+      "description": "يساعد Octree الباحثين من أكثر من 15 جامعة على كتابة أوراق البحث بشكل أسرع باستخدام الذكاء الاصطناعي",
+      "feature1": "أنشئ رسوم TikZ جميلة باستخدام الذكاء الاصطناعي",
+      "feature2": "ارفع صورة وحولها إلى LaTeX بسلاسة",
+      "feature3": "احصل على مساعدة فورية في كتابة وتنسيق أوراق البحث",
+      "useInOctree": "استخدم في Octree",
+      "learnMore": "اعرف المزيد"
+    },
+    "metadata": {
+      "site": {
+        "title": "أدوات LaTeX مجانية - تحويل الصورة إلى LaTeX، 60+ قالب | Octree",
+        "description": "أدوات LaTeX مجانية: محول المعادلات الرياضية بالذكاء الاصطناعي، 60+ قالب احترافي (سيرة ذاتية، CV، أطروحة، beamer)، معاينة PDF مباشرة.",
+        "keywords": "تحويل الرياضيات إلى LaTeX، صورة إلى LaTeX، PDF إلى LaTeX، معادلة إلى LaTeX، محول LaTeX مجاني، مولد LaTeX بالذكاء الاصطناعي، مولد الاستشهادات LaTeX، مولد TikZ، قوالب LaTeX مجانية، قالب السيرة الذاتية LaTeX، قالب الأطروحة LaTeX، محرر LaTeX أونلاين، بديل Overleaf، LaTeX أونلاين، ترجمة LaTeX أونلاين، LaTeX إلى PDF، محرر المعادلات، رموز LaTeX، مولد BibTeX، جدول إلى LaTeX، Excel إلى LaTeX، markdown إلى LaTeX"
+      },
+      "tools": {
+        "imageToLatex": {
+          "title": "محول الصورة إلى LaTeX - أداة ذكاء اصطناعي مجانية",
+          "description": "حول صور المعادلات الرياضية المكتوبة بخط اليد إلى كود LaTeX نظيف فوراً. بالذكاء الاصطناعي، مجاني، بدون تسجيل.",
+          "keywords": "صورة إلى LaTeX، صورة فوتوغرافية إلى LaTeX، رياضيات مكتوبة إلى LaTeX، مسح الرياضيات إلى LaTeX، OCR LaTeX، محول صور الرياضيات، لقطة شاشة إلى LaTeX، OCR رياضي، معادلة إلى LaTeX"
+        },
+        "mathToLatex": {
+          "title": "محول الرياضيات إلى LaTeX - أداة مجانية",
+          "description": "حول التعبيرات الرياضية إلى كود LaTeX. اكتب أو الصق الرياضيات واحصل على LaTeX.",
+          "keywords": "رياضيات إلى LaTeX، تحويل الرياضيات إلى LaTeX، تعبير رياضي إلى LaTeX، صيغة إلى LaTeX، محول رياضي، محول المعادلات"
+        },
+        "equationToLatex": {
+          "title": "محول المعادلة إلى LaTeX - أداة مجانية",
+          "description": "حول المعادلات الرياضية إلى كود LaTeX فوراً. اكتب معادلتك واحصل على LaTeX.",
+          "keywords": "معادلة إلى LaTeX، تحويل المعادلة إلى LaTeX، محول المعادلات الرياضية، محرر المعادلات LaTeX، صيغة إلى LaTeX"
+        },
+        "tikzGenerator": {
+          "title": "مولد مخططات TikZ - رسومات LaTeX بالذكاء الاصطناعي",
+          "description": "أنشئ مخططات TikZ باستخدام الذكاء الاصطناعي. صف مخططك واحصل على كود TikZ LaTeX نظيف فوراً.",
+          "keywords": "مولد TikZ، TikZ أونلاين، أمثلة TikZ، مخطط تدفق TikZ، مخطط TikZ، شبكة عصبية TikZ، مولد TikZ بالذكاء الاصطناعي، دليل TikZ، أشكال TikZ، أسهم TikZ، رسم بياني TikZ، شجرة TikZ"
+        },
+        "imageToTikz": {
+          "title": "محول الصورة إلى TikZ - صور إلى رسومات LaTeX",
+          "description": "حول الصور والمخططات إلى كود TikZ LaTeX باستخدام الذكاء الاصطناعي. ارفع أي صورة واحصل على كود TikZ قابل للتحرير.",
+          "keywords": "صورة إلى TikZ، صورة فوتوغرافية إلى TikZ، تحويل صورة إلى TikZ، مخطط إلى TikZ، محول TikZ بالذكاء الاصطناعي، صورة إلى مخطط LaTeX"
+        },
+        "citationGenerator": {
+          "title": "مولد الاستشهادات LaTeX - مولد BibTeX",
+          "description": "أنشئ استشهادات BibTeX من DOIs أو URLs أو تفاصيل المقالات. أداة استشهاد LaTeX مجانية.",
+          "keywords": "مولد استشهادات LaTeX، مولد BibTeX، DOI إلى BibTeX، مولد الاستشهادات، مولد المراجع، مولد قائمة المراجع، استشهاد APA LaTeX، استشهاد MLA LaTeX، استشهاد IEEE، استشهاد Harvard LaTeX"
+        },
+        "latexPreview": {
+          "title": "معاينة LaTeX المباشرة - محرر أونلاين مجاني",
+          "description": "اكتب وعاين مستندات LaTeX في الوقت الفعلي. محرر LaTeX أونلاين مجاني مع إخراج PDF فوري.",
+          "keywords": "معاينة LaTeX، محرر LaTeX أونلاين، معاينة LaTeX مباشرة، مترجم LaTeX أونلاين، LaTeX إلى PDF، محرر LaTeX مجاني، بديل Overleaf، كتابة LaTeX أونلاين، ترجمة LaTeX مجاناً"
+        },
+        "pdfToLatex": {
+          "title": "محول PDF إلى LaTeX - استخراج LaTeX من PDF",
+          "description": "حول مستندات PDF ذات المحتوى الرياضي إلى كود LaTeX نظيف. استخراج بالذكاء الاصطناعي.",
+          "keywords": "PDF إلى LaTeX، تحويل PDF إلى LaTeX، استخراج LaTeX من PDF، محول رياضيات PDF، مستخرج المعادلات PDF، OCR PDF إلى LaTeX، مسح PDF إلى LaTeX"
+        },
+        "tableToLatex": {
+          "title": "محول الجدول إلى LaTeX - Excel إلى LaTeX",
+          "description": "حول الجداول من Excel أو Google Sheets أو CSV إلى تنسيق LaTeX. مولد جداول مجاني.",
+          "keywords": "جدول إلى LaTeX، Excel إلى LaTeX، CSV إلى LaTeX، جدول بيانات إلى LaTeX، مولد جداول LaTeX، tabular LaTeX، Google Sheets إلى LaTeX"
+        },
+        "markdownToLatex": {
+          "title": "محول Markdown إلى LaTeX - أداة مجانية",
+          "description": "حول ملفات Markdown إلى كود LaTeX نظيف. حافظ على التنسيق والروابط والبنية.",
+          "keywords": "markdown إلى LaTeX، تحويل markdown إلى LaTeX، md إلى tex، محول markdown LaTeX، markdown إلى PDF LaTeX"
+        },
+        "latexToMarkdown": {
+          "title": "محول LaTeX إلى Markdown - أداة مجانية",
+          "description": "حول مستندات LaTeX إلى تنسيق Markdown. حافظ على المعادلات والتنسيق.",
+          "keywords": "LaTeX إلى markdown، تحويل LaTeX إلى markdown، tex إلى md، محول LaTeX markdown، تصدير LaTeX كـ markdown"
+        },
+        "htmlToLatex": {
+          "title": "محول HTML إلى LaTeX - أداة مجانية",
+          "description": "حول محتوى HTML إلى كود LaTeX نظيف. مثالي لتحويل الويب إلى مستند.",
+          "keywords": "HTML إلى LaTeX، تحويل HTML إلى LaTeX، ويب إلى LaTeX، صفحة ويب إلى LaTeX، جدول HTML إلى LaTeX"
+        },
+        "mathmlToLatex": {
+          "title": "محول MathML إلى LaTeX - أداة مجانية",
+          "description": "حول معادلات MathML إلى كود LaTeX. مثالي لتحويل معادلات Word.",
+          "keywords": "MathML إلى LaTeX، تحويل MathML إلى LaTeX، معادلة Word إلى LaTeX، Office math إلى LaTeX، رياضيات Word إلى LaTeX"
+        },
+        "mermaidToLatex": {
+          "title": "محول Mermaid إلى LaTeX - مخططات إلى TikZ",
+          "description": "حول مخططات Mermaid إلى كود TikZ LaTeX. مخططات التدفق والتسلسل والمزيد.",
+          "keywords": "Mermaid إلى LaTeX، Mermaid إلى TikZ، تحويل مخطط Mermaid، مخطط تدفق إلى LaTeX، مخطط تسلسل إلى LaTeX"
+        },
+        "latexWordCounter": {
+          "title": "عداد كلمات LaTeX - أداة مجانية",
+          "description": "عد الكلمات في مستندات LaTeX مع استبعاد الأوامر والتعليقات. عد كلمات أكاديمي دقيق.",
+          "keywords": "عداد كلمات LaTeX، عد كلمات LaTeX، عدد كلمات TeX، عداد أحرف LaTeX، عدد كلمات الأطروحة"
+        },
+        "aiLatexGenerator": {
+          "title": "مولد LaTeX بالذكاء الاصطناعي - اكتب LaTeX بالذكاء الاصطناعي",
+          "description": "أنشئ كود LaTeX باستخدام الذكاء الاصطناعي. صف ما تريد واحصل على LaTeX نظيف وقابل للترجمة.",
+          "keywords": "مولد LaTeX بالذكاء الاصطناعي، إنشاء LaTeX بالذكاء الاصطناعي، كاتب LaTeX بالذكاء الاصطناعي، ChatGPT LaTeX، مولد معادلات بالذكاء الاصطناعي، لغة طبيعية إلى LaTeX"
+        },
+        "pgfplotsGenerator": {
+          "title": "مولد PGFPlots - صانع رسوم بيانية LaTeX",
+          "description": "أنشئ رسوماً بيانية جميلة لـ LaTeX باستخدام PGFPlots. مولد رسوم بيانية مجاني.",
+          "keywords": "مولد PGFPlots، PGFPlots أونلاين، رسم بياني LaTeX، مخطط LaTeX، أمثلة PGFPlots، تصور البيانات LaTeX، مخطط شريطي LaTeX، مخطط خطي LaTeX"
+        },
+        "arxivToLatex": {
+          "title": "arXiv إلى LaTeX - تحميل الكود المصدري arXiv",
+          "description": "استخرج وحمل الكود المصدري LaTeX من أوراق arXiv. احصل على ملفات TeX الأصلية.",
+          "keywords": "arXiv إلى LaTeX، الكود المصدري arXiv، تحميل LaTeX arXiv، مصدر TeX arXiv، تحميل مصدر arXiv"
+        }
+      },
+      "symbols": {
+        "main": {
+          "title": "رموز LaTeX - دليل مرجعي كامل",
+          "description": "تصفح وانسخ رموز LaTeX: الحروف اليونانية، العوامل الرياضية، الأسهم والمزيد.",
+          "keywords": "رموز LaTeX، رموز رياضية، الحروف اليونانية LaTeX، عوامل LaTeX، أسهم LaTeX، مرجع الرموز، أحرف خاصة LaTeX، جميع رموز LaTeX"
+        },
+        "math": {
+          "title": "رموز LaTeX الرياضية - العوامل والعلاقات",
+          "description": "قائمة كاملة بالرموز الرياضية LaTeX. العوامل، العلاقات، المعادلات مع الكود للنسخ.",
+          "keywords": "رموز رياضية LaTeX، عوامل رياضية، LaTeX زائد ناقص، كسر LaTeX، جذر تربيعي LaTeX، مجموع LaTeX، تكامل LaTeX، رمز الضرب LaTeX، رمز القسمة LaTeX"
+        },
+        "greek": {
+          "title": "الحروف اليونانية في LaTeX - من ألفا إلى أوميغا",
+          "description": "قائمة كاملة بالحروف اليونانية وأوامر LaTeX الخاصة بها. انسخ والصق ألفا، بيتا، غاما والمزيد.",
+          "keywords": "الحروف اليونانية LaTeX، ألفا LaTeX، بيتا LaTeX، غاما LaTeX، دلتا LaTeX، إبسيلون LaTeX، ثيتا LaTeX، لامدا LaTeX، باي LaTeX، سيغما LaTeX، أوميغا LaTeX، الأبجدية اليونانية LaTeX"
+        },
+        "arrows": {
+          "title": "رموز الأسهم LaTeX - جميع الأنواع",
+          "description": "قائمة كاملة برموز الأسهم LaTeX. يمين، يسار، أعلى، أسفل، أسهم مزدوجة.",
+          "keywords": "أسهم LaTeX، سهم يمين LaTeX، سهم يسار LaTeX، سهم مزدوج LaTeX، يستلزم LaTeX، أنواع الأسهم LaTeX"
+        },
+        "brackets": {
+          "title": "أقواس ومحددات LaTeX",
+          "description": "أقواس، أقواس معقوفة، أقواس مربعة ومحددات في LaTeX. أوامر للنسخ.",
+          "keywords": "أقواس LaTeX، أقواس مستديرة LaTeX، أقواس معقوفة LaTeX، محددات LaTeX، أقواس زاوية LaTeX"
+        },
+        "calculus": {
+          "title": "رموز التفاضل والتكامل LaTeX - المشتقات والتكاملات",
+          "description": "ترميز التفاضل والتكامل في LaTeX: المشتقات، التكاملات، النهايات والعوامل التفاضلية.",
+          "keywords": "تفاضل وتكامل LaTeX، مشتقة LaTeX، تكامل LaTeX، مشتقة جزئية LaTeX، نهاية LaTeX، تفاضل LaTeX، نابلا LaTeX، تدرج LaTeX"
+        },
+        "setTheory": {
+          "title": "رموز نظرية المجموعات LaTeX",
+          "description": "ترميز نظرية المجموعات في LaTeX: اتحاد، تقاطع، مجموعة جزئية والمزيد.",
+          "keywords": "نظرية المجموعات LaTeX، اتحاد LaTeX، تقاطع LaTeX، مجموعة جزئية LaTeX، ينتمي إلى LaTeX، مجموعة فارغة LaTeX"
+        },
+        "logic": {
+          "title": "رموز المنطق LaTeX - العوامل المنطقية",
+          "description": "رموز منطقية في LaTeX: و، أو، لا، يستلزم، إذا وفقط إذا، والمحددات الكمية.",
+          "keywords": "رموز المنطق LaTeX، و LaTeX، أو LaTeX، لا LaTeX، يستلزم LaTeX، إذا وفقط إذا LaTeX، نفي LaTeX"
+        },
+        "relations": {
+          "title": "رموز العلاقات LaTeX - المقارنة",
+          "description": "رموز العلاقات في LaTeX: أقل من، أكبر من، يساوي، لا يساوي والتكافؤات.",
+          "keywords": "رموز العلاقات LaTeX، أقل من LaTeX، أكبر من LaTeX، لا يساوي LaTeX، مكافئ LaTeX، تقريباً LaTeX"
+        },
+        "operators": {
+          "title": "عوامل LaTeX - العوامل الرياضية",
+          "description": "العوامل الرياضية في LaTeX: مجموع، حاصل ضرب، تكامل وترميز العوامل.",
+          "keywords": "عوامل LaTeX، مجموع LaTeX، حاصل ضرب LaTeX، عامل تكامل LaTeX، جمع LaTeX"
+        },
+        "linearAlgebra": {
+          "title": "رموز الجبر الخطي LaTeX - المصفوفات والمتجهات",
+          "description": "ترميز الجبر الخطي في LaTeX: المصفوفات، المتجهات، المحددات والقيم الذاتية.",
+          "keywords": "جبر خطي LaTeX، مصفوفة LaTeX، متجه LaTeX، محدد LaTeX، منقول LaTeX، قيمة ذاتية LaTeX، حاصل ضرب نقطي LaTeX، معيار LaTeX"
+        },
+        "geometry": {
+          "title": "رموز الهندسة LaTeX - الزوايا والأشكال",
+          "description": "ترميز الهندسة في LaTeX: الزوايا، التوازي، التعامد، المثلثات والدوائر.",
+          "keywords": "هندسة LaTeX، زاوية LaTeX، متوازي LaTeX، متعامد LaTeX، مثلث LaTeX، دائرة LaTeX، درجات LaTeX"
+        },
+        "probability": {
+          "title": "رموز الاحتمالات LaTeX - الترميز الإحصائي",
+          "description": "رموز الاحتمالات والإحصاء في LaTeX: القيمة المتوقعة، التباين، التوزيعات.",
+          "keywords": "احتمالات LaTeX، قيمة متوقعة LaTeX، تباين LaTeX، انحراف معياري LaTeX، توزيع احتمالي LaTeX، إحصاء LaTeX"
+        },
+        "physics": {
+          "title": "رموز الفيزياء LaTeX - الترميز العلمي",
+          "description": "رموز الفيزياء في LaTeX: المتجهات، العوامل، ميكانيكا الكم والثوابت.",
+          "keywords": "فيزياء LaTeX، متجه LaTeX، hbar LaTeX، ميكانيكا الكم LaTeX، bra ket LaTeX، ترميز ديراك LaTeX، ثوابت فيزيائية LaTeX"
+        },
+        "chemistry": {
+          "title": "رموز الكيمياء LaTeX - الترميز الكيميائي",
+          "description": "الترميز الكيميائي في LaTeX: الصيغ الكيميائية، التفاعلات والهياكل الجزيئية.",
+          "keywords": "كيمياء LaTeX، صيغة كيميائية LaTeX، سهم التفاعل LaTeX، منخفض LaTeX، مرتفع LaTeX، معادلة كيميائية LaTeX"
+        },
+        "computerScience": {
+          "title": "رموز علوم الحاسوب LaTeX - ترميز الخوارزميات",
+          "description": "رموز علوم الحاسوب في LaTeX: الخوارزميات، التعقيد وترميز البرمجة.",
+          "keywords": "علوم الحاسوب LaTeX، خوارزمية LaTeX، ترميز O الكبير LaTeX، تعقيد LaTeX، شبه كود LaTeX"
+        },
+        "functions": {
+          "title": "رموز الدوال LaTeX - الدوال الرياضية",
+          "description": "ترميز الدوال في LaTeX: دوال مثلثية، لوغاريتمية، أسية والمزيد.",
+          "keywords": "دوال LaTeX، sin LaTeX، cos LaTeX، tan LaTeX، log LaTeX، ln LaTeX، exp LaTeX، lim LaTeX، min LaTeX، max LaTeX"
+        },
+        "numberTheory": {
+          "title": "رموز نظرية الأعداد LaTeX",
+          "description": "ترميز نظرية الأعداد في LaTeX: القابلية للقسمة، التطابق ومجموعات الأعداد.",
+          "keywords": "نظرية الأعداد LaTeX، قابلية القسمة LaTeX، باقي القسمة LaTeX، تطابق LaTeX، عدد أولي LaTeX، القاسم المشترك الأكبر LaTeX، المضاعف المشترك الأصغر LaTeX"
+        },
+        "accents": {
+          "title": "علامات التشكيل LaTeX",
+          "description": "علامات LaTeX: قبعة، شرطة، نقطة، موجة وعلامات تشكيلية أخرى.",
+          "keywords": "علامات LaTeX، قبعة LaTeX، شرطة LaTeX، نقطة LaTeX، موجة LaTeX، vec LaTeX، خط علوي LaTeX"
+        },
+        "boolean": {
+          "title": "رموز الجبر البولياني LaTeX",
+          "description": "ترميز الجبر البولياني في LaTeX: AND، OR، NOT، XOR وقيم الحقيقة.",
+          "keywords": "بولياني LaTeX، AND LaTeX، OR LaTeX، NOT LaTeX، XOR LaTeX، صحيح خطأ LaTeX، جبر بولياني LaTeX"
+        },
+        "summation": {
+          "title": "رموز المجموع والحاصل LaTeX",
+          "description": "ترميز المجموع والحاصل في LaTeX: المجاميع، الحواصل والمتسلسلات.",
+          "keywords": "مجموع LaTeX، حاصل ضرب LaTeX، ترميز المجموع LaTeX، سيغما LaTeX، ترميز باي LaTeX، متسلسلة LaTeX"
+        },
+        "trigonometry": {
+          "title": "رموز حساب المثلثات LaTeX",
+          "description": "الدوال المثلثية في LaTeX: جيب، جيب تمام، ظل والدوال العكسية.",
+          "keywords": "حساب المثلثات LaTeX، sin LaTeX، cos LaTeX، tan LaTeX، arcsin LaTeX، arccos LaTeX، arctan LaTeX، زائدي LaTeX"
+        },
+        "topology": {
+          "title": "رموز الطوبولوجيا LaTeX",
+          "description": "ترميز الطوبولوجيا في LaTeX: المجموعات المفتوحة، الإغلاق، الداخل والحدود.",
+          "keywords": "طوبولوجيا LaTeX، مجموعة مفتوحة LaTeX، مجموعة مغلقة LaTeX، إغلاق LaTeX، داخل LaTeX، حدود LaTeX"
+        },
+        "finance": {
+          "title": "رموز المالية LaTeX - الترميز المالي",
+          "description": "رموز مالية في LaTeX: العملة، الفائدة والترميز الاقتصادي.",
+          "keywords": "مالية LaTeX، عملة LaTeX، دولار LaTeX، يورو LaTeX، نسبة مئوية LaTeX، سعر الفائدة LaTeX"
+        },
+        "machineLearning": {
+          "title": "رموز تعلم الآلة LaTeX - ترميز ML",
+          "description": "ترميز تعلم الآلة في LaTeX: الشبكات العصبية، دوال الخسارة والتحسين.",
+          "keywords": "تعلم الآلة LaTeX، شبكة عصبية LaTeX، دالة الخسارة LaTeX، انحدار التدرج LaTeX، ترميز ML LaTeX"
+        },
+        "latin": {
+          "title": "الحروف اللاتينية والخطوط LaTeX",
+          "description": "الحروف اللاتينية وأنماط الخطوط في LaTeX: غامق، مائل، خط اليد والمزيد.",
+          "keywords": "حروف لاتينية LaTeX، غامق LaTeX، مائل LaTeX، mathcal LaTeX، mathbb LaTeX، أنماط الخطوط LaTeX"
+        },
+        "complex": {
+          "title": "رموز الأعداد المركبة LaTeX",
+          "description": "ترميز الأعداد المركبة في LaTeX: الوحدة التخيلية، المرافق والشكل القطبي.",
+          "keywords": "أعداد مركبة LaTeX، وحدة تخيلية LaTeX، مرافق LaTeX، جزء حقيقي LaTeX، جزء تخيلي LaTeX، معامل LaTeX"
+        },
+        "graphTheory": {
+          "title": "رموز نظرية الرسم البياني LaTeX",
+          "description": "ترميز نظرية الرسم البياني في LaTeX: الرؤوس، الحواف، المسارات والدورات.",
+          "keywords": "نظرية الرسم البياني LaTeX، رأس LaTeX، حافة LaTeX، مسار LaTeX، دورة LaTeX، تجاور LaTeX، درجة LaTeX"
+        },
+        "combinatorics": {
+          "title": "رموز التوافيق LaTeX",
+          "description": "ترميز التوافيق في LaTeX: المضروب، ذات الحدين والتباديل.",
+          "keywords": "توافيق LaTeX، مضروب LaTeX، ذات الحدين LaTeX، تبديل LaTeX، توفيق LaTeX، اختيار LaTeX، binom LaTeX"
+        },
+        "specialFunctions": {
+          "title": "الدوال الخاصة LaTeX - غاما، زيتا، بيسل",
+          "description": "الدوال الخاصة في LaTeX: غاما، زيتا، بيسل ودوال الخطأ.",
+          "keywords": "دوال خاصة LaTeX، دالة غاما LaTeX، دالة زيتا LaTeX، دالة بيسل LaTeX، دالة الخطأ LaTeX"
+        },
+        "tensors": {
+          "title": "ترميز الموتر LaTeX - جمع أينشتاين",
+          "description": "ترميز الموتر في LaTeX: المؤشرات، الانكماشات والمشتقات المشتركة.",
+          "keywords": "موتر LaTeX، جمع أينشتاين LaTeX، مؤشرات الموتر LaTeX، مشتقة مشتركة LaTeX، دلتا كرونيكر LaTeX"
+        },
+        "differentialGeometry": {
+          "title": "رموز الهندسة التفاضلية LaTeX",
+          "description": "ترميز الهندسة التفاضلية في LaTeX: المتشعبات، الانحناء والترابطات.",
+          "keywords": "هندسة تفاضلية LaTeX، متشعب LaTeX، انحناء LaTeX، كريستوفل LaTeX، موتر ريمان LaTeX"
+        },
+        "modalLogic": {
+          "title": "رموز المنطق الشرطي LaTeX",
+          "description": "ترميز المنطق الشرطي في LaTeX: الضرورة، الإمكانية والعوامل الزمنية.",
+          "keywords": "منطق شرطي LaTeX، ضرورة LaTeX، إمكانية LaTeX، مربع LaTeX، معين LaTeX، منطق زمني LaTeX"
+        },
+        "gameTheory": {
+          "title": "رموز نظرية الألعاب LaTeX",
+          "description": "ترميز نظرية الألعاب في LaTeX: الاستراتيجيات، المكاسب والتوازن.",
+          "keywords": "نظرية الألعاب LaTeX، توازن ناش LaTeX، استراتيجية LaTeX، مكسب LaTeX، دالة المنفعة LaTeX"
+        },
+        "order": {
+          "title": "رموز علاقات الترتيب LaTeX",
+          "description": "علاقات الترتيب في LaTeX: الترتيب الجزئي، الشبكات والحد الأعلى/الأدنى.",
+          "keywords": "علاقات الترتيب LaTeX، ترتيب جزئي LaTeX، شبكة LaTeX، حد أعلى LaTeX، حد أدنى LaTeX"
+        },
+        "optimization": {
+          "title": "رموز التحسين LaTeX",
+          "description": "ترميز التحسين في LaTeX: التصغير، التكبير والقيود.",
+          "keywords": "تحسين LaTeX، تصغير LaTeX، تكبير LaTeX، argmin LaTeX، argmax LaTeX، قيد LaTeX"
+        },
+        "quantifiers": {
+          "title": "رموز المحددات الكمية LaTeX - لكل، يوجد",
+          "description": "رموز المحددات الكمية في LaTeX: المحدد الكمي العام والوجودي.",
+          "keywords": "محددات كمية LaTeX، لكل LaTeX، يوجد LaTeX، forall LaTeX، محدد وجودي LaTeX، محدد عام LaTeX"
+        },
+        "units": {
+          "title": "وحدات وقياسات LaTeX",
+          "description": "وحدات SI والقياسات في LaTeX: الدرجات، الثوابت الفيزيائية والوحدات.",
+          "keywords": "وحدات LaTeX، وحدات SI LaTeX، درجات LaTeX، ثوابت فيزيائية LaTeX، siunitx LaTeX، قياس LaTeX"
+        }
+      },
+      "templates": {
+        "main": {
+          "title": "قوالب LaTeX مجانية - سيرة ذاتية، CV، أطروحة، Beamer",
+          "description": "60+ قالب LaTeX احترافي. سيرة ذاتية، CV، أطروحة، عروض beamer والمزيد. تحميل مجاني.",
+          "keywords": "قوالب LaTeX، قوالب LaTeX مجانية، قالب السيرة الذاتية LaTeX، قالب CV LaTeX، قالب الأطروحة LaTeX، قالب beamer LaTeX، قوالب Overleaf، قوالب أكاديمية LaTeX، قالب العرض التقديمي LaTeX، قالب الورقة البحثية LaTeX، قالب الواجب LaTeX، قالب الملصق LaTeX، قالب الرسالة LaTeX"
+        },
+        "academic": {
+          "title": "قوالب LaTeX الأكاديمية - أوراق بحثية، أطروحة، رسائل",
+          "description": "قوالب LaTeX أكاديمية مجانية للأوراق البحثية والأطروحات والرسائل والمؤتمرات.",
+          "keywords": "قوالب أكاديمية LaTeX، قالب ورقة بحثية LaTeX، قالب أطروحة LaTeX، قالب رسالة LaTeX، قالب مقالة مجلة، ورقة مؤتمر LaTeX، قالب IEEE LaTeX، قالب ACM، مقالة علمية LaTeX، أطروحة دكتوراه LaTeX، رسالة ماجستير LaTeX"
+        },
+        "presentations": {
+          "title": "قوالب العروض التقديمية LaTeX - شرائح Beamer",
+          "description": "قوالب beamer LaTeX مجانية. شرائح احترافية للمحاضرات الأكاديمية والمؤتمرات.",
+          "keywords": "قالب beamer LaTeX، قالب عرض تقديمي LaTeX، شرائح beamer، شرائح LaTeX، عرض تقديمي أكاديمي، شرائح مؤتمر LaTeX، ثيمات beamer، أمثلة beamer، بديل PowerPoint LaTeX"
+        },
+        "resumeCV": {
+          "title": "قوالب LaTeX السيرة الذاتية - CV احترافي",
+          "description": "قوالب سيرة ذاتية و CV LaTeX مجانية. تصميمات حديثة واحترافية لطلبات التوظيف.",
+          "keywords": "قالب السيرة الذاتية LaTeX، قالب CV LaTeX، سيرة ذاتية LaTeX، سيرة ذاتية احترافية LaTeX، CV حديث LaTeX، CV أكاديمي LaTeX، سيرة ذاتية صفحة واحدة LaTeX، moderncv، europass LaTeX"
+        },
+        "math": {
+          "title": "قوالب LaTeX الرياضية - معادلات، براهين، مسائل",
+          "description": "قوالب LaTeX للوثائق الرياضية: مجموعات المسائل، البراهين، النظريات.",
+          "keywords": "قالب رياضيات LaTeX، قالب معادلات LaTeX، قالب مسائل، قالب واجب LaTeX، قالب برهان LaTeX، قالب نظرية، ورقة صيغ LaTeX، قالب امتحان LaTeX"
+        },
+        "reports": {
+          "title": "قوالب التقارير LaTeX - تقنية، مختبر، مشروع",
+          "description": "قوالب LaTeX احترافية للتقارير الفنية وتقارير المختبر وتوثيق المشاريع.",
+          "keywords": "قالب تقرير LaTeX، تقرير تقني LaTeX، قالب تقرير مختبر، تقرير مشروع LaTeX، تقرير أعمال LaTeX، قالب تقرير سنوي، تقرير بحث LaTeX"
+        },
+        "education": {
+          "title": "قوالب LaTeX التعليمية - واجبات، امتحانات، مناهج",
+          "description": "قوالب LaTeX للمعلمين والطلاب: واجبات، امتحانات، مناهج، ملاحظات محاضرات.",
+          "keywords": "قالب واجب LaTeX، قالب امتحان LaTeX، قالب منهج دراسي LaTeX، قالب ملاحظات محاضرة، مواد الدورة LaTeX، قالب اختبار LaTeX، دليل دراسة LaTeX، قالب بطاقات تعليمية LaTeX"
+        },
+        "letters": {
+          "title": "قوالب الرسائل LaTeX - خطابات تغطية، رسمية",
+          "description": "قوالب رسائل LaTeX احترافية لخطابات التغطية والمراسلات الرسمية.",
+          "keywords": "قالب رسالة LaTeX، خطاب تغطية LaTeX، قالب رسالة رسمية، خطاب توصية LaTeX، رسالة أعمال LaTeX، خطاب طلب LaTeX، خطاب مرجعي LaTeX"
+        },
+        "business": {
+          "title": "قوالب LaTeX الأعمال - خطط، مقترحات، فواتير",
+          "description": "قوالب LaTeX لوثائق الأعمال: خطط العمل، المقترحات، الفواتير، المذكرات.",
+          "keywords": "قالب أعمال LaTeX، خطة عمل LaTeX، قالب مقترح LaTeX، قالب فاتورة LaTeX، قالب عقد، قالب مذكرة LaTeX، بطاقة أعمال LaTeX، مقترح مشروع LaTeX"
+        },
+        "other": {
+          "title": "قوالب LaTeX - كتب، ملصقات، نشرات",
+          "description": "قوالب LaTeX متنوعة: كتب، ملصقات، نشرات إخبارية، تقاويم ووثائق إبداعية.",
+          "keywords": "قالب كتاب LaTeX، قالب ملصق LaTeX، قالب نشرة إخبارية LaTeX، قالب تقويم LaTeX، قالب منشور LaTeX، قالب وصفة LaTeX، قالب نعي LaTeX"
+        }
+      }
+    },
     "templateCode": {
       "placeholders": {
         "authorName": "اسم المؤلف",

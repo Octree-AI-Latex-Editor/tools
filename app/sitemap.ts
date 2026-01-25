@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { templates as templateList } from '@/lib/templates'
+import { LOCALES, DEFAULT_LOCALE } from '@/lib/i18n/config'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://tools.useoctree.com'
@@ -13,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'image-to-tikz',
     'latex-preview',
     'latex-to-markdown',
+    'latex-word-counter',
     'markdown-to-latex',
     'math-to-latex',
     'mathml-to-latex',
@@ -21,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'pgfplots-generator',
     'table-to-latex',
     'tikz-generator',
+    'arxiv-to-latex',
   ]
 
   // All symbol category routes
@@ -67,46 +70,60 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Get all template slugs from shared source
   const templates = templateList.map(t => t.slug)
 
-  const toolUrls = tools.map(tool => ({
-    url: `${baseUrl}/tools/${tool}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: 0.8,
-  }))
+  // Helper to generate URL for a given path and locale
+  const getLocalizedUrl = (path: string, locale: string) => {
+    if (locale === DEFAULT_LOCALE) {
+      return `${baseUrl}${path}`
+    }
+    return `${baseUrl}/${locale}${path}`
+  }
 
-  const symbolUrls = symbols.map(symbol => ({
-    url: `${baseUrl}/symbols/${symbol}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }))
+  // Helper to generate alternates for all locales
+  const getAlternates = (path: string) => ({
+    languages: Object.fromEntries(
+      LOCALES.map(locale => [
+        locale,
+        getLocalizedUrl(path, locale)
+      ])
+    )
+  })
 
-  const templateUrls = templates.map(template => ({
-    url: `${baseUrl}/templates/${template}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }))
+  // Generate URLs for all locales for a given path
+  const generateLocalizedUrls = (
+    path: string,
+    changeFrequency: 'daily' | 'weekly' | 'monthly',
+    priority: number
+  ): MetadataRoute.Sitemap => {
+    return LOCALES.map(locale => ({
+      url: getLocalizedUrl(path, locale),
+      lastModified: new Date(),
+      changeFrequency,
+      priority: locale === DEFAULT_LOCALE ? priority : priority - 0.1,
+      alternates: getAlternates(path),
+    }))
+  }
+
+  // Generate all URLs
+  const homeUrls = generateLocalizedUrls('', 'daily', 1)
+  const templatesIndexUrls = generateLocalizedUrls('/templates', 'weekly', 0.9)
+  const symbolsIndexUrls = generateLocalizedUrls('/symbols', 'weekly', 0.9)
+
+  const toolUrls = tools.flatMap(tool => 
+    generateLocalizedUrls(`/tools/${tool}`, 'weekly', 0.8)
+  )
+
+  const symbolUrls = symbols.flatMap(symbol => 
+    generateLocalizedUrls(`/symbols/${symbol}`, 'monthly', 0.7)
+  )
+
+  const templateUrls = templates.flatMap(template => 
+    generateLocalizedUrls(`/templates/${template}`, 'monthly', 0.7)
+  )
 
   return [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'daily',
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/templates`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/symbols`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
+    ...homeUrls,
+    ...templatesIndexUrls,
+    ...symbolsIndexUrls,
     ...toolUrls,
     ...symbolUrls,
     ...templateUrls,

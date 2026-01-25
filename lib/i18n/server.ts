@@ -44,7 +44,7 @@ export async function getMessages(locale: Locale) {
   try {
     const messages = await import(`../../messages/${locale}.json`);
     return messages.default;
-  } catch (error) {
+  } catch {
     // Fallback to English if locale file doesn't exist
     const fallback = await import(`../../messages/${DEFAULT_LOCALE}.json`);
     return fallback.default;

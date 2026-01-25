@@ -16,9 +16,7 @@ if (!Promise.withResolvers) {
 
     return {
       promise,
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       resolve: resolve!,
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       reject: reject!,
     };
   };

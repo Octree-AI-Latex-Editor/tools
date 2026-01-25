@@ -1,19 +1,57 @@
 "use client";
 
 import { Loader2, AlertCircle } from "lucide-react";
-import { useState } from "react";
-import { Document, Page, pdfjs } from "react-pdf";
+import { useState, useEffect, useRef } from "react";
+import { cn } from "@/lib/utils";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
-import { cn } from "@/lib/utils";
-
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 interface PDFPreviewProps {
   pdfUrl: string;
   width?: number;
   compact?: boolean;
   firstPageOnly?: boolean;
+}
+
+// Lazy load react-pdf components
+type PDFDocumentComponent = React.ComponentType<{
+  file: string;
+  onLoadSuccess: (data: { numPages: number }) => void;
+  onLoadError: (error: Error) => void;
+  className?: string;
+  loading?: React.ReactNode;
+  error?: React.ReactNode;
+  children?: React.ReactNode;
+}>;
+
+type PDFPageComponent = React.ComponentType<{
+  pageNumber: number;
+  renderTextLayer?: boolean;
+  renderAnnotationLayer?: boolean;
+  className?: string;
+  width?: number;
+  loading?: React.ReactNode;
+}>;
+
+let Document: PDFDocumentComponent | null = null;
+let Page: PDFPageComponent | null = null;
+let pdfjsConfigured = false;
+
+async function loadPdfJs() {
+  if (Document && Page) return { Document, Page };
+  
+  const reactPdf = await import('react-pdf');
+  const { pdfjs } = reactPdf;
+  
+  if (!pdfjsConfigured) {
+    pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+    pdfjsConfigured = true;
+  }
+  
+  Document = reactPdf.Document;
+  Page = reactPdf.Page;
+  
+  return { Document, Page };
 }
 
 export default function PDFPreview({
@@ -25,9 +63,35 @@ export default function PDFPreview({
   const [numPages, setNumPages] = useState<number>(0);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+  const [pdfReady, setPdfReady] = useState(false);
+  const [Components, setComponents] = useState<{ Document: PDFDocumentComponent; Page: PDFPageComponent } | null>(null);
+  const mountedRef = useRef(true);
 
-  // Validate pdfUrl after hooks
-  if (!pdfUrl || typeof pdfUrl !== 'string') {
+  useEffect(() => {
+    mountedRef.current = true;
+    
+    loadPdfJs()
+      .then((comps) => {
+        if (mountedRef.current) {
+          setComponents(comps);
+          setPdfReady(true);
+        }
+      })
+      .catch((err) => {
+        console.error('Failed to load PDF library:', err);
+        if (mountedRef.current) {
+          setError('Failed to load PDF viewer');
+          setIsLoading(false);
+        }
+      });
+
+    return () => {
+      mountedRef.current = false;
+    };
+  }, []);
+
+  // Validate pdfUrl
+  if (!pdfUrl || typeof pdfUrl !== 'string' || pdfUrl.trim() === '') {
     return (
       <div className="flex flex-col items-center justify-center gap-2 p-4 w-full h-full min-h-[200px]">
         <AlertCircle className="w-10 h-10 text-red-400" />
@@ -36,19 +100,33 @@ export default function PDFPreview({
     );
   }
 
+  // Show loading while PDF library is being loaded
+  if (!pdfReady || !Components) {
+    return (
+      <div className="flex flex-col items-center justify-center gap-3 w-full h-full min-h-[200px] bg-gray-50">
+        <Loader2 className="size-6 animate-spin text-gray-400" />
+        {!compact && (
+          <p className="text-sm text-gray-500 font-medium">Loading...</p>
+        )}
+      </div>
+    );
+  }
+
+  const { Document: DocComponent, Page: PageComponent } = Components;
+
   function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
     setNumPages(numPages);
     setIsLoading(false);
     setError(null);
   }
 
-  function onDocumentLoadError(error: Error) {
-    console.error("PDF load error:", error);
+  function onDocumentLoadError(err: Error) {
+    console.error("PDF load error:", err);
     setError("Failed to load PDF");
     setIsLoading(false);
   }
 
-  const pagesToRender = firstPageOnly ? 1 : numPages;
+  const pagesToRender = firstPageOnly ? 1 : Math.max(numPages, 0);
 
   return (
     <div
@@ -77,7 +155,7 @@ export default function PDFPreview({
         </div>
       )}
 
-      <Document
+      <DocComponent
         file={pdfUrl}
         onLoadSuccess={onDocumentLoadSuccess}
         onLoadError={onDocumentLoadError}
@@ -90,8 +168,8 @@ export default function PDFPreview({
           </div>
         }
       >
-        {Array.from(new Array(pagesToRender), (el, index) => (
-          <Page
+        {pagesToRender > 0 && Array.from({ length: pagesToRender }, (_, index) => (
+          <PageComponent
             key={`page_${index + 1}`}
             pageNumber={index + 1}
             renderTextLayer={false}
@@ -108,7 +186,7 @@ export default function PDFPreview({
             }
           />
         ))}
-      </Document>
+      </DocComponent>
     </div>
   );
 }
