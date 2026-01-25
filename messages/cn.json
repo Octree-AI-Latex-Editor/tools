@@ -690,6 +690,64 @@
       "useInOctree": "在 Octree 中使用",
       "learnMore": "了解更多"
     },
+    "metadata": {
+      "site": {
+        "title": "免费 LaTeX 工具 - 图片转 LaTeX, 60+ 模板 | Octree",
+        "description": "免费 LaTeX 工具：AI 驱动的数学公式转换器，60+ 专业模板（简历、CV、论文、beamer），实时 PDF 预览。",
+        "keywords": "手写数学转 LaTeX, 图片转 LaTeX, PDF 转 LaTeX, 公式转 LaTeX, 免费 LaTeX 转换器, AI LaTeX 生成器, LaTeX 引用生成器, TikZ 生成器, 免费 LaTeX 模板, LaTeX 简历模板, LaTeX 论文模板"
+      },
+      "tools": {
+        "imageToLatex": {
+          "title": "图片转 LaTeX 转换器 - 免费 AI 工具",
+          "description": "即时将手写数学公式图片转换为干净的 LaTeX 代码。AI 驱动，免费，无需注册。",
+          "keywords": "图片转 LaTeX, 照片转 LaTeX, 手写数学转 LaTeX, 扫描数学转 LaTeX, OCR LaTeX, 数学图片转换器"
+        },
+        "tikzGenerator": {
+          "title": "TikZ 图表生成器 - AI 驱动的 LaTeX 图形",
+          "description": "使用 AI 生成 TikZ 图表。描述您的图表并即时获取干净的 TikZ LaTeX 代码。",
+          "keywords": "TikZ 生成器, TikZ 在线, TikZ 示例, TikZ 流程图, TikZ 图表, TikZ 神经网络, AI TikZ 生成器"
+        },
+        "citationGenerator": {
+          "title": "LaTeX 引用生成器 - BibTeX 生成器",
+          "description": "从 DOI、URL 或文章详情生成 BibTeX 引用。免费 LaTeX 引用工具。",
+          "keywords": "LaTeX 引用生成器, BibTeX 生成器, DOI 转 BibTeX, 引用生成器, 参考文献生成器, 书目生成器"
+        },
+        "latexPreview": {
+          "title": "LaTeX 实时预览 - 免费在线编辑器",
+          "description": "实时编写和预览 LaTeX 文档。免费在线 LaTeX 编辑器，即时 PDF 输出。",
+          "keywords": "LaTeX 预览, LaTeX 在线编辑器, LaTeX 实时预览, 在线 LaTeX 编译器, LaTeX 转 PDF, 免费 LaTeX 编辑器"
+        },
+        "pdfToLatex": {
+          "title": "PDF 转 LaTeX 转换器 - 从 PDF 提取 LaTeX",
+          "description": "将包含数学内容的 PDF 文档转换为干净的 LaTeX 代码。AI 驱动提取。",
+          "keywords": "PDF 转 LaTeX, 转换 PDF 到 LaTeX, 从 PDF 提取 LaTeX, PDF 数学转换器, PDF 公式提取器"
+        }
+      },
+      "symbols": {
+        "main": {
+          "title": "LaTeX 符号 - 完整参考指南",
+          "description": "浏览并复制 LaTeX 符号：希腊字母、数学运算符、箭头等。",
+          "keywords": "LaTeX 符号, 数学符号, 希腊字母 LaTeX, LaTeX 运算符, LaTeX 箭头, 符号参考"
+        },
+        "math": {
+          "title": "LaTeX 数学符号 - 运算符和关系",
+          "description": "完整的 LaTeX 数学符号列表。运算符、关系、方程式及可复制代码。",
+          "keywords": "数学符号 LaTeX, 数学运算符, LaTeX 加减, LaTeX 分数, LaTeX 平方根, LaTeX 求和, LaTeX 积分"
+        },
+        "greek": {
+          "title": "LaTeX 中的希腊字母 - 从 Alpha 到 Omega",
+          "description": "完整的希腊字母及其 LaTeX 命令列表。复制粘贴 alpha、beta、gamma 等。",
+          "keywords": "希腊字母 LaTeX, alpha LaTeX, beta LaTeX, gamma LaTeX, 希腊字母表 LaTeX, 希腊符号"
+        }
+      },
+      "templates": {
+        "main": {
+          "title": "免费 LaTeX 模板 - 简历、CV、论文、Beamer",
+          "description": "60+ 专业 LaTeX 模板。简历、CV、论文、beamer 演示文稿等。免费下载。",
+          "keywords": "LaTeX 模板, 免费 LaTeX 模板, LaTeX 简历模板, LaTeX CV 模板, LaTeX 论文模板, LaTeX beamer 模板, Overleaf 模板"
+        }
+      }
+    },
     "templateCode": {
       "placeholders": {
         "authorName": "作者姓名",

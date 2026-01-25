@@ -714,6 +714,64 @@
       "useInOctree": "Utiliser dans Octree",
       "learnMore": "En Savoir Plus"
     },
+    "metadata": {
+      "site": {
+        "title": "Outils LaTeX Gratuits - Convertir Image en LaTeX, 60+ Modèles | Octree",
+        "description": "Outils LaTeX gratuits : convertisseur d'équations mathématiques par IA, 60+ modèles professionnels (CV, thèse, beamer), aperçu PDF en direct.",
+        "keywords": "convertir maths en LaTeX, image en LaTeX, PDF en LaTeX, équation en LaTeX, convertisseur LaTeX gratuit, générateur LaTeX IA, générateur de citations LaTeX, générateur TikZ, modèles LaTeX gratuits, modèle CV LaTeX, modèle thèse LaTeX"
+      },
+      "tools": {
+        "imageToLatex": {
+          "title": "Convertisseur Image en LaTeX - Outil IA Gratuit",
+          "description": "Convertissez des images d'équations mathématiques manuscrites en code LaTeX propre instantanément. IA, gratuit, sans inscription.",
+          "keywords": "image en LaTeX, photo en LaTeX, maths manuscrites en LaTeX, scanner maths en LaTeX, OCR LaTeX, convertisseur d'images mathématiques"
+        },
+        "tikzGenerator": {
+          "title": "Générateur de Diagrammes TikZ - Graphiques LaTeX par IA",
+          "description": "Générez des diagrammes TikZ avec l'IA. Décrivez votre diagramme et obtenez du code TikZ LaTeX propre instantanément.",
+          "keywords": "générateur TikZ, TikZ en ligne, exemples TikZ, organigramme TikZ, diagramme TikZ, réseau neuronal TikZ, générateur TikZ IA"
+        },
+        "citationGenerator": {
+          "title": "Générateur de Citations LaTeX - Générateur BibTeX",
+          "description": "Générez des citations BibTeX à partir de DOIs, URLs ou détails d'articles. Outil de citation LaTeX gratuit.",
+          "keywords": "générateur de citations LaTeX, générateur BibTeX, DOI vers BibTeX, générateur de citations, générateur de références, générateur de bibliographie"
+        },
+        "latexPreview": {
+          "title": "Aperçu LaTeX en Direct - Éditeur en Ligne Gratuit",
+          "description": "Rédigez et prévisualisez des documents LaTeX en temps réel. Éditeur LaTeX en ligne gratuit avec sortie PDF instantanée.",
+          "keywords": "aperçu LaTeX, éditeur LaTeX en ligne, aperçu LaTeX en direct, compilateur LaTeX en ligne, LaTeX vers PDF, éditeur LaTeX gratuit"
+        },
+        "pdfToLatex": {
+          "title": "Convertisseur PDF en LaTeX - Extraire LaTeX du PDF",
+          "description": "Convertissez des documents PDF avec contenu mathématique en code LaTeX propre. Extraction par IA.",
+          "keywords": "PDF en LaTeX, convertir PDF en LaTeX, extraire LaTeX du PDF, convertisseur maths PDF, extracteur d'équations PDF"
+        }
+      },
+      "symbols": {
+        "main": {
+          "title": "Symboles LaTeX - Guide de Référence Complet",
+          "description": "Parcourez et copiez les symboles LaTeX : lettres grecques, opérateurs mathématiques, flèches et plus.",
+          "keywords": "symboles LaTeX, symboles mathématiques, lettres grecques LaTeX, opérateurs LaTeX, flèches LaTeX, référence des symboles"
+        },
+        "math": {
+          "title": "Symboles Mathématiques LaTeX - Opérateurs et Relations",
+          "description": "Liste complète des symboles mathématiques LaTeX. Opérateurs, relations, équations avec code à copier.",
+          "keywords": "symboles mathématiques LaTeX, opérateurs mathématiques, LaTeX plus moins, fraction LaTeX, racine carrée LaTeX, sommation LaTeX, intégrale LaTeX"
+        },
+        "greek": {
+          "title": "Lettres Grecques en LaTeX - Alpha à Oméga",
+          "description": "Liste complète des lettres grecques et leurs commandes LaTeX. Copiez-collez alpha, bêta, gamma et plus.",
+          "keywords": "lettres grecques LaTeX, alpha LaTeX, bêta LaTeX, gamma LaTeX, alphabet grec LaTeX, symboles grecs"
+        }
+      },
+      "templates": {
+        "main": {
+          "title": "Modèles LaTeX Gratuits - CV, Thèse, Beamer",
+          "description": "60+ modèles LaTeX professionnels. CV, thèse, présentations beamer et plus. Téléchargement gratuit.",
+          "keywords": "modèles LaTeX, modèles LaTeX gratuits, modèle CV LaTeX, modèle thèse LaTeX, modèle beamer LaTeX, modèles Overleaf"
+        }
+      }
+    },
     "templateCode": {
       "placeholders": {
         "authorName": "Nom de l'auteur",

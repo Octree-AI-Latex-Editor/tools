@@ -543,6 +543,64 @@
       "useInOctree": "استخدم في Octree",
       "learnMore": "اعرف المزيد"
     },
+    "metadata": {
+      "site": {
+        "title": "أدوات LaTeX مجانية - تحويل الصورة إلى LaTeX، 60+ قالب | Octree",
+        "description": "أدوات LaTeX مجانية: محول المعادلات الرياضية بالذكاء الاصطناعي، 60+ قالب احترافي (سيرة ذاتية، CV، أطروحة، beamer)، معاينة PDF مباشرة.",
+        "keywords": "تحويل الرياضيات إلى LaTeX، صورة إلى LaTeX، PDF إلى LaTeX، معادلة إلى LaTeX، محول LaTeX مجاني، مولد LaTeX بالذكاء الاصطناعي، مولد الاستشهادات LaTeX، مولد TikZ، قوالب LaTeX مجانية، قالب السيرة الذاتية LaTeX، قالب الأطروحة LaTeX"
+      },
+      "tools": {
+        "imageToLatex": {
+          "title": "محول الصورة إلى LaTeX - أداة ذكاء اصطناعي مجانية",
+          "description": "حول صور المعادلات الرياضية المكتوبة بخط اليد إلى كود LaTeX نظيف فوراً. بالذكاء الاصطناعي، مجاني، بدون تسجيل.",
+          "keywords": "صورة إلى LaTeX، صورة فوتوغرافية إلى LaTeX، رياضيات مكتوبة إلى LaTeX، مسح الرياضيات إلى LaTeX، OCR LaTeX، محول صور الرياضيات"
+        },
+        "tikzGenerator": {
+          "title": "مولد مخططات TikZ - رسومات LaTeX بالذكاء الاصطناعي",
+          "description": "أنشئ مخططات TikZ باستخدام الذكاء الاصطناعي. صف مخططك واحصل على كود TikZ LaTeX نظيف فوراً.",
+          "keywords": "مولد TikZ، TikZ أونلاين، أمثلة TikZ، مخطط تدفق TikZ، مخطط TikZ، شبكة عصبية TikZ، مولد TikZ بالذكاء الاصطناعي"
+        },
+        "citationGenerator": {
+          "title": "مولد الاستشهادات LaTeX - مولد BibTeX",
+          "description": "أنشئ استشهادات BibTeX من DOIs أو URLs أو تفاصيل المقالات. أداة استشهاد LaTeX مجانية.",
+          "keywords": "مولد استشهادات LaTeX، مولد BibTeX، DOI إلى BibTeX، مولد الاستشهادات، مولد المراجع، مولد قائمة المراجع"
+        },
+        "latexPreview": {
+          "title": "معاينة LaTeX المباشرة - محرر أونلاين مجاني",
+          "description": "اكتب وعاين مستندات LaTeX في الوقت الفعلي. محرر LaTeX أونلاين مجاني مع إخراج PDF فوري.",
+          "keywords": "معاينة LaTeX، محرر LaTeX أونلاين، معاينة LaTeX مباشرة، مترجم LaTeX أونلاين، LaTeX إلى PDF، محرر LaTeX مجاني"
+        },
+        "pdfToLatex": {
+          "title": "محول PDF إلى LaTeX - استخراج LaTeX من PDF",
+          "description": "حول مستندات PDF ذات المحتوى الرياضي إلى كود LaTeX نظيف. استخراج بالذكاء الاصطناعي.",
+          "keywords": "PDF إلى LaTeX، تحويل PDF إلى LaTeX، استخراج LaTeX من PDF، محول رياضيات PDF، مستخرج المعادلات PDF"
+        }
+      },
+      "symbols": {
+        "main": {
+          "title": "رموز LaTeX - دليل مرجعي كامل",
+          "description": "تصفح وانسخ رموز LaTeX: الحروف اليونانية، العوامل الرياضية، الأسهم والمزيد.",
+          "keywords": "رموز LaTeX، رموز رياضية، الحروف اليونانية LaTeX، عوامل LaTeX، أسهم LaTeX، مرجع الرموز"
+        },
+        "math": {
+          "title": "رموز LaTeX الرياضية - العوامل والعلاقات",
+          "description": "قائمة كاملة بالرموز الرياضية LaTeX. العوامل، العلاقات، المعادلات مع الكود للنسخ.",
+          "keywords": "رموز رياضية LaTeX، عوامل رياضية، LaTeX زائد ناقص، كسر LaTeX، جذر تربيعي LaTeX، مجموع LaTeX، تكامل LaTeX"
+        },
+        "greek": {
+          "title": "الحروف اليونانية في LaTeX - من ألفا إلى أوميغا",
+          "description": "قائمة كاملة بالحروف اليونانية وأوامر LaTeX الخاصة بها. انسخ والصق ألفا، بيتا، غاما والمزيد.",
+          "keywords": "الحروف اليونانية LaTeX، ألفا LaTeX، بيتا LaTeX، غاما LaTeX، الأبجدية اليونانية LaTeX، الرموز اليونانية"
+        }
+      },
+      "templates": {
+        "main": {
+          "title": "قوالب LaTeX مجانية - سيرة ذاتية، CV، أطروحة، Beamer",
+          "description": "60+ قالب LaTeX احترافي. سيرة ذاتية، CV، أطروحة، عروض beamer والمزيد. تحميل مجاني.",
+          "keywords": "قوالب LaTeX، قوالب LaTeX مجانية، قالب السيرة الذاتية LaTeX، قالب CV LaTeX، قالب الأطروحة LaTeX، قالب beamer LaTeX، قوالب Overleaf"
+        }
+      }
+    },
     "templateCode": {
       "placeholders": {
         "authorName": "اسم المؤلف",

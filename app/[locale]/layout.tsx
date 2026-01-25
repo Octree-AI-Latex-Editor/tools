@@ -7,9 +7,14 @@ import ClientBootstrap from "@/components/ClientBootstrap";
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
-import { getMessages, setRequestLocale } from 'next-intl/server';
+import { getMessages, setRequestLocale, getTranslations } from 'next-intl/server';
 import { routing } from '@/src/i18n/routing';
 import { notFound } from 'next/navigation';
+
+type Props = {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+};
 
 const satoshi = localFont({
   src: [
@@ -25,114 +30,65 @@ const satoshi = localFont({
   display: 'swap',
 });
 
-export const metadata: Metadata = {
-  title: "Free LaTeX Tools - Convert Image to LaTeX, 60+ Templates, PDF Preview | Octree",
-  description: "Free LaTeX tools: AI-powered math equation converter, 60+ professional templates (resume, CV, thesis, beamer, obituary), live PDF preview. Convert handwritten math, images & PDFs to LaTeX instantly. Perfect for academics, students & researchers.",
-  keywords: [
-    // Conversion tools - high intent
-    "convert handwritten math to LaTeX",
-    "image to LaTeX converter",
-    "PDF to LaTeX converter",
-    "math equation to LaTeX converter",
-    "convert math to LaTeX",
-    "LaTeX math converter",
-    "math formula to LaTeX",
-    "convert math equation to LaTeX online",
-    "handwritten equation to LaTeX",
-    "math text to LaTeX converter",
-    "free LaTeX converter",
-    "online math to LaTeX",
-    "AI LaTeX generator",
-    "photo to LaTeX",
-    "picture to LaTeX equation",
-    
-    // Additional tools
-    "LaTeX citation generator",
-    "TikZ generator",
-    "tikz online",
-    "tikz examples",
-    "tikz flowchart",
-    "tikz diagram",
-    "tikz neural network",
-    "tikz block diagram",
-    "tikz tree",
-    "tikz graph",
-    "image to tikz",
-    "Markdown to LaTeX",
-    "HTML to LaTeX",
-    "MathML to LaTeX",
-    "LaTeX live preview",
-    "LaTeX online editor",
-    "free LaTeX templates",
-    "LaTeX resume template",
-    "LaTeX CV template",
-    "overleaf template",
-    "LaTeX research paper template",
-    "LaTeX thesis template",
-    "LaTeX beamer template",
-    "LaTeX presentation template",
-    "LaTeX homework template",
-    "LaTeX poster template",
-    "LaTeX book template",
-    "LaTeX report template",
-    "LaTeX business plan template",
-    "LaTeX memo template",
-    "LaTeX manuscript template",
-    "LaTeX recipe template",
-    "LaTeX flyer template",
-    "LaTeX business card template",
-    "LaTeX calendar template",
-    "LaTeX notes template",
-    "LaTeX exam template",
-    "LaTeX assignment template",
-    "LaTeX letter template",
-    "LaTeX cover letter template",
-    
-    // New templates
-    "LaTeX obituary template",
-    "obituary template LaTeX",
-    "memorial template LaTeX",
-    "funeral program template LaTeX",
-    "interactive flashcard LaTeX",
-    "LaTeX quiz template",
-    "LaTeX study guide template",
-    "click to reveal LaTeX",
-    "redacted document LaTeX",
-  ],
-  metadataBase: new URL('https://tools.useoctree.com'),
-  alternates: {
-    canonical: '/',
-  },
-  openGraph: {
-    title: "Free LaTeX Tools - Math Converter & 60+ Templates",
-    description: "AI-powered math equation converter + 60+ free LaTeX templates (resume, CV, thesis, beamer, obituary). Convert handwritten math, images & PDFs to LaTeX instantly with live preview.",
-    url: 'https://tools.useoctree.com',
-    siteName: 'Octree LaTeX Tools',
-    locale: 'en_US',
-    type: "website",
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: "Free LaTeX Tools - Math Converter & 60+ Templates",
-    description: "AI-powered math equation converter + 60+ free LaTeX templates (resume, CV, thesis, beamer, obituary). Convert handwritten math, images & PDFs to LaTeX instantly with live preview.",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
+const localeToOgLocale: Record<string, string> = {
+  en: 'en_US',
+  es: 'es_ES',
+  fr: 'fr_FR',
+  pt: 'pt_BR',
+  cn: 'zh_CN',
+  ar: 'ar_SA',
 };
 
-type Props = {
-  children: React.ReactNode;
-  params: Promise<{ locale: string }>;
-};
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+  
+  const title = t('site.title');
+  const description = t('site.description');
+  const keywords = t('site.keywords');
+  
+  return {
+    title,
+    description,
+    keywords: keywords.split(', '),
+    metadataBase: new URL('https://tools.useoctree.com'),
+    alternates: {
+      canonical: locale === 'en' ? '/' : `/${locale}`,
+      languages: {
+        'en': '/',
+        'es': '/es',
+        'fr': '/fr',
+        'pt': '/pt',
+        'zh': '/cn',
+        'ar': '/ar',
+      },
+    },
+    openGraph: {
+      title,
+      description,
+      url: 'https://tools.useoctree.com',
+      siteName: 'Octree LaTeX Tools',
+      locale: localeToOgLocale[locale] || 'en_US',
+      type: "website",
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+  };
+}
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));

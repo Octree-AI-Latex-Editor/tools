@@ -887,6 +887,64 @@
     "useInOctree": "Use in Octree",
     "learnMore": "Learn More"
   },
+  "metadata": {
+    "site": {
+      "title": "Free LaTeX Tools - Convert Image to LaTeX, 60+ Templates, PDF Preview | Octree",
+      "description": "Free LaTeX tools: AI-powered math equation converter, 60+ professional templates (resume, CV, thesis, beamer), live PDF preview. Convert handwritten math, images & PDFs to LaTeX instantly.",
+      "keywords": "convert handwritten math to LaTeX, image to LaTeX converter, PDF to LaTeX converter, math equation to LaTeX, LaTeX math converter, free LaTeX converter, AI LaTeX generator, LaTeX citation generator, TikZ generator, free LaTeX templates, LaTeX resume template, LaTeX CV template, LaTeX thesis template, LaTeX beamer template"
+    },
+    "tools": {
+      "imageToLatex": {
+        "title": "Image to LaTeX Converter - Free AI-Powered Tool",
+        "description": "Convert images of handwritten math equations to clean LaTeX code instantly. AI-powered, free, no signup required.",
+        "keywords": "image to LaTeX, photo to LaTeX, picture to LaTeX, handwritten math to LaTeX, scan math to LaTeX, OCR LaTeX, math image converter"
+      },
+      "tikzGenerator": {
+        "title": "TikZ Diagram Generator - AI-Powered LaTeX Graphics",
+        "description": "Generate TikZ diagrams using AI. Describe your diagram and get clean TikZ LaTeX code instantly.",
+        "keywords": "TikZ generator, TikZ online, TikZ examples, TikZ flowchart, TikZ diagram, TikZ neural network, AI TikZ generator, TikZ code generator"
+      },
+      "citationGenerator": {
+        "title": "LaTeX Citation Generator - BibTeX Generator",
+        "description": "Generate BibTeX citations from DOIs, URLs, or article details. Free LaTeX citation tool.",
+        "keywords": "LaTeX citation generator, BibTeX generator, DOI to BibTeX, citation generator, reference generator, bibliography generator"
+      },
+      "latexPreview": {
+        "title": "LaTeX Live Preview - Free Online Editor",
+        "description": "Write and preview LaTeX documents in real-time. Free online LaTeX editor with instant PDF output.",
+        "keywords": "LaTeX preview, LaTeX online editor, LaTeX live preview, online LaTeX compiler, LaTeX to PDF, free LaTeX editor"
+      },
+      "pdfToLatex": {
+        "title": "PDF to LaTeX Converter - Extract LaTeX from PDF",
+        "description": "Convert PDF documents with mathematical content to clean LaTeX code. AI-powered extraction.",
+        "keywords": "PDF to LaTeX, convert PDF to LaTeX, extract LaTeX from PDF, PDF math converter, PDF equation extractor"
+      }
+    },
+    "symbols": {
+      "main": {
+        "title": "LaTeX Symbols - Complete Reference Guide",
+        "description": "Browse and copy LaTeX symbols: Greek letters, math operators, arrows, and more. Complete symbol reference.",
+        "keywords": "LaTeX symbols, math symbols, Greek letters LaTeX, LaTeX operators, LaTeX arrows, symbol reference, copy LaTeX symbols"
+      },
+      "math": {
+        "title": "LaTeX Math Symbols - Operators and Relations",
+        "description": "Complete list of LaTeX mathematical symbols. Operators, relations, equations with copy-paste code.",
+        "keywords": "math symbols LaTeX, mathematical operators, LaTeX plus minus, LaTeX fraction, LaTeX square root, LaTeX summation, LaTeX integral"
+      },
+      "greek": {
+        "title": "Greek Letters in LaTeX - Alpha to Omega",
+        "description": "Complete list of Greek letters and their LaTeX commands. Copy-paste alpha, beta, gamma, and more.",
+        "keywords": "Greek letters LaTeX, alpha LaTeX, beta LaTeX, gamma LaTeX, Greek alphabet LaTeX, Greek symbols"
+      }
+    },
+    "templates": {
+      "main": {
+        "title": "Free LaTeX Templates - Resume, CV, Thesis, Beamer",
+        "description": "60+ professional LaTeX templates. Resume, CV, thesis, beamer presentations, and more. Free download.",
+        "keywords": "LaTeX templates, free LaTeX templates, LaTeX resume template, LaTeX CV template, LaTeX thesis template, LaTeX beamer template, Overleaf templates"
+      }
+    }
+  },
   "templateCode": {
     "placeholders": {
       "authorName": "Author Name",

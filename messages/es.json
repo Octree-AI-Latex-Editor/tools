@@ -738,6 +738,64 @@
       "useInOctree": "Usar en Octree",
       "learnMore": "Más Información"
     },
+    "metadata": {
+      "site": {
+        "title": "Herramientas LaTeX Gratis - Convertir Imagen a LaTeX, 60+ Plantillas | Octree",
+        "description": "Herramientas LaTeX gratuitas: convertidor de ecuaciones matemáticas con IA, 60+ plantillas profesionales (currículum, CV, tesis, beamer), vista previa PDF en vivo.",
+        "keywords": "convertir matemáticas a LaTeX, imagen a LaTeX, PDF a LaTeX, ecuación a LaTeX, convertidor LaTeX gratis, generador LaTeX IA, generador de citas LaTeX, generador TikZ, plantillas LaTeX gratis, plantilla currículum LaTeX, plantilla CV LaTeX, plantilla tesis LaTeX"
+      },
+      "tools": {
+        "imageToLatex": {
+          "title": "Convertidor de Imagen a LaTeX - Herramienta IA Gratis",
+          "description": "Convierte imágenes de ecuaciones matemáticas escritas a mano a código LaTeX limpio al instante. Con IA, gratis, sin registro.",
+          "keywords": "imagen a LaTeX, foto a LaTeX, matemáticas escritas a LaTeX, escanear matemáticas a LaTeX, OCR LaTeX, convertidor de imágenes matemáticas"
+        },
+        "tikzGenerator": {
+          "title": "Generador de Diagramas TikZ - Gráficos LaTeX con IA",
+          "description": "Genera diagramas TikZ usando IA. Describe tu diagrama y obtén código TikZ LaTeX limpio al instante.",
+          "keywords": "generador TikZ, TikZ en línea, ejemplos TikZ, diagrama de flujo TikZ, diagrama TikZ, red neuronal TikZ, generador TikZ IA"
+        },
+        "citationGenerator": {
+          "title": "Generador de Citas LaTeX - Generador BibTeX",
+          "description": "Genera citas BibTeX desde DOIs, URLs o detalles de artículos. Herramienta de citas LaTeX gratuita.",
+          "keywords": "generador de citas LaTeX, generador BibTeX, DOI a BibTeX, generador de citas, generador de referencias, generador de bibliografía"
+        },
+        "latexPreview": {
+          "title": "Vista Previa LaTeX en Vivo - Editor en Línea Gratis",
+          "description": "Escribe y visualiza documentos LaTeX en tiempo real. Editor LaTeX en línea gratuito con salida PDF instantánea.",
+          "keywords": "vista previa LaTeX, editor LaTeX en línea, vista previa LaTeX en vivo, compilador LaTeX en línea, LaTeX a PDF, editor LaTeX gratis"
+        },
+        "pdfToLatex": {
+          "title": "Convertidor PDF a LaTeX - Extraer LaTeX de PDF",
+          "description": "Convierte documentos PDF con contenido matemático a código LaTeX limpio. Extracción con IA.",
+          "keywords": "PDF a LaTeX, convertir PDF a LaTeX, extraer LaTeX de PDF, convertidor de matemáticas PDF, extractor de ecuaciones PDF"
+        }
+      },
+      "symbols": {
+        "main": {
+          "title": "Símbolos LaTeX - Guía de Referencia Completa",
+          "description": "Navega y copia símbolos LaTeX: letras griegas, operadores matemáticos, flechas y más.",
+          "keywords": "símbolos LaTeX, símbolos matemáticos, letras griegas LaTeX, operadores LaTeX, flechas LaTeX, referencia de símbolos"
+        },
+        "math": {
+          "title": "Símbolos Matemáticos LaTeX - Operadores y Relaciones",
+          "description": "Lista completa de símbolos matemáticos LaTeX. Operadores, relaciones, ecuaciones con código para copiar.",
+          "keywords": "símbolos matemáticos LaTeX, operadores matemáticos, LaTeX más menos, fracción LaTeX, raíz cuadrada LaTeX, sumatoria LaTeX, integral LaTeX"
+        },
+        "greek": {
+          "title": "Letras Griegas en LaTeX - Alfa a Omega",
+          "description": "Lista completa de letras griegas y sus comandos LaTeX. Copia y pega alfa, beta, gamma y más.",
+          "keywords": "letras griegas LaTeX, alfa LaTeX, beta LaTeX, gamma LaTeX, alfabeto griego LaTeX, símbolos griegos"
+        }
+      },
+      "templates": {
+        "main": {
+          "title": "Plantillas LaTeX Gratis - Currículum, CV, Tesis, Beamer",
+          "description": "60+ plantillas LaTeX profesionales. Currículum, CV, tesis, presentaciones beamer y más. Descarga gratis.",
+          "keywords": "plantillas LaTeX, plantillas LaTeX gratis, plantilla currículum LaTeX, plantilla CV LaTeX, plantilla tesis LaTeX, plantilla beamer LaTeX, plantillas Overleaf"
+        }
+      }
+    },
     "templateCode": {
       "placeholders": {
         "authorName": "Author Name",
