@@ -21,6 +21,10 @@ const LANGUAGE_NAMES: Record<Locale, string> = {
   pt: 'Português',
   cn: '中文',
   ar: 'العربية',
+  de: 'Deutsch',
+  ja: '日本語',
+  it: 'Italiano',
+  ko: '한국어',
 };
 
 export default function LanguageSwitcher({ currentLocale }: LanguageSwitcherProps) {
