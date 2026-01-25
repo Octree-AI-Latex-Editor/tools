@@ -3,6 +3,8 @@
 import { Loader2, AlertCircle } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
+import "react-pdf/dist/Page/AnnotationLayer.css";
+import "react-pdf/dist/Page/TextLayer.css";
 
 interface PDFPreviewProps {
   pdfUrl: string;
@@ -38,20 +40,16 @@ let pdfjsConfigured = false;
 async function loadPdfJs() {
   if (Document && Page) return { Document, Page };
   
-  const pdfjs = await import('pdfjs-dist/legacy/build/pdf');
+  const reactPdf = await import('react-pdf');
+  const { pdfjs } = reactPdf;
   
   if (!pdfjsConfigured) {
-    pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+    pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
     pdfjsConfigured = true;
   }
   
-  const reactPdf = await import('react-pdf');
   Document = reactPdf.Document;
   Page = reactPdf.Page;
-  
-  // Import styles
-  await import('react-pdf/dist/Page/AnnotationLayer.css');
-  await import('react-pdf/dist/Page/TextLayer.css');
   
   return { Document, Page };
 }
