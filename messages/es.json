@@ -6,7 +6,11 @@
       "es": "Español",
       "pt": "Portugués",
       "cn": "Chino",
-      "ar": "Árabe"
+      "ar": "Árabe",
+      "de": "Alemán",
+      "ja": "Japonés",
+      "it": "Italiano",
+      "ko": "Coreano"
     },
     "common": {
       "backToTools": "Volver a Herramientas",

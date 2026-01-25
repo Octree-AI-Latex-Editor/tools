@@ -37,6 +37,10 @@ const localeToOgLocale: Record<string, string> = {
   pt: 'pt_BR',
   cn: 'zh_CN',
   ar: 'ar_SA',
+  de: 'de_DE',
+  ja: 'ja_JP',
+  it: 'it_IT',
+  ko: 'ko_KR',
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -61,6 +65,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         'pt': '/pt',
         'zh': '/cn',
         'ar': '/ar',
+        'de': '/de',
+        'ja': '/ja',
+        'it': '/it',
+        'ko': '/ko',
       },
     },
     openGraph: {
