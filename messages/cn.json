@@ -985,6 +985,51 @@
           "title": "免费 LaTeX 模板 - 简历、CV、论文、Beamer",
           "description": "60+ 专业 LaTeX 模板。简历、CV、论文、beamer 演示文稿等。免费下载。",
           "keywords": "LaTeX 模板, 免费 LaTeX 模板, LaTeX 简历模板, LaTeX CV 模板, LaTeX 论文模板, LaTeX beamer 模板, Overleaf 模板, 学术 LaTeX 模板, LaTeX 演示模板, LaTeX 论文模板, LaTeX 作业模板, LaTeX 海报模板, LaTeX 信函模板"
+        },
+        "academic": {
+          "title": "学术 LaTeX 模板 - 研究论文、学位论文、博士论文",
+          "description": "免费学术 LaTeX 模板，用于研究论文、学位论文、博士论文和会议论文。",
+          "keywords": "学术 LaTeX 模板, 研究论文模板 LaTeX, 学位论文模板 LaTeX, 博士论文模板 LaTeX, 期刊文章模板, 会议论文 LaTeX, IEEE 模板 LaTeX, ACM 模板, 科学论文模板, 博士论文 LaTeX, 硕士论文模板"
+        },
+        "presentations": {
+          "title": "LaTeX 演示模板 - Beamer 幻灯片",
+          "description": "免费 LaTeX beamer 演示模板。专业幻灯片，用于学术演讲和会议。",
+          "keywords": "beamer 模板 LaTeX, LaTeX 演示模板, beamer 幻灯片, LaTeX 幻灯片, 学术演示模板, 会议幻灯片 LaTeX, beamer 主题, beamer 示例, PowerPoint 替代 LaTeX"
+        },
+        "resumeCV": {
+          "title": "LaTeX 简历和 CV 模板 - 专业个人简历",
+          "description": "免费 LaTeX 简历和 CV 模板。现代专业设计，用于求职申请。",
+          "keywords": "LaTeX 简历模板, LaTeX CV 模板, 个人简历 LaTeX, 专业简历 LaTeX, 现代 CV LaTeX, 学术 CV LaTeX, 单页简历 LaTeX, moderncv, europass LaTeX"
+        },
+        "math": {
+          "title": "LaTeX 数学模板 - 方程式、证明、习题集",
+          "description": "用于数学文档的 LaTeX 模板：习题集、证明、定理。",
+          "keywords": "数学模板 LaTeX, 方程式模板 LaTeX, 习题集模板, 作业模板 LaTeX, 证明模板 LaTeX, 定理模板, 公式表模板, 考试模板 LaTeX"
+        },
+        "reports": {
+          "title": "LaTeX 报告模板 - 技术、实验、项目报告",
+          "description": "专业 LaTeX 模板，用于技术报告、实验报告和项目文档。",
+          "keywords": "报告模板 LaTeX, 技术报告 LaTeX, 实验报告模板, 项目报告 LaTeX, 商业报告模板, 年度报告模板, 研究报告 LaTeX"
+        },
+        "education": {
+          "title": "LaTeX 教育模板 - 作业、考试、课程大纲",
+          "description": "用于教育工作者和学生的 LaTeX 模板：作业、考试、课程大纲、讲义。",
+          "keywords": "作业模板 LaTeX, 考试模板 LaTeX, 课程大纲模板 LaTeX, 讲义模板, 课程材料 LaTeX, 测试模板 LaTeX, 学习指南 LaTeX, 抽认卡模板 LaTeX"
+        },
+        "letters": {
+          "title": "LaTeX 信函模板 - 求职信、正式信函",
+          "description": "专业 LaTeX 信函模板，用于求职信和正式信函。",
+          "keywords": "信函模板 LaTeX, 求职信 LaTeX, 正式信函模板, 推荐信 LaTeX, 商业信函模板, 申请信 LaTeX, 推荐信模板"
+        },
+        "business": {
+          "title": "LaTeX 商业模板 - 计划、提案、发票",
+          "description": "用于商业文档的 LaTeX 模板：商业计划、提案、发票、备忘录。",
+          "keywords": "商业模板 LaTeX, 商业计划 LaTeX, 提案模板 LaTeX, 发票模板 LaTeX, 合同模板, 备忘录模板 LaTeX, 名片 LaTeX, 项目提案模板"
+        },
+        "other": {
+          "title": "LaTeX 模板 - 书籍、海报、通讯",
+          "description": "其他 LaTeX 模板：书籍、海报、通讯、日历和创意文档。",
+          "keywords": "书籍模板 LaTeX, 海报模板 LaTeX, 通讯模板 LaTeX, 日历模板 LaTeX, 传单模板 LaTeX, 食谱模板 LaTeX, 讣告模板 LaTeX"
         }
       }
     },

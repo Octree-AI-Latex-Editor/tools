@@ -838,6 +838,51 @@
           "title": "Modelos LaTeX Grátis - Currículo, CV, Tese, Beamer",
           "description": "60+ modelos LaTeX profissionais. Currículo, CV, tese, apresentações beamer e mais. Download grátis.",
           "keywords": "modelos LaTeX, modelos LaTeX grátis, modelo currículo LaTeX, modelo CV LaTeX, modelo tese LaTeX, modelo beamer LaTeX, modelos Overleaf, modelos acadêmicos LaTeX, modelo apresentação LaTeX, modelo artigo LaTeX, modelo trabalho LaTeX, modelo poster LaTeX, modelo carta LaTeX"
+        },
+        "academic": {
+          "title": "Modelos LaTeX Acadêmicos - Artigos, Tese, Dissertações",
+          "description": "Modelos LaTeX acadêmicos gratuitos para artigos de pesquisa, teses, dissertações e conferências.",
+          "keywords": "modelos acadêmicos LaTeX, modelo artigo pesquisa LaTeX, modelo tese LaTeX, modelo dissertação LaTeX, modelo artigo revista, paper conferência LaTeX, modelo IEEE LaTeX, modelo ACM, artigo científico LaTeX, tese doutorado LaTeX, tese mestrado LaTeX"
+        },
+        "presentations": {
+          "title": "Modelos de Apresentação LaTeX - Slides Beamer",
+          "description": "Modelos beamer LaTeX gratuitos. Slides profissionais para palestras acadêmicas e conferências.",
+          "keywords": "modelo beamer LaTeX, modelo apresentação LaTeX, slides beamer, slides LaTeX, apresentação acadêmica, slides conferência LaTeX, temas beamer, exemplos beamer, alternativa PowerPoint LaTeX"
+        },
+        "resumeCV": {
+          "title": "Modelos LaTeX Currículo e CV - Curriculum Vitae Profissional",
+          "description": "Modelos de currículo e CV LaTeX gratuitos. Designs modernos e profissionais para candidaturas.",
+          "keywords": "modelo currículo LaTeX, modelo CV LaTeX, curriculum vitae LaTeX, currículo profissional LaTeX, CV moderno LaTeX, CV acadêmico LaTeX, currículo uma página LaTeX, moderncv, europass LaTeX"
+        },
+        "math": {
+          "title": "Modelos LaTeX Matemática - Equações, Demonstrações",
+          "description": "Modelos LaTeX para documentos matemáticos: listas de exercícios, demonstrações, teoremas.",
+          "keywords": "modelo matemática LaTeX, modelo equações LaTeX, modelo exercícios, modelo trabalho LaTeX, modelo demonstração LaTeX, modelo teorema, folha fórmulas LaTeX, modelo prova LaTeX"
+        },
+        "reports": {
+          "title": "Modelos de Relatórios LaTeX - Técnicos, Laboratório, Projeto",
+          "description": "Modelos LaTeX profissionais para relatórios técnicos, de laboratório e documentação de projetos.",
+          "keywords": "modelo relatório LaTeX, relatório técnico LaTeX, modelo relatório laboratório, relatório projeto LaTeX, relatório empresarial LaTeX, modelo relatório anual, relatório pesquisa LaTeX"
+        },
+        "education": {
+          "title": "Modelos LaTeX Educação - Trabalhos, Provas, Programas",
+          "description": "Modelos LaTeX para educadores e estudantes: trabalhos, provas, programas de estudo, notas de aula.",
+          "keywords": "modelo trabalho LaTeX, modelo prova LaTeX, modelo programa estudo LaTeX, modelo notas aula, materiais curso LaTeX, modelo teste LaTeX, guia estudo LaTeX, modelo flashcard LaTeX"
+        },
+        "letters": {
+          "title": "Modelos de Cartas LaTeX - Cartas de Apresentação, Formais",
+          "description": "Modelos profissionais de cartas LaTeX para cartas de apresentação e correspondência formal.",
+          "keywords": "modelo carta LaTeX, carta apresentação LaTeX, modelo carta formal, carta recomendação LaTeX, carta empresarial LaTeX, carta candidatura LaTeX, carta referência LaTeX"
+        },
+        "business": {
+          "title": "Modelos LaTeX Empresariais - Planos, Propostas, Faturas",
+          "description": "Modelos LaTeX para documentos empresariais: planos de negócios, propostas, faturas, memorandos.",
+          "keywords": "modelo empresarial LaTeX, plano de negócios LaTeX, modelo proposta LaTeX, modelo fatura LaTeX, modelo contrato, modelo memo LaTeX, cartão visita LaTeX, proposta projeto LaTeX"
+        },
+        "other": {
+          "title": "Modelos LaTeX - Livros, Posters, Boletins",
+          "description": "Modelos LaTeX diversos: livros, posters, boletins, calendários e documentos criativos.",
+          "keywords": "modelo livro LaTeX, modelo poster LaTeX, modelo boletim LaTeX, modelo calendário LaTeX, modelo folheto LaTeX, modelo receita LaTeX, modelo obituário LaTeX"
         }
       }
     },

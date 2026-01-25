@@ -1182,6 +1182,51 @@
         "title": "Free LaTeX Templates - Resume, CV, Thesis, Beamer",
         "description": "60+ professional LaTeX templates. Resume, CV, thesis, beamer presentations, and more. Free download.",
         "keywords": "LaTeX templates, free LaTeX templates, LaTeX resume template, LaTeX CV template, LaTeX thesis template, LaTeX beamer template, Overleaf templates, academic templates LaTeX, LaTeX presentation template, LaTeX paper template, LaTeX homework template, LaTeX poster template, LaTeX letter template, LaTeX book template, LaTeX report template, professional LaTeX templates"
+      },
+      "academic": {
+        "title": "Academic LaTeX Templates - Research Papers, Thesis, Dissertations",
+        "description": "Free academic LaTeX templates for research papers, thesis, dissertations, journal articles, and conference papers.",
+        "keywords": "academic LaTeX templates, research paper template LaTeX, thesis template LaTeX, dissertation template LaTeX, journal article template, conference paper LaTeX, IEEE template LaTeX, ACM template, Springer template, scientific paper template, PhD thesis LaTeX, master thesis template, academic writing LaTeX"
+      },
+      "presentations": {
+        "title": "LaTeX Presentation Templates - Beamer Slides",
+        "description": "Free LaTeX beamer presentation templates. Professional slides for academic talks, conferences, and lectures.",
+        "keywords": "beamer template LaTeX, LaTeX presentation template, beamer slides, LaTeX slides, academic presentation template, conference slides LaTeX, lecture slides LaTeX, beamer themes, beamer examples, PowerPoint alternative LaTeX, presentation beamer"
+      },
+      "resumeCV": {
+        "title": "LaTeX Resume & CV Templates - Professional Curriculum Vitae",
+        "description": "Free LaTeX resume and CV templates. Modern, professional designs for job applications and academic CVs.",
+        "keywords": "LaTeX resume template, LaTeX CV template, curriculum vitae LaTeX, professional resume LaTeX, modern CV template, academic CV LaTeX, one page resume LaTeX, two column resume, moderncv template, europass LaTeX, software engineer resume LaTeX, data scientist CV"
+      },
+      "math": {
+        "title": "LaTeX Math Templates - Equations, Proofs, Problem Sets",
+        "description": "LaTeX templates for mathematical documents: problem sets, proofs, theorems, and equation sheets.",
+        "keywords": "math template LaTeX, equation template LaTeX, problem set template, homework template LaTeX, proof template LaTeX, theorem template, math notes LaTeX, formula sheet template, exam template LaTeX, quiz template LaTeX, math assignment template"
+      },
+      "reports": {
+        "title": "LaTeX Report Templates - Technical, Lab, Project Reports",
+        "description": "Professional LaTeX templates for technical reports, lab reports, project documentation, and business reports.",
+        "keywords": "report template LaTeX, technical report LaTeX, lab report template, project report LaTeX, business report template, annual report LaTeX, internship report template, research report LaTeX, documentation template"
+      },
+      "education": {
+        "title": "LaTeX Education Templates - Homework, Exams, Syllabi",
+        "description": "LaTeX templates for educators and students: homework, exams, syllabi, lecture notes, and course materials.",
+        "keywords": "homework template LaTeX, exam template LaTeX, syllabus template LaTeX, lecture notes template, course materials LaTeX, assignment template, test template LaTeX, worksheet template, study guide LaTeX, flashcard template LaTeX"
+      },
+      "letters": {
+        "title": "LaTeX Letter Templates - Cover Letters, Formal Letters",
+        "description": "Professional LaTeX letter templates for cover letters, formal correspondence, and recommendation letters.",
+        "keywords": "letter template LaTeX, cover letter LaTeX, formal letter template, recommendation letter LaTeX, business letter template, application letter LaTeX, reference letter template, professional letter LaTeX"
+      },
+      "business": {
+        "title": "LaTeX Business Templates - Plans, Proposals, Invoices",
+        "description": "LaTeX templates for business documents: business plans, proposals, invoices, contracts, and memos.",
+        "keywords": "business template LaTeX, business plan LaTeX, proposal template LaTeX, invoice template LaTeX, contract template, memo template LaTeX, business card LaTeX, company report template, executive summary LaTeX, project proposal template"
+      },
+      "other": {
+        "title": "LaTeX Templates - Books, Posters, Newsletters",
+        "description": "Miscellaneous LaTeX templates: books, posters, newsletters, calendars, and creative documents.",
+        "keywords": "book template LaTeX, poster template LaTeX, newsletter template LaTeX, calendar template LaTeX, flyer template LaTeX, brochure LaTeX, recipe template LaTeX, magazine template, obituary template LaTeX, wedding invitation LaTeX"
       }
     }
   },

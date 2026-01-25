@@ -1033,6 +1033,51 @@
           "title": "Plantillas LaTeX Gratis - Currículum, CV, Tesis, Beamer",
           "description": "60+ plantillas LaTeX profesionales. Currículum, CV, tesis, presentaciones beamer y más. Descarga gratis.",
           "keywords": "plantillas LaTeX, plantillas LaTeX gratis, plantilla currículum LaTeX, plantilla CV LaTeX, plantilla tesis LaTeX, plantilla beamer LaTeX, plantillas Overleaf, plantillas académicas LaTeX, plantilla presentación LaTeX, plantilla paper LaTeX, plantilla tarea LaTeX, plantilla póster LaTeX, plantilla carta LaTeX"
+        },
+        "academic": {
+          "title": "Plantillas LaTeX Académicas - Artículos, Tesis, Disertaciones",
+          "description": "Plantillas LaTeX académicas gratuitas para artículos de investigación, tesis, disertaciones y conferencias.",
+          "keywords": "plantillas académicas LaTeX, plantilla artículo investigación LaTeX, plantilla tesis LaTeX, plantilla disertación LaTeX, plantilla artículo revista, paper conferencia LaTeX, plantilla IEEE LaTeX, plantilla ACM, artículo científico LaTeX, tesis doctoral LaTeX, tesis máster LaTeX"
+        },
+        "presentations": {
+          "title": "Plantillas de Presentación LaTeX - Diapositivas Beamer",
+          "description": "Plantillas beamer LaTeX gratuitas. Diapositivas profesionales para charlas académicas y conferencias.",
+          "keywords": "plantilla beamer LaTeX, plantilla presentación LaTeX, diapositivas beamer, diapositivas LaTeX, presentación académica, diapositivas conferencia LaTeX, temas beamer, ejemplos beamer, alternativa PowerPoint LaTeX"
+        },
+        "resumeCV": {
+          "title": "Plantillas LaTeX Currículum y CV - Curriculum Vitae Profesional",
+          "description": "Plantillas de currículum y CV LaTeX gratuitas. Diseños modernos y profesionales para solicitudes de empleo.",
+          "keywords": "plantilla currículum LaTeX, plantilla CV LaTeX, curriculum vitae LaTeX, currículum profesional LaTeX, CV moderno LaTeX, CV académico LaTeX, currículum una página LaTeX, moderncv, europass LaTeX"
+        },
+        "math": {
+          "title": "Plantillas LaTeX Matemáticas - Ecuaciones, Demostraciones",
+          "description": "Plantillas LaTeX para documentos matemáticos: conjuntos de problemas, demostraciones, teoremas.",
+          "keywords": "plantilla matemáticas LaTeX, plantilla ecuaciones LaTeX, plantilla problemas, plantilla tarea LaTeX, plantilla demostración LaTeX, plantilla teorema, hoja fórmulas LaTeX, plantilla examen LaTeX"
+        },
+        "reports": {
+          "title": "Plantillas de Informes LaTeX - Técnicos, Laboratorio, Proyecto",
+          "description": "Plantillas LaTeX profesionales para informes técnicos, de laboratorio y documentación de proyectos.",
+          "keywords": "plantilla informe LaTeX, informe técnico LaTeX, plantilla informe laboratorio, informe proyecto LaTeX, informe empresarial LaTeX, plantilla informe anual, informe investigación LaTeX"
+        },
+        "education": {
+          "title": "Plantillas LaTeX Educación - Tareas, Exámenes, Programas",
+          "description": "Plantillas LaTeX para educadores y estudiantes: tareas, exámenes, programas de estudio, apuntes.",
+          "keywords": "plantilla tarea LaTeX, plantilla examen LaTeX, plantilla programa estudio LaTeX, plantilla apuntes, materiales curso LaTeX, plantilla test LaTeX, guía estudio LaTeX, plantilla flashcard LaTeX"
+        },
+        "letters": {
+          "title": "Plantillas de Cartas LaTeX - Cartas de Presentación, Formales",
+          "description": "Plantillas profesionales de cartas LaTeX para cartas de presentación y correspondencia formal.",
+          "keywords": "plantilla carta LaTeX, carta presentación LaTeX, plantilla carta formal, carta recomendación LaTeX, carta empresarial LaTeX, carta solicitud LaTeX, carta referencia LaTeX"
+        },
+        "business": {
+          "title": "Plantillas LaTeX Empresariales - Planes, Propuestas, Facturas",
+          "description": "Plantillas LaTeX para documentos empresariales: planes de negocio, propuestas, facturas, memorándums.",
+          "keywords": "plantilla empresarial LaTeX, plan de negocio LaTeX, plantilla propuesta LaTeX, plantilla factura LaTeX, plantilla contrato, plantilla memo LaTeX, tarjeta visita LaTeX, propuesta proyecto LaTeX"
+        },
+        "other": {
+          "title": "Plantillas LaTeX - Libros, Pósters, Boletines",
+          "description": "Plantillas LaTeX diversas: libros, pósters, boletines, calendarios y documentos creativos.",
+          "keywords": "plantilla libro LaTeX, plantilla póster LaTeX, plantilla boletín LaTeX, plantilla calendario LaTeX, plantilla folleto LaTeX, plantilla receta LaTeX, plantilla obituario LaTeX"
         }
       }
     },
