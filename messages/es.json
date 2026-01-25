@@ -362,232 +362,232 @@
     },
     "templatesList": {
       "research-paper": {
-        "title": "Research Paper",
-        "description": "IEEE-style research paper template"
+        "title": "Artículo de Investigación",
+        "description": "Plantilla de artículo de investigación estilo IEEE"
       },
       "beamer-presentation": {
-        "title": "Beamer Presentation",
-        "description": "Academic presentation slides"
+        "title": "Presentación Beamer",
+        "description": "Diapositivas de presentación académica"
       },
       "academic-cv": {
-        "title": "Academic CV",
-        "description": "Professional academic curriculum vitae"
+        "title": "CV Académico",
+        "description": "Currículum vitae académico profesional"
       },
       "mathematical-document": {
-        "title": "Mathematical Document",
-        "description": "Math-heavy document with theorems"
+        "title": "Documento Matemático",
+        "description": "Documento con teoremas matemáticos"
       },
       "lab-report": {
-        "title": "Lab Report",
-        "description": "Scientific lab report template"
+        "title": "Informe de Laboratorio",
+        "description": "Plantilla de informe de laboratorio científico"
       },
       "book-chapter": {
-        "title": "Book Chapter",
-        "description": "Book or thesis chapter template"
+        "title": "Capítulo de Libro",
+        "description": "Plantilla de capítulo de libro o tesis"
       },
       "resume": {
-        "title": "Resume",
-        "description": "Professional resume template"
+        "title": "Currículum",
+        "description": "Plantilla de currículum profesional"
       },
       "grading-rubric": {
-        "title": "Grading Rubric",
-        "description": "Assessment criteria and grading template"
+        "title": "Rúbrica de Calificación",
+        "description": "Plantilla de criterios de evaluación y calificación"
       },
       "assignment": {
-        "title": "Assignment",
-        "description": "Homework and assignment template"
+        "title": "Tarea",
+        "description": "Plantilla de tareas y deberes"
       },
       "worksheet": {
-        "title": "Worksheet",
-        "description": "Practice problems and exercises template"
+        "title": "Hoja de Ejercicios",
+        "description": "Plantilla de problemas prácticos y ejercicios"
       },
       "homework": {
-        "title": "Homework Template",
-        "description": "Structured homework assignment"
+        "title": "Plantilla de Deberes",
+        "description": "Tarea estructurada para entregar"
       },
       "poster": {
-        "title": "Research Poster",
-        "description": "Academic conference poster template"
+        "title": "Póster de Investigación",
+        "description": "Plantilla de póster para conferencias académicas"
       },
       "thesis": {
-        "title": "PhD Thesis",
-        "description": "Comprehensive thesis template with chapters"
+        "title": "Tesis Doctoral",
+        "description": "Plantilla completa de tesis con capítulos"
       },
       "letter": {
-        "title": "Formal Letter",
-        "description": "Professional business letter template"
+        "title": "Carta Formal",
+        "description": "Plantilla de carta comercial profesional"
       },
       "algorithm": {
-        "title": "Algorithm Pseudocode",
-        "description": "Algorithm documentation with pseudocode"
+        "title": "Pseudocódigo de Algoritmo",
+        "description": "Documentación de algoritmos con pseudocódigo"
       },
       "cover-letter": {
-        "title": "Cover Letter",
-        "description": "Professional academic and job application cover letter"
+        "title": "Carta de Presentación",
+        "description": "Carta de presentación profesional para solicitudes académicas y laborales"
       },
       "journal-article": {
-        "title": "Journal Article",
-        "description": "Academic journal article template with sections"
+        "title": "Artículo de Revista",
+        "description": "Plantilla de artículo de revista académica con secciones"
       },
       "syllabus": {
-        "title": "Course Syllabus",
-        "description": "Comprehensive course syllabus template"
+        "title": "Plan de Estudios",
+        "description": "Plantilla completa de plan de estudios del curso"
       },
       "research-proposal": {
-        "title": "Research Proposal",
-        "description": "Grant and research proposal template"
+        "title": "Propuesta de Investigación",
+        "description": "Plantilla de propuesta de subvención e investigación"
       },
       "essay": {
-        "title": "Academic Essay",
-        "description": "Structured essay with argument and analysis"
+        "title": "Ensayo Académico",
+        "description": "Ensayo estructurado con argumentación y análisis"
       },
       "research-statement": {
-        "title": "Research Statement",
-        "description": "Academic research statement for job applications"
+        "title": "Declaración de Investigación",
+        "description": "Declaración de investigación académica para solicitudes de empleo"
       },
       "dissertation": {
-        "title": "Dissertation",
-        "description": "Complete PhD dissertation template"
+        "title": "Disertación",
+        "description": "Plantilla completa de disertación doctoral"
       },
       "white-paper": {
-        "title": "White Paper",
-        "description": "Professional white paper template"
+        "title": "Libro Blanco",
+        "description": "Plantilla profesional de libro blanco"
       },
       "leaflet": {
-        "title": "Leaflet/Brochure",
-        "description": "Professional marketing leaflet template"
+        "title": "Folleto/Tríptico",
+        "description": "Plantilla profesional de folleto publicitario"
       },
       "technical-report": {
-        "title": "Technical Report",
-        "description": "Technical research report template"
+        "title": "Informe Técnico",
+        "description": "Plantilla de informe técnico de investigación"
       },
       "math-exercises": {
-        "title": "Math Exercises",
-        "description": "Practice problems and exercises for mathematics"
+        "title": "Ejercicios de Matemáticas",
+        "description": "Problemas prácticos y ejercicios de matemáticas"
       },
       "math-notes": {
-        "title": "Math Notes",
-        "description": "Structured lecture notes for mathematics courses"
+        "title": "Apuntes de Matemáticas",
+        "description": "Apuntes de clase estructurados para cursos de matemáticas"
       },
       "math-exam": {
-        "title": "Math Exam",
-        "description": "Formal mathematics examination template"
+        "title": "Examen de Matemáticas",
+        "description": "Plantilla de examen formal de matemáticas"
       },
       "math-problem-set": {
-        "title": "Math Problem Set",
-        "description": "Weekly problem set assignments for mathematics"
+        "title": "Conjunto de Problemas",
+        "description": "Tareas semanales de problemas matemáticos"
       },
       "math-cheat-sheet": {
-        "title": "Math Cheat Sheet",
-        "description": "Compact reference sheet for formulas and theorems"
+        "title": "Hoja de Fórmulas",
+        "description": "Hoja de referencia compacta de fórmulas y teoremas"
       },
       "lecture-notes": {
-        "title": "Lecture Notes",
-        "description": "Clean academic lecture notes template"
+        "title": "Apuntes de Clase",
+        "description": "Plantilla limpia de apuntes de clase académicos"
       },
       "quiz-template": {
-        "title": "Quiz Template",
-        "description": "Short quiz or test template"
+        "title": "Plantilla de Cuestionario",
+        "description": "Plantilla de cuestionario o examen corto"
       },
       "formula-sheet": {
-        "title": "Formula Sheet",
-        "description": "Reference sheet for important formulas"
+        "title": "Hoja de Fórmulas",
+        "description": "Hoja de referencia para fórmulas importantes"
       },
       "project-report": {
-        "title": "Project Report",
-        "description": "Professional project report with chapters and sections"
+        "title": "Informe de Proyecto",
+        "description": "Informe de proyecto profesional con capítulos y secciones"
       },
       "article-template": {
-        "title": "Article Template",
-        "description": "Scientific article with abstract and sections"
+        "title": "Plantilla de Artículo",
+        "description": "Artículo científico con resumen y secciones"
       },
       "statement-of-purpose": {
-        "title": "Statement of Purpose",
-        "description": "Graduate school application statement template"
+        "title": "Declaración de Propósito",
+        "description": "Plantilla de declaración para solicitud de posgrado"
       },
       "literature-review": {
-        "title": "Literature Review",
-        "description": "Academic literature review with citations"
+        "title": "Revisión de Literatura",
+        "description": "Revisión de literatura académica con citas"
       },
       "meeting-minutes": {
-        "title": "Meeting Minutes",
-        "description": "Professional meeting minutes and notes template"
+        "title": "Acta de Reunión",
+        "description": "Plantilla profesional de actas y notas de reunión"
       },
       "certificate": {
-        "title": "Certificate",
-        "description": "Award or completion certificate template"
+        "title": "Certificado",
+        "description": "Plantilla de certificado de premio o finalización"
       },
       "invoice": {
-        "title": "Invoice",
-        "description": "Professional invoice for services or products"
+        "title": "Factura",
+        "description": "Factura profesional para servicios o productos"
       },
       "grant-proposal": {
-        "title": "Grant Proposal",
-        "description": "Research grant proposal template"
+        "title": "Propuesta de Subvención",
+        "description": "Plantilla de propuesta de subvención para investigación"
       },
       "letter-of-recommendation": {
-        "title": "Letter of Recommendation",
-        "description": "Professional recommendation letter template"
+        "title": "Carta de Recomendación",
+        "description": "Plantilla profesional de carta de recomendación"
       },
       "motivation-letter": {
-        "title": "Motivation Letter",
-        "description": "Academic or professional motivation letter template"
+        "title": "Carta de Motivación",
+        "description": "Plantilla de carta de motivación académica o profesional"
       },
       "business-plan": {
-        "title": "Business Plan",
-        "description": "Professional business plan template"
+        "title": "Plan de Negocios",
+        "description": "Plantilla profesional de plan de negocios"
       },
       "business-report": {
-        "title": "Business Report",
-        "description": "Corporate business report template"
+        "title": "Informe Empresarial",
+        "description": "Plantilla de informe empresarial corporativo"
       },
       "scientific-report": {
-        "title": "Scientific Report",
-        "description": "Scientific research report template"
+        "title": "Informe Científico",
+        "description": "Plantilla de informe de investigación científica"
       },
       "internship-report": {
-        "title": "Internship Report",
-        "description": "Student internship report template"
+        "title": "Informe de Prácticas",
+        "description": "Plantilla de informe de prácticas estudiantiles"
       },
       "newsletter": {
-        "title": "Newsletter",
-        "description": "Professional newsletter template"
+        "title": "Boletín Informativo",
+        "description": "Plantilla profesional de boletín informativo"
       },
       "questionnaire": {
-        "title": "Questionnaire",
-        "description": "Research survey and questionnaire template"
+        "title": "Cuestionario",
+        "description": "Plantilla de encuesta e investigación"
       },
       "table-template": {
-        "title": "Table Template",
-        "description": "Professional table layouts and formatting"
+        "title": "Plantilla de Tabla",
+        "description": "Diseños y formatos profesionales de tablas"
       },
       "bibliography": {
-        "title": "Bibliography",
-        "description": "Standalone bibliography and references template"
+        "title": "Bibliografía",
+        "description": "Plantilla independiente de bibliografía y referencias"
       },
       "memo": {
-        "title": "Memo",
-        "description": "Professional business memo template"
+        "title": "Memorando",
+        "description": "Plantilla profesional de memorando empresarial"
       },
       "manuscript": {
-        "title": "Manuscript",
-        "description": "Book manuscript template for novels and non-fiction"
+        "title": "Manuscrito",
+        "description": "Plantilla de manuscrito para novelas y no ficción"
       },
       "recipe-book": {
-        "title": "Recipe Book",
-        "description": "Cookbook and recipe collection template"
+        "title": "Libro de Recetas",
+        "description": "Plantilla de libro de cocina y colección de recetas"
       },
       "flyer": {
-        "title": "Flyer",
-        "description": "Marketing flyer and promotional one-page template"
+        "title": "Volante",
+        "description": "Plantilla de volante publicitario y promocional"
       },
       "business-card": {
-        "title": "Business Card",
-        "description": "Professional business card template"
+        "title": "Tarjeta de Presentación",
+        "description": "Plantilla profesional de tarjeta de presentación"
       },
       "calendar": {
-        "title": "Calendar",
-        "description": "Monthly and yearly calendar template"
+        "title": "Calendario",
+        "description": "Plantilla de calendario mensual y anual"
       }
     },
     "toolsList": {
