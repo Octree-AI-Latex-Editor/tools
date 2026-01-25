@@ -27,6 +27,7 @@
     "next": "15.5.9",
     "next-intl": "^4.6.0",
     "pdfjs-dist": "^5.4.530",
+    "posthog-js": "^1.335.2",
     "react": "19.1.2",
     "react-dom": "19.1.2",
     "react-pdf": "^10.3.0",
