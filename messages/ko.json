@@ -444,7 +444,17 @@
     "neurips-2026": { "title": "NeurIPS 2026", "description": "NeurIPS 2026 학회 논문 템플릿 (9페이지 제한)" },
     "icml-2026": { "title": "ICML 2026", "description": "ICML 2026 학회 논문 템플릿 (2단 형식)" },
     "iclr-2026": { "title": "ICLR 2026", "description": "ICLR 2026 학회 논문 템플릿 (재현성 선언 포함)" },
-    "cvpr-2026": { "title": "CVPR 2026", "description": "CVPR 2026 컴퓨터 비전 학회 논문 템플릿" }
+    "cvpr-2026": { "title": "CVPR 2026", "description": "CVPR 2026 컴퓨터 비전 학회 논문 템플릿" },
+    "aaai-2026": { "title": "AAAI 2026", "description": "AAAI 2026 학회 논문 템플릿 (7페이지 제한)" },
+    "obituary": { "title": "부고", "description": "장식 테두리가 있는 우아한 추모 템플릿" },
+    "eccv-2026": { "title": "ECCV 2026", "description": "ECCV 2026 유럽 컴퓨터 비전 학회 논문 템플릿" },
+    "icra-2026": { "title": "ICRA 2026", "description": "IEEE ICRA 2026 로보틱스 학회 논문 템플릿" },
+    "acm-chi-2026": { "title": "ACM CHI 2026", "description": "ACM CHI 2026 공식 제출 템플릿 (단일 열 형식)" },
+    "www-2026": { "title": "WWW 2026", "description": "웹 컨퍼런스 (WWW) 2026 템플릿" },
+    "acl-2026": { "title": "ACL 2026", "description": "ACL 2026 자연어 처리 학회 논문 템플릿" },
+    "interspeech-2026": { "title": "Interspeech 2026", "description": "Interspeech 2026 음성 처리 학회 논문 템플릿" },
+    "interactive-flashcard": { "title": "인터랙티브 플래시카드", "description": "클릭하면 답이 나타나는 학습 가이드 - 자가 테스트에 완벽" },
+    "jakes-resume": { "title": "제이크의 이력서", "description": "깔끔하고 ATS 친화적인 단일 열 이력서 템플릿" }
   },
   "symbols": {
     "title": "LaTeX 기호",

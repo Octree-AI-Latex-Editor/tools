@@ -678,6 +678,46 @@
     "cvpr-2026": {
       "title": "CVPR 2026",
       "description": "Modello articolo per conferenza CVPR 2026 di visione artificiale"
+    },
+    "aaai-2026": {
+      "title": "AAAI 2026",
+      "description": "Modello articolo per conferenza AAAI 2026 con limite di 7 pagine"
+    },
+    "obituary": {
+      "title": "Necrologio",
+      "description": "Elegante modello di necrologio commemorativo con bordo decorativo"
+    },
+    "eccv-2026": {
+      "title": "ECCV 2026",
+      "description": "Modello articolo per conferenza europea ECCV 2026 di visione artificiale"
+    },
+    "icra-2026": {
+      "title": "ICRA 2026",
+      "description": "Modello articolo per conferenza IEEE ICRA 2026 di robotica"
+    },
+    "acm-chi-2026": {
+      "title": "ACM CHI 2026",
+      "description": "Modello ufficiale di invio ACM CHI 2026 in formato a colonna singola"
+    },
+    "www-2026": {
+      "title": "WWW 2026",
+      "description": "Modello conferenza web (WWW) 2026 con sezione di rilevanza obbligatoria"
+    },
+    "acl-2026": {
+      "title": "ACL 2026",
+      "description": "Modello articolo per conferenza ACL 2026 di elaborazione del linguaggio naturale"
+    },
+    "interspeech-2026": {
+      "title": "Interspeech 2026",
+      "description": "Modello articolo per conferenza Interspeech 2026 di elaborazione del linguaggio parlato"
+    },
+    "interactive-flashcard": {
+      "title": "Scheda Interattiva / Quiz Nascosto",
+      "description": "Guida allo studio con risposte nascoste - perfetta per l'autovalutazione"
+    },
+    "jakes-resume": {
+      "title": "CV di Jake",
+      "description": "Modello di curriculum pulito e compatibile con ATS"
     }
   },
   "symbols": {

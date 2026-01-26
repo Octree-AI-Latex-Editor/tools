@@ -678,6 +678,46 @@
     "cvpr-2026": {
       "title": "CVPR 2026",
       "description": "CVPR 2026 computer vision conference paper template with two-column format"
+    },
+    "aaai-2026": {
+      "title": "AAAI 2026",
+      "description": "AAAI 2026 conference paper template with two-column format and 7-page limit"
+    },
+    "obituary": {
+      "title": "Obituary",
+      "description": "Elegant memorial obituary template with decorative border"
+    },
+    "eccv-2026": {
+      "title": "ECCV 2026",
+      "description": "ECCV 2026 European Conference on Computer Vision paper template"
+    },
+    "icra-2026": {
+      "title": "ICRA 2026",
+      "description": "IEEE ICRA 2026 robotics conference paper template with two-column format"
+    },
+    "acm-chi-2026": {
+      "title": "ACM CHI 2026",
+      "description": "Official ACM CHI 2026 submission template for single-column review format"
+    },
+    "www-2026": {
+      "title": "WWW 2026",
+      "description": "The Web Conference (WWW) 2026 template with mandatory relevance to the web section"
+    },
+    "acl-2026": {
+      "title": "ACL 2026",
+      "description": "ACL 2026 NLP conference paper template with two-column format and mandatory limitations section"
+    },
+    "interspeech-2026": {
+      "title": "Interspeech 2026",
+      "description": "Interspeech 2026 speech and language processing conference paper template"
+    },
+    "interactive-flashcard": {
+      "title": "Interactive Flashcard / Redacted Quiz",
+      "description": "Click-to-reveal study guide with hidden answers - perfect for self-testing"
+    },
+    "jakes-resume": {
+      "title": "Jake's Resume",
+      "description": "Clean, ATS-friendly single-column resume template"
     }
   },
   "symbols": {

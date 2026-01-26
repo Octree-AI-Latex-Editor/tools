@@ -467,7 +467,17 @@
       "neurips-2026": { "title": "NeurIPS 2026", "description": "Modelo de artigo para conferência NeurIPS 2026 com limite de 9 páginas" },
       "icml-2026": { "title": "ICML 2026", "description": "Modelo de artigo para conferência ICML 2026 com formato de duas colunas" },
       "iclr-2026": { "title": "ICLR 2026", "description": "Modelo de artigo para conferência ICLR 2026 com declaração de reprodutibilidade" },
-      "cvpr-2026": { "title": "CVPR 2026", "description": "Modelo de artigo para conferência CVPR 2026 de visão computacional" }
+      "cvpr-2026": { "title": "CVPR 2026", "description": "Modelo de artigo para conferência CVPR 2026 de visão computacional" },
+      "aaai-2026": { "title": "AAAI 2026", "description": "Modelo de artigo para conferência AAAI 2026 com limite de 7 páginas" },
+      "obituary": { "title": "Obituário", "description": "Elegante modelo de obituário memorial com borda decorativa" },
+      "eccv-2026": { "title": "ECCV 2026", "description": "Modelo de artigo para conferência europeia ECCV 2026 de visão computacional" },
+      "icra-2026": { "title": "ICRA 2026", "description": "Modelo de artigo para conferência IEEE ICRA 2026 de robótica" },
+      "acm-chi-2026": { "title": "ACM CHI 2026", "description": "Modelo oficial de submissão ACM CHI 2026 em formato de uma coluna" },
+      "www-2026": { "title": "WWW 2026", "description": "Modelo da conferência web (WWW) 2026 com seção de relevância obrigatória" },
+      "acl-2026": { "title": "ACL 2026", "description": "Modelo de artigo para conferência ACL 2026 de processamento de linguagem natural" },
+      "interspeech-2026": { "title": "Interspeech 2026", "description": "Modelo de artigo para conferência Interspeech 2026 de processamento de fala" },
+      "interactive-flashcard": { "title": "Cartão Interativo / Quiz Oculto", "description": "Guia de estudo com respostas ocultas - perfeito para autoavaliação" },
+      "jakes-resume": { "title": "Currículo do Jake", "description": "Modelo de currículo limpo e compatível com ATS" }
     },
     "symbols": {
     "title": "Símbolos LaTeX",

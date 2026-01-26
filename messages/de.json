@@ -678,6 +678,46 @@
     "cvpr-2026": {
       "title": "CVPR 2026",
       "description": "CVPR 2026 Computer-Vision-Konferenzpapier-Vorlage"
+    },
+    "aaai-2026": {
+      "title": "AAAI 2026",
+      "description": "AAAI 2026 Konferenzpapier-Vorlage mit 7-Seiten-Limit"
+    },
+    "obituary": {
+      "title": "Nachruf",
+      "description": "Elegante Gedenkvorlage mit dekorativem Rahmen"
+    },
+    "eccv-2026": {
+      "title": "ECCV 2026",
+      "description": "ECCV 2026 Europäische Computer-Vision-Konferenzpapier-Vorlage"
+    },
+    "icra-2026": {
+      "title": "ICRA 2026",
+      "description": "IEEE ICRA 2026 Robotik-Konferenzpapier-Vorlage"
+    },
+    "acm-chi-2026": {
+      "title": "ACM CHI 2026",
+      "description": "Offizielle ACM CHI 2026 Einreichungsvorlage im Einspaltenformat"
+    },
+    "www-2026": {
+      "title": "WWW 2026",
+      "description": "Web-Konferenz (WWW) 2026 Vorlage mit obligatorischem Relevanzabschnitt"
+    },
+    "acl-2026": {
+      "title": "ACL 2026",
+      "description": "ACL 2026 NLP-Konferenzpapier-Vorlage mit Limitierungsabschnitt"
+    },
+    "interspeech-2026": {
+      "title": "Interspeech 2026",
+      "description": "Interspeech 2026 Sprachverarbeitungs-Konferenzpapier-Vorlage"
+    },
+    "interactive-flashcard": {
+      "title": "Interaktive Lernkarte / Verdecktes Quiz",
+      "description": "Lernhilfe mit versteckten Antworten - perfekt zum Selbsttest"
+    },
+    "jakes-resume": {
+      "title": "Jakes Lebenslauf",
+      "description": "Saubere, ATS-freundliche einspaltige Lebenslauf-Vorlage"
     }
   },
   "symbols": {
