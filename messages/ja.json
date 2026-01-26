@@ -662,6 +662,62 @@
     "calendar": {
       "title": "カレンダー",
       "description": "月間・年間カレンダーテンプレート"
+    },
+    "neurips-2026": {
+      "title": "NeurIPS 2026",
+      "description": "NeurIPS 2026会議論文テンプレート（9ページ制限）"
+    },
+    "icml-2026": {
+      "title": "ICML 2026",
+      "description": "ICML 2026会議論文テンプレート（2段組形式）"
+    },
+    "iclr-2026": {
+      "title": "ICLR 2026",
+      "description": "ICLR 2026会議論文テンプレート（再現性声明付き）"
+    },
+    "cvpr-2026": {
+      "title": "CVPR 2026",
+      "description": "CVPR 2026コンピュータビジョン会議論文テンプレート"
+    },
+    "aaai-2026": {
+      "title": "AAAI 2026",
+      "description": "AAAI 2026会議論文テンプレート（7ページ制限）"
+    },
+    "obituary": {
+      "title": "死亡記事",
+      "description": "装飾的な枠付きのエレガントな追悼テンプレート"
+    },
+    "eccv-2026": {
+      "title": "ECCV 2026",
+      "description": "ECCV 2026欧州コンピュータビジョン会議論文テンプレート"
+    },
+    "icra-2026": {
+      "title": "ICRA 2026",
+      "description": "IEEE ICRA 2026ロボティクス会議論文テンプレート"
+    },
+    "acm-chi-2026": {
+      "title": "ACM CHI 2026",
+      "description": "ACM CHI 2026公式投稿テンプレート（シングルカラム形式）"
+    },
+    "www-2026": {
+      "title": "WWW 2026",
+      "description": "ウェブカンファレンス（WWW）2026テンプレート"
+    },
+    "acl-2026": {
+      "title": "ACL 2026",
+      "description": "ACL 2026自然言語処理会議論文テンプレート"
+    },
+    "interspeech-2026": {
+      "title": "Interspeech 2026",
+      "description": "Interspeech 2026音声処理会議論文テンプレート"
+    },
+    "interactive-flashcard": {
+      "title": "インタラクティブフラッシュカード",
+      "description": "クリックで答えが表示される学習ガイド - 自己テストに最適"
+    },
+    "jakes-resume": {
+      "title": "ジェイクの履歴書",
+      "description": "クリーンでATS対応のシングルカラム履歴書テンプレート"
     }
   },
   "symbols": {

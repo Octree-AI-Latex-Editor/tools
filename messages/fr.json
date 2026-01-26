@@ -634,6 +634,62 @@
       "calendar": {
         "title": "Calendrier",
         "description": "Modèle de calendrier mensuel et annuel"
+      },
+      "neurips-2026": {
+        "title": "NeurIPS 2026",
+        "description": "Modèle d'article pour la conférence NeurIPS 2026 avec limite de 9 pages"
+      },
+      "icml-2026": {
+        "title": "ICML 2026",
+        "description": "Modèle d'article pour la conférence ICML 2026 au format deux colonnes"
+      },
+      "iclr-2026": {
+        "title": "ICLR 2026",
+        "description": "Modèle d'article pour la conférence ICLR 2026 avec déclaration de reproductibilité"
+      },
+      "cvpr-2026": {
+        "title": "CVPR 2026",
+        "description": "Modèle d'article pour la conférence CVPR 2026 en vision par ordinateur"
+      },
+      "aaai-2026": {
+        "title": "AAAI 2026",
+        "description": "Modèle d'article pour la conférence AAAI 2026 avec limite de 7 pages"
+      },
+      "obituary": {
+        "title": "Nécrologie",
+        "description": "Élégant modèle de nécrologie commémorative avec bordure décorative"
+      },
+      "eccv-2026": {
+        "title": "ECCV 2026",
+        "description": "Modèle d'article pour la conférence européenne ECCV 2026 en vision par ordinateur"
+      },
+      "icra-2026": {
+        "title": "ICRA 2026",
+        "description": "Modèle d'article pour la conférence IEEE ICRA 2026 en robotique"
+      },
+      "acm-chi-2026": {
+        "title": "ACM CHI 2026",
+        "description": "Modèle officiel de soumission ACM CHI 2026 au format une colonne"
+      },
+      "www-2026": {
+        "title": "WWW 2026",
+        "description": "Modèle de la conférence web (WWW) 2026 avec section de pertinence obligatoire"
+      },
+      "acl-2026": {
+        "title": "ACL 2026",
+        "description": "Modèle d'article pour la conférence ACL 2026 en traitement du langage naturel"
+      },
+      "interspeech-2026": {
+        "title": "Interspeech 2026",
+        "description": "Modèle d'article pour la conférence Interspeech 2026 sur le traitement de la parole"
+      },
+      "interactive-flashcard": {
+        "title": "Fiche Interactive / Quiz Masqué",
+        "description": "Guide d'étude avec réponses cachées - parfait pour l'auto-évaluation"
+      },
+      "jakes-resume": {
+        "title": "CV de Jake",
+        "description": "Modèle de CV épuré et compatible ATS"
       }
     },
     "symbols": {

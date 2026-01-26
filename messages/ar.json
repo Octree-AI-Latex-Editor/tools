@@ -463,7 +463,21 @@
       "recipe-book": { "title": "كتاب الوصفات", "description": "قالب كتاب طبخ ومجموعة وصفات" },
       "flyer": { "title": "منشور", "description": "قالب منشور تسويقي وترويجي من صفحة واحدة" },
       "business-card": { "title": "بطاقة عمل", "description": "قالب بطاقة عمل احترافية" },
-      "calendar": { "title": "تقويم", "description": "قالب تقويم شهري وسنوي" }
+      "calendar": { "title": "تقويم", "description": "قالب تقويم شهري وسنوي" },
+      "neurips-2026": { "title": "NeurIPS 2026", "description": "قالب ورقة مؤتمر NeurIPS 2026 بحد 9 صفحات" },
+      "icml-2026": { "title": "ICML 2026", "description": "قالب ورقة مؤتمر ICML 2026 بتنسيق عمودين" },
+      "iclr-2026": { "title": "ICLR 2026", "description": "قالب ورقة مؤتمر ICLR 2026 مع بيان إعادة الإنتاج" },
+      "cvpr-2026": { "title": "CVPR 2026", "description": "قالب ورقة مؤتمر CVPR 2026 للرؤية الحاسوبية" },
+      "aaai-2026": { "title": "AAAI 2026", "description": "قالب ورقة مؤتمر AAAI 2026 بحد 7 صفحات" },
+      "obituary": { "title": "نعي", "description": "قالب نعي تذكاري أنيق بإطار زخرفي" },
+      "eccv-2026": { "title": "ECCV 2026", "description": "قالب ورقة مؤتمر ECCV 2026 الأوروبي للرؤية الحاسوبية" },
+      "icra-2026": { "title": "ICRA 2026", "description": "قالب ورقة مؤتمر IEEE ICRA 2026 للروبوتات" },
+      "acm-chi-2026": { "title": "ACM CHI 2026", "description": "قالب تقديم ACM CHI 2026 الرسمي بتنسيق عمود واحد" },
+      "www-2026": { "title": "WWW 2026", "description": "قالب مؤتمر الويب (WWW) 2026" },
+      "acl-2026": { "title": "ACL 2026", "description": "قالب ورقة مؤتمر ACL 2026 لمعالجة اللغة الطبيعية" },
+      "interspeech-2026": { "title": "Interspeech 2026", "description": "قالب ورقة مؤتمر Interspeech 2026 لمعالجة الكلام" },
+      "interactive-flashcard": { "title": "بطاقة تعليمية تفاعلية", "description": "دليل دراسة مع إجابات مخفية - مثالي للاختبار الذاتي" },
+      "jakes-resume": { "title": "سيرة جيك الذاتية", "description": "قالب سيرة ذاتية نظيف ومتوافق مع ATS" }
     },
     "symbols": {
     "title": "رموز LaTeX",

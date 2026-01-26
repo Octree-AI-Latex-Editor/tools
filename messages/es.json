@@ -588,6 +588,62 @@
       "calendar": {
         "title": "Calendario",
         "description": "Plantilla de calendario mensual y anual"
+      },
+      "neurips-2026": {
+        "title": "NeurIPS 2026",
+        "description": "Plantilla de artículo para conferencia NeurIPS 2026 con límite de 9 páginas"
+      },
+      "icml-2026": {
+        "title": "ICML 2026",
+        "description": "Plantilla de artículo para conferencia ICML 2026 con formato de dos columnas"
+      },
+      "iclr-2026": {
+        "title": "ICLR 2026",
+        "description": "Plantilla de artículo para conferencia ICLR 2026 con declaración de reproducibilidad"
+      },
+      "cvpr-2026": {
+        "title": "CVPR 2026",
+        "description": "Plantilla de artículo para conferencia CVPR 2026 de visión por computadora"
+      },
+      "aaai-2026": {
+        "title": "AAAI 2026",
+        "description": "Plantilla de artículo para conferencia AAAI 2026 con límite de 7 páginas"
+      },
+      "obituary": {
+        "title": "Obituario",
+        "description": "Elegante plantilla de obituario conmemorativo con borde decorativo"
+      },
+      "eccv-2026": {
+        "title": "ECCV 2026",
+        "description": "Plantilla de artículo para conferencia europea ECCV 2026 de visión por computadora"
+      },
+      "icra-2026": {
+        "title": "ICRA 2026",
+        "description": "Plantilla de artículo para conferencia IEEE ICRA 2026 de robótica"
+      },
+      "acm-chi-2026": {
+        "title": "ACM CHI 2026",
+        "description": "Plantilla oficial de envío ACM CHI 2026 en formato de una columna"
+      },
+      "www-2026": {
+        "title": "WWW 2026",
+        "description": "Plantilla de conferencia web (WWW) 2026 con sección de relevancia obligatoria"
+      },
+      "acl-2026": {
+        "title": "ACL 2026",
+        "description": "Plantilla de artículo para conferencia ACL 2026 de procesamiento de lenguaje natural"
+      },
+      "interspeech-2026": {
+        "title": "Interspeech 2026",
+        "description": "Plantilla de artículo para conferencia Interspeech 2026 de procesamiento de voz"
+      },
+      "interactive-flashcard": {
+        "title": "Tarjeta Interactiva / Cuestionario Oculto",
+        "description": "Guía de estudio con respuestas ocultas - perfecta para autoevaluación"
+      },
+      "jakes-resume": {
+        "title": "Currículum de Jake",
+        "description": "Plantilla de currículum limpia y compatible con ATS"
       }
     },
     "toolsList": {

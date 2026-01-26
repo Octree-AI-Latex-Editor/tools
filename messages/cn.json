@@ -642,6 +642,62 @@
       "calendar": {
         "title": "日历",
         "description": "月度和年度日历模板"
+      },
+      "neurips-2026": {
+        "title": "NeurIPS 2026",
+        "description": "NeurIPS 2026会议论文模板（9页限制）"
+      },
+      "icml-2026": {
+        "title": "ICML 2026",
+        "description": "ICML 2026会议论文模板（双栏格式）"
+      },
+      "iclr-2026": {
+        "title": "ICLR 2026",
+        "description": "ICLR 2026会议论文模板（含可复现性声明）"
+      },
+      "cvpr-2026": {
+        "title": "CVPR 2026",
+        "description": "CVPR 2026计算机视觉会议论文模板"
+      },
+      "aaai-2026": {
+        "title": "AAAI 2026",
+        "description": "AAAI 2026会议论文模板（7页限制）"
+      },
+      "obituary": {
+        "title": "讣告",
+        "description": "带装饰边框的优雅纪念讣告模板"
+      },
+      "eccv-2026": {
+        "title": "ECCV 2026",
+        "description": "ECCV 2026欧洲计算机视觉会议论文模板"
+      },
+      "icra-2026": {
+        "title": "ICRA 2026",
+        "description": "IEEE ICRA 2026机器人会议论文模板"
+      },
+      "acm-chi-2026": {
+        "title": "ACM CHI 2026",
+        "description": "ACM CHI 2026官方投稿模板（单栏格式）"
+      },
+      "www-2026": {
+        "title": "WWW 2026",
+        "description": "万维网大会（WWW）2026模板"
+      },
+      "acl-2026": {
+        "title": "ACL 2026",
+        "description": "ACL 2026自然语言处理会议论文模板"
+      },
+      "interspeech-2026": {
+        "title": "Interspeech 2026",
+        "description": "Interspeech 2026语音处理会议论文模板"
+      },
+      "interactive-flashcard": {
+        "title": "互动抽认卡 / 隐藏答案测验",
+        "description": "点击显示答案的学习指南 - 完美的自我测试工具"
+      },
+      "jakes-resume": {
+        "title": "杰克的简历",
+        "description": "简洁、ATS友好的单栏简历模板"
       }
     },
     "symbols": {
