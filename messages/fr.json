@@ -634,6 +634,22 @@
       "calendar": {
         "title": "Calendrier",
         "description": "Modèle de calendrier mensuel et annuel"
+      },
+      "neurips-2026": {
+        "title": "NeurIPS 2026",
+        "description": "Modèle d'article pour la conférence NeurIPS 2026 avec limite de 9 pages"
+      },
+      "icml-2026": {
+        "title": "ICML 2026",
+        "description": "Modèle d'article pour la conférence ICML 2026 au format deux colonnes"
+      },
+      "iclr-2026": {
+        "title": "ICLR 2026",
+        "description": "Modèle d'article pour la conférence ICLR 2026 avec déclaration de reproductibilité"
+      },
+      "cvpr-2026": {
+        "title": "CVPR 2026",
+        "description": "Modèle d'article pour la conférence CVPR 2026 en vision par ordinateur"
       }
     },
     "symbols": {

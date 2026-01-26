@@ -642,6 +642,22 @@
       "calendar": {
         "title": "日历",
         "description": "月度和年度日历模板"
+      },
+      "neurips-2026": {
+        "title": "NeurIPS 2026",
+        "description": "NeurIPS 2026会议论文模板（9页限制）"
+      },
+      "icml-2026": {
+        "title": "ICML 2026",
+        "description": "ICML 2026会议论文模板（双栏格式）"
+      },
+      "iclr-2026": {
+        "title": "ICLR 2026",
+        "description": "ICLR 2026会议论文模板（含可复现性声明）"
+      },
+      "cvpr-2026": {
+        "title": "CVPR 2026",
+        "description": "CVPR 2026计算机视觉会议论文模板"
       }
     },
     "symbols": {

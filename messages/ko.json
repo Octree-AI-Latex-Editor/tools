@@ -440,7 +440,11 @@
     "recipe-book": { "title": "레시피 북", "description": "요리책 및 레시피 모음 템플릿" },
     "flyer": { "title": "전단지", "description": "마케팅 전단지 및 홍보용 한 페이지 템플릿" },
     "business-card": { "title": "명함", "description": "전문 명함 템플릿" },
-    "calendar": { "title": "달력", "description": "월간 및 연간 달력 템플릿" }
+    "calendar": { "title": "달력", "description": "월간 및 연간 달력 템플릿" },
+    "neurips-2026": { "title": "NeurIPS 2026", "description": "NeurIPS 2026 학회 논문 템플릿 (9페이지 제한)" },
+    "icml-2026": { "title": "ICML 2026", "description": "ICML 2026 학회 논문 템플릿 (2단 형식)" },
+    "iclr-2026": { "title": "ICLR 2026", "description": "ICLR 2026 학회 논문 템플릿 (재현성 선언 포함)" },
+    "cvpr-2026": { "title": "CVPR 2026", "description": "CVPR 2026 컴퓨터 비전 학회 논문 템플릿" }
   },
   "symbols": {
     "title": "LaTeX 기호",

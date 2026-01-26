@@ -463,7 +463,11 @@
       "recipe-book": { "title": "Livro de receitas", "description": "Modelo de livro de receitas e coleção de receitas" },
       "flyer": { "title": "Panfleto", "description": "Modelo de panfleto de marketing e promocional de uma página" },
       "business-card": { "title": "Cartão de visita", "description": "Modelo de cartão de visita profissional" },
-      "calendar": { "title": "Calendário", "description": "Modelo de calendário mensal e anual" }
+      "calendar": { "title": "Calendário", "description": "Modelo de calendário mensal e anual" },
+      "neurips-2026": { "title": "NeurIPS 2026", "description": "Modelo de artigo para conferência NeurIPS 2026 com limite de 9 páginas" },
+      "icml-2026": { "title": "ICML 2026", "description": "Modelo de artigo para conferência ICML 2026 com formato de duas colunas" },
+      "iclr-2026": { "title": "ICLR 2026", "description": "Modelo de artigo para conferência ICLR 2026 com declaração de reprodutibilidade" },
+      "cvpr-2026": { "title": "CVPR 2026", "description": "Modelo de artigo para conferência CVPR 2026 de visão computacional" }
     },
     "symbols": {
     "title": "Símbolos LaTeX",

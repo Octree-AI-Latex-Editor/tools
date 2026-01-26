@@ -463,7 +463,11 @@
       "recipe-book": { "title": "كتاب الوصفات", "description": "قالب كتاب طبخ ومجموعة وصفات" },
       "flyer": { "title": "منشور", "description": "قالب منشور تسويقي وترويجي من صفحة واحدة" },
       "business-card": { "title": "بطاقة عمل", "description": "قالب بطاقة عمل احترافية" },
-      "calendar": { "title": "تقويم", "description": "قالب تقويم شهري وسنوي" }
+      "calendar": { "title": "تقويم", "description": "قالب تقويم شهري وسنوي" },
+      "neurips-2026": { "title": "NeurIPS 2026", "description": "قالب ورقة مؤتمر NeurIPS 2026 بحد 9 صفحات" },
+      "icml-2026": { "title": "ICML 2026", "description": "قالب ورقة مؤتمر ICML 2026 بتنسيق عمودين" },
+      "iclr-2026": { "title": "ICLR 2026", "description": "قالب ورقة مؤتمر ICLR 2026 مع بيان إعادة الإنتاج" },
+      "cvpr-2026": { "title": "CVPR 2026", "description": "قالب ورقة مؤتمر CVPR 2026 للرؤية الحاسوبية" }
     },
     "symbols": {
     "title": "رموز LaTeX",

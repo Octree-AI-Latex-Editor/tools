@@ -662,6 +662,22 @@
     "calendar": {
       "title": "Calendar",
       "description": "Monthly and yearly calendar template"
+    },
+    "neurips-2026": {
+      "title": "NeurIPS 2026",
+      "description": "NeurIPS 2026 conference paper template with 9-page limit and paper checklist"
+    },
+    "icml-2026": {
+      "title": "ICML 2026",
+      "description": "ICML 2026 conference paper template with two-column format and 8-page limit"
+    },
+    "iclr-2026": {
+      "title": "ICLR 2026",
+      "description": "ICLR 2026 conference paper template with reproducibility statement"
+    },
+    "cvpr-2026": {
+      "title": "CVPR 2026",
+      "description": "CVPR 2026 computer vision conference paper template with two-column format"
     }
   },
   "symbols": {

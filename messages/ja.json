@@ -662,6 +662,22 @@
     "calendar": {
       "title": "カレンダー",
       "description": "月間・年間カレンダーテンプレート"
+    },
+    "neurips-2026": {
+      "title": "NeurIPS 2026",
+      "description": "NeurIPS 2026会議論文テンプレート（9ページ制限）"
+    },
+    "icml-2026": {
+      "title": "ICML 2026",
+      "description": "ICML 2026会議論文テンプレート（2段組形式）"
+    },
+    "iclr-2026": {
+      "title": "ICLR 2026",
+      "description": "ICLR 2026会議論文テンプレート（再現性声明付き）"
+    },
+    "cvpr-2026": {
+      "title": "CVPR 2026",
+      "description": "CVPR 2026コンピュータビジョン会議論文テンプレート"
     }
   },
   "symbols": {

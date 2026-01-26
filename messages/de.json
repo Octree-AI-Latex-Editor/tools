@@ -662,6 +662,22 @@
     "calendar": {
       "title": "Kalender",
       "description": "Monats- und Jahreskalender-Vorlage"
+    },
+    "neurips-2026": {
+      "title": "NeurIPS 2026",
+      "description": "NeurIPS 2026 Konferenzpapier-Vorlage mit 9-Seiten-Limit"
+    },
+    "icml-2026": {
+      "title": "ICML 2026",
+      "description": "ICML 2026 Konferenzpapier-Vorlage im Zweispaltenformat"
+    },
+    "iclr-2026": {
+      "title": "ICLR 2026",
+      "description": "ICLR 2026 Konferenzpapier-Vorlage mit Reproduzierbarkeitserklärung"
+    },
+    "cvpr-2026": {
+      "title": "CVPR 2026",
+      "description": "CVPR 2026 Computer-Vision-Konferenzpapier-Vorlage"
     }
   },
   "symbols": {

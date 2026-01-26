@@ -588,6 +588,22 @@
       "calendar": {
         "title": "Calendario",
         "description": "Plantilla de calendario mensual y anual"
+      },
+      "neurips-2026": {
+        "title": "NeurIPS 2026",
+        "description": "Plantilla de artículo para conferencia NeurIPS 2026 con límite de 9 páginas"
+      },
+      "icml-2026": {
+        "title": "ICML 2026",
+        "description": "Plantilla de artículo para conferencia ICML 2026 con formato de dos columnas"
+      },
+      "iclr-2026": {
+        "title": "ICLR 2026",
+        "description": "Plantilla de artículo para conferencia ICLR 2026 con declaración de reproducibilidad"
+      },
+      "cvpr-2026": {
+        "title": "CVPR 2026",
+        "description": "Plantilla de artículo para conferencia CVPR 2026 de visión por computadora"
       }
     },
     "toolsList": {
