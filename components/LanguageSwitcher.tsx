@@ -25,6 +25,9 @@ const LANGUAGE_NAMES: Record<Locale, string> = {
   ja: '日本語',
   it: 'Italiano',
   ko: '한국어',
+  id: 'Bahasa Indonesia',
+  ms: 'Bahasa Melayu',
+  fil: 'Filipino',
 };
 
 export default function LanguageSwitcher({ currentLocale }: LanguageSwitcherProps) {
