@@ -13,7 +13,10 @@
     "ko": "Koreano",
     "id": "Indonesian",
     "fil": "Filipino",
-    "ms": "Malay"
+    "ms": "Malay",
+    "ru": "Ruso",
+    "vi": "Vietnamese",
+    "nl": "Dutch"
   },
   "common": {
     "backToTools": "Bumalik sa Mga Tool",
