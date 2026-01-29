@@ -13,7 +13,10 @@
     "ko": "Korean",
     "id": "Indonesian",
     "fil": "Filipino",
-    "ms": "Malay"
+    "ms": "Malay",
+    "ru": "Russian",
+    "vi": "Vietnamese",
+    "nl": "Dutch"
   },
   "common": {
     "backToTools": "Back to Tools",
