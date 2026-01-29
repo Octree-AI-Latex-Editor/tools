@@ -582,44 +582,345 @@
   },
   "metadata": {
     "site": {
-      "title": "Gratis LaTeX Tools - Afbeelding naar LaTeX, 60+ Sjablonen | Octree",
-      "description": "Gratis LaTeX-tools: AI-aangedreven wiskundige vergelijkingsconverter, 60+ professionele sjablonen (cv, CV, proefschrift, beamer), live PDF-weergave.",
-      "keywords": "handgeschreven wiskunde naar LaTeX, afbeelding naar LaTeX, PDF naar LaTeX, vergelijking naar LaTeX, gratis LaTeX converter, AI LaTeX generator, LaTeX citatie generator, TikZ generator, gratis LaTeX sjablonen"
+      "title": "Gratis LaTeX Tools - Afbeelding naar LaTeX Converter, 60+ Sjablonen, PDF Voorbeeld | Octree",
+      "description": "Gratis LaTeX-tools: AI-aangedreven wiskundige vergelijkingsconverter, 60+ professionele sjablonen (cv, CV, proefschrift, beamer), live PDF-weergave. Converteer handgeschreven wiskunde, afbeeldingen en PDF's naar LaTeX direct.",
+      "keywords": "handgeschreven wiskunde naar LaTeX, afbeelding naar LaTeX converter, PDF naar LaTeX converter, wiskundige vergelijking naar LaTeX, LaTeX wiskunde converter, gratis LaTeX converter, AI LaTeX generator, LaTeX citatie generator, TikZ generator, gratis LaTeX sjablonen, LaTeX cv sjabloon, LaTeX CV sjabloon, LaTeX proefschrift sjabloon, LaTeX beamer sjabloon, online LaTeX editor, Overleaf alternatief, LaTeX online, LaTeX online compileren, LaTeX naar PDF, vergelijking editor, wiskunde formule editor, LaTeX symbolen, BibTeX generator, tabel naar LaTeX, Excel naar LaTeX, markdown naar LaTeX, HTML naar LaTeX, MathML naar LaTeX, LaTeX woordenteller, PGFPlots generator, arXiv LaTeX"
     },
     "tools": {
-      "imageToLatex": { "title": "Afbeelding naar LaTeX Converter - Gratis AI Tool", "description": "Converteer afbeeldingen van handgeschreven wiskundige vergelijkingen direct naar schone LaTeX-code.", "keywords": "afbeelding naar LaTeX, foto naar LaTeX, handgeschreven wiskunde naar LaTeX" },
-      "mathToLatex": { "title": "Wiskunde naar LaTeX Converter - Gratis Online Tool", "description": "Converteer wiskundige uitdrukkingen naar LaTeX-code.", "keywords": "wiskunde naar LaTeX, vergelijking naar LaTeX" },
-      "equationToLatex": { "title": "Vergelijking naar LaTeX Converter - Gratis Online Tool", "description": "Converteer wiskundige vergelijkingen direct naar LaTeX-code.", "keywords": "vergelijking naar LaTeX, formule naar LaTeX" },
-      "tikzGenerator": { "title": "TikZ Diagram Generator - AI LaTeX Graphics", "description": "Genereer TikZ-diagrammen met AI.", "keywords": "TikZ generator, TikZ online, TikZ diagram" },
-      "imageToTikz": { "title": "Afbeelding naar TikZ Converter", "description": "Converteer afbeeldingen en diagrammen naar TikZ LaTeX-code met AI.", "keywords": "afbeelding naar TikZ, diagram naar TikZ" },
-      "citationGenerator": { "title": "LaTeX Citatie Generator - BibTeX Generator", "description": "Genereer BibTeX-citaties van DOI's, URL's of artikeldetails.", "keywords": "LaTeX citatie generator, BibTeX generator" },
-      "latexPreview": { "title": "LaTeX Live Preview - Gratis Online Editor", "description": "Schrijf en bekijk LaTeX-documenten in realtime.", "keywords": "LaTeX preview, LaTeX online editor" },
-      "pdfToLatex": { "title": "PDF naar LaTeX Converter", "description": "Converteer PDF-documenten met wiskundige inhoud naar schone LaTeX-code.", "keywords": "PDF naar LaTeX, LaTeX uit PDF extraheren" },
-      "tableToLatex": { "title": "Tabel naar LaTeX Converter - Excel naar LaTeX", "description": "Converteer tabellen uit Excel, Google Sheets of CSV naar LaTeX-formaat.", "keywords": "tabel naar LaTeX, Excel naar LaTeX" },
-      "markdownToLatex": { "title": "Markdown naar LaTeX Converter", "description": "Converteer Markdown-bestanden naar schone LaTeX-code.", "keywords": "markdown naar LaTeX" },
-      "latexToMarkdown": { "title": "LaTeX naar Markdown Converter", "description": "Converteer LaTeX-documenten naar Markdown-formaat.", "keywords": "LaTeX naar markdown" },
-      "htmlToLatex": { "title": "HTML naar LaTeX Converter", "description": "Converteer HTML-inhoud naar schone LaTeX-code.", "keywords": "HTML naar LaTeX" },
-      "mathmlToLatex": { "title": "MathML naar LaTeX Converter", "description": "Converteer MathML-vergelijkingen naar LaTeX-code.", "keywords": "MathML naar LaTeX" },
-      "mermaidToLatex": { "title": "Mermaid naar LaTeX Converter", "description": "Converteer Mermaid-diagrammen naar TikZ LaTeX-code.", "keywords": "Mermaid naar LaTeX" },
-      "latexWordCounter": { "title": "LaTeX Woordenteller", "description": "Tel woorden in LaTeX-documenten exclusief commando's en commentaar.", "keywords": "LaTeX woordenteller" },
-      "aiLatexGenerator": { "title": "AI LaTeX Generator", "description": "Genereer LaTeX-code met AI.", "keywords": "AI LaTeX generator" },
-      "pgfplotsGenerator": { "title": "PGFPlots Generator - LaTeX Grafiek Maker", "description": "Maak mooie grafieken voor LaTeX met PGFPlots.", "keywords": "PGFPlots generator, LaTeX grafiek" },
-      "arxivToLatex": { "title": "arXiv naar LaTeX", "description": "Extraheer en download LaTeX-broncode van arXiv-artikelen.", "keywords": "arXiv naar LaTeX" }
+      "imageToLatex": {
+        "title": "Afbeelding naar LaTeX Converter - Gratis AI-aangedreven Tool",
+        "description": "Converteer afbeeldingen van handgeschreven wiskundige vergelijkingen direct naar schone LaTeX-code. AI-aangedreven, gratis, geen registratie vereist.",
+        "keywords": "afbeelding naar LaTeX, foto naar LaTeX, plaatje naar LaTeX, handgeschreven wiskunde naar LaTeX, wiskunde scannen naar LaTeX, OCR LaTeX, wiskunde afbeelding converter, screenshot naar LaTeX, wiskunde OCR, vergelijking OCR, formule naar LaTeX, wiskunde foto converter, handschrift naar LaTeX, vergelijking scannen"
+      },
+      "mathToLatex": {
+        "title": "Wiskunde naar LaTeX Converter - Gratis Online Tool",
+        "description": "Converteer wiskundige uitdrukkingen naar LaTeX-code. Typ of plak wiskunde en krijg schone LaTeX-uitvoer.",
+        "keywords": "wiskunde naar LaTeX, wiskunde converteren naar LaTeX, wiskundige uitdrukking naar LaTeX, formule naar LaTeX, wiskunde converter, vergelijking converter, wiskunde notatie LaTeX, wiskundige uitdrukking converter"
+      },
+      "equationToLatex": {
+        "title": "Vergelijking naar LaTeX Converter - Gratis Online Tool",
+        "description": "Converteer wiskundige vergelijkingen direct naar LaTeX-code. Typ je vergelijking en krijg LaTeX.",
+        "keywords": "vergelijking naar LaTeX, vergelijking converteren naar LaTeX, wiskundige vergelijking converter, vergelijking editor LaTeX, formule naar LaTeX, wiskundige vergelijking LaTeX, vergelijking notatie"
+      },
+      "tikzGenerator": {
+        "title": "TikZ Diagram Generator - AI-aangedreven LaTeX Graphics",
+        "description": "Genereer TikZ-diagrammen met AI. Beschrijf je diagram en krijg direct schone TikZ LaTeX-code.",
+        "keywords": "TikZ generator, TikZ online, TikZ voorbeelden, TikZ stroomdiagram, TikZ diagram, TikZ neuraal netwerk, AI TikZ generator, TikZ code generator, TikZ tutorial, TikZ vormen, TikZ pijlen, TikZ grafiek, TikZ boom, TikZ plot, PGF TikZ, TikZ circuit, TikZ tijdlijn, TikZ Venn diagram"
+      },
+      "imageToTikz": {
+        "title": "Afbeelding naar TikZ Converter - Afbeeldingen naar LaTeX Graphics",
+        "description": "Converteer afbeeldingen en diagrammen naar TikZ LaTeX-code met AI. Upload elke afbeelding en krijg bewerkbare TikZ-code.",
+        "keywords": "afbeelding naar TikZ, plaatje naar TikZ, afbeelding converteren naar TikZ, diagram naar TikZ, foto naar TikZ code, AI TikZ converter, vectoriseren naar TikZ, afbeelding naar LaTeX diagram"
+      },
+      "citationGenerator": {
+        "title": "LaTeX Citatie Generator - BibTeX Generator",
+        "description": "Genereer BibTeX-citaties van DOI's, URL's of artikeldetails. Gratis LaTeX citatie tool.",
+        "keywords": "LaTeX citatie generator, BibTeX generator, DOI naar BibTeX, citatie generator, referentie generator, bibliografie generator, cite generator, APA citatie LaTeX, MLA citatie LaTeX, Chicago citatie, IEEE citatie, Harvard referentie LaTeX"
+      },
+      "latexPreview": {
+        "title": "LaTeX Live Preview - Gratis Online Editor",
+        "description": "Schrijf en bekijk LaTeX-documenten in realtime. Gratis online LaTeX-editor met directe PDF-uitvoer.",
+        "keywords": "LaTeX preview, LaTeX online editor, LaTeX live preview, online LaTeX compiler, LaTeX naar PDF, gratis LaTeX editor, Overleaf alternatief, online LaTeX, LaTeX online schrijven, LaTeX renderer, LaTeX viewer, LaTeX gratis compileren"
+      },
+      "pdfToLatex": {
+        "title": "PDF naar LaTeX Converter - LaTeX uit PDF Extraheren",
+        "description": "Converteer PDF-documenten met wiskundige inhoud naar schone LaTeX-code. AI-aangedreven extractie.",
+        "keywords": "PDF naar LaTeX, PDF converteren naar LaTeX, LaTeX uit PDF extraheren, PDF wiskunde converter, PDF vergelijking extractor, PDF naar TeX, OCR PDF naar LaTeX, PDF formule extractor, PDF scannen naar LaTeX"
+      },
+      "tableToLatex": {
+        "title": "Tabel naar LaTeX Converter - Excel naar LaTeX",
+        "description": "Converteer tabellen uit Excel, Google Sheets of CSV naar LaTeX-formaat. Gratis tabel generator.",
+        "keywords": "tabel naar LaTeX, Excel naar LaTeX, CSV naar LaTeX, spreadsheet naar LaTeX, LaTeX tabel generator, tabular LaTeX, LaTeX tabel maker, Google Sheets naar LaTeX, kopiëren plakken tabel LaTeX, LaTeX tabular generator"
+      },
+      "markdownToLatex": {
+        "title": "Markdown naar LaTeX Converter - Gratis Online Tool",
+        "description": "Converteer Markdown-bestanden naar schone LaTeX-code. Behoud opmaak, links en structuur.",
+        "keywords": "markdown naar LaTeX, markdown converteren naar LaTeX, md naar tex, markdown LaTeX converter, pandoc alternatief, markdown naar PDF LaTeX, markdown naar TeX online"
+      },
+      "latexToMarkdown": {
+        "title": "LaTeX naar Markdown Converter - Gratis Online Tool",
+        "description": "Converteer LaTeX-documenten naar Markdown-formaat. Behoud vergelijkingen en opmaak.",
+        "keywords": "LaTeX naar markdown, LaTeX converteren naar markdown, tex naar md, LaTeX naar md converter, LaTeX markdown, TeX naar markdown, LaTeX exporteren als markdown"
+      },
+      "htmlToLatex": {
+        "title": "HTML naar LaTeX Converter - Gratis Online Tool",
+        "description": "Converteer HTML-inhoud naar schone LaTeX-code. Perfect voor web naar document conversie.",
+        "keywords": "HTML naar LaTeX, HTML converteren naar LaTeX, web naar LaTeX, HTML naar TeX, webpagina naar LaTeX, HTML tabel naar LaTeX, website converteren naar LaTeX"
+      },
+      "mathmlToLatex": {
+        "title": "MathML naar LaTeX Converter - Gratis Online Tool",
+        "description": "Converteer MathML-vergelijkingen naar LaTeX-code. Perfect voor Word en web vergelijking conversie.",
+        "keywords": "MathML naar LaTeX, MathML converteren naar LaTeX, Word vergelijking naar LaTeX, MathML converter, Office wiskunde naar LaTeX, OMML naar LaTeX, Word wiskunde naar LaTeX"
+      },
+      "mermaidToLatex": {
+        "title": "Mermaid naar LaTeX Converter - Diagrammen naar TikZ",
+        "description": "Converteer Mermaid-diagrammen naar TikZ LaTeX-code. Stroomdiagrammen, sequentiediagrammen en meer.",
+        "keywords": "Mermaid naar LaTeX, Mermaid naar TikZ, Mermaid diagram converteren, stroomdiagram naar LaTeX, sequentiediagram naar LaTeX, Mermaid LaTeX, diagram naar TikZ"
+      },
+      "latexWordCounter": {
+        "title": "LaTeX Woordenteller - Gratis Online Tool",
+        "description": "Tel woorden in LaTeX-documenten exclusief commando's en commentaar. Nauwkeurige academische woordentelling.",
+        "keywords": "LaTeX woordenteller, woorden tellen LaTeX, TeX woordentelling, LaTeX karaktertelling, academische woordenteller, proefschrift woordentelling, artikel woordentelling LaTeX, LaTeX tekst teller"
+      },
+      "aiLatexGenerator": {
+        "title": "AI LaTeX Generator - Schrijf LaTeX met AI",
+        "description": "Genereer LaTeX-code met AI. Beschrijf wat je wilt en krijg schone, compileerbare LaTeX.",
+        "keywords": "AI LaTeX generator, LaTeX genereren AI, AI LaTeX schrijver, ChatGPT LaTeX, AI vergelijking generator, AI wiskunde LaTeX, LaTeX van tekst, natuurlijke taal naar LaTeX"
+      },
+      "pgfplotsGenerator": {
+        "title": "PGFPlots Generator - LaTeX Grafiek Maker",
+        "description": "Maak mooie grafieken en plots voor LaTeX met PGFPlots. Gratis online plot generator.",
+        "keywords": "PGFPlots generator, PGFPlots online, LaTeX grafiek, LaTeX plot, PGFPlots voorbeelden, LaTeX diagram, data visualisatie LaTeX, scatter plot LaTeX, staafdiagram LaTeX, lijngrafiek LaTeX, functie plot LaTeX"
+      },
+      "arxivToLatex": {
+        "title": "arXiv naar LaTeX - Download arXiv Broncode",
+        "description": "Extraheer en download LaTeX-broncode van arXiv-artikelen. Krijg de originele TeX-bestanden.",
+        "keywords": "arXiv naar LaTeX, arXiv broncode, arXiv LaTeX downloaden, arXiv TeX bron, arXiv artikel bron, arXiv LaTeX extraheren, arXiv bron downloaden"
+      }
     },
     "symbols": {
-      "main": { "title": "LaTeX Symbolen - Complete Referentiegids", "description": "Blader en kopieer LaTeX-symbolen: Griekse letters, wiskundige operatoren, pijlen en meer.", "keywords": "LaTeX symbolen, wiskundige symbolen, Griekse letters LaTeX" }
+      "main": {
+        "title": "LaTeX Symbolen - Complete Referentiegids",
+        "description": "Blader en kopieer LaTeX-symbolen: Griekse letters, wiskundige operatoren, pijlen en meer. Complete symboolreferentie.",
+        "keywords": "LaTeX symbolen, wiskunde symbolen, Griekse letters LaTeX, LaTeX operatoren, LaTeX pijlen, symbool referentie, LaTeX symbolen kopiëren, LaTeX speciale tekens, wiskundige notatie LaTeX, LaTeX spiekbriefje, alle LaTeX symbolen"
+      },
+      "math": {
+        "title": "LaTeX Wiskunde Symbolen - Operatoren en Relaties",
+        "description": "Complete lijst van LaTeX wiskundige symbolen. Operatoren, relaties, vergelijkingen met kopieer-plak code.",
+        "keywords": "wiskunde symbolen LaTeX, wiskundige operatoren, LaTeX plus min, LaTeX breuk, LaTeX vierkantswortel, LaTeX sommatie, LaTeX integraal, maal symbool LaTeX, deel symbool LaTeX, gelijk LaTeX, niet gelijk LaTeX, ongeveer LaTeX"
+      },
+      "greek": {
+        "title": "Griekse Letters in LaTeX - Alpha tot Omega",
+        "description": "Complete lijst van Griekse letters en hun LaTeX-commando's. Kopieer-plak alpha, beta, gamma en meer.",
+        "keywords": "Griekse letters LaTeX, alpha LaTeX, beta LaTeX, gamma LaTeX, delta LaTeX, epsilon LaTeX, theta LaTeX, lambda LaTeX, pi LaTeX, sigma LaTeX, omega LaTeX, phi LaTeX, Grieks alfabet LaTeX"
+      },
+      "arrows": {
+        "title": "LaTeX Pijl Symbolen - Alle Pijl Types",
+        "description": "Complete lijst van LaTeX pijlsymbolen. Rechts, links, omhoog, omlaag, dubbele pijlen en meer.",
+        "keywords": "LaTeX pijlen, rechterpijl LaTeX, linkerpijl LaTeX, dubbele pijl LaTeX, impliceert LaTeX, pijl symbolen, LaTeX pijl types, pijl omhoog LaTeX, pijl omlaag LaTeX, bidirectionele pijl LaTeX, lange pijl LaTeX"
+      },
+      "brackets": {
+        "title": "LaTeX Haakjes en Scheidingstekens",
+        "description": "Haakjes, accolades, vierkante haken en scheidingstekens in LaTeX. Kopieer-plak haakjes commando's.",
+        "keywords": "LaTeX haakjes, LaTeX ronde haakjes, LaTeX accolades, gekrulde haakjes LaTeX, vierkante haken LaTeX, punthaken LaTeX, LaTeX scheidingstekens, left right LaTeX, grote haakjes LaTeX"
+      },
+      "calculus": {
+        "title": "LaTeX Calculus Symbolen - Afgeleiden en Integralen",
+        "description": "Calculus notatie in LaTeX: afgeleiden, integralen, limieten en differentiaaloperatoren.",
+        "keywords": "calculus LaTeX, afgeleide LaTeX, integraal LaTeX, partiële afgeleide LaTeX, limiet LaTeX, differentiaal LaTeX, nabla LaTeX, gradiënt LaTeX, divergentie LaTeX, rotatie LaTeX, Laplaciaan LaTeX"
+      },
+      "setTheory": {
+        "title": "LaTeX Verzamelingenleer Symbolen",
+        "description": "Verzamelingenleer notatie in LaTeX: unie, doorsnede, deelverzameling, element van en meer.",
+        "keywords": "verzamelingenleer LaTeX, unie LaTeX, doorsnede LaTeX, deelverzameling LaTeX, bovenverzameling LaTeX, element van LaTeX, lege verzameling LaTeX, verzameling notatie LaTeX, behoort tot LaTeX, bevat LaTeX"
+      },
+      "logic": {
+        "title": "LaTeX Logica Symbolen - Logische Operatoren",
+        "description": "Logica symbolen in LaTeX: en, of, niet, impliceert, dan en slechts dan als, en kwantoren.",
+        "keywords": "logica symbolen LaTeX, en LaTeX, of LaTeX, niet LaTeX, impliceert LaTeX, dan en slechts dan als LaTeX, negatie LaTeX, logische operatoren LaTeX, propositielogica LaTeX"
+      },
+      "relations": {
+        "title": "LaTeX Relatie Symbolen - Vergelijkingsoperatoren",
+        "description": "Relatie symbolen in LaTeX: kleiner dan, groter dan, gelijk, niet gelijk en equivalenties.",
+        "keywords": "relatie symbolen LaTeX, kleiner dan LaTeX, groter dan LaTeX, kleiner gelijk LaTeX, groter gelijk LaTeX, niet gelijk LaTeX, equivalent LaTeX, ongeveer LaTeX, evenredig LaTeX"
+      },
+      "operators": {
+        "title": "LaTeX Operatoren - Wiskundige Operatoren",
+        "description": "Wiskundige operatoren in LaTeX: som, product, integraal en operator notatie.",
+        "keywords": "LaTeX operatoren, som LaTeX, product LaTeX, integraal operator LaTeX, grote operatoren LaTeX, sommatie LaTeX, prod LaTeX, coprod LaTeX, operator notatie LaTeX"
+      },
+      "linearAlgebra": {
+        "title": "LaTeX Lineaire Algebra Symbolen - Matrices en Vectoren",
+        "description": "Lineaire algebra notatie in LaTeX: matrices, vectoren, determinanten en eigenwaarden.",
+        "keywords": "lineaire algebra LaTeX, matrix LaTeX, vector LaTeX, determinant LaTeX, transponeren LaTeX, eigenwaarde LaTeX, eigenvector LaTeX, inproduct LaTeX, kruisproduct LaTeX, norm LaTeX"
+      },
+      "geometry": {
+        "title": "LaTeX Meetkunde Symbolen - Hoeken en Vormen",
+        "description": "Meetkunde notatie in LaTeX: hoeken, evenwijdig, loodrecht, driehoeken en cirkels.",
+        "keywords": "meetkunde LaTeX, hoek LaTeX, evenwijdig LaTeX, loodrecht LaTeX, driehoek LaTeX, cirkel LaTeX, graad symbool LaTeX, congruent LaTeX, gelijkvormig LaTeX"
+      },
+      "probability": {
+        "title": "LaTeX Kans Symbolen - Statistiek Notatie",
+        "description": "Kans en statistiek symbolen in LaTeX: verwachtingswaarde, variantie, verdelingen.",
+        "keywords": "kans LaTeX, verwachtingswaarde LaTeX, variantie LaTeX, standaarddeviatie LaTeX, kansverdeling LaTeX, statistiek LaTeX, kansvariabele LaTeX, voorwaardelijke kans LaTeX"
+      },
+      "physics": {
+        "title": "LaTeX Fysica Symbolen - Wetenschappelijke Notatie",
+        "description": "Fysica symbolen in LaTeX: vectoren, operatoren, kwantummechanica en constanten.",
+        "keywords": "fysica LaTeX, vector LaTeX, hbar LaTeX, kwantummechanica LaTeX, bra ket LaTeX, Dirac notatie LaTeX, fysieke constanten LaTeX, wetenschappelijke notatie LaTeX"
+      },
+      "chemistry": {
+        "title": "LaTeX Scheikunde Symbolen - Chemische Notatie",
+        "description": "Scheikunde notatie in LaTeX: chemische formules, reacties en moleculaire structuren.",
+        "keywords": "scheikunde LaTeX, chemische formule LaTeX, reactiepijl LaTeX, subscript LaTeX, superscript LaTeX, mhchem LaTeX, chemische vergelijking LaTeX"
+      },
+      "computerScience": {
+        "title": "LaTeX Informatica Symbolen - Algoritme Notatie",
+        "description": "Informatica symbolen in LaTeX: algoritmen, complexiteit en programmeernotatie.",
+        "keywords": "informatica LaTeX, algoritme LaTeX, big O notatie LaTeX, complexiteit LaTeX, pseudocode LaTeX, programmeer symbolen LaTeX"
+      },
+      "functions": {
+        "title": "LaTeX Functie Symbolen - Wiskundige Functies",
+        "description": "Functie notatie in LaTeX: goniometrische, logaritmische, exponentiële en meer.",
+        "keywords": "functies LaTeX, sin LaTeX, cos LaTeX, tan LaTeX, log LaTeX, ln LaTeX, exp LaTeX, lim LaTeX, min LaTeX, max LaTeX, argmin LaTeX, argmax LaTeX"
+      },
+      "numberTheory": {
+        "title": "LaTeX Getaltheorie Symbolen",
+        "description": "Getaltheorie notatie in LaTeX: deelbaarheid, congruentie en getalverzamelingen.",
+        "keywords": "getaltheorie LaTeX, deelbaarheid LaTeX, modulo LaTeX, congruentie LaTeX, priemgetal LaTeX, ggd LaTeX, kgv LaTeX, gehele getallen LaTeX, natuurlijke getallen LaTeX"
+      },
+      "accents": {
+        "title": "LaTeX Accenten en Diakritische Tekens",
+        "description": "LaTeX accenten: hoedje, streep, punt, tilde en andere diakritische tekens.",
+        "keywords": "LaTeX accenten, hoedje LaTeX, streep LaTeX, punt LaTeX, tilde LaTeX, vec LaTeX, bovenlijn LaTeX, onderlijn LaTeX, overbrace LaTeX, underbrace LaTeX"
+      },
+      "boolean": {
+        "title": "LaTeX Booleaanse Algebra Symbolen",
+        "description": "Booleaanse algebra notatie in LaTeX: AND, OR, NOT, XOR en waarheidswaardes.",
+        "keywords": "boolean LaTeX, AND LaTeX, OR LaTeX, NOT LaTeX, XOR LaTeX, waar onwaar LaTeX, booleaanse algebra LaTeX, logische poorten LaTeX"
+      },
+      "summation": {
+        "title": "LaTeX Sommatie en Product Symbolen",
+        "description": "Sommatie en product notatie in LaTeX: sommen, producten en reeksen.",
+        "keywords": "sommatie LaTeX, product LaTeX, som notatie LaTeX, sigma LaTeX, pi notatie LaTeX, reeks LaTeX, oneindige som LaTeX"
+      },
+      "trigonometry": {
+        "title": "LaTeX Goniometrie Symbolen",
+        "description": "Goniometrische functies in LaTeX: sinus, cosinus, tangens en inverse functies.",
+        "keywords": "goniometrie LaTeX, sin LaTeX, cos LaTeX, tan LaTeX, arcsin LaTeX, arccos LaTeX, arctan LaTeX, hyperbolisch LaTeX, sinh LaTeX, cosh LaTeX, tanh LaTeX"
+      },
+      "topology": {
+        "title": "LaTeX Topologie Symbolen",
+        "description": "Topologie notatie in LaTeX: open verzamelingen, afsluiting, inwendige en rand.",
+        "keywords": "topologie LaTeX, open verzameling LaTeX, gesloten verzameling LaTeX, afsluiting LaTeX, inwendige LaTeX, rand LaTeX, homeomorfisme LaTeX"
+      },
+      "finance": {
+        "title": "LaTeX Financiële Symbolen - Financiële Notatie",
+        "description": "Financiële symbolen in LaTeX: valuta, rente en economische notatie.",
+        "keywords": "financiën LaTeX, valuta LaTeX, dollar LaTeX, euro LaTeX, pond LaTeX, procent LaTeX, rente LaTeX, NPV LaTeX"
+      },
+      "machineLearning": {
+        "title": "LaTeX Machine Learning Symbolen - ML Notatie",
+        "description": "Machine learning notatie in LaTeX: neurale netwerken, verliesfuncties en optimalisatie.",
+        "keywords": "machine learning LaTeX, neuraal netwerk LaTeX, verliesfunctie LaTeX, gradient descent LaTeX, activatiefunctie LaTeX, gewichten LaTeX, bias LaTeX, ML notatie LaTeX"
+      },
+      "latin": {
+        "title": "LaTeX Latijnse Letters en Lettertypen",
+        "description": "Latijnse letters en letterstijlen in LaTeX: vet, cursief, kalligrafisch en meer.",
+        "keywords": "Latijnse letters LaTeX, vet LaTeX, cursief LaTeX, mathcal LaTeX, mathbb LaTeX, mathfrak LaTeX, letterstijlen LaTeX, blackboard bold LaTeX"
+      },
+      "complex": {
+        "title": "LaTeX Complexe Getallen Symbolen",
+        "description": "Complexe getallen notatie in LaTeX: imaginaire eenheid, complex geconjugeerde en poolvorm.",
+        "keywords": "complexe getallen LaTeX, imaginaire eenheid LaTeX, geconjugeerde LaTeX, reëel deel LaTeX, imaginair deel LaTeX, modulus LaTeX, argument LaTeX"
+      },
+      "graphTheory": {
+        "title": "LaTeX Grafentheorie Symbolen",
+        "description": "Grafentheorie notatie in LaTeX: hoekpunten, randen, paden en cycli.",
+        "keywords": "grafentheorie LaTeX, hoekpunt LaTeX, rand LaTeX, pad LaTeX, cyclus LaTeX, adjacentie LaTeX, graad LaTeX, samenhangend LaTeX"
+      },
+      "combinatorics": {
+        "title": "LaTeX Combinatoriek Symbolen",
+        "description": "Combinatoriek notatie in LaTeX: faculteiten, binomiaalcoëfficiënten en permutaties.",
+        "keywords": "combinatoriek LaTeX, faculteit LaTeX, binomiaal LaTeX, permutatie LaTeX, combinatie LaTeX, choose LaTeX, binom LaTeX"
+      },
+      "specialFunctions": {
+        "title": "LaTeX Speciale Functies - Gamma, Zeta, Bessel",
+        "description": "Speciale functies in LaTeX: gamma, zeta, Bessel en foutfuncties.",
+        "keywords": "speciale functies LaTeX, gammafunctie LaTeX, zetafunctie LaTeX, Besselfunctie LaTeX, foutfunctie LaTeX, Legendre LaTeX"
+      },
+      "tensors": {
+        "title": "LaTeX Tensor Notatie - Einstein Sommatie",
+        "description": "Tensor notatie in LaTeX: indices, contracties en covariante afgeleiden.",
+        "keywords": "tensor LaTeX, Einstein sommatie LaTeX, tensor indices LaTeX, covariante afgeleide LaTeX, contravariante LaTeX, Kronecker delta LaTeX"
+      },
+      "differentialGeometry": {
+        "title": "LaTeX Differentiaalgeometrie Symbolen",
+        "description": "Differentiaalgeometrie notatie in LaTeX: variëteiten, kromming en connecties.",
+        "keywords": "differentiaalgeometrie LaTeX, variëteit LaTeX, kromming LaTeX, Christoffel LaTeX, Riemann tensor LaTeX, connectie LaTeX"
+      },
+      "modalLogic": {
+        "title": "LaTeX Modale Logica Symbolen",
+        "description": "Modale logica notatie in LaTeX: noodzakelijkheid, mogelijkheid en temporele operatoren.",
+        "keywords": "modale logica LaTeX, noodzakelijkheid LaTeX, mogelijkheid LaTeX, box LaTeX, diamond LaTeX, temporele logica LaTeX"
+      },
+      "gameTheory": {
+        "title": "LaTeX Speltheorie Symbolen",
+        "description": "Speltheorie notatie in LaTeX: strategieën, uitbetalingen en evenwicht.",
+        "keywords": "speltheorie LaTeX, Nash evenwicht LaTeX, strategie LaTeX, uitbetaling LaTeX, nutsfunctie LaTeX, Shapley waarde LaTeX"
+      },
+      "order": {
+        "title": "LaTeX Orde Relatie Symbolen",
+        "description": "Orde relaties in LaTeX: partiële orden, roosters en supremum/infimum.",
+        "keywords": "orde relaties LaTeX, partiële orde LaTeX, rooster LaTeX, supremum LaTeX, infimum LaTeX, kleinste bovengrens LaTeX"
+      },
+      "optimization": {
+        "title": "LaTeX Optimalisatie Symbolen",
+        "description": "Optimalisatie notatie in LaTeX: minimaliseren, maximaliseren en beperkingen.",
+        "keywords": "optimalisatie LaTeX, minimaliseren LaTeX, maximaliseren LaTeX, argmin LaTeX, argmax LaTeX, onder voorwaarde LaTeX, beperking LaTeX"
+      },
+      "quantifiers": {
+        "title": "LaTeX Kwantor Symbolen - Voor Alle, Bestaat",
+        "description": "Kwantor symbolen in LaTeX: universele en existentiële kwantoren.",
+        "keywords": "kwantoren LaTeX, voor alle LaTeX, bestaat LaTeX, forall LaTeX, existentieel LaTeX, universele kwantor LaTeX, er bestaat LaTeX"
+      },
+      "units": {
+        "title": "LaTeX Eenheden en Metingen",
+        "description": "SI-eenheden en metingen in LaTeX: graden, fysieke constanten en eenheden.",
+        "keywords": "eenheden LaTeX, SI-eenheden LaTeX, graad LaTeX, fysieke constanten LaTeX, siunitx LaTeX, meting LaTeX, meter LaTeX, kilogram LaTeX"
+      }
     },
     "templates": {
-      "main": { "title": "Gratis LaTeX Sjablonen - CV, Proefschrift, Beamer", "description": "60+ professionele LaTeX-sjablonen. CV, proefschrift, beamer presentaties en meer. Gratis download.", "keywords": "LaTeX sjablonen, gratis LaTeX sjablonen, LaTeX CV sjabloon, LaTeX proefschrift sjabloon" },
-      "academic": { "title": "Academische LaTeX Sjablonen", "description": "Gratis academische LaTeX-sjablonen voor onderzoeksartikelen, proefschriften en tijdschriftartikelen.", "keywords": "academische LaTeX sjablonen" },
-      "presentations": { "title": "LaTeX Presentatie Sjablonen - Beamer Dia's", "description": "Gratis LaTeX beamer presentatiesjablonen.", "keywords": "beamer sjabloon LaTeX" },
-      "resumeCV": { "title": "LaTeX CV Sjablonen", "description": "Gratis LaTeX cv- en CV-sjablonen.", "keywords": "LaTeX CV sjabloon" },
-      "math": { "title": "Wiskunde LaTeX Sjablonen", "description": "LaTeX-sjablonen voor wiskundige documenten.", "keywords": "wiskunde sjabloon LaTeX" },
-      "reports": { "title": "LaTeX Rapport Sjablonen", "description": "Professionele LaTeX-sjablonen voor technische rapporten.", "keywords": "rapport sjabloon LaTeX" },
-      "education": { "title": "Onderwijs LaTeX Sjablonen", "description": "LaTeX-sjablonen voor docenten en studenten.", "keywords": "huiswerk sjabloon LaTeX" },
-      "letters": { "title": "LaTeX Brief Sjablonen", "description": "Professionele LaTeX-briefsjablonen.", "keywords": "brief sjabloon LaTeX" },
-      "business": { "title": "Zakelijke LaTeX Sjablonen", "description": "LaTeX-sjablonen voor zakelijke documenten.", "keywords": "zakelijk sjabloon LaTeX" },
-      "other": { "title": "LaTeX Sjablonen - Boeken, Posters, Nieuwsbrieven", "description": "Diverse LaTeX-sjablonen.", "keywords": "boek sjabloon LaTeX, poster sjabloon LaTeX" }
+      "main": {
+        "title": "Gratis LaTeX Sjablonen - CV, Proefschrift, Beamer",
+        "description": "60+ professionele LaTeX-sjablonen. CV, proefschrift, beamer presentaties en meer. Gratis download.",
+        "keywords": "LaTeX sjablonen, gratis LaTeX sjablonen, LaTeX cv sjabloon, LaTeX CV sjabloon, LaTeX proefschrift sjabloon, LaTeX beamer sjabloon, Overleaf sjablonen, academische sjablonen LaTeX, LaTeX presentatie sjabloon, LaTeX artikel sjabloon, LaTeX huiswerk sjabloon, LaTeX poster sjabloon, LaTeX brief sjabloon, LaTeX boek sjabloon, LaTeX rapport sjabloon, professionele LaTeX sjablonen"
+      },
+      "academic": {
+        "title": "Academische LaTeX Sjablonen - Onderzoeksartikelen, Proefschriften, Dissertaties",
+        "description": "Gratis academische LaTeX-sjablonen voor onderzoeksartikelen, proefschriften, dissertaties, tijdschriftartikelen en conferentiepapers.",
+        "keywords": "academische LaTeX sjablonen, onderzoeksartikel sjabloon LaTeX, proefschrift sjabloon LaTeX, dissertatie sjabloon LaTeX, tijdschriftartikel sjabloon, conferentiepaper LaTeX, IEEE sjabloon LaTeX, ACM sjabloon, Springer sjabloon, wetenschappelijk artikel sjabloon, PhD proefschrift LaTeX, master proefschrift sjabloon, academisch schrijven LaTeX"
+      },
+      "presentations": {
+        "title": "LaTeX Presentatie Sjablonen - Beamer Dia's",
+        "description": "Gratis LaTeX beamer presentatiesjablonen. Professionele dia's voor academische presentaties, conferenties en colleges.",
+        "keywords": "beamer sjabloon LaTeX, LaTeX presentatie sjabloon, beamer dia's, LaTeX dia's, academische presentatie sjabloon, conferentie dia's LaTeX, college dia's LaTeX, beamer thema's, beamer voorbeelden, PowerPoint alternatief LaTeX, presentatie beamer"
+      },
+      "resumeCV": {
+        "title": "LaTeX CV & Resume Sjablonen - Professioneel Curriculum Vitae",
+        "description": "Gratis LaTeX cv en CV sjablonen. Moderne, professionele ontwerpen voor sollicitaties en academische CV's.",
+        "keywords": "LaTeX cv sjabloon, LaTeX CV sjabloon, curriculum vitae LaTeX, professioneel cv LaTeX, modern CV sjabloon, academisch CV LaTeX, één pagina cv LaTeX, twee kolommen cv, moderncv sjabloon, europass LaTeX, software engineer cv LaTeX, data scientist CV"
+      },
+      "math": {
+        "title": "LaTeX Wiskunde Sjablonen - Vergelijkingen, Bewijzen, Opgaven",
+        "description": "LaTeX-sjablonen voor wiskundige documenten: opgavensets, bewijzen, stellingen en formulebladen.",
+        "keywords": "wiskunde sjabloon LaTeX, vergelijking sjabloon LaTeX, opgavenset sjabloon, huiswerk sjabloon LaTeX, bewijs sjabloon LaTeX, stelling sjabloon, wiskunde aantekeningen LaTeX, formuleblad sjabloon, tentamen sjabloon LaTeX, toets sjabloon LaTeX, wiskunde opdracht sjabloon"
+      },
+      "reports": {
+        "title": "LaTeX Rapport Sjablonen - Technisch, Lab, Project",
+        "description": "Professionele LaTeX-sjablonen voor technische rapporten, labrapporten, projectdocumentatie en bedrijfsrapporten.",
+        "keywords": "rapport sjabloon LaTeX, technisch rapport LaTeX, labrapport sjabloon, projectrapport LaTeX, bedrijfsrapport sjabloon, jaarverslag LaTeX, stagerapport sjabloon, onderzoeksrapport LaTeX, documentatie sjabloon"
+      },
+      "education": {
+        "title": "LaTeX Onderwijs Sjablonen - Huiswerk, Tentamens, Syllabi",
+        "description": "LaTeX-sjablonen voor docenten en studenten: huiswerk, tentamens, syllabi, collegeaantekeningen en cursusmateriaal.",
+        "keywords": "huiswerk sjabloon LaTeX, tentamen sjabloon LaTeX, syllabus sjabloon LaTeX, collegeaantekeningen sjabloon, cursusmateriaal LaTeX, opdracht sjabloon, toets sjabloon LaTeX, werkblad sjabloon, studiegids LaTeX, flashcard sjabloon LaTeX"
+      },
+      "letters": {
+        "title": "LaTeX Brief Sjablonen - Sollicitatiebrieven, Formele Brieven",
+        "description": "Professionele LaTeX-briefsjablonen voor sollicitatiebrieven, formele correspondentie en aanbevelingsbrieven.",
+        "keywords": "brief sjabloon LaTeX, sollicitatiebrief LaTeX, formele brief sjabloon, aanbevelingsbrief LaTeX, zakelijke brief sjabloon, sollicitatie LaTeX, referentiebrief sjabloon, professionele brief LaTeX"
+      },
+      "business": {
+        "title": "Zakelijke LaTeX Sjablonen - Plannen, Voorstellen, Facturen",
+        "description": "LaTeX-sjablonen voor zakelijke documenten: bedrijfsplannen, voorstellen, facturen, contracten en memo's.",
+        "keywords": "zakelijk sjabloon LaTeX, bedrijfsplan LaTeX, voorstel sjabloon LaTeX, factuur sjabloon LaTeX, contract sjabloon, memo sjabloon LaTeX, visitekaartje LaTeX, bedrijfsrapport sjabloon, executive summary LaTeX, projectvoorstel sjabloon"
+      },
+      "other": {
+        "title": "LaTeX Sjablonen - Boeken, Posters, Nieuwsbrieven",
+        "description": "Diverse LaTeX-sjablonen: boeken, posters, nieuwsbrieven, kalenders en creatieve documenten.",
+        "keywords": "boek sjabloon LaTeX, poster sjabloon LaTeX, nieuwsbrief sjabloon LaTeX, kalender sjabloon LaTeX, flyer sjabloon LaTeX, brochure LaTeX, recept sjabloon LaTeX, magazine sjabloon, rouwkaart sjabloon LaTeX, trouwuitnodiging LaTeX"
+      }
     }
   },
   "templateCode": {

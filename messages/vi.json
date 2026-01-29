@@ -582,44 +582,345 @@
   },
   "metadata": {
     "site": {
-      "title": "Công cụ LaTeX miễn phí - Chuyển đổi hình ảnh sang LaTeX, 60+ mẫu | Octree",
-      "description": "Công cụ LaTeX miễn phí: chuyển đổi phương trình toán học bằng AI, 60+ mẫu chuyên nghiệp (sơ yếu lý lịch, CV, luận văn, beamer), xem trước PDF trực tiếp.",
-      "keywords": "chuyển đổi toán viết tay sang LaTeX, hình ảnh sang LaTeX, PDF sang LaTeX, phương trình sang LaTeX, chuyển đổi LaTeX miễn phí, trình tạo LaTeX AI, trình tạo trích dẫn LaTeX, trình tạo TikZ, mẫu LaTeX miễn phí"
+      "title": "Công cụ LaTeX miễn phí - Chuyển đổi hình ảnh sang LaTeX, 60+ mẫu, Xem trước PDF | Octree",
+      "description": "Công cụ LaTeX miễn phí: chuyển đổi phương trình toán học bằng AI, 60+ mẫu chuyên nghiệp (sơ yếu lý lịch, CV, luận văn, beamer), xem trước PDF trực tiếp. Chuyển đổi toán viết tay, hình ảnh & PDF sang LaTeX ngay lập tức.",
+      "keywords": "chuyển đổi toán viết tay sang LaTeX, chuyển đổi hình ảnh sang LaTeX, chuyển đổi PDF sang LaTeX, phương trình toán sang LaTeX, chuyển đổi toán LaTeX, chuyển đổi LaTeX miễn phí, trình tạo LaTeX AI, trình tạo trích dẫn LaTeX, trình tạo TikZ, mẫu LaTeX miễn phí, mẫu sơ yếu lý lịch LaTeX, mẫu CV LaTeX, mẫu luận văn LaTeX, mẫu beamer LaTeX, trình soạn thảo LaTeX trực tuyến, thay thế Overleaf, LaTeX trực tuyến, biên dịch LaTeX trực tuyến, LaTeX sang PDF, trình soạn phương trình, trình soạn công thức toán, ký hiệu LaTeX, trình tạo BibTeX, bảng sang LaTeX, Excel sang LaTeX, markdown sang LaTeX, HTML sang LaTeX, MathML sang LaTeX, đếm từ LaTeX, trình tạo PGFPlots, arXiv LaTeX"
     },
     "tools": {
-      "imageToLatex": { "title": "Chuyển đổi hình ảnh sang LaTeX - Công cụ AI miễn phí", "description": "Chuyển đổi hình ảnh phương trình toán học viết tay sang mã LaTeX sạch ngay lập tức.", "keywords": "hình ảnh sang LaTeX, ảnh sang LaTeX, toán viết tay sang LaTeX" },
-      "mathToLatex": { "title": "Chuyển đổi toán sang LaTeX - Công cụ trực tuyến miễn phí", "description": "Chuyển đổi biểu thức toán học sang mã LaTeX.", "keywords": "toán sang LaTeX, phương trình sang LaTeX" },
-      "equationToLatex": { "title": "Chuyển đổi phương trình sang LaTeX - Công cụ trực tuyến miễn phí", "description": "Chuyển đổi phương trình toán học sang mã LaTeX ngay lập tức.", "keywords": "phương trình sang LaTeX, công thức sang LaTeX" },
-      "tikzGenerator": { "title": "Trình tạo sơ đồ TikZ - Đồ họa LaTeX AI", "description": "Tạo sơ đồ TikZ với AI.", "keywords": "trình tạo TikZ, TikZ trực tuyến, sơ đồ TikZ" },
-      "imageToTikz": { "title": "Chuyển đổi hình ảnh sang TikZ", "description": "Chuyển đổi hình ảnh và sơ đồ sang mã TikZ LaTeX với AI.", "keywords": "hình ảnh sang TikZ, sơ đồ sang TikZ" },
-      "citationGenerator": { "title": "Trình tạo trích dẫn LaTeX - Trình tạo BibTeX", "description": "Tạo trích dẫn BibTeX từ DOI, URL hoặc chi tiết bài báo.", "keywords": "trình tạo trích dẫn LaTeX, trình tạo BibTeX" },
-      "latexPreview": { "title": "Xem trước LaTeX trực tiếp - Trình soạn thảo trực tuyến miễn phí", "description": "Viết và xem trước tài liệu LaTeX theo thời gian thực.", "keywords": "xem trước LaTeX, trình soạn thảo LaTeX trực tuyến" },
-      "pdfToLatex": { "title": "Chuyển đổi PDF sang LaTeX", "description": "Chuyển đổi tài liệu PDF với nội dung toán học sang mã LaTeX sạch.", "keywords": "PDF sang LaTeX, trích xuất LaTeX từ PDF" },
-      "tableToLatex": { "title": "Chuyển đổi bảng sang LaTeX - Excel sang LaTeX", "description": "Chuyển đổi bảng từ Excel, Google Sheets hoặc CSV sang định dạng LaTeX.", "keywords": "bảng sang LaTeX, Excel sang LaTeX" },
-      "markdownToLatex": { "title": "Chuyển đổi Markdown sang LaTeX", "description": "Chuyển đổi tệp Markdown sang mã LaTeX sạch.", "keywords": "markdown sang LaTeX" },
-      "latexToMarkdown": { "title": "Chuyển đổi LaTeX sang Markdown", "description": "Chuyển đổi tài liệu LaTeX sang định dạng Markdown.", "keywords": "LaTeX sang markdown" },
-      "htmlToLatex": { "title": "Chuyển đổi HTML sang LaTeX", "description": "Chuyển đổi nội dung HTML sang mã LaTeX sạch.", "keywords": "HTML sang LaTeX" },
-      "mathmlToLatex": { "title": "Chuyển đổi MathML sang LaTeX", "description": "Chuyển đổi phương trình MathML sang mã LaTeX.", "keywords": "MathML sang LaTeX" },
-      "mermaidToLatex": { "title": "Chuyển đổi Mermaid sang LaTeX", "description": "Chuyển đổi sơ đồ Mermaid sang mã TikZ LaTeX.", "keywords": "Mermaid sang LaTeX" },
-      "latexWordCounter": { "title": "Đếm từ LaTeX", "description": "Đếm từ trong tài liệu LaTeX loại trừ lệnh và chú thích.", "keywords": "đếm từ LaTeX" },
-      "aiLatexGenerator": { "title": "Trình tạo LaTeX AI", "description": "Tạo mã LaTeX với AI.", "keywords": "trình tạo LaTeX AI" },
-      "pgfplotsGenerator": { "title": "Trình tạo PGFPlots - Tạo biểu đồ LaTeX", "description": "Tạo biểu đồ đẹp cho LaTeX với PGFPlots.", "keywords": "trình tạo PGFPlots, biểu đồ LaTeX" },
-      "arxivToLatex": { "title": "arXiv sang LaTeX", "description": "Trích xuất và tải mã nguồn LaTeX từ bài báo arXiv.", "keywords": "arXiv sang LaTeX" }
+      "imageToLatex": {
+        "title": "Chuyển đổi hình ảnh sang LaTeX - Công cụ AI miễn phí",
+        "description": "Chuyển đổi hình ảnh phương trình toán học viết tay sang mã LaTeX sạch ngay lập tức. Được hỗ trợ bởi AI, miễn phí, không cần đăng ký.",
+        "keywords": "hình ảnh sang LaTeX, ảnh sang LaTeX, hình sang LaTeX, toán viết tay sang LaTeX, quét toán sang LaTeX, OCR LaTeX, chuyển đổi hình ảnh toán, ảnh chụp màn hình sang LaTeX, OCR toán, OCR phương trình, công thức sang LaTeX, chuyển đổi ảnh toán, chữ viết tay sang LaTeX, quét phương trình"
+      },
+      "mathToLatex": {
+        "title": "Chuyển đổi toán sang LaTeX - Công cụ trực tuyến miễn phí",
+        "description": "Chuyển đổi biểu thức toán học sang mã LaTeX. Nhập hoặc dán toán và nhận đầu ra LaTeX sạch.",
+        "keywords": "toán sang LaTeX, chuyển đổi toán sang LaTeX, biểu thức toán sang LaTeX, công thức sang LaTeX, chuyển đổi toán, chuyển đổi phương trình, ký hiệu toán LaTeX, chuyển đổi biểu thức toán học"
+      },
+      "equationToLatex": {
+        "title": "Chuyển đổi phương trình sang LaTeX - Công cụ trực tuyến miễn phí",
+        "description": "Chuyển đổi phương trình toán học sang mã LaTeX ngay lập tức. Nhập phương trình và nhận LaTeX.",
+        "keywords": "phương trình sang LaTeX, chuyển đổi phương trình sang LaTeX, chuyển đổi phương trình toán, trình soạn phương trình LaTeX, công thức sang LaTeX, phương trình toán học LaTeX, ký hiệu phương trình"
+      },
+      "tikzGenerator": {
+        "title": "Trình tạo sơ đồ TikZ - Đồ họa LaTeX AI",
+        "description": "Tạo sơ đồ TikZ bằng AI. Mô tả sơ đồ và nhận mã TikZ LaTeX sạch ngay lập tức.",
+        "keywords": "trình tạo TikZ, TikZ trực tuyến, ví dụ TikZ, lưu đồ TikZ, sơ đồ TikZ, mạng nơ-ron TikZ, trình tạo TikZ AI, trình tạo mã TikZ, hướng dẫn TikZ, hình dạng TikZ, mũi tên TikZ, đồ thị TikZ, cây TikZ, biểu đồ TikZ, PGF TikZ, mạch TikZ, dòng thời gian TikZ, sơ đồ Venn TikZ"
+      },
+      "imageToTikz": {
+        "title": "Chuyển đổi hình ảnh sang TikZ - Chuyển hình ảnh thành đồ họa LaTeX",
+        "description": "Chuyển đổi hình ảnh và sơ đồ sang mã TikZ LaTeX bằng AI. Tải lên bất kỳ hình ảnh nào và nhận mã TikZ có thể chỉnh sửa.",
+        "keywords": "hình ảnh sang TikZ, ảnh sang TikZ, chuyển đổi hình ảnh sang TikZ, sơ đồ sang TikZ, ảnh sang mã TikZ, chuyển đổi TikZ AI, vector hóa sang TikZ, hình ảnh sang sơ đồ LaTeX"
+      },
+      "citationGenerator": {
+        "title": "Trình tạo trích dẫn LaTeX - Trình tạo BibTeX",
+        "description": "Tạo trích dẫn BibTeX từ DOI, URL hoặc chi tiết bài báo. Công cụ trích dẫn LaTeX miễn phí.",
+        "keywords": "trình tạo trích dẫn LaTeX, trình tạo BibTeX, DOI sang BibTeX, trình tạo trích dẫn, trình tạo tham khảo, trình tạo thư mục, trích dẫn APA LaTeX, trích dẫn MLA LaTeX, trích dẫn Chicago, trích dẫn IEEE, tham khảo Harvard LaTeX"
+      },
+      "latexPreview": {
+        "title": "Xem trước LaTeX trực tiếp - Trình soạn thảo trực tuyến miễn phí",
+        "description": "Viết và xem trước tài liệu LaTeX theo thời gian thực. Trình soạn thảo LaTeX trực tuyến miễn phí với đầu ra PDF tức thì.",
+        "keywords": "xem trước LaTeX, trình soạn thảo LaTeX trực tuyến, xem trước LaTeX trực tiếp, trình biên dịch LaTeX trực tuyến, LaTeX sang PDF, trình soạn thảo LaTeX miễn phí, thay thế Overleaf, LaTeX trực tuyến, viết LaTeX trực tuyến, trình render LaTeX, trình xem LaTeX, biên dịch LaTeX miễn phí"
+      },
+      "pdfToLatex": {
+        "title": "Chuyển đổi PDF sang LaTeX - Trích xuất LaTeX từ PDF",
+        "description": "Chuyển đổi tài liệu PDF với nội dung toán học sang mã LaTeX sạch. Trích xuất bằng AI.",
+        "keywords": "PDF sang LaTeX, chuyển đổi PDF sang LaTeX, trích xuất LaTeX từ PDF, chuyển đổi toán PDF, trích xuất phương trình PDF, PDF sang TeX, OCR PDF sang LaTeX, trích xuất công thức PDF, quét PDF sang LaTeX"
+      },
+      "tableToLatex": {
+        "title": "Chuyển đổi bảng sang LaTeX - Excel sang LaTeX",
+        "description": "Chuyển đổi bảng từ Excel, Google Sheets hoặc CSV sang định dạng LaTeX. Trình tạo bảng miễn phí.",
+        "keywords": "bảng sang LaTeX, Excel sang LaTeX, CSV sang LaTeX, bảng tính sang LaTeX, trình tạo bảng LaTeX, tabular LaTeX, trình tạo bảng LaTeX, Google Sheets sang LaTeX, sao chép dán bảng LaTeX, trình tạo tabular LaTeX"
+      },
+      "markdownToLatex": {
+        "title": "Chuyển đổi Markdown sang LaTeX - Công cụ trực tuyến miễn phí",
+        "description": "Chuyển đổi tệp Markdown sang mã LaTeX sạch. Bảo toàn định dạng, liên kết và cấu trúc.",
+        "keywords": "markdown sang LaTeX, chuyển đổi markdown sang LaTeX, md sang tex, chuyển đổi markdown LaTeX, thay thế pandoc, markdown sang PDF LaTeX, markdown sang TeX trực tuyến"
+      },
+      "latexToMarkdown": {
+        "title": "Chuyển đổi LaTeX sang Markdown - Công cụ trực tuyến miễn phí",
+        "description": "Chuyển đổi tài liệu LaTeX sang định dạng Markdown. Bảo toàn phương trình và định dạng.",
+        "keywords": "LaTeX sang markdown, chuyển đổi LaTeX sang markdown, tex sang md, chuyển đổi LaTeX sang md, LaTeX markdown, TeX sang markdown, xuất LaTeX dưới dạng markdown"
+      },
+      "htmlToLatex": {
+        "title": "Chuyển đổi HTML sang LaTeX - Công cụ trực tuyến miễn phí",
+        "description": "Chuyển đổi nội dung HTML sang mã LaTeX sạch. Hoàn hảo cho chuyển đổi web sang tài liệu.",
+        "keywords": "HTML sang LaTeX, chuyển đổi HTML sang LaTeX, web sang LaTeX, HTML sang TeX, trang web sang LaTeX, bảng HTML sang LaTeX, chuyển đổi website sang LaTeX"
+      },
+      "mathmlToLatex": {
+        "title": "Chuyển đổi MathML sang LaTeX - Công cụ trực tuyến miễn phí",
+        "description": "Chuyển đổi phương trình MathML sang mã LaTeX. Hoàn hảo cho chuyển đổi phương trình Word và web.",
+        "keywords": "MathML sang LaTeX, chuyển đổi MathML sang LaTeX, phương trình Word sang LaTeX, chuyển đổi MathML, toán Office sang LaTeX, OMML sang LaTeX, toán Word sang LaTeX"
+      },
+      "mermaidToLatex": {
+        "title": "Chuyển đổi Mermaid sang LaTeX - Sơ đồ sang TikZ",
+        "description": "Chuyển đổi sơ đồ Mermaid sang mã TikZ LaTeX. Lưu đồ, sơ đồ tuần tự và nhiều hơn nữa.",
+        "keywords": "Mermaid sang LaTeX, Mermaid sang TikZ, chuyển đổi sơ đồ Mermaid, lưu đồ sang LaTeX, sơ đồ tuần tự sang LaTeX, Mermaid LaTeX, sơ đồ sang TikZ"
+      },
+      "latexWordCounter": {
+        "title": "Đếm từ LaTeX - Công cụ trực tuyến miễn phí",
+        "description": "Đếm từ trong tài liệu LaTeX loại trừ lệnh và chú thích. Đếm từ học thuật chính xác.",
+        "keywords": "đếm từ LaTeX, đếm từ LaTeX, đếm từ TeX, đếm ký tự LaTeX, đếm từ học thuật, đếm từ luận văn, đếm từ bài báo LaTeX, đếm văn bản LaTeX"
+      },
+      "aiLatexGenerator": {
+        "title": "Trình tạo LaTeX AI - Viết LaTeX với AI",
+        "description": "Tạo mã LaTeX bằng AI. Mô tả những gì bạn muốn và nhận LaTeX sạch, có thể biên dịch.",
+        "keywords": "trình tạo LaTeX AI, tạo LaTeX AI, trình viết LaTeX AI, ChatGPT LaTeX, trình tạo phương trình AI, toán AI LaTeX, LaTeX từ văn bản, ngôn ngữ tự nhiên sang LaTeX"
+      },
+      "pgfplotsGenerator": {
+        "title": "Trình tạo PGFPlots - Tạo biểu đồ LaTeX",
+        "description": "Tạo biểu đồ đẹp cho LaTeX bằng PGFPlots. Trình tạo biểu đồ trực tuyến miễn phí.",
+        "keywords": "trình tạo PGFPlots, PGFPlots trực tuyến, đồ thị LaTeX, biểu đồ LaTeX, ví dụ PGFPlots, biểu đồ LaTeX, trực quan hóa dữ liệu LaTeX, biểu đồ phân tán LaTeX, biểu đồ cột LaTeX, đồ thị đường LaTeX, biểu đồ hàm LaTeX"
+      },
+      "arxivToLatex": {
+        "title": "arXiv sang LaTeX - Tải mã nguồn arXiv",
+        "description": "Trích xuất và tải mã nguồn LaTeX từ bài báo arXiv. Nhận tệp TeX gốc.",
+        "keywords": "arXiv sang LaTeX, mã nguồn arXiv, tải LaTeX arXiv, nguồn TeX arXiv, nguồn bài báo arXiv, trích xuất LaTeX arXiv, tải nguồn arXiv"
+      }
     },
     "symbols": {
-      "main": { "title": "Ký hiệu LaTeX - Hướng dẫn tham khảo đầy đủ", "description": "Duyệt và sao chép ký hiệu LaTeX: chữ cái Hy Lạp, toán tử toán học, mũi tên và nhiều hơn nữa.", "keywords": "ký hiệu LaTeX, ký hiệu toán học, chữ cái Hy Lạp LaTeX" }
+      "main": {
+        "title": "Ký hiệu LaTeX - Hướng dẫn tham khảo đầy đủ",
+        "description": "Duyệt và sao chép ký hiệu LaTeX: chữ cái Hy Lạp, toán tử toán học, mũi tên và nhiều hơn nữa. Tham khảo ký hiệu đầy đủ.",
+        "keywords": "ký hiệu LaTeX, ký hiệu toán học, chữ cái Hy Lạp LaTeX, toán tử LaTeX, mũi tên LaTeX, tham khảo ký hiệu, sao chép ký hiệu LaTeX, ký tự đặc biệt LaTeX, ký hiệu toán học LaTeX, bảng gian lận LaTeX, tất cả ký hiệu LaTeX"
+      },
+      "math": {
+        "title": "Ký hiệu toán học LaTeX - Toán tử và quan hệ",
+        "description": "Danh sách đầy đủ ký hiệu toán học LaTeX. Toán tử, quan hệ, phương trình với mã sao chép-dán.",
+        "keywords": "ký hiệu toán LaTeX, toán tử toán học, LaTeX cộng trừ, phân số LaTeX, căn bậc hai LaTeX, tổng LaTeX, tích phân LaTeX, ký hiệu nhân LaTeX, ký hiệu chia LaTeX, bằng LaTeX, không bằng LaTeX, xấp xỉ LaTeX"
+      },
+      "greek": {
+        "title": "Chữ cái Hy Lạp trong LaTeX - Từ Alpha đến Omega",
+        "description": "Danh sách đầy đủ chữ cái Hy Lạp và lệnh LaTeX của chúng. Sao chép-dán alpha, beta, gamma và nhiều hơn nữa.",
+        "keywords": "chữ cái Hy Lạp LaTeX, alpha LaTeX, beta LaTeX, gamma LaTeX, delta LaTeX, epsilon LaTeX, theta LaTeX, lambda LaTeX, pi LaTeX, sigma LaTeX, omega LaTeX, phi LaTeX, bảng chữ cái Hy Lạp LaTeX"
+      },
+      "arrows": {
+        "title": "Ký hiệu mũi tên LaTeX - Tất cả loại mũi tên",
+        "description": "Danh sách đầy đủ ký hiệu mũi tên LaTeX. Phải, trái, lên, xuống, mũi tên kép và nhiều hơn nữa.",
+        "keywords": "mũi tên LaTeX, mũi tên phải LaTeX, mũi tên trái LaTeX, mũi tên kép LaTeX, suy ra LaTeX, ký hiệu mũi tên, loại mũi tên LaTeX, mũi tên lên LaTeX, mũi tên xuống LaTeX, mũi tên hai chiều LaTeX, mũi tên dài LaTeX"
+      },
+      "brackets": {
+        "title": "Ngoặc và dấu phân cách LaTeX",
+        "description": "Ngoặc đơn, ngoặc nhọn, ngoặc vuông và dấu phân cách trong LaTeX. Sao chép-dán lệnh ngoặc.",
+        "keywords": "ngoặc LaTeX, ngoặc đơn LaTeX, ngoặc nhọn LaTeX, ngoặc vuông LaTeX, ngoặc góc LaTeX, dấu phân cách LaTeX, left right LaTeX, ngoặc lớn LaTeX"
+      },
+      "calculus": {
+        "title": "Ký hiệu giải tích LaTeX - Đạo hàm và tích phân",
+        "description": "Ký hiệu giải tích trong LaTeX: đạo hàm, tích phân, giới hạn và toán tử vi phân.",
+        "keywords": "giải tích LaTeX, đạo hàm LaTeX, tích phân LaTeX, đạo hàm riêng LaTeX, giới hạn LaTeX, vi phân LaTeX, nabla LaTeX, gradient LaTeX, phân kỳ LaTeX, xoáy LaTeX, Laplacian LaTeX"
+      },
+      "setTheory": {
+        "title": "Ký hiệu lý thuyết tập hợp LaTeX",
+        "description": "Ký hiệu lý thuyết tập hợp trong LaTeX: hợp, giao, tập con, thuộc và nhiều hơn nữa.",
+        "keywords": "lý thuyết tập hợp LaTeX, hợp LaTeX, giao LaTeX, tập con LaTeX, tập chứa LaTeX, thuộc LaTeX, tập rỗng LaTeX, ký hiệu tập hợp LaTeX, chứa LaTeX"
+      },
+      "logic": {
+        "title": "Ký hiệu logic LaTeX - Toán tử logic",
+        "description": "Ký hiệu logic trong LaTeX: và, hoặc, không, suy ra, khi và chỉ khi, và lượng từ.",
+        "keywords": "ký hiệu logic LaTeX, và LaTeX, hoặc LaTeX, không LaTeX, suy ra LaTeX, khi và chỉ khi LaTeX, phủ định LaTeX, toán tử logic LaTeX, logic mệnh đề LaTeX"
+      },
+      "relations": {
+        "title": "Ký hiệu quan hệ LaTeX - Toán tử so sánh",
+        "description": "Ký hiệu quan hệ trong LaTeX: nhỏ hơn, lớn hơn, bằng, không bằng và tương đương.",
+        "keywords": "ký hiệu quan hệ LaTeX, nhỏ hơn LaTeX, lớn hơn LaTeX, nhỏ hơn hoặc bằng LaTeX, lớn hơn hoặc bằng LaTeX, không bằng LaTeX, tương đương LaTeX, xấp xỉ LaTeX, tỷ lệ LaTeX"
+      },
+      "operators": {
+        "title": "Toán tử LaTeX - Toán tử toán học",
+        "description": "Toán tử toán học trong LaTeX: tổng, tích, tích phân và ký hiệu toán tử.",
+        "keywords": "toán tử LaTeX, tổng LaTeX, tích LaTeX, toán tử tích phân LaTeX, toán tử lớn LaTeX, tổng LaTeX, prod LaTeX, coprod LaTeX, ký hiệu toán tử LaTeX"
+      },
+      "linearAlgebra": {
+        "title": "Ký hiệu đại số tuyến tính LaTeX - Ma trận và vector",
+        "description": "Ký hiệu đại số tuyến tính trong LaTeX: ma trận, vector, định thức và giá trị riêng.",
+        "keywords": "đại số tuyến tính LaTeX, ma trận LaTeX, vector LaTeX, định thức LaTeX, chuyển vị LaTeX, giá trị riêng LaTeX, vector riêng LaTeX, tích vô hướng LaTeX, tích có hướng LaTeX, chuẩn LaTeX"
+      },
+      "geometry": {
+        "title": "Ký hiệu hình học LaTeX - Góc và hình",
+        "description": "Ký hiệu hình học trong LaTeX: góc, song song, vuông góc, tam giác và đường tròn.",
+        "keywords": "hình học LaTeX, góc LaTeX, song song LaTeX, vuông góc LaTeX, tam giác LaTeX, đường tròn LaTeX, ký hiệu độ LaTeX, đồng dạng LaTeX, tương tự LaTeX"
+      },
+      "probability": {
+        "title": "Ký hiệu xác suất LaTeX - Ký hiệu thống kê",
+        "description": "Ký hiệu xác suất và thống kê trong LaTeX: kỳ vọng, phương sai, phân phối.",
+        "keywords": "xác suất LaTeX, kỳ vọng LaTeX, phương sai LaTeX, độ lệch chuẩn LaTeX, phân phối xác suất LaTeX, thống kê LaTeX, biến ngẫu nhiên LaTeX, xác suất có điều kiện LaTeX"
+      },
+      "physics": {
+        "title": "Ký hiệu vật lý LaTeX - Ký hiệu khoa học",
+        "description": "Ký hiệu vật lý trong LaTeX: vector, toán tử, cơ học lượng tử và hằng số.",
+        "keywords": "vật lý LaTeX, vector LaTeX, hbar LaTeX, cơ học lượng tử LaTeX, bra ket LaTeX, ký hiệu Dirac LaTeX, hằng số vật lý LaTeX, ký hiệu khoa học LaTeX"
+      },
+      "chemistry": {
+        "title": "Ký hiệu hóa học LaTeX - Ký hiệu hóa học",
+        "description": "Ký hiệu hóa học trong LaTeX: công thức hóa học, phản ứng và cấu trúc phân tử.",
+        "keywords": "hóa học LaTeX, công thức hóa học LaTeX, mũi tên phản ứng LaTeX, chỉ số dưới LaTeX, chỉ số trên LaTeX, mhchem LaTeX, phương trình hóa học LaTeX"
+      },
+      "computerScience": {
+        "title": "Ký hiệu khoa học máy tính LaTeX - Ký hiệu thuật toán",
+        "description": "Ký hiệu khoa học máy tính trong LaTeX: thuật toán, độ phức tạp và ký hiệu lập trình.",
+        "keywords": "khoa học máy tính LaTeX, thuật toán LaTeX, ký hiệu big O LaTeX, độ phức tạp LaTeX, mã giả LaTeX, ký hiệu lập trình LaTeX"
+      },
+      "functions": {
+        "title": "Ký hiệu hàm LaTeX - Hàm toán học",
+        "description": "Ký hiệu hàm trong LaTeX: lượng giác, logarit, mũ và nhiều hơn nữa.",
+        "keywords": "hàm LaTeX, sin LaTeX, cos LaTeX, tan LaTeX, log LaTeX, ln LaTeX, exp LaTeX, lim LaTeX, min LaTeX, max LaTeX, argmin LaTeX, argmax LaTeX"
+      },
+      "numberTheory": {
+        "title": "Ký hiệu lý thuyết số LaTeX",
+        "description": "Ký hiệu lý thuyết số trong LaTeX: chia hết, đồng dư và tập số.",
+        "keywords": "lý thuyết số LaTeX, chia hết LaTeX, modulo LaTeX, đồng dư LaTeX, số nguyên tố LaTeX, GCD LaTeX, LCM LaTeX, số nguyên LaTeX, số tự nhiên LaTeX"
+      },
+      "accents": {
+        "title": "Dấu và ký hiệu phụ LaTeX",
+        "description": "Dấu LaTeX: mũ, gạch, chấm, dấu ngã và các dấu phụ khác.",
+        "keywords": "dấu LaTeX, mũ LaTeX, gạch LaTeX, chấm LaTeX, dấu ngã LaTeX, vec LaTeX, gạch trên LaTeX, gạch dưới LaTeX, overbrace LaTeX, underbrace LaTeX"
+      },
+      "boolean": {
+        "title": "Ký hiệu đại số Boole LaTeX",
+        "description": "Ký hiệu đại số Boole trong LaTeX: AND, OR, NOT, XOR và giá trị chân lý.",
+        "keywords": "boolean LaTeX, AND LaTeX, OR LaTeX, NOT LaTeX, XOR LaTeX, đúng sai LaTeX, đại số boolean LaTeX, cổng logic LaTeX"
+      },
+      "summation": {
+        "title": "Ký hiệu tổng và tích LaTeX",
+        "description": "Ký hiệu tổng và tích trong LaTeX: tổng, tích và chuỗi.",
+        "keywords": "tổng LaTeX, tích LaTeX, ký hiệu tổng LaTeX, sigma LaTeX, ký hiệu pi LaTeX, chuỗi LaTeX, tổng vô hạn LaTeX"
+      },
+      "trigonometry": {
+        "title": "Ký hiệu lượng giác LaTeX",
+        "description": "Hàm lượng giác trong LaTeX: sin, cos, tan và hàm ngược.",
+        "keywords": "lượng giác LaTeX, sin LaTeX, cos LaTeX, tan LaTeX, arcsin LaTeX, arccos LaTeX, arctan LaTeX, hyperbolic LaTeX, sinh LaTeX, cosh LaTeX, tanh LaTeX"
+      },
+      "topology": {
+        "title": "Ký hiệu tô pô LaTeX",
+        "description": "Ký hiệu tô pô trong LaTeX: tập mở, bao đóng, phần trong và biên.",
+        "keywords": "tô pô LaTeX, tập mở LaTeX, tập đóng LaTeX, bao đóng LaTeX, phần trong LaTeX, biên LaTeX, đồng phôi LaTeX"
+      },
+      "finance": {
+        "title": "Ký hiệu tài chính LaTeX - Ký hiệu tài chính",
+        "description": "Ký hiệu tài chính trong LaTeX: tiền tệ, lãi suất và ký hiệu kinh tế.",
+        "keywords": "tài chính LaTeX, tiền tệ LaTeX, đô la LaTeX, euro LaTeX, bảng LaTeX, phần trăm LaTeX, lãi suất LaTeX, NPV LaTeX"
+      },
+      "machineLearning": {
+        "title": "Ký hiệu học máy LaTeX - Ký hiệu ML",
+        "description": "Ký hiệu học máy trong LaTeX: mạng nơ-ron, hàm mất mát và tối ưu hóa.",
+        "keywords": "học máy LaTeX, mạng nơ-ron LaTeX, hàm mất mát LaTeX, gradient descent LaTeX, hàm kích hoạt LaTeX, trọng số LaTeX, bias LaTeX, ký hiệu ML LaTeX"
+      },
+      "latin": {
+        "title": "Chữ cái Latin và font LaTeX",
+        "description": "Chữ cái Latin và kiểu font trong LaTeX: đậm, nghiêng, chữ hoa và nhiều hơn nữa.",
+        "keywords": "chữ cái Latin LaTeX, đậm LaTeX, nghiêng LaTeX, mathcal LaTeX, mathbb LaTeX, mathfrak LaTeX, kiểu font LaTeX, blackboard bold LaTeX"
+      },
+      "complex": {
+        "title": "Ký hiệu số phức LaTeX",
+        "description": "Ký hiệu số phức trong LaTeX: đơn vị ảo, liên hợp và dạng cực.",
+        "keywords": "số phức LaTeX, đơn vị ảo LaTeX, liên hợp LaTeX, phần thực LaTeX, phần ảo LaTeX, môđun LaTeX, đối số LaTeX"
+      },
+      "graphTheory": {
+        "title": "Ký hiệu lý thuyết đồ thị LaTeX",
+        "description": "Ký hiệu lý thuyết đồ thị trong LaTeX: đỉnh, cạnh, đường đi và chu trình.",
+        "keywords": "lý thuyết đồ thị LaTeX, đỉnh LaTeX, cạnh LaTeX, đường đi LaTeX, chu trình LaTeX, kề LaTeX, bậc LaTeX, liên thông LaTeX"
+      },
+      "combinatorics": {
+        "title": "Ký hiệu tổ hợp LaTeX",
+        "description": "Ký hiệu tổ hợp trong LaTeX: giai thừa, nhị thức và hoán vị.",
+        "keywords": "tổ hợp LaTeX, giai thừa LaTeX, nhị thức LaTeX, hoán vị LaTeX, tổ hợp LaTeX, chọn LaTeX, binom LaTeX"
+      },
+      "specialFunctions": {
+        "title": "Hàm đặc biệt LaTeX - Gamma, Zeta, Bessel",
+        "description": "Hàm đặc biệt trong LaTeX: gamma, zeta, Bessel và hàm lỗi.",
+        "keywords": "hàm đặc biệt LaTeX, hàm gamma LaTeX, hàm zeta LaTeX, hàm Bessel LaTeX, hàm lỗi LaTeX, Legendre LaTeX"
+      },
+      "tensors": {
+        "title": "Ký hiệu tensor LaTeX - Tổng Einstein",
+        "description": "Ký hiệu tensor trong LaTeX: chỉ số, co và đạo hàm hiệp biến.",
+        "keywords": "tensor LaTeX, tổng Einstein LaTeX, chỉ số tensor LaTeX, đạo hàm hiệp biến LaTeX, phản biến LaTeX, delta Kronecker LaTeX"
+      },
+      "differentialGeometry": {
+        "title": "Ký hiệu hình học vi phân LaTeX",
+        "description": "Ký hiệu hình học vi phân trong LaTeX: đa tạp, độ cong và liên thông.",
+        "keywords": "hình học vi phân LaTeX, đa tạp LaTeX, độ cong LaTeX, Christoffel LaTeX, tensor Riemann LaTeX, liên thông LaTeX"
+      },
+      "modalLogic": {
+        "title": "Ký hiệu logic modal LaTeX",
+        "description": "Ký hiệu logic modal trong LaTeX: tất yếu, khả năng và toán tử thời gian.",
+        "keywords": "logic modal LaTeX, tất yếu LaTeX, khả năng LaTeX, box LaTeX, diamond LaTeX, logic thời gian LaTeX"
+      },
+      "gameTheory": {
+        "title": "Ký hiệu lý thuyết trò chơi LaTeX",
+        "description": "Ký hiệu lý thuyết trò chơi trong LaTeX: chiến lược, phần thưởng và cân bằng.",
+        "keywords": "lý thuyết trò chơi LaTeX, cân bằng Nash LaTeX, chiến lược LaTeX, phần thưởng LaTeX, hàm tiện ích LaTeX, giá trị Shapley LaTeX"
+      },
+      "order": {
+        "title": "Ký hiệu quan hệ thứ tự LaTeX",
+        "description": "Quan hệ thứ tự trong LaTeX: thứ tự bộ phận, lưới và supremum/infimum.",
+        "keywords": "quan hệ thứ tự LaTeX, thứ tự bộ phận LaTeX, lưới LaTeX, supremum LaTeX, infimum LaTeX, cận trên bé nhất LaTeX"
+      },
+      "optimization": {
+        "title": "Ký hiệu tối ưu hóa LaTeX",
+        "description": "Ký hiệu tối ưu hóa trong LaTeX: cực tiểu, cực đại và ràng buộc.",
+        "keywords": "tối ưu hóa LaTeX, cực tiểu LaTeX, cực đại LaTeX, argmin LaTeX, argmax LaTeX, với điều kiện LaTeX, ràng buộc LaTeX"
+      },
+      "quantifiers": {
+        "title": "Ký hiệu lượng từ LaTeX - Với mọi, Tồn tại",
+        "description": "Ký hiệu lượng từ trong LaTeX: lượng từ toàn thể và tồn tại.",
+        "keywords": "lượng từ LaTeX, với mọi LaTeX, tồn tại LaTeX, forall LaTeX, tồn tại LaTeX, lượng từ toàn thể LaTeX, có tồn tại LaTeX"
+      },
+      "units": {
+        "title": "Đơn vị và đo lường LaTeX",
+        "description": "Đơn vị SI và đo lường trong LaTeX: độ, hằng số vật lý và đơn vị.",
+        "keywords": "đơn vị LaTeX, đơn vị SI LaTeX, độ LaTeX, hằng số vật lý LaTeX, siunitx LaTeX, đo lường LaTeX, mét LaTeX, kilogram LaTeX"
+      }
     },
     "templates": {
-      "main": { "title": "Mẫu LaTeX miễn phí - Sơ yếu lý lịch, CV, Luận văn, Beamer", "description": "60+ mẫu LaTeX chuyên nghiệp. Sơ yếu lý lịch, CV, luận văn, thuyết trình beamer và nhiều hơn nữa. Tải xuống miễn phí.", "keywords": "mẫu LaTeX, mẫu LaTeX miễn phí, mẫu sơ yếu lý lịch LaTeX, mẫu CV LaTeX, mẫu luận văn LaTeX" },
-      "academic": { "title": "Mẫu LaTeX học thuật", "description": "Mẫu LaTeX học thuật miễn phí cho bài báo nghiên cứu, luận văn và bài báo tạp chí.", "keywords": "mẫu LaTeX học thuật" },
-      "presentations": { "title": "Mẫu thuyết trình LaTeX - Slide Beamer", "description": "Mẫu thuyết trình LaTeX beamer miễn phí.", "keywords": "mẫu beamer LaTeX" },
-      "resumeCV": { "title": "Mẫu sơ yếu lý lịch & CV LaTeX", "description": "Mẫu sơ yếu lý lịch và CV LaTeX miễn phí.", "keywords": "mẫu sơ yếu lý lịch LaTeX, mẫu CV LaTeX" },
-      "math": { "title": "Mẫu toán học LaTeX", "description": "Mẫu LaTeX cho tài liệu toán học.", "keywords": "mẫu toán LaTeX" },
-      "reports": { "title": "Mẫu báo cáo LaTeX", "description": "Mẫu LaTeX chuyên nghiệp cho báo cáo kỹ thuật.", "keywords": "mẫu báo cáo LaTeX" },
-      "education": { "title": "Mẫu giáo dục LaTeX", "description": "Mẫu LaTeX cho giáo viên và sinh viên.", "keywords": "mẫu bài tập LaTeX" },
-      "letters": { "title": "Mẫu thư LaTeX", "description": "Mẫu thư LaTeX chuyên nghiệp.", "keywords": "mẫu thư LaTeX" },
-      "business": { "title": "Mẫu kinh doanh LaTeX", "description": "Mẫu LaTeX cho tài liệu kinh doanh.", "keywords": "mẫu kinh doanh LaTeX" },
-      "other": { "title": "Mẫu LaTeX - Sách, Poster, Bản tin", "description": "Mẫu LaTeX đa dạng.", "keywords": "mẫu sách LaTeX, mẫu poster LaTeX" }
+      "main": {
+        "title": "Mẫu LaTeX miễn phí - Sơ yếu lý lịch, CV, Luận văn, Beamer",
+        "description": "60+ mẫu LaTeX chuyên nghiệp. Sơ yếu lý lịch, CV, luận văn, thuyết trình beamer và nhiều hơn nữa. Tải xuống miễn phí.",
+        "keywords": "mẫu LaTeX, mẫu LaTeX miễn phí, mẫu sơ yếu lý lịch LaTeX, mẫu CV LaTeX, mẫu luận văn LaTeX, mẫu beamer LaTeX, mẫu Overleaf, mẫu học thuật LaTeX, mẫu thuyết trình LaTeX, mẫu bài báo LaTeX, mẫu bài tập LaTeX, mẫu poster LaTeX, mẫu thư LaTeX, mẫu sách LaTeX, mẫu báo cáo LaTeX, mẫu chuyên nghiệp LaTeX"
+      },
+      "academic": {
+        "title": "Mẫu LaTeX học thuật - Bài báo nghiên cứu, Luận văn, Luận án",
+        "description": "Mẫu LaTeX học thuật miễn phí cho bài báo nghiên cứu, luận văn, luận án, bài báo tạp chí và bài báo hội nghị.",
+        "keywords": "mẫu LaTeX học thuật, mẫu bài báo nghiên cứu LaTeX, mẫu luận văn LaTeX, mẫu luận án LaTeX, mẫu bài báo tạp chí, bài báo hội nghị LaTeX, mẫu IEEE LaTeX, mẫu ACM, mẫu Springer, mẫu bài báo khoa học, luận án tiến sĩ LaTeX, mẫu luận văn thạc sĩ, viết học thuật LaTeX"
+      },
+      "presentations": {
+        "title": "Mẫu thuyết trình LaTeX - Slide Beamer",
+        "description": "Mẫu thuyết trình LaTeX beamer miễn phí. Slide chuyên nghiệp cho bài giảng học thuật, hội nghị và bài giảng.",
+        "keywords": "mẫu beamer LaTeX, mẫu thuyết trình LaTeX, slide beamer, slide LaTeX, mẫu thuyết trình học thuật, slide hội nghị LaTeX, slide bài giảng LaTeX, chủ đề beamer, ví dụ beamer, thay thế PowerPoint LaTeX, thuyết trình beamer"
+      },
+      "resumeCV": {
+        "title": "Mẫu sơ yếu lý lịch & CV LaTeX - Curriculum Vitae chuyên nghiệp",
+        "description": "Mẫu sơ yếu lý lịch và CV LaTeX miễn phí. Thiết kế hiện đại, chuyên nghiệp cho đơn xin việc và CV học thuật.",
+        "keywords": "mẫu sơ yếu lý lịch LaTeX, mẫu CV LaTeX, curriculum vitae LaTeX, sơ yếu lý lịch chuyên nghiệp LaTeX, mẫu CV hiện đại, CV học thuật LaTeX, sơ yếu lý lịch một trang LaTeX, sơ yếu lý lịch hai cột, mẫu moderncv, europass LaTeX, sơ yếu lý lịch kỹ sư phần mềm LaTeX, CV data scientist"
+      },
+      "math": {
+        "title": "Mẫu toán học LaTeX - Phương trình, Chứng minh, Bộ bài tập",
+        "description": "Mẫu LaTeX cho tài liệu toán học: bộ bài tập, chứng minh, định lý và bảng phương trình.",
+        "keywords": "mẫu toán LaTeX, mẫu phương trình LaTeX, mẫu bộ bài tập, mẫu bài tập LaTeX, mẫu chứng minh LaTeX, mẫu định lý, ghi chú toán LaTeX, mẫu bảng công thức, mẫu đề thi LaTeX, mẫu kiểm tra LaTeX, mẫu bài tập toán"
+      },
+      "reports": {
+        "title": "Mẫu báo cáo LaTeX - Kỹ thuật, Phòng thí nghiệm, Dự án",
+        "description": "Mẫu LaTeX chuyên nghiệp cho báo cáo kỹ thuật, báo cáo phòng thí nghiệm, tài liệu dự án và báo cáo kinh doanh.",
+        "keywords": "mẫu báo cáo LaTeX, báo cáo kỹ thuật LaTeX, mẫu báo cáo phòng thí nghiệm, báo cáo dự án LaTeX, mẫu báo cáo kinh doanh, báo cáo thường niên LaTeX, mẫu báo cáo thực tập, báo cáo nghiên cứu LaTeX, mẫu tài liệu"
+      },
+      "education": {
+        "title": "Mẫu giáo dục LaTeX - Bài tập, Đề thi, Chương trình học",
+        "description": "Mẫu LaTeX cho giáo viên và sinh viên: bài tập, đề thi, chương trình học, ghi chú bài giảng và tài liệu khóa học.",
+        "keywords": "mẫu bài tập LaTeX, mẫu đề thi LaTeX, mẫu chương trình học LaTeX, mẫu ghi chú bài giảng, tài liệu khóa học LaTeX, mẫu bài tập, mẫu kiểm tra LaTeX, mẫu phiếu bài tập, hướng dẫn học LaTeX, mẫu thẻ ghi nhớ LaTeX"
+      },
+      "letters": {
+        "title": "Mẫu thư LaTeX - Thư xin việc, Thư chính thức",
+        "description": "Mẫu thư LaTeX chuyên nghiệp cho thư xin việc, thư từ chính thức và thư giới thiệu.",
+        "keywords": "mẫu thư LaTeX, thư xin việc LaTeX, mẫu thư chính thức, thư giới thiệu LaTeX, mẫu thư kinh doanh, thư đơn xin LaTeX, mẫu thư tham khảo, thư chuyên nghiệp LaTeX"
+      },
+      "business": {
+        "title": "Mẫu kinh doanh LaTeX - Kế hoạch, Đề xuất, Hóa đơn",
+        "description": "Mẫu LaTeX cho tài liệu kinh doanh: kế hoạch kinh doanh, đề xuất, hóa đơn, hợp đồng và công văn.",
+        "keywords": "mẫu kinh doanh LaTeX, kế hoạch kinh doanh LaTeX, mẫu đề xuất LaTeX, mẫu hóa đơn LaTeX, mẫu hợp đồng, mẫu công văn LaTeX, danh thiếp LaTeX, mẫu báo cáo công ty, tóm tắt điều hành LaTeX, mẫu đề xuất dự án"
+      },
+      "other": {
+        "title": "Mẫu LaTeX - Sách, Poster, Bản tin",
+        "description": "Mẫu LaTeX đa dạng: sách, poster, bản tin, lịch và tài liệu sáng tạo.",
+        "keywords": "mẫu sách LaTeX, mẫu poster LaTeX, mẫu bản tin LaTeX, mẫu lịch LaTeX, mẫu tờ rơi LaTeX, tờ gấp LaTeX, mẫu công thức LaTeX, mẫu tạp chí, mẫu cáo phó LaTeX, thiệp cưới LaTeX"
+      }
     }
   },
   "templateCode": {
