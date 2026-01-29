@@ -13,7 +13,10 @@
       "ko": "Coréen",
       "id": "Indonésien",
       "fil": "Philippin",
-      "ms": "Malais"
+      "ms": "Malais",
+      "ru": "Russe",
+      "vi": "Vietnamien",
+      "nl": "Néerlandais"
     },
     "common": {
       "backToTools": "Retour aux outils",

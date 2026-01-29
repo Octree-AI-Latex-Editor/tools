@@ -13,7 +13,10 @@
     "ko": "Koreanisch",
     "id": "Indonesisch",
     "fil": "Philippinisch",
-    "ms": "Malaiisch"
+    "ms": "Malaiisch",
+    "ru": "Russisch",
+    "vi": "Vietnamesisch",
+    "nl": "Niederländisch"
   },
   "common": {
     "backToTools": "Zurück zu Tools",
