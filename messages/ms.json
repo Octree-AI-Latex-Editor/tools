@@ -1,0 +1,1353 @@
+{
+  "language": {
+    "label": "Bahasa",
+    "en": "Inggeris",
+    "fr": "Perancis",
+    "es": "Sepanyol",
+    "pt": "Portugis",
+    "cn": "Cina",
+    "ar": "Arab",
+    "de": "Jerman",
+    "ja": "Jepun",
+    "it": "Itali",
+    "ko": "Korea",
+    "id": "Indonesia",
+    "fil": "Filipina",
+    "ms": "Melayu"
+  },
+  "common": {
+    "backToTools": "Kembali ke Alat",
+    "tryNow": "Cuba Sekarang",
+    "view": "Lihat",
+    "open": "Buka",
+    "openInOctree": "Buka di Octree",
+    "search": "Cari",
+    "searchTools": "Cari alat...",
+    "searchTemplates": "Cari templat...",
+    "noResults": "Tiada hasil ditemui",
+    "loading": "Memuatkan...",
+    "processing": "Memproses...",
+    "generating": "Menjana...",
+    "compiling": "Mengkompil...",
+    "error": "Ralat",
+    "success": "Berjaya",
+    "close": "Tutup",
+    "copy": "Salin",
+    "copied": "Disalin!",
+    "download": "Muat turun",
+    "export": "Eksport",
+    "exportAs": "Eksport sebagai",
+    "browseFiles": "layari fail",
+    "dropFileHere": "Letakkan fail anda di sini",
+    "fileUploaded": "Fail berjaya dimuat naik",
+    "categories": "Kategori",
+    "all": "Semua",
+    "tools": "Alat",
+    "templates": "Templat",
+    "template": "templat",
+    "templatesCount": "{count} templat",
+    "starOnGitHub": "Beri Bintang di GitHub",
+    "joinUsOnReddit": "Sertai kami di Reddit",
+    "joinOurDiscord": "Sertai Discord kami"
+  },
+  "home": {
+    "title": "Alat & Templat LaTeX Percuma",
+    "description": "Tukar persamaan matematik tulisan tangan dan jadual kepada LaTeX, jana sitasi, dan terokai templat profesional.",
+    "noToolsFound": "Tiada alat yang sepadan dengan carian anda."
+  },
+  "templates": {
+    "title": "Alat & Templat LaTeX Percuma",
+    "description": "Templat LaTeX profesional untuk kertas akademik, persembahan, resume, dan banyak lagi.",
+    "allTemplates": "Semua Templat",
+    "noTemplatesFound": "Tiada templat yang sepadan dengan carian anda.",
+    "viewTemplate": "Lihat Templat",
+    "backToAllTemplates": "Kembali ke semua templat",
+    "templateNotFound": "Templat Tidak Ditemui",
+    "backToTemplates": "Kembali ke Templat",
+    "download": "Muat turun",
+    "copyCode": "Salin Kod",
+    "sourceCode": "Kod Sumber",
+    "preview": "Pratonton",
+    "openAsTemplate": "Buka sebagai Templat",
+    "viewSource": "Lihat Sumber",
+    "hideSource": "Sembunyikan Sumber",
+    "viewPdf": "Lihat PDF",
+    "category": "Kategori",
+    "license": "Lesen",
+    "freeToUse": "Percuma untuk digunakan (MIT)",
+    "abstract": "Abstrak",
+    "tags": "Tag",
+    "latexSourceCode": "Kod Sumber LaTeX",
+    "loadingPreview": "Memuatkan pratonton..."
+  },
+  "tools": {
+    "input": "INPUT",
+    "output": "OUTPUT",
+    "code": "KOD",
+    "preview": "PRATONTON",
+    "yourHandwrittenNotes": "Nota Tulisan Tangan Anda",
+    "cleanLatexCode": "Kod LaTeX Bersih",
+    "uploadImageDescription": "Muat naik sebarang imej yang mengandungi ungkapan matematik",
+    "readyToCopy": "Sedia untuk disalin ke mana-mana editor LaTeX",
+    "generatingPreview": "Menjana pratonton...",
+    "previewWillAppear": "Pratonton akan muncul di sini...",
+    "backToTools": "Kembali ke Alat",
+    "openInOctree": "Buka di Octree",
+    "export": "Eksport",
+    "exportAsLatex": "Eksport sebagai LaTeX",
+    "exportAsPdf": "Eksport sebagai PDF",
+    "exportAsImage": "Eksport sebagai Imej",
+    "fileUploaded": "Fail berjaya dimuat naik",
+    "dropFileHere": "Letakkan fail anda di sini",
+    "orBrowseFiles": "atau layari fail",
+    "processing": "Memproses...",
+    "convertingToLatex": "Menukar ke LaTeX...",
+    "converting": "Menukar...",
+    "outputWillAppear": "Output akan muncul di sini...",
+    "codeTab": "Kod",
+    "previewTab": "Pratonton",
+    "readyToUseInLatex": "Sedia untuk digunakan dalam dokumen LaTeX anda",
+    "readyToUseInMarkdown": "Sedia untuk digunakan dalam fail Markdown anda",
+    "editLatexCode": "Edit kod LaTeX anda di sini",
+    "livePreview": "Pratonton langsung dokumen anda",
+    "generatedCodeWillAppear": "Kod yang dijana akan muncul di sini...",
+    "compilingLatex": "Mengkompil LaTeX...",
+    "aiThinking": "Model AI sedang berfikir…",
+    "giveItAMoment": "Tunggu sebentar untuk membuat diagram TikZ anda.",
+    "codeStreaming": "Tunggu sebentar sementara kod sedang dimuatkan.",
+    "generatingPgfplots": "Menjana kod pgfplots...",
+    "onlyCsvFiles": "Hanya fail CSV yang disokong untuk alat ini.",
+    "onlyImageFiles": "Hanya fail imej (JPEG, PNG) dan fail PDF yang disokong.",
+    "failedToProcess": "Gagal memproses imej. Sila cuba lagi.",
+    "failedToCompile": "Gagal mengkompil LaTeX.",
+    "failedToGenerate": "Gagal menjana sitasi. Sila cuba lagi.",
+    "conversionFailed": "Penukaran gagal",
+    "pleaseEnterEquation": "Sila masukkan penerangan persamaan atau muat naik imej",
+    "equationTooLong": "Penerangan persamaan mestilah 2000 aksara atau kurang",
+    "failedToConvert": "Gagal menukar persamaan. Sila cuba lagi.",
+    "noPdfUrl": "Tiada URL PDF yang dikembalikan",
+    "failedToExportPdf": "Gagal mengeksport PDF."
+  },
+  "toolsSpecific": {
+    "mathToLatex": {
+      "title": "Matematik ke LaTeX",
+      "subtitle": "Tukar matematik yang ditaip kepada LaTeX bersih.",
+      "inputLabel": "Input matematik",
+      "inputPlaceholder": "cth. integral dari 0 ke 1 bagi x^2 dx",
+      "convert": "Tukar",
+      "clear": "Padam",
+      "outputLabel": "Output LaTeX",
+      "copy": "Salin",
+      "copied": "Disalin!"
+    },
+    "imageToLatex": {
+      "title": "Imej ke LaTeX",
+      "description": "Tukar imej matematik tulisan tangan dan persamaan ke kod LaTeX bersih"
+    },
+    "tikzGenerator": {
+      "title": "Penjana Diagram TikZ",
+      "subtitle": "Terangkan diagram anda dan biarkan AI menjana kod TikZ",
+      "inputLabel": "Penerangan Diagram",
+      "inputHint": "Terangkan diagram yang ingin anda buat",
+      "placeholder": "Contoh: Lukis carta alir mudah dengan 3 nod yang disambung dengan anak panah. Nod pertama bertuliskan 'Mula', kedua 'Proses', dan ketiga 'Tamat'.",
+      "generateTikz": "Jana TikZ",
+      "generating": "Menjana...",
+      "aiModelThinking": "Model AI sedang berfikir…",
+      "giveItAMoment": "Tunggu sebentar untuk membuat diagram TikZ anda.",
+      "hangTight": "Tunggu sebentar sementara kod sedang dimuatkan.",
+      "outputLabel": "Kod TikZ yang Dijana",
+      "readyToUse": "Sedia untuk digunakan dalam dokumen LaTeX anda",
+      "generatedCodeWillAppear": "Kod yang dijana akan muncul di sini...",
+      "failedToGenerate": "Gagal menjana TikZ. Sila cuba lagi.",
+      "failedToCompile": "Gagal mengkompil dokumen TikZ."
+    },
+    "pgfplotsGenerator": {
+      "title": "Penjana Pgfplots",
+      "subtitle": "Terangkan plot anda dan biarkan AI menjana kod pgfplots",
+      "inputLabel": "Penerangan Plot",
+      "inputHint": "Terangkan plot atau graf yang ingin anda buat",
+      "placeholder": "Contoh: Buat plot garisan menunjukkan y = x^2 dari x = -5 ke x = 5, dengan garisan biru dan grid. Tambah label paksi.",
+      "generatePlot": "Jana Plot",
+      "generating": "Menjana...",
+      "generatingPgfplotsCode": "Menjana kod pgfplots...",
+      "outputLabel": "Kod Pgfplots yang Dijana",
+      "readyToUse": "Sedia untuk digunakan dalam dokumen LaTeX anda",
+      "generatedCodeWillAppear": "Kod yang dijana akan muncul di sini...",
+      "failedToGenerate": "Gagal menjana pgfplots. Sila cuba lagi."
+    },
+    "mermaidToLatex": {
+      "title": "Penukar Mermaid ke LaTeX",
+      "subtitle": "Tukar diagram Mermaid ke kod LaTeX",
+      "inputLabel": "Kod Mermaid",
+      "inputHint": "Tampal sintaks diagram Mermaid anda di sini",
+      "convertToLatex": "Tukar ke LaTeX",
+      "converting": "Menukar...",
+      "convertingToLatex": "Menukar ke LaTeX...",
+      "outputLabel": "Kod LaTeX",
+      "readyToUse": "Sedia untuk digunakan dalam dokumen LaTeX anda",
+      "convertedLatexWillAppear": "LaTeX yang ditukar akan muncul di sini...",
+      "failedToConvert": "Gagal menukar Mermaid. Sila cuba lagi."
+    },
+    "citationGenerator": {
+      "title": "Penjana Sitasi LaTeX",
+      "subtitle": "Jana sitasi BibTeX daripada butiran artikel, DOI, atau URL",
+      "citationDetailsLabel": "Butiran Sitasi",
+      "citationDetailsHint": "Masukkan butiran artikel, DOI, atau URL",
+      "placeholder": "Masukkan butiran sitasi...",
+      "generateBibtex": "Jana BibTeX",
+      "generating": "Menjana...",
+      "generatingBibtex": "Menjana BibTeX...",
+      "outputLabel": "Kod BibTeX",
+      "readyToAdd": "Sedia untuk ditambah ke fail .bib anda",
+      "bibtexWillAppear": "Sitasi BibTeX akan muncul di sini...",
+      "failedToGenerate": "Gagal menjana sitasi. Sila cuba lagi.",
+      "exportAsBib": "Eksport sebagai .bib"
+    },
+    "latexPreview": {
+      "title": "Pratonton LaTeX",
+      "subtitle": "Editor LaTeX langsung dengan pratonton PDF segera",
+      "codeLabel": "Editor LaTeX",
+      "codeHint": "Edit kod LaTeX anda di sini",
+      "previewLabel": "Output PDF",
+      "previewHint": "Pratonton langsung dokumen anda",
+      "compiling": "Mengkompil...",
+      "compilingLatex": "Mengkompil LaTeX..."
+    },
+    "aiLatexGenerator": {
+      "title": "Penjana LaTeX AI",
+      "subtitle": "Terangkan apa yang anda mahu dan biarkan AI menjana kod LaTeX",
+      "descriptionLabel": "Penerangan Anda",
+      "descriptionHint": "Terangkan dokumen atau kandungan yang anda perlukan",
+      "placeholder": "Contoh: Buat persembahan beamer dengan 5 slaid tentang pembelajaran mesin...",
+      "generateLatex": "Jana LaTeX",
+      "generating": "Menjana...",
+      "generatingLatexCode": "Menjana kod LaTeX...",
+      "outputLabel": "Kod LaTeX yang Dijana",
+      "readyToUse": "Sedia untuk digunakan dalam dokumen LaTeX anda",
+      "generatedLatexWillAppear": "LaTeX yang dijana akan muncul di sini...",
+      "failedToGenerate": "Gagal menjana LaTeX. Sila cuba lagi."
+    },
+    "htmlToLatex": {
+      "title": "Penukar HTML ke LaTeX",
+      "subtitle": "Tukar markup HTML kepada kod LaTeX bersih",
+      "inputLabel": "Kod HTML",
+      "inputHint": "Tampal markup HTML anda di sini",
+      "convertToLatex": "Tukar ke LaTeX",
+      "converting": "Menukar...",
+      "convertingToLatex": "Menukar ke LaTeX...",
+      "outputLabel": "Kod LaTeX",
+      "readyToUse": "Sedia untuk digunakan dalam dokumen LaTeX anda",
+      "convertedLatexWillAppear": "LaTeX yang ditukar akan muncul di sini...",
+      "failedToConvert": "Gagal menukar HTML. Sila cuba lagi."
+    },
+    "markdownToLatex": {
+      "title": "Penukar Markdown ke LaTeX",
+      "subtitle": "Tukar dokumen Markdown kepada kod LaTeX bersih",
+      "inputLabel": "Kandungan Markdown",
+      "inputHint": "Tampal teks Markdown anda di sini",
+      "convertToLatex": "Tukar ke LaTeX",
+      "converting": "Menukar...",
+      "convertingToLatex": "Menukar ke LaTeX...",
+      "outputLabel": "Kod LaTeX",
+      "readyToUse": "Sedia untuk digunakan dalam dokumen LaTeX anda",
+      "convertedLatexWillAppear": "LaTeX yang ditukar akan muncul di sini...",
+      "failedToConvert": "Gagal menukar Markdown. Sila cuba lagi."
+    },
+    "mathmlToLatex": {
+      "title": "Penukar MathML ke LaTeX",
+      "subtitle": "Tukar markup MathML kepada kod LaTeX bersih",
+      "inputLabel": "Kod MathML",
+      "inputHint": "Tampal markup MathML anda di sini",
+      "convertToLatex": "Tukar ke LaTeX",
+      "converting": "Menukar...",
+      "convertingToLatex": "Menukar ke LaTeX...",
+      "outputLabel": "Kod LaTeX",
+      "readyToUse": "Sedia untuk digunakan dalam dokumen LaTeX anda",
+      "convertedLatexWillAppear": "LaTeX yang ditukar akan muncul di sini...",
+      "failedToConvert": "Gagal menukar MathML. Sila cuba lagi."
+    },
+    "latexToMarkdown": {
+      "title": "Penukar LaTeX ke Markdown",
+      "subtitle": "Tukar dokumen atau snippet LaTeX kepada Markdown bersih",
+      "inputLabel": "Kandungan LaTeX",
+      "inputHint": "Tampal kod LaTeX anda di sini",
+      "convertToMarkdown": "Tukar ke Markdown",
+      "converting": "Menukar...",
+      "convertingToMarkdown": "Menukar ke Markdown...",
+      "outputLabel": "Markdown",
+      "readyToUse": "Sedia untuk digunakan dalam fail Markdown anda",
+      "convertedMarkdownWillAppear": "Markdown yang ditukar akan muncul di sini...",
+      "failedToConvert": "Gagal menukar LaTeX. Sila cuba lagi.",
+      "exportAsMarkdown": "Eksport sebagai Markdown"
+    },
+    "latexWordCounter": {
+      "title": "Pengira Perkataan LaTeX",
+      "subtitle": "Kira perkataan dalam dokumen LaTeX anda dengan tepat",
+      "inputLabel": "Dokumen LaTeX",
+      "inputHint": "Tampal atau taip kod LaTeX anda",
+      "resultsLabel": "Bilangan Perkataan",
+      "resultsHint": "Statistik perkataan langsung",
+      "counting": "Mengira...",
+      "countingWords": "Mengira perkataan...",
+      "totalWords": "Jumlah Perkataan",
+      "breakdown": "Perincian",
+      "textBody": "Isi Teks",
+      "headers": "Tajuk",
+      "captions": "Kapsyen",
+      "processedIn": "Diproses dalam",
+      "enterLatexToCount": "Masukkan LaTeX untuk mengira perkataan",
+      "failedToCount": "Gagal mengira perkataan"
+    },
+    "tableToLatex": {
+      "title": "Penukar CSV ke LaTeX",
+      "subtitle": "Muat naik fail .csv dan dapatkan kod jadual LaTeX bersih dengan segera.",
+      "inputLabel": "Muat Naik Fail CSV",
+      "outputLabel": "Output Jadual LaTeX"
+    },
+    "equationToLatex": {
+      "title": "Penukar Persamaan ke LaTeX",
+      "subtitle": "Tukar ungkapan matematik kepada LaTeX daripada penerangan teks atau imej",
+      "inputLabel": "Penerangan Persamaan atau Imej",
+      "inputHint": "Terangkan persamaan anda dalam teks biasa atau muat naik imej",
+      "placeholder": "Contoh: formula kuadratik, integral x kuasa dua dari 0 ke 1, jumlah n dari 1 ke infiniti bagi 1 per n kuasa dua...",
+      "placeholderWithImage": "Input teks dilumpuhkan semasa imej dimuat naik",
+      "imageUploaded": "Imej dimuat naik, input teks dilumpuhkan",
+      "dropImageHere": "Letakkan imej persamaan anda di sini",
+      "orBrowseFiles": "atau layari fail",
+      "fileFormats": "JPEG, PNG, GIF, WebP",
+      "convertToLatex": "Tukar ke LaTeX",
+      "converting": "Menukar...",
+      "convertingToLatex": "Menukar ke LaTeX...",
+      "outputLabel": "LaTeX yang Dijana",
+      "readyToUse": "Sedia untuk digunakan dalam dokumen LaTeX anda",
+      "generatedLatexWillAppear": "LaTeX yang dijana akan muncul di sini...",
+      "pleaseEnterEquation": "Sila masukkan penerangan persamaan atau muat naik imej",
+      "equationTooLong": "Penerangan persamaan mestilah 2000 aksara atau kurang",
+      "failedToConvert": "Gagal menukar persamaan. Sila cuba lagi."
+    },
+    "imageToTikz": {
+      "title": "Penukar Imej ke TikZ",
+      "subtitle": "Muat naik diagram atau imej dan tukar kepada kod TikZ yang boleh diedit",
+      "inputLabel": "Muat Naik Imej",
+      "inputHint": "Muat naik diagram, carta alir, atau bentuk untuk ditukar",
+      "dropFileHere": "Letakkan fail anda di sini",
+      "orBrowseFiles": "atau layari fail",
+      "fileFormats": "JPEG, PNG, GIF, WebP",
+      "processing": "Memproses...",
+      "analyzingImage": "Menganalisis imej anda...",
+      "analyzingImageSubtext": "Menukar bentuk dan elemen kepada kod TikZ.",
+      "analyzingImageStatus": "Menganalisis imej...",
+      "analyzingImageStatusSubtext": "Tunggu sebentar sementara kod sedang dimuatkan.",
+      "converting": "Menukar...",
+      "outputLabel": "Kod TikZ yang Dijana",
+      "readyToUse": "Sedia untuk digunakan dalam dokumen LaTeX anda",
+      "generatedCodeWillAppear": "Kod yang dijana akan muncul di sini...",
+      "failedToConvert": "Gagal menukar imej ke TikZ. Sila cuba lagi.",
+      "pleaseUploadImage": "Sila muat naik fail imej (PNG, JPEG, GIF, WebP)",
+      "imageSizeTooLarge": "Saiz imej mestilah kurang daripada 20MB",
+      "removeImage": "Buang imej"
+    },
+    "pdfToLatex": {
+      "title": "Penukar PDF ke LaTeX",
+      "subtitle": "Tukar dokumen PDF dengan matematik dan persamaan kepada kod LaTeX bersih",
+      "inputLabel": "Dokumen PDF Anda",
+      "outputLabel": "Kod LaTeX Bersih"
+    }
+  },
+  "categories": {
+    "academic": "Akademik",
+    "professional": "Profesional",
+    "creative": "Kreatif",
+    "business": "Perniagaan",
+    "education": "Pendidikan",
+    "presentations": "Persembahan",
+    "resumeCv": "Resume & CV",
+    "math": "Matematik",
+    "reports": "Laporan",
+    "letters": "Surat",
+    "other": "Lain-lain"
+  },
+  "toolsList": {
+    "imageToLatex": {
+      "title": "Imej ke LaTeX",
+      "description": "Tukar imej ke format LaTeX"
+    },
+    "tableToLatex": {
+      "title": "Excel ke LaTeX",
+      "description": "Tukar CSV, JSON, Excel ke jadual LaTeX"
+    },
+    "tikzGenerator": {
+      "title": "Penjana TikZ",
+      "description": "Jana diagram TikZ dengan AI"
+    },
+    "imageToTikz": {
+      "title": "Imej ke TikZ",
+      "description": "Tukar imej ke diagram TikZ dengan AI"
+    },
+    "latexPreview": {
+      "title": "Pratonton LaTeX",
+      "description": "Editor LaTeX langsung dengan pratonton PDF"
+    },
+    "markdownToLatex": {
+      "title": "Markdown ke LaTeX",
+      "description": "Tukar dokumen Markdown ke format LaTeX"
+    },
+    "citationGenerator": {
+      "title": "Penjana Sitasi",
+      "description": "Jana sitasi BibTeX daripada DOI atau butiran artikel"
+    },
+    "mathmlToLatex": {
+      "title": "MathML ke LaTeX",
+      "description": "Tukar markup MathML ke format LaTeX"
+    },
+    "aiLatexGenerator": {
+      "title": "Penjana LaTeX AI",
+      "description": "Jana kod LaTeX daripada penerangan teks"
+    },
+    "htmlToLatex": {
+      "title": "HTML ke LaTeX",
+      "description": "Tukar markup HTML ke format LaTeX"
+    },
+    "mermaidToLatex": {
+      "title": "Mermaid ke LaTeX",
+      "description": "Tukar diagram Mermaid ke format LaTeX"
+    },
+    "pgfplotsGenerator": {
+      "title": "Penjana Pgfplots",
+      "description": "Jana graf dan carta pgfplots dengan AI"
+    },
+    "latexToMarkdown": {
+      "title": "LaTeX ke Markdown",
+      "description": "Tukar dokumen atau snippet LaTeX ke Markdown"
+    },
+    "equationToLatex": {
+      "title": "Persamaan ke LaTeX",
+      "description": "Tukar persamaan matematik daripada teks atau imej ke LaTeX"
+    },
+    "pdfToLatex": {
+      "title": "PDF ke LaTeX",
+      "description": "Tukar dokumen PDF dengan kandungan matematik ke LaTeX"
+    },
+    "latexWordCounter": {
+      "title": "Pengira Perkataan LaTeX",
+      "description": "Kira perkataan dalam dokumen LaTeX dengan tepat"
+    },
+    "arxivToLatex": {
+      "title": "ArXiv ke LaTeX",
+      "description": "Import kertas arXiv terus ke Octree"
+    }
+  },
+  "templatesList": {
+    "research-paper": {
+      "title": "Kertas Penyelidikan",
+      "description": "Templat kertas penyelidikan gaya IEEE"
+    },
+    "beamer-presentation": {
+      "title": "Persembahan Beamer",
+      "description": "Slaid persembahan akademik"
+    },
+    "academic-cv": {
+      "title": "CV Akademik",
+      "description": "Curriculum vitae akademik profesional"
+    },
+    "mathematical-document": {
+      "title": "Dokumen Matematik",
+      "description": "Dokumen dengan banyak matematik dan teorem"
+    },
+    "lab-report": {
+      "title": "Laporan Makmal",
+      "description": "Templat laporan makmal saintifik"
+    },
+    "book-chapter": {
+      "title": "Bab Buku",
+      "description": "Templat bab buku atau tesis"
+    },
+    "resume": {
+      "title": "Resume",
+      "description": "Templat resume profesional"
+    },
+    "grading-rubric": {
+      "title": "Rubrik Penilaian",
+      "description": "Templat kriteria penilaian dan gred"
+    },
+    "assignment": {
+      "title": "Tugasan",
+      "description": "Templat kerja rumah dan tugasan"
+    },
+    "worksheet": {
+      "title": "Lembaran Kerja",
+      "description": "Templat soalan latihan dan latihan"
+    },
+    "homework": {
+      "title": "Templat Kerja Rumah",
+      "description": "Tugasan kerja rumah berstruktur"
+    },
+    "poster": {
+      "title": "Poster Penyelidikan",
+      "description": "Templat poster persidangan akademik"
+    },
+    "thesis": {
+      "title": "Tesis PhD",
+      "description": "Templat tesis lengkap dengan bab-bab"
+    },
+    "letter": {
+      "title": "Surat Rasmi",
+      "description": "Templat surat perniagaan profesional"
+    },
+    "algorithm": {
+      "title": "Pseudokod Algoritma",
+      "description": "Dokumentasi algoritma dengan pseudokod"
+    },
+    "cover-letter": {
+      "title": "Surat Permohonan",
+      "description": "Surat permohonan akademik dan pekerjaan profesional"
+    },
+    "journal-article": {
+      "title": "Artikel Jurnal",
+      "description": "Templat artikel jurnal akademik dengan bahagian"
+    },
+    "syllabus": {
+      "title": "Silabus Kursus",
+      "description": "Templat silabus kursus lengkap"
+    },
+    "research-proposal": {
+      "title": "Cadangan Penyelidikan",
+      "description": "Templat cadangan geran dan penyelidikan"
+    },
+    "essay": {
+      "title": "Esei Akademik",
+      "description": "Esei berstruktur dengan hujah dan analisis"
+    },
+    "research-statement": {
+      "title": "Pernyataan Penyelidikan",
+      "description": "Pernyataan penyelidikan akademik untuk permohonan kerja"
+    },
+    "dissertation": {
+      "title": "Disertasi",
+      "description": "Templat disertasi PhD lengkap"
+    },
+    "white-paper": {
+      "title": "White Paper",
+      "description": "Templat white paper profesional"
+    },
+    "leaflet": {
+      "title": "Risalah/Brosur",
+      "description": "Templat risalah pemasaran profesional"
+    },
+    "technical-report": {
+      "title": "Laporan Teknikal",
+      "description": "Templat laporan penyelidikan teknikal"
+    },
+    "math-exercises": {
+      "title": "Latihan Matematik",
+      "description": "Soalan latihan dan latihan untuk matematik"
+    },
+    "math-notes": {
+      "title": "Nota Matematik",
+      "description": "Nota kuliah berstruktur untuk kursus matematik"
+    },
+    "math-exam": {
+      "title": "Peperiksaan Matematik",
+      "description": "Templat peperiksaan matematik formal"
+    },
+    "math-problem-set": {
+      "title": "Set Soalan Matematik",
+      "description": "Tugasan set soalan mingguan untuk matematik"
+    },
+    "math-cheat-sheet": {
+      "title": "Lembaran Rujukan Matematik",
+      "description": "Lembaran rujukan padat untuk formula dan teorem"
+    },
+    "lecture-notes": {
+      "title": "Nota Kuliah",
+      "description": "Templat nota kuliah akademik bersih"
+    },
+    "quiz-template": {
+      "title": "Templat Kuiz",
+      "description": "Templat kuiz atau ujian pendek"
+    },
+    "formula-sheet": {
+      "title": "Lembaran Formula",
+      "description": "Lembaran rujukan untuk formula penting"
+    },
+    "project-report": {
+      "title": "Laporan Projek",
+      "description": "Laporan projek profesional dengan bab dan bahagian"
+    },
+    "article-template": {
+      "title": "Templat Artikel",
+      "description": "Artikel saintifik dengan abstrak dan bahagian"
+    },
+    "statement-of-purpose": {
+      "title": "Statement of Purpose",
+      "description": "Templat pernyataan untuk permohonan pascasiswazah"
+    },
+    "literature-review": {
+      "title": "Tinjauan Literatur",
+      "description": "Tinjauan literatur akademik dengan sitasi"
+    },
+    "meeting-minutes": {
+      "title": "Minit Mesyuarat",
+      "description": "Templat minit dan nota mesyuarat profesional"
+    },
+    "certificate": {
+      "title": "Sijil",
+      "description": "Templat sijil anugerah atau penyiapan"
+    },
+    "invoice": {
+      "title": "Invois",
+      "description": "Invois profesional untuk perkhidmatan atau produk"
+    },
+    "grant-proposal": {
+      "title": "Cadangan Geran",
+      "description": "Templat cadangan geran penyelidikan"
+    },
+    "letter-of-recommendation": {
+      "title": "Surat Sokongan",
+      "description": "Templat surat sokongan profesional"
+    },
+    "motivation-letter": {
+      "title": "Surat Motivasi",
+      "description": "Templat surat motivasi akademik atau profesional"
+    },
+    "business-plan": {
+      "title": "Pelan Perniagaan",
+      "description": "Templat pelan perniagaan profesional"
+    },
+    "business-report": {
+      "title": "Laporan Perniagaan",
+      "description": "Templat laporan perniagaan korporat"
+    },
+    "scientific-report": {
+      "title": "Laporan Saintifik",
+      "description": "Templat laporan penyelidikan saintifik"
+    },
+    "internship-report": {
+      "title": "Laporan Latihan Industri",
+      "description": "Templat laporan latihan industri pelajar"
+    },
+    "newsletter": {
+      "title": "Surat Berita",
+      "description": "Templat surat berita profesional"
+    },
+    "questionnaire": {
+      "title": "Soal Selidik",
+      "description": "Templat tinjauan dan soal selidik penyelidikan"
+    },
+    "table-template": {
+      "title": "Templat Jadual",
+      "description": "Susun atur dan pemformatan jadual profesional"
+    },
+    "bibliography": {
+      "title": "Bibliografi",
+      "description": "Templat bibliografi dan rujukan mandiri"
+    },
+    "memo": {
+      "title": "Memo",
+      "description": "Templat memo perniagaan profesional"
+    },
+    "manuscript": {
+      "title": "Manuskrip",
+      "description": "Templat manuskrip buku untuk novel dan bukan fiksyen"
+    },
+    "recipe-book": {
+      "title": "Buku Resipi",
+      "description": "Templat buku masakan dan koleksi resipi"
+    },
+    "flyer": {
+      "title": "Flyer",
+      "description": "Templat flyer pemasaran dan promosi satu halaman"
+    },
+    "business-card": {
+      "title": "Kad Perniagaan",
+      "description": "Templat kad perniagaan profesional"
+    },
+    "calendar": {
+      "title": "Kalendar",
+      "description": "Templat kalendar bulanan dan tahunan"
+    },
+    "neurips-2026": {
+      "title": "NeurIPS 2026",
+      "description": "Templat kertas persidangan NeurIPS 2026 dengan had 9 halaman dan senarai semak kertas"
+    },
+    "icml-2026": {
+      "title": "ICML 2026",
+      "description": "Templat kertas persidangan ICML 2026 dengan format dua lajur dan had 8 halaman"
+    },
+    "iclr-2026": {
+      "title": "ICLR 2026",
+      "description": "Templat kertas persidangan ICLR 2026 dengan pernyataan kebolehulangan"
+    },
+    "cvpr-2026": {
+      "title": "CVPR 2026",
+      "description": "Templat kertas persidangan penglihatan komputer CVPR 2026 dengan format dua lajur"
+    },
+    "aaai-2026": {
+      "title": "AAAI 2026",
+      "description": "Templat kertas persidangan AAAI 2026 dengan format dua lajur dan had 7 halaman"
+    },
+    "obituary": {
+      "title": "Obituari",
+      "description": "Templat obituari memorial elegan dengan sempadan hiasan"
+    },
+    "eccv-2026": {
+      "title": "ECCV 2026",
+      "description": "Templat kertas Persidangan Eropah Penglihatan Komputer ECCV 2026"
+    },
+    "icra-2026": {
+      "title": "ICRA 2026",
+      "description": "Templat kertas persidangan robotik IEEE ICRA 2026 dengan format dua lajur"
+    },
+    "acm-chi-2026": {
+      "title": "ACM CHI 2026",
+      "description": "Templat penyerahan rasmi ACM CHI 2026 untuk format semakan lajur tunggal"
+    },
+    "www-2026": {
+      "title": "WWW 2026",
+      "description": "Templat The Web Conference (WWW) 2026 dengan bahagian relevan web wajib"
+    },
+    "acl-2026": {
+      "title": "ACL 2026",
+      "description": "Templat kertas persidangan NLP ACL 2026 dengan format dua lajur dan bahagian batasan wajib"
+    },
+    "interspeech-2026": {
+      "title": "Interspeech 2026",
+      "description": "Templat kertas persidangan pemprosesan ucapan dan bahasa Interspeech 2026"
+    },
+    "interactive-flashcard": {
+      "title": "Kad Imbasan Interaktif / Kuiz Tersembunyi",
+      "description": "Panduan belajar klik-untuk-dedah dengan jawapan tersembunyi - sesuai untuk ujian kendiri"
+    },
+    "jakes-resume": {
+      "title": "Resume Jake",
+      "description": "Templat resume lajur tunggal yang bersih dan mesra ATS"
+    }
+  },
+  "symbols": {
+    "title": "Simbol LaTeX",
+    "description": "Layari pengendali matematik biasa dan huruf Yunani untuk dokumen LaTeX anda.",
+    "searchPlaceholder": "Cari simbol...",
+    "searchResults": "Hasil Carian",
+    "symbolsFound": "{count} simbol ditemui",
+    "noSymbolsFound": "Tiada simbol yang sepadan dengan",
+    "viewSymbols": "Lihat Simbol",
+    "backToSymbols": "Kembali ke Simbol",
+    "symbolCount": "{count} simbol",
+    "symbolsCount": "{count} simbol",
+    "categories": {
+      "math": {
+        "title": "Simbol Matematik",
+        "description": "Pengendali matematik biasa, hubungan, dan anak panah.",
+        "subtitle": "Pengendali Matematik Biasa"
+      },
+      "greek": {
+        "title": "Simbol Yunani",
+        "description": "Senarai lengkap huruf Yunani dan arahan LaTeX mereka.",
+        "subtitle": "Huruf Yunani dan Varian"
+      },
+      "arrows": {
+        "title": "Simbol Anak Panah",
+        "description": "Anak panah arah, anak panah berganda, dan harpun untuk dokumen LaTeX.",
+        "subtitle": "Anak Panah Arah dan Berganda"
+      },
+      "latin": {
+        "title": "Huruf Latin",
+        "description": "Aksara beraksen dan huruf Latin khas untuk pelbagai bahasa.",
+        "subtitle": "Aksara Beraksen dan Huruf Khas"
+      },
+      "setTheory": {
+        "title": "Teori Set",
+        "description": "Set, subset, kesatuan, persimpangan, dan set nombor.",
+        "subtitle": "Set, Subset, dan Operasi"
+      },
+      "logic": {
+        "title": "Logik & Bukti",
+        "description": "Kuantifier, penghubung logik, dan notasi bukti.",
+        "subtitle": "Penghubung Logik dan Notasi Bukti"
+      },
+      "linearAlgebra": {
+        "title": "Algebra Linear",
+        "description": "Vektor, matriks, transpos, dan hasil darab dalam.",
+        "subtitle": "Vektor, Matriks, dan Operasi"
+      },
+      "calculus": {
+        "title": "Kalkulus & Analisis",
+        "description": "Terbitan, kamiran, had, dan pengendali pembezaan.",
+        "subtitle": "Terbitan, Kamiran, dan Had"
+      },
+      "probability": {
+        "title": "Kebarangkalian & Statistik",
+        "description": "Kebarangkalian, jangkaan, varians, dan taburan.",
+        "subtitle": "Notasi Kebarangkalian dan Statistik"
+      },
+      "computerScience": {
+        "title": "Sains Komputer",
+        "description": "Notasi Big-O, pengendali logik, dan simbol algoritma.",
+        "subtitle": "Notasi Big-O dan Algoritma"
+      },
+      "numberTheory": {
+        "title": "Teori Nombor",
+        "description": "Kebahagian, aritmetik modular, dan fungsi teori nombor.",
+        "subtitle": "Kebahagian dan Aritmetik Modular"
+      },
+      "physics": {
+        "title": "Fizik",
+        "description": "Mekanik kuantum, medan vektor, dan pemalar fizikal."
+      },
+      "chemistry": {
+        "title": "Kimia",
+        "description": "Anak panah tindak balas, isotop, ikatan, dan simbol keadaan.",
+        "subtitle": "Anak Panah Tindak Balas dan Notasi Kimia"
+      },
+      "finance": {
+        "title": "Mata Wang & Kewangan",
+        "description": "Simbol mata wang, formula kewangan, dan notasi."
+      },
+      "brackets": {
+        "title": "Tanda Kurung & Pembatas",
+        "description": "Tanda kurung sudut, lantai, siling, norma, dan pasangan pembatas.",
+        "subtitle": "Tanda Kurung, Lantai, Siling, dan Norma"
+      },
+      "accents": {
+        "title": "Aksen & Pengubah",
+        "description": "Topi, tilde, titik, palang, vektor, dan hiasan teks."
+      },
+      "geometry": {
+        "title": "Geometri",
+        "description": "Sudut, segi tiga, selari, serenjang, dan kongruen.",
+        "subtitle": "Sudut, Segi Tiga, dan Hubungan Geometri"
+      },
+      "topology": {
+        "title": "Topologi & Matematik Abstrak",
+        "description": "Aleph, sempadan, homologi, dan notasi teori kategori.",
+        "subtitle": "Notasi Topologi dan Teori Kategori"
+      },
+      "machineLearning": {
+        "title": "Pembelajaran Mesin & AI",
+        "description": "Fungsi kehilangan, kecerunan, argmax, penyimpangan KL, dan notasi rangkaian saraf.",
+        "subtitle": "Fungsi Kehilangan dan Notasi Rangkaian Saraf"
+      },
+      "relations": {
+        "title": "Hubungan & Perbandingan",
+        "description": "Ketaksamaan, kesetaraan, subset, superset, dan simbol perbandingan.",
+        "subtitle": "Simbol Ketaksamaan dan Kesetaraan"
+      },
+      "operators": {
+        "title": "Pengendali Lanjutan",
+        "description": "Pengendali perduaan, hasil darab tensor, jumlah terus, dan komposisi.",
+        "subtitle": "Pengendali Perduaan dan Komposisi"
+      },
+      "summation": {
+        "title": "Penjumlahan & Hasil Darab",
+        "description": "Notasi sigma, simbol hasil darab, dan had berindeks.",
+        "subtitle": "Notasi Sigma dan Hasil Darab"
+      },
+      "functions": {
+        "title": "Fungsi & Pemetaan",
+        "description": "Notasi fungsi, peta, komposisi, dan domain/kodomain.",
+        "subtitle": "Notasi Fungsi dan Komposisi"
+      },
+      "order": {
+        "title": "Ketaksamaan & Tertib",
+        "description": "Mendahului, mengganti, min, max, inf, sup, dan sempadan.",
+        "subtitle": "Notasi Tertib dan Sempadan"
+      },
+      "boolean": {
+        "title": "Algebra Boolean",
+        "description": "Get logik, AND, OR, NOT, XOR, NAND, dan operasi boolean.",
+        "subtitle": "Get Logik dan Operasi Boolean"
+      },
+      "optimization": {
+        "title": "Pengoptimuman",
+        "description": "Argmax, argmin, kekangan, Lagrangian, dan syarat KKT.",
+        "subtitle": "Notasi Pengoptimuman dan Kekangan"
+      },
+      "units": {
+        "title": "Unit & Pengukuran",
+        "description": "Darjah, unit SI, pemalar fizikal, dan simbol pengukuran.",
+        "subtitle": "Unit SI dan Simbol Pengukuran"
+      },
+      "quantifiers": {
+        "title": "Kuantifier",
+        "description": "Untuk semua, wujud, elemen dari, dan notasi pembina set.",
+        "subtitle": "Kuantifier Universal dan Kewujudan"
+      },
+      "graphTheory": {
+        "title": "Teori Graf",
+        "description": "Bucu, tepi, kebersebelahan, laluan, kitaran, dan nombor kromatik.",
+        "subtitle": "Bucu, Tepi, dan Notasi Graf"
+      },
+      "combinatorics": {
+        "title": "Kombinatorik",
+        "description": "Faktorial, binomial, pilih atur, gabungan, dan pengiraan.",
+        "subtitle": "Faktorial, Pilih Atur, dan Gabungan"
+      },
+      "specialFunctions": {
+        "title": "Fungsi Khas",
+        "description": "Fungsi gamma, zeta, Bessel, Legendre, dan ralat.",
+        "subtitle": "Fungsi Gamma, Zeta, dan Khas"
+      },
+      "complex": {
+        "title": "Nombor Kompleks",
+        "description": "Unit khayalan, konjugat, modulus, argumen, dan bentuk kutub.",
+        "subtitle": "Notasi Nombor Kompleks"
+      },
+      "trigonometry": {
+        "title": "Trigonometri",
+        "description": "Sinus, kosinus, tangen, trig songsang, dan fungsi hiperbolik.",
+        "subtitle": "Fungsi Trigonometri dan Hiperbolik"
+      },
+      "differentialGeometry": {
+        "title": "Geometri Pembezaan",
+        "description": "Manifold, kelengkungan, simbol Christoffel, dan tensor Riemann.",
+        "subtitle": "Notasi Manifold dan Kelengkungan"
+      },
+      "tensors": {
+        "title": "Notasi Tensor",
+        "description": "Penjumlahan Einstein, indeks, penguncupan, dan terbitan kovarian.",
+        "subtitle": "Penjumlahan Einstein dan Indeks Tensor"
+      },
+      "modalLogic": {
+        "title": "Logik Modal",
+        "description": "Keperluan, kemungkinan, logik temporal, dan semantik Kripke.",
+        "subtitle": "Pengendali Keperluan dan Kemungkinan"
+      },
+      "gameTheory": {
+        "title": "Teori Permainan",
+        "description": "Keseimbangan Nash, strategi, bayaran, dan nilai Shapley.",
+        "subtitle": "Keseimbangan Nash dan Notasi Strategi"
+      }
+    }
+  },
+  "nav": {
+    "tools": "Alat",
+    "templates": "Templat",
+    "symbols": "Simbol",
+    "getStarted": "Mula",
+    "menu": "Menu"
+  },
+  "footer": {
+    "tagline": "Alat dan templat LaTeX percuma untuk semua orang.",
+    "menu": "Menu",
+    "tools": "Alat",
+    "allRightsReserved": "Hak cipta terpelihara.",
+    "imageToLatex": "Imej ke LaTeX",
+    "excelToLatex": "Excel ke LaTeX",
+    "tikzGenerator": "Penjana TikZ",
+    "imageToTikz": "Imej ke TikZ",
+    "latexPreview": "Pratonton LaTeX",
+    "markdownToLatex": "Markdown ke LaTeX",
+    "citationGenerator": "Penjana Sitasi",
+    "aiLatexGenerator": "Penjana LaTeX AI",
+    "learn": "Belajar",
+    "learnLatex": "Belajar LaTeX",
+    "learnTikz": "Belajar TikZ",
+    "learnPgfplots": "Belajar PGFPlots",
+    "viewAllTutorials": "Lihat semua tutorial →",
+    "openSource": "Sumber Terbuka",
+    "octreeEditor": "Editor Octree",
+    "toolsTemplates": "Alat & Templat",
+    "marketingBlogs": "Pemasaran & Blog",
+    "viewAllRepositories": "Lihat semua repositori →",
+    "socials": "Media Sosial",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn",
+    "tiktok": "TikTok",
+    "x": "X",
+    "reddit": "Reddit",
+    "discord": "Discord",
+    "greekLetters": "Huruf Yunani",
+    "mathOperators": "Pengendali Matematik",
+    "arrows": "Anak Panah",
+    "relations": "Hubungan",
+    "setTheory": "Teori Set",
+    "calculus": "Kalkulus",
+    "logic": "Logik",
+    "linearAlgebra": "Algebra Linear",
+    "browseAllCategories": "Layari semua 37 kategori →",
+    "researchPaper": "Kertas Penyelidikan",
+    "phdThesis": "Tesis PhD",
+    "beamerPresentation": "Persembahan Beamer",
+    "academicCv": "CV Akademik",
+    "coverLetter": "Surat Permohonan",
+    "labReport": "Laporan Makmal",
+    "neurips2026": "NeurIPS 2026",
+    "icml2026": "ICML 2026",
+    "viewAllTemplates": "Lihat semua 71 templat →",
+    "viewAllTools": "Lihat semua alat →"
+  },
+  "cta": {
+    "badge": "Tulis LaTeX menggunakan AI",
+    "title": "Editor LaTeX AI Terbaik, Alternatif Overleaf",
+    "description": "Octree membantu penyelidik dari 15+ universiti menulis kertas penyelidikan dengan lebih cepat menggunakan AI",
+    "feature1": "Jana diagram TikZ yang cantik menggunakan AI",
+    "feature2": "Muat naik imej dan tukar ke LaTeX dengan lancar",
+    "feature3": "Dapatkan bantuan segera untuk menulis dan memformat kertas penyelidikan",
+    "useInOctree": "Gunakan di Octree",
+    "learnMore": "Ketahui Lebih Lanjut"
+  },
+  "metadata": {
+    "site": {
+      "title": "Alat LaTeX Percuma - Tukar Imej ke LaTeX, 60+ Templat, Pratonton PDF | Octree",
+      "description": "Alat LaTeX percuma: penukar persamaan matematik berkuasa AI, 60+ templat profesional (resume, CV, tesis, beamer), pratonton PDF langsung. Tukar matematik tulisan tangan, imej & PDF ke LaTeX dengan serta-merta.",
+      "keywords": "tukar matematik tulisan tangan ke LaTeX, penukar imej ke LaTeX, penukar PDF ke LaTeX, persamaan matematik ke LaTeX, penukar matematik LaTeX, penukar LaTeX percuma, penjana LaTeX AI, penjana sitasi LaTeX, penjana TikZ, templat LaTeX percuma, templat resume LaTeX, templat CV LaTeX, templat tesis LaTeX, templat beamer LaTeX, editor LaTeX dalam talian, alternatif Overleaf, LaTeX dalam talian, kompil LaTeX dalam talian, LaTeX ke PDF, editor persamaan, editor formula matematik, simbol LaTeX, penjana BibTeX, jadual ke LaTeX, Excel ke LaTeX, markdown ke LaTeX, HTML ke LaTeX, MathML ke LaTeX, pengira perkataan LaTeX, penjana PGFPlots, arXiv LaTeX"
+    },
+    "tools": {
+      "imageToLatex": {
+        "title": "Penukar Imej ke LaTeX - Alat Berkuasa AI Percuma",
+        "description": "Tukar imej persamaan matematik tulisan tangan kepada kod LaTeX bersih dengan serta-merta. Berkuasa AI, percuma, tanpa perlu daftar.",
+        "keywords": "imej ke LaTeX, foto ke LaTeX, gambar ke LaTeX, matematik tulisan tangan ke LaTeX, imbas matematik ke LaTeX, OCR LaTeX, penukar imej matematik, tangkapan skrin ke LaTeX, OCR matematik, OCR persamaan, formula ke LaTeX, penukar foto matematik, tulisan tangan ke LaTeX, imbas persamaan"
+      },
+      "mathToLatex": {
+        "title": "Penukar Matematik ke LaTeX - Alat Dalam Talian Percuma",
+        "description": "Tukar ungkapan matematik kepada kod LaTeX. Taip atau tampal matematik dan dapatkan output LaTeX yang bersih.",
+        "keywords": "matematik ke LaTeX, tukar matematik ke LaTeX, ungkapan matematik ke LaTeX, formula ke LaTeX, penukar matematik, penukar persamaan, notasi matematik LaTeX, penukar ungkapan matematik"
+      },
+      "equationToLatex": {
+        "title": "Penukar Persamaan ke LaTeX - Alat Dalam Talian Percuma",
+        "description": "Tukar persamaan matematik kepada kod LaTeX dengan serta-merta. Taip persamaan anda dan dapatkan LaTeX.",
+        "keywords": "persamaan ke LaTeX, tukar persamaan ke LaTeX, penukar persamaan matematik, editor persamaan LaTeX, formula ke LaTeX, persamaan matematik LaTeX, notasi persamaan"
+      },
+      "tikzGenerator": {
+        "title": "Penjana Diagram TikZ - Grafik LaTeX Berkuasa AI",
+        "description": "Jana diagram TikZ menggunakan AI. Huraikan diagram anda dan dapatkan kod TikZ LaTeX bersih dengan serta-merta.",
+        "keywords": "penjana TikZ, TikZ dalam talian, contoh TikZ, carta alir TikZ, diagram TikZ, rangkaian neural TikZ, penjana TikZ AI, penjana kod TikZ, tutorial TikZ, bentuk TikZ, anak panah TikZ, graf TikZ, pokok TikZ, plot TikZ, PGF TikZ, litar TikZ, garis masa TikZ, diagram Venn TikZ"
+      },
+      "imageToTikz": {
+        "title": "Penukar Imej ke TikZ - Tukar Imej ke Grafik LaTeX",
+        "description": "Tukar imej dan diagram kepada kod TikZ LaTeX menggunakan AI. Muat naik sebarang imej dan dapatkan kod TikZ yang boleh diedit.",
+        "keywords": "imej ke TikZ, gambar ke TikZ, tukar imej ke TikZ, diagram ke TikZ, foto ke kod TikZ, penukar TikZ AI, vektor ke TikZ, imej ke diagram LaTeX"
+      },
+      "citationGenerator": {
+        "title": "Penjana Sitasi LaTeX - Penjana BibTeX",
+        "description": "Jana sitasi BibTeX daripada DOI, URL, atau butiran artikel. Alat sitasi LaTeX percuma.",
+        "keywords": "penjana sitasi LaTeX, penjana BibTeX, DOI ke BibTeX, penjana sitasi, penjana rujukan, penjana bibliografi, penjana cite, sitasi APA LaTeX, sitasi MLA LaTeX, sitasi Chicago, sitasi IEEE, rujukan Harvard LaTeX"
+      },
+      "latexPreview": {
+        "title": "Pratonton Langsung LaTeX - Editor Dalam Talian Percuma",
+        "description": "Tulis dan pratonton dokumen LaTeX secara masa nyata. Editor LaTeX dalam talian percuma dengan output PDF segera.",
+        "keywords": "pratonton LaTeX, editor LaTeX dalam talian, pratonton langsung LaTeX, pengkompil LaTeX dalam talian, LaTeX ke PDF, editor LaTeX percuma, alternatif Overleaf, LaTeX dalam talian, tulis LaTeX dalam talian, pemapar LaTeX, penampil LaTeX, kompil LaTeX percuma"
+      },
+      "pdfToLatex": {
+        "title": "Penukar PDF ke LaTeX - Ekstrak LaTeX daripada PDF",
+        "description": "Tukar dokumen PDF dengan kandungan matematik kepada kod LaTeX bersih. Pengekstrakan berkuasa AI.",
+        "keywords": "PDF ke LaTeX, tukar PDF ke LaTeX, ekstrak LaTeX daripada PDF, penukar matematik PDF, pengekstrak persamaan PDF, PDF ke TeX, OCR PDF ke LaTeX, pengekstrak formula PDF, imbas PDF ke LaTeX"
+      },
+      "tableToLatex": {
+        "title": "Penukar Jadual ke LaTeX - Excel ke LaTeX",
+        "description": "Tukar jadual daripada Excel, Google Sheets, atau CSV kepada format LaTeX. Penjana jadual percuma.",
+        "keywords": "jadual ke LaTeX, Excel ke LaTeX, CSV ke LaTeX, hamparan ke LaTeX, penjana jadual LaTeX, tabular LaTeX, pembuat jadual LaTeX, Google Sheets ke LaTeX, salin tampal jadual LaTeX, penjana tabular LaTeX"
+      },
+      "markdownToLatex": {
+        "title": "Penukar Markdown ke LaTeX - Alat Dalam Talian Percuma",
+        "description": "Tukar fail Markdown kepada kod LaTeX bersih. Kekalkan format, pautan, dan struktur.",
+        "keywords": "markdown ke LaTeX, tukar markdown ke LaTeX, md ke tex, penukar markdown LaTeX, alternatif pandoc, markdown ke PDF LaTeX, markdown ke TeX dalam talian"
+      },
+      "latexToMarkdown": {
+        "title": "Penukar LaTeX ke Markdown - Alat Dalam Talian Percuma",
+        "description": "Tukar dokumen LaTeX kepada format Markdown. Kekalkan persamaan dan format.",
+        "keywords": "LaTeX ke markdown, tukar LaTeX ke markdown, tex ke md, penukar LaTeX ke md, LaTeX markdown, TeX ke markdown, eksport LaTeX sebagai markdown"
+      },
+      "htmlToLatex": {
+        "title": "Penukar HTML ke LaTeX - Alat Dalam Talian Percuma",
+        "description": "Tukar kandungan HTML kepada kod LaTeX bersih. Sempurna untuk penukaran web ke dokumen.",
+        "keywords": "HTML ke LaTeX, tukar HTML ke LaTeX, web ke LaTeX, HTML ke TeX, halaman web ke LaTeX, jadual HTML ke LaTeX, tukar laman web ke LaTeX"
+      },
+      "mathmlToLatex": {
+        "title": "Penukar MathML ke LaTeX - Alat Dalam Talian Percuma",
+        "description": "Tukar persamaan MathML kepada kod LaTeX. Sempurna untuk penukaran persamaan Word dan web.",
+        "keywords": "MathML ke LaTeX, tukar MathML ke LaTeX, persamaan Word ke LaTeX, penukar MathML, matematik Office ke LaTeX, OMML ke LaTeX, matematik Word ke LaTeX"
+      },
+      "mermaidToLatex": {
+        "title": "Penukar Mermaid ke LaTeX - Diagram ke TikZ",
+        "description": "Tukar diagram Mermaid kepada kod TikZ LaTeX. Carta alir, diagram jujukan, dan banyak lagi.",
+        "keywords": "Mermaid ke LaTeX, Mermaid ke TikZ, tukar diagram Mermaid, carta alir ke LaTeX, diagram jujukan ke LaTeX, Mermaid LaTeX, diagram ke TikZ"
+      },
+      "latexWordCounter": {
+        "title": "Pengira Perkataan LaTeX - Alat Dalam Talian Percuma",
+        "description": "Kira perkataan dalam dokumen LaTeX tidak termasuk arahan dan komen. Kiraan perkataan akademik yang tepat.",
+        "keywords": "pengira perkataan LaTeX, kira perkataan LaTeX, kiraan perkataan TeX, kiraan aksara LaTeX, pengira perkataan akademik, kiraan perkataan tesis, kiraan perkataan makalah LaTeX, pengira teks LaTeX"
+      },
+      "aiLatexGenerator": {
+        "title": "Penjana LaTeX AI - Tulis LaTeX dengan AI",
+        "description": "Jana kod LaTeX menggunakan AI. Huraikan apa yang anda mahu dan dapatkan LaTeX yang bersih dan boleh dikompil.",
+        "keywords": "penjana LaTeX AI, jana LaTeX AI, penulis LaTeX AI, ChatGPT LaTeX, penjana persamaan AI, matematik AI LaTeX, LaTeX daripada teks, bahasa semula jadi ke LaTeX"
+      },
+      "pgfplotsGenerator": {
+        "title": "Penjana PGFPlots - Pembuat Graf LaTeX",
+        "description": "Buat graf dan plot yang cantik untuk LaTeX menggunakan PGFPlots. Penjana plot dalam talian percuma.",
+        "keywords": "penjana PGFPlots, PGFPlots dalam talian, graf LaTeX, plot LaTeX, contoh PGFPlots, carta LaTeX, visualisasi data LaTeX, plot taburan LaTeX, carta bar LaTeX, graf garis LaTeX, plot fungsi LaTeX"
+      },
+      "arxivToLatex": {
+        "title": "arXiv ke LaTeX - Muat Turun Kod Sumber arXiv",
+        "description": "Ekstrak dan muat turun kod sumber LaTeX daripada makalah arXiv. Dapatkan fail TeX asal.",
+        "keywords": "arXiv ke LaTeX, kod sumber arXiv, muat turun LaTeX arXiv, sumber TeX arXiv, sumber makalah arXiv, ekstrak LaTeX arXiv, muat turun sumber arXiv"
+      }
+    },
+    "symbols": {
+      "main": {
+        "title": "Simbol LaTeX - Panduan Rujukan Lengkap",
+        "description": "Layari dan salin simbol LaTeX: huruf Yunani, operator matematik, anak panah, dan banyak lagi. Rujukan simbol lengkap.",
+        "keywords": "simbol LaTeX, simbol matematik, huruf Yunani LaTeX, operator LaTeX, anak panah LaTeX, rujukan simbol, salin simbol LaTeX, aksara khas LaTeX, notasi matematik LaTeX, helaian contek LaTeX, semua simbol LaTeX"
+      },
+      "math": {
+        "title": "Simbol Matematik LaTeX - Operator dan Hubungan",
+        "description": "Senarai lengkap simbol matematik LaTeX. Operator, hubungan, persamaan dengan kod salin-tampal.",
+        "keywords": "simbol matematik LaTeX, operator matematik, LaTeX tambah tolak, LaTeX pecahan, LaTeX punca kuasa dua, LaTeX penjumlahan, LaTeX kamiran, simbol darab LaTeX, simbol bahagi LaTeX, sama dengan LaTeX, tidak sama LaTeX, lebih kurang LaTeX"
+      },
+      "greek": {
+        "title": "Huruf Yunani dalam LaTeX - Alpha hingga Omega",
+        "description": "Senarai lengkap huruf Yunani dan arahan LaTeX mereka. Salin-tampal alpha, beta, gamma, dan banyak lagi.",
+        "keywords": "huruf Yunani LaTeX, alpha LaTeX, beta LaTeX, gamma LaTeX, delta LaTeX, epsilon LaTeX, theta LaTeX, lambda LaTeX, pi LaTeX, sigma LaTeX, omega LaTeX, phi LaTeX, abjad Yunani LaTeX"
+      },
+      "arrows": {
+        "title": "Simbol Anak Panah LaTeX - Semua Jenis Anak Panah",
+        "description": "Senarai lengkap simbol anak panah LaTeX. Kanan, kiri, atas, bawah, anak panah berganda dan banyak lagi.",
+        "keywords": "anak panah LaTeX, anak panah kanan LaTeX, anak panah kiri LaTeX, anak panah berganda LaTeX, implikasi LaTeX, simbol anak panah, jenis anak panah LaTeX, anak panah atas LaTeX, anak panah bawah LaTeX, anak panah dua arah LaTeX, anak panah panjang LaTeX"
+      },
+      "brackets": {
+        "title": "Kurungan dan Pembatas LaTeX",
+        "description": "Kurungan biasa, kurungan kurawal, kurungan siku, dan pembatas dalam LaTeX. Arahan kurungan salin-tampal.",
+        "keywords": "kurungan LaTeX, kurungan biasa LaTeX, kurungan kurawal LaTeX, kurungan kurawal LaTeX, kurungan siku LaTeX, kurungan sudut LaTeX, pembatas LaTeX, kiri kanan LaTeX, kurungan besar LaTeX"
+      },
+      "calculus": {
+        "title": "Simbol Kalkulus LaTeX - Terbitan dan Kamiran",
+        "description": "Notasi kalkulus dalam LaTeX: terbitan, kamiran, had, dan operator pembezaan.",
+        "keywords": "kalkulus LaTeX, terbitan LaTeX, kamiran LaTeX, terbitan separa LaTeX, had LaTeX, pembezaan LaTeX, nabla LaTeX, kecerunan LaTeX, pencapahan LaTeX, curl LaTeX, Laplacian LaTeX"
+      },
+      "setTheory": {
+        "title": "Simbol Teori Set LaTeX",
+        "description": "Notasi teori set dalam LaTeX: kesatuan, persilangan, subset, unsur dari, dan banyak lagi.",
+        "keywords": "teori set LaTeX, kesatuan LaTeX, persilangan LaTeX, subset LaTeX, superset LaTeX, unsur dari LaTeX, set kosong LaTeX, notasi set LaTeX, milik LaTeX, mengandungi LaTeX"
+      },
+      "logic": {
+        "title": "Simbol Logik LaTeX - Operator Logik",
+        "description": "Simbol logik dalam LaTeX: dan, atau, bukan, implikasi, jika dan hanya jika, dan pengkuantiti.",
+        "keywords": "simbol logik LaTeX, dan LaTeX, atau LaTeX, bukan LaTeX, implikasi LaTeX, jika dan hanya jika LaTeX, penafian LaTeX, operator logik LaTeX, logik proposisi LaTeX"
+      },
+      "relations": {
+        "title": "Simbol Hubungan LaTeX - Operator Perbandingan",
+        "description": "Simbol hubungan dalam LaTeX: kurang dari, lebih dari, sama dengan, tidak sama dengan, dan kesetaraan.",
+        "keywords": "simbol hubungan LaTeX, kurang dari LaTeX, lebih dari LaTeX, kurang sama LaTeX, lebih sama LaTeX, tidak sama LaTeX, setara LaTeX, lebih kurang LaTeX, berkadar LaTeX"
+      },
+      "operators": {
+        "title": "Operator LaTeX - Operator Matematik",
+        "description": "Operator matematik dalam LaTeX: jumlah, hasil darab, kamiran, dan notasi operator.",
+        "keywords": "operator LaTeX, jumlah LaTeX, hasil darab LaTeX, operator kamiran LaTeX, operator besar LaTeX, penjumlahan LaTeX, prod LaTeX, coprod LaTeX, notasi operator LaTeX"
+      },
+      "linearAlgebra": {
+        "title": "Simbol Algebra Linear LaTeX - Matriks dan Vektor",
+        "description": "Notasi algebra linear dalam LaTeX: matriks, vektor, penentu, dan nilai eigen.",
+        "keywords": "algebra linear LaTeX, matriks LaTeX, vektor LaTeX, penentu LaTeX, alih bentuk LaTeX, nilai eigen LaTeX, vektor eigen LaTeX, hasil darab titik LaTeX, hasil darab silang LaTeX, norma LaTeX"
+      },
+      "geometry": {
+        "title": "Simbol Geometri LaTeX - Sudut dan Bentuk",
+        "description": "Notasi geometri dalam LaTeX: sudut, selari, serenjang, segi tiga, dan bulatan.",
+        "keywords": "geometri LaTeX, sudut LaTeX, selari LaTeX, serenjang LaTeX, segi tiga LaTeX, bulatan LaTeX, simbol darjah LaTeX, kongruen LaTeX, serupa LaTeX"
+      },
+      "probability": {
+        "title": "Simbol Kebarangkalian LaTeX - Notasi Statistik",
+        "description": "Simbol kebarangkalian dan statistik dalam LaTeX: nilai jangkaan, varians, taburan.",
+        "keywords": "kebarangkalian LaTeX, nilai jangkaan LaTeX, varians LaTeX, sisihan piawai LaTeX, taburan kebarangkalian LaTeX, statistik LaTeX, pembolehubah rawak LaTeX, kebarangkalian bersyarat LaTeX"
+      },
+      "physics": {
+        "title": "Simbol Fizik LaTeX - Notasi Saintifik",
+        "description": "Simbol fizik dalam LaTeX: vektor, operator, mekanik kuantum, dan pemalar.",
+        "keywords": "fizik LaTeX, vektor LaTeX, hbar LaTeX, mekanik kuantum LaTeX, bra ket LaTeX, notasi Dirac LaTeX, pemalar fizik LaTeX, notasi saintifik LaTeX"
+      },
+      "chemistry": {
+        "title": "Simbol Kimia LaTeX - Notasi Kimia",
+        "description": "Notasi kimia dalam LaTeX: formula kimia, tindak balas, dan struktur molekul.",
+        "keywords": "kimia LaTeX, formula kimia LaTeX, anak panah tindak balas LaTeX, subskrip LaTeX, superskrip LaTeX, mhchem LaTeX, persamaan kimia LaTeX"
+      },
+      "computerScience": {
+        "title": "Simbol Sains Komputer LaTeX - Notasi Algoritma",
+        "description": "Simbol sains komputer dalam LaTeX: algoritma, kerumitan, dan notasi pengaturcaraan.",
+        "keywords": "sains komputer LaTeX, algoritma LaTeX, notasi big O LaTeX, kerumitan LaTeX, pseudokod LaTeX, simbol pengaturcaraan LaTeX"
+      },
+      "functions": {
+        "title": "Simbol Fungsi LaTeX - Fungsi Matematik",
+        "description": "Notasi fungsi dalam LaTeX: trigonometri, logaritma, eksponen, dan banyak lagi.",
+        "keywords": "fungsi LaTeX, sin LaTeX, cos LaTeX, tan LaTeX, log LaTeX, ln LaTeX, exp LaTeX, lim LaTeX, min LaTeX, max LaTeX, argmin LaTeX, argmax LaTeX"
+      },
+      "numberTheory": {
+        "title": "Simbol Teori Nombor LaTeX",
+        "description": "Notasi teori nombor dalam LaTeX: kebolehabisan, kongruen, dan set nombor.",
+        "keywords": "teori nombor LaTeX, kebolehabisan LaTeX, modulo LaTeX, kongruen LaTeX, perdana LaTeX, pfst LaTeX, gstk LaTeX, integer LaTeX, nombor asli LaTeX"
+      },
+      "accents": {
+        "title": "Aksen dan Diakritik LaTeX",
+        "description": "Aksen LaTeX: topi, bar, titik, tilde, dan tanda diakritik lain.",
+        "keywords": "aksen LaTeX, topi LaTeX, bar LaTeX, titik LaTeX, tilde LaTeX, vec LaTeX, garisan atas LaTeX, garisan bawah LaTeX, kurungan atas LaTeX, kurungan bawah LaTeX"
+      },
+      "boolean": {
+        "title": "Simbol Algebra Boolean LaTeX",
+        "description": "Notasi algebra boolean dalam LaTeX: DAN, ATAU, BUKAN, XOR, dan nilai kebenaran.",
+        "keywords": "boolean LaTeX, DAN LaTeX, ATAU LaTeX, BUKAN LaTeX, XOR LaTeX, benar salah LaTeX, algebra boolean LaTeX, get logik LaTeX"
+      },
+      "summation": {
+        "title": "Simbol Penjumlahan dan Hasil Darab LaTeX",
+        "description": "Notasi penjumlahan dan hasil darab dalam LaTeX: jumlah, hasil darab, dan siri.",
+        "keywords": "penjumlahan LaTeX, hasil darab LaTeX, notasi jumlah LaTeX, sigma LaTeX, notasi pi LaTeX, siri LaTeX, jumlah tak terhingga LaTeX"
+      },
+      "trigonometry": {
+        "title": "Simbol Trigonometri LaTeX",
+        "description": "Fungsi trigonometri dalam LaTeX: sinus, kosinus, tangen, dan fungsi songsang.",
+        "keywords": "trigonometri LaTeX, sin LaTeX, cos LaTeX, tan LaTeX, arcsin LaTeX, arccos LaTeX, arctan LaTeX, hiperbolik LaTeX, sinh LaTeX, cosh LaTeX, tanh LaTeX"
+      },
+      "topology": {
+        "title": "Simbol Topologi LaTeX",
+        "description": "Notasi topologi dalam LaTeX: set terbuka, penutupan, dalaman, dan sempadan.",
+        "keywords": "topologi LaTeX, set terbuka LaTeX, set tertutup LaTeX, penutupan LaTeX, dalaman LaTeX, sempadan LaTeX, homeomorfisme LaTeX"
+      },
+      "finance": {
+        "title": "Simbol Kewangan LaTeX - Notasi Kewangan",
+        "description": "Simbol kewangan dalam LaTeX: mata wang, faedah, dan notasi ekonomi.",
+        "keywords": "kewangan LaTeX, mata wang LaTeX, dolar LaTeX, euro LaTeX, paun LaTeX, peratus LaTeX, kadar faedah LaTeX, NPV LaTeX"
+      },
+      "machineLearning": {
+        "title": "Simbol Pembelajaran Mesin LaTeX - Notasi ML",
+        "description": "Notasi pembelajaran mesin dalam LaTeX: rangkaian neural, fungsi kerugian, dan pengoptimuman.",
+        "keywords": "pembelajaran mesin LaTeX, rangkaian neural LaTeX, fungsi kerugian LaTeX, penurunan kecerunan LaTeX, fungsi pengaktifan LaTeX, pemberat LaTeX, bias LaTeX, notasi ML LaTeX"
+      },
+      "latin": {
+        "title": "Huruf Latin dan Fon LaTeX",
+        "description": "Huruf Latin dan gaya fon dalam LaTeX: tebal, italik, kaligrafik, dan banyak lagi.",
+        "keywords": "huruf Latin LaTeX, tebal LaTeX, italik LaTeX, mathcal LaTeX, mathbb LaTeX, mathfrak LaTeX, gaya fon LaTeX, blackboard bold LaTeX"
+      },
+      "complex": {
+        "title": "Simbol Nombor Kompleks LaTeX",
+        "description": "Notasi nombor kompleks dalam LaTeX: unit khayalan, konjugat, dan bentuk polar.",
+        "keywords": "nombor kompleks LaTeX, unit khayalan LaTeX, konjugat LaTeX, bahagian nyata LaTeX, bahagian khayalan LaTeX, modulus LaTeX, argumen LaTeX"
+      },
+      "graphTheory": {
+        "title": "Simbol Teori Graf LaTeX",
+        "description": "Notasi teori graf dalam LaTeX: bucu, tepi, laluan, dan kitaran.",
+        "keywords": "teori graf LaTeX, bucu LaTeX, tepi LaTeX, laluan LaTeX, kitaran LaTeX, kejiranan LaTeX, darjah LaTeX, terhubung LaTeX"
+      },
+      "combinatorics": {
+        "title": "Simbol Kombinatorik LaTeX",
+        "description": "Notasi kombinatorik dalam LaTeX: faktorial, binomial, dan pilih atur.",
+        "keywords": "kombinatorik LaTeX, faktorial LaTeX, binomial LaTeX, pilih atur LaTeX, gabungan LaTeX, pilih LaTeX, binom LaTeX"
+      },
+      "specialFunctions": {
+        "title": "Fungsi Khas LaTeX - Gamma, Zeta, Bessel",
+        "description": "Fungsi khas dalam LaTeX: gamma, zeta, Bessel, dan fungsi ralat.",
+        "keywords": "fungsi khas LaTeX, fungsi gamma LaTeX, fungsi zeta LaTeX, fungsi Bessel LaTeX, fungsi ralat LaTeX, Legendre LaTeX"
+      },
+      "tensors": {
+        "title": "Notasi Tensor LaTeX - Penjumlahan Einstein",
+        "description": "Notasi tensor dalam LaTeX: indeks, penguncupan, dan terbitan kovarian.",
+        "keywords": "tensor LaTeX, penjumlahan Einstein LaTeX, indeks tensor LaTeX, terbitan kovarian LaTeX, kontravarian LaTeX, delta Kronecker LaTeX"
+      },
+      "differentialGeometry": {
+        "title": "Simbol Geometri Pembezaan LaTeX",
+        "description": "Notasi geometri pembezaan dalam LaTeX: manifold, kelengkungan, dan sambungan.",
+        "keywords": "geometri pembezaan LaTeX, manifold LaTeX, kelengkungan LaTeX, Christoffel LaTeX, tensor Riemann LaTeX, sambungan LaTeX"
+      },
+      "modalLogic": {
+        "title": "Simbol Logik Modal LaTeX",
+        "description": "Notasi logik modal dalam LaTeX: kemestian, kemungkinan, dan operator temporal.",
+        "keywords": "logik modal LaTeX, kemestian LaTeX, kemungkinan LaTeX, kotak LaTeX, berlian LaTeX, logik temporal LaTeX"
+      },
+      "gameTheory": {
+        "title": "Simbol Teori Permainan LaTeX",
+        "description": "Notasi teori permainan dalam LaTeX: strategi, ganjaran, dan keseimbangan.",
+        "keywords": "teori permainan LaTeX, keseimbangan Nash LaTeX, strategi LaTeX, ganjaran LaTeX, fungsi utiliti LaTeX, nilai Shapley LaTeX"
+      },
+      "order": {
+        "title": "Simbol Hubungan Tertib LaTeX",
+        "description": "Hubungan tertib dalam LaTeX: tertib separa, kekisi, dan supremum/infimum.",
+        "keywords": "hubungan tertib LaTeX, tertib separa LaTeX, kekisi LaTeX, supremum LaTeX, infimum LaTeX, sempadan atas terkecil LaTeX"
+      },
+      "optimization": {
+        "title": "Simbol Pengoptimuman LaTeX",
+        "description": "Notasi pengoptimuman dalam LaTeX: minimumkan, maksimumkan, dan kekangan.",
+        "keywords": "pengoptimuman LaTeX, minimumkan LaTeX, maksimumkan LaTeX, argmin LaTeX, argmax LaTeX, tertakluk kepada LaTeX, kekangan LaTeX"
+      },
+      "quantifiers": {
+        "title": "Simbol Pengkuantiti LaTeX - Untuk Semua, Wujud",
+        "description": "Simbol pengkuantiti dalam LaTeX: pengkuantiti universal dan kewujudan.",
+        "keywords": "pengkuantiti LaTeX, untuk semua LaTeX, wujud LaTeX, forall LaTeX, kewujudan LaTeX, pengkuantiti universal LaTeX, terdapat LaTeX"
+      },
+      "units": {
+        "title": "Unit dan Ukuran LaTeX",
+        "description": "Unit SI dan ukuran dalam LaTeX: darjah, pemalar fizik, dan unit.",
+        "keywords": "unit LaTeX, unit SI LaTeX, darjah LaTeX, pemalar fizik LaTeX, siunitx LaTeX, ukuran LaTeX, meter LaTeX, kilogram LaTeX"
+      }
+    },
+    "templates": {
+      "main": {
+        "title": "Templat LaTeX Percuma - Resume, CV, Tesis, Beamer",
+        "description": "60+ templat LaTeX profesional. Resume, CV, tesis, pembentangan beamer, dan banyak lagi. Muat turun percuma.",
+        "keywords": "templat LaTeX, templat LaTeX percuma, templat resume LaTeX, templat CV LaTeX, templat tesis LaTeX, templat beamer LaTeX, templat Overleaf, templat akademik LaTeX, templat pembentangan LaTeX, templat kertas LaTeX, templat kerja rumah LaTeX, templat poster LaTeX, templat surat LaTeX, templat buku LaTeX, templat laporan LaTeX, templat LaTeX profesional"
+      },
+      "academic": {
+        "title": "Templat LaTeX Akademik - Kertas Penyelidikan, Tesis, Disertasi",
+        "description": "Templat LaTeX akademik percuma untuk kertas penyelidikan, tesis, disertasi, artikel jurnal, dan kertas persidangan.",
+        "keywords": "templat LaTeX akademik, templat kertas penyelidikan LaTeX, templat tesis LaTeX, templat disertasi LaTeX, templat artikel jurnal, kertas persidangan LaTeX, templat IEEE LaTeX, templat ACM, templat Springer, templat kertas saintifik, tesis PhD LaTeX, templat tesis sarjana, penulisan akademik LaTeX"
+      },
+      "presentations": {
+        "title": "Templat Pembentangan LaTeX - Slaid Beamer",
+        "description": "Templat pembentangan beamer LaTeX percuma. Slaid profesional untuk ceramah akademik, persidangan, dan kuliah.",
+        "keywords": "templat beamer LaTeX, templat pembentangan LaTeX, slaid beamer, slaid LaTeX, templat pembentangan akademik, slaid persidangan LaTeX, slaid kuliah LaTeX, tema beamer, contoh beamer, alternatif PowerPoint LaTeX, pembentangan beamer"
+      },
+      "resumeCV": {
+        "title": "Templat Resume & CV LaTeX - Curriculum Vitae Profesional",
+        "description": "Templat resume dan CV LaTeX percuma. Reka bentuk moden dan profesional untuk permohonan kerja dan CV akademik.",
+        "keywords": "templat resume LaTeX, templat CV LaTeX, curriculum vitae LaTeX, resume profesional LaTeX, templat CV moden, CV akademik LaTeX, resume satu halaman LaTeX, resume dua lajur, templat moderncv, europass LaTeX, resume jurutera perisian LaTeX, CV saintis data"
+      },
+      "math": {
+        "title": "Templat Matematik LaTeX - Persamaan, Bukti, Set Masalah",
+        "description": "Templat LaTeX untuk dokumen matematik: set masalah, bukti, teorem, dan helaian persamaan.",
+        "keywords": "templat matematik LaTeX, templat persamaan LaTeX, templat set masalah, templat kerja rumah LaTeX, templat bukti LaTeX, templat teorem, nota matematik LaTeX, templat helaian formula, templat peperiksaan LaTeX, templat kuiz LaTeX, templat tugasan matematik"
+      },
+      "reports": {
+        "title": "Templat Laporan LaTeX - Laporan Teknikal, Makmal, Projek",
+        "description": "Templat LaTeX profesional untuk laporan teknikal, laporan makmal, dokumentasi projek, dan laporan perniagaan.",
+        "keywords": "templat laporan LaTeX, laporan teknikal LaTeX, templat laporan makmal, laporan projek LaTeX, templat laporan perniagaan, laporan tahunan LaTeX, templat laporan latihan industri, laporan penyelidikan LaTeX, templat dokumentasi"
+      },
+      "education": {
+        "title": "Templat Pendidikan LaTeX - Kerja Rumah, Peperiksaan, Silibus",
+        "description": "Templat LaTeX untuk pendidik dan pelajar: kerja rumah, peperiksaan, silibus, nota kuliah, dan bahan kursus.",
+        "keywords": "templat kerja rumah LaTeX, templat peperiksaan LaTeX, templat silibus LaTeX, templat nota kuliah, bahan kursus LaTeX, templat tugasan, templat ujian LaTeX, templat lembaran kerja, panduan belajar LaTeX, templat kad imbas LaTeX"
+      },
+      "letters": {
+        "title": "Templat Surat LaTeX - Surat Permohonan, Surat Rasmi",
+        "description": "Templat surat LaTeX profesional untuk surat permohonan, surat-menyurat rasmi, dan surat sokongan.",
+        "keywords": "templat surat LaTeX, surat permohonan LaTeX, templat surat rasmi, surat sokongan LaTeX, templat surat perniagaan, surat permohonan LaTeX, templat surat rujukan, surat profesional LaTeX"
+      },
+      "business": {
+        "title": "Templat Perniagaan LaTeX - Pelan, Cadangan, Invois",
+        "description": "Templat LaTeX untuk dokumen perniagaan: pelan perniagaan, cadangan, invois, kontrak, dan memo.",
+        "keywords": "templat perniagaan LaTeX, pelan perniagaan LaTeX, templat cadangan LaTeX, templat invois LaTeX, templat kontrak, templat memo LaTeX, kad perniagaan LaTeX, templat laporan syarikat, ringkasan eksekutif LaTeX, templat cadangan projek"
+      },
+      "other": {
+        "title": "Templat LaTeX - Buku, Poster, Buletin",
+        "description": "Templat LaTeX pelbagai: buku, poster, buletin, kalendar, dan dokumen kreatif.",
+        "keywords": "templat buku LaTeX, templat poster LaTeX, templat buletin LaTeX, templat kalendar LaTeX, templat risalah LaTeX, brosur LaTeX, templat resipi LaTeX, templat majalah, templat obituari LaTeX, jemputan perkahwinan LaTeX"
+      }
+    }
+  },
+  "templateCode": {
+    "placeholders": {
+      "authorName": "Author Name",
+      "yourName": "Your Name",
+      "department": "Department",
+      "universityName": "University Name",
+      "email": "author@university.edu",
+      "presentationTitle": "Presentation Title",
+      "researchPaperTitle": "Research Paper Title",
+      "courseName": "Course Name",
+      "instructorName": "Instructor Name",
+      "yourAddress": "Your Address",
+      "cityStateZip": "City, State ZIP",
+      "phone": "(555) 123-4567",
+      "point1": "Point 1",
+      "point2": "Point 2",
+      "point3": "Point 3",
+      "contentGoesHere": "Content goes here.",
+      "summaryOfKeyPoints": "Summary of key points."
+    }
+  }
+}

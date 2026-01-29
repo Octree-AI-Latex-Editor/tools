@@ -10,7 +10,10 @@
       "de": "Allemand",
       "ja": "Japonais",
       "it": "Italien",
-      "ko": "Coréen"
+      "ko": "Coréen",
+      "id": "Indonésien",
+      "fil": "Philippin",
+      "ms": "Malais"
     },
     "common": {
       "backToTools": "Retour aux outils",

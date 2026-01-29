@@ -10,7 +10,10 @@
     "de": "Deutsch",
     "ja": "Japanisch",
     "it": "Italienisch",
-    "ko": "Koreanisch"
+    "ko": "Koreanisch",
+    "id": "Indonesisch",
+    "fil": "Philippinisch",
+    "ms": "Malaiisch"
   },
   "common": {
     "backToTools": "Zurück zu Tools",
