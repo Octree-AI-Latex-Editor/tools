@@ -517,16 +517,347 @@
   "footer": { "tagline": "모두를 위한 무료 LaTeX 도구 및 템플릿.", "menu": "메뉴", "tools": "도구", "allRightsReserved": "모든 권리 보유.", "imageToLatex": "이미지를 LaTeX로", "excelToLatex": "Excel을 LaTeX로", "tikzGenerator": "TikZ 생성기", "imageToTikz": "이미지를 TikZ로", "latexPreview": "LaTeX 미리보기", "markdownToLatex": "Markdown을 LaTeX로", "citationGenerator": "인용 생성기", "aiLatexGenerator": "AI LaTeX 생성기", "learn": "배우기", "learnLatex": "LaTeX 배우기", "learnTikz": "TikZ 배우기", "learnPgfplots": "PGFPlots 배우기", "viewAllTutorials": "모든 튜토리얼 보기 →", "openSource": "오픈 소스", "octreeEditor": "Octree 편집기", "toolsTemplates": "도구 및 템플릿", "marketingBlogs": "마케팅 및 블로그", "viewAllRepositories": "모든 저장소 보기 →", "socials": "소셜 미디어", "instagram": "인스타그램", "linkedin": "링크드인", "tiktok": "틱톡", "x": "X", "reddit": "레딧", "discord": "디스코드", "greekLetters": "그리스 문자", "mathOperators": "수학 연산자", "arrows": "화살표", "relations": "관계", "setTheory": "집합론", "calculus": "미적분", "logic": "논리", "linearAlgebra": "선형대수", "browseAllCategories": "모든 37개 카테고리 보기 →", "researchPaper": "연구 논문", "phdThesis": "박사 논문", "beamerPresentation": "Beamer 프레젠테이션", "academicCv": "학술 이력서", "coverLetter": "자기소개서", "labReport": "실험 보고서", "neurips2026": "NeurIPS 2026", "icml2026": "ICML 2026", "viewAllTemplates": "모든 71개 템플릿 보기 →", "viewAllTools": "모든 도구 보기 →" },
   "cta": { "badge": "AI로 LaTeX 작성", "title": "최고의 AI LaTeX 편집기, Overleaf 대안", "description": "Octree는 15개 이상의 대학의 연구자들이 AI를 사용하여 논문을 더 빠르게 작성하도록 도움", "feature1": "AI로 아름다운 TikZ 다이어그램 생성", "feature2": "이미지를 업로드하고 LaTeX로 원활하게 변환", "feature3": "논문 작성 및 서식에 대한 즉각적인 지원 받기", "useInOctree": "Octree에서 사용", "learnMore": "자세히 알아보기" },
   "metadata": {
-    "site": { "title": "무료 LaTeX 도구 - 이미지를 LaTeX로 변환, 60+ 템플릿, PDF 미리보기 | Octree", "description": "무료 LaTeX 도구: AI 기반 수식 변환기, 60개 이상의 전문 템플릿(이력서, CV, 논문, Beamer), 실시간 PDF 미리보기. 손글씨 수학, 이미지 및 PDF를 즉시 LaTeX로 변환.", "keywords": "손글씨 수학을 LaTeX로 변환, 이미지를 LaTeX로 변환, PDF를 LaTeX로 변환, 수학 방정식을 LaTeX로, LaTeX 수학 변환기, 무료 LaTeX 변환기, AI LaTeX 생성기, LaTeX 인용 생성기, TikZ 생성기, 무료 LaTeX 템플릿, LaTeX 이력서 템플릿, LaTeX CV 템플릿, LaTeX 논문 템플릿, LaTeX Beamer 템플릿, 온라인 LaTeX 편집기, Overleaf 대안, LaTeX 온라인, LaTeX 온라인 컴파일, LaTeX를 PDF로, 수식 편집기, 수학 공식 편집기, LaTeX 기호, BibTeX 생성기, 표를 LaTeX로, Excel을 LaTeX로, Markdown을 LaTeX로, HTML을 LaTeX로, MathML을 LaTeX로, LaTeX 단어 카운터, PGFPlots 생성기, arXiv LaTeX" },
-    "tools": {
-      "imageToLatex": { "title": "이미지를 LaTeX로 변환 - 무료 AI 기반 도구", "description": "손글씨 수학 방정식 이미지를 깔끔한 LaTeX 코드로 즉시 변환. AI 기반, 무료, 가입 불필요.", "keywords": "이미지를 LaTeX로, 사진을 LaTeX로, 손글씨 수학을 LaTeX로, 수학 스캔을 LaTeX로, OCR LaTeX, 수학 이미지 변환기, 스크린샷을 LaTeX로" },
-      "mathToLatex": { "title": "수학을 LaTeX로 변환 - 무료 온라인 도구", "description": "수학 표현식을 LaTeX 코드로 변환. 수학을 입력하거나 붙여넣고 깔끔한 LaTeX 출력을 얻으세요.", "keywords": "수학을 LaTeX로, 수학을 LaTeX로 변환, 수학 표현식을 LaTeX로, 공식을 LaTeX로, 수학 변환기" },
-      "tikzGenerator": { "title": "TikZ 다이어그램 생성기 - AI 기반 LaTeX 그래픽", "description": "AI로 TikZ 다이어그램을 생성합니다. 다이어그램을 설명하면 즉시 깔끔한 TikZ LaTeX 코드를 얻을 수 있습니다.", "keywords": "TikZ 생성기, TikZ 온라인, TikZ 예제, TikZ 순서도, TikZ 다이어그램, AI TikZ 생성기" },
-      "citationGenerator": { "title": "LaTeX 인용 생성기 - BibTeX 생성기", "description": "DOI, URL 또는 논문 세부 정보에서 BibTeX 인용을 생성합니다. 무료 LaTeX 인용 도구.", "keywords": "LaTeX 인용 생성기, BibTeX 생성기, DOI를 BibTeX로, 인용 생성기, 참고 문헌 생성기" },
-      "latexPreview": { "title": "LaTeX 실시간 미리보기 - 무료 온라인 편집기", "description": "LaTeX 문서를 실시간으로 작성하고 미리 봅니다. 즉시 PDF 출력이 있는 무료 온라인 LaTeX 편집기.", "keywords": "LaTeX 미리보기, LaTeX 온라인 편집기, LaTeX 실시간 미리보기, 온라인 LaTeX 컴파일러, LaTeX를 PDF로, 무료 LaTeX 편집기, Overleaf 대안" }
+    "site": {
+      "title": "무료 LaTeX 도구 - 이미지를 LaTeX로 변환, 60+ 템플릿, PDF 미리보기 | Octree",
+      "description": "무료 LaTeX 도구: AI 기반 수식 변환기, 60개 이상의 전문 템플릿(이력서, CV, 논문, Beamer), 실시간 PDF 미리보기. 손글씨 수학, 이미지 및 PDF를 즉시 LaTeX로 변환.",
+      "keywords": "손글씨 수학 LaTeX 변환, 이미지 LaTeX 변환기, PDF LaTeX 변환기, 수학 수식 LaTeX 변환, LaTeX 수식 변환기, 무료 LaTeX 변환기, AI LaTeX 생성기, LaTeX 인용 생성기, TikZ 생성기, 무료 LaTeX 템플릿, LaTeX 이력서 템플릿, LaTeX CV 템플릿, LaTeX 논문 템플릿, LaTeX Beamer 템플릿, 온라인 LaTeX 편집기, Overleaf 대안, LaTeX 온라인, 온라인 LaTeX 컴파일, LaTeX PDF 변환, 수식 편집기, 수학 공식 편집기, LaTeX 기호, BibTeX 생성기, 표 LaTeX 변환, 엑셀 LaTeX 변환, 마크다운 LaTeX 변환, HTML LaTeX 변환, MathML LaTeX 변환, LaTeX 단어 수 세기, PGFPlots 생성기, arXiv LaTeX, 수학 공식 입력기, 텍 문서 작성, 논문 작성 도구, 학술 문서 템플릿, LaTeX 초보자 가이드"
     },
-    "symbols": { "main": { "title": "LaTeX 기호 - 완전한 참조 가이드", "description": "LaTeX 기호를 찾아보고 복사: 그리스 문자, 수학 연산자, 화살표 등. 완전한 기호 참조.", "keywords": "LaTeX 기호, 수학 기호, 그리스 문자 LaTeX, LaTeX 연산자, LaTeX 화살표, 기호 참조, LaTeX 기호 복사, LaTeX 특수 문자" } },
-    "templates": { "main": { "title": "무료 LaTeX 템플릿 - 이력서, CV, 논문, Beamer", "description": "60개 이상의 전문 LaTeX 템플릿. 이력서, CV, 논문, Beamer 프레젠테이션 등. 무료 다운로드.", "keywords": "LaTeX 템플릿, 무료 LaTeX 템플릿, LaTeX 이력서 템플릿, LaTeX CV 템플릿, LaTeX 논문 템플릿, LaTeX Beamer 템플릿, Overleaf 템플릿, 학술 템플릿 LaTeX" } }
+    "tools": {
+      "imageToLatex": {
+        "title": "이미지를 LaTeX로 변환 - 무료 AI 기반 도구",
+        "description": "손글씨 수학 방정식 이미지를 깔끔한 LaTeX 코드로 즉시 변환. AI 기반, 무료, 가입 불필요.",
+        "keywords": "이미지 LaTeX 변환, 사진 LaTeX 변환, 그림 LaTeX 변환, 손글씨 수학 LaTeX, 수학 스캔 LaTeX, OCR LaTeX, 수학 이미지 변환기, 스크린샷 LaTeX 변환, 수학 OCR, 수식 OCR, 공식 LaTeX 변환, 수학 사진 변환기, 필기 LaTeX 변환, 수식 스캔, 손글씨 수식 인식, 수학 캡처 LaTeX"
+      },
+      "mathToLatex": {
+        "title": "수학을 LaTeX로 변환 - 무료 온라인 도구",
+        "description": "수학 표현식을 LaTeX 코드로 변환. 수학을 입력하거나 붙여넣고 깔끔한 LaTeX 출력을 얻으세요.",
+        "keywords": "수학 LaTeX 변환, 수학을 LaTeX로 변환, 수학 표현식 LaTeX, 공식 LaTeX 변환, 수학 변환기, 수식 변환기, 수학 표기법 LaTeX, 수학식 변환기, 수식 입력기, 수학 공식 LaTeX"
+      },
+      "equationToLatex": {
+        "title": "수식을 LaTeX로 변환 - 무료 온라인 도구",
+        "description": "수학 방정식을 즉시 LaTeX 코드로 변환. 방정식을 입력하면 LaTeX를 얻을 수 있습니다.",
+        "keywords": "수식 LaTeX 변환, 방정식 LaTeX 변환, 수학 방정식 변환기, 수식 편집기 LaTeX, 공식 LaTeX, 수학 방정식 LaTeX, 수식 표기법, 이차방정식 LaTeX, 미분방정식 LaTeX, 적분 LaTeX"
+      },
+      "tikzGenerator": {
+        "title": "TikZ 다이어그램 생성기 - AI 기반 LaTeX 그래픽",
+        "description": "AI로 TikZ 다이어그램을 생성합니다. 다이어그램을 설명하면 즉시 깔끔한 TikZ LaTeX 코드를 얻을 수 있습니다.",
+        "keywords": "TikZ 생성기, TikZ 온라인, TikZ 예제, TikZ 순서도, TikZ 다이어그램, TikZ 신경망, AI TikZ 생성기, TikZ 코드 생성기, TikZ 튜토리얼, TikZ 도형, TikZ 화살표, TikZ 그래프, TikZ 트리, TikZ 플롯, PGF TikZ, TikZ 회로도, TikZ 타임라인, TikZ 벤다이어그램, 다이어그램 그리기, 플로우차트 LaTeX"
+      },
+      "imageToTikz": {
+        "title": "이미지를 TikZ로 변환 - 이미지를 LaTeX 그래픽으로 변환",
+        "description": "AI를 사용하여 이미지와 다이어그램을 TikZ LaTeX 코드로 변환합니다. 이미지를 업로드하면 편집 가능한 TikZ 코드를 얻을 수 있습니다.",
+        "keywords": "이미지 TikZ 변환, 그림 TikZ 변환, 이미지를 TikZ로 변환, 다이어그램 TikZ 변환, 사진 TikZ 코드, AI TikZ 변환기, 벡터화 TikZ, 이미지 LaTeX 다이어그램, 도형 TikZ 변환"
+      },
+      "citationGenerator": {
+        "title": "LaTeX 인용 생성기 - BibTeX 생성기",
+        "description": "DOI, URL 또는 논문 세부 정보에서 BibTeX 인용을 생성합니다. 무료 LaTeX 인용 도구.",
+        "keywords": "LaTeX 인용 생성기, BibTeX 생성기, DOI BibTeX 변환, 인용 생성기, 참고문헌 생성기, 서지 생성기, 인용문 생성기, APA 인용 LaTeX, MLA 인용 LaTeX, 시카고 인용, IEEE 인용, 하버드 참고문헌 LaTeX, 논문 인용, 학술 인용"
+      },
+      "latexPreview": {
+        "title": "LaTeX 실시간 미리보기 - 무료 온라인 편집기",
+        "description": "LaTeX 문서를 실시간으로 작성하고 미리 봅니다. 즉시 PDF 출력이 있는 무료 온라인 LaTeX 편집기.",
+        "keywords": "LaTeX 미리보기, LaTeX 온라인 편집기, LaTeX 실시간 미리보기, 온라인 LaTeX 컴파일러, LaTeX PDF 변환, 무료 LaTeX 편집기, Overleaf 대안, 온라인 LaTeX, LaTeX 온라인 작성, LaTeX 렌더러, LaTeX 뷰어, 무료 LaTeX 컴파일, 텍 편집기"
+      },
+      "pdfToLatex": {
+        "title": "PDF를 LaTeX로 변환 - PDF에서 LaTeX 추출",
+        "description": "수학 내용이 포함된 PDF 문서를 깔끔한 LaTeX 코드로 변환합니다. AI 기반 추출.",
+        "keywords": "PDF LaTeX 변환, PDF를 LaTeX로 변환, PDF에서 LaTeX 추출, PDF 수학 변환기, PDF 수식 추출기, PDF TeX 변환, OCR PDF LaTeX, PDF 공식 추출기, PDF 스캔 LaTeX, 문서 LaTeX 변환"
+      },
+      "tableToLatex": {
+        "title": "표를 LaTeX로 변환 - 엑셀을 LaTeX로",
+        "description": "Excel, Google 스프레드시트 또는 CSV의 표를 LaTeX 형식으로 변환합니다. 무료 표 생성기.",
+        "keywords": "표 LaTeX 변환, 엑셀 LaTeX 변환, CSV LaTeX 변환, 스프레드시트 LaTeX 변환, LaTeX 표 생성기, tabular LaTeX, LaTeX 표 만들기, 구글 스프레드시트 LaTeX, 복사 붙여넣기 표 LaTeX, LaTeX tabular 생성기, 표 작성기"
+      },
+      "markdownToLatex": {
+        "title": "마크다운을 LaTeX로 변환 - 무료 온라인 도구",
+        "description": "마크다운 파일을 깔끔한 LaTeX 코드로 변환합니다. 서식, 링크 및 구조를 유지합니다.",
+        "keywords": "마크다운 LaTeX 변환, Markdown LaTeX 변환, md tex 변환, 마크다운 LaTeX 변환기, pandoc 대안, 마크다운 PDF LaTeX, 마크다운 TeX 온라인, 문서 변환"
+      },
+      "latexToMarkdown": {
+        "title": "LaTeX를 마크다운으로 변환 - 무료 온라인 도구",
+        "description": "LaTeX 문서를 마크다운 형식으로 변환합니다. 수식과 서식을 유지합니다.",
+        "keywords": "LaTeX 마크다운 변환, LaTeX를 마크다운으로 변환, tex md 변환, LaTeX md 변환기, LaTeX 마크다운, TeX 마크다운 변환, LaTeX 마크다운 내보내기, 문서 변환"
+      },
+      "htmlToLatex": {
+        "title": "HTML을 LaTeX로 변환 - 무료 온라인 도구",
+        "description": "HTML 콘텐츠를 깔끔한 LaTeX 코드로 변환합니다. 웹에서 문서로 변환에 적합합니다.",
+        "keywords": "HTML LaTeX 변환, HTML을 LaTeX로 변환, 웹 LaTeX 변환, HTML TeX 변환, 웹페이지 LaTeX 변환, HTML 표 LaTeX 변환, 웹사이트 LaTeX 변환, 웹 문서 변환"
+      },
+      "mathmlToLatex": {
+        "title": "MathML을 LaTeX로 변환 - 무료 온라인 도구",
+        "description": "MathML 수식을 LaTeX 코드로 변환합니다. Word 및 웹 수식 변환에 적합합니다.",
+        "keywords": "MathML LaTeX 변환, MathML을 LaTeX로 변환, Word 수식 LaTeX 변환, MathML 변환기, Office 수학 LaTeX 변환, OMML LaTeX 변환, Word 수학 LaTeX 변환, 수식 변환"
+      },
+      "mermaidToLatex": {
+        "title": "Mermaid를 LaTeX로 변환 - 다이어그램을 TikZ로",
+        "description": "Mermaid 다이어그램을 TikZ LaTeX 코드로 변환합니다. 순서도, 시퀀스 다이어그램 등.",
+        "keywords": "Mermaid LaTeX 변환, Mermaid TikZ 변환, Mermaid 다이어그램 변환, 순서도 LaTeX 변환, 시퀀스 다이어그램 LaTeX 변환, Mermaid LaTeX, 다이어그램 TikZ 변환, 플로우차트 변환"
+      },
+      "latexWordCounter": {
+        "title": "LaTeX 단어 수 세기 - 무료 온라인 도구",
+        "description": "명령어와 주석을 제외하고 LaTeX 문서의 단어 수를 정확하게 계산합니다. 정확한 학술 단어 수 계산.",
+        "keywords": "LaTeX 단어 수 세기, LaTeX 단어 카운터, TeX 단어 수, LaTeX 문자 수, 학술 단어 카운터, 논문 단어 수, 논문 단어 수 LaTeX, LaTeX 텍스트 카운터, 글자 수 세기"
+      },
+      "aiLatexGenerator": {
+        "title": "AI LaTeX 생성기 - AI로 LaTeX 작성",
+        "description": "AI를 사용하여 LaTeX 코드를 생성합니다. 원하는 것을 설명하면 깔끔하게 컴파일되는 LaTeX를 얻을 수 있습니다.",
+        "keywords": "AI LaTeX 생성기, AI로 LaTeX 생성, AI LaTeX 작성기, ChatGPT LaTeX, AI 수식 생성기, AI 수학 LaTeX, 텍스트에서 LaTeX, 자연어 LaTeX 변환, AI 문서 생성"
+      },
+      "pgfplotsGenerator": {
+        "title": "PGFPlots 생성기 - LaTeX 그래프 만들기",
+        "description": "PGFPlots를 사용하여 LaTeX용 아름다운 그래프와 플롯을 만듭니다. 무료 온라인 플롯 생성기.",
+        "keywords": "PGFPlots 생성기, PGFPlots 온라인, LaTeX 그래프, LaTeX 플롯, PGFPlots 예제, LaTeX 차트, 데이터 시각화 LaTeX, 산점도 LaTeX, 막대 그래프 LaTeX, 선 그래프 LaTeX, 함수 플롯 LaTeX, 그래프 그리기"
+      },
+      "arxivToLatex": {
+        "title": "arXiv를 LaTeX로 - arXiv 소스 코드 다운로드",
+        "description": "arXiv 논문에서 LaTeX 소스 코드를 추출하고 다운로드합니다. 원본 TeX 파일을 얻으세요.",
+        "keywords": "arXiv LaTeX, arXiv 소스 코드, arXiv LaTeX 다운로드, arXiv TeX 소스, arXiv 논문 소스, arXiv LaTeX 추출, arXiv 소스 다운로드, 논문 소스 코드"
+      }
+    },
+    "symbols": {
+      "main": {
+        "title": "LaTeX 기호 - 완전한 참조 가이드",
+        "description": "LaTeX 기호를 찾아보고 복사: 그리스 문자, 수학 연산자, 화살표 등. 완전한 기호 참조.",
+        "keywords": "LaTeX 기호, 수학 기호, 그리스 문자 LaTeX, LaTeX 연산자, LaTeX 화살표, 기호 참조, LaTeX 기호 복사, LaTeX 특수 문자, 수학 표기법 LaTeX, LaTeX 치트시트, 모든 LaTeX 기호"
+      },
+      "math": {
+        "title": "LaTeX 수학 기호 - 연산자와 관계",
+        "description": "LaTeX 수학 기호 완전 목록. 연산자, 관계, 복사 붙여넣기 코드가 있는 수식.",
+        "keywords": "수학 기호 LaTeX, 수학 연산자, LaTeX 플러스 마이너스, LaTeX 분수, LaTeX 제곱근, LaTeX 시그마, LaTeX 적분, 곱하기 기호 LaTeX, 나누기 기호 LaTeX, 등호 LaTeX, 부등호 LaTeX, 약 LaTeX, 수식 기호"
+      },
+      "greek": {
+        "title": "LaTeX 그리스 문자 - 알파부터 오메가까지",
+        "description": "그리스 문자와 LaTeX 명령어의 완전 목록. 알파, 베타, 감마 등을 복사 붙여넣기.",
+        "keywords": "그리스 문자 LaTeX, 알파 LaTeX, 베타 LaTeX, 감마 LaTeX, 델타 LaTeX, 엡실론 LaTeX, 세타 LaTeX, 람다 LaTeX, 파이 LaTeX, 시그마 LaTeX, 오메가 LaTeX, 파이 LaTeX, 그리스 알파벳 LaTeX"
+      },
+      "arrows": {
+        "title": "LaTeX 화살표 기호 - 모든 화살표 유형",
+        "description": "LaTeX 화살표 기호 완전 목록. 오른쪽, 왼쪽, 위, 아래, 이중 화살표 등.",
+        "keywords": "LaTeX 화살표, 오른쪽 화살표 LaTeX, 왼쪽 화살표 LaTeX, 이중 화살표 LaTeX, 함축 LaTeX, 화살표 기호, LaTeX 화살표 유형, 위 화살표 LaTeX, 아래 화살표 LaTeX, 양방향 화살표 LaTeX, 긴 화살표 LaTeX"
+      },
+      "brackets": {
+        "title": "LaTeX 괄호 및 구분자",
+        "description": "LaTeX의 괄호, 중괄호, 대괄호 및 구분자. 괄호 명령어 복사 붙여넣기.",
+        "keywords": "LaTeX 괄호, LaTeX 소괄호, LaTeX 중괄호, 중괄호 LaTeX, 대괄호 LaTeX, 꺾쇠괄호 LaTeX, LaTeX 구분자, left right LaTeX, 큰 괄호 LaTeX"
+      },
+      "calculus": {
+        "title": "LaTeX 미적분 기호 - 미분과 적분",
+        "description": "LaTeX의 미적분 표기법: 미분, 적분, 극한 및 미분 연산자.",
+        "keywords": "미적분 LaTeX, 미분 LaTeX, 적분 LaTeX, 편미분 LaTeX, 극한 LaTeX, 미분방정식 LaTeX, 나블라 LaTeX, 기울기 LaTeX, 발산 LaTeX, 회전 LaTeX, 라플라시안 LaTeX"
+      },
+      "setTheory": {
+        "title": "LaTeX 집합론 기호",
+        "description": "LaTeX의 집합론 표기법: 합집합, 교집합, 부분집합, 원소 등.",
+        "keywords": "집합론 LaTeX, 합집합 LaTeX, 교집합 LaTeX, 부분집합 LaTeX, 상위집합 LaTeX, 원소 LaTeX, 공집합 LaTeX, 집합 표기법 LaTeX, 속함 LaTeX, 포함 LaTeX"
+      },
+      "logic": {
+        "title": "LaTeX 논리 기호 - 논리 연산자",
+        "description": "LaTeX의 논리 기호: and, or, not, 함축, 동치 및 한정자.",
+        "keywords": "논리 기호 LaTeX, and LaTeX, or LaTeX, not LaTeX, 함축 LaTeX, 동치 LaTeX, 부정 LaTeX, 논리 연산자 LaTeX, 명제 논리 LaTeX"
+      },
+      "relations": {
+        "title": "LaTeX 관계 기호 - 비교 연산자",
+        "description": "LaTeX의 관계 기호: 작다, 크다, 같다, 같지 않다 및 동치.",
+        "keywords": "관계 기호 LaTeX, 작다 LaTeX, 크다 LaTeX, 작거나 같다 LaTeX, 크거나 같다 LaTeX, 같지 않다 LaTeX, 동치 LaTeX, 약 LaTeX, 비례 LaTeX"
+      },
+      "operators": {
+        "title": "LaTeX 연산자 - 수학 연산자",
+        "description": "LaTeX의 수학 연산자: 합, 곱, 적분 및 연산자 표기법.",
+        "keywords": "LaTeX 연산자, 합 LaTeX, 곱 LaTeX, 적분 연산자 LaTeX, 큰 연산자 LaTeX, 시그마 합 LaTeX, prod LaTeX, coprod LaTeX, 연산자 표기법 LaTeX"
+      },
+      "linearAlgebra": {
+        "title": "LaTeX 선형대수 기호 - 행렬과 벡터",
+        "description": "LaTeX의 선형대수 표기법: 행렬, 벡터, 행렬식 및 고유값.",
+        "keywords": "선형대수 LaTeX, 행렬 LaTeX, 벡터 LaTeX, 행렬식 LaTeX, 전치 LaTeX, 고유값 LaTeX, 고유벡터 LaTeX, 내적 LaTeX, 외적 LaTeX, 노름 LaTeX"
+      },
+      "geometry": {
+        "title": "LaTeX 기하학 기호 - 각도와 도형",
+        "description": "LaTeX의 기하학 표기법: 각도, 평행, 수직, 삼각형 및 원.",
+        "keywords": "기하학 LaTeX, 각도 LaTeX, 평행 LaTeX, 수직 LaTeX, 삼각형 LaTeX, 원 LaTeX, 도 기호 LaTeX, 합동 LaTeX, 닮음 LaTeX"
+      },
+      "probability": {
+        "title": "LaTeX 확률 기호 - 통계 표기법",
+        "description": "LaTeX의 확률 및 통계 기호: 기댓값, 분산, 분포.",
+        "keywords": "확률 LaTeX, 기댓값 LaTeX, 분산 LaTeX, 표준편차 LaTeX, 확률분포 LaTeX, 통계 LaTeX, 확률변수 LaTeX, 조건부확률 LaTeX"
+      },
+      "physics": {
+        "title": "LaTeX 물리학 기호 - 과학 표기법",
+        "description": "LaTeX의 물리학 기호: 벡터, 연산자, 양자역학 및 상수.",
+        "keywords": "물리학 LaTeX, 벡터 LaTeX, hbar LaTeX, 양자역학 LaTeX, 브라켓 LaTeX, 디랙 표기법 LaTeX, 물리 상수 LaTeX, 과학 표기법 LaTeX"
+      },
+      "chemistry": {
+        "title": "LaTeX 화학 기호 - 화학 표기법",
+        "description": "LaTeX의 화학 표기법: 화학식, 반응 및 분자 구조.",
+        "keywords": "화학 LaTeX, 화학식 LaTeX, 반응 화살표 LaTeX, 아래첨자 LaTeX, 위첨자 LaTeX, mhchem LaTeX, 화학 방정식 LaTeX"
+      },
+      "computerScience": {
+        "title": "LaTeX 컴퓨터 과학 기호 - 알고리즘 표기법",
+        "description": "LaTeX의 컴퓨터 과학 기호: 알고리즘, 복잡도 및 프로그래밍 표기법.",
+        "keywords": "컴퓨터 과학 LaTeX, 알고리즘 LaTeX, 빅오 표기법 LaTeX, 복잡도 LaTeX, 의사코드 LaTeX, 프로그래밍 기호 LaTeX"
+      },
+      "functions": {
+        "title": "LaTeX 함수 기호 - 수학 함수",
+        "description": "LaTeX의 함수 표기법: 삼각함수, 로그, 지수함수 등.",
+        "keywords": "함수 LaTeX, sin LaTeX, cos LaTeX, tan LaTeX, log LaTeX, ln LaTeX, exp LaTeX, lim LaTeX, min LaTeX, max LaTeX, argmin LaTeX, argmax LaTeX"
+      },
+      "numberTheory": {
+        "title": "LaTeX 정수론 기호",
+        "description": "LaTeX의 정수론 표기법: 가분성, 합동 및 숫자 집합.",
+        "keywords": "정수론 LaTeX, 가분성 LaTeX, 나머지 LaTeX, 합동 LaTeX, 소수 LaTeX, 최대공약수 LaTeX, 최소공배수 LaTeX, 정수 LaTeX, 자연수 LaTeX"
+      },
+      "accents": {
+        "title": "LaTeX 악센트 및 부호",
+        "description": "LaTeX 악센트: 모자, 바, 점, 물결표 및 기타 부호.",
+        "keywords": "LaTeX 악센트, 모자 LaTeX, 바 LaTeX, 점 LaTeX, 물결표 LaTeX, 벡터 LaTeX, 위줄 LaTeX, 아래줄 LaTeX, 위중괄호 LaTeX, 아래중괄호 LaTeX"
+      },
+      "boolean": {
+        "title": "LaTeX 부울 대수 기호",
+        "description": "LaTeX의 부울 대수 표기법: AND, OR, NOT, XOR 및 진리값.",
+        "keywords": "부울 LaTeX, AND LaTeX, OR LaTeX, NOT LaTeX, XOR LaTeX, 참 거짓 LaTeX, 부울 대수 LaTeX, 논리 게이트 LaTeX"
+      },
+      "summation": {
+        "title": "LaTeX 합과 곱 기호",
+        "description": "LaTeX의 합과 곱 표기법: 합, 곱 및 급수.",
+        "keywords": "합 LaTeX, 곱 LaTeX, 합 표기법 LaTeX, 시그마 LaTeX, 파이 표기법 LaTeX, 급수 LaTeX, 무한 합 LaTeX"
+      },
+      "trigonometry": {
+        "title": "LaTeX 삼각함수 기호",
+        "description": "LaTeX의 삼각함수: 사인, 코사인, 탄젠트 및 역함수.",
+        "keywords": "삼각함수 LaTeX, sin LaTeX, cos LaTeX, tan LaTeX, arcsin LaTeX, arccos LaTeX, arctan LaTeX, 쌍곡선 LaTeX, sinh LaTeX, cosh LaTeX, tanh LaTeX"
+      },
+      "topology": {
+        "title": "LaTeX 위상수학 기호",
+        "description": "LaTeX의 위상 표기법: 열린 집합, 폐포, 내부 및 경계.",
+        "keywords": "위상수학 LaTeX, 열린 집합 LaTeX, 닫힌 집합 LaTeX, 폐포 LaTeX, 내부 LaTeX, 경계 LaTeX, 동형사상 LaTeX"
+      },
+      "finance": {
+        "title": "LaTeX 금융 기호 - 금융 표기법",
+        "description": "LaTeX의 금융 기호: 통화, 이자율 및 경제 표기법.",
+        "keywords": "금융 LaTeX, 통화 LaTeX, 달러 LaTeX, 유로 LaTeX, 파운드 LaTeX, 퍼센트 LaTeX, 이자율 LaTeX, NPV LaTeX, 원화 기호"
+      },
+      "machineLearning": {
+        "title": "LaTeX 머신러닝 기호 - ML 표기법",
+        "description": "LaTeX의 머신러닝 표기법: 신경망, 손실 함수 및 최적화.",
+        "keywords": "머신러닝 LaTeX, 신경망 LaTeX, 손실 함수 LaTeX, 경사하강법 LaTeX, 활성화 함수 LaTeX, 가중치 LaTeX, 편향 LaTeX, ML 표기법 LaTeX, 딥러닝 LaTeX"
+      },
+      "latin": {
+        "title": "LaTeX 라틴 문자 및 글꼴",
+        "description": "LaTeX의 라틴 문자 및 글꼴 스타일: 굵은체, 이탤릭, 필기체 등.",
+        "keywords": "라틴 문자 LaTeX, 굵은체 LaTeX, 이탤릭 LaTeX, mathcal LaTeX, mathbb LaTeX, mathfrak LaTeX, 글꼴 스타일 LaTeX, 칠판체 LaTeX"
+      },
+      "complex": {
+        "title": "LaTeX 복소수 기호",
+        "description": "LaTeX의 복소수 표기법: 허수 단위, 켤레 및 극형식.",
+        "keywords": "복소수 LaTeX, 허수 단위 LaTeX, 켤레 LaTeX, 실수부 LaTeX, 허수부 LaTeX, 절댓값 LaTeX, 편각 LaTeX"
+      },
+      "graphTheory": {
+        "title": "LaTeX 그래프 이론 기호",
+        "description": "LaTeX의 그래프 이론 표기법: 정점, 간선, 경로 및 순환.",
+        "keywords": "그래프 이론 LaTeX, 정점 LaTeX, 간선 LaTeX, 경로 LaTeX, 순환 LaTeX, 인접 LaTeX, 차수 LaTeX, 연결 LaTeX"
+      },
+      "combinatorics": {
+        "title": "LaTeX 조합론 기호",
+        "description": "LaTeX의 조합론 표기법: 팩토리얼, 이항계수 및 순열.",
+        "keywords": "조합론 LaTeX, 팩토리얼 LaTeX, 이항계수 LaTeX, 순열 LaTeX, 조합 LaTeX, choose LaTeX, binom LaTeX"
+      },
+      "specialFunctions": {
+        "title": "LaTeX 특수 함수 - 감마, 제타, 베셀",
+        "description": "LaTeX의 특수 함수: 감마, 제타, 베셀 및 오차 함수.",
+        "keywords": "특수 함수 LaTeX, 감마 함수 LaTeX, 제타 함수 LaTeX, 베셀 함수 LaTeX, 오차 함수 LaTeX, 르장드르 LaTeX"
+      },
+      "tensors": {
+        "title": "LaTeX 텐서 표기법 - 아인슈타인 합산",
+        "description": "LaTeX의 텐서 표기법: 인덱스, 축약 및 공변 도함수.",
+        "keywords": "텐서 LaTeX, 아인슈타인 합산 LaTeX, 텐서 인덱스 LaTeX, 공변 도함수 LaTeX, 반변 LaTeX, 크로네커 델타 LaTeX"
+      },
+      "differentialGeometry": {
+        "title": "LaTeX 미분기하학 기호",
+        "description": "LaTeX의 미분기하학 표기법: 다양체, 곡률 및 연결.",
+        "keywords": "미분기하학 LaTeX, 다양체 LaTeX, 곡률 LaTeX, 크리스토펠 LaTeX, 리만 텐서 LaTeX, 연결 LaTeX"
+      },
+      "modalLogic": {
+        "title": "LaTeX 양상 논리 기호",
+        "description": "LaTeX의 양상 논리 표기법: 필연성, 가능성 및 시간 연산자.",
+        "keywords": "양상 논리 LaTeX, 필연성 LaTeX, 가능성 LaTeX, 상자 LaTeX, 다이아몬드 LaTeX, 시간 논리 LaTeX"
+      },
+      "gameTheory": {
+        "title": "LaTeX 게임 이론 기호",
+        "description": "LaTeX의 게임 이론 표기법: 전략, 보수 및 균형.",
+        "keywords": "게임 이론 LaTeX, 내쉬 균형 LaTeX, 전략 LaTeX, 보수 LaTeX, 효용 함수 LaTeX, 샤플리 값 LaTeX"
+      },
+      "order": {
+        "title": "LaTeX 순서 관계 기호",
+        "description": "LaTeX의 순서 관계: 부분 순서, 격자 및 상한/하한.",
+        "keywords": "순서 관계 LaTeX, 부분 순서 LaTeX, 격자 LaTeX, 상한 LaTeX, 하한 LaTeX, 최소 상한 LaTeX"
+      },
+      "optimization": {
+        "title": "LaTeX 최적화 기호",
+        "description": "LaTeX의 최적화 표기법: 최소화, 최대화 및 제약 조건.",
+        "keywords": "최적화 LaTeX, 최소화 LaTeX, 최대화 LaTeX, argmin LaTeX, argmax LaTeX, 제약 조건 LaTeX, constraint LaTeX"
+      },
+      "quantifiers": {
+        "title": "LaTeX 한정자 기호 - 모든, 존재",
+        "description": "LaTeX의 한정자 기호: 전칭 및 존재 한정자.",
+        "keywords": "한정자 LaTeX, 모든 LaTeX, 존재 LaTeX, forall LaTeX, 존재 한정자 LaTeX, 전칭 한정자 LaTeX, 존재한다 LaTeX"
+      },
+      "units": {
+        "title": "LaTeX 단위 및 측정",
+        "description": "LaTeX의 SI 단위 및 측정: 도, 물리 상수 및 단위.",
+        "keywords": "단위 LaTeX, SI 단위 LaTeX, 도 LaTeX, 물리 상수 LaTeX, siunitx LaTeX, 측정 LaTeX, 미터 LaTeX, 킬로그램 LaTeX"
+      }
+    },
+    "templates": {
+      "main": {
+        "title": "무료 LaTeX 템플릿 - 이력서, CV, 논문, Beamer",
+        "description": "60개 이상의 전문 LaTeX 템플릿. 이력서, CV, 논문, Beamer 프레젠테이션 등. 무료 다운로드.",
+        "keywords": "LaTeX 템플릿, 무료 LaTeX 템플릿, LaTeX 이력서 템플릿, LaTeX CV 템플릿, LaTeX 논문 템플릿, LaTeX Beamer 템플릿, Overleaf 템플릿, 학술 템플릿 LaTeX, LaTeX 발표 템플릿, LaTeX 논문 템플릿, LaTeX 과제 템플릿, LaTeX 포스터 템플릿, LaTeX 편지 템플릿, LaTeX 책 템플릿, LaTeX 보고서 템플릿, 전문 LaTeX 템플릿"
+      },
+      "academic": {
+        "title": "학술 LaTeX 템플릿 - 연구 논문, 학위 논문, 박사 논문",
+        "description": "연구 논문, 학위 논문, 박사 논문, 저널 논문 및 학회 논문을 위한 무료 학술 LaTeX 템플릿.",
+        "keywords": "학술 LaTeX 템플릿, 연구 논문 템플릿 LaTeX, 학위 논문 템플릿 LaTeX, 박사 논문 템플릿 LaTeX, 저널 논문 템플릿, 학회 논문 LaTeX, IEEE 템플릿 LaTeX, ACM 템플릿, Springer 템플릿, 과학 논문 템플릿, 박사 학위 논문 LaTeX, 석사 학위 논문 템플릿, 학술 글쓰기 LaTeX"
+      },
+      "presentations": {
+        "title": "LaTeX 발표 템플릿 - Beamer 슬라이드",
+        "description": "무료 LaTeX Beamer 발표 템플릿. 학술 강연, 학회 및 강의를 위한 전문 슬라이드.",
+        "keywords": "Beamer 템플릿 LaTeX, LaTeX 발표 템플릿, Beamer 슬라이드, LaTeX 슬라이드, 학술 발표 템플릿, 학회 슬라이드 LaTeX, 강의 슬라이드 LaTeX, Beamer 테마, Beamer 예제, 파워포인트 대안 LaTeX, 발표 Beamer, 프레젠테이션 템플릿"
+      },
+      "resumeCV": {
+        "title": "LaTeX 이력서 및 CV 템플릿 - 전문 이력서",
+        "description": "무료 LaTeX 이력서 및 CV 템플릿. 취업 지원 및 학술 CV를 위한 현대적이고 전문적인 디자인.",
+        "keywords": "LaTeX 이력서 템플릿, LaTeX CV 템플릿, 이력서 LaTeX, 전문 이력서 LaTeX, 현대적 CV 템플릿, 학술 CV LaTeX, 한 페이지 이력서 LaTeX, 2단 이력서, moderncv 템플릿, europass LaTeX, 소프트웨어 엔지니어 이력서 LaTeX, 데이터 과학자 CV, 취업용 이력서"
+      },
+      "math": {
+        "title": "LaTeX 수학 템플릿 - 수식, 증명, 문제집",
+        "description": "수학 문서를 위한 LaTeX 템플릿: 문제집, 증명, 정리 및 수식 시트.",
+        "keywords": "수학 템플릿 LaTeX, 수식 템플릿 LaTeX, 문제집 템플릿, 과제 템플릿 LaTeX, 증명 템플릿 LaTeX, 정리 템플릿, 수학 노트 LaTeX, 공식 시트 템플릿, 시험 템플릿 LaTeX, 퀴즈 템플릿 LaTeX, 수학 과제 템플릿"
+      },
+      "reports": {
+        "title": "LaTeX 보고서 템플릿 - 기술, 실험, 프로젝트 보고서",
+        "description": "기술 보고서, 실험 보고서, 프로젝트 문서 및 비즈니스 보고서를 위한 전문 LaTeX 템플릿.",
+        "keywords": "보고서 템플릿 LaTeX, 기술 보고서 LaTeX, 실험 보고서 템플릿, 프로젝트 보고서 LaTeX, 비즈니스 보고서 템플릿, 연간 보고서 LaTeX, 인턴십 보고서 템플릿, 연구 보고서 LaTeX, 문서화 템플릿"
+      },
+      "education": {
+        "title": "LaTeX 교육 템플릿 - 과제, 시험, 강의 계획서",
+        "description": "교육자와 학생을 위한 LaTeX 템플릿: 과제, 시험, 강의 계획서, 강의 노트 및 수업 자료.",
+        "keywords": "과제 템플릿 LaTeX, 시험 템플릿 LaTeX, 강의 계획서 템플릿 LaTeX, 강의 노트 템플릿, 수업 자료 LaTeX, 과제물 템플릿, 테스트 템플릿 LaTeX, 워크시트 템플릿, 학습 가이드 LaTeX, 플래시카드 템플릿 LaTeX"
+      },
+      "letters": {
+        "title": "LaTeX 편지 템플릿 - 자기소개서, 공식 편지",
+        "description": "자기소개서, 공식 서신 및 추천서를 위한 전문 LaTeX 편지 템플릿.",
+        "keywords": "편지 템플릿 LaTeX, 자기소개서 LaTeX, 공식 편지 템플릿, 추천서 LaTeX, 비즈니스 편지 템플릿, 지원서 편지 LaTeX, 참조 편지 템플릿, 전문 편지 LaTeX"
+      },
+      "business": {
+        "title": "LaTeX 비즈니스 템플릿 - 사업 계획서, 제안서, 청구서",
+        "description": "비즈니스 문서를 위한 LaTeX 템플릿: 사업 계획서, 제안서, 청구서, 계약서 및 메모.",
+        "keywords": "비즈니스 템플릿 LaTeX, 사업 계획서 LaTeX, 제안서 템플릿 LaTeX, 청구서 템플릿 LaTeX, 계약서 템플릿, 메모 템플릿 LaTeX, 명함 LaTeX, 기업 보고서 템플릿, 요약서 LaTeX, 프로젝트 제안서 템플릿"
+      },
+      "other": {
+        "title": "LaTeX 템플릿 - 책, 포스터, 뉴스레터",
+        "description": "기타 LaTeX 템플릿: 책, 포스터, 뉴스레터, 달력 및 창작 문서.",
+        "keywords": "책 템플릿 LaTeX, 포스터 템플릿 LaTeX, 뉴스레터 템플릿 LaTeX, 달력 템플릿 LaTeX, 전단지 템플릿 LaTeX, 브로셔 LaTeX, 레시피 템플릿 LaTeX, 잡지 템플릿, 부고 템플릿 LaTeX, 청첩장 LaTeX"
+      }
+    }
   },
   "templateCode": { "placeholders": { "authorName": "저자 이름", "yourName": "이름", "department": "부서", "universityName": "대학 이름", "email": "author@university.edu", "presentationTitle": "프레젠테이션 제목", "researchPaperTitle": "연구 논문 제목", "courseName": "과정명", "instructorName": "강사명", "yourAddress": "주소", "cityStateZip": "시, 도 우편번호", "phone": "(02) 1234-5678", "point1": "포인트 1", "point2": "포인트 2", "point3": "포인트 3", "contentGoesHere": "콘텐츠를 여기에 입력하세요.", "summaryOfKeyPoints": "핵심 포인트 요약." } }
 }

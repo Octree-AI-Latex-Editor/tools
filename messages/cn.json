@@ -826,344 +826,344 @@
     },
     "metadata": {
       "site": {
-        "title": "免费 LaTeX 工具 - 图片转 LaTeX, 60+ 模板 | Octree",
-        "description": "免费 LaTeX 工具：AI 驱动的数学公式转换器，60+ 专业模板（简历、CV、论文、beamer），实时 PDF 预览。",
-        "keywords": "手写数学转 LaTeX, 图片转 LaTeX, PDF 转 LaTeX, 公式转 LaTeX, 免费 LaTeX 转换器, AI LaTeX 生成器, LaTeX 引用生成器, TikZ 生成器, 免费 LaTeX 模板, LaTeX 简历模板, LaTeX 论文模板, 在线 LaTeX 编辑器, Overleaf 替代, LaTeX 在线, 在线编译 LaTeX, LaTeX 转 PDF, 公式编辑器, LaTeX 符号, BibTeX 生成器, 表格转 LaTeX, Excel 转 LaTeX, markdown 转 LaTeX"
+        "title": "免费 LaTeX 工具 - 图片转 LaTeX, 60+ 模板, PDF 预览 | Octree",
+        "description": "免费 LaTeX 工具：AI 驱动的数学公式转换器，60+ 专业模板（简历、CV、论文、beamer），实时 PDF 预览。将手写数学、图片和 PDF 即时转换为 LaTeX。",
+        "keywords": "手写数学转 LaTeX, 图片转 LaTeX 转换器, PDF 转 LaTeX 转换器, 数学公式转 LaTeX, LaTeX 数学转换器, 免费 LaTeX 转换器, AI LaTeX 生成器, LaTeX 引用生成器, TikZ 生成器, 免费 LaTeX 模板, LaTeX 简历模板, LaTeX CV 模板, LaTeX 论文模板, LaTeX beamer 模板, 在线 LaTeX 编辑器, Overleaf 替代品, LaTeX 在线, 在线编译 LaTeX, LaTeX 转 PDF, 公式编辑器, 数学公式编辑器, LaTeX 符号, BibTeX 生成器, 表格转 LaTeX, Excel 转 LaTeX, markdown 转 LaTeX, HTML 转 LaTeX, MathML 转 LaTeX, LaTeX 字数统计, PGFPlots 生成器, arXiv LaTeX, LaTeX 公式, LaTeX 排版, 数学排版工具, 科研论文写作, 学术写作工具"
       },
       "tools": {
         "imageToLatex": {
-          "title": "图片转 LaTeX 转换器 - 免费 AI 工具",
+          "title": "图片转 LaTeX 转换器 - 免费 AI 驱动工具",
           "description": "即时将手写数学公式图片转换为干净的 LaTeX 代码。AI 驱动，免费，无需注册。",
-          "keywords": "图片转 LaTeX, 照片转 LaTeX, 手写数学转 LaTeX, 扫描数学转 LaTeX, OCR LaTeX, 数学图片转换器, 截图转 LaTeX, 数学 OCR, 公式转 LaTeX"
+          "keywords": "图片转 LaTeX, 照片转 LaTeX, 图像转 LaTeX, 手写数学转 LaTeX, 扫描数学转 LaTeX, OCR LaTeX, 数学图片转换器, 截图转 LaTeX, 数学 OCR, 公式 OCR, 公式转 LaTeX, 数学照片转换器, 手写识别 LaTeX, 扫描公式, 拍照转公式, 图片识别公式, 手写公式识别, 数学公式扫描"
         },
         "mathToLatex": {
-          "title": "数学转 LaTeX 转换器 - 免费工具",
-          "description": "将数学表达式转换为 LaTeX 代码。输入或粘贴数学公式，获取 LaTeX。",
-          "keywords": "数学转 LaTeX, 数学表达式转 LaTeX, 公式转 LaTeX, 数学转换器, 方程式转换器"
+          "title": "数学转 LaTeX 转换器 - 免费在线工具",
+          "description": "将数学表达式转换为 LaTeX 代码。输入或粘贴数学公式，获取干净的 LaTeX 输出。",
+          "keywords": "数学转 LaTeX, 转换数学到 LaTeX, 数学表达式转 LaTeX, 公式转 LaTeX, 数学转换器, 方程式转换器, 数学符号 LaTeX, 数学表达式转换器, 数学公式生成器, 在线公式转换"
         },
         "equationToLatex": {
-          "title": "方程式转 LaTeX 转换器 - 免费工具",
-          "description": "即时将数学方程式转换为 LaTeX 代码。输入方程式，获取 LaTeX。",
-          "keywords": "方程式转 LaTeX, 数学方程式转换器, 方程式编辑器 LaTeX, 公式转 LaTeX"
+          "title": "方程式转 LaTeX 转换器 - 免费在线工具",
+          "description": "即时将数学方程式转换为 LaTeX 代码。输入您的方程式，获取 LaTeX。",
+          "keywords": "方程式转 LaTeX, 转换方程式到 LaTeX, 数学方程式转换器, 方程式编辑器 LaTeX, 公式转 LaTeX, 数学方程式 LaTeX, 方程式符号, 方程转公式, 等式转 LaTeX, 数学等式编辑器"
         },
         "tikzGenerator": {
           "title": "TikZ 图表生成器 - AI 驱动的 LaTeX 图形",
-          "description": "使用 AI 生成 TikZ 图表。描述您的图表并即时获取干净的 TikZ LaTeX 代码。",
-          "keywords": "TikZ 生成器, TikZ 在线, TikZ 示例, TikZ 流程图, TikZ 图表, TikZ 神经网络, AI TikZ 生成器, TikZ 教程, TikZ 形状, TikZ 箭头, TikZ 图, TikZ 树"
+          "description": "使用 AI 生成 TikZ 图表。描述您的图表，即时获取干净的 TikZ LaTeX 代码。",
+          "keywords": "TikZ 生成器, TikZ 在线, TikZ 示例, TikZ 流程图, TikZ 图表, TikZ 神经网络, AI TikZ 生成器, TikZ 代码生成器, TikZ 教程, TikZ 形状, TikZ 箭头, TikZ 图形, TikZ 树状图, TikZ 绘图, PGF TikZ, TikZ 电路图, TikZ 时间线, TikZ 维恩图, LaTeX 绘图, LaTeX 流程图生成器"
         },
         "imageToTikz": {
           "title": "图片转 TikZ 转换器 - 图像转 LaTeX 图形",
           "description": "使用 AI 将图片和图表转换为 TikZ LaTeX 代码。上传任何图片，获取可编辑的 TikZ 代码。",
-          "keywords": "图片转 TikZ, 照片转 TikZ, 图像转 TikZ, 图表转 TikZ, AI TikZ 转换器, 图片转 LaTeX 图表"
+          "keywords": "图片转 TikZ, 照片转 TikZ, 转换图片到 TikZ, 图表转 TikZ, 图片转 TikZ 代码, AI TikZ 转换器, 矢量化转 TikZ, 图片转 LaTeX 图表, 图像转矢量图, 手绘转 TikZ"
         },
         "citationGenerator": {
           "title": "LaTeX 引用生成器 - BibTeX 生成器",
           "description": "从 DOI、URL 或文章详情生成 BibTeX 引用。免费 LaTeX 引用工具。",
-          "keywords": "LaTeX 引用生成器, BibTeX 生成器, DOI 转 BibTeX, 引用生成器, 参考文献生成器, 书目生成器, APA 引用 LaTeX, MLA 引用 LaTeX, IEEE 引用, Harvard 引用 LaTeX"
+          "keywords": "LaTeX 引用生成器, BibTeX 生成器, DOI 转 BibTeX, 引用生成器, 参考文献生成器, 书目生成器, 引用格式生成, APA 引用 LaTeX, MLA 引用 LaTeX, 芝加哥引用格式, IEEE 引用, 哈佛引用 LaTeX, 文献引用工具, 论文引用生成器, 学术引用格式"
         },
         "latexPreview": {
           "title": "LaTeX 实时预览 - 免费在线编辑器",
           "description": "实时编写和预览 LaTeX 文档。免费在线 LaTeX 编辑器，即时 PDF 输出。",
-          "keywords": "LaTeX 预览, LaTeX 在线编辑器, LaTeX 实时预览, 在线 LaTeX 编译器, LaTeX 转 PDF, 免费 LaTeX 编辑器, Overleaf 替代, 在线写 LaTeX, 免费编译 LaTeX"
+          "keywords": "LaTeX 预览, LaTeX 在线编辑器, LaTeX 实时预览, 在线 LaTeX 编译器, LaTeX 转 PDF, 免费 LaTeX 编辑器, Overleaf 替代品, 在线 LaTeX, 在线写 LaTeX, LaTeX 渲染器, LaTeX 查看器, 免费编译 LaTeX, 即时预览 LaTeX, LaTeX 编译预览"
         },
         "pdfToLatex": {
           "title": "PDF 转 LaTeX 转换器 - 从 PDF 提取 LaTeX",
           "description": "将包含数学内容的 PDF 文档转换为干净的 LaTeX 代码。AI 驱动提取。",
-          "keywords": "PDF 转 LaTeX, 转换 PDF 到 LaTeX, 从 PDF 提取 LaTeX, PDF 数学转换器, PDF 公式提取器, OCR PDF 转 LaTeX, 扫描 PDF 转 LaTeX"
+          "keywords": "PDF 转 LaTeX, 转换 PDF 到 LaTeX, 从 PDF 提取 LaTeX, PDF 数学转换器, PDF 公式提取器, PDF 转 TeX, OCR PDF 转 LaTeX, PDF 公式提取, 扫描 PDF 转 LaTeX, PDF 文档转 LaTeX, PDF 论文转源码"
         },
         "tableToLatex": {
           "title": "表格转 LaTeX 转换器 - Excel 转 LaTeX",
           "description": "将 Excel、Google Sheets 或 CSV 表格转换为 LaTeX 格式。免费表格生成器。",
-          "keywords": "表格转 LaTeX, Excel 转 LaTeX, CSV 转 LaTeX, 电子表格转 LaTeX, LaTeX 表格生成器, tabular LaTeX, Google Sheets 转 LaTeX"
+          "keywords": "表格转 LaTeX, Excel 转 LaTeX, CSV 转 LaTeX, 电子表格转 LaTeX, LaTeX 表格生成器, tabular LaTeX, LaTeX 表格制作, Google Sheets 转 LaTeX, 复制粘贴表格 LaTeX, LaTeX tabular 生成器, 数据表格转 LaTeX, WPS 表格转 LaTeX"
         },
         "markdownToLatex": {
-          "title": "Markdown 转 LaTeX 转换器 - 免费工具",
+          "title": "Markdown 转 LaTeX 转换器 - 免费在线工具",
           "description": "将 Markdown 文件转换为干净的 LaTeX 代码。保留格式、链接和结构。",
-          "keywords": "markdown 转 LaTeX, md 转 tex, markdown LaTeX 转换器, markdown 转 PDF LaTeX"
+          "keywords": "markdown 转 LaTeX, 转换 markdown 到 LaTeX, md 转 tex, markdown LaTeX 转换器, pandoc 替代品, markdown 转 PDF LaTeX, markdown 转 TeX 在线, MD 文件转 LaTeX, 文档格式转换"
         },
         "latexToMarkdown": {
-          "title": "LaTeX 转 Markdown 转换器 - 免费工具",
+          "title": "LaTeX 转 Markdown 转换器 - 免费在线工具",
           "description": "将 LaTeX 文档转换为 Markdown 格式。保留公式和格式。",
-          "keywords": "LaTeX 转 markdown, tex 转 md, LaTeX markdown 转换器, 导出 LaTeX 为 markdown"
+          "keywords": "LaTeX 转 markdown, 转换 LaTeX 到 markdown, tex 转 md, LaTeX 转 md 转换器, LaTeX markdown, TeX 转 markdown, 导出 LaTeX 为 markdown, LaTeX 文档转换, 论文转博客格式"
         },
         "htmlToLatex": {
-          "title": "HTML 转 LaTeX 转换器 - 免费工具",
+          "title": "HTML 转 LaTeX 转换器 - 免费在线工具",
           "description": "将 HTML 内容转换为干净的 LaTeX 代码。适合网页到文档的转换。",
-          "keywords": "HTML 转 LaTeX, 网页转 LaTeX, HTML 表格转 LaTeX"
+          "keywords": "HTML 转 LaTeX, 转换 HTML 到 LaTeX, 网页转 LaTeX, HTML 转 TeX, 网页转 LaTeX, HTML 表格转 LaTeX, 网站内容转 LaTeX, 网页格式转换, HTML 代码转 LaTeX"
         },
         "mathmlToLatex": {
-          "title": "MathML 转 LaTeX 转换器 - 免费工具",
-          "description": "将 MathML 公式转换为 LaTeX 代码。适合 Word 公式转换。",
-          "keywords": "MathML 转 LaTeX, Word 公式转 LaTeX, Office 数学转 LaTeX, Word 数学转 LaTeX"
+          "title": "MathML 转 LaTeX 转换器 - 免费在线工具",
+          "description": "将 MathML 公式转换为 LaTeX 代码。适合 Word 和网页公式转换。",
+          "keywords": "MathML 转 LaTeX, 转换 MathML 到 LaTeX, Word 公式转 LaTeX, MathML 转换器, Office 数学转 LaTeX, OMML 转 LaTeX, Word 数学转 LaTeX, 公式编辑器转 LaTeX, Word 方程式转 LaTeX"
         },
         "mermaidToLatex": {
           "title": "Mermaid 转 LaTeX 转换器 - 图表转 TikZ",
           "description": "将 Mermaid 图表转换为 TikZ LaTeX 代码。流程图、序列图等。",
-          "keywords": "Mermaid 转 LaTeX, Mermaid 转 TikZ, 流程图转 LaTeX, 序列图转 LaTeX"
+          "keywords": "Mermaid 转 LaTeX, Mermaid 转 TikZ, 转换 Mermaid 图表, 流程图转 LaTeX, 序列图转 LaTeX, Mermaid LaTeX, 图表转 TikZ, 流程图代码转换, 时序图转 LaTeX"
         },
         "latexWordCounter": {
-          "title": "LaTeX 字数统计器 - 免费工具",
+          "title": "LaTeX 字数统计器 - 免费在线工具",
           "description": "统计 LaTeX 文档中的字数，排除命令和注释。准确的学术字数统计。",
-          "keywords": "LaTeX 字数统计, LaTeX 字符统计, TeX 字数, 论文字数统计"
+          "keywords": "LaTeX 字数统计, 统计 LaTeX 字数, TeX 字数统计, LaTeX 字符统计, 学术字数统计器, 论文字数统计, 论文字数计算 LaTeX, LaTeX 文本统计, 文档字数统计, 排除命令统计"
         },
         "aiLatexGenerator": {
           "title": "AI LaTeX 生成器 - 用 AI 写 LaTeX",
           "description": "使用 AI 生成 LaTeX 代码。描述您想要的内容，获取干净可编译的 LaTeX。",
-          "keywords": "AI LaTeX 生成器, AI 生成 LaTeX, AI LaTeX 写作, ChatGPT LaTeX, AI 公式生成器, 自然语言转 LaTeX"
+          "keywords": "AI LaTeX 生成器, 用 AI 生成 LaTeX, AI LaTeX 写作, ChatGPT LaTeX, AI 公式生成器, AI 数学 LaTeX, 自然语言转 LaTeX, 智能 LaTeX 生成, 人工智能写论文, AI 学术写作"
         },
         "pgfplotsGenerator": {
-          "title": "PGFPlots 生成器 - LaTeX 图表制作",
-          "description": "使用 PGFPlots 为 LaTeX 创建漂亮的图表。免费图表生成器。",
-          "keywords": "PGFPlots 生成器, PGFPlots 在线, LaTeX 图表, LaTeX 绘图, PGFPlots 示例, LaTeX 数据可视化, LaTeX 柱状图, LaTeX 折线图"
+          "title": "PGFPlots 生成器 - LaTeX 图表制作工具",
+          "description": "使用 PGFPlots 为 LaTeX 创建漂亮的图表。免费在线图表生成器。",
+          "keywords": "PGFPlots 生成器, PGFPlots 在线, LaTeX 图表, LaTeX 绑图, PGFPlots 示例, LaTeX 图表制作, 数据可视化 LaTeX, 散点图 LaTeX, 柱状图 LaTeX, 折线图 LaTeX, 函数图 LaTeX, 统计图表 LaTeX"
         },
         "arxivToLatex": {
           "title": "arXiv 转 LaTeX - 下载 arXiv 源代码",
           "description": "提取并下载 arXiv 论文的 LaTeX 源代码。获取原始 TeX 文件。",
-          "keywords": "arXiv 转 LaTeX, arXiv 源代码, 下载 arXiv LaTeX, arXiv TeX 源码, 下载 arXiv 源码"
+          "keywords": "arXiv 转 LaTeX, arXiv 源代码, 下载 arXiv LaTeX, arXiv TeX 源文件, arXiv 论文源码, 提取 arXiv LaTeX, arXiv 源码下载, 论文源代码下载, 学术论文 LaTeX 源码"
         }
       },
       "symbols": {
         "main": {
           "title": "LaTeX 符号 - 完整参考指南",
-          "description": "浏览并复制 LaTeX 符号：希腊字母、数学运算符、箭头等。",
-          "keywords": "LaTeX 符号, 数学符号, 希腊字母 LaTeX, LaTeX 运算符, LaTeX 箭头, 符号参考, LaTeX 特殊字符, 所有 LaTeX 符号"
+          "description": "浏览并复制 LaTeX 符号：希腊字母、数学运算符、箭头等。完整符号参考。",
+          "keywords": "LaTeX 符号, 数学符号, 希腊字母 LaTeX, LaTeX 运算符, LaTeX 箭头, 符号参考, 复制 LaTeX 符号, LaTeX 特殊字符, 数学符号 LaTeX, LaTeX 速查表, 全部 LaTeX 符号, 符号大全, LaTeX 符号表"
         },
         "math": {
           "title": "LaTeX 数学符号 - 运算符和关系",
           "description": "完整的 LaTeX 数学符号列表。运算符、关系、方程式及可复制代码。",
-          "keywords": "数学符号 LaTeX, 数学运算符, LaTeX 加减, LaTeX 分数, LaTeX 平方根, LaTeX 求和, LaTeX 积分, LaTeX 乘号, LaTeX 除号"
+          "keywords": "数学符号 LaTeX, 数学运算符, LaTeX 加减乘除, LaTeX 分数, LaTeX 平方根, LaTeX 求和, LaTeX 积分, 乘号 LaTeX, 除号 LaTeX, 等于 LaTeX, 不等于 LaTeX, 约等于 LaTeX, 数学公式符号"
         },
         "greek": {
-          "title": "LaTeX 中的希腊字母 - 从 Alpha 到 Omega",
+          "title": "LaTeX 希腊字母 - 从 Alpha 到 Omega",
           "description": "完整的希腊字母及其 LaTeX 命令列表。复制粘贴 alpha、beta、gamma 等。",
-          "keywords": "希腊字母 LaTeX, alpha LaTeX, beta LaTeX, gamma LaTeX, delta LaTeX, epsilon LaTeX, theta LaTeX, lambda LaTeX, pi LaTeX, sigma LaTeX, omega LaTeX, 希腊字母表 LaTeX"
+          "keywords": "希腊字母 LaTeX, alpha LaTeX, beta LaTeX, gamma LaTeX, delta LaTeX, epsilon LaTeX, theta LaTeX, lambda LaTeX, pi LaTeX, sigma LaTeX, omega LaTeX, phi LaTeX, 希腊字母表 LaTeX, 大写希腊字母, 小写希腊字母"
         },
         "arrows": {
-          "title": "LaTeX 箭头符号 - 所有类型",
-          "description": "完整的 LaTeX 箭头符号列表。右箭头、左箭头、上下箭头、双箭头。",
-          "keywords": "LaTeX 箭头, 右箭头 LaTeX, 左箭头 LaTeX, 双箭头 LaTeX, 蕴含 LaTeX, 箭头类型 LaTeX"
+          "title": "LaTeX 箭头符号 - 所有箭头类型",
+          "description": "完整的 LaTeX 箭头符号列表。右箭头、左箭头、上下箭头、双箭头等。",
+          "keywords": "LaTeX 箭头, rightarrow LaTeX, leftarrow LaTeX, 双箭头 LaTeX, 蕴含 LaTeX, 箭头符号, LaTeX 箭头类型, 上箭头 LaTeX, 下箭头 LaTeX, 双向箭头 LaTeX, 长箭头 LaTeX, 右箭头, 左箭头"
         },
         "brackets": {
           "title": "LaTeX 括号和分隔符",
-          "description": "LaTeX 中的括号、花括号、方括号和分隔符。可复制的命令。",
-          "keywords": "LaTeX 括号, LaTeX 圆括号, LaTeX 花括号, LaTeX 分隔符, LaTeX 尖括号"
+          "description": "LaTeX 中的圆括号、花括号、方括号和分隔符。可复制的括号命令。",
+          "keywords": "LaTeX 括号, LaTeX 圆括号, LaTeX 花括号, 大括号 LaTeX, 方括号 LaTeX, 尖括号 LaTeX, LaTeX 分隔符, left right LaTeX, 大括号 LaTeX, 括号缩放"
         },
         "calculus": {
           "title": "LaTeX 微积分符号 - 导数和积分",
-          "description": "LaTeX 中的微积分记法：导数、积分、极限和微分算子。",
-          "keywords": "微积分 LaTeX, 导数 LaTeX, 积分 LaTeX, 偏导数 LaTeX, 极限 LaTeX, 微分 LaTeX, nabla LaTeX, 梯度 LaTeX"
+          "description": "LaTeX 中的微积分符号：导数、积分、极限和微分算子。",
+          "keywords": "微积分 LaTeX, 导数 LaTeX, 积分 LaTeX, 偏导数 LaTeX, 极限 LaTeX, 微分 LaTeX, nabla LaTeX, 梯度 LaTeX, 散度 LaTeX, 旋度 LaTeX, 拉普拉斯 LaTeX, 定积分, 不定积分"
         },
         "setTheory": {
           "title": "LaTeX 集合论符号",
-          "description": "LaTeX 中的集合论记法：并集、交集、子集等。",
-          "keywords": "集合论 LaTeX, 并集 LaTeX, 交集 LaTeX, 子集 LaTeX, 属于 LaTeX, 空集 LaTeX"
+          "description": "LaTeX 中的集合论符号：并集、交集、子集、属于等。",
+          "keywords": "集合论 LaTeX, 并集 LaTeX, 交集 LaTeX, 子集 LaTeX, 超集 LaTeX, 属于 LaTeX, 空集 LaTeX, 集合符号 LaTeX, 包含于 LaTeX, 真子集"
         },
         "logic": {
           "title": "LaTeX 逻辑符号 - 逻辑运算符",
-          "description": "LaTeX 中的逻辑符号：与、或、非、蕴含、当且仅当、量词。",
-          "keywords": "逻辑符号 LaTeX, 与 LaTeX, 或 LaTeX, 非 LaTeX, 蕴含 LaTeX, 当且仅当 LaTeX, 否定 LaTeX"
+          "description": "LaTeX 中的逻辑符号：与、或、非、蕴含、当且仅当和量词。",
+          "keywords": "逻辑符号 LaTeX, 与 LaTeX, 或 LaTeX, 非 LaTeX, 蕴含 LaTeX, 当且仅当 LaTeX, 否定 LaTeX, 逻辑运算符 LaTeX, 命题逻辑 LaTeX, 逻辑联结词"
         },
         "relations": {
           "title": "LaTeX 关系符号 - 比较运算符",
-          "description": "LaTeX 中的关系符号：小于、大于、等于、不等于和等价。",
-          "keywords": "关系符号 LaTeX, 小于 LaTeX, 大于 LaTeX, 不等于 LaTeX, 等价 LaTeX, 约等于 LaTeX"
+          "description": "LaTeX 中的关系符号：小于、大于、等于、不等于和等价关系。",
+          "keywords": "关系符号 LaTeX, 小于 LaTeX, 大于 LaTeX, 小于等于 LaTeX, 大于等于 LaTeX, 不等于 LaTeX, 等价 LaTeX, 约等于 LaTeX, 正比于 LaTeX, 比较符号"
         },
         "operators": {
           "title": "LaTeX 运算符 - 数学运算符",
-          "description": "LaTeX 中的数学运算符：求和、乘积、积分和运算符记法。",
-          "keywords": "LaTeX 运算符, 求和 LaTeX, 乘积 LaTeX, 积分运算符 LaTeX, 累加 LaTeX"
+          "description": "LaTeX 中的数学运算符：求和、乘积、积分和运算符符号。",
+          "keywords": "LaTeX 运算符, 求和 LaTeX, 乘积 LaTeX, 积分运算符 LaTeX, 大运算符 LaTeX, 累加 LaTeX, prod LaTeX, coprod LaTeX, 运算符符号 LaTeX, 二元运算符"
         },
         "linearAlgebra": {
           "title": "LaTeX 线性代数符号 - 矩阵和向量",
-          "description": "LaTeX 中的线性代数记法：矩阵、向量、行列式和特征值。",
-          "keywords": "线性代数 LaTeX, 矩阵 LaTeX, 向量 LaTeX, 行列式 LaTeX, 转置 LaTeX, 特征值 LaTeX, 点积 LaTeX, 范数 LaTeX"
+          "description": "LaTeX 中的线性代数符号：矩阵、向量、行列式和特征值。",
+          "keywords": "线性代数 LaTeX, 矩阵 LaTeX, 向量 LaTeX, 行列式 LaTeX, 转置 LaTeX, 特征值 LaTeX, 特征向量 LaTeX, 点积 LaTeX, 叉积 LaTeX, 范数 LaTeX, 内积, 外积"
         },
         "geometry": {
           "title": "LaTeX 几何符号 - 角度和形状",
-          "description": "LaTeX 中的几何记法：角度、平行、垂直、三角形和圆。",
-          "keywords": "几何 LaTeX, 角度 LaTeX, 平行 LaTeX, 垂直 LaTeX, 三角形 LaTeX, 圆 LaTeX, 度数 LaTeX"
+          "description": "LaTeX 中的几何符号：角度、平行、垂直、三角形和圆。",
+          "keywords": "几何 LaTeX, 角度 LaTeX, 平行 LaTeX, 垂直 LaTeX, 三角形 LaTeX, 圆 LaTeX, 度数符号 LaTeX, 全等 LaTeX, 相似 LaTeX, 角度符号"
         },
         "probability": {
-          "title": "LaTeX 概率符号 - 统计记法",
+          "title": "LaTeX 概率符号 - 统计符号",
           "description": "LaTeX 中的概率和统计符号：期望值、方差、分布。",
-          "keywords": "概率 LaTeX, 期望值 LaTeX, 方差 LaTeX, 标准差 LaTeX, 概率分布 LaTeX, 统计 LaTeX"
+          "keywords": "概率 LaTeX, 期望值 LaTeX, 方差 LaTeX, 标准差 LaTeX, 概率分布 LaTeX, 统计 LaTeX, 随机变量 LaTeX, 条件概率 LaTeX, 正态分布, 统计符号"
         },
         "physics": {
-          "title": "LaTeX 物理符号 - 科学记法",
-          "description": "LaTeX 中的物理符号：向量、算子、量子力学和常数。",
-          "keywords": "物理 LaTeX, 向量 LaTeX, hbar LaTeX, 量子力学 LaTeX, bra ket LaTeX, Dirac 记法 LaTeX, 物理常数 LaTeX"
+          "title": "LaTeX 物理符号 - 科学符号",
+          "description": "LaTeX 中的物理符号：向量、算子、量子力学和物理常数。",
+          "keywords": "物理 LaTeX, 向量 LaTeX, hbar LaTeX, 量子力学 LaTeX, bra ket LaTeX, Dirac 符号 LaTeX, 物理常数 LaTeX, 科学符号 LaTeX, 普朗克常数, 波函数"
         },
         "chemistry": {
-          "title": "LaTeX 化学符号 - 化学记法",
-          "description": "LaTeX 中的化学记法：化学式、反应和分子结构。",
-          "keywords": "化学 LaTeX, 化学式 LaTeX, 反应箭头 LaTeX, 下标 LaTeX, 上标 LaTeX, 化学方程式 LaTeX"
+          "title": "LaTeX 化学符号 - 化学符号",
+          "description": "LaTeX 中的化学符号：化学式、反应和分子结构。",
+          "keywords": "化学 LaTeX, 化学式 LaTeX, 反应箭头 LaTeX, 下标 LaTeX, 上标 LaTeX, mhchem LaTeX, 化学方程式 LaTeX, 分子式, 化学反应式"
         },
         "computerScience": {
-          "title": "LaTeX 计算机科学符号 - 算法记法",
-          "description": "LaTeX 中的计算机科学符号：算法、复杂度和编程记法。",
-          "keywords": "计算机科学 LaTeX, 算法 LaTeX, 大O记法 LaTeX, 复杂度 LaTeX, 伪代码 LaTeX"
+          "title": "LaTeX 计算机科学符号 - 算法符号",
+          "description": "LaTeX 中的计算机科学符号：算法、复杂度和编程符号。",
+          "keywords": "计算机科学 LaTeX, 算法 LaTeX, 大O符号 LaTeX, 复杂度 LaTeX, 伪代码 LaTeX, 编程符号 LaTeX, 时间复杂度, 空间复杂度"
         },
         "functions": {
           "title": "LaTeX 函数符号 - 数学函数",
-          "description": "LaTeX 中的函数记法：三角函数、对数函数、指数函数等。",
-          "keywords": "函数 LaTeX, sin LaTeX, cos LaTeX, tan LaTeX, log LaTeX, ln LaTeX, exp LaTeX, lim LaTeX, min LaTeX, max LaTeX"
+          "description": "LaTeX 中的函数符号：三角函数、对数函数、指数函数等。",
+          "keywords": "函数 LaTeX, sin LaTeX, cos LaTeX, tan LaTeX, log LaTeX, ln LaTeX, exp LaTeX, lim LaTeX, min LaTeX, max LaTeX, argmin LaTeX, argmax LaTeX, 数学函数"
         },
         "numberTheory": {
           "title": "LaTeX 数论符号",
-          "description": "LaTeX 中的数论记法：整除性、同余和数集。",
-          "keywords": "数论 LaTeX, 整除 LaTeX, 模 LaTeX, 同余 LaTeX, 素数 LaTeX, 最大公约数 LaTeX, 最小公倍数 LaTeX"
+          "description": "LaTeX 中的数论符号：整除性、同余和数集。",
+          "keywords": "数论 LaTeX, 整除 LaTeX, 模 LaTeX, 同余 LaTeX, 素数 LaTeX, 最大公约数 LaTeX, 最小公倍数 LaTeX, 整数 LaTeX, 自然数 LaTeX, 质数"
         },
         "accents": {
           "title": "LaTeX 重音符号和变音符号",
-          "description": "LaTeX 重音：帽子、横线、点、波浪线和其他变音符号。",
-          "keywords": "LaTeX 重音, 帽子 LaTeX, 横线 LaTeX, 点 LaTeX, 波浪线 LaTeX, vec LaTeX, 上划线 LaTeX"
+          "description": "LaTeX 重音符号：帽子、横线、点、波浪线和其他变音符号。",
+          "keywords": "LaTeX 重音, 帽子 LaTeX, 横线 LaTeX, 点 LaTeX, 波浪线 LaTeX, vec LaTeX, 上划线 LaTeX, 下划线 LaTeX, overbrace LaTeX, underbrace LaTeX, 上标符号"
         },
         "boolean": {
           "title": "LaTeX 布尔代数符号",
-          "description": "LaTeX 中的布尔代数记法：AND、OR、NOT、XOR 和真值。",
-          "keywords": "布尔 LaTeX, AND LaTeX, OR LaTeX, NOT LaTeX, XOR LaTeX, 真假 LaTeX, 布尔代数 LaTeX"
+          "description": "LaTeX 中的布尔代数符号：AND、OR、NOT、XOR 和真值。",
+          "keywords": "布尔 LaTeX, AND LaTeX, OR LaTeX, NOT LaTeX, XOR LaTeX, 真假 LaTeX, 布尔代数 LaTeX, 逻辑门 LaTeX, 与门, 或门, 非门"
         },
         "summation": {
           "title": "LaTeX 求和与乘积符号",
-          "description": "LaTeX 中的求和与乘积记法：和、积和级数。",
-          "keywords": "求和 LaTeX, 乘积 LaTeX, 求和记法 LaTeX, sigma LaTeX, pi 记法 LaTeX, 级数 LaTeX"
+          "description": "LaTeX 中的求和与乘积符号：和、积和级数。",
+          "keywords": "求和 LaTeX, 乘积 LaTeX, 求和符号 LaTeX, sigma LaTeX, pi 符号 LaTeX, 级数 LaTeX, 无穷求和 LaTeX, 累乘, 连加, 连乘"
         },
         "trigonometry": {
           "title": "LaTeX 三角函数符号",
           "description": "LaTeX 中的三角函数：正弦、余弦、正切和反函数。",
-          "keywords": "三角函数 LaTeX, sin LaTeX, cos LaTeX, tan LaTeX, arcsin LaTeX, arccos LaTeX, arctan LaTeX, 双曲 LaTeX"
+          "keywords": "三角函数 LaTeX, sin LaTeX, cos LaTeX, tan LaTeX, arcsin LaTeX, arccos LaTeX, arctan LaTeX, 双曲函数 LaTeX, sinh LaTeX, cosh LaTeX, tanh LaTeX, 反三角函数"
         },
         "topology": {
           "title": "LaTeX 拓扑符号",
-          "description": "LaTeX 中的拓扑记法：开集、闭包、内部和边界。",
-          "keywords": "拓扑 LaTeX, 开集 LaTeX, 闭集 LaTeX, 闭包 LaTeX, 内部 LaTeX, 边界 LaTeX"
+          "description": "LaTeX 中的拓扑符号：开集、闭包、内部和边界。",
+          "keywords": "拓扑 LaTeX, 开集 LaTeX, 闭集 LaTeX, 闭包 LaTeX, 内部 LaTeX, 边界 LaTeX, 同胚 LaTeX, 拓扑空间"
         },
         "finance": {
-          "title": "LaTeX 金融符号 - 财务记法",
-          "description": "LaTeX 中的金融符号：货币、利息和经济记法。",
-          "keywords": "金融 LaTeX, 货币 LaTeX, 美元 LaTeX, 欧元 LaTeX, 百分比 LaTeX, 利率 LaTeX"
+          "title": "LaTeX 金融符号 - 财务符号",
+          "description": "LaTeX 中的金融符号：货币、利息和经济符号。",
+          "keywords": "金融 LaTeX, 货币 LaTeX, 美元 LaTeX, 欧元 LaTeX, 英镑 LaTeX, 百分比 LaTeX, 利率 LaTeX, NPV LaTeX, 人民币符号"
         },
         "machineLearning": {
-          "title": "LaTeX 机器学习符号 - ML 记法",
-          "description": "LaTeX 中的机器学习记法：神经网络、损失函数和优化。",
-          "keywords": "机器学习 LaTeX, 神经网络 LaTeX, 损失函数 LaTeX, 梯度下降 LaTeX, ML 记法 LaTeX"
+          "title": "LaTeX 机器学习符号 - ML 符号",
+          "description": "LaTeX 中的机器学习符号：神经网络、损失函数和优化。",
+          "keywords": "机器学习 LaTeX, 神经网络 LaTeX, 损失函数 LaTeX, 梯度下降 LaTeX, 激活函数 LaTeX, 权重 LaTeX, 偏置 LaTeX, ML 符号 LaTeX, 深度学习符号"
         },
         "latin": {
           "title": "LaTeX 拉丁字母和字体",
           "description": "LaTeX 中的拉丁字母和字体样式：粗体、斜体、书法体等。",
-          "keywords": "拉丁字母 LaTeX, 粗体 LaTeX, 斜体 LaTeX, mathcal LaTeX, mathbb LaTeX, 字体样式 LaTeX"
+          "keywords": "拉丁字母 LaTeX, 粗体 LaTeX, 斜体 LaTeX, mathcal LaTeX, mathbb LaTeX, mathfrak LaTeX, 字体样式 LaTeX, 黑板粗体 LaTeX, 数学字体"
         },
         "complex": {
           "title": "LaTeX 复数符号",
-          "description": "LaTeX 中的复数记法：虚数单位、共轭和极坐标形式。",
-          "keywords": "复数 LaTeX, 虚数单位 LaTeX, 共轭 LaTeX, 实部 LaTeX, 虚部 LaTeX, 模 LaTeX"
+          "description": "LaTeX 中的复数符号：虚数单位、共轭和极坐标形式。",
+          "keywords": "复数 LaTeX, 虚数单位 LaTeX, 共轭 LaTeX, 实部 LaTeX, 虚部 LaTeX, 模 LaTeX, 幅角 LaTeX, 复平面, 欧拉公式"
         },
         "graphTheory": {
           "title": "LaTeX 图论符号",
-          "description": "LaTeX 中的图论记法：顶点、边、路径和环。",
-          "keywords": "图论 LaTeX, 顶点 LaTeX, 边 LaTeX, 路径 LaTeX, 环 LaTeX, 邻接 LaTeX, 度 LaTeX"
+          "description": "LaTeX 中的图论符号：顶点、边、路径和环。",
+          "keywords": "图论 LaTeX, 顶点 LaTeX, 边 LaTeX, 路径 LaTeX, 环 LaTeX, 邻接 LaTeX, 度 LaTeX, 连通 LaTeX, 有向图, 无向图"
         },
         "combinatorics": {
           "title": "LaTeX 组合数学符号",
-          "description": "LaTeX 中的组合记法：阶乘、二项式和排列。",
-          "keywords": "组合 LaTeX, 阶乘 LaTeX, 二项式 LaTeX, 排列 LaTeX, 组合 LaTeX, 选择 LaTeX, binom LaTeX"
+          "description": "LaTeX 中的组合符号：阶乘、二项式和排列。",
+          "keywords": "组合数学 LaTeX, 阶乘 LaTeX, 二项式 LaTeX, 排列 LaTeX, 组合 LaTeX, choose LaTeX, binom LaTeX, 排列组合, C(n,k), A(n,k)"
         },
         "specialFunctions": {
           "title": "LaTeX 特殊函数 - Gamma、Zeta、Bessel",
           "description": "LaTeX 中的特殊函数：gamma、zeta、Bessel 和误差函数。",
-          "keywords": "特殊函数 LaTeX, gamma 函数 LaTeX, zeta 函数 LaTeX, Bessel 函数 LaTeX, 误差函数 LaTeX"
+          "keywords": "特殊函数 LaTeX, gamma 函数 LaTeX, zeta 函数 LaTeX, Bessel 函数 LaTeX, 误差函数 LaTeX, Legendre LaTeX, 勒让德多项式, 伽马函数"
         },
         "tensors": {
-          "title": "LaTeX 张量记法 - Einstein 求和",
-          "description": "LaTeX 中的张量记法：指标、缩并和协变导数。",
-          "keywords": "张量 LaTeX, Einstein 求和 LaTeX, 张量指标 LaTeX, 协变导数 LaTeX, Kronecker delta LaTeX"
+          "title": "LaTeX 张量符号 - Einstein 求和约定",
+          "description": "LaTeX 中的张量符号：指标、缩并和协变导数。",
+          "keywords": "张量 LaTeX, Einstein 求和 LaTeX, 张量指标 LaTeX, 协变导数 LaTeX, 逆变 LaTeX, Kronecker delta LaTeX, 张量分析, 爱因斯坦求和约定"
         },
         "differentialGeometry": {
           "title": "LaTeX 微分几何符号",
-          "description": "LaTeX 中的微分几何记法：流形、曲率和联络。",
-          "keywords": "微分几何 LaTeX, 流形 LaTeX, 曲率 LaTeX, Christoffel LaTeX, Riemann 张量 LaTeX"
+          "description": "LaTeX 中的微分几何符号：流形、曲率和联络。",
+          "keywords": "微分几何 LaTeX, 流形 LaTeX, 曲率 LaTeX, Christoffel LaTeX, Riemann 张量 LaTeX, 联络 LaTeX, 黎曼几何, 克里斯托费尔符号"
         },
         "modalLogic": {
           "title": "LaTeX 模态逻辑符号",
-          "description": "LaTeX 中的模态逻辑记法：必然、可能和时态算子。",
-          "keywords": "模态逻辑 LaTeX, 必然 LaTeX, 可能 LaTeX, 方框 LaTeX, 菱形 LaTeX, 时态逻辑 LaTeX"
+          "description": "LaTeX 中的模态逻辑符号：必然、可能和时态算子。",
+          "keywords": "模态逻辑 LaTeX, 必然 LaTeX, 可能 LaTeX, 方框 LaTeX, 菱形 LaTeX, 时态逻辑 LaTeX, 可能世界, 模态算子"
         },
         "gameTheory": {
           "title": "LaTeX 博弈论符号",
-          "description": "LaTeX 中的博弈论记法：策略、收益和均衡。",
-          "keywords": "博弈论 LaTeX, Nash 均衡 LaTeX, 策略 LaTeX, 收益 LaTeX, 效用函数 LaTeX"
+          "description": "LaTeX 中的博弈论符号：策略、收益和均衡。",
+          "keywords": "博弈论 LaTeX, Nash 均衡 LaTeX, 策略 LaTeX, 收益 LaTeX, 效用函数 LaTeX, Shapley 值 LaTeX, 纳什均衡, 博弈矩阵"
         },
         "order": {
           "title": "LaTeX 序关系符号",
           "description": "LaTeX 中的序关系：偏序、格和上确界/下确界。",
-          "keywords": "序关系 LaTeX, 偏序 LaTeX, 格 LaTeX, 上确界 LaTeX, 下确界 LaTeX"
+          "keywords": "序关系 LaTeX, 偏序 LaTeX, 格 LaTeX, 上确界 LaTeX, 下确界 LaTeX, 最小上界 LaTeX, 全序, 半序"
         },
         "optimization": {
           "title": "LaTeX 优化符号",
-          "description": "LaTeX 中的优化记法：最小化、最大化和约束。",
-          "keywords": "优化 LaTeX, 最小化 LaTeX, 最大化 LaTeX, argmin LaTeX, argmax LaTeX, 约束 LaTeX"
+          "description": "LaTeX 中的优化符号：最小化、最大化和约束。",
+          "keywords": "优化 LaTeX, 最小化 LaTeX, 最大化 LaTeX, argmin LaTeX, argmax LaTeX, 约束条件 LaTeX, 约束优化, 目标函数"
         },
         "quantifiers": {
-          "title": "LaTeX 量词符号 - 全称、存在",
+          "title": "LaTeX 量词符号 - 全称量词、存在量词",
           "description": "LaTeX 中的量词符号：全称量词和存在量词。",
-          "keywords": "量词 LaTeX, 任意 LaTeX, 存在 LaTeX, forall LaTeX, 存在量词 LaTeX, 全称量词 LaTeX"
+          "keywords": "量词 LaTeX, 任意 LaTeX, 存在 LaTeX, forall LaTeX, 存在量词 LaTeX, 全称量词 LaTeX, 对所有 LaTeX, 使得存在 LaTeX"
         },
         "units": {
           "title": "LaTeX 单位和度量",
           "description": "LaTeX 中的 SI 单位和度量：度数、物理常数和单位。",
-          "keywords": "单位 LaTeX, SI 单位 LaTeX, 度数 LaTeX, 物理常数 LaTeX, siunitx LaTeX, 度量 LaTeX"
+          "keywords": "单位 LaTeX, SI 单位 LaTeX, 度数 LaTeX, 物理常数 LaTeX, siunitx LaTeX, 度量 LaTeX, 米 LaTeX, 千克 LaTeX, 国际单位制"
         }
       },
       "templates": {
         "main": {
           "title": "免费 LaTeX 模板 - 简历、CV、论文、Beamer",
           "description": "60+ 专业 LaTeX 模板。简历、CV、论文、beamer 演示文稿等。免费下载。",
-          "keywords": "LaTeX 模板, 免费 LaTeX 模板, LaTeX 简历模板, LaTeX CV 模板, LaTeX 论文模板, LaTeX beamer 模板, Overleaf 模板, 学术 LaTeX 模板, LaTeX 演示模板, LaTeX 论文模板, LaTeX 作业模板, LaTeX 海报模板, LaTeX 信函模板"
+          "keywords": "LaTeX 模板, 免费 LaTeX 模板, LaTeX 简历模板, LaTeX CV 模板, LaTeX 论文模板, LaTeX beamer 模板, Overleaf 模板, 学术 LaTeX 模板, LaTeX 演示模板, LaTeX 论文模板, LaTeX 作业模板, LaTeX 海报模板, LaTeX 信函模板, LaTeX 书籍模板, LaTeX 报告模板, 专业 LaTeX 模板, 中文 LaTeX 模板"
         },
         "academic": {
           "title": "学术 LaTeX 模板 - 研究论文、学位论文、博士论文",
-          "description": "免费学术 LaTeX 模板，用于研究论文、学位论文、博士论文和会议论文。",
-          "keywords": "学术 LaTeX 模板, 研究论文模板 LaTeX, 学位论文模板 LaTeX, 博士论文模板 LaTeX, 期刊文章模板, 会议论文 LaTeX, IEEE 模板 LaTeX, ACM 模板, 科学论文模板, 博士论文 LaTeX, 硕士论文模板"
+          "description": "免费学术 LaTeX 模板，用于研究论文、学位论文、博士论文、期刊文章和会议论文。",
+          "keywords": "学术 LaTeX 模板, 研究论文模板 LaTeX, 学位论文模板 LaTeX, 博士论文模板 LaTeX, 期刊文章模板, 会议论文 LaTeX, IEEE 模板 LaTeX, ACM 模板, Springer 模板, 科学论文模板, 博士论文 LaTeX, 硕士论文模板, 学术写作 LaTeX, 毕业论文模板"
         },
         "presentations": {
           "title": "LaTeX 演示模板 - Beamer 幻灯片",
-          "description": "免费 LaTeX beamer 演示模板。专业幻灯片，用于学术演讲和会议。",
-          "keywords": "beamer 模板 LaTeX, LaTeX 演示模板, beamer 幻灯片, LaTeX 幻灯片, 学术演示模板, 会议幻灯片 LaTeX, beamer 主题, beamer 示例, PowerPoint 替代 LaTeX"
+          "description": "免费 LaTeX beamer 演示模板。专业幻灯片，用于学术演讲、会议和讲座。",
+          "keywords": "beamer 模板 LaTeX, LaTeX 演示模板, beamer 幻灯片, LaTeX 幻灯片, 学术演示模板, 会议幻灯片 LaTeX, 讲座幻灯片 LaTeX, beamer 主题, beamer 示例, PowerPoint 替代 LaTeX, 演示 beamer, 学术PPT模板"
         },
         "resumeCV": {
           "title": "LaTeX 简历和 CV 模板 - 专业个人简历",
-          "description": "免费 LaTeX 简历和 CV 模板。现代专业设计，用于求职申请。",
-          "keywords": "LaTeX 简历模板, LaTeX CV 模板, 个人简历 LaTeX, 专业简历 LaTeX, 现代 CV LaTeX, 学术 CV LaTeX, 单页简历 LaTeX, moderncv, europass LaTeX"
+          "description": "免费 LaTeX 简历和 CV 模板。现代专业设计，用于求职申请和学术 CV。",
+          "keywords": "LaTeX 简历模板, LaTeX CV 模板, 个人简历 LaTeX, 专业简历 LaTeX, 现代 CV 模板, 学术 CV LaTeX, 单页简历 LaTeX, 双栏简历, moderncv 模板, europass LaTeX, 软件工程师简历 LaTeX, 数据科学家 CV, 程序员简历模板"
         },
         "math": {
           "title": "LaTeX 数学模板 - 方程式、证明、习题集",
-          "description": "用于数学文档的 LaTeX 模板：习题集、证明、定理。",
-          "keywords": "数学模板 LaTeX, 方程式模板 LaTeX, 习题集模板, 作业模板 LaTeX, 证明模板 LaTeX, 定理模板, 公式表模板, 考试模板 LaTeX"
+          "description": "用于数学文档的 LaTeX 模板：习题集、证明、定理和公式表。",
+          "keywords": "数学模板 LaTeX, 方程式模板 LaTeX, 习题集模板, 作业模板 LaTeX, 证明模板 LaTeX, 定理模板, 数学笔记 LaTeX, 公式表模板, 考试模板 LaTeX, 测验模板 LaTeX, 数学作业模板, 数学讲义模板"
         },
         "reports": {
           "title": "LaTeX 报告模板 - 技术、实验、项目报告",
-          "description": "专业 LaTeX 模板，用于技术报告、实验报告和项目文档。",
-          "keywords": "报告模板 LaTeX, 技术报告 LaTeX, 实验报告模板, 项目报告 LaTeX, 商业报告模板, 年度报告模板, 研究报告 LaTeX"
+          "description": "专业 LaTeX 模板，用于技术报告、实验报告、项目文档和商业报告。",
+          "keywords": "报告模板 LaTeX, 技术报告 LaTeX, 实验报告模板, 项目报告 LaTeX, 商业报告模板, 年度报告 LaTeX, 实习报告模板, 研究报告 LaTeX, 文档模板, 课程设计报告"
         },
         "education": {
           "title": "LaTeX 教育模板 - 作业、考试、课程大纲",
-          "description": "用于教育工作者和学生的 LaTeX 模板：作业、考试、课程大纲、讲义。",
-          "keywords": "作业模板 LaTeX, 考试模板 LaTeX, 课程大纲模板 LaTeX, 讲义模板, 课程材料 LaTeX, 测试模板 LaTeX, 学习指南 LaTeX, 抽认卡模板 LaTeX"
+          "description": "用于教育工作者和学生的 LaTeX 模板：作业、考试、课程大纲、讲义和课程材料。",
+          "keywords": "作业模板 LaTeX, 考试模板 LaTeX, 课程大纲模板 LaTeX, 讲义模板, 课程材料 LaTeX, 作业模板, 测试模板 LaTeX, 练习册模板, 学习指南 LaTeX, 抽认卡模板 LaTeX, 教案模板, 习题模板"
         },
         "letters": {
           "title": "LaTeX 信函模板 - 求职信、正式信函",
-          "description": "专业 LaTeX 信函模板，用于求职信和正式信函。",
-          "keywords": "信函模板 LaTeX, 求职信 LaTeX, 正式信函模板, 推荐信 LaTeX, 商业信函模板, 申请信 LaTeX, 推荐信模板"
+          "description": "专业 LaTeX 信函模板，用于求职信、正式信函和推荐信。",
+          "keywords": "信函模板 LaTeX, 求职信 LaTeX, 正式信函模板, 推荐信 LaTeX, 商业信函模板, 申请信 LaTeX, 推荐信模板, 专业信函 LaTeX, 介绍信模板"
         },
         "business": {
           "title": "LaTeX 商业模板 - 计划、提案、发票",
-          "description": "用于商业文档的 LaTeX 模板：商业计划、提案、发票、备忘录。",
-          "keywords": "商业模板 LaTeX, 商业计划 LaTeX, 提案模板 LaTeX, 发票模板 LaTeX, 合同模板, 备忘录模板 LaTeX, 名片 LaTeX, 项目提案模板"
+          "description": "用于商业文档的 LaTeX 模板：商业计划、提案、发票、合同和备忘录。",
+          "keywords": "商业模板 LaTeX, 商业计划 LaTeX, 提案模板 LaTeX, 发票模板 LaTeX, 合同模板, 备忘录模板 LaTeX, 名片 LaTeX, 公司报告模板, 执行摘要 LaTeX, 项目提案模板, 报价单模板"
         },
         "other": {
           "title": "LaTeX 模板 - 书籍、海报、通讯",
           "description": "其他 LaTeX 模板：书籍、海报、通讯、日历和创意文档。",
-          "keywords": "书籍模板 LaTeX, 海报模板 LaTeX, 通讯模板 LaTeX, 日历模板 LaTeX, 传单模板 LaTeX, 食谱模板 LaTeX, 讣告模板 LaTeX"
+          "keywords": "书籍模板 LaTeX, 海报模板 LaTeX, 通讯模板 LaTeX, 日历模板 LaTeX, 传单模板 LaTeX, 小册子 LaTeX, 食谱模板 LaTeX, 杂志模板, 讣告模板 LaTeX, 婚礼请柬 LaTeX, 创意模板"
         }
       }
     },
