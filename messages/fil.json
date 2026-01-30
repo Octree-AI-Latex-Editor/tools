@@ -795,7 +795,8 @@
       },
       "physics": {
         "title": "Pisika",
-        "description": "Quantum mechanics, vector fields, at physical constants."
+        "description": "Quantum mechanics, vector fields, at physical constants.",
+        "subtitle": "Quantum Mechanics at Physical Constants"
       },
       "chemistry": {
         "title": "Kimika",

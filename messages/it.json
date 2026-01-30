@@ -795,7 +795,8 @@
       },
       "physics": {
         "title": "Fisica",
-        "description": "Meccanica quantistica, campi vettoriali e costanti fisiche."
+        "description": "Meccanica quantistica, campi vettoriali e costanti fisiche.",
+        "subtitle": "Meccanica Quantistica e Costanti Fisiche"
       },
       "chemistry": {
         "title": "Chimica",

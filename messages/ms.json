@@ -795,7 +795,8 @@
       },
       "physics": {
         "title": "Fizik",
-        "description": "Mekanik kuantum, medan vektor, dan pemalar fizikal."
+        "description": "Mekanik kuantum, medan vektor, dan pemalar fizikal.",
+        "subtitle": "Mekanik Kuantum dan Pemalar Fizikal"
       },
       "chemistry": {
         "title": "Kimia",

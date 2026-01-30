@@ -485,7 +485,7 @@
       "probability": { "title": "Xác suất & Thống kê", "description": "Xác suất, kỳ vọng, phương sai và phân phối.", "subtitle": "Ký hiệu xác suất và thống kê" },
       "computerScience": { "title": "Khoa học máy tính", "description": "Ký hiệu Big-O, toán tử logic và ký hiệu thuật toán.", "subtitle": "Ký hiệu Big-O và thuật toán" },
       "numberTheory": { "title": "Lý thuyết số", "description": "Chia hết, số học modular và hàm lý thuyết số.", "subtitle": "Chia hết và số học modular" },
-      "physics": { "title": "Vật lý", "description": "Cơ học lượng tử, trường vector và hằng số vật lý." },
+      "physics": { "title": "Vật lý", "description": "Cơ học lượng tử, trường vector và hằng số vật lý.", "subtitle": "Cơ Học Lượng Tử và Hằng Số Vật Lý" },
       "chemistry": { "title": "Hóa học", "description": "Mũi tên phản ứng, đồng vị, liên kết và ký hiệu trạng thái.", "subtitle": "Mũi tên phản ứng và ký hiệu hóa học" },
       "finance": { "title": "Tiền tệ & Tài chính", "description": "Ký hiệu tiền tệ, công thức tài chính và ký hiệu." },
       "brackets": { "title": "Ngoặc & Dấu phân cách", "description": "Ngoặc góc, sàn, trần, chuẩn và cặp dấu phân cách.", "subtitle": "Ngoặc, sàn, trần và chuẩn" },

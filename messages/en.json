@@ -795,7 +795,8 @@
       },
       "physics": {
         "title": "Physics",
-        "description": "Quantum mechanics, vector fields, and physical constants."
+        "description": "Quantum mechanics, vector fields, and physical constants.",
+        "subtitle": "Quantum Mechanics and Physical Constants"
       },
       "chemistry": {
         "title": "Chemistry",

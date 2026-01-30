@@ -795,7 +795,8 @@
       },
       "physics": {
         "title": "Fisika",
-        "description": "Mekanika kuantum, medan vektor, dan konstanta fisik."
+        "description": "Mekanika kuantum, medan vektor, dan konstanta fisik.",
+        "subtitle": "Mekanika Kuantum dan Konstanta Fisik"
       },
       "chemistry": {
         "title": "Kimia",

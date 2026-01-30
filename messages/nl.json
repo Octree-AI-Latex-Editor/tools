@@ -485,7 +485,7 @@
       "probability": { "title": "Kansrekening & Statistiek", "description": "Kans, verwachting, variantie en verdelingen.", "subtitle": "Kans- en Statistische Notatie" },
       "computerScience": { "title": "Informatica", "description": "Big-O notatie, logische operatoren en algoritme-symbolen.", "subtitle": "Big-O Notatie en Algoritmes" },
       "numberTheory": { "title": "Getaltheorie", "description": "Deelbaarheid, modulaire rekenkunde en getaltheoretische functies.", "subtitle": "Deelbaarheid en Modulaire Rekenkunde" },
-      "physics": { "title": "Fysica", "description": "Quantummechanica, vectorvelden en fysische constanten." },
+      "physics": { "title": "Fysica", "description": "Quantummechanica, vectorvelden en fysische constanten.", "subtitle": "Quantummechanica en Fysische Constanten" },
       "chemistry": { "title": "Scheikunde", "description": "Reactiepijlen, isotopen, bindingen en toestandssymbolen.", "subtitle": "Reactiepijlen en Scheikundige Notatie" },
       "finance": { "title": "Valuta & Financiën", "description": "Valutasymbolen, financiële formules en notatie." },
       "brackets": { "title": "Haakjes & Scheidingstekens", "description": "Punthaken, vloer, plafond, normen en scheidingstekenparen.", "subtitle": "Haakjes, Vloer, Plafond en Normen" },

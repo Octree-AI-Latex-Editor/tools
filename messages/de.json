@@ -795,7 +795,8 @@
       },
       "physics": {
         "title": "Physik",
-        "description": "Quantenmechanik, Vektorfelder und physikalische Konstanten."
+        "description": "Quantenmechanik, Vektorfelder und physikalische Konstanten.",
+        "subtitle": "Quantenmechanik und Physikalische Konstanten"
       },
       "chemistry": {
         "title": "Chemie",

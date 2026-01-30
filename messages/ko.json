@@ -485,7 +485,7 @@
       "probability": { "title": "확률 및 통계", "description": "확률, 기댓값, 분산 및 분포.", "subtitle": "확률 및 통계 표기법" },
       "computerScience": { "title": "컴퓨터 과학", "description": "Big-O 표기법, 논리 연산자 및 알고리즘 기호.", "subtitle": "Big-O 표기법 및 알고리즘" },
       "numberTheory": { "title": "정수론", "description": "가분성, 모듈러 산술 및 정수론적 함수.", "subtitle": "가분성 및 모듈러 산술" },
-      "physics": { "title": "물리학", "description": "양자역학, 벡터장 및 물리 상수." },
+      "physics": { "title": "물리학", "description": "양자역학, 벡터장 및 물리 상수.", "subtitle": "양자역학 및 물리 상수" },
       "chemistry": { "title": "화학", "description": "반응 화살표, 동위원소, 결합 및 상태 기호.", "subtitle": "반응 화살표 및 화학 표기법" },
       "finance": { "title": "통화 및 금융", "description": "통화 기호, 금융 공식 및 표기법." },
       "brackets": { "title": "괄호 및 구분자", "description": "꺾쇠괄호, 바닥, 천장, 노름 및 구분자 쌍.", "subtitle": "괄호, 바닥, 천장 및 노름" },

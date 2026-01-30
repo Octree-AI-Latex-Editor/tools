@@ -795,7 +795,8 @@
       },
       "physics": {
         "title": "物理学",
-        "description": "量子力学、ベクトル場、物理定数。"
+        "description": "量子力学、ベクトル場、物理定数。",
+        "subtitle": "量子力学と物理定数"
       },
       "chemistry": {
         "title": "化学",
