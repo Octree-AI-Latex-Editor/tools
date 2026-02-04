@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "LaTeX Preview - Live Online LaTeX Editor with PDF Preview | Free Tool",
-  description: "Free online LaTeX editor with instant PDF preview. Write LaTeX code and see the compiled output in real-time. Perfect for testing LaTeX documents and learning LaTeX.",
+  title: "Free Online LaTeX Editor with Live PDF Preview | Overleaf Alternative",
+  description: "Write LaTeX, see PDF instantly. Free online LaTeX editor with real-time compilation — no account needed. Test code, learn LaTeX, export PDFs. Best free Overleaf alternative.",
   keywords: [
     "LaTeX preview",
     "online LaTeX editor",
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     canonical: '/tools/latex-preview',
   },
   openGraph: {
-    title: "LaTeX Preview - Live Online LaTeX Editor",
-    description: "Free LaTeX editor with instant PDF preview - write and compile LaTeX in real-time",
+    title: "Free Online LaTeX Editor with Live PDF Preview",
+    description: "Write LaTeX, see PDF instantly. Real-time compilation, no account needed. Best free Overleaf alternative.",
     url: 'https://tools.useoctree.com/tools/latex-preview',
     siteName: 'Octree LaTeX Tools',
     locale: 'en_US',
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "LaTeX Preview - Live Online LaTeX Editor",
-    description: "Free LaTeX editor with instant PDF preview - write and compile LaTeX in real-time",
+    title: "Free Online LaTeX Editor with Live PDF Preview",
+    description: "Write LaTeX, see PDF instantly. Real-time compilation, no account needed. Best free Overleaf alternative.",
   },
 };
 

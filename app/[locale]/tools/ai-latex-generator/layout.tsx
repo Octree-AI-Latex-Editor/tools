@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI LaTeX Generator - Generate LaTeX Code from Text | Free Online Tool",
-  description: "Free AI-powered LaTeX code generator. Describe what you need in plain text and get complete LaTeX documents instantly. Generate research papers, presentations, reports, and more with AI.",
+  title: "AI LaTeX Generator - Write Papers, Equations & Documents with AI | Free",
+  description: "Generate LaTeX code instantly with AI. Describe your document in plain English → get complete, compilable LaTeX. Research papers, equations, presentations & more. Free, no signup.",
   keywords: [
     "AI LaTeX generator",
     "generate LaTeX code",
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     canonical: '/tools/ai-latex-generator',
   },
   openGraph: {
-    title: "AI LaTeX Generator - Generate LaTeX from Text",
-    description: "AI-powered tool to generate complete LaTeX documents from text descriptions",
+    title: "AI LaTeX Generator - Write Papers & Documents with AI",
+    description: "Generate LaTeX code instantly with AI. Describe your document → get complete, compilable LaTeX. Free, no signup.",
     url: 'https://tools.useoctree.com/tools/ai-latex-generator',
     siteName: 'Octree LaTeX Tools',
     locale: 'en_US',
@@ -40,8 +40,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "AI LaTeX Generator - Generate LaTeX from Text",
-    description: "AI-powered tool to generate complete LaTeX documents from text descriptions",
+    title: "AI LaTeX Generator - Write Papers & Documents with AI",
+    description: "Generate LaTeX code instantly with AI. Describe your document → get complete, compilable LaTeX. Free, no signup.",
   },
 };
 
