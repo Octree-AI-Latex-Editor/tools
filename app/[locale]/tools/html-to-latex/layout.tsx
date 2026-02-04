@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Convert HTML to LaTeX Online Free - HTML to LaTeX Converter",
-  description: "Free AI-powered tool to convert HTML markup to LaTeX code. Paste your HTML and get clean LaTeX output with PDF preview. Convert HTML to LaTeX instantly.",
+  title: "HTML to LaTeX Converter Online - Free, Fast & Accurate | Octree",
+  description: "Convert HTML to LaTeX in seconds — tables, formatting & structure preserved. Paste any HTML and get clean, compilable LaTeX code. Free online with live PDF preview.",
   keywords: [
     "convert HTML to LaTeX",
     "HTML to LaTeX converter",
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
     canonical: '/tools/html-to-latex',
   },
   openGraph: {
-    title: "Convert HTML to LaTeX - Free Online Converter",
-    description: "AI-powered converter for HTML markup to LaTeX code with instant preview",
+    title: "HTML to LaTeX Converter Online - Free, Fast & Accurate",
+    description: "Convert HTML to LaTeX in seconds — tables, formatting & structure preserved. Free online with live PDF preview.",
     url: 'https://tools.useoctree.com/tools/html-to-latex',
     siteName: 'Octree LaTeX Tools',
     locale: 'en_US',
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Convert HTML to LaTeX - Free Online Converter",
-    description: "AI-powered converter for HTML markup to LaTeX code with instant preview",
+    title: "HTML to LaTeX Converter Online - Free, Fast & Accurate",
+    description: "Convert HTML to LaTeX in seconds — tables, formatting & structure preserved. Free online with live PDF preview.",
   },
 };
 

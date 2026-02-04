@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Convert MathML to LaTeX Online Free - MathML to LaTeX Converter",
-  description: "Free AI-powered tool to convert MathML (Mathematical Markup Language) to LaTeX code. Paste your MathML markup and get clean LaTeX output with PDF preview. Convert MathML to LaTeX instantly.",
+  title: "MathML to LaTeX Converter Online - Free & Instant | Octree",
+  description: "Paste MathML, get perfect LaTeX in one click. Convert Word equations, MathType & Office Math to LaTeX instantly. Free online tool with live preview — no signup needed.",
   keywords: [
     "convert MathML to LaTeX",
     "MathML to LaTeX converter",
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
     canonical: '/tools/mathml-to-latex',
   },
   openGraph: {
-    title: "Convert MathML to LaTeX - Free Online Converter",
-    description: "AI-powered converter for MathML markup to LaTeX code with instant preview",
+    title: "MathML to LaTeX Converter Online - Free & Instant",
+    description: "Paste MathML, get perfect LaTeX in one click. Convert Word equations & MathType to LaTeX instantly.",
     url: 'https://tools.useoctree.com/tools/mathml-to-latex',
     siteName: 'Octree LaTeX Tools',
     locale: 'en_US',
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Convert MathML to LaTeX - Free Online Converter",
-    description: "AI-powered converter for MathML markup to LaTeX code with instant preview",
+    title: "MathML to LaTeX Converter Online - Free & Instant",
+    description: "Paste MathML, get perfect LaTeX in one click. Convert Word equations & MathType to LaTeX instantly.",
   },
 };
 

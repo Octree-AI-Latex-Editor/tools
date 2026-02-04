@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Image to TikZ Converter - Convert Diagrams to LaTeX TikZ Code',
+  title: 'Image to TikZ Converter - Upload Any Diagram, Get Editable LaTeX Code',
   description:
-    'Convert images, diagrams, flowcharts, and shapes into clean, editable TikZ/LaTeX code. Upload any image and get compilable LaTeX with accurate geometry and structured nodes.',
+    'Turn screenshots & diagrams into editable TikZ code in seconds. Upload flowcharts, graphs, or hand-drawn sketches — AI converts them to clean LaTeX. Free, no signup.',
   keywords: [
     // Core image-to-tikz keywords
     'image to tikz',
@@ -45,17 +45,17 @@ export const metadata: Metadata = {
     'tikz examples',
   ],
   openGraph: {
-    title: 'Image to TikZ Converter - Convert Diagrams to LaTeX TikZ Code',
+    title: 'Image to TikZ Converter - Upload Any Diagram, Get Editable LaTeX',
     description:
-      'Convert images, diagrams, flowcharts, and shapes into clean, editable TikZ/LaTeX code. Upload any image and get compilable LaTeX with accurate geometry.',
+      'Turn screenshots & diagrams into editable TikZ code in seconds. AI converts flowcharts, graphs & sketches to clean LaTeX.',
     type: 'website',
     siteName: 'Octree Tools',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Image to TikZ Converter - Convert Diagrams to LaTeX TikZ Code',
+    title: 'Image to TikZ Converter - Upload Any Diagram, Get Editable LaTeX',
     description:
-      'Convert images, diagrams, flowcharts, and shapes into clean, editable TikZ/LaTeX code. Upload any image and get compilable LaTeX with accurate geometry.',
+      'Turn screenshots & diagrams into editable TikZ code in seconds. AI converts flowcharts, graphs & sketches to clean LaTeX.',
   },
   robots: {
     index: true,

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Convert Mermaid to LaTeX Online Free - Mermaid Diagram to LaTeX Converter",
-  description: "Free AI-powered tool to convert Mermaid diagrams to LaTeX code. Paste your Mermaid syntax and get clean LaTeX output with PDF preview. Convert Mermaid to LaTeX instantly.",
+  title: "Mermaid to TikZ/LaTeX Converter - Transform Diagrams Instantly | Free",
+  description: "Convert Mermaid diagrams to TikZ LaTeX code in one click. Flowcharts, sequence diagrams, Gantt charts → professional LaTeX graphics. Free online tool with live preview.",
   keywords: [
     "convert Mermaid to LaTeX",
     "Mermaid to LaTeX converter",
@@ -25,8 +25,8 @@ export const metadata: Metadata = {
     canonical: '/tools/mermaid-to-latex',
   },
   openGraph: {
-    title: "Convert Mermaid to LaTeX - Free Online Converter",
-    description: "AI-powered converter for Mermaid diagrams to LaTeX code with instant preview",
+    title: "Mermaid to TikZ/LaTeX Converter - Transform Diagrams Instantly",
+    description: "Convert Mermaid diagrams to TikZ LaTeX code in one click. Flowcharts, sequence diagrams → professional LaTeX graphics.",
     url: 'https://tools.useoctree.com/tools/mermaid-to-latex',
     siteName: 'Octree LaTeX Tools',
     locale: 'en_US',
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Convert Mermaid to LaTeX - Free Online Converter",
-    description: "AI-powered converter for Mermaid diagrams to LaTeX code with instant preview",
+    title: "Mermaid to TikZ/LaTeX Converter - Transform Diagrams Instantly",
+    description: "Convert Mermaid diagrams to TikZ LaTeX code in one click. Flowcharts, sequence diagrams → professional LaTeX graphics.",
   },
 };
 

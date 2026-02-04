@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Pgfplots Generator - AI-Powered LaTeX Plots & Graphs | Free Online Tool",
-  description: "Generate pgfplots graphs and charts using AI. Describe your plot in plain text and get clean pgfplots LaTeX code instantly. Free online pgfplots generator with PDF preview.",
+  title: "Free PGFPlots Generator Online - Create LaTeX Charts with AI",
+  description: "Create stunning LaTeX plots in seconds. Describe your chart → AI generates pgfplots code. Bar charts, scatter plots, line graphs & 3D plots. Free with live PDF preview.",
   keywords: [
     // Core pgfplots keywords
     "pgfplots generator",
@@ -40,8 +40,8 @@ export const metadata: Metadata = {
     canonical: '/tools/pgfplots-generator',
   },
   openGraph: {
-    title: "Pgfplots Generator - AI-Powered LaTeX Plots & Graphs",
-    description: "Generate pgfplots graphs using AI - describe your plot and get LaTeX code instantly",
+    title: "Free PGFPlots Generator Online - Create LaTeX Charts with AI",
+    description: "Create stunning LaTeX plots in seconds. Describe your chart → AI generates pgfplots code. Free with live preview.",
     url: 'https://tools.useoctree.com/tools/pgfplots-generator',
     siteName: 'Octree LaTeX Tools',
     locale: 'en_US',
@@ -49,8 +49,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Pgfplots Generator - AI-Powered LaTeX Plots & Graphs",
-    description: "Generate pgfplots graphs using AI - describe your plot and get LaTeX code instantly",
+    title: "Free PGFPlots Generator Online - Create LaTeX Charts with AI",
+    description: "Create stunning LaTeX plots in seconds. Describe your chart → AI generates pgfplots code. Free with live preview.",
   },
 };
 

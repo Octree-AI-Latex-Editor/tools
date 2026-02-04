@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "TikZ Diagram Generator - AI-Powered LaTeX Graphics | Free Online Tool",
-  description: "Generate TikZ diagrams and graphics using AI. Describe your diagram in plain text and get clean TikZ LaTeX code instantly. Free online TikZ generator with PDF preview.",
+  title: "Free TikZ Generator Online - Create Diagrams in Seconds with AI",
+  description: "Create TikZ diagrams instantly — just describe what you need. AI generates flowcharts, graphs, neural networks & more. Free online TikZ maker with live PDF preview. No signup required.",
   keywords: [
     // High-volume TikZ keywords
     "tikz",
@@ -78,8 +78,8 @@ export const metadata: Metadata = {
     canonical: '/tools/tikz-generator',
   },
   openGraph: {
-    title: "TikZ Diagram Generator - AI-Powered LaTeX Graphics",
-    description: "Generate TikZ diagrams using AI - describe your diagram and get LaTeX code instantly",
+    title: "Free TikZ Generator Online - Create Diagrams in Seconds",
+    description: "Create TikZ diagrams instantly with AI. Flowcharts, graphs, neural networks & more. Free online with live PDF preview.",
     url: 'https://tools.useoctree.com/tools/tikz-generator',
     siteName: 'Octree LaTeX Tools',
     locale: 'en_US',
@@ -87,8 +87,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "TikZ Diagram Generator - AI-Powered LaTeX Graphics",
-    description: "Generate TikZ diagrams using AI - describe your diagram and get LaTeX code instantly",
+    title: "Free TikZ Generator Online - Create Diagrams in Seconds",
+    description: "Create TikZ diagrams instantly with AI. Flowcharts, graphs, neural networks & more. Free online with live PDF preview.",
   },
 };
 
