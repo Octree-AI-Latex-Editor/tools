@@ -1,6 +1,7 @@
 import { Metadata } from "next";
+import { generateSymbolMetadata } from '@/lib/generate-symbol-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "LaTeX Logic & Proof Symbols - Quantifiers, Connectives | Free Symbol Reference",
   description: "Complete list of LaTeX logic and proof symbols. Copy-paste ∀, ∃, ¬, ∧, ∨, ⇒, ⇔, ⊢, ⊨, ∴, ∵ and all logical notation with LaTeX commands.",
   keywords: [
@@ -43,6 +44,15 @@ export const metadata: Metadata = {
     description: "Copy-paste LaTeX code for quantifiers, logical connectives, and proof notation.",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateSymbolMetadata(locale, 'logic', defaultMetadata);
+}
 
 export default function LogicLayout({
   children,

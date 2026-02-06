@@ -1,6 +1,7 @@
 import { Metadata } from "next";
+import { generateSymbolMetadata } from '@/lib/generate-symbol-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "LaTeX Latin Letters & Accents - Special Characters | Free Symbol Reference",
   description: "Complete list of LaTeX Latin letters and accented characters. Copy-paste ö, é, ñ, ç, å, ø, æ, œ and special Latin characters with LaTeX commands.",
   keywords: [
@@ -36,6 +37,15 @@ export const metadata: Metadata = {
     description: "Copy-paste LaTeX code for accented Latin letters and special characters.",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateSymbolMetadata(locale, 'latin', defaultMetadata);
+}
 
 export default function LatinLayout({
   children,

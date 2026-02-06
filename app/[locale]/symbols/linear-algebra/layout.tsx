@@ -1,6 +1,7 @@
 import { Metadata } from "next";
+import { generateSymbolMetadata } from '@/lib/generate-symbol-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "LaTeX Linear Algebra Symbols - Vectors, Matrices, Norms | Free Symbol Reference",
   description: "Complete list of LaTeX linear algebra symbols. Copy-paste vectors, matrices, transpose, inverse, determinant, norm, inner product with LaTeX commands.",
   keywords: [
@@ -42,6 +43,15 @@ export const metadata: Metadata = {
     description: "Copy-paste LaTeX code for vectors, matrices, norms, and linear algebra notation.",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateSymbolMetadata(locale, 'linear-algebra', defaultMetadata);
+}
 
 export default function LinearAlgebraLayout({
   children,

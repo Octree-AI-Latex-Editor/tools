@@ -1,6 +1,7 @@
 import { Metadata } from "next";
+import { generateSymbolMetadata } from '@/lib/generate-symbol-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "LaTeX Arrow Symbols - Left, Right, Double Arrows & More | Free Symbol Reference",
   description: "Complete list of LaTeX arrow symbols. Copy-paste →, ←, ↔, ⇒, ⇐, ⇔, ↑, ↓, ↗, ↘ and all directional arrows with LaTeX commands.",
   keywords: [
@@ -36,6 +37,15 @@ export const metadata: Metadata = {
     description: "Copy-paste LaTeX code for all arrow symbols - directional, double, and special arrows.",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateSymbolMetadata(locale, 'arrows', defaultMetadata);
+}
 
 export default function ArrowsLayout({
   children,

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
+import { generateSymbolMetadata } from '@/lib/generate-symbol-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "LaTeX Brackets & Delimiters - Angle Brackets, Floor, Ceiling, Norms | Free Symbol Reference",
   description: "Complete list of LaTeX bracket and delimiter symbols. Copy-paste angle brackets ⟨⟩, floor ⌊⌋, ceiling ⌈⌉, norms ‖‖, double brackets ⟦⟧, and all delimiter pairs with LaTeX code.",
   keywords: [
@@ -40,6 +41,15 @@ export const metadata: Metadata = {
     description: "Copy-paste LaTeX code for angle brackets, floor, ceiling, norms, and all delimiter pairs.",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateSymbolMetadata(locale, 'brackets', defaultMetadata);
+}
 
 export default function BracketsLayout({
   children,

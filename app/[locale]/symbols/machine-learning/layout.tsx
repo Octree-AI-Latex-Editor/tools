@@ -1,6 +1,7 @@
 import { Metadata } from "next";
+import { generateSymbolMetadata } from '@/lib/generate-symbol-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "LaTeX Machine Learning & AI Symbols - Loss, Gradient, Argmax | Free Symbol Reference",
   description: "Complete list of LaTeX machine learning and AI symbols. Copy-paste loss function ℒ, expectation 𝔼, KL divergence, argmax, argmin, tensor ⊗, gradient with LaTeX commands.",
   keywords: [
@@ -34,6 +35,15 @@ export const metadata: Metadata = {
     description: "Copy-paste LaTeX code for loss functions, gradients, argmax, and ML notation.",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateSymbolMetadata(locale, 'machine-learning', defaultMetadata);
+}
 
 export default function MLLayout({
   children,

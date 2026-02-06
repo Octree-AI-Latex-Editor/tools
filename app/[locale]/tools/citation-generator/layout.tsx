@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { generateToolMetadata } from '@/lib/generate-tool-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "LaTeX Citation Generator - Free BibTeX Citation Maker | Generate Citations Online",
   description: "Free AI-powered LaTeX citation generator. Create BibTeX citations from DOIs, article details, or URLs. Generate formatted citations for books, articles, and papers instantly.",
   keywords: [
@@ -44,6 +45,15 @@ export const metadata: Metadata = {
     description: "AI-powered tool to generate BibTeX citations from DOIs, article details, or URLs",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateToolMetadata(locale, 'citation-generator', defaultMetadata);
+}
 
 export default function CitationGeneratorLayout({
   children,

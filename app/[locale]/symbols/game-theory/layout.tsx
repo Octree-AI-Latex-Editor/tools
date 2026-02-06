@@ -1,6 +1,7 @@
 import { Metadata } from "next";
+import { generateSymbolMetadata } from '@/lib/generate-symbol-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "LaTeX Game Theory Symbols - Nash Equilibrium, Strategies | Free Symbol Reference",
   description: "Complete list of LaTeX game theory symbols. Copy-paste Nash equilibrium, payoff functions, strategies, Shapley value with LaTeX commands.",
   keywords: [
@@ -28,7 +29,15 @@ export const metadata: Metadata = {
   },
 };
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateSymbolMetadata(locale, 'game-theory', defaultMetadata);
+}
+
 export default function GameTheoryLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
-

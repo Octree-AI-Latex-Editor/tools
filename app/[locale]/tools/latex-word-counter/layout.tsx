@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { generateToolMetadata } from '@/lib/generate-tool-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "LaTeX Word Counter - Count Words in LaTeX Documents | Free Tool",
   description: "Free online LaTeX word counter. Accurately count words in your LaTeX documents, excluding commands and markup. Get detailed statistics for text, headers, and captions.",
   keywords: [
@@ -36,6 +37,15 @@ export const metadata: Metadata = {
     description: "Free online tool to accurately count words in LaTeX documents, excluding commands and markup",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateToolMetadata(locale, 'latex-word-counter', defaultMetadata);
+}
 
 export default function LatexWordCounterLayout({
   children,

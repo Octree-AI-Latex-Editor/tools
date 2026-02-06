@@ -1,6 +1,7 @@
 import { Metadata } from "next";
+import { generateSymbolMetadata } from '@/lib/generate-symbol-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "LaTeX Modal Logic Symbols - Necessity, Possibility, Box Diamond | Free Symbol Reference",
   description: "Complete list of LaTeX modal logic symbols. Copy-paste □ necessity, ◇ possibility, temporal logic, epistemic logic with LaTeX commands.",
   keywords: [
@@ -30,7 +31,15 @@ export const metadata: Metadata = {
   },
 };
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateSymbolMetadata(locale, 'modal-logic', defaultMetadata);
+}
+
 export default function ModalLogicLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
-

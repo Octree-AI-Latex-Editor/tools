@@ -1,6 +1,7 @@
 import { Metadata } from "next";
+import { generateSymbolMetadata } from '@/lib/generate-symbol-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "LaTeX Special Functions - Gamma, Zeta, Bessel | Free Symbol Reference",
   description: "Complete list of LaTeX special function symbols. Copy-paste Gamma Γ, Riemann zeta ζ, Bessel, Legendre, error function with LaTeX commands.",
   keywords: [
@@ -30,6 +31,15 @@ export const metadata: Metadata = {
     description: "Copy-paste LaTeX code for Gamma, zeta, Bessel, and special mathematical functions.",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateSymbolMetadata(locale, 'special-functions', defaultMetadata);
+}
 
 export default function SpecialFunctionsLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;

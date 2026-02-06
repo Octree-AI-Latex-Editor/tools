@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { generateToolMetadata } from '@/lib/generate-tool-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "HTML to LaTeX Converter Online - Free, Fast & Accurate | Octree",
   description: "Convert HTML to LaTeX in seconds — tables, formatting & structure preserved. Paste any HTML and get clean, compilable LaTeX code. Free online with live PDF preview.",
   keywords: [
@@ -37,6 +38,15 @@ export const metadata: Metadata = {
     description: "Convert HTML to LaTeX in seconds — tables, formatting & structure preserved. Free online with live PDF preview.",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateToolMetadata(locale, 'html-to-latex', defaultMetadata);
+}
 
 export default function HtmlToLatexLayout({
   children,

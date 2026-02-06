@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { generateToolMetadata } from '@/lib/generate-tool-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "AI LaTeX Generator - Write Papers, Equations & Documents with AI | Free",
   description: "Generate LaTeX code instantly with AI. Describe your document in plain English → get complete, compilable LaTeX. Research papers, equations, presentations & more. Free, no signup.",
   keywords: [
@@ -44,6 +45,15 @@ export const metadata: Metadata = {
     description: "Generate LaTeX code instantly with AI. Describe your document → get complete, compilable LaTeX. Free, no signup.",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateToolMetadata(locale, 'ai-latex-generator', defaultMetadata);
+}
 
 export default function AILatexGeneratorLayout({
   children,

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { generateToolMetadata } from '@/lib/generate-tool-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "Mermaid to TikZ/LaTeX Converter - Transform Diagrams Instantly | Free",
   description: "Convert Mermaid diagrams to TikZ LaTeX code in one click. Flowcharts, sequence diagrams, Gantt charts → professional LaTeX graphics. Free online tool with live preview.",
   keywords: [
@@ -38,6 +39,15 @@ export const metadata: Metadata = {
     description: "Convert Mermaid diagrams to TikZ LaTeX code in one click. Flowcharts, sequence diagrams → professional LaTeX graphics.",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateToolMetadata(locale, 'mermaid-to-latex', defaultMetadata);
+}
 
 export default function MermaidToLatexLayout({
   children,

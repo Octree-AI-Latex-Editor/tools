@@ -1,6 +1,7 @@
 import { Metadata } from "next";
+import { generateSymbolMetadata } from '@/lib/generate-symbol-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "LaTeX Operators - Binary, Advanced Math Operators | Free Symbol Reference",
   description: "Complete list of LaTeX operator symbols. Copy-paste ⊕, ⊗, ⊙, ⊖, ⋆, ∗, ∘, ∇, △, ▽ with LaTeX commands.",
   keywords: [
@@ -30,6 +31,15 @@ export const metadata: Metadata = {
     description: "Copy-paste LaTeX code for binary and advanced mathematical operators.",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateSymbolMetadata(locale, 'operators', defaultMetadata);
+}
 
 export default function OperatorsLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;

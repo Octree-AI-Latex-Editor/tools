@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { generateToolMetadata } from '@/lib/generate-tool-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "Equation to LaTeX Converter - Convert Math to LaTeX | Free Online Tool",
   description: "Convert mathematical equations to LaTeX code instantly. Enter text descriptions or upload images of equations to generate clean LaTeX code. Free online equation converter with live preview.",
   keywords: [
@@ -42,6 +43,15 @@ export const metadata: Metadata = {
     description: "Convert mathematical equations to LaTeX code instantly from text or images",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateToolMetadata(locale, 'equation-to-latex', defaultMetadata);
+}
 
 export default function EquationToLatexLayout({
   children,

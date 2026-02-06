@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { generateToolMetadata } from '@/lib/generate-tool-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "Free TikZ Generator Online - Create Diagrams in Seconds with AI",
   description: "Create TikZ diagrams instantly — just describe what you need. AI generates flowcharts, graphs, neural networks & more. Free online TikZ maker with live PDF preview. No signup required.",
   keywords: [
@@ -91,6 +92,15 @@ export const metadata: Metadata = {
     description: "Create TikZ diagrams instantly with AI. Flowcharts, graphs, neural networks & more. Free online with live PDF preview.",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateToolMetadata(locale, 'tikz-generator', defaultMetadata);
+}
 
 export default function TikzGeneratorLayout({
   children,

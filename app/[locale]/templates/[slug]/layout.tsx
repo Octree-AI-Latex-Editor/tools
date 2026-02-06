@@ -1,6 +1,68 @@
 import { Metadata } from 'next';
 import { templates } from '@/lib/templates';
 
+/**
+ * Locale-specific title formats for template pages.
+ * Uses {name} as placeholder for the template name.
+ * This ensures each locale gets a unique, translated title tag to avoid SEO duplicate title issues.
+ */
+const templateTitleFormats: Record<string, string> = {
+  en: '{name} LaTeX Template | Free Download & Preview',
+  es: 'Plantilla LaTeX {name} | Descarga Gratuita y Vista Previa',
+  fr: 'Modèle LaTeX {name} | Téléchargement Gratuit et Aperçu',
+  pt: 'Modelo LaTeX {name} | Download Gratuito e Visualização',
+  cn: '{name} LaTeX 模板 | 免费下载和预览',
+  ar: 'قالب LaTeX لـ {name} | تحميل مجاني ومعاينة',
+  de: 'LaTeX-Vorlage {name} | Kostenloser Download & Vorschau',
+  ja: '{name} LaTeX テンプレート | 無料ダウンロードとプレビュー',
+  it: 'Modello LaTeX {name} | Download Gratuito e Anteprima',
+  ko: '{name} LaTeX 템플릿 | 무료 다운로드 및 미리보기',
+  ru: 'Шаблон LaTeX {name} | Бесплатная загрузка и предпросмотр',
+  vi: 'Mẫu LaTeX {name} | Tải miễn phí và Xem trước',
+  nl: 'LaTeX-sjabloon {name} | Gratis downloaden & Voorbeeld',
+  ms: 'Templat LaTeX {name} | Muat Turun Percuma & Pratonton',
+  fil: 'Template ng LaTeX {name} | Libreng Download at Preview',
+  id: 'Template LaTeX {name} | Unduh Gratis & Pratinjau',
+};
+
+const templateDescriptionFormats: Record<string, string> = {
+  en: 'Free {name} LaTeX template with live PDF preview. {desc}. Edit and download professional LaTeX documents instantly.',
+  es: 'Plantilla LaTeX gratuita de {name} con vista previa de PDF en vivo. {desc}. Edita y descarga documentos LaTeX profesionales al instante.',
+  fr: 'Modèle LaTeX gratuit {name} avec aperçu PDF en direct. {desc}. Modifiez et téléchargez des documents LaTeX professionnels instantanément.',
+  pt: 'Modelo LaTeX gratuito {name} com visualização de PDF ao vivo. {desc}. Edite e baixe documentos LaTeX profissionais instantaneamente.',
+  cn: '免费 {name} LaTeX 模板，带实时 PDF 预览。{desc}。即时编辑和下载专业 LaTeX 文档。',
+  ar: 'قالب LaTeX مجاني لـ {name} مع معاينة PDF مباشرة. {desc}. قم بتحرير وتنزيل مستندات LaTeX الاحترافية على الفور.',
+  de: 'Kostenlose {name} LaTeX-Vorlage mit Live-PDF-Vorschau. {desc}. Bearbeiten und laden Sie professionelle LaTeX-Dokumente sofort herunter.',
+  ja: '無料の {name} LaTeX テンプレート、ライブ PDF プレビュー付き。{desc}。プロフェッショナルな LaTeX ドキュメントを即座に編集してダウンロード。',
+  it: 'Modello LaTeX gratuito {name} con anteprima PDF in tempo reale. {desc}. Modifica e scarica documenti LaTeX professionali istantaneamente.',
+  ko: '무료 {name} LaTeX 템플릿, 실시간 PDF 미리보기 제공. {desc}. 전문 LaTeX 문서를 즉시 편집하고 다운로드하세요.',
+  ru: 'Бесплатный шаблон LaTeX {name} с предпросмотром PDF в реальном времени. {desc}. Редактируйте и скачивайте профессиональные документы LaTeX мгновенно.',
+  vi: 'Mẫu LaTeX miễn phí {name} với xem trước PDF trực tiếp. {desc}. Chỉnh sửa và tải xuống tài liệu LaTeX chuyên nghiệp ngay lập tức.',
+  nl: 'Gratis {name} LaTeX-sjabloon met live PDF-voorbeeld. {desc}. Bewerk en download professionele LaTeX-documenten direct.',
+  ms: 'Templat LaTeX percuma {name} dengan pratonton PDF langsung. {desc}. Edit dan muat turun dokumen LaTeX profesional serta-merta.',
+  fil: 'Libreng {name} LaTeX template na may live PDF preview. {desc}. I-edit at i-download ang mga propesyonal na LaTeX na dokumento agad.',
+  id: 'Template LaTeX gratis {name} dengan pratinjau PDF langsung. {desc}. Edit dan unduh dokumen LaTeX profesional secara instan.',
+};
+
+const localeToOgLocale: Record<string, string> = {
+  en: 'en_US',
+  es: 'es_ES',
+  fr: 'fr_FR',
+  pt: 'pt_BR',
+  cn: 'zh_CN',
+  ar: 'ar_SA',
+  de: 'de_DE',
+  ja: 'ja_JP',
+  it: 'it_IT',
+  ko: 'ko_KR',
+  id: 'id_ID',
+  ms: 'ms_MY',
+  fil: 'fil_PH',
+  ru: 'ru_RU',
+  vi: 'vi_VN',
+  nl: 'nl_NL',
+};
+
 // Generate static params for all template pages at build time
 export function generateStaticParams() {
   return templates.map((template) => ({
@@ -11,9 +73,9 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string; locale: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const template = templates.find((t) => t.slug === slug);
 
   if (!template) {
@@ -23,8 +85,13 @@ export async function generateMetadata({
     };
   }
 
-  const title = `${template.title} LaTeX Template | Free Download & Preview`;
-  const description = `Free ${template.title} LaTeX template with live PDF preview. ${template.description}. Edit and download professional LaTeX documents instantly.`;
+  const titleFormat = templateTitleFormats[locale] || templateTitleFormats['en'];
+  const descFormat = templateDescriptionFormats[locale] || templateDescriptionFormats['en'];
+
+  const title = titleFormat.replace('{name}', template.title);
+  const description = descFormat
+    .replace('{name}', template.title)
+    .replace('{desc}', template.description);
 
   // SEO-optimized keywords based on search volume data
   const keywordMap: Record<string, string[]> = {
@@ -662,7 +729,10 @@ export async function generateMetadata({
       title,
       description,
       type: 'website',
-      url: `https://tools.useoctree.com/templates/${slug}`,
+      url: locale === 'en'
+        ? `https://tools.useoctree.com/templates/${slug}`
+        : `https://tools.useoctree.com/${locale}/templates/${slug}`,
+      locale: localeToOgLocale[locale] || 'en_US',
     },
     twitter: {
       card: 'summary_large_image',
@@ -677,14 +747,18 @@ export default async function TemplateLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string; locale: string }>;
 }) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const template = templates.find((t) => t.slug === slug);
 
   if (!template) {
     return children;
   }
+
+  const templateUrl = locale === 'en'
+    ? `https://tools.useoctree.com/templates/${slug}`
+    : `https://tools.useoctree.com/${locale}/templates/${slug}`;
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -692,7 +766,7 @@ export default async function TemplateLayout({
     name: `${template.title} LaTeX Template`,
     description: template.description,
     programmingLanguage: 'LaTeX',
-    codeRepository: `https://tools.useoctree.com/templates/${slug}`,
+    codeRepository: templateUrl,
     author: {
       '@type': 'Organization',
       name: 'Octree',

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
+import { generateSymbolMetadata } from '@/lib/generate-symbol-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "LaTeX Physics Symbols - Quantum Mechanics, Vectors, Tensors | Free Symbol Reference",
   description: "Complete list of LaTeX physics symbols. Copy-paste ℏ, ⟨ψ|, |ψ⟩, ∇, ∇², □, Lagrangian, Hamiltonian with LaTeX commands.",
   keywords: [
@@ -41,6 +42,15 @@ export const metadata: Metadata = {
     description: "Copy-paste LaTeX code for quantum mechanics, vectors, tensors, and physics notation.",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateSymbolMetadata(locale, 'physics', defaultMetadata);
+}
 
 export default function PhysicsLayout({
   children,

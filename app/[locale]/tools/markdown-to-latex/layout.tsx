@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { generateToolMetadata } from '@/lib/generate-tool-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "Convert Markdown to LaTeX Online Free - Markdown to LaTeX Converter",
   description: "Free AI-powered tool to convert Markdown documents to LaTeX code. Convert Markdown formatting, tables, math equations, and text to clean LaTeX output with PDF preview. Convert Markdown to LaTeX instantly.",
   keywords: [
@@ -39,6 +40,15 @@ export const metadata: Metadata = {
     description: "AI-powered converter for Markdown documents to LaTeX code with instant preview",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateToolMetadata(locale, 'markdown-to-latex', defaultMetadata);
+}
 
 export default function MarkdownToLatexLayout({
   children,

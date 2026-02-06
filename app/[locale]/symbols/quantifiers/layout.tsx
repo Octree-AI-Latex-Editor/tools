@@ -1,6 +1,7 @@
 import { Metadata } from "next";
+import { generateSymbolMetadata } from '@/lib/generate-symbol-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "LaTeX Quantifiers - For All, Exists, Element Of | Free Symbol Reference",
   description: "Complete list of LaTeX quantifier symbols. Copy-paste ∀, ∃, ∄, ∃!, ∈, ∉ with set builder notation and LaTeX commands.",
   keywords: [
@@ -30,7 +31,15 @@ export const metadata: Metadata = {
   },
 };
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateSymbolMetadata(locale, 'quantifiers', defaultMetadata);
+}
+
 export default function QuantifiersLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
-

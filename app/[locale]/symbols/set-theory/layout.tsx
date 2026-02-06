@@ -1,6 +1,7 @@
 import { Metadata } from "next";
+import { generateSymbolMetadata } from '@/lib/generate-symbol-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "LaTeX Set Theory Symbols - Union, Intersection, Subset | Free Symbol Reference",
   description: "Complete list of LaTeX set theory symbols. Copy-paste ∅, ∈, ∉, ⊂, ⊆, ∪, ∩, ℕ, ℤ, ℚ, ℝ, ℂ and all set notation with LaTeX commands.",
   keywords: [
@@ -40,6 +41,15 @@ export const metadata: Metadata = {
     description: "Copy-paste LaTeX code for set theory - unions, intersections, subsets, and number sets.",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateSymbolMetadata(locale, 'set-theory', defaultMetadata);
+}
 
 export default function SetTheoryLayout({
   children,
