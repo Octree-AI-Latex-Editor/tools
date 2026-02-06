@@ -30,16 +30,10 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const authHeader: Record<string, string> = {};
-    if (process.env.COMPILE_SERVICE_AUTH_TOKEN) {
-      authHeader['Authorization'] = `Bearer ${process.env.COMPILE_SERVICE_AUTH_TOKEN}`;
-    }
-
     const response = await fetch(WORD_COUNT_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        ...authHeader,
       },
       body: JSON.stringify({ files }),
     });

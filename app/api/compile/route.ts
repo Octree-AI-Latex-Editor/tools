@@ -5,9 +5,11 @@ export async function POST(request: NextRequest) {
     const { latex } = await request.json();
 
     const COMPILE_SERVICE_URL = process.env.COMPILE_SERVICE_URL || 'http://142.93.195.236:3001';
+    
+    const authToken = request.headers.get('x-supabase-token') || process.env.TOOLS_SERVICE_TOKEN;
     const authHeader: Record<string, string> = {};
-    if (process.env.COMPILE_SERVICE_AUTH_TOKEN) {
-      authHeader['Authorization'] = `Bearer ${process.env.COMPILE_SERVICE_AUTH_TOKEN}`;
+    if (authToken) {
+      authHeader['Authorization'] = `Bearer ${authToken}`;
     }
 
     // Call Octree's compile server
