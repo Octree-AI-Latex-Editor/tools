@@ -1,6 +1,7 @@
 import { Metadata } from "next";
+import { generateSymbolMetadata } from '@/lib/generate-symbol-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "LaTeX Functions & Mapping Symbols - Arrows, Composition | Free Symbol Reference",
   description: "Complete list of LaTeX function and mapping symbols. Copy-paste f(x), →, ↦, ∘, injective, surjective notation with LaTeX commands.",
   keywords: [
@@ -29,6 +30,15 @@ export const metadata: Metadata = {
     description: "Copy-paste LaTeX code for function notation, mappings, and composition.",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateSymbolMetadata(locale, 'functions', defaultMetadata);
+}
 
 export default function FunctionsLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;

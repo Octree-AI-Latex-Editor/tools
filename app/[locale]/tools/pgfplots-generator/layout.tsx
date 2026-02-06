@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { generateToolMetadata } from '@/lib/generate-tool-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "Free PGFPlots Generator Online - Create LaTeX Charts with AI",
   description: "Create stunning LaTeX plots in seconds. Describe your chart → AI generates pgfplots code. Bar charts, scatter plots, line graphs & 3D plots. Free with live PDF preview.",
   keywords: [
@@ -53,6 +54,15 @@ export const metadata: Metadata = {
     description: "Create stunning LaTeX plots in seconds. Describe your chart → AI generates pgfplots code. Free with live preview.",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateToolMetadata(locale, 'pgfplots-generator', defaultMetadata);
+}
 
 export default function PgfplotsGeneratorLayout({
   children,

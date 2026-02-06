@@ -1,6 +1,7 @@
 import { Metadata } from "next";
+import { generateSymbolMetadata } from '@/lib/generate-symbol-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "LaTeX Probability & Statistics Symbols - Expectation, Variance | Free Symbol Reference",
   description: "Complete list of LaTeX probability and statistics symbols. Copy-paste P(A), E[X], Var, σ, μ, ~, ⊥, binomial coefficients with LaTeX commands.",
   keywords: [
@@ -42,6 +43,15 @@ export const metadata: Metadata = {
     description: "Copy-paste LaTeX code for probability, expectation, variance, and statistical notation.",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateSymbolMetadata(locale, 'probability', defaultMetadata);
+}
 
 export default function ProbabilityLayout({
   children,

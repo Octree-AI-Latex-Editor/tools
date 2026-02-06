@@ -1,6 +1,7 @@
 import { Metadata } from "next";
+import { generateSymbolMetadata } from '@/lib/generate-symbol-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "LaTeX Greek Letters - Alpha, Beta, Gamma, Delta & More | Free Symbol Reference",
   description: "Complete list of LaTeX Greek letter symbols. Copy-paste α, β, γ, δ, θ, π, σ, ω and all Greek letters (lowercase and uppercase) with LaTeX commands.",
   keywords: [
@@ -41,6 +42,15 @@ export const metadata: Metadata = {
     description: "Copy-paste LaTeX code for all Greek letters - alpha, beta, gamma, delta, and more.",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateSymbolMetadata(locale, 'greek', defaultMetadata);
+}
 
 export default function GreekLayout({
   children,

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
+import { generateSymbolMetadata } from '@/lib/generate-symbol-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "LaTeX Number Theory Symbols - Divisibility, Modular Arithmetic | Free Symbol Reference",
   description: "Complete list of LaTeX number theory symbols. Copy-paste |, ∤, gcd, lcm, ≡, φ(n), Legendre symbol with LaTeX commands.",
   keywords: [
@@ -34,6 +35,15 @@ export const metadata: Metadata = {
     description: "Copy-paste LaTeX code for divisibility, modular arithmetic, and number-theoretic functions.",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateSymbolMetadata(locale, 'number-theory', defaultMetadata);
+}
 
 export default function NumberTheoryLayout({
   children,

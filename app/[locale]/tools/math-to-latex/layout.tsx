@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { generateToolMetadata } from '@/lib/generate-tool-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "Convert Handwritten Math to LaTeX Online Free - Math Equation to LaTeX Converter",
   description: "Free AI-powered tool to convert handwritten math equations, formulas, and expressions to LaTeX code. Upload image of math equations and get clean LaTeX output with PDF preview. Convert math text to LaTeX instantly.",
   keywords: [
@@ -44,6 +45,15 @@ export const metadata: Metadata = {
     description: "AI-powered converter for handwritten math equations and formulas to LaTeX code with instant preview",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateToolMetadata(locale, 'math-to-latex', defaultMetadata);
+}
 
 export default function MathToLatexLayout({
   children,

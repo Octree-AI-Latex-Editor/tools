@@ -1,6 +1,7 @@
 import { Metadata } from "next";
+import { generateSymbolMetadata } from '@/lib/generate-symbol-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "LaTeX Currency & Finance Symbols - Dollar, Euro, Formulas | Free Symbol Reference",
   description: "Complete list of LaTeX currency and finance symbols. Copy-paste $, €, £, ¥, ₹, ₿, %, NPV, IRR, compound interest formulas with LaTeX commands.",
   keywords: [
@@ -34,6 +35,15 @@ export const metadata: Metadata = {
     description: "Copy-paste LaTeX code for currency symbols and financial notation.",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateSymbolMetadata(locale, 'finance', defaultMetadata);
+}
 
 export default function FinanceLayout({
   children,

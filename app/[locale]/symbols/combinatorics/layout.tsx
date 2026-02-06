@@ -1,6 +1,7 @@
 import { Metadata } from "next";
+import { generateSymbolMetadata } from '@/lib/generate-symbol-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "LaTeX Combinatorics Symbols - Factorial, Binomial, Permutations | Free Symbol Reference",
   description: "Complete list of LaTeX combinatorics symbols. Copy-paste factorial n!, binomial coefficient, nCr, nPr, Stirling numbers with LaTeX commands.",
   keywords: [
@@ -31,6 +32,15 @@ export const metadata: Metadata = {
     description: "Copy-paste LaTeX code for factorials, binomials, permutations, and combinatorial notation.",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateSymbolMetadata(locale, 'combinatorics', defaultMetadata);
+}
 
 export default function CombinatoricsLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;

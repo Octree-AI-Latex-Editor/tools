@@ -1,6 +1,7 @@
 import { Metadata } from "next";
+import { generateSymbolMetadata } from '@/lib/generate-symbol-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "LaTeX Logic Gates & Boolean Algebra Symbols | Free Symbol Reference",
   description: "Complete list of LaTeX boolean algebra and logic gate symbols. Copy-paste AND ∧, OR ∨, NOT ¬, XOR ⊕, NAND ⊼, NOR with LaTeX commands.",
   keywords: [
@@ -30,6 +31,15 @@ export const metadata: Metadata = {
     description: "Copy-paste LaTeX code for AND, OR, NOT, XOR, NAND, and boolean algebra.",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateSymbolMetadata(locale, 'boolean', defaultMetadata);
+}
 
 export default function BooleanLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;

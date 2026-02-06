@@ -1,6 +1,7 @@
 import { Metadata } from "next";
+import { generateSymbolMetadata } from '@/lib/generate-symbol-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "LaTeX Differential Geometry Symbols - Manifolds, Curvature | Free Symbol Reference",
   description: "Complete list of LaTeX differential geometry symbols. Copy-paste manifold, tangent space, Christoffel, Riemann curvature, metric tensor with LaTeX commands.",
   keywords: [
@@ -32,7 +33,15 @@ export const metadata: Metadata = {
   },
 };
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateSymbolMetadata(locale, 'differential-geometry', defaultMetadata);
+}
+
 export default function DifferentialGeometryLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
-

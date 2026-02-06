@@ -1,6 +1,7 @@
 import { Metadata } from "next";
+import { generateSymbolMetadata } from '@/lib/generate-symbol-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "LaTeX Graph Theory Symbols - Vertices, Edges, Adjacency | Free Symbol Reference",
   description: "Complete list of LaTeX graph theory symbols. Copy-paste vertex, edge, adjacency, path, cycle, chromatic number with LaTeX commands.",
   keywords: [
@@ -30,6 +31,15 @@ export const metadata: Metadata = {
     description: "Copy-paste LaTeX code for vertices, edges, paths, cycles, and graph notation.",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateSymbolMetadata(locale, 'graph-theory', defaultMetadata);
+}
 
 export default function GraphTheoryLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;

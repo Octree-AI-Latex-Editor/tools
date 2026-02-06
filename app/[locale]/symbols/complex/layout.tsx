@@ -1,6 +1,7 @@
 import { Metadata } from "next";
+import { generateSymbolMetadata } from '@/lib/generate-symbol-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "LaTeX Complex Numbers - Real, Imaginary, Modulus | Free Symbol Reference",
   description: "Complete list of LaTeX complex number symbols. Copy-paste ℂ, i, j, Re, Im, conjugate, modulus, argument with LaTeX commands.",
   keywords: [
@@ -28,6 +29,15 @@ export const metadata: Metadata = {
     description: "Copy-paste LaTeX code for complex numbers, conjugates, modulus, and polar form.",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateSymbolMetadata(locale, 'complex', defaultMetadata);
+}
 
 export default function ComplexLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;

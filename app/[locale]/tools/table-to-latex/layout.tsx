@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { generateToolMetadata } from '@/lib/generate-tool-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "Convert Excel to LaTeX Online Free - CSV, JSON, Excel to LaTeX Converter",
   description: "Free AI-powered tool to convert Excel spreadsheets from CSV, JSON, and XLSX files to LaTeX code. Upload your Excel files and get clean LaTeX table output with PDF preview. Convert Excel to LaTeX instantly.",
   keywords: [
@@ -42,6 +43,15 @@ export const metadata: Metadata = {
     description: "AI-powered converter for CSV, JSON, and Excel spreadsheets to LaTeX code with instant preview",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateToolMetadata(locale, 'table-to-latex', defaultMetadata);
+}
 
 export default function TableToLatexLayout({
   children,

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
+import { generateSymbolMetadata } from '@/lib/generate-symbol-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "LaTeX Tensor Notation - Einstein Summation, Indices | Free Symbol Reference",
   description: "Complete list of LaTeX tensor notation symbols. Copy-paste Einstein summation, covariant/contravariant indices, Kronecker delta, Levi-Civita with LaTeX commands.",
   keywords: [
@@ -27,6 +28,15 @@ export const metadata: Metadata = {
     description: "Copy-paste LaTeX code for Einstein summation, indices, and tensor operations.",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateSymbolMetadata(locale, 'tensors', defaultMetadata);
+}
 
 export default function TensorsLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;

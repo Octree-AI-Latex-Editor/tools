@@ -1,6 +1,7 @@
 import { Metadata } from "next";
+import { generateSymbolMetadata } from '@/lib/generate-symbol-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "LaTeX Optimization Symbols - Argmax, Argmin, Constraints | Free Symbol Reference",
   description: "Complete list of LaTeX optimization and operations research symbols. Copy-paste argmax, argmin, constraints, Lagrangian, KKT with LaTeX commands.",
   keywords: [
@@ -29,7 +30,15 @@ export const metadata: Metadata = {
   },
 };
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateSymbolMetadata(locale, 'optimization', defaultMetadata);
+}
+
 export default function OptimizationLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
-

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { generateToolMetadata } from '@/lib/generate-tool-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "MathML to LaTeX Converter Online - Free & Instant | Octree",
   description: "Paste MathML, get perfect LaTeX in one click. Convert Word equations, MathType & Office Math to LaTeX instantly. Free online tool with live preview — no signup needed.",
   keywords: [
@@ -37,6 +38,15 @@ export const metadata: Metadata = {
     description: "Paste MathML, get perfect LaTeX in one click. Convert Word equations & MathType to LaTeX instantly.",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateToolMetadata(locale, 'mathml-to-latex', defaultMetadata);
+}
 
 export default function MathMLToLatexLayout({
   children,

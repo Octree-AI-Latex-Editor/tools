@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { generateToolMetadata } from '@/lib/generate-tool-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "ArXiv to LaTeX - Import arXiv Papers into Octree",
   description: "Import arXiv papers directly into Octree. Download and edit LaTeX source files from arXiv papers with our free tool. Coming soon!",
   keywords: [
@@ -32,6 +33,15 @@ export const metadata: Metadata = {
     description: "Import arXiv papers directly into Octree for editing",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateToolMetadata(locale, 'arxiv-to-latex', defaultMetadata);
+}
 
 export default function ArxivToLatexLayout({
   children,

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { generateToolMetadata } from '@/lib/generate-tool-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "Free Online LaTeX Editor with Live PDF Preview | Overleaf Alternative",
   description: "Write LaTeX, see PDF instantly. Free online LaTeX editor with real-time compilation — no account needed. Test code, learn LaTeX, export PDFs. Best free Overleaf alternative.",
   keywords: [
@@ -46,6 +47,15 @@ export const metadata: Metadata = {
     description: "Write LaTeX, see PDF instantly. Real-time compilation, no account needed. Best free Overleaf alternative.",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateToolMetadata(locale, 'latex-preview', defaultMetadata);
+}
 
 export default function LatexPreviewLayout({
   children,

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
+import { generateSymbolMetadata } from '@/lib/generate-symbol-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "LaTeX Accents & Modifiers - Hat, Tilde, Vector, Bar Symbols | Free Symbol Reference",
   description: "Complete list of LaTeX accent and modifier symbols. Copy-paste hat ˆ, tilde ˜, dot ˙, bar ¯, vector arrows →, overbrace, underbrace with LaTeX code for mathematical notation.",
   keywords: [
@@ -44,6 +45,15 @@ export const metadata: Metadata = {
     description: "Copy-paste LaTeX code for hats, tildes, dots, bars, vectors, and text decorations.",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateSymbolMetadata(locale, 'accents', defaultMetadata);
+}
 
 export default function AccentsLayout({
   children,

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
+import { generateToolMetadata } from '@/lib/generate-tool-metadata';
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: 'Image to TikZ Converter - Upload Any Diagram, Get Editable LaTeX Code',
   description:
     'Turn screenshots & diagrams into editable TikZ code in seconds. Upload flowcharts, graphs, or hand-drawn sketches — AI converts them to clean LaTeX. Free, no signup.',
@@ -65,6 +66,15 @@ export const metadata: Metadata = {
     canonical: '/tools/image-to-tikz',
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateToolMetadata(locale, 'image-to-tikz', defaultMetadata);
+}
 
 export default function ImageToTikzLayout({
   children,

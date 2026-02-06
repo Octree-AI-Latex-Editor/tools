@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
+import { getTranslations } from 'next-intl/server';
 
-export const metadata: Metadata = {
+const localeToOgLocale: Record<string, string> = {
+  en: 'en_US', es: 'es_ES', fr: 'fr_FR', pt: 'pt_BR', cn: 'zh_CN',
+  ar: 'ar_SA', de: 'de_DE', ja: 'ja_JP', it: 'it_IT', ko: 'ko_KR',
+  id: 'id_ID', ms: 'ms_MY', fil: 'fil_PH', ru: 'ru_RU', vi: 'vi_VN', nl: 'nl_NL',
+};
+
+const defaultMetadata: Metadata = {
   title: "60+ Free LaTeX Templates - Resume, CV, Research Paper, Beamer & More | Octree",
   description: "Download 60+ free professional LaTeX templates: resume, CV, research paper, thesis, beamer presentation, homework, poster, obituary, interactive flashcards & more. Ready-to-use code with live PDF previews. Perfect for academics, students & professionals.",
   keywords: [
@@ -145,6 +152,47 @@ export const metadata: Metadata = {
     description: "Download 60+ free LaTeX templates: resume, CV, thesis, beamer, homework, poster, obituary, interactive flashcards. Ready-to-use code with live PDF previews.",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+
+  if (locale === 'en') {
+    return defaultMetadata;
+  }
+
+  try {
+    const t = await getTranslations({ locale, namespace: 'metadata' });
+    const title = t('templates.main.title');
+    const description = t('templates.main.description');
+
+    return {
+      ...defaultMetadata,
+      title,
+      description,
+      alternates: {
+        canonical: `/${locale}/templates`,
+      },
+      openGraph: {
+        ...(typeof defaultMetadata.openGraph === 'object' ? defaultMetadata.openGraph : {}),
+        title,
+        description,
+        url: `https://tools.useoctree.com/${locale}/templates`,
+        locale: localeToOgLocale[locale] || locale,
+      },
+      twitter: {
+        ...(typeof defaultMetadata.twitter === 'object' ? defaultMetadata.twitter : {}),
+        title,
+        description,
+      },
+    };
+  } catch {
+    return defaultMetadata;
+  }
+}
 
 const templatesList = [
   { name: "Research Paper", slug: "research-paper", description: "IEEE/ACM conference paper template with sections" },
