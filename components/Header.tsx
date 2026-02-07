@@ -1,11 +1,12 @@
 'use client';
 
 import Link from "next/link";
-import { OctreeLogo } from "@/components/icons/octree-logo";
+import Image from "next/image";
 import { DM_Sans } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 import { useTranslations } from 'next-intl';
+import { siteConfig } from "@/lib/site-config";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -21,17 +22,23 @@ export default function Header() {
         <div className="relative flex h-14 items-center justify-between">
           <div className="flex items-center gap-8">
             <Link
-              href="https://tools.useoctree.com"
+              href="/"
               className="flex items-center space-x-2"
             >
-              <OctreeLogo className="h-7 w-7" />
+              <Image
+                src="/logo.png"
+                alt={siteConfig.name}
+                width={28}
+                height={28}
+                className="h-7 w-7"
+              />
               <span
                 className={cn(
                   "text-lg font-medium tracking-tight text-neutral-900",
                   dmSans.className
                 )}
               >
-                Octree
+                {siteConfig.name}
               </span>
             </Link>
           </div>
@@ -42,27 +49,17 @@ export default function Header() {
             >
               {t('tools')}
             </Link>
-            <Link
-              href="/templates"
-              className="text-sm font-medium text-gray-700 hover:text-gray-900"
-            >
-              {t('templates')}
-            </Link>
-            <Link
-              href="/symbols"
-              className="text-sm font-medium text-gray-700 hover:text-gray-900"
-            >
-              {t('symbols')}
-            </Link>
           </div>
-          <Button asChild size="lg" variant="gradient">
-            <Link
-              href="https://app.useoctree.com"
-              className="inline-flex h-10 items-center justify-center rounded-lg bg-[#5B8DEF] px-5 text-sm font-medium text-white transition-colors hover:bg-[#4a7de0]"
-            >
-              {t('getStarted')}
-            </Link>
-          </Button>
+          {siteConfig.cta?.primary?.url && (
+            <Button asChild size="lg" variant="gradient">
+              <Link
+                href={siteConfig.cta.primary.url}
+                className="inline-flex h-10 items-center justify-center rounded-lg px-5 text-sm font-medium text-white transition-colors"
+              >
+                {siteConfig.cta?.primary?.text || t('getStarted')}
+              </Link>
+            </Button>
+          )}
         </div>
       </div>
     </nav>

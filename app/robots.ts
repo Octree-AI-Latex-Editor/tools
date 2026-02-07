@@ -1,12 +1,14 @@
 import { MetadataRoute } from 'next'
+import { siteConfig } from '@/lib/site-config'
 
 export default function robots(): MetadataRoute.Robots {
+  const baseUrl = siteConfig.websiteUrl || 'https://example.com'
+
   return {
     rules: {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://tools.useoctree.com/sitemap.xml',
+    sitemap: `${baseUrl}/sitemap.xml`,
   }
 }
-

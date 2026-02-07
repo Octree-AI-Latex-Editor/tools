@@ -3,7 +3,7 @@ import { LOCALES, DEFAULT_LOCALE, LANG_COOKIE, normalizeLocale, type Locale } fr
 
 /**
  * Get the request locale from cookie or Accept-Language header
- * Priority: cookie (octree_lang) → Accept-Language → default (en)
+ * Priority: cookie (tools_lang) → Accept-Language → default (en)
  */
 export async function getRequestLocale(): Promise<Locale> {
   // Try cookie first

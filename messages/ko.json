@@ -1,863 +1,98 @@
 {
   "language": {
-    "label": "언어",
-    "en": "영어",
-    "fr": "프랑스어",
-    "es": "스페인어",
-    "pt": "포르투갈어",
-    "cn": "중국어",
-    "ar": "아랍어",
-    "de": "독일어",
-    "ja": "일본어",
-    "it": "이탈리아어",
-    "ko": "한국어",
-    "id": "인도네시아어",
-    "fil": "필리핀어",
-    "ms": "말레이어",
-    "ru": "러시아어",
-    "vi": "베트남어",
-    "nl": "네덜란드어"
+    "label": "Language",
+    "en": "English",
+    "fr": "French",
+    "es": "Spanish",
+    "pt": "Portuguese",
+    "cn": "Chinese",
+    "ar": "Arabic",
+    "de": "German",
+    "ja": "Japanese",
+    "it": "Italian",
+    "ko": "Korean",
+    "id": "Indonesian",
+    "fil": "Filipino",
+    "ms": "Malay",
+    "ru": "Russian",
+    "vi": "Vietnamese",
+    "nl": "Dutch"
   },
   "common": {
-    "backToTools": "도구로 돌아가기",
-    "tryNow": "지금 사용해보기",
-    "view": "보기",
-    "open": "열기",
-    "openInOctree": "Octree에서 열기",
-    "search": "검색",
-    "searchTools": "도구 검색...",
-    "searchTemplates": "템플릿 검색...",
-    "noResults": "결과를 찾을 수 없습니다",
-    "loading": "로딩 중...",
-    "processing": "처리 중...",
-    "generating": "생성 중...",
-    "compiling": "컴파일 중...",
-    "error": "오류",
-    "success": "성공",
-    "close": "닫기",
-    "copy": "복사",
-    "copied": "복사됨!",
-    "download": "다운로드",
-    "export": "내보내기",
-    "exportAs": "다른 형식으로 내보내기",
-    "browseFiles": "파일 찾아보기",
-    "dropFileHere": "파일을 여기에 놓으세요",
-    "fileUploaded": "파일 업로드 성공",
-    "categories": "카테고리",
-    "all": "전체",
-    "tools": "도구",
-    "templates": "템플릿",
-    "template": "템플릿",
-    "templatesCount": "{count}개 템플릿",
-    "starOnGitHub": "GitHub에서 스타",
-    "joinUsOnReddit": "Reddit에서 팔로우",
-    "joinOurDiscord": "Discord 참여"
+    "backToTools": "Back to Tools",
+    "tryNow": "Try Now",
+    "view": "View",
+    "open": "Open",
+    "search": "Search",
+    "searchTools": "Search tools...",
+    "noResults": "No results found",
+    "loading": "Loading...",
+    "processing": "Processing...",
+    "generating": "Generating...",
+    "error": "Error",
+    "success": "Success",
+    "close": "Close",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "download": "Download",
+    "export": "Export",
+    "exportAs": "Export as",
+    "browseFiles": "browse files",
+    "dropFileHere": "Drop your file here",
+    "fileUploaded": "File uploaded successfully",
+    "categories": "Categories",
+    "all": "All",
+    "tools": "Tools"
   },
   "home": {
-    "title": "무료 LaTeX 도구 및 템플릿",
-    "description": "손글씨 수학 방정식과 표를 LaTeX로 변환, 인용 생성, 전문 템플릿 탐색.",
-    "noToolsFound": "검색과 일치하는 도구를 찾을 수 없습니다."
-  },
-  "templates": {
-    "title": "무료 LaTeX 도구 및 템플릿",
-    "description": "학술 논문, 프레젠테이션, 이력서 등을 위한 전문 LaTeX 템플릿.",
-    "allTemplates": "모든 템플릿",
-    "noTemplatesFound": "검색과 일치하는 템플릿을 찾을 수 없습니다.",
-    "viewTemplate": "템플릿 보기",
-    "backToAllTemplates": "모든 템플릿으로 돌아가기",
-    "templateNotFound": "템플릿을 찾을 수 없습니다",
-    "backToTemplates": "템플릿으로 돌아가기",
-    "download": "다운로드",
-    "copyCode": "코드 복사",
-    "sourceCode": "소스 코드",
-    "preview": "미리보기",
-    "openAsTemplate": "템플릿으로 열기",
-    "viewSource": "소스 보기",
-    "hideSource": "소스 숨기기",
-    "viewPdf": "PDF 보기",
-    "category": "카테고리",
-    "license": "라이선스",
-    "freeToUse": "무료 사용 (MIT)",
-    "abstract": "초록",
-    "tags": "태그",
-    "latexSourceCode": "LaTeX 소스 코드",
-    "loadingPreview": "미리보기 로딩 중..."
+    "title": "Free Online Tools",
+    "description": "Useful tools to help you get things done faster.",
+    "noToolsFound": "No tools found matching your search."
   },
   "tools": {
-    "input": "입력",
-    "output": "출력",
-    "code": "코드",
-    "preview": "미리보기",
-    "yourHandwrittenNotes": "손글씨 노트",
-    "cleanLatexCode": "깔끔한 LaTeX 코드",
-    "uploadImageDescription": "수학 표현식이 포함된 이미지 업로드",
-    "readyToCopy": "모든 LaTeX 편집기에 복사 가능",
-    "generatingPreview": "미리보기 생성 중...",
-    "previewWillAppear": "미리보기가 여기에 표시됩니다...",
-    "backToTools": "도구로 돌아가기",
-    "openInOctree": "Octree에서 열기",
-    "export": "내보내기",
-    "exportAsLatex": "LaTeX로 내보내기",
-    "exportAsPdf": "PDF로 내보내기",
-    "exportAsImage": "이미지로 내보내기",
-    "fileUploaded": "파일 업로드 성공",
-    "dropFileHere": "파일을 여기에 놓으세요",
-    "orBrowseFiles": "또는 파일 찾아보기",
-    "processing": "처리 중...",
-    "convertingToLatex": "LaTeX로 변환 중...",
-    "converting": "변환 중...",
-    "outputWillAppear": "출력이 여기에 표시됩니다...",
-    "codeTab": "코드",
-    "previewTab": "미리보기",
-    "readyToUseInLatex": "LaTeX 문서에서 사용 가능",
-    "readyToUseInMarkdown": "Markdown 파일에서 사용 가능",
-    "editLatexCode": "여기서 LaTeX 코드 편집",
-    "livePreview": "문서 실시간 미리보기",
-    "generatedCodeWillAppear": "생성된 코드가 여기에 표시됩니다...",
-    "compilingLatex": "LaTeX 컴파일 중...",
-    "aiThinking": "AI 모델 생각 중…",
-    "giveItAMoment": "TikZ 다이어그램 생성 중입니다.",
-    "codeStreaming": "코드 스트리밍 중입니다.",
-    "generatingPgfplots": "pgfplots 코드 생성 중...",
-    "onlyCsvFiles": "이 도구는 CSV 파일만 지원합니다.",
-    "onlyImageFiles": "이미지 파일(JPEG, PNG)과 PDF 파일만 지원됩니다.",
-    "failedToProcess": "이미지 처리 실패. 다시 시도해 주세요.",
-    "failedToCompile": "LaTeX 컴파일 실패.",
-    "failedToGenerate": "인용 생성 실패. 다시 시도해 주세요.",
-    "conversionFailed": "변환 실패",
-    "pleaseEnterEquation": "방정식 설명을 입력하거나 이미지를 업로드하세요",
-    "equationTooLong": "방정식 설명은 2000자 이내여야 합니다",
-    "failedToConvert": "방정식 변환 실패. 다시 시도해 주세요.",
-    "noPdfUrl": "PDF URL이 반환되지 않았습니다",
-    "failedToExportPdf": "PDF 내보내기 실패."
+    "input": "INPUT",
+    "output": "OUTPUT",
+    "backToTools": "Back to Tools",
+    "export": "Export",
+    "processing": "Processing...",
+    "outputWillAppear": "Output will appear here...",
+    "failedToProcess": "Failed to process. Please try again.",
+    "conversionFailed": "Conversion failed"
   },
-  "toolsSpecific": {
-    "mathToLatex": {
-      "title": "수학을 LaTeX로",
-      "subtitle": "입력한 수학을 깔끔한 LaTeX로 변환.",
-      "inputLabel": "수학 입력",
-      "inputPlaceholder": "예: 0에서 1까지 x^2 적분",
-      "convert": "변환",
-      "clear": "지우기",
-      "outputLabel": "LaTeX 출력",
-      "copy": "복사",
-      "copied": "복사됨!"
-    },
-    "imageToLatex": {
-      "title": "이미지를 LaTeX로",
-      "description": "손글씨 수학과 방정식 이미지를 깔끔한 LaTeX 코드로 변환"
-    },
-    "tikzGenerator": {
-      "title": "TikZ 다이어그램 생성기",
-      "subtitle": "다이어그램을 설명하면 AI가 TikZ 코드를 생성합니다",
-      "inputLabel": "다이어그램 설명",
-      "inputHint": "생성하고 싶은 다이어그램을 설명하세요",
-      "placeholder": "예: 화살표로 연결된 3개의 노드가 있는 간단한 순서도를 그립니다. 첫 번째 노드는 '시작', 두 번째는 '처리', 세 번째는 '종료'라고 표시합니다.",
-      "generateTikz": "TikZ 생성",
-      "generating": "생성 중...",
-      "aiModelThinking": "AI 모델 생각 중…",
-      "giveItAMoment": "TikZ 다이어그램 생성 중입니다.",
-      "hangTight": "코드 스트리밍 중입니다.",
-      "outputLabel": "생성된 TikZ 코드",
-      "readyToUse": "LaTeX 문서에서 사용 가능",
-      "generatedCodeWillAppear": "생성된 코드가 여기에 표시됩니다...",
-      "failedToGenerate": "TikZ 생성 실패. 다시 시도해 주세요.",
-      "failedToCompile": "TikZ 문서 컴파일 실패."
-    },
-    "pgfplotsGenerator": {
-      "title": "Pgfplots 생성기",
-      "subtitle": "플롯을 설명하면 AI가 pgfplots 코드를 생성합니다",
-      "inputLabel": "플롯 설명",
-      "inputHint": "생성하고 싶은 플롯이나 그래프를 설명하세요",
-      "placeholder": "예: x = -5에서 x = 5까지 y = x^2의 선 그래프를 만들고, 파란색 선과 격자를 추가합니다. 축 레이블을 추가합니다.",
-      "generatePlot": "플롯 생성",
-      "generating": "생성 중...",
-      "generatingPgfplotsCode": "pgfplots 코드 생성 중...",
-      "outputLabel": "생성된 Pgfplots 코드",
-      "readyToUse": "LaTeX 문서에서 사용 가능",
-      "generatedCodeWillAppear": "생성된 코드가 여기에 표시됩니다...",
-      "failedToGenerate": "pgfplots 생성 실패. 다시 시도해 주세요."
-    },
-    "mermaidToLatex": {
-      "title": "Mermaid를 LaTeX로 변환",
-      "subtitle": "Mermaid 다이어그램을 LaTeX 코드로 변환",
-      "inputLabel": "Mermaid 코드",
-      "inputHint": "Mermaid 다이어그램 구문을 여기에 붙여넣기",
-      "convertToLatex": "LaTeX로 변환",
-      "converting": "변환 중...",
-      "convertingToLatex": "LaTeX로 변환 중...",
-      "outputLabel": "LaTeX 코드",
-      "readyToUse": "LaTeX 문서에서 사용 가능",
-      "convertedLatexWillAppear": "변환된 LaTeX가 여기에 표시됩니다...",
-      "failedToConvert": "Mermaid 변환 실패. 다시 시도해 주세요."
-    },
-    "citationGenerator": {
-      "title": "LaTeX 인용 생성기",
-      "subtitle": "논문 세부 정보, DOI 또는 URL에서 BibTeX 인용 생성",
-      "citationDetailsLabel": "인용 세부 정보",
-      "citationDetailsHint": "논문 세부 정보, DOI 또는 URL을 입력하세요",
-      "placeholder": "인용 세부 정보 입력...",
-      "generateBibtex": "BibTeX 생성",
-      "generating": "생성 중...",
-      "generatingBibtex": "BibTeX 생성 중...",
-      "outputLabel": "BibTeX 코드",
-      "readyToAdd": ".bib 파일에 추가 가능",
-      "bibtexWillAppear": "BibTeX 인용이 여기에 표시됩니다...",
-      "failedToGenerate": "인용 생성 실패. 다시 시도해 주세요.",
-      "exportAsBib": ".bib로 내보내기"
-    },
-    "latexPreview": {
-      "title": "LaTeX 미리보기",
-      "subtitle": "즉시 PDF 미리보기가 있는 실시간 LaTeX 편집기",
-      "codeLabel": "LaTeX 편집기",
-      "codeHint": "여기서 LaTeX 코드 편집",
-      "previewLabel": "PDF 출력",
-      "previewHint": "문서 실시간 미리보기",
-      "compiling": "컴파일 중...",
-      "compilingLatex": "LaTeX 컴파일 중..."
-    },
-    "aiLatexGenerator": {
-      "title": "AI LaTeX 생성기",
-      "subtitle": "원하는 것을 설명하면 AI가 LaTeX 코드를 생성합니다",
-      "descriptionLabel": "설명",
-      "descriptionHint": "필요한 문서나 콘텐츠를 설명하세요",
-      "placeholder": "예: 머신러닝에 관한 5장의 Beamer 프레젠테이션을 만드세요...",
-      "generateLatex": "LaTeX 생성",
-      "generating": "생성 중...",
-      "generatingLatexCode": "LaTeX 코드 생성 중...",
-      "outputLabel": "생성된 LaTeX 코드",
-      "readyToUse": "LaTeX 문서에서 사용 가능",
-      "generatedLatexWillAppear": "생성된 LaTeX가 여기에 표시됩니다...",
-      "failedToGenerate": "LaTeX 생성 실패. 다시 시도해 주세요."
-    },
-    "htmlToLatex": {
-      "title": "HTML을 LaTeX로 변환",
-      "subtitle": "HTML 마크업을 깔끔한 LaTeX 코드로 변환",
-      "inputLabel": "HTML 코드",
-      "inputHint": "HTML 마크업을 여기에 붙여넣기",
-      "convertToLatex": "LaTeX로 변환",
-      "converting": "변환 중...",
-      "convertingToLatex": "LaTeX로 변환 중...",
-      "outputLabel": "LaTeX 코드",
-      "readyToUse": "LaTeX 문서에서 사용 가능",
-      "convertedLatexWillAppear": "변환된 LaTeX가 여기에 표시됩니다...",
-      "failedToConvert": "HTML 변환 실패. 다시 시도해 주세요."
-    },
-    "markdownToLatex": {
-      "title": "Markdown을 LaTeX로 변환",
-      "subtitle": "Markdown 문서를 깔끔한 LaTeX 코드로 변환",
-      "inputLabel": "Markdown 콘텐츠",
-      "inputHint": "Markdown 텍스트를 여기에 붙여넣기",
-      "convertToLatex": "LaTeX로 변환",
-      "converting": "변환 중...",
-      "convertingToLatex": "LaTeX로 변환 중...",
-      "outputLabel": "LaTeX 코드",
-      "readyToUse": "LaTeX 문서에서 사용 가능",
-      "convertedLatexWillAppear": "변환된 LaTeX가 여기에 표시됩니다...",
-      "failedToConvert": "Markdown 변환 실패. 다시 시도해 주세요."
-    },
-    "mathmlToLatex": {
-      "title": "MathML을 LaTeX로 변환",
-      "subtitle": "MathML 마크업을 깔끔한 LaTeX 코드로 변환",
-      "inputLabel": "MathML 코드",
-      "inputHint": "MathML 마크업을 여기에 붙여넣기",
-      "convertToLatex": "LaTeX로 변환",
-      "converting": "변환 중...",
-      "convertingToLatex": "LaTeX로 변환 중...",
-      "outputLabel": "LaTeX 코드",
-      "readyToUse": "LaTeX 문서에서 사용 가능",
-      "convertedLatexWillAppear": "변환된 LaTeX가 여기에 표시됩니다...",
-      "failedToConvert": "MathML 변환 실패. 다시 시도해 주세요."
-    },
-    "latexToMarkdown": {
-      "title": "LaTeX를 Markdown으로 변환",
-      "subtitle": "LaTeX 문서나 스니펫을 깔끔한 Markdown으로 변환",
-      "inputLabel": "LaTeX 콘텐츠",
-      "inputHint": "LaTeX 코드를 여기에 붙여넣기",
-      "convertToMarkdown": "Markdown으로 변환",
-      "converting": "변환 중...",
-      "convertingToMarkdown": "Markdown으로 변환 중...",
-      "outputLabel": "Markdown",
-      "readyToUse": "Markdown 파일에서 사용 가능",
-      "convertedMarkdownWillAppear": "변환된 Markdown이 여기에 표시됩니다...",
-      "failedToConvert": "LaTeX 변환 실패. 다시 시도해 주세요.",
-      "exportAsMarkdown": "Markdown으로 내보내기"
-    },
-    "latexWordCounter": {
-      "title": "LaTeX 단어 카운터",
-      "subtitle": "LaTeX 문서의 단어를 정확하게 계산",
-      "inputLabel": "LaTeX 문서",
-      "inputHint": "LaTeX 코드를 붙여넣거나 입력하세요",
-      "resultsLabel": "단어 수",
-      "resultsHint": "실시간 단어 통계",
-      "counting": "계산 중...",
-      "countingWords": "단어 계산 중...",
-      "totalWords": "총 단어 수",
-      "breakdown": "세부 내역",
-      "textBody": "본문",
-      "headers": "제목",
-      "captions": "캡션",
-      "processedIn": "처리 시간",
-      "enterLatexToCount": "단어를 계산하려면 LaTeX를 입력하세요",
-      "failedToCount": "단어 계산 실패"
-    },
-    "tableToLatex": {
-      "title": "CSV를 LaTeX로 변환",
-      "subtitle": ".csv 파일을 업로드하면 즉시 깔끔한 LaTeX 테이블 코드를 얻을 수 있습니다.",
-      "inputLabel": "CSV 파일 업로드",
-      "outputLabel": "LaTeX 테이블 출력"
-    },
-    "equationToLatex": {
-      "title": "방정식을 LaTeX로 변환",
-      "subtitle": "텍스트 설명이나 이미지에서 수학 표현식을 LaTeX로 변환",
-      "inputLabel": "방정식 설명 또는 이미지",
-      "inputHint": "방정식을 텍스트로 설명하거나 이미지를 업로드하세요",
-      "placeholder": "예: 이차 공식, 0에서 1까지 x² 적분, 1에서 무한대까지 1/n² 합...",
-      "placeholderWithImage": "이미지가 업로드되어 텍스트 입력이 비활성화됨",
-      "imageUploaded": "이미지 업로드됨, 텍스트 입력 비활성화",
-      "dropImageHere": "방정식 이미지를 여기에 놓으세요",
-      "orBrowseFiles": "또는 파일 찾아보기",
-      "fileFormats": "JPEG, PNG, GIF, WebP",
-      "convertToLatex": "LaTeX로 변환",
-      "converting": "변환 중...",
-      "convertingToLatex": "LaTeX로 변환 중...",
-      "outputLabel": "생성된 LaTeX",
-      "readyToUse": "LaTeX 문서에서 사용 가능",
-      "generatedLatexWillAppear": "생성된 LaTeX가 여기에 표시됩니다...",
-      "pleaseEnterEquation": "방정식 설명을 입력하거나 이미지를 업로드하세요",
-      "equationTooLong": "방정식 설명은 2000자 이내여야 합니다",
-      "failedToConvert": "방정식 변환 실패. 다시 시도해 주세요."
-    },
-    "imageToTikz": {
-      "title": "이미지를 TikZ로 변환",
-      "subtitle": "다이어그램이나 이미지를 업로드하여 편집 가능한 TikZ 코드로 변환",
-      "inputLabel": "이미지 업로드",
-      "inputHint": "변환할 다이어그램, 순서도 또는 도형을 업로드하세요",
-      "dropFileHere": "파일을 여기에 놓으세요",
-      "orBrowseFiles": "또는 파일 찾아보기",
-      "fileFormats": "JPEG, PNG, GIF, WebP",
-      "processing": "처리 중...",
-      "analyzingImage": "이미지 분석 중...",
-      "analyzingImageSubtext": "도형과 요소를 TikZ 코드로 변환 중.",
-      "analyzingImageStatus": "이미지 분석 중...",
-      "analyzingImageStatusSubtext": "코드 스트리밍 중입니다.",
-      "converting": "변환 중...",
-      "outputLabel": "생성된 TikZ 코드",
-      "readyToUse": "LaTeX 문서에서 사용 가능",
-      "generatedCodeWillAppear": "생성된 코드가 여기에 표시됩니다...",
-      "failedToConvert": "이미지를 TikZ로 변환 실패. 다시 시도해 주세요.",
-      "pleaseUploadImage": "이미지 파일(PNG, JPEG, GIF, WebP)을 업로드하세요",
-      "imageSizeTooLarge": "이미지 크기는 20MB 미만이어야 합니다",
-      "removeImage": "이미지 제거"
-    },
-    "pdfToLatex": {
-      "title": "PDF를 LaTeX로 변환",
-      "subtitle": "수학과 방정식이 포함된 PDF 문서를 깔끔한 LaTeX 코드로 변환",
-      "inputLabel": "PDF 문서",
-      "outputLabel": "깔끔한 LaTeX 코드"
-    }
-  },
+  "toolsList": {},
+  "toolsSpecific": {},
   "categories": {
-    "academic": "학술",
-    "professional": "전문",
-    "creative": "창작",
-    "business": "비즈니스",
-    "education": "교육",
-    "presentations": "프레젠테이션",
-    "resumeCv": "이력서 및 CV",
-    "math": "수학",
-    "reports": "보고서",
-    "letters": "편지",
-    "other": "기타"
+    "calculator": "Calculator",
+    "generator": "Generator",
+    "converter": "Converter",
+    "checker": "Checker",
+    "analyzer": "Analyzer",
+    "general": "General"
   },
-  "toolsList": {
-    "imageToLatex": { "title": "이미지를 LaTeX로", "description": "이미지를 LaTeX 형식으로 변환" },
-    "tableToLatex": { "title": "Excel을 LaTeX로", "description": "CSV, JSON, Excel을 LaTeX 테이블로 변환" },
-    "tikzGenerator": { "title": "TikZ 생성기", "description": "AI로 TikZ 다이어그램 생성" },
-    "imageToTikz": { "title": "이미지를 TikZ로", "description": "AI로 이미지를 TikZ 다이어그램으로 변환" },
-    "latexPreview": { "title": "LaTeX 미리보기", "description": "PDF 미리보기가 있는 실시간 LaTeX 편집기" },
-    "markdownToLatex": { "title": "Markdown을 LaTeX로", "description": "Markdown 문서를 LaTeX 형식으로 변환" },
-    "citationGenerator": { "title": "인용 생성기", "description": "DOI나 논문 세부 정보에서 BibTeX 인용 생성" },
-    "mathmlToLatex": { "title": "MathML을 LaTeX로", "description": "MathML 마크업을 LaTeX 형식으로 변환" },
-    "aiLatexGenerator": { "title": "AI LaTeX 생성기", "description": "텍스트 설명에서 LaTeX 코드 생성" },
-    "htmlToLatex": { "title": "HTML을 LaTeX로", "description": "HTML 마크업을 LaTeX 형식으로 변환" },
-    "mermaidToLatex": { "title": "Mermaid를 LaTeX로", "description": "Mermaid 다이어그램을 LaTeX 형식으로 변환" },
-    "pgfplotsGenerator": { "title": "Pgfplots 생성기", "description": "AI로 pgfplots 그래프와 차트 생성" },
-    "latexToMarkdown": { "title": "LaTeX를 Markdown으로", "description": "LaTeX 문서나 스니펫을 Markdown으로 변환" },
-    "equationToLatex": { "title": "방정식을 LaTeX로", "description": "텍스트나 이미지에서 수학 방정식을 LaTeX로 변환" },
-    "pdfToLatex": { "title": "PDF를 LaTeX로", "description": "수학 콘텐츠가 있는 PDF 문서를 LaTeX로 변환" },
-    "latexWordCounter": { "title": "LaTeX 단어 카운터", "description": "LaTeX 문서의 단어를 정확하게 계산" },
-    "arxivToLatex": { "title": "ArXiv를 LaTeX로", "description": "arXiv 논문을 직접 Octree로 가져오기" }
+  "nav": {
+    "tools": "Tools",
+    "getStarted": "Get Started",
+    "menu": "Menu"
   },
-  "templatesList": {
-    "research-paper": { "title": "연구 논문", "description": "IEEE 스타일 연구 논문 템플릿" },
-    "beamer-presentation": { "title": "Beamer 프레젠테이션", "description": "학술 프레젠테이션 슬라이드" },
-    "academic-cv": { "title": "학술 CV", "description": "전문 학술 이력서" },
-    "mathematical-document": { "title": "수학 문서", "description": "정리가 포함된 수학 중심 문서" },
-    "lab-report": { "title": "실험 보고서", "description": "과학 실험 보고서 템플릿" },
-    "book-chapter": { "title": "책 챕터", "description": "책이나 논문 챕터 템플릿" },
-    "resume": { "title": "이력서", "description": "전문 이력서 템플릿" },
-    "grading-rubric": { "title": "채점 기준표", "description": "평가 기준 및 채점 템플릿" },
-    "assignment": { "title": "과제", "description": "숙제 및 과제 템플릿" },
-    "worksheet": { "title": "워크시트", "description": "연습 문제 및 연습 템플릿" },
-    "homework": { "title": "숙제 템플릿", "description": "구조화된 숙제 제출" },
-    "poster": { "title": "연구 포스터", "description": "학술 학회 포스터 템플릿" },
-    "thesis": { "title": "박사 논문", "description": "챕터가 있는 종합 논문 템플릿" },
-    "letter": { "title": "공식 편지", "description": "전문 비즈니스 편지 템플릿" },
-    "algorithm": { "title": "알고리즘 의사코드", "description": "의사코드가 포함된 알고리즘 문서" },
-    "cover-letter": { "title": "커버 레터", "description": "전문 학술 및 취업 지원 커버 레터" },
-    "journal-article": { "title": "저널 논문", "description": "섹션이 있는 학술 저널 논문 템플릿" },
-    "syllabus": { "title": "강의 계획서", "description": "종합 강의 계획서 템플릿" },
-    "research-proposal": { "title": "연구 제안서", "description": "연구비 및 연구 제안서 템플릿" },
-    "essay": { "title": "학술 에세이", "description": "논증과 분석이 있는 구조화된 에세이" },
-    "research-statement": { "title": "연구 성명서", "description": "취업 지원용 학술 연구 성명서" },
-    "dissertation": { "title": "학위 논문", "description": "완전한 박사 학위 논문 템플릿" },
-    "white-paper": { "title": "백서", "description": "전문 백서 템플릿" },
-    "leaflet": { "title": "리플렛/브로셔", "description": "전문 마케팅 리플렛 템플릿" },
-    "technical-report": { "title": "기술 보고서", "description": "기술 연구 보고서 템플릿" },
-    "math-exercises": { "title": "수학 연습", "description": "수학 연습 문제 및 연습" },
-    "math-notes": { "title": "수학 노트", "description": "수학 과정을 위한 구조화된 강의 노트" },
-    "math-exam": { "title": "수학 시험", "description": "공식 수학 시험 템플릿" },
-    "math-problem-set": { "title": "수학 문제 세트", "description": "수학 주간 문제 세트 과제" },
-    "math-cheat-sheet": { "title": "수학 요약집", "description": "공식과 정리를 위한 간결한 참조 시트" },
-    "lecture-notes": { "title": "강의 노트", "description": "깔끔한 학술 강의 노트 템플릿" },
-    "quiz-template": { "title": "퀴즈 템플릿", "description": "짧은 퀴즈 또는 테스트 템플릿" },
-    "formula-sheet": { "title": "공식 시트", "description": "중요 공식 참조 시트" },
-    "project-report": { "title": "프로젝트 보고서", "description": "챕터와 섹션이 있는 전문 프로젝트 보고서" },
-    "article-template": { "title": "논문 템플릿", "description": "초록과 섹션이 있는 과학 논문" },
-    "statement-of-purpose": { "title": "학업 계획서", "description": "대학원 지원용 학업 계획서 템플릿" },
-    "literature-review": { "title": "문헌 리뷰", "description": "인용이 있는 학술 문헌 리뷰" },
-    "meeting-minutes": { "title": "회의록", "description": "전문 회의록 및 노트 템플릿" },
-    "certificate": { "title": "인증서", "description": "상장 또는 수료 인증서 템플릿" },
-    "invoice": { "title": "청구서", "description": "서비스 또는 제품용 전문 청구서" },
-    "grant-proposal": { "title": "연구비 제안서", "description": "연구비 제안서 템플릿" },
-    "letter-of-recommendation": { "title": "추천서", "description": "전문 추천서 템플릿" },
-    "motivation-letter": { "title": "자기소개서", "description": "학술 또는 전문 자기소개서 템플릿" },
-    "business-plan": { "title": "사업 계획서", "description": "전문 사업 계획서 템플릿" },
-    "business-report": { "title": "비즈니스 보고서", "description": "기업 비즈니스 보고서 템플릿" },
-    "scientific-report": { "title": "과학 보고서", "description": "과학 연구 보고서 템플릿" },
-    "internship-report": { "title": "인턴십 보고서", "description": "학생 인턴십 보고서 템플릿" },
-    "newsletter": { "title": "뉴스레터", "description": "전문 뉴스레터 템플릿" },
-    "questionnaire": { "title": "설문지", "description": "연구 설문 및 설문지 템플릿" },
-    "table-template": { "title": "테이블 템플릿", "description": "전문 테이블 레이아웃 및 서식" },
-    "bibliography": { "title": "참고 문헌", "description": "독립형 참고 문헌 및 참조 템플릿" },
-    "memo": { "title": "메모", "description": "전문 비즈니스 메모 템플릿" },
-    "manuscript": { "title": "원고", "description": "소설 및 논픽션용 책 원고 템플릿" },
-    "recipe-book": { "title": "레시피 북", "description": "요리책 및 레시피 모음 템플릿" },
-    "flyer": { "title": "전단지", "description": "마케팅 전단지 및 홍보용 한 페이지 템플릿" },
-    "business-card": { "title": "명함", "description": "전문 명함 템플릿" },
-    "calendar": { "title": "달력", "description": "월간 및 연간 달력 템플릿" },
-    "neurips-2026": { "title": "NeurIPS 2026", "description": "NeurIPS 2026 학회 논문 템플릿 (9페이지 제한)" },
-    "icml-2026": { "title": "ICML 2026", "description": "ICML 2026 학회 논문 템플릿 (2단 형식)" },
-    "iclr-2026": { "title": "ICLR 2026", "description": "ICLR 2026 학회 논문 템플릿 (재현성 선언 포함)" },
-    "cvpr-2026": { "title": "CVPR 2026", "description": "CVPR 2026 컴퓨터 비전 학회 논문 템플릿" },
-    "aaai-2026": { "title": "AAAI 2026", "description": "AAAI 2026 학회 논문 템플릿 (7페이지 제한)" },
-    "obituary": { "title": "부고", "description": "장식 테두리가 있는 우아한 추모 템플릿" },
-    "eccv-2026": { "title": "ECCV 2026", "description": "ECCV 2026 유럽 컴퓨터 비전 학회 논문 템플릿" },
-    "icra-2026": { "title": "ICRA 2026", "description": "IEEE ICRA 2026 로보틱스 학회 논문 템플릿" },
-    "acm-chi-2026": { "title": "ACM CHI 2026", "description": "ACM CHI 2026 공식 제출 템플릿 (단일 열 형식)" },
-    "www-2026": { "title": "WWW 2026", "description": "웹 컨퍼런스 (WWW) 2026 템플릿" },
-    "acl-2026": { "title": "ACL 2026", "description": "ACL 2026 자연어 처리 학회 논문 템플릿" },
-    "interspeech-2026": { "title": "Interspeech 2026", "description": "Interspeech 2026 음성 처리 학회 논문 템플릿" },
-    "interactive-flashcard": { "title": "인터랙티브 플래시카드", "description": "클릭하면 답이 나타나는 학습 가이드 - 자가 테스트에 완벽" },
-    "jakes-resume": { "title": "제이크의 이력서", "description": "깔끔하고 ATS 친화적인 단일 열 이력서 템플릿" }
+  "footer": {
+    "tagline": "Free online tools for everyone.",
+    "menu": "Menu",
+    "tools": "Tools",
+    "allRightsReserved": "All rights reserved.",
+    "viewAllTools": "View all tools →",
+    "socials": "Socials"
   },
-  "symbols": {
-    "title": "LaTeX 기호",
-    "description": "LaTeX 문서를 위한 일반적인 수학 연산자와 그리스 문자를 찾아보세요.",
-    "searchPlaceholder": "기호 검색...",
-    "searchResults": "검색 결과",
-    "symbolsFound": "{count}개의 기호를 찾았습니다",
-    "noSymbolsFound": "일치하는 기호를 찾을 수 없습니다",
-    "viewSymbols": "기호 보기",
-    "backToSymbols": "기호로 돌아가기",
-    "symbolCount": "{count}개 기호",
-    "symbolsCount": "{count}개 기호",
-    "categories": {
-      "math": { "title": "수학 기호", "description": "일반적인 수학 연산자, 관계 및 화살표.", "subtitle": "일반 수학 연산자" },
-      "greek": { "title": "그리스 기호", "description": "그리스 문자와 LaTeX 명령어 전체 목록.", "subtitle": "그리스 문자 및 변형" },
-      "arrows": { "title": "화살표 기호", "description": "LaTeX 문서용 방향 화살표, 이중 화살표 및 작살.", "subtitle": "방향 및 이중 화살표" },
-      "latin": { "title": "라틴 문자", "description": "다양한 언어를 위한 악센트 문자 및 특수 라틴 문자.", "subtitle": "악센트 문자 및 특수 문자" },
-      "setTheory": { "title": "집합론", "description": "집합, 부분집합, 합집합, 교집합 및 숫자 집합.", "subtitle": "집합, 부분집합 및 연산" },
-      "logic": { "title": "논리 및 증명", "description": "한정자, 논리 연결자 및 증명 표기법.", "subtitle": "논리 연결자 및 증명 표기법" },
-      "linearAlgebra": { "title": "선형대수", "description": "벡터, 행렬, 전치 및 내적.", "subtitle": "벡터, 행렬 및 연산" },
-      "calculus": { "title": "미적분", "description": "도함수, 적분, 극한 및 미분 연산자.", "subtitle": "도함수, 적분 및 극한" },
-      "probability": { "title": "확률 및 통계", "description": "확률, 기댓값, 분산 및 분포.", "subtitle": "확률 및 통계 표기법" },
-      "computerScience": { "title": "컴퓨터 과학", "description": "Big-O 표기법, 논리 연산자 및 알고리즘 기호.", "subtitle": "Big-O 표기법 및 알고리즘" },
-      "numberTheory": { "title": "정수론", "description": "가분성, 모듈러 산술 및 정수론적 함수.", "subtitle": "가분성 및 모듈러 산술" },
-      "physics": { "title": "물리학", "description": "양자역학, 벡터장 및 물리 상수.", "subtitle": "양자역학 및 물리 상수" },
-      "chemistry": { "title": "화학", "description": "반응 화살표, 동위원소, 결합 및 상태 기호.", "subtitle": "반응 화살표 및 화학 표기법" },
-      "finance": { "title": "통화 및 금융", "description": "통화 기호, 금융 공식 및 표기법." },
-      "brackets": { "title": "괄호 및 구분자", "description": "꺾쇠괄호, 바닥, 천장, 노름 및 구분자 쌍.", "subtitle": "괄호, 바닥, 천장 및 노름" },
-      "accents": { "title": "악센트 및 수정자", "description": "모자, 물결표, 점, 막대, 벡터 및 텍스트 장식." },
-      "geometry": { "title": "기하학", "description": "각도, 삼각형, 평행, 수직 및 합동.", "subtitle": "각도, 삼각형 및 기하학적 관계" },
-      "topology": { "title": "위상 및 추상 수학", "description": "알레프, 경계, 호몰로지 및 범주론 표기법.", "subtitle": "위상 및 범주론 표기법" },
-      "machineLearning": { "title": "머신러닝 및 AI", "description": "손실 함수, 그래디언트, argmax, KL 발산 및 신경망 표기법.", "subtitle": "손실 함수 및 신경망 표기법" },
-      "relations": { "title": "관계 및 비교", "description": "부등식, 동치, 부분집합, 상위집합 및 비교 기호.", "subtitle": "부등식 및 동치 기호" },
-      "operators": { "title": "고급 연산자", "description": "이항 연산자, 텐서곱, 직합 및 합성.", "subtitle": "이항 연산자 및 합성" },
-      "summation": { "title": "합 및 곱", "description": "시그마 표기법, 곱 기호 및 인덱스 극한.", "subtitle": "시그마 및 곱 표기법" },
-      "functions": { "title": "함수 및 사상", "description": "함수 표기법, 사상, 합성 및 정의역/공역.", "subtitle": "함수 표기법 및 합성" },
-      "order": { "title": "부등식 및 순서", "description": "선행, 후행, min, max, inf, sup 및 경계.", "subtitle": "순서 및 경계 표기법" },
-      "boolean": { "title": "부울 대수", "description": "논리 게이트, AND, OR, NOT, XOR, NAND 및 부울 연산.", "subtitle": "논리 게이트 및 부울 연산" },
-      "optimization": { "title": "최적화", "description": "Argmax, argmin, 제약 조건, 라그랑지안 및 KKT 조건.", "subtitle": "최적화 및 제약 조건 표기법" },
-      "units": { "title": "단위 및 측정", "description": "도, SI 단위, 물리 상수 및 측정 기호.", "subtitle": "SI 단위 및 측정 기호" },
-      "quantifiers": { "title": "한정자", "description": "모든, 존재, 원소 및 집합 작성자 표기법.", "subtitle": "전칭 및 존재 한정자" },
-      "graphTheory": { "title": "그래프 이론", "description": "정점, 간선, 인접, 경로, 사이클 및 색수.", "subtitle": "정점, 간선 및 그래프 표기법" },
-      "combinatorics": { "title": "조합론", "description": "팩토리얼, 이항, 순열, 조합 및 세기.", "subtitle": "팩토리얼, 순열 및 조합" },
-      "specialFunctions": { "title": "특수 함수", "description": "감마, 제타, 베셀, 르장드르 및 오차 함수.", "subtitle": "감마, 제타 및 특수 함수" },
-      "complex": { "title": "복소수", "description": "허수 단위, 켤레, 절댓값, 편각 및 극형식.", "subtitle": "복소수 표기법" },
-      "trigonometry": { "title": "삼각함수", "description": "사인, 코사인, 탄젠트, 역삼각 및 쌍곡선 함수.", "subtitle": "삼각 및 쌍곡선 함수" },
-      "differentialGeometry": { "title": "미분기하학", "description": "다양체, 곡률, 크리스토펠 기호 및 리만 텐서.", "subtitle": "다양체 및 곡률 표기법" },
-      "tensors": { "title": "텐서 표기법", "description": "아인슈타인 합산, 인덱스, 축약 및 공변 도함수.", "subtitle": "아인슈타인 합산 및 텐서 인덱스" },
-      "modalLogic": { "title": "양상 논리", "description": "필연성, 가능성, 시간 논리 및 크립케 의미론.", "subtitle": "필연성 및 가능성 연산자" },
-      "gameTheory": { "title": "게임 이론", "description": "내쉬 균형, 전략, 보수 및 샤플리 값.", "subtitle": "내쉬 균형 및 전략 표기법" }
-    }
+  "cta": {
+    "title": "Get Started Today",
+    "description": "Try our tools for free.",
+    "getStarted": "Get Started",
+    "learnMore": "Learn More"
   },
-  "nav": { "tools": "도구", "templates": "템플릿", "symbols": "기호", "getStarted": "시작하기", "menu": "메뉴" },
-  "footer": { "tagline": "모두를 위한 무료 LaTeX 도구 및 템플릿.", "menu": "메뉴", "tools": "도구", "allRightsReserved": "모든 권리 보유.", "imageToLatex": "이미지를 LaTeX로", "excelToLatex": "Excel을 LaTeX로", "tikzGenerator": "TikZ 생성기", "imageToTikz": "이미지를 TikZ로", "latexPreview": "LaTeX 미리보기", "markdownToLatex": "Markdown을 LaTeX로", "citationGenerator": "인용 생성기", "aiLatexGenerator": "AI LaTeX 생성기", "learn": "배우기", "learnLatex": "LaTeX 배우기", "learnTikz": "TikZ 배우기", "learnPgfplots": "PGFPlots 배우기", "viewAllTutorials": "모든 튜토리얼 보기 →", "openSource": "오픈 소스", "octreeEditor": "Octree 편집기", "toolsTemplates": "도구 및 템플릿", "marketingBlogs": "마케팅 및 블로그", "viewAllRepositories": "모든 저장소 보기 →", "socials": "소셜 미디어", "instagram": "인스타그램", "linkedin": "링크드인", "tiktok": "틱톡", "x": "X", "reddit": "레딧", "discord": "디스코드", "greekLetters": "그리스 문자", "mathOperators": "수학 연산자", "arrows": "화살표", "relations": "관계", "setTheory": "집합론", "calculus": "미적분", "logic": "논리", "linearAlgebra": "선형대수", "browseAllCategories": "모든 37개 카테고리 보기 →", "researchPaper": "연구 논문", "phdThesis": "박사 논문", "beamerPresentation": "Beamer 프레젠테이션", "academicCv": "학술 이력서", "coverLetter": "자기소개서", "labReport": "실험 보고서", "neurips2026": "NeurIPS 2026", "icml2026": "ICML 2026", "viewAllTemplates": "모든 71개 템플릿 보기 →", "viewAllTools": "모든 도구 보기 →" },
-  "cta": { "badge": "AI로 LaTeX 작성", "title": "최고의 AI LaTeX 편집기, Overleaf 대안", "description": "Octree는 15개 이상의 대학의 연구자들이 AI를 사용하여 논문을 더 빠르게 작성하도록 도움", "feature1": "AI로 아름다운 TikZ 다이어그램 생성", "feature2": "이미지를 업로드하고 LaTeX로 원활하게 변환", "feature3": "논문 작성 및 서식에 대한 즉각적인 지원 받기", "useInOctree": "Octree에서 사용", "learnMore": "자세히 알아보기" },
   "metadata": {
     "site": {
-      "title": "무료 LaTeX 도구 - 이미지를 LaTeX로 변환, 60+ 템플릿, PDF 미리보기 | Octree",
-      "description": "무료 LaTeX 도구: AI 기반 수식 변환기, 60개 이상의 전문 템플릿(이력서, CV, 논문, Beamer), 실시간 PDF 미리보기. 손글씨 수학, 이미지 및 PDF를 즉시 LaTeX로 변환.",
-      "keywords": "손글씨 수학 LaTeX 변환, 이미지 LaTeX 변환기, PDF LaTeX 변환기, 수학 수식 LaTeX 변환, LaTeX 수식 변환기, 무료 LaTeX 변환기, AI LaTeX 생성기, LaTeX 인용 생성기, TikZ 생성기, 무료 LaTeX 템플릿, LaTeX 이력서 템플릿, LaTeX CV 템플릿, LaTeX 논문 템플릿, LaTeX Beamer 템플릿, 온라인 LaTeX 편집기, Overleaf 대안, LaTeX 온라인, 온라인 LaTeX 컴파일, LaTeX PDF 변환, 수식 편집기, 수학 공식 편집기, LaTeX 기호, BibTeX 생성기, 표 LaTeX 변환, 엑셀 LaTeX 변환, 마크다운 LaTeX 변환, HTML LaTeX 변환, MathML LaTeX 변환, LaTeX 단어 수 세기, PGFPlots 생성기, arXiv LaTeX, 수학 공식 입력기, 텍 문서 작성, 논문 작성 도구, 학술 문서 템플릿, LaTeX 초보자 가이드"
-    },
-    "tools": {
-      "imageToLatex": {
-        "title": "이미지를 LaTeX로 변환 - 무료 AI 기반 도구",
-        "description": "손글씨 수학 방정식 이미지를 깔끔한 LaTeX 코드로 즉시 변환. AI 기반, 무료, 가입 불필요.",
-        "keywords": "이미지 LaTeX 변환, 사진 LaTeX 변환, 그림 LaTeX 변환, 손글씨 수학 LaTeX, 수학 스캔 LaTeX, OCR LaTeX, 수학 이미지 변환기, 스크린샷 LaTeX 변환, 수학 OCR, 수식 OCR, 공식 LaTeX 변환, 수학 사진 변환기, 필기 LaTeX 변환, 수식 스캔, 손글씨 수식 인식, 수학 캡처 LaTeX"
-      },
-      "mathToLatex": {
-        "title": "수학을 LaTeX로 변환 - 무료 온라인 도구",
-        "description": "수학 표현식을 LaTeX 코드로 변환. 수학을 입력하거나 붙여넣고 깔끔한 LaTeX 출력을 얻으세요.",
-        "keywords": "수학 LaTeX 변환, 수학을 LaTeX로 변환, 수학 표현식 LaTeX, 공식 LaTeX 변환, 수학 변환기, 수식 변환기, 수학 표기법 LaTeX, 수학식 변환기, 수식 입력기, 수학 공식 LaTeX"
-      },
-      "equationToLatex": {
-        "title": "수식을 LaTeX로 변환 - 무료 온라인 도구",
-        "description": "수학 방정식을 즉시 LaTeX 코드로 변환. 방정식을 입력하면 LaTeX를 얻을 수 있습니다.",
-        "keywords": "수식 LaTeX 변환, 방정식 LaTeX 변환, 수학 방정식 변환기, 수식 편집기 LaTeX, 공식 LaTeX, 수학 방정식 LaTeX, 수식 표기법, 이차방정식 LaTeX, 미분방정식 LaTeX, 적분 LaTeX"
-      },
-      "tikzGenerator": {
-        "title": "TikZ 다이어그램 생성기 - AI 기반 LaTeX 그래픽",
-        "description": "AI로 TikZ 다이어그램을 생성합니다. 다이어그램을 설명하면 즉시 깔끔한 TikZ LaTeX 코드를 얻을 수 있습니다.",
-        "keywords": "TikZ 생성기, TikZ 온라인, TikZ 예제, TikZ 순서도, TikZ 다이어그램, TikZ 신경망, AI TikZ 생성기, TikZ 코드 생성기, TikZ 튜토리얼, TikZ 도형, TikZ 화살표, TikZ 그래프, TikZ 트리, TikZ 플롯, PGF TikZ, TikZ 회로도, TikZ 타임라인, TikZ 벤다이어그램, 다이어그램 그리기, 플로우차트 LaTeX"
-      },
-      "imageToTikz": {
-        "title": "이미지를 TikZ로 변환 - 이미지를 LaTeX 그래픽으로 변환",
-        "description": "AI를 사용하여 이미지와 다이어그램을 TikZ LaTeX 코드로 변환합니다. 이미지를 업로드하면 편집 가능한 TikZ 코드를 얻을 수 있습니다.",
-        "keywords": "이미지 TikZ 변환, 그림 TikZ 변환, 이미지를 TikZ로 변환, 다이어그램 TikZ 변환, 사진 TikZ 코드, AI TikZ 변환기, 벡터화 TikZ, 이미지 LaTeX 다이어그램, 도형 TikZ 변환"
-      },
-      "citationGenerator": {
-        "title": "LaTeX 인용 생성기 - BibTeX 생성기",
-        "description": "DOI, URL 또는 논문 세부 정보에서 BibTeX 인용을 생성합니다. 무료 LaTeX 인용 도구.",
-        "keywords": "LaTeX 인용 생성기, BibTeX 생성기, DOI BibTeX 변환, 인용 생성기, 참고문헌 생성기, 서지 생성기, 인용문 생성기, APA 인용 LaTeX, MLA 인용 LaTeX, 시카고 인용, IEEE 인용, 하버드 참고문헌 LaTeX, 논문 인용, 학술 인용"
-      },
-      "latexPreview": {
-        "title": "LaTeX 실시간 미리보기 - 무료 온라인 편집기",
-        "description": "LaTeX 문서를 실시간으로 작성하고 미리 봅니다. 즉시 PDF 출력이 있는 무료 온라인 LaTeX 편집기.",
-        "keywords": "LaTeX 미리보기, LaTeX 온라인 편집기, LaTeX 실시간 미리보기, 온라인 LaTeX 컴파일러, LaTeX PDF 변환, 무료 LaTeX 편집기, Overleaf 대안, 온라인 LaTeX, LaTeX 온라인 작성, LaTeX 렌더러, LaTeX 뷰어, 무료 LaTeX 컴파일, 텍 편집기"
-      },
-      "pdfToLatex": {
-        "title": "PDF를 LaTeX로 변환 - PDF에서 LaTeX 추출",
-        "description": "수학 내용이 포함된 PDF 문서를 깔끔한 LaTeX 코드로 변환합니다. AI 기반 추출.",
-        "keywords": "PDF LaTeX 변환, PDF를 LaTeX로 변환, PDF에서 LaTeX 추출, PDF 수학 변환기, PDF 수식 추출기, PDF TeX 변환, OCR PDF LaTeX, PDF 공식 추출기, PDF 스캔 LaTeX, 문서 LaTeX 변환"
-      },
-      "tableToLatex": {
-        "title": "표를 LaTeX로 변환 - 엑셀을 LaTeX로",
-        "description": "Excel, Google 스프레드시트 또는 CSV의 표를 LaTeX 형식으로 변환합니다. 무료 표 생성기.",
-        "keywords": "표 LaTeX 변환, 엑셀 LaTeX 변환, CSV LaTeX 변환, 스프레드시트 LaTeX 변환, LaTeX 표 생성기, tabular LaTeX, LaTeX 표 만들기, 구글 스프레드시트 LaTeX, 복사 붙여넣기 표 LaTeX, LaTeX tabular 생성기, 표 작성기"
-      },
-      "markdownToLatex": {
-        "title": "마크다운을 LaTeX로 변환 - 무료 온라인 도구",
-        "description": "마크다운 파일을 깔끔한 LaTeX 코드로 변환합니다. 서식, 링크 및 구조를 유지합니다.",
-        "keywords": "마크다운 LaTeX 변환, Markdown LaTeX 변환, md tex 변환, 마크다운 LaTeX 변환기, pandoc 대안, 마크다운 PDF LaTeX, 마크다운 TeX 온라인, 문서 변환"
-      },
-      "latexToMarkdown": {
-        "title": "LaTeX를 마크다운으로 변환 - 무료 온라인 도구",
-        "description": "LaTeX 문서를 마크다운 형식으로 변환합니다. 수식과 서식을 유지합니다.",
-        "keywords": "LaTeX 마크다운 변환, LaTeX를 마크다운으로 변환, tex md 변환, LaTeX md 변환기, LaTeX 마크다운, TeX 마크다운 변환, LaTeX 마크다운 내보내기, 문서 변환"
-      },
-      "htmlToLatex": {
-        "title": "HTML을 LaTeX로 변환 - 무료 온라인 도구",
-        "description": "HTML 콘텐츠를 깔끔한 LaTeX 코드로 변환합니다. 웹에서 문서로 변환에 적합합니다.",
-        "keywords": "HTML LaTeX 변환, HTML을 LaTeX로 변환, 웹 LaTeX 변환, HTML TeX 변환, 웹페이지 LaTeX 변환, HTML 표 LaTeX 변환, 웹사이트 LaTeX 변환, 웹 문서 변환"
-      },
-      "mathmlToLatex": {
-        "title": "MathML을 LaTeX로 변환 - 무료 온라인 도구",
-        "description": "MathML 수식을 LaTeX 코드로 변환합니다. Word 및 웹 수식 변환에 적합합니다.",
-        "keywords": "MathML LaTeX 변환, MathML을 LaTeX로 변환, Word 수식 LaTeX 변환, MathML 변환기, Office 수학 LaTeX 변환, OMML LaTeX 변환, Word 수학 LaTeX 변환, 수식 변환"
-      },
-      "mermaidToLatex": {
-        "title": "Mermaid를 LaTeX로 변환 - 다이어그램을 TikZ로",
-        "description": "Mermaid 다이어그램을 TikZ LaTeX 코드로 변환합니다. 순서도, 시퀀스 다이어그램 등.",
-        "keywords": "Mermaid LaTeX 변환, Mermaid TikZ 변환, Mermaid 다이어그램 변환, 순서도 LaTeX 변환, 시퀀스 다이어그램 LaTeX 변환, Mermaid LaTeX, 다이어그램 TikZ 변환, 플로우차트 변환"
-      },
-      "latexWordCounter": {
-        "title": "LaTeX 단어 수 세기 - 무료 온라인 도구",
-        "description": "명령어와 주석을 제외하고 LaTeX 문서의 단어 수를 정확하게 계산합니다. 정확한 학술 단어 수 계산.",
-        "keywords": "LaTeX 단어 수 세기, LaTeX 단어 카운터, TeX 단어 수, LaTeX 문자 수, 학술 단어 카운터, 논문 단어 수, 논문 단어 수 LaTeX, LaTeX 텍스트 카운터, 글자 수 세기"
-      },
-      "aiLatexGenerator": {
-        "title": "AI LaTeX 생성기 - AI로 LaTeX 작성",
-        "description": "AI를 사용하여 LaTeX 코드를 생성합니다. 원하는 것을 설명하면 깔끔하게 컴파일되는 LaTeX를 얻을 수 있습니다.",
-        "keywords": "AI LaTeX 생성기, AI로 LaTeX 생성, AI LaTeX 작성기, ChatGPT LaTeX, AI 수식 생성기, AI 수학 LaTeX, 텍스트에서 LaTeX, 자연어 LaTeX 변환, AI 문서 생성"
-      },
-      "pgfplotsGenerator": {
-        "title": "PGFPlots 생성기 - LaTeX 그래프 만들기",
-        "description": "PGFPlots를 사용하여 LaTeX용 아름다운 그래프와 플롯을 만듭니다. 무료 온라인 플롯 생성기.",
-        "keywords": "PGFPlots 생성기, PGFPlots 온라인, LaTeX 그래프, LaTeX 플롯, PGFPlots 예제, LaTeX 차트, 데이터 시각화 LaTeX, 산점도 LaTeX, 막대 그래프 LaTeX, 선 그래프 LaTeX, 함수 플롯 LaTeX, 그래프 그리기"
-      },
-      "arxivToLatex": {
-        "title": "arXiv를 LaTeX로 - arXiv 소스 코드 다운로드",
-        "description": "arXiv 논문에서 LaTeX 소스 코드를 추출하고 다운로드합니다. 원본 TeX 파일을 얻으세요.",
-        "keywords": "arXiv LaTeX, arXiv 소스 코드, arXiv LaTeX 다운로드, arXiv TeX 소스, arXiv 논문 소스, arXiv LaTeX 추출, arXiv 소스 다운로드, 논문 소스 코드"
-      }
-    },
-    "symbols": {
-      "main": {
-        "title": "LaTeX 기호 - 완전한 참조 가이드",
-        "description": "LaTeX 기호를 찾아보고 복사: 그리스 문자, 수학 연산자, 화살표 등. 완전한 기호 참조.",
-        "keywords": "LaTeX 기호, 수학 기호, 그리스 문자 LaTeX, LaTeX 연산자, LaTeX 화살표, 기호 참조, LaTeX 기호 복사, LaTeX 특수 문자, 수학 표기법 LaTeX, LaTeX 치트시트, 모든 LaTeX 기호"
-      },
-      "math": {
-        "title": "LaTeX 수학 기호 - 연산자와 관계",
-        "description": "LaTeX 수학 기호 완전 목록. 연산자, 관계, 복사 붙여넣기 코드가 있는 수식.",
-        "keywords": "수학 기호 LaTeX, 수학 연산자, LaTeX 플러스 마이너스, LaTeX 분수, LaTeX 제곱근, LaTeX 시그마, LaTeX 적분, 곱하기 기호 LaTeX, 나누기 기호 LaTeX, 등호 LaTeX, 부등호 LaTeX, 약 LaTeX, 수식 기호"
-      },
-      "greek": {
-        "title": "LaTeX 그리스 문자 - 알파부터 오메가까지",
-        "description": "그리스 문자와 LaTeX 명령어의 완전 목록. 알파, 베타, 감마 등을 복사 붙여넣기.",
-        "keywords": "그리스 문자 LaTeX, 알파 LaTeX, 베타 LaTeX, 감마 LaTeX, 델타 LaTeX, 엡실론 LaTeX, 세타 LaTeX, 람다 LaTeX, 파이 LaTeX, 시그마 LaTeX, 오메가 LaTeX, 파이 LaTeX, 그리스 알파벳 LaTeX"
-      },
-      "arrows": {
-        "title": "LaTeX 화살표 기호 - 모든 화살표 유형",
-        "description": "LaTeX 화살표 기호 완전 목록. 오른쪽, 왼쪽, 위, 아래, 이중 화살표 등.",
-        "keywords": "LaTeX 화살표, 오른쪽 화살표 LaTeX, 왼쪽 화살표 LaTeX, 이중 화살표 LaTeX, 함축 LaTeX, 화살표 기호, LaTeX 화살표 유형, 위 화살표 LaTeX, 아래 화살표 LaTeX, 양방향 화살표 LaTeX, 긴 화살표 LaTeX"
-      },
-      "brackets": {
-        "title": "LaTeX 괄호 및 구분자",
-        "description": "LaTeX의 괄호, 중괄호, 대괄호 및 구분자. 괄호 명령어 복사 붙여넣기.",
-        "keywords": "LaTeX 괄호, LaTeX 소괄호, LaTeX 중괄호, 중괄호 LaTeX, 대괄호 LaTeX, 꺾쇠괄호 LaTeX, LaTeX 구분자, left right LaTeX, 큰 괄호 LaTeX"
-      },
-      "calculus": {
-        "title": "LaTeX 미적분 기호 - 미분과 적분",
-        "description": "LaTeX의 미적분 표기법: 미분, 적분, 극한 및 미분 연산자.",
-        "keywords": "미적분 LaTeX, 미분 LaTeX, 적분 LaTeX, 편미분 LaTeX, 극한 LaTeX, 미분방정식 LaTeX, 나블라 LaTeX, 기울기 LaTeX, 발산 LaTeX, 회전 LaTeX, 라플라시안 LaTeX"
-      },
-      "setTheory": {
-        "title": "LaTeX 집합론 기호",
-        "description": "LaTeX의 집합론 표기법: 합집합, 교집합, 부분집합, 원소 등.",
-        "keywords": "집합론 LaTeX, 합집합 LaTeX, 교집합 LaTeX, 부분집합 LaTeX, 상위집합 LaTeX, 원소 LaTeX, 공집합 LaTeX, 집합 표기법 LaTeX, 속함 LaTeX, 포함 LaTeX"
-      },
-      "logic": {
-        "title": "LaTeX 논리 기호 - 논리 연산자",
-        "description": "LaTeX의 논리 기호: and, or, not, 함축, 동치 및 한정자.",
-        "keywords": "논리 기호 LaTeX, and LaTeX, or LaTeX, not LaTeX, 함축 LaTeX, 동치 LaTeX, 부정 LaTeX, 논리 연산자 LaTeX, 명제 논리 LaTeX"
-      },
-      "relations": {
-        "title": "LaTeX 관계 기호 - 비교 연산자",
-        "description": "LaTeX의 관계 기호: 작다, 크다, 같다, 같지 않다 및 동치.",
-        "keywords": "관계 기호 LaTeX, 작다 LaTeX, 크다 LaTeX, 작거나 같다 LaTeX, 크거나 같다 LaTeX, 같지 않다 LaTeX, 동치 LaTeX, 약 LaTeX, 비례 LaTeX"
-      },
-      "operators": {
-        "title": "LaTeX 연산자 - 수학 연산자",
-        "description": "LaTeX의 수학 연산자: 합, 곱, 적분 및 연산자 표기법.",
-        "keywords": "LaTeX 연산자, 합 LaTeX, 곱 LaTeX, 적분 연산자 LaTeX, 큰 연산자 LaTeX, 시그마 합 LaTeX, prod LaTeX, coprod LaTeX, 연산자 표기법 LaTeX"
-      },
-      "linearAlgebra": {
-        "title": "LaTeX 선형대수 기호 - 행렬과 벡터",
-        "description": "LaTeX의 선형대수 표기법: 행렬, 벡터, 행렬식 및 고유값.",
-        "keywords": "선형대수 LaTeX, 행렬 LaTeX, 벡터 LaTeX, 행렬식 LaTeX, 전치 LaTeX, 고유값 LaTeX, 고유벡터 LaTeX, 내적 LaTeX, 외적 LaTeX, 노름 LaTeX"
-      },
-      "geometry": {
-        "title": "LaTeX 기하학 기호 - 각도와 도형",
-        "description": "LaTeX의 기하학 표기법: 각도, 평행, 수직, 삼각형 및 원.",
-        "keywords": "기하학 LaTeX, 각도 LaTeX, 평행 LaTeX, 수직 LaTeX, 삼각형 LaTeX, 원 LaTeX, 도 기호 LaTeX, 합동 LaTeX, 닮음 LaTeX"
-      },
-      "probability": {
-        "title": "LaTeX 확률 기호 - 통계 표기법",
-        "description": "LaTeX의 확률 및 통계 기호: 기댓값, 분산, 분포.",
-        "keywords": "확률 LaTeX, 기댓값 LaTeX, 분산 LaTeX, 표준편차 LaTeX, 확률분포 LaTeX, 통계 LaTeX, 확률변수 LaTeX, 조건부확률 LaTeX"
-      },
-      "physics": {
-        "title": "LaTeX 물리학 기호 - 과학 표기법",
-        "description": "LaTeX의 물리학 기호: 벡터, 연산자, 양자역학 및 상수.",
-        "keywords": "물리학 LaTeX, 벡터 LaTeX, hbar LaTeX, 양자역학 LaTeX, 브라켓 LaTeX, 디랙 표기법 LaTeX, 물리 상수 LaTeX, 과학 표기법 LaTeX"
-      },
-      "chemistry": {
-        "title": "LaTeX 화학 기호 - 화학 표기법",
-        "description": "LaTeX의 화학 표기법: 화학식, 반응 및 분자 구조.",
-        "keywords": "화학 LaTeX, 화학식 LaTeX, 반응 화살표 LaTeX, 아래첨자 LaTeX, 위첨자 LaTeX, mhchem LaTeX, 화학 방정식 LaTeX"
-      },
-      "computerScience": {
-        "title": "LaTeX 컴퓨터 과학 기호 - 알고리즘 표기법",
-        "description": "LaTeX의 컴퓨터 과학 기호: 알고리즘, 복잡도 및 프로그래밍 표기법.",
-        "keywords": "컴퓨터 과학 LaTeX, 알고리즘 LaTeX, 빅오 표기법 LaTeX, 복잡도 LaTeX, 의사코드 LaTeX, 프로그래밍 기호 LaTeX"
-      },
-      "functions": {
-        "title": "LaTeX 함수 기호 - 수학 함수",
-        "description": "LaTeX의 함수 표기법: 삼각함수, 로그, 지수함수 등.",
-        "keywords": "함수 LaTeX, sin LaTeX, cos LaTeX, tan LaTeX, log LaTeX, ln LaTeX, exp LaTeX, lim LaTeX, min LaTeX, max LaTeX, argmin LaTeX, argmax LaTeX"
-      },
-      "numberTheory": {
-        "title": "LaTeX 정수론 기호",
-        "description": "LaTeX의 정수론 표기법: 가분성, 합동 및 숫자 집합.",
-        "keywords": "정수론 LaTeX, 가분성 LaTeX, 나머지 LaTeX, 합동 LaTeX, 소수 LaTeX, 최대공약수 LaTeX, 최소공배수 LaTeX, 정수 LaTeX, 자연수 LaTeX"
-      },
-      "accents": {
-        "title": "LaTeX 악센트 및 부호",
-        "description": "LaTeX 악센트: 모자, 바, 점, 물결표 및 기타 부호.",
-        "keywords": "LaTeX 악센트, 모자 LaTeX, 바 LaTeX, 점 LaTeX, 물결표 LaTeX, 벡터 LaTeX, 위줄 LaTeX, 아래줄 LaTeX, 위중괄호 LaTeX, 아래중괄호 LaTeX"
-      },
-      "boolean": {
-        "title": "LaTeX 부울 대수 기호",
-        "description": "LaTeX의 부울 대수 표기법: AND, OR, NOT, XOR 및 진리값.",
-        "keywords": "부울 LaTeX, AND LaTeX, OR LaTeX, NOT LaTeX, XOR LaTeX, 참 거짓 LaTeX, 부울 대수 LaTeX, 논리 게이트 LaTeX"
-      },
-      "summation": {
-        "title": "LaTeX 합과 곱 기호",
-        "description": "LaTeX의 합과 곱 표기법: 합, 곱 및 급수.",
-        "keywords": "합 LaTeX, 곱 LaTeX, 합 표기법 LaTeX, 시그마 LaTeX, 파이 표기법 LaTeX, 급수 LaTeX, 무한 합 LaTeX"
-      },
-      "trigonometry": {
-        "title": "LaTeX 삼각함수 기호",
-        "description": "LaTeX의 삼각함수: 사인, 코사인, 탄젠트 및 역함수.",
-        "keywords": "삼각함수 LaTeX, sin LaTeX, cos LaTeX, tan LaTeX, arcsin LaTeX, arccos LaTeX, arctan LaTeX, 쌍곡선 LaTeX, sinh LaTeX, cosh LaTeX, tanh LaTeX"
-      },
-      "topology": {
-        "title": "LaTeX 위상수학 기호",
-        "description": "LaTeX의 위상 표기법: 열린 집합, 폐포, 내부 및 경계.",
-        "keywords": "위상수학 LaTeX, 열린 집합 LaTeX, 닫힌 집합 LaTeX, 폐포 LaTeX, 내부 LaTeX, 경계 LaTeX, 동형사상 LaTeX"
-      },
-      "finance": {
-        "title": "LaTeX 금융 기호 - 금융 표기법",
-        "description": "LaTeX의 금융 기호: 통화, 이자율 및 경제 표기법.",
-        "keywords": "금융 LaTeX, 통화 LaTeX, 달러 LaTeX, 유로 LaTeX, 파운드 LaTeX, 퍼센트 LaTeX, 이자율 LaTeX, NPV LaTeX, 원화 기호"
-      },
-      "machineLearning": {
-        "title": "LaTeX 머신러닝 기호 - ML 표기법",
-        "description": "LaTeX의 머신러닝 표기법: 신경망, 손실 함수 및 최적화.",
-        "keywords": "머신러닝 LaTeX, 신경망 LaTeX, 손실 함수 LaTeX, 경사하강법 LaTeX, 활성화 함수 LaTeX, 가중치 LaTeX, 편향 LaTeX, ML 표기법 LaTeX, 딥러닝 LaTeX"
-      },
-      "latin": {
-        "title": "LaTeX 라틴 문자 및 글꼴",
-        "description": "LaTeX의 라틴 문자 및 글꼴 스타일: 굵은체, 이탤릭, 필기체 등.",
-        "keywords": "라틴 문자 LaTeX, 굵은체 LaTeX, 이탤릭 LaTeX, mathcal LaTeX, mathbb LaTeX, mathfrak LaTeX, 글꼴 스타일 LaTeX, 칠판체 LaTeX"
-      },
-      "complex": {
-        "title": "LaTeX 복소수 기호",
-        "description": "LaTeX의 복소수 표기법: 허수 단위, 켤레 및 극형식.",
-        "keywords": "복소수 LaTeX, 허수 단위 LaTeX, 켤레 LaTeX, 실수부 LaTeX, 허수부 LaTeX, 절댓값 LaTeX, 편각 LaTeX"
-      },
-      "graphTheory": {
-        "title": "LaTeX 그래프 이론 기호",
-        "description": "LaTeX의 그래프 이론 표기법: 정점, 간선, 경로 및 순환.",
-        "keywords": "그래프 이론 LaTeX, 정점 LaTeX, 간선 LaTeX, 경로 LaTeX, 순환 LaTeX, 인접 LaTeX, 차수 LaTeX, 연결 LaTeX"
-      },
-      "combinatorics": {
-        "title": "LaTeX 조합론 기호",
-        "description": "LaTeX의 조합론 표기법: 팩토리얼, 이항계수 및 순열.",
-        "keywords": "조합론 LaTeX, 팩토리얼 LaTeX, 이항계수 LaTeX, 순열 LaTeX, 조합 LaTeX, choose LaTeX, binom LaTeX"
-      },
-      "specialFunctions": {
-        "title": "LaTeX 특수 함수 - 감마, 제타, 베셀",
-        "description": "LaTeX의 특수 함수: 감마, 제타, 베셀 및 오차 함수.",
-        "keywords": "특수 함수 LaTeX, 감마 함수 LaTeX, 제타 함수 LaTeX, 베셀 함수 LaTeX, 오차 함수 LaTeX, 르장드르 LaTeX"
-      },
-      "tensors": {
-        "title": "LaTeX 텐서 표기법 - 아인슈타인 합산",
-        "description": "LaTeX의 텐서 표기법: 인덱스, 축약 및 공변 도함수.",
-        "keywords": "텐서 LaTeX, 아인슈타인 합산 LaTeX, 텐서 인덱스 LaTeX, 공변 도함수 LaTeX, 반변 LaTeX, 크로네커 델타 LaTeX"
-      },
-      "differentialGeometry": {
-        "title": "LaTeX 미분기하학 기호",
-        "description": "LaTeX의 미분기하학 표기법: 다양체, 곡률 및 연결.",
-        "keywords": "미분기하학 LaTeX, 다양체 LaTeX, 곡률 LaTeX, 크리스토펠 LaTeX, 리만 텐서 LaTeX, 연결 LaTeX"
-      },
-      "modalLogic": {
-        "title": "LaTeX 양상 논리 기호",
-        "description": "LaTeX의 양상 논리 표기법: 필연성, 가능성 및 시간 연산자.",
-        "keywords": "양상 논리 LaTeX, 필연성 LaTeX, 가능성 LaTeX, 상자 LaTeX, 다이아몬드 LaTeX, 시간 논리 LaTeX"
-      },
-      "gameTheory": {
-        "title": "LaTeX 게임 이론 기호",
-        "description": "LaTeX의 게임 이론 표기법: 전략, 보수 및 균형.",
-        "keywords": "게임 이론 LaTeX, 내쉬 균형 LaTeX, 전략 LaTeX, 보수 LaTeX, 효용 함수 LaTeX, 샤플리 값 LaTeX"
-      },
-      "order": {
-        "title": "LaTeX 순서 관계 기호",
-        "description": "LaTeX의 순서 관계: 부분 순서, 격자 및 상한/하한.",
-        "keywords": "순서 관계 LaTeX, 부분 순서 LaTeX, 격자 LaTeX, 상한 LaTeX, 하한 LaTeX, 최소 상한 LaTeX"
-      },
-      "optimization": {
-        "title": "LaTeX 최적화 기호",
-        "description": "LaTeX의 최적화 표기법: 최소화, 최대화 및 제약 조건.",
-        "keywords": "최적화 LaTeX, 최소화 LaTeX, 최대화 LaTeX, argmin LaTeX, argmax LaTeX, 제약 조건 LaTeX, constraint LaTeX"
-      },
-      "quantifiers": {
-        "title": "LaTeX 한정자 기호 - 모든, 존재",
-        "description": "LaTeX의 한정자 기호: 전칭 및 존재 한정자.",
-        "keywords": "한정자 LaTeX, 모든 LaTeX, 존재 LaTeX, forall LaTeX, 존재 한정자 LaTeX, 전칭 한정자 LaTeX, 존재한다 LaTeX"
-      },
-      "units": {
-        "title": "LaTeX 단위 및 측정",
-        "description": "LaTeX의 SI 단위 및 측정: 도, 물리 상수 및 단위.",
-        "keywords": "단위 LaTeX, SI 단위 LaTeX, 도 LaTeX, 물리 상수 LaTeX, siunitx LaTeX, 측정 LaTeX, 미터 LaTeX, 킬로그램 LaTeX"
-      }
-    },
-    "templates": {
-      "main": {
-        "title": "무료 LaTeX 템플릿 - 이력서, CV, 논문, Beamer",
-        "description": "60개 이상의 전문 LaTeX 템플릿. 이력서, CV, 논문, Beamer 프레젠테이션 등. 무료 다운로드.",
-        "keywords": "LaTeX 템플릿, 무료 LaTeX 템플릿, LaTeX 이력서 템플릿, LaTeX CV 템플릿, LaTeX 논문 템플릿, LaTeX Beamer 템플릿, Overleaf 템플릿, 학술 템플릿 LaTeX, LaTeX 발표 템플릿, LaTeX 논문 템플릿, LaTeX 과제 템플릿, LaTeX 포스터 템플릿, LaTeX 편지 템플릿, LaTeX 책 템플릿, LaTeX 보고서 템플릿, 전문 LaTeX 템플릿"
-      },
-      "academic": {
-        "title": "학술 LaTeX 템플릿 - 연구 논문, 학위 논문, 박사 논문",
-        "description": "연구 논문, 학위 논문, 박사 논문, 저널 논문 및 학회 논문을 위한 무료 학술 LaTeX 템플릿.",
-        "keywords": "학술 LaTeX 템플릿, 연구 논문 템플릿 LaTeX, 학위 논문 템플릿 LaTeX, 박사 논문 템플릿 LaTeX, 저널 논문 템플릿, 학회 논문 LaTeX, IEEE 템플릿 LaTeX, ACM 템플릿, Springer 템플릿, 과학 논문 템플릿, 박사 학위 논문 LaTeX, 석사 학위 논문 템플릿, 학술 글쓰기 LaTeX"
-      },
-      "presentations": {
-        "title": "LaTeX 발표 템플릿 - Beamer 슬라이드",
-        "description": "무료 LaTeX Beamer 발표 템플릿. 학술 강연, 학회 및 강의를 위한 전문 슬라이드.",
-        "keywords": "Beamer 템플릿 LaTeX, LaTeX 발표 템플릿, Beamer 슬라이드, LaTeX 슬라이드, 학술 발표 템플릿, 학회 슬라이드 LaTeX, 강의 슬라이드 LaTeX, Beamer 테마, Beamer 예제, 파워포인트 대안 LaTeX, 발표 Beamer, 프레젠테이션 템플릿"
-      },
-      "resumeCV": {
-        "title": "LaTeX 이력서 및 CV 템플릿 - 전문 이력서",
-        "description": "무료 LaTeX 이력서 및 CV 템플릿. 취업 지원 및 학술 CV를 위한 현대적이고 전문적인 디자인.",
-        "keywords": "LaTeX 이력서 템플릿, LaTeX CV 템플릿, 이력서 LaTeX, 전문 이력서 LaTeX, 현대적 CV 템플릿, 학술 CV LaTeX, 한 페이지 이력서 LaTeX, 2단 이력서, moderncv 템플릿, europass LaTeX, 소프트웨어 엔지니어 이력서 LaTeX, 데이터 과학자 CV, 취업용 이력서"
-      },
-      "math": {
-        "title": "LaTeX 수학 템플릿 - 수식, 증명, 문제집",
-        "description": "수학 문서를 위한 LaTeX 템플릿: 문제집, 증명, 정리 및 수식 시트.",
-        "keywords": "수학 템플릿 LaTeX, 수식 템플릿 LaTeX, 문제집 템플릿, 과제 템플릿 LaTeX, 증명 템플릿 LaTeX, 정리 템플릿, 수학 노트 LaTeX, 공식 시트 템플릿, 시험 템플릿 LaTeX, 퀴즈 템플릿 LaTeX, 수학 과제 템플릿"
-      },
-      "reports": {
-        "title": "LaTeX 보고서 템플릿 - 기술, 실험, 프로젝트 보고서",
-        "description": "기술 보고서, 실험 보고서, 프로젝트 문서 및 비즈니스 보고서를 위한 전문 LaTeX 템플릿.",
-        "keywords": "보고서 템플릿 LaTeX, 기술 보고서 LaTeX, 실험 보고서 템플릿, 프로젝트 보고서 LaTeX, 비즈니스 보고서 템플릿, 연간 보고서 LaTeX, 인턴십 보고서 템플릿, 연구 보고서 LaTeX, 문서화 템플릿"
-      },
-      "education": {
-        "title": "LaTeX 교육 템플릿 - 과제, 시험, 강의 계획서",
-        "description": "교육자와 학생을 위한 LaTeX 템플릿: 과제, 시험, 강의 계획서, 강의 노트 및 수업 자료.",
-        "keywords": "과제 템플릿 LaTeX, 시험 템플릿 LaTeX, 강의 계획서 템플릿 LaTeX, 강의 노트 템플릿, 수업 자료 LaTeX, 과제물 템플릿, 테스트 템플릿 LaTeX, 워크시트 템플릿, 학습 가이드 LaTeX, 플래시카드 템플릿 LaTeX"
-      },
-      "letters": {
-        "title": "LaTeX 편지 템플릿 - 자기소개서, 공식 편지",
-        "description": "자기소개서, 공식 서신 및 추천서를 위한 전문 LaTeX 편지 템플릿.",
-        "keywords": "편지 템플릿 LaTeX, 자기소개서 LaTeX, 공식 편지 템플릿, 추천서 LaTeX, 비즈니스 편지 템플릿, 지원서 편지 LaTeX, 참조 편지 템플릿, 전문 편지 LaTeX"
-      },
-      "business": {
-        "title": "LaTeX 비즈니스 템플릿 - 사업 계획서, 제안서, 청구서",
-        "description": "비즈니스 문서를 위한 LaTeX 템플릿: 사업 계획서, 제안서, 청구서, 계약서 및 메모.",
-        "keywords": "비즈니스 템플릿 LaTeX, 사업 계획서 LaTeX, 제안서 템플릿 LaTeX, 청구서 템플릿 LaTeX, 계약서 템플릿, 메모 템플릿 LaTeX, 명함 LaTeX, 기업 보고서 템플릿, 요약서 LaTeX, 프로젝트 제안서 템플릿"
-      },
-      "other": {
-        "title": "LaTeX 템플릿 - 책, 포스터, 뉴스레터",
-        "description": "기타 LaTeX 템플릿: 책, 포스터, 뉴스레터, 달력 및 창작 문서.",
-        "keywords": "책 템플릿 LaTeX, 포스터 템플릿 LaTeX, 뉴스레터 템플릿 LaTeX, 달력 템플릿 LaTeX, 전단지 템플릿 LaTeX, 브로셔 LaTeX, 레시피 템플릿 LaTeX, 잡지 템플릿, 부고 템플릿 LaTeX, 청첩장 LaTeX"
-      }
+      "title": "Free Online Tools",
+      "description": "Free online tools to help you get things done faster.",
+      "keywords": "free tools, online tools, calculator, generator, converter, checker"
     }
-  },
-  "templateCode": { "placeholders": { "authorName": "저자 이름", "yourName": "이름", "department": "부서", "universityName": "대학 이름", "email": "author@university.edu", "presentationTitle": "프레젠테이션 제목", "researchPaperTitle": "연구 논문 제목", "courseName": "과정명", "instructorName": "강사명", "yourAddress": "주소", "cityStateZip": "시, 도 우편번호", "phone": "(02) 1234-5678", "point1": "포인트 1", "point2": "포인트 2", "point3": "포인트 3", "contentGoesHere": "콘텐츠를 여기에 입력하세요.", "summaryOfKeyPoints": "핵심 포인트 요약." } }
+  }
 }
