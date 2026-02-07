@@ -132,6 +132,7 @@ All converters use **GPT-4o-mini** to process different file types:
 - React-PDF for professional PDF rendering
 - Octree LaTeX Compilation Server
 - Lucide React Icons
+- next-intl
 
 ## License
 
