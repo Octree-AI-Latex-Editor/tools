@@ -1,0 +1,59 @@
+import { Metadata } from "next";
+import { generateSymbolMetadata } from '@/lib/generate-symbol-metadata';
+
+const defaultMetadata: Metadata = {
+  title: "LaTeX Computer Science Symbols - Big O, Logic, Algorithms | Free Symbol Reference",
+  description: "Complete list of LaTeX computer science symbols. Copy-paste O(n), Ω(n), Θ(n), :=, ≡, ⊕, ∧, ∨, ⌊x⌋, ⌈x⌉ with LaTeX commands.",
+  keywords: [
+    // Computer science keywords
+    "computer science symbols",
+    "algorithm symbols",
+    "big o notation symbols",
+    "complexity notation symbols",
+    "logical symbols cs",
+    "programming math symbols",
+    "lambda calculus symbols",
+    "recursion notation symbols",
+    // LaTeX specific
+    "latex computer science",
+    "latex big o notation",
+    "latex algorithm symbols",
+    "latex complexity",
+    "latex assignment",
+    "latex xor",
+    "latex floor ceiling",
+    "big O Omega Theta latex",
+    "latex mapsto",
+    "latex definition",
+    "triangleq latex",
+    "latex modulo",
+    "latex divides",
+    "lfloor lceil latex",
+    "oplus latex",
+    "land lor latex",
+    "latex logarithm",
+    "latex natural log",
+    "academic symbols",
+  ],
+  openGraph: {
+    title: "LaTeX Computer Science Symbols - Complete Symbol Reference",
+    description: "Copy-paste LaTeX code for Big O notation, logical operators, and algorithm symbols.",
+  },
+};
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateSymbolMetadata(locale, 'computer-science', defaultMetadata);
+}
+
+export default function ComputerScienceLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return <>{children}</>;
+}

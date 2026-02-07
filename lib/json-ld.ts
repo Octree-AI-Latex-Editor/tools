@@ -1,31 +1,31 @@
-import { siteConfig } from "@/lib/site-config";
-
-export interface ToolJsonLd {
+export interface TemplateJsonLd {
   "@context": string;
   "@type": string;
   name: string;
   description: string;
-  url: string;
+  programmingLanguage: string;
+  codeRepository: string;
   author: {
     "@type": string;
     name: string;
   };
 }
 
-export const getToolJsonLd = (
+export const getTemplateJsonLd = (
   title: string,
-  description: string,
-  slug: string
-): ToolJsonLd => {
+  description: string
+): TemplateJsonLd => {
   return {
     "@context": "https://schema.org",
-    "@type": "WebApplication",
-    name: title,
+    "@type": "SoftwareSourceCode",
+    name: `${title} LaTeX Template`,
     description: description,
-    url: `${siteConfig.websiteUrl}/tools/${slug}`,
+    programmingLanguage: "LaTeX",
+    codeRepository: "https://tools.useoctree.com/templates",
     author: {
       "@type": "Organization",
-      name: siteConfig.name,
+      name: "Octree",
     },
   };
 };
+

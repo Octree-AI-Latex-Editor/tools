@@ -4,7 +4,7 @@ export type Locale = (typeof LOCALES)[number];
 
 export const DEFAULT_LOCALE: Locale = 'en';
 
-export const LANG_COOKIE = 'tools_lang';
+export const LANG_COOKIE = 'octree_lang';
 
 export function isLocale(x: string): x is Locale {
   return LOCALES.includes(x as Locale);

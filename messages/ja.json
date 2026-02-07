@@ -1,98 +1,1357 @@
 {
   "language": {
-    "label": "Language",
-    "en": "English",
-    "fr": "French",
-    "es": "Spanish",
-    "pt": "Portuguese",
-    "cn": "Chinese",
-    "ar": "Arabic",
-    "de": "German",
-    "ja": "Japanese",
-    "it": "Italian",
-    "ko": "Korean",
-    "id": "Indonesian",
-    "fil": "Filipino",
-    "ms": "Malay",
-    "ru": "Russian",
-    "vi": "Vietnamese",
-    "nl": "Dutch"
+    "label": "言語",
+    "en": "英語",
+    "fr": "フランス語",
+    "es": "スペイン語",
+    "pt": "ポルトガル語",
+    "cn": "中国語",
+    "ar": "アラビア語",
+    "de": "ドイツ語",
+    "ja": "日本語",
+    "it": "イタリア語",
+    "ko": "韓国語",
+    "id": "インドネシア語",
+    "fil": "フィリピン語",
+    "ms": "マレー語",
+    "ru": "ロシア語",
+    "vi": "ベトナム語",
+    "nl": "オランダ語"
   },
   "common": {
-    "backToTools": "Back to Tools",
-    "tryNow": "Try Now",
-    "view": "View",
-    "open": "Open",
-    "search": "Search",
-    "searchTools": "Search tools...",
-    "noResults": "No results found",
-    "loading": "Loading...",
-    "processing": "Processing...",
-    "generating": "Generating...",
-    "error": "Error",
-    "success": "Success",
-    "close": "Close",
-    "copy": "Copy",
-    "copied": "Copied!",
-    "download": "Download",
-    "export": "Export",
-    "exportAs": "Export as",
-    "browseFiles": "browse files",
-    "dropFileHere": "Drop your file here",
-    "fileUploaded": "File uploaded successfully",
-    "categories": "Categories",
-    "all": "All",
-    "tools": "Tools"
+    "backToTools": "ツールに戻る",
+    "tryNow": "今すぐ試す",
+    "view": "表示",
+    "open": "開く",
+    "openInOctree": "Octreeで開く",
+    "search": "検索",
+    "searchTools": "ツールを検索...",
+    "searchTemplates": "テンプレートを検索...",
+    "noResults": "結果が見つかりません",
+    "loading": "読み込み中...",
+    "processing": "処理中...",
+    "generating": "生成中...",
+    "compiling": "コンパイル中...",
+    "error": "エラー",
+    "success": "成功",
+    "close": "閉じる",
+    "copy": "コピー",
+    "copied": "コピーしました！",
+    "download": "ダウンロード",
+    "export": "エクスポート",
+    "exportAs": "形式でエクスポート",
+    "browseFiles": "ファイルを参照",
+    "dropFileHere": "ファイルをここにドロップ",
+    "fileUploaded": "ファイルのアップロードに成功しました",
+    "categories": "カテゴリ",
+    "all": "すべて",
+    "tools": "ツール",
+    "templates": "テンプレート",
+    "template": "テンプレート",
+    "templatesCount": "{count}件のテンプレート",
+    "starOnGitHub": "GitHubでスター",
+    "joinUsOnReddit": "Redditでフォロー",
+    "joinOurDiscord": "Discordに参加"
   },
   "home": {
-    "title": "Free Online Tools",
-    "description": "Useful tools to help you get things done faster.",
-    "noToolsFound": "No tools found matching your search."
+    "title": "無料LaTeXツール＆テンプレート",
+    "description": "手書きの数式や表をLaTeXに変換、引用を生成、プロフェッショナルなテンプレートを探索。",
+    "noToolsFound": "検索に一致するツールが見つかりません。"
+  },
+  "templates": {
+    "title": "無料LaTeXツール＆テンプレート",
+    "description": "学術論文、プレゼンテーション、履歴書などのプロフェッショナルなLaTeXテンプレート。",
+    "allTemplates": "すべてのテンプレート",
+    "noTemplatesFound": "検索に一致するテンプレートが見つかりません。",
+    "viewTemplate": "テンプレートを表示",
+    "backToAllTemplates": "すべてのテンプレートに戻る",
+    "templateNotFound": "テンプレートが見つかりません",
+    "backToTemplates": "テンプレートに戻る",
+    "download": "ダウンロード",
+    "copyCode": "コードをコピー",
+    "sourceCode": "ソースコード",
+    "preview": "プレビュー",
+    "openAsTemplate": "テンプレートとして開く",
+    "viewSource": "ソースを表示",
+    "hideSource": "ソースを非表示",
+    "viewPdf": "PDFを表示",
+    "category": "カテゴリ",
+    "license": "ライセンス",
+    "freeToUse": "無料で使用可能（MIT）",
+    "abstract": "要約",
+    "tags": "タグ",
+    "latexSourceCode": "LaTeXソースコード",
+    "loadingPreview": "プレビューを読み込み中..."
   },
   "tools": {
-    "input": "INPUT",
-    "output": "OUTPUT",
-    "backToTools": "Back to Tools",
-    "export": "Export",
-    "processing": "Processing...",
-    "outputWillAppear": "Output will appear here...",
-    "failedToProcess": "Failed to process. Please try again.",
-    "conversionFailed": "Conversion failed"
+    "input": "入力",
+    "output": "出力",
+    "code": "コード",
+    "preview": "プレビュー",
+    "yourHandwrittenNotes": "手書きノート",
+    "cleanLatexCode": "クリーンなLaTeXコード",
+    "uploadImageDescription": "数式を含む画像をアップロード",
+    "readyToCopy": "任意のLaTeXエディタにコピー可能",
+    "generatingPreview": "プレビューを生成中...",
+    "previewWillAppear": "プレビューがここに表示されます...",
+    "backToTools": "ツールに戻る",
+    "openInOctree": "Octreeで開く",
+    "export": "エクスポート",
+    "exportAsLatex": "LaTeXとしてエクスポート",
+    "exportAsPdf": "PDFとしてエクスポート",
+    "exportAsImage": "画像としてエクスポート",
+    "fileUploaded": "ファイルのアップロードに成功しました",
+    "dropFileHere": "ファイルをここにドロップ",
+    "orBrowseFiles": "またはファイルを参照",
+    "processing": "処理中...",
+    "convertingToLatex": "LaTeXに変換中...",
+    "converting": "変換中...",
+    "outputWillAppear": "出力がここに表示されます...",
+    "codeTab": "コード",
+    "previewTab": "プレビュー",
+    "readyToUseInLatex": "LaTeXドキュメントで使用可能",
+    "readyToUseInMarkdown": "Markdownファイルで使用可能",
+    "editLatexCode": "ここでLaTeXコードを編集",
+    "livePreview": "ドキュメントのライブプレビュー",
+    "generatedCodeWillAppear": "生成されたコードがここに表示されます...",
+    "compilingLatex": "LaTeXをコンパイル中...",
+    "aiThinking": "AIモデルが思考中…",
+    "giveItAMoment": "TikZダイアグラムを作成中です。",
+    "codeStreaming": "コードをストリーミング中です。",
+    "generatingPgfplots": "pgfplotsコードを生成中...",
+    "onlyCsvFiles": "このツールではCSVファイルのみサポートされています。",
+    "onlyImageFiles": "画像ファイル（JPEG、PNG）とPDFファイルのみサポートされています。",
+    "failedToProcess": "画像の処理に失敗しました。もう一度お試しください。",
+    "failedToCompile": "LaTeXのコンパイルに失敗しました。",
+    "failedToGenerate": "引用の生成に失敗しました。もう一度お試しください。",
+    "conversionFailed": "変換に失敗しました",
+    "pleaseEnterEquation": "数式の説明を入力するか、画像をアップロードしてください",
+    "equationTooLong": "数式の説明は2000文字以内にしてください",
+    "failedToConvert": "数式の変換に失敗しました。もう一度お試しください。",
+    "noPdfUrl": "PDF URLが返されませんでした",
+    "failedToExportPdf": "PDFのエクスポートに失敗しました。"
   },
-  "toolsList": {},
-  "toolsSpecific": {},
+  "toolsSpecific": {
+    "mathToLatex": {
+      "title": "数式からLaTeX",
+      "subtitle": "入力した数式をクリーンなLaTeXに変換。",
+      "inputLabel": "数式入力",
+      "inputPlaceholder": "例：0から1のx^2の積分",
+      "convert": "変換",
+      "clear": "クリア",
+      "outputLabel": "LaTeX出力",
+      "copy": "コピー",
+      "copied": "コピーしました！"
+    },
+    "imageToLatex": {
+      "title": "画像からLaTeX",
+      "description": "手書きの数式や方程式の画像をクリーンなLaTeXコードに変換"
+    },
+    "tikzGenerator": {
+      "title": "TikZダイアグラム生成",
+      "subtitle": "ダイアグラムを説明するとAIがTikZコードを生成します",
+      "inputLabel": "ダイアグラムの説明",
+      "inputHint": "作成したいダイアグラムを説明してください",
+      "placeholder": "例：3つのノードが矢印で接続された簡単なフローチャートを描く。最初のノードは「開始」、2番目は「処理」、3番目は「終了」と表示。",
+      "generateTikz": "TikZを生成",
+      "generating": "生成中...",
+      "aiModelThinking": "AIモデルが思考中…",
+      "giveItAMoment": "TikZダイアグラムを作成中です。",
+      "hangTight": "コードをストリーミング中です。",
+      "outputLabel": "生成されたTikZコード",
+      "readyToUse": "LaTeXドキュメントで使用可能",
+      "generatedCodeWillAppear": "生成されたコードがここに表示されます...",
+      "failedToGenerate": "TikZの生成に失敗しました。もう一度お試しください。",
+      "failedToCompile": "TikZドキュメントのコンパイルに失敗しました。"
+    },
+    "pgfplotsGenerator": {
+      "title": "Pgfplots生成",
+      "subtitle": "プロットを説明するとAIがpgfplotsコードを生成します",
+      "inputLabel": "プロットの説明",
+      "inputHint": "作成したいプロットやグラフを説明してください",
+      "placeholder": "例：x = -5からx = 5までのy = x^2の折れ線グラフを作成し、青い線とグリッドを追加。軸ラベルを追加。",
+      "generatePlot": "プロットを生成",
+      "generating": "生成中...",
+      "generatingPgfplotsCode": "pgfplotsコードを生成中...",
+      "outputLabel": "生成されたPgfplotsコード",
+      "readyToUse": "LaTeXドキュメントで使用可能",
+      "generatedCodeWillAppear": "生成されたコードがここに表示されます...",
+      "failedToGenerate": "pgfplotsの生成に失敗しました。もう一度お試しください。"
+    },
+    "mermaidToLatex": {
+      "title": "MermaidからLaTeX変換",
+      "subtitle": "MermaidダイアグラムをLaTeXコードに変換",
+      "inputLabel": "Mermaidコード",
+      "inputHint": "Mermaidダイアグラムの構文をここに貼り付け",
+      "convertToLatex": "LaTeXに変換",
+      "converting": "変換中...",
+      "convertingToLatex": "LaTeXに変換中...",
+      "outputLabel": "LaTeXコード",
+      "readyToUse": "LaTeXドキュメントで使用可能",
+      "convertedLatexWillAppear": "変換されたLaTeXがここに表示されます...",
+      "failedToConvert": "Mermaidの変換に失敗しました。もう一度お試しください。"
+    },
+    "citationGenerator": {
+      "title": "LaTeX引用生成",
+      "subtitle": "記事の詳細、DOI、またはURLからBibTeX引用を生成",
+      "citationDetailsLabel": "引用の詳細",
+      "citationDetailsHint": "記事の詳細、DOI、またはURLを入力",
+      "placeholder": "引用の詳細を入力...",
+      "generateBibtex": "BibTeXを生成",
+      "generating": "生成中...",
+      "generatingBibtex": "BibTeXを生成中...",
+      "outputLabel": "BibTeXコード",
+      "readyToAdd": ".bibファイルに追加可能",
+      "bibtexWillAppear": "BibTeX引用がここに表示されます...",
+      "failedToGenerate": "引用の生成に失敗しました。もう一度お試しください。",
+      "exportAsBib": ".bibとしてエクスポート"
+    },
+    "latexPreview": {
+      "title": "LaTeXプレビュー",
+      "subtitle": "即時PDFプレビュー付きライブLaTeXエディタ",
+      "codeLabel": "LaTeXエディタ",
+      "codeHint": "ここでLaTeXコードを編集",
+      "previewLabel": "PDF出力",
+      "previewHint": "ドキュメントのライブプレビュー",
+      "compiling": "コンパイル中...",
+      "compilingLatex": "LaTeXをコンパイル中..."
+    },
+    "aiLatexGenerator": {
+      "title": "AI LaTeX生成",
+      "subtitle": "欲しいものを説明するとAIがLaTeXコードを生成します",
+      "descriptionLabel": "説明",
+      "descriptionHint": "必要なドキュメントやコンテンツを説明してください",
+      "placeholder": "例：機械学習に関する5枚のスライドのBeamerプレゼンテーションを作成...",
+      "generateLatex": "LaTeXを生成",
+      "generating": "生成中...",
+      "generatingLatexCode": "LaTeXコードを生成中...",
+      "outputLabel": "生成されたLaTeXコード",
+      "readyToUse": "LaTeXドキュメントで使用可能",
+      "generatedLatexWillAppear": "生成されたLaTeXがここに表示されます...",
+      "failedToGenerate": "LaTeXの生成に失敗しました。もう一度お試しください。"
+    },
+    "htmlToLatex": {
+      "title": "HTMLからLaTeX変換",
+      "subtitle": "HTMLマークアップをクリーンなLaTeXコードに変換",
+      "inputLabel": "HTMLコード",
+      "inputHint": "HTMLマークアップをここに貼り付け",
+      "convertToLatex": "LaTeXに変換",
+      "converting": "変換中...",
+      "convertingToLatex": "LaTeXに変換中...",
+      "outputLabel": "LaTeXコード",
+      "readyToUse": "LaTeXドキュメントで使用可能",
+      "convertedLatexWillAppear": "変換されたLaTeXがここに表示されます...",
+      "failedToConvert": "HTMLの変換に失敗しました。もう一度お試しください。"
+    },
+    "markdownToLatex": {
+      "title": "MarkdownからLaTeX変換",
+      "subtitle": "MarkdownドキュメントをクリーンなLaTeXコードに変換",
+      "inputLabel": "Markdownコンテンツ",
+      "inputHint": "Markdownテキストをここに貼り付け",
+      "convertToLatex": "LaTeXに変換",
+      "converting": "変換中...",
+      "convertingToLatex": "LaTeXに変換中...",
+      "outputLabel": "LaTeXコード",
+      "readyToUse": "LaTeXドキュメントで使用可能",
+      "convertedLatexWillAppear": "変換されたLaTeXがここに表示されます...",
+      "failedToConvert": "Markdownの変換に失敗しました。もう一度お試しください。"
+    },
+    "mathmlToLatex": {
+      "title": "MathMLからLaTeX変換",
+      "subtitle": "MathMLマークアップをクリーンなLaTeXコードに変換",
+      "inputLabel": "MathMLコード",
+      "inputHint": "MathMLマークアップをここに貼り付け",
+      "convertToLatex": "LaTeXに変換",
+      "converting": "変換中...",
+      "convertingToLatex": "LaTeXに変換中...",
+      "outputLabel": "LaTeXコード",
+      "readyToUse": "LaTeXドキュメントで使用可能",
+      "convertedLatexWillAppear": "変換されたLaTeXがここに表示されます...",
+      "failedToConvert": "MathMLの変換に失敗しました。もう一度お試しください。"
+    },
+    "latexToMarkdown": {
+      "title": "LaTeXからMarkdown変換",
+      "subtitle": "LaTeXドキュメントやスニペットをクリーンなMarkdownに変換",
+      "inputLabel": "LaTeXコンテンツ",
+      "inputHint": "LaTeXコードをここに貼り付け",
+      "convertToMarkdown": "Markdownに変換",
+      "converting": "変換中...",
+      "convertingToMarkdown": "Markdownに変換中...",
+      "outputLabel": "Markdown",
+      "readyToUse": "Markdownファイルで使用可能",
+      "convertedMarkdownWillAppear": "変換されたMarkdownがここに表示されます...",
+      "failedToConvert": "LaTeXの変換に失敗しました。もう一度お試しください。",
+      "exportAsMarkdown": "Markdownとしてエクスポート"
+    },
+    "latexWordCounter": {
+      "title": "LaTeX単語カウンター",
+      "subtitle": "LaTeXドキュメントの単語を正確にカウント",
+      "inputLabel": "LaTeXドキュメント",
+      "inputHint": "LaTeXコードを貼り付けまたは入力",
+      "resultsLabel": "単語数",
+      "resultsHint": "ライブ単語統計",
+      "counting": "カウント中...",
+      "countingWords": "単語をカウント中...",
+      "totalWords": "総単語数",
+      "breakdown": "内訳",
+      "textBody": "本文",
+      "headers": "見出し",
+      "captions": "キャプション",
+      "processedIn": "処理時間",
+      "enterLatexToCount": "単語をカウントするにはLaTeXを入力",
+      "failedToCount": "単語のカウントに失敗しました"
+    },
+    "tableToLatex": {
+      "title": "CSVからLaTeX変換",
+      "subtitle": ".csvファイルをアップロードすると、即座にクリーンなLaTeXテーブルコードを取得。",
+      "inputLabel": "CSVファイルをアップロード",
+      "outputLabel": "LaTeXテーブル出力"
+    },
+    "equationToLatex": {
+      "title": "方程式からLaTeX変換",
+      "subtitle": "テキスト説明や画像から数式をLaTeXに変換",
+      "inputLabel": "方程式の説明または画像",
+      "inputHint": "方程式をテキストで説明するか画像をアップロード",
+      "placeholder": "例：二次方程式の公式、0から1までのx²の積分、1から無限大までの1/n²の和...",
+      "placeholderWithImage": "画像がアップロードされているためテキスト入力は無効です",
+      "imageUploaded": "画像がアップロードされました、テキスト入力無効",
+      "dropImageHere": "方程式の画像をここにドロップ",
+      "orBrowseFiles": "またはファイルを参照",
+      "fileFormats": "JPEG、PNG、GIF、WebP",
+      "convertToLatex": "LaTeXに変換",
+      "converting": "変換中...",
+      "convertingToLatex": "LaTeXに変換中...",
+      "outputLabel": "生成されたLaTeX",
+      "readyToUse": "LaTeXドキュメントで使用可能",
+      "generatedLatexWillAppear": "生成されたLaTeXがここに表示されます...",
+      "pleaseEnterEquation": "方程式の説明を入力するか画像をアップロードしてください",
+      "equationTooLong": "方程式の説明は2000文字以内にしてください",
+      "failedToConvert": "方程式の変換に失敗しました。もう一度お試しください。"
+    },
+    "imageToTikz": {
+      "title": "画像からTikZ変換",
+      "subtitle": "ダイアグラムや画像をアップロードして編集可能なTikZコードに変換",
+      "inputLabel": "画像をアップロード",
+      "inputHint": "変換するダイアグラム、フローチャート、または図形をアップロード",
+      "dropFileHere": "ファイルをここにドロップ",
+      "orBrowseFiles": "またはファイルを参照",
+      "fileFormats": "JPEG、PNG、GIF、WebP",
+      "processing": "処理中...",
+      "analyzingImage": "画像を分析中...",
+      "analyzingImageSubtext": "図形と要素をTikZコードに変換中。",
+      "analyzingImageStatus": "画像を分析中...",
+      "analyzingImageStatusSubtext": "コードをストリーミング中です。",
+      "converting": "変換中...",
+      "outputLabel": "生成されたTikZコード",
+      "readyToUse": "LaTeXドキュメントで使用可能",
+      "generatedCodeWillAppear": "生成されたコードがここに表示されます...",
+      "failedToConvert": "画像からTikZへの変換に失敗しました。もう一度お試しください。",
+      "pleaseUploadImage": "画像ファイル（PNG、JPEG、GIF、WebP）をアップロードしてください",
+      "imageSizeTooLarge": "画像サイズは20MB未満である必要があります",
+      "removeImage": "画像を削除"
+    },
+    "pdfToLatex": {
+      "title": "PDFからLaTeX変換",
+      "subtitle": "数式や方程式を含むPDFドキュメントをクリーンなLaTeXコードに変換",
+      "inputLabel": "PDFドキュメント",
+      "outputLabel": "クリーンなLaTeXコード"
+    }
+  },
   "categories": {
-    "calculator": "Calculator",
-    "generator": "Generator",
-    "converter": "Converter",
-    "checker": "Checker",
-    "analyzer": "Analyzer",
-    "general": "General"
+    "academic": "学術",
+    "professional": "プロフェッショナル",
+    "creative": "クリエイティブ",
+    "business": "ビジネス",
+    "education": "教育",
+    "presentations": "プレゼンテーション",
+    "resumeCv": "履歴書・CV",
+    "math": "数学",
+    "reports": "レポート",
+    "letters": "手紙",
+    "other": "その他"
+  },
+  "toolsList": {
+    "imageToLatex": {
+      "title": "画像からLaTeX",
+      "description": "画像をLaTeX形式に変換"
+    },
+    "tableToLatex": {
+      "title": "ExcelからLaTeX",
+      "description": "CSV、JSON、ExcelをLaTeXテーブルに変換"
+    },
+    "tikzGenerator": {
+      "title": "TikZ生成",
+      "description": "AIでTikZダイアグラムを生成"
+    },
+    "imageToTikz": {
+      "title": "画像からTikZ",
+      "description": "AIで画像をTikZダイアグラムに変換"
+    },
+    "latexPreview": {
+      "title": "LaTeXプレビュー",
+      "description": "PDFプレビュー付きライブLaTeXエディタ"
+    },
+    "markdownToLatex": {
+      "title": "MarkdownからLaTeX",
+      "description": "MarkdownドキュメントをLaTeX形式に変換"
+    },
+    "citationGenerator": {
+      "title": "引用生成",
+      "description": "DOIや記事詳細からBibTeX引用を生成"
+    },
+    "mathmlToLatex": {
+      "title": "MathMLからLaTeX",
+      "description": "MathMLマークアップをLaTeX形式に変換"
+    },
+    "aiLatexGenerator": {
+      "title": "AI LaTeX生成",
+      "description": "テキスト説明からLaTeXコードを生成"
+    },
+    "htmlToLatex": {
+      "title": "HTMLからLaTeX",
+      "description": "HTMLマークアップをLaTeX形式に変換"
+    },
+    "mermaidToLatex": {
+      "title": "MermaidからLaTeX",
+      "description": "MermaidダイアグラムをLaTeX形式に変換"
+    },
+    "pgfplotsGenerator": {
+      "title": "Pgfplots生成",
+      "description": "AIでpgfplotsグラフとチャートを生成"
+    },
+    "latexToMarkdown": {
+      "title": "LaTeXからMarkdown",
+      "description": "LaTeXドキュメントやスニペットをMarkdownに変換"
+    },
+    "equationToLatex": {
+      "title": "方程式からLaTeX",
+      "description": "テキストや画像から数式をLaTeXに変換"
+    },
+    "pdfToLatex": {
+      "title": "PDFからLaTeX",
+      "description": "数学的内容を含むPDFドキュメントをLaTeXに変換"
+    },
+    "latexWordCounter": {
+      "title": "LaTeX単語カウンター",
+      "description": "LaTeXドキュメントの単語を正確にカウント"
+    },
+    "arxivToLatex": {
+      "title": "ArXivからLaTeX",
+      "description": "arXiv論文を直接Octreeにインポート"
+    }
+  },
+  "templatesList": {
+    "research-paper": {
+      "title": "研究論文",
+      "description": "IEEE形式の研究論文テンプレート"
+    },
+    "beamer-presentation": {
+      "title": "Beamerプレゼンテーション",
+      "description": "学術プレゼンテーションスライド"
+    },
+    "academic-cv": {
+      "title": "学術CV",
+      "description": "プロフェッショナルな学術履歴書"
+    },
+    "mathematical-document": {
+      "title": "数学ドキュメント",
+      "description": "定理を含む数学中心のドキュメント"
+    },
+    "lab-report": {
+      "title": "実験レポート",
+      "description": "科学実験レポートテンプレート"
+    },
+    "book-chapter": {
+      "title": "書籍チャプター",
+      "description": "書籍または論文のチャプターテンプレート"
+    },
+    "resume": {
+      "title": "履歴書",
+      "description": "プロフェッショナルな履歴書テンプレート"
+    },
+    "grading-rubric": {
+      "title": "評価ルーブリック",
+      "description": "評価基準と採点テンプレート"
+    },
+    "assignment": {
+      "title": "課題",
+      "description": "宿題と課題テンプレート"
+    },
+    "worksheet": {
+      "title": "ワークシート",
+      "description": "練習問題と演習テンプレート"
+    },
+    "homework": {
+      "title": "宿題テンプレート",
+      "description": "構造化された宿題提出"
+    },
+    "poster": {
+      "title": "研究ポスター",
+      "description": "学術学会ポスターテンプレート"
+    },
+    "thesis": {
+      "title": "博士論文",
+      "description": "チャプター付き包括的論文テンプレート"
+    },
+    "letter": {
+      "title": "正式な手紙",
+      "description": "プロフェッショナルなビジネスレターテンプレート"
+    },
+    "algorithm": {
+      "title": "アルゴリズム擬似コード",
+      "description": "擬似コード付きアルゴリズムドキュメント"
+    },
+    "cover-letter": {
+      "title": "カバーレター",
+      "description": "プロフェッショナルな学術・求職用カバーレター"
+    },
+    "journal-article": {
+      "title": "ジャーナル論文",
+      "description": "セクション付き学術ジャーナル論文テンプレート"
+    },
+    "syllabus": {
+      "title": "コースシラバス",
+      "description": "包括的なコースシラバステンプレート"
+    },
+    "research-proposal": {
+      "title": "研究提案書",
+      "description": "助成金・研究提案書テンプレート"
+    },
+    "essay": {
+      "title": "学術エッセイ",
+      "description": "議論と分析を含む構造化されたエッセイ"
+    },
+    "research-statement": {
+      "title": "研究声明書",
+      "description": "求職用学術研究声明書"
+    },
+    "dissertation": {
+      "title": "学位論文",
+      "description": "完全な博士学位論文テンプレート"
+    },
+    "white-paper": {
+      "title": "ホワイトペーパー",
+      "description": "プロフェッショナルなホワイトペーパーテンプレート"
+    },
+    "leaflet": {
+      "title": "リーフレット/パンフレット",
+      "description": "プロフェッショナルなマーケティングリーフレットテンプレート"
+    },
+    "technical-report": {
+      "title": "技術レポート",
+      "description": "技術研究レポートテンプレート"
+    },
+    "math-exercises": {
+      "title": "数学演習",
+      "description": "数学の練習問題と演習"
+    },
+    "math-notes": {
+      "title": "数学ノート",
+      "description": "数学コース用の構造化された講義ノート"
+    },
+    "math-exam": {
+      "title": "数学試験",
+      "description": "正式な数学試験テンプレート"
+    },
+    "math-problem-set": {
+      "title": "数学問題セット",
+      "description": "数学の週次問題セット課題"
+    },
+    "math-cheat-sheet": {
+      "title": "数学チートシート",
+      "description": "公式と定理のコンパクトな参照シート"
+    },
+    "lecture-notes": {
+      "title": "講義ノート",
+      "description": "クリーンな学術講義ノートテンプレート"
+    },
+    "quiz-template": {
+      "title": "クイズテンプレート",
+      "description": "短いクイズまたはテストテンプレート"
+    },
+    "formula-sheet": {
+      "title": "公式シート",
+      "description": "重要な公式の参照シート"
+    },
+    "project-report": {
+      "title": "プロジェクトレポート",
+      "description": "チャプターとセクション付きプロフェッショナルなプロジェクトレポート"
+    },
+    "article-template": {
+      "title": "論文テンプレート",
+      "description": "抄録とセクション付き科学論文"
+    },
+    "statement-of-purpose": {
+      "title": "志望動機書",
+      "description": "大学院出願用志望動機書テンプレート"
+    },
+    "literature-review": {
+      "title": "文献レビュー",
+      "description": "引用付き学術文献レビュー"
+    },
+    "meeting-minutes": {
+      "title": "議事録",
+      "description": "プロフェッショナルな議事録とノートテンプレート"
+    },
+    "certificate": {
+      "title": "証明書",
+      "description": "表彰または修了証明書テンプレート"
+    },
+    "invoice": {
+      "title": "請求書",
+      "description": "サービスまたは製品のプロフェッショナルな請求書"
+    },
+    "grant-proposal": {
+      "title": "助成金提案書",
+      "description": "研究助成金提案書テンプレート"
+    },
+    "letter-of-recommendation": {
+      "title": "推薦状",
+      "description": "プロフェッショナルな推薦状テンプレート"
+    },
+    "motivation-letter": {
+      "title": "動機書",
+      "description": "学術またはプロフェッショナルな動機書テンプレート"
+    },
+    "business-plan": {
+      "title": "事業計画書",
+      "description": "プロフェッショナルな事業計画書テンプレート"
+    },
+    "business-report": {
+      "title": "ビジネスレポート",
+      "description": "企業ビジネスレポートテンプレート"
+    },
+    "scientific-report": {
+      "title": "科学レポート",
+      "description": "科学研究レポートテンプレート"
+    },
+    "internship-report": {
+      "title": "インターンシップレポート",
+      "description": "学生インターンシップレポートテンプレート"
+    },
+    "newsletter": {
+      "title": "ニュースレター",
+      "description": "プロフェッショナルなニュースレターテンプレート"
+    },
+    "questionnaire": {
+      "title": "アンケート",
+      "description": "研究調査とアンケートテンプレート"
+    },
+    "table-template": {
+      "title": "テーブルテンプレート",
+      "description": "プロフェッショナルなテーブルレイアウトとフォーマット"
+    },
+    "bibliography": {
+      "title": "参考文献",
+      "description": "単独の参考文献と引用テンプレート"
+    },
+    "memo": {
+      "title": "メモ",
+      "description": "プロフェッショナルなビジネスメモテンプレート"
+    },
+    "manuscript": {
+      "title": "原稿",
+      "description": "小説やノンフィクション用の書籍原稿テンプレート"
+    },
+    "recipe-book": {
+      "title": "レシピブック",
+      "description": "料理本とレシピコレクションテンプレート"
+    },
+    "flyer": {
+      "title": "チラシ",
+      "description": "マーケティングチラシとプロモーション用ワンページテンプレート"
+    },
+    "business-card": {
+      "title": "名刺",
+      "description": "プロフェッショナルな名刺テンプレート"
+    },
+    "calendar": {
+      "title": "カレンダー",
+      "description": "月間・年間カレンダーテンプレート"
+    },
+    "neurips-2026": {
+      "title": "NeurIPS 2026",
+      "description": "NeurIPS 2026会議論文テンプレート（9ページ制限）"
+    },
+    "icml-2026": {
+      "title": "ICML 2026",
+      "description": "ICML 2026会議論文テンプレート（2段組形式）"
+    },
+    "iclr-2026": {
+      "title": "ICLR 2026",
+      "description": "ICLR 2026会議論文テンプレート（再現性声明付き）"
+    },
+    "cvpr-2026": {
+      "title": "CVPR 2026",
+      "description": "CVPR 2026コンピュータビジョン会議論文テンプレート"
+    },
+    "aaai-2026": {
+      "title": "AAAI 2026",
+      "description": "AAAI 2026会議論文テンプレート（7ページ制限）"
+    },
+    "obituary": {
+      "title": "死亡記事",
+      "description": "装飾的な枠付きのエレガントな追悼テンプレート"
+    },
+    "eccv-2026": {
+      "title": "ECCV 2026",
+      "description": "ECCV 2026欧州コンピュータビジョン会議論文テンプレート"
+    },
+    "icra-2026": {
+      "title": "ICRA 2026",
+      "description": "IEEE ICRA 2026ロボティクス会議論文テンプレート"
+    },
+    "acm-chi-2026": {
+      "title": "ACM CHI 2026",
+      "description": "ACM CHI 2026公式投稿テンプレート（シングルカラム形式）"
+    },
+    "www-2026": {
+      "title": "WWW 2026",
+      "description": "ウェブカンファレンス（WWW）2026テンプレート"
+    },
+    "acl-2026": {
+      "title": "ACL 2026",
+      "description": "ACL 2026自然言語処理会議論文テンプレート"
+    },
+    "interspeech-2026": {
+      "title": "Interspeech 2026",
+      "description": "Interspeech 2026音声処理会議論文テンプレート"
+    },
+    "interactive-flashcard": {
+      "title": "インタラクティブフラッシュカード",
+      "description": "クリックで答えが表示される学習ガイド - 自己テストに最適"
+    },
+    "jakes-resume": {
+      "title": "ジェイクの履歴書",
+      "description": "クリーンでATS対応のシングルカラム履歴書テンプレート"
+    }
+  },
+  "symbols": {
+    "title": "LaTeXシンボル",
+    "description": "LaTeXドキュメント用の一般的な数学演算子とギリシャ文字を参照。",
+    "searchPlaceholder": "シンボルを検索...",
+    "searchResults": "検索結果",
+    "symbolsFound": "{count}件のシンボルが見つかりました",
+    "noSymbolsFound": "一致するシンボルが見つかりません",
+    "viewSymbols": "シンボルを表示",
+    "backToSymbols": "シンボルに戻る",
+    "symbolCount": "{count}件のシンボル",
+    "symbolsCount": "{count}件のシンボル",
+    "categories": {
+      "math": {
+        "title": "数学シンボル",
+        "description": "一般的な数学演算子、関係、矢印。",
+        "subtitle": "一般的な数学演算子"
+      },
+      "greek": {
+        "title": "ギリシャシンボル",
+        "description": "ギリシャ文字とそのLaTeXコマンドの完全なリスト。",
+        "subtitle": "ギリシャ文字とバリアント"
+      },
+      "arrows": {
+        "title": "矢印シンボル",
+        "description": "LaTeXドキュメント用の方向矢印、二重矢印、ハープーン。",
+        "subtitle": "方向矢印と二重矢印"
+      },
+      "latin": {
+        "title": "ラテン文字",
+        "description": "さまざまな言語用のアクセント文字と特殊ラテン文字。",
+        "subtitle": "アクセント文字と特殊文字"
+      },
+      "setTheory": {
+        "title": "集合論",
+        "description": "集合、部分集合、和集合、積集合、数集合。",
+        "subtitle": "集合、部分集合、演算"
+      },
+      "logic": {
+        "title": "論理・証明",
+        "description": "量化子、論理接続詞、証明記法。",
+        "subtitle": "論理接続詞と証明記法"
+      },
+      "linearAlgebra": {
+        "title": "線形代数",
+        "description": "ベクトル、行列、転置、内積。",
+        "subtitle": "ベクトル、行列、演算"
+      },
+      "calculus": {
+        "title": "微積分・解析",
+        "description": "微分、積分、極限、微分演算子。",
+        "subtitle": "微分、積分、極限"
+      },
+      "probability": {
+        "title": "確率・統計",
+        "description": "確率、期待値、分散、分布。",
+        "subtitle": "確率と統計記法"
+      },
+      "computerScience": {
+        "title": "コンピュータサイエンス",
+        "description": "Big-O記法、論理演算子、アルゴリズムシンボル。",
+        "subtitle": "Big-O記法とアルゴリズム"
+      },
+      "numberTheory": {
+        "title": "数論",
+        "description": "可除性、モジュラー算術、数論的関数。",
+        "subtitle": "可除性とモジュラー算術"
+      },
+      "physics": {
+        "title": "物理学",
+        "description": "量子力学、ベクトル場、物理定数。",
+        "subtitle": "量子力学と物理定数"
+      },
+      "chemistry": {
+        "title": "化学",
+        "description": "反応矢印、同位体、結合、状態記号。",
+        "subtitle": "反応矢印と化学記法"
+      },
+      "finance": {
+        "title": "通貨・金融",
+        "description": "通貨記号、金融公式、記法。"
+      },
+      "brackets": {
+        "title": "括弧・区切り",
+        "description": "角括弧、床、天井、ノルム、区切りペア。",
+        "subtitle": "括弧、床、天井、ノルム"
+      },
+      "accents": {
+        "title": "アクセント・修飾子",
+        "description": "ハット、チルダ、ドット、バー、ベクトル、テキスト装飾。"
+      },
+      "geometry": {
+        "title": "幾何学",
+        "description": "角度、三角形、平行、垂直、合同。",
+        "subtitle": "角度、三角形、幾何学的関係"
+      },
+      "topology": {
+        "title": "位相・抽象数学",
+        "description": "アレフ、境界、ホモロジー、圏論記法。",
+        "subtitle": "位相幾何と圏論記法"
+      },
+      "machineLearning": {
+        "title": "機械学習・AI",
+        "description": "損失関数、勾配、argmax、KLダイバージェンス、ニューラルネットワーク記法。",
+        "subtitle": "損失関数とニューラルネットワーク記法"
+      },
+      "relations": {
+        "title": "関係・比較",
+        "description": "不等式、同値、部分集合、上位集合、比較シンボル。",
+        "subtitle": "不等式と同値シンボル"
+      },
+      "operators": {
+        "title": "高度な演算子",
+        "description": "二項演算子、テンソル積、直和、合成。",
+        "subtitle": "二項演算子と合成"
+      },
+      "summation": {
+        "title": "総和・積",
+        "description": "シグマ記法、積記号、インデックス付き極限。",
+        "subtitle": "シグマと積記法"
+      },
+      "functions": {
+        "title": "関数・写像",
+        "description": "関数記法、写像、合成、定義域/値域。",
+        "subtitle": "関数記法と合成"
+      },
+      "order": {
+        "title": "不等式・順序",
+        "description": "先行、後続、min、max、inf、sup、境界。",
+        "subtitle": "順序と境界記法"
+      },
+      "boolean": {
+        "title": "ブール代数",
+        "description": "論理ゲート、AND、OR、NOT、XOR、NAND、ブール演算。",
+        "subtitle": "論理ゲートとブール演算"
+      },
+      "optimization": {
+        "title": "最適化",
+        "description": "Argmax、argmin、制約、ラグランジアン、KKT条件。",
+        "subtitle": "最適化と制約記法"
+      },
+      "units": {
+        "title": "単位・測定",
+        "description": "度、SI単位、物理定数、測定シンボル。",
+        "subtitle": "SI単位と測定シンボル"
+      },
+      "quantifiers": {
+        "title": "量化子",
+        "description": "全称、存在、要素、集合記法。",
+        "subtitle": "全称量化子と存在量化子"
+      },
+      "graphTheory": {
+        "title": "グラフ理論",
+        "description": "頂点、辺、隣接、パス、サイクル、彩色数。",
+        "subtitle": "頂点、辺、グラフ記法"
+      },
+      "combinatorics": {
+        "title": "組み合わせ論",
+        "description": "階乗、二項係数、順列、組み合わせ、数え上げ。",
+        "subtitle": "階乗、順列、組み合わせ"
+      },
+      "specialFunctions": {
+        "title": "特殊関数",
+        "description": "ガンマ、ゼータ、ベッセル、ルジャンドル、誤差関数。",
+        "subtitle": "ガンマ、ゼータ、特殊関数"
+      },
+      "complex": {
+        "title": "複素数",
+        "description": "虚数単位、共役、絶対値、偏角、極形式。",
+        "subtitle": "複素数記法"
+      },
+      "trigonometry": {
+        "title": "三角法",
+        "description": "サイン、コサイン、タンジェント、逆三角、双曲線関数。",
+        "subtitle": "三角関数と双曲線関数"
+      },
+      "differentialGeometry": {
+        "title": "微分幾何",
+        "description": "多様体、曲率、クリストッフェル記号、リーマンテンソル。",
+        "subtitle": "多様体と曲率記法"
+      },
+      "tensors": {
+        "title": "テンソル記法",
+        "description": "アインシュタイン和規約、インデックス、縮約、共変微分。",
+        "subtitle": "アインシュタイン和規約とテンソルインデックス"
+      },
+      "modalLogic": {
+        "title": "様相論理",
+        "description": "必然性、可能性、時相論理、クリプキ意味論。",
+        "subtitle": "必然性と可能性演算子"
+      },
+      "gameTheory": {
+        "title": "ゲーム理論",
+        "description": "ナッシュ均衡、戦略、利得、シャープレイ値。",
+        "subtitle": "ナッシュ均衡と戦略記法"
+      }
+    }
   },
   "nav": {
-    "tools": "Tools",
-    "getStarted": "Get Started",
-    "menu": "Menu"
+    "tools": "ツール",
+    "templates": "テンプレート",
+    "symbols": "シンボル",
+    "getStarted": "始める",
+    "menu": "メニュー"
   },
   "footer": {
-    "tagline": "Free online tools for everyone.",
-    "menu": "Menu",
-    "tools": "Tools",
-    "allRightsReserved": "All rights reserved.",
-    "viewAllTools": "View all tools →",
-    "socials": "Socials"
+    "tagline": "すべての人のための無料LaTeXツールとテンプレート。",
+    "menu": "メニュー",
+    "tools": "ツール",
+    "allRightsReserved": "無断転載を禁じます。",
+    "imageToLatex": "画像からLaTeX",
+    "excelToLatex": "ExcelからLaTeX",
+    "tikzGenerator": "TikZ生成",
+    "imageToTikz": "画像からTikZ",
+    "latexPreview": "LaTeXプレビュー",
+    "markdownToLatex": "MarkdownからLaTeX",
+    "citationGenerator": "引用生成",
+    "aiLatexGenerator": "AI LaTeX生成",
+    "learn": "学ぶ",
+    "learnLatex": "LaTeXを学ぶ",
+    "learnTikz": "TikZを学ぶ",
+    "learnPgfplots": "PGFPlotsを学ぶ",
+    "viewAllTutorials": "すべてのチュートリアルを見る →",
+    "openSource": "オープンソース",
+    "octreeEditor": "Octreeエディター",
+    "toolsTemplates": "ツールとテンプレート",
+    "marketingBlogs": "マーケティングとブログ",
+    "viewAllRepositories": "すべてのリポジトリを見る →",
+    "socials": "ソーシャル",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn",
+    "tiktok": "TikTok",
+    "x": "X",
+    "reddit": "Reddit",
+    "discord": "Discord",
+    "greekLetters": "ギリシャ文字",
+    "mathOperators": "数学演算子",
+    "arrows": "矢印",
+    "relations": "関係",
+    "setTheory": "集合論",
+    "calculus": "微積分",
+    "logic": "論理",
+    "linearAlgebra": "線形代数",
+    "browseAllCategories": "全37カテゴリを見る →",
+    "researchPaper": "研究論文",
+    "phdThesis": "博士論文",
+    "beamerPresentation": "Beamerプレゼンテーション",
+    "academicCv": "学術履歴書",
+    "coverLetter": "カバーレター",
+    "labReport": "実験レポート",
+    "neurips2026": "NeurIPS 2026",
+    "icml2026": "ICML 2026",
+    "viewAllTemplates": "全71テンプレートを見る →",
+    "viewAllTools": "すべてのツールを見る →"
   },
   "cta": {
-    "title": "Get Started Today",
-    "description": "Try our tools for free.",
-    "getStarted": "Get Started",
-    "learnMore": "Learn More"
+    "badge": "AIでLaTeXを書く",
+    "title": "最高のAI LaTeXエディタ、Overleaf代替",
+    "description": "Octreeは15以上の大学の研究者がAIを使って論文をより速く書くのを支援",
+    "feature1": "AIで美しいTikZダイアグラムを生成",
+    "feature2": "画像をアップロードしてシームレスにLaTeXに変換",
+    "feature3": "論文の執筆とフォーマットに即座にサポートを取得",
+    "useInOctree": "Octreeで使用",
+    "learnMore": "詳細を見る"
   },
   "metadata": {
     "site": {
-      "title": "Free Online Tools",
-      "description": "Free online tools to help you get things done faster.",
-      "keywords": "free tools, online tools, calculator, generator, converter, checker"
+      "title": "無料LaTeXツール - 画像からLaTeX変換、60以上のテンプレート、PDFプレビュー | Octree",
+      "description": "無料LaTeXツール：AI搭載数式変換、60以上のプロフェッショナルテンプレート（履歴書、CV、論文、Beamer）、ライブPDFプレビュー。手書き数学、画像、PDFを即座にLaTeXに変換。",
+      "keywords": "手書き数学をLaTeXに変換, 画像からLaTeX変換, PDFからLaTeX変換, 数式からLaTeX, LaTeX数学変換, 無料LaTeX変換, AI LaTeX生成, LaTeX引用生成, TikZ生成, 無料LaTeXテンプレート, LaTeX履歴書テンプレート, LaTeX CVテンプレート, LaTeX論文テンプレート, LaTeX Beamerテンプレート, オンラインLaTeXエディタ, Overleaf代替, LaTeXオンライン, LaTeXオンラインコンパイル, LaTeXからPDF, 数式エディタ, 数学公式エディタ, LaTeXシンボル, BibTeX生成, テーブルからLaTeX, ExcelからLaTeX, MarkdownからLaTeX, HTMLからLaTeX, MathMLからLaTeX, LaTeX単語カウンター, PGFPlots生成, arXiv LaTeX"
+    },
+    "tools": {
+      "imageToLatex": {
+        "title": "画像からLaTeX変換 - 無料AI搭載ツール",
+        "description": "手書き数式の画像を即座にクリーンなLaTeXコードに変換。AI搭載、無料、登録不要。",
+        "keywords": "画像からLaTeX, 写真からLaTeX, 画像からLaTeX, 手書き数学からLaTeX, 数学スキャンからLaTeX, OCR LaTeX, 数学画像変換, スクリーンショットからLaTeX, 数学OCR, 数式OCR, 公式からLaTeX, 数学写真変換, 手書きからLaTeX, 数式スキャン"
+      },
+      "mathToLatex": {
+        "title": "数学からLaTeX変換 - 無料オンラインツール",
+        "description": "数式をLaTeXコードに変換。数学を入力または貼り付けてクリーンなLaTeX出力を取得。",
+        "keywords": "数学からLaTeX, 数学をLaTeXに変換, 数式からLaTeX, 公式からLaTeX, 数学変換, 数式変換, 数学記法LaTeX, 数式変換器"
+      },
+      "equationToLatex": {
+        "title": "方程式からLaTeX変換 - 無料オンラインツール",
+        "description": "数式を即座にLaTeXコードに変換。方程式を入力してLaTeXを取得。",
+        "keywords": "方程式からLaTeX, 方程式をLaTeXに変換, 数学方程式変換, 方程式エディタLaTeX, 公式からLaTeX, 数式LaTeX, 方程式記法"
+      },
+      "tikzGenerator": {
+        "title": "TikZダイアグラム生成 - AI搭載LaTeXグラフィックス",
+        "description": "AIでTikZダイアグラムを生成。ダイアグラムを説明すると即座にクリーンなTikZ LaTeXコードを取得。",
+        "keywords": "TikZ生成, TikZオンライン, TikZ例, TikZフローチャート, TikZダイアグラム, TikZニューラルネットワーク, AI TikZ生成, TikZコード生成, TikZチュートリアル, TikZ図形, TikZ矢印, TikZグラフ, TikZツリー, TikZプロット, PGF TikZ, TikZ回路, TikZタイムライン, TikZベン図"
+      },
+      "imageToTikz": {
+        "title": "画像からTikZ変換 - 画像をLaTeXグラフィックスに変換",
+        "description": "AIを使って画像やダイアグラムをTikZ LaTeXコードに変換。任意の画像をアップロードして編集可能なTikZコードを取得。",
+        "keywords": "画像からTikZ, 画像からTikZ, 画像をTikZに変換, ダイアグラムからTikZ, 写真からTikZコード, AI TikZ変換, ベクター化からTikZ, 画像からLaTeXダイアグラム"
+      },
+      "citationGenerator": {
+        "title": "LaTeX引用生成 - BibTeX生成",
+        "description": "DOI、URL、または記事詳細からBibTeX引用を生成。無料LaTeX引用ツール。",
+        "keywords": "LaTeX引用生成, BibTeX生成, DOIからBibTeX, 引用生成, 参考文献生成, 文献目録生成, 引用生成器, APA引用LaTeX, MLA引用LaTeX, シカゴ引用, IEEE引用, ハーバード参照LaTeX"
+      },
+      "latexPreview": {
+        "title": "LaTeXライブプレビュー - 無料オンラインエディタ",
+        "description": "LaTeXドキュメントをリアルタイムで作成・プレビュー。即時PDF出力付き無料オンラインLaTeXエディタ。",
+        "keywords": "LaTeXプレビュー, LaTeXオンラインエディタ, LaTeXライブプレビュー, オンラインLaTeXコンパイラ, LaTeXからPDF, 無料LaTeXエディタ, Overleaf代替, オンラインLaTeX, LaTeXオンライン執筆, LaTeXレンダラー, LaTeXビューアー, LaTeX無料コンパイル"
+      },
+      "pdfToLatex": {
+        "title": "PDFからLaTeX変換 - PDFからLaTeX抽出",
+        "description": "数学的内容を含むPDFドキュメントをクリーンなLaTeXコードに変換。AI搭載抽出。",
+        "keywords": "PDFからLaTeX, PDFをLaTeXに変換, PDFからLaTeX抽出, PDF数学変換, PDF数式抽出, PDFからTeX, OCR PDFからLaTeX, PDF公式抽出, PDFからLaTeXスキャン"
+      },
+      "tableToLatex": {
+        "title": "テーブルからLaTeX変換 - ExcelからLaTeX",
+        "description": "Excel、Googleスプレッドシート、またはCSVからテーブルをLaTeX形式に変換。無料テーブル生成。",
+        "keywords": "テーブルからLaTeX, ExcelからLaTeX, CSVからLaTeX, スプレッドシートからLaTeX, LaTeXテーブル生成, tabular LaTeX, LaTeXテーブルメーカー, GoogleスプレッドシートからLaTeX, テーブルコピーペーストLaTeX, LaTeX tabular生成"
+      },
+      "markdownToLatex": {
+        "title": "MarkdownからLaTeX変換 - 無料オンラインツール",
+        "description": "MarkdownファイルをクリーンなLaTeXコードに変換。フォーマット、リンク、構造を保持。",
+        "keywords": "MarkdownからLaTeX, MarkdownをLaTeXに変換, mdからtex, Markdown LaTeX変換, Pandoc代替, MarkdownからPDF LaTeX, MarkdownからTeXオンライン"
+      },
+      "latexToMarkdown": {
+        "title": "LaTeXからMarkdown変換 - 無料オンラインツール",
+        "description": "LaTeXドキュメントをMarkdown形式に変換。数式とフォーマットを保持。",
+        "keywords": "LaTeXからMarkdown, LaTeXをMarkdownに変換, texからmd, LaTeXからmd変換, LaTeX Markdown, TeXからMarkdown, LaTeXをMarkdownとしてエクスポート"
+      },
+      "htmlToLatex": {
+        "title": "HTMLからLaTeX変換 - 無料オンラインツール",
+        "description": "HTMLコンテンツをクリーンなLaTeXコードに変換。ウェブからドキュメントへの変換に最適。",
+        "keywords": "HTMLからLaTeX, HTMLをLaTeXに変換, ウェブからLaTeX, HTMLからTeX, ウェブページからLaTeX, HTMLテーブルからLaTeX, ウェブサイトをLaTeXに変換"
+      },
+      "mathmlToLatex": {
+        "title": "MathMLからLaTeX変換 - 無料オンラインツール",
+        "description": "MathML数式をLaTeXコードに変換。Word・ウェブ数式変換に最適。",
+        "keywords": "MathMLからLaTeX, MathMLをLaTeXに変換, Word数式からLaTeX, MathML変換, Office数学からLaTeX, OmMLからLaTeX, Word数学からLaTeX"
+      },
+      "mermaidToLatex": {
+        "title": "MermaidからLaTeX変換 - ダイアグラムをTikZに",
+        "description": "MermaidダイアグラムをTikZ LaTeXコードに変換。フローチャート、シーケンス図など。",
+        "keywords": "MermaidからLaTeX, MermaidからTikZ, Mermaidダイアグラム変換, フローチャートからLaTeX, シーケンス図からLaTeX, Mermaid LaTeX, ダイアグラムからTikZ"
+      },
+      "latexWordCounter": {
+        "title": "LaTeX単語カウンター - 無料オンラインツール",
+        "description": "コマンドとコメントを除いてLaTeXドキュメントの単語をカウント。正確な学術単語カウント。",
+        "keywords": "LaTeX単語カウンター, LaTeX単語数, TeX単語カウント, LaTeX文字カウント, 学術単語カウンター, 論文単語数, 論文単語カウントLaTeX, LaTeXテキストカウンター"
+      },
+      "aiLatexGenerator": {
+        "title": "AI LaTeX生成 - AIでLaTeXを書く",
+        "description": "AIを使ってLaTeXコードを生成。欲しいものを説明してクリーンでコンパイル可能なLaTeXを取得。",
+        "keywords": "AI LaTeX生成, LaTeX AI生成, AI LaTeXライター, ChatGPT LaTeX, AI数式生成, AI数学LaTeX, テキストからLaTeX, 自然言語からLaTeX"
+      },
+      "pgfplotsGenerator": {
+        "title": "PGFPlots生成 - LaTeXグラフメーカー",
+        "description": "PGFPlotsを使ってLaTeX用の美しいグラフとプロットを作成。無料オンラインプロット生成。",
+        "keywords": "PGFPlots生成, PGFPlotsオンライン, LaTeXグラフ, LaTeXプロット, PGFPlots例, LaTeXチャート, データ可視化LaTeX, 散布図LaTeX, 棒グラフLaTeX, 折れ線グラフLaTeX, 関数プロットLaTeX"
+      },
+      "arxivToLatex": {
+        "title": "arXivからLaTeX - arXivソースコードダウンロード",
+        "description": "arXiv論文からLaTeXソースコードを抽出・ダウンロード。オリジナルTeXファイルを取得。",
+        "keywords": "arXivからLaTeX, arXivソースコード, arXiv LaTeXダウンロード, arXiv TeXソース, arXiv論文ソース, arXiv LaTeX抽出, arXivソースダウンロード"
+      }
+    },
+    "symbols": {
+      "main": {
+        "title": "LaTeXシンボル - 完全リファレンスガイド",
+        "description": "LaTeXシンボルを参照・コピー：ギリシャ文字、数学演算子、矢印など。完全なシンボルリファレンス。",
+        "keywords": "LaTeXシンボル, 数学シンボル, ギリシャ文字LaTeX, LaTeX演算子, LaTeX矢印, シンボルリファレンス, LaTeXシンボルコピー, LaTeX特殊文字, 数学記法LaTeX, LaTeXチートシート, 全LaTeXシンボル"
+      },
+      "math": {
+        "title": "LaTeX数学シンボル - 演算子と関係",
+        "description": "LaTeX数学シンボルの完全リスト。演算子、関係、数式のコピーペーストコード。",
+        "keywords": "数学シンボルLaTeX, 数学演算子, LaTeXプラスマイナス, LaTeX分数, LaTeX平方根, LaTeX総和, LaTeX積分, 掛けるシンボルLaTeX, 割るシンボルLaTeX, 等しいLaTeX, 不等号LaTeX, 約LaTeX"
+      },
+      "greek": {
+        "title": "LaTeXのギリシャ文字 - アルファからオメガ",
+        "description": "ギリシャ文字とそのLaTeXコマンドの完全リスト。アルファ、ベータ、ガンマなどをコピーペースト。",
+        "keywords": "ギリシャ文字LaTeX, アルファLaTeX, ベータLaTeX, ガンマLaTeX, デルタLaTeX, イプシロンLaTeX, シータLaTeX, ラムダLaTeX, パイLaTeX, シグマLaTeX, オメガLaTeX, ファイLaTeX, ギリシャアルファベットLaTeX"
+      },
+      "arrows": {
+        "title": "LaTeX矢印シンボル - 全矢印タイプ",
+        "description": "LaTeX矢印シンボルの完全リスト。右、左、上、下、二重矢印など。",
+        "keywords": "LaTeX矢印, 右矢印LaTeX, 左矢印LaTeX, 二重矢印LaTeX, 含意LaTeX, 矢印シンボル, LaTeX矢印タイプ, 上矢印LaTeX, 下矢印LaTeX, 双方向矢印LaTeX, 長い矢印LaTeX"
+      },
+      "brackets": {
+        "title": "LaTeX括弧と区切り",
+        "description": "LaTeXの丸括弧、波括弧、角括弧、区切り。括弧コマンドをコピーペースト。",
+        "keywords": "LaTeX括弧, LaTeX丸括弧, LaTeX波括弧, 角括弧LaTeX, 山括弧LaTeX, LaTeX区切り, left right LaTeX, 大きい括弧LaTeX"
+      },
+      "calculus": {
+        "title": "LaTeX微積分シンボル - 微分と積分",
+        "description": "LaTeXの微積分記法：微分、積分、極限、微分演算子。",
+        "keywords": "微積分LaTeX, 微分LaTeX, 積分LaTeX, 偏微分LaTeX, 極限LaTeX, ディファレンシャルLaTeX, ナブラLaTeX, 勾配LaTeX, 発散LaTeX, 回転LaTeX, ラプラシアンLaTeX"
+      },
+      "setTheory": {
+        "title": "LaTeX集合論シンボル",
+        "description": "LaTeXの集合論記法：和集合、積集合、部分集合、要素など。",
+        "keywords": "集合論LaTeX, 和集合LaTeX, 積集合LaTeX, 部分集合LaTeX, 上位集合LaTeX, 要素LaTeX, 空集合LaTeX, 集合記法LaTeX, 属するLaTeX, 含むLaTeX"
+      },
+      "logic": {
+        "title": "LaTeX論理シンボル - 論理演算子",
+        "description": "LaTeXの論理シンボル：かつ、または、でない、含意、同値、量化子。",
+        "keywords": "論理シンボルLaTeX, かつLaTeX, またはLaTeX, でないLaTeX, 含意LaTeX, 同値LaTeX, 否定LaTeX, 論理演算子LaTeX, 命題論理LaTeX"
+      },
+      "relations": {
+        "title": "LaTeX関係シンボル - 比較演算子",
+        "description": "LaTeXの関係シンボル：未満、超過、等しい、不等、同値。",
+        "keywords": "関係シンボルLaTeX, 未満LaTeX, 超過LaTeX, 以下LaTeX, 以上LaTeX, 不等LaTeX, 同値LaTeX, 約LaTeX, 比例LaTeX"
+      },
+      "operators": {
+        "title": "LaTeX演算子 - 数学演算子",
+        "description": "LaTeXの数学演算子：総和、積、積分、演算子記法。",
+        "keywords": "LaTeX演算子, 総和LaTeX, 積LaTeX, 積分演算子LaTeX, 大きい演算子LaTeX, サメーションLaTeX, prod LaTeX, coprod LaTeX, 演算子記法LaTeX"
+      },
+      "linearAlgebra": {
+        "title": "LaTeX線形代数シンボル - 行列とベクトル",
+        "description": "LaTeXの線形代数記法：行列、ベクトル、行列式、固有値。",
+        "keywords": "線形代数LaTeX, 行列LaTeX, ベクトルLaTeX, 行列式LaTeX, 転置LaTeX, 固有値LaTeX, 固有ベクトルLaTeX, 内積LaTeX, 外積LaTeX, ノルムLaTeX"
+      },
+      "geometry": {
+        "title": "LaTeX幾何シンボル - 角度と図形",
+        "description": "LaTeXの幾何記法：角度、平行、垂直、三角形、円。",
+        "keywords": "幾何LaTeX, 角度LaTeX, 平行LaTeX, 垂直LaTeX, 三角形LaTeX, 円LaTeX, 度シンボルLaTeX, 合同LaTeX, 相似LaTeX"
+      },
+      "probability": {
+        "title": "LaTeX確率シンボル - 統計記法",
+        "description": "LaTeXの確率・統計シンボル：期待値、分散、分布。",
+        "keywords": "確率LaTeX, 期待値LaTeX, 分散LaTeX, 標準偏差LaTeX, 確率分布LaTeX, 統計LaTeX, 確率変数LaTeX, 条件付き確率LaTeX"
+      },
+      "physics": {
+        "title": "LaTeX物理シンボル - 科学記法",
+        "description": "LaTeXの物理シンボル：ベクトル、演算子、量子力学、定数。",
+        "keywords": "物理LaTeX, ベクトルLaTeX, hbar LaTeX, 量子力学LaTeX, ブラケットLaTeX, ディラック記法LaTeX, 物理定数LaTeX, 科学記法LaTeX"
+      },
+      "chemistry": {
+        "title": "LaTeX化学シンボル - 化学記法",
+        "description": "LaTeXの化学記法：化学式、反応、分子構造。",
+        "keywords": "化学LaTeX, 化学式LaTeX, 反応矢印LaTeX, 下付きLaTeX, 上付きLaTeX, mhchem LaTeX, 化学方程式LaTeX"
+      },
+      "computerScience": {
+        "title": "LaTeXコンピュータサイエンスシンボル - アルゴリズム記法",
+        "description": "LaTeXのコンピュータサイエンスシンボル：アルゴリズム、計算量、プログラミング記法。",
+        "keywords": "コンピュータサイエンスLaTeX, アルゴリズムLaTeX, Big O記法LaTeX, 計算量LaTeX, 擬似コードLaTeX, プログラミングシンボルLaTeX"
+      },
+      "functions": {
+        "title": "LaTeX関数シンボル - 数学関数",
+        "description": "LaTeXの関数記法：三角関数、対数、指数など。",
+        "keywords": "関数LaTeX, sin LaTeX, cos LaTeX, tan LaTeX, log LaTeX, ln LaTeX, exp LaTeX, lim LaTeX, min LaTeX, max LaTeX, argmin LaTeX, argmax LaTeX"
+      },
+      "numberTheory": {
+        "title": "LaTeX数論シンボル",
+        "description": "LaTeXの数論記法：可除性、合同、数集合。",
+        "keywords": "数論LaTeX, 可除性LaTeX, モジュロLaTeX, 合同LaTeX, 素数LaTeX, gcd LaTeX, lcm LaTeX, 整数LaTeX, 自然数LaTeX"
+      },
+      "accents": {
+        "title": "LaTeXアクセントと発音記号",
+        "description": "LaTeXアクセント：ハット、バー、ドット、チルダ、その他の発音記号。",
+        "keywords": "LaTeXアクセント, ハットLaTeX, バーLaTeX, ドットLaTeX, チルダLaTeX, vec LaTeX, オーバーラインLaTeX, アンダーラインLaTeX, オーバーブレースLaTeX, アンダーブレースLaTeX"
+      },
+      "boolean": {
+        "title": "LaTeXブール代数シンボル",
+        "description": "LaTeXのブール代数記法：AND、OR、NOT、XOR、真偽値。",
+        "keywords": "ブールLaTeX, AND LaTeX, OR LaTeX, NOT LaTeX, XOR LaTeX, 真偽LaTeX, ブール代数LaTeX, 論理ゲートLaTeX"
+      },
+      "summation": {
+        "title": "LaTeX総和・積シンボル",
+        "description": "LaTeXの総和・積記法：和、積、級数。",
+        "keywords": "総和LaTeX, 積LaTeX, 和記法LaTeX, シグマLaTeX, パイ記法LaTeX, 級数LaTeX, 無限和LaTeX"
+      },
+      "trigonometry": {
+        "title": "LaTeX三角法シンボル",
+        "description": "LaTeXの三角関数：サイン、コサイン、タンジェント、逆関数。",
+        "keywords": "三角法LaTeX, sin LaTeX, cos LaTeX, tan LaTeX, arcsin LaTeX, arccos LaTeX, arctan LaTeX, 双曲線LaTeX, sinh LaTeX, cosh LaTeX, tanh LaTeX"
+      },
+      "topology": {
+        "title": "LaTeX位相シンボル",
+        "description": "LaTeXの位相記法：開集合、閉包、内部、境界。",
+        "keywords": "位相LaTeX, 開集合LaTeX, 閉集合LaTeX, 閉包LaTeX, 内部LaTeX, 境界LaTeX, 同相写像LaTeX"
+      },
+      "finance": {
+        "title": "LaTeX金融シンボル - 金融記法",
+        "description": "LaTeXの金融シンボル：通貨、金利、経済記法。",
+        "keywords": "金融LaTeX, 通貨LaTeX, ドルLaTeX, ユーロLaTeX, ポンドLaTeX, パーセントLaTeX, 金利LaTeX, NPV LaTeX"
+      },
+      "machineLearning": {
+        "title": "LaTeX機械学習シンボル - ML記法",
+        "description": "LaTeXの機械学習記法：ニューラルネットワーク、損失関数、最適化。",
+        "keywords": "機械学習LaTeX, ニューラルネットワークLaTeX, 損失関数LaTeX, 勾配降下法LaTeX, 活性化関数LaTeX, 重みLaTeX, バイアスLaTeX, ML記法LaTeX"
+      },
+      "latin": {
+        "title": "LaTeXラテン文字とフォント",
+        "description": "LaTeXのラテン文字とフォントスタイル：太字、斜体、カリグラフィなど。",
+        "keywords": "ラテン文字LaTeX, 太字LaTeX, 斜体LaTeX, mathcal LaTeX, mathbb LaTeX, mathfrak LaTeX, フォントスタイルLaTeX, 黒板太字LaTeX"
+      },
+      "complex": {
+        "title": "LaTeX複素数シンボル",
+        "description": "LaTeXの複素数記法：虚数単位、共役、極形式。",
+        "keywords": "複素数LaTeX, 虚数単位LaTeX, 共役LaTeX, 実部LaTeX, 虚部LaTeX, 絶対値LaTeX, 偏角LaTeX"
+      },
+      "graphTheory": {
+        "title": "LaTeXグラフ理論シンボル",
+        "description": "LaTeXのグラフ理論記法：頂点、辺、パス、サイクル。",
+        "keywords": "グラフ理論LaTeX, 頂点LaTeX, 辺LaTeX, パスLaTeX, サイクルLaTeX, 隣接LaTeX, 次数LaTeX, 連結LaTeX"
+      },
+      "combinatorics": {
+        "title": "LaTeX組み合わせ論シンボル",
+        "description": "LaTeXの組み合わせ論記法：階乗、二項係数、順列。",
+        "keywords": "組み合わせ論LaTeX, 階乗LaTeX, 二項LaTeX, 順列LaTeX, 組み合わせLaTeX, choose LaTeX, binom LaTeX"
+      },
+      "specialFunctions": {
+        "title": "LaTeX特殊関数 - ガンマ、ゼータ、ベッセル",
+        "description": "LaTeXの特殊関数：ガンマ、ゼータ、ベッセル、誤差関数。",
+        "keywords": "特殊関数LaTeX, ガンマ関数LaTeX, ゼータ関数LaTeX, ベッセル関数LaTeX, 誤差関数LaTeX, ルジャンドルLaTeX"
+      },
+      "tensors": {
+        "title": "LaTeXテンソル記法 - アインシュタイン和規約",
+        "description": "LaTeXのテンソル記法：インデックス、縮約、共変微分。",
+        "keywords": "テンソルLaTeX, アインシュタイン和規約LaTeX, テンソルインデックスLaTeX, 共変微分LaTeX, 反変LaTeX, クロネッカーデルタLaTeX"
+      },
+      "differentialGeometry": {
+        "title": "LaTeX微分幾何シンボル",
+        "description": "LaTeXの微分幾何記法：多様体、曲率、接続。",
+        "keywords": "微分幾何LaTeX, 多様体LaTeX, 曲率LaTeX, クリストッフェルLaTeX, リーマンテンソルLaTeX, 接続LaTeX"
+      },
+      "modalLogic": {
+        "title": "LaTeX様相論理シンボル",
+        "description": "LaTeXの様相論理記法：必然性、可能性、時相演算子。",
+        "keywords": "様相論理LaTeX, 必然性LaTeX, 可能性LaTeX, ボックスLaTeX, ダイヤモンドLaTeX, 時相論理LaTeX"
+      },
+      "gameTheory": {
+        "title": "LaTeXゲーム理論シンボル",
+        "description": "LaTeXのゲーム理論記法：戦略、利得、均衡。",
+        "keywords": "ゲーム理論LaTeX, ナッシュ均衡LaTeX, 戦略LaTeX, 利得LaTeX, 効用関数LaTeX, シャープレイ値LaTeX"
+      },
+      "order": {
+        "title": "LaTeX順序関係シンボル",
+        "description": "LaTeXの順序関係：半順序、束、上限/下限。",
+        "keywords": "順序関係LaTeX, 半順序LaTeX, 束LaTeX, 上限LaTeX, 下限LaTeX, 最小上界LaTeX"
+      },
+      "optimization": {
+        "title": "LaTeX最適化シンボル",
+        "description": "LaTeXの最適化記法：最小化、最大化、制約。",
+        "keywords": "最適化LaTeX, 最小化LaTeX, 最大化LaTeX, argmin LaTeX, argmax LaTeX, 制約条件LaTeX, 制約LaTeX"
+      },
+      "quantifiers": {
+        "title": "LaTeX量化子シンボル - 全称、存在",
+        "description": "LaTeXの量化子シンボル：全称量化子と存在量化子。",
+        "keywords": "量化子LaTeX, 全称LaTeX, 存在LaTeX, forall LaTeX, 存在量化LaTeX, 全称量化子LaTeX, 存在するLaTeX"
+      },
+      "units": {
+        "title": "LaTeX単位と測定",
+        "description": "LaTeXのSI単位と測定：度、物理定数、単位。",
+        "keywords": "単位LaTeX, SI単位LaTeX, 度LaTeX, 物理定数LaTeX, siunitx LaTeX, 測定LaTeX, メートルLaTeX, キログラムLaTeX"
+      }
+    },
+    "templates": {
+      "main": {
+        "title": "無料LaTeXテンプレート - 履歴書、CV、論文、Beamer",
+        "description": "60以上のプロフェッショナルLaTeXテンプレート。履歴書、CV、論文、Beamerプレゼンテーションなど。無料ダウンロード。",
+        "keywords": "LaTeXテンプレート, 無料LaTeXテンプレート, LaTeX履歴書テンプレート, LaTeX CVテンプレート, LaTeX論文テンプレート, LaTeX Beamerテンプレート, Overleafテンプレート, 学術テンプレートLaTeX, LaTeXプレゼンテーションテンプレート, LaTeX論文テンプレート, LaTeX宿題テンプレート, LaTeXポスターテンプレート, LaTeX手紙テンプレート, LaTeX書籍テンプレート, LaTeXレポートテンプレート, プロフェッショナルLaTeXテンプレート"
+      },
+      "academic": {
+        "title": "学術LaTeXテンプレート - 研究論文、論文、学位論文",
+        "description": "研究論文、論文、学位論文、ジャーナル記事、学会論文用の無料学術LaTeXテンプレート。",
+        "keywords": "学術LaTeXテンプレート, 研究論文テンプレートLaTeX, 論文テンプレートLaTeX, 学位論文テンプレートLaTeX, ジャーナル記事テンプレート, 学会論文LaTeX, IEEEテンプレートLaTeX, ACMテンプレート, Springerテンプレート, 科学論文テンプレート, 博士論文LaTeX, 修士論文テンプレート, 学術執筆LaTeX"
+      },
+      "presentations": {
+        "title": "LaTeXプレゼンテーションテンプレート - Beamerスライド",
+        "description": "無料LaTeX Beamerプレゼンテーションテンプレート。学術講演、学会、講義用のプロフェッショナルスライド。",
+        "keywords": "BeamerテンプレートLaTeX, LaTeXプレゼンテーションテンプレート, Beamerスライド, LaTeXスライド, 学術プレゼンテーションテンプレート, 学会スライドLaTeX, 講義スライドLaTeX, Beamerテーマ, Beamer例, PowerPoint代替LaTeX, プレゼンテーションBeamer"
+      },
+      "resumeCV": {
+        "title": "LaTeX履歴書・CVテンプレート - プロフェッショナル履歴書",
+        "description": "無料LaTeX履歴書・CVテンプレート。就職活動と学術CV用のモダンでプロフェッショナルなデザイン。",
+        "keywords": "LaTeX履歴書テンプレート, LaTeX CVテンプレート, 履歴書LaTeX, プロフェッショナル履歴書LaTeX, モダンCVテンプレート, 学術CV LaTeX, 1ページ履歴書LaTeX, 2カラム履歴書, moderncvテンプレート, Europass LaTeX, ソフトウェアエンジニア履歴書LaTeX, データサイエンティストCV"
+      },
+      "math": {
+        "title": "LaTeX数学テンプレート - 方程式、証明、問題セット",
+        "description": "数学ドキュメント用LaTeXテンプレート：問題セット、証明、定理、公式シート。",
+        "keywords": "数学テンプレートLaTeX, 方程式テンプレートLaTeX, 問題セットテンプレート, 宿題テンプレートLaTeX, 証明テンプレートLaTeX, 定理テンプレート, 数学ノートLaTeX, 公式シートテンプレート, 試験テンプレートLaTeX, クイズテンプレートLaTeX, 数学課題テンプレート"
+      },
+      "reports": {
+        "title": "LaTeXレポートテンプレート - 技術、実験、プロジェクトレポート",
+        "description": "技術レポート、実験レポート、プロジェクト文書、ビジネスレポート用プロフェッショナルLaTeXテンプレート。",
+        "keywords": "レポートテンプレートLaTeX, 技術レポートLaTeX, 実験レポートテンプレート, プロジェクトレポートLaTeX, ビジネスレポートテンプレート, 年次報告書LaTeX, インターンシップレポートテンプレート, 研究レポートLaTeX, 文書テンプレート"
+      },
+      "education": {
+        "title": "LaTeX教育テンプレート - 宿題、試験、シラバス",
+        "description": "教育者と学生用LaTeXテンプレート：宿題、試験、シラバス、講義ノート、コース教材。",
+        "keywords": "宿題テンプレートLaTeX, 試験テンプレートLaTeX, シラバステンプレートLaTeX, 講義ノートテンプレート, コース教材LaTeX, 課題テンプレート, テストテンプレートLaTeX, ワークシートテンプレート, 学習ガイドLaTeX, フラッシュカードテンプレートLaTeX"
+      },
+      "letters": {
+        "title": "LaTeX手紙テンプレート - カバーレター、正式な手紙",
+        "description": "カバーレター、正式な通信、推薦状用プロフェッショナルLaTeX手紙テンプレート。",
+        "keywords": "手紙テンプレートLaTeX, カバーレターLaTeX, 正式な手紙テンプレート, 推薦状LaTeX, ビジネスレターテンプレート, 申請書LaTeX, 紹介状テンプレート, プロフェッショナルな手紙LaTeX"
+      },
+      "business": {
+        "title": "LaTeXビジネステンプレート - 計画、提案、請求書",
+        "description": "ビジネスドキュメント用LaTeXテンプレート：事業計画、提案、請求書、契約、メモ。",
+        "keywords": "ビジネステンプレートLaTeX, 事業計画LaTeX, 提案テンプレートLaTeX, 請求書テンプレートLaTeX, 契約テンプレート, メモテンプレートLaTeX, 名刺LaTeX, 企業レポートテンプレート, エグゼクティブサマリーLaTeX, プロジェクト提案テンプレート"
+      },
+      "other": {
+        "title": "LaTeXテンプレート - 書籍、ポスター、ニュースレター",
+        "description": "その他LaTeXテンプレート：書籍、ポスター、ニュースレター、カレンダー、クリエイティブドキュメント。",
+        "keywords": "書籍テンプレートLaTeX, ポスターテンプレートLaTeX, ニュースレターテンプレートLaTeX, カレンダーテンプレートLaTeX, チラシテンプレートLaTeX, パンフレットLaTeX, レシピテンプレートLaTeX, 雑誌テンプレート, 訃報テンプレートLaTeX, 結婚招待状LaTeX"
+      }
+    }
+  },
+  "templateCode": {
+    "placeholders": {
+      "authorName": "著者名",
+      "yourName": "あなたの名前",
+      "department": "部署",
+      "universityName": "大学名",
+      "email": "author@university.edu",
+      "presentationTitle": "プレゼンテーションタイトル",
+      "researchPaperTitle": "研究論文タイトル",
+      "courseName": "コース名",
+      "instructorName": "講師名",
+      "yourAddress": "住所",
+      "cityStateZip": "市区町村、都道府県 郵便番号",
+      "phone": "(03) 1234-5678",
+      "point1": "ポイント1",
+      "point2": "ポイント2",
+      "point3": "ポイント3",
+      "contentGoesHere": "コンテンツをここに入力。",
+      "summaryOfKeyPoints": "重要なポイントの要約。"
     }
   }
 }

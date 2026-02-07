@@ -1,98 +1,1357 @@
 {
   "language": {
-    "label": "Language",
-    "en": "English",
-    "fr": "French",
-    "es": "Spanish",
-    "pt": "Portuguese",
-    "cn": "Chinese",
-    "ar": "Arabic",
-    "de": "German",
-    "ja": "Japanese",
-    "it": "Italian",
-    "ko": "Korean",
+    "label": "Wika",
+    "en": "Ingles",
+    "fr": "Pranses",
+    "es": "Espanyol",
+    "pt": "Portuges",
+    "cn": "Tsino",
+    "ar": "Arabo",
+    "de": "Aleman",
+    "ja": "Hapon",
+    "it": "Italyano",
+    "ko": "Koreano",
     "id": "Indonesian",
     "fil": "Filipino",
     "ms": "Malay",
-    "ru": "Russian",
+    "ru": "Ruso",
     "vi": "Vietnamese",
     "nl": "Dutch"
   },
   "common": {
-    "backToTools": "Back to Tools",
-    "tryNow": "Try Now",
-    "view": "View",
-    "open": "Open",
-    "search": "Search",
-    "searchTools": "Search tools...",
-    "noResults": "No results found",
-    "loading": "Loading...",
-    "processing": "Processing...",
-    "generating": "Generating...",
+    "backToTools": "Bumalik sa Mga Tool",
+    "tryNow": "Subukan Ngayon",
+    "view": "Tingnan",
+    "open": "Buksan",
+    "openInOctree": "Buksan sa Octree",
+    "search": "Maghanap",
+    "searchTools": "Maghanap ng mga tool...",
+    "searchTemplates": "Maghanap ng mga template...",
+    "noResults": "Walang resulta",
+    "loading": "Naglo-load...",
+    "processing": "Pinoproseso...",
+    "generating": "Gumagawa...",
+    "compiling": "Kino-compile...",
     "error": "Error",
-    "success": "Success",
-    "close": "Close",
-    "copy": "Copy",
-    "copied": "Copied!",
-    "download": "Download",
-    "export": "Export",
-    "exportAs": "Export as",
-    "browseFiles": "browse files",
-    "dropFileHere": "Drop your file here",
-    "fileUploaded": "File uploaded successfully",
-    "categories": "Categories",
-    "all": "All",
-    "tools": "Tools"
+    "success": "Tagumpay",
+    "close": "Isara",
+    "copy": "Kopyahin",
+    "copied": "Nakopya na!",
+    "download": "I-download",
+    "export": "I-export",
+    "exportAs": "I-export bilang",
+    "browseFiles": "mag-browse ng files",
+    "dropFileHere": "Ihulog ang file dito",
+    "fileUploaded": "Matagumpay na na-upload ang file",
+    "categories": "Mga Kategorya",
+    "all": "Lahat",
+    "tools": "Mga Tool",
+    "templates": "Mga Template",
+    "template": "template",
+    "templatesCount": "{count} template",
+    "starOnGitHub": "I-star sa GitHub",
+    "joinUsOnReddit": "Sumali sa amin sa Reddit",
+    "joinOurDiscord": "Sumali sa aming Discord"
   },
   "home": {
-    "title": "Free Online Tools",
-    "description": "Useful tools to help you get things done faster.",
-    "noToolsFound": "No tools found matching your search."
+    "title": "Libreng LaTeX Tools at Templates",
+    "description": "I-convert ang mga sulat-kamay na equation at talahanayan sa LaTeX, gumawa ng mga citation, at tuklasin ang mga propesyonal na template.",
+    "noToolsFound": "Walang nahanap na tool na tumutugma sa iyong paghahanap."
+  },
+  "templates": {
+    "title": "Libreng LaTeX Tools at Templates",
+    "description": "Propesyonal na LaTeX templates para sa mga academic papers, presentations, resumes, at iba pa.",
+    "allTemplates": "Lahat ng Templates",
+    "noTemplatesFound": "Walang nahanap na template na tumutugma sa iyong paghahanap.",
+    "viewTemplate": "Tingnan ang Template",
+    "backToAllTemplates": "Bumalik sa lahat ng templates",
+    "templateNotFound": "Hindi Nahanap ang Template",
+    "backToTemplates": "Bumalik sa Templates",
+    "download": "I-download",
+    "copyCode": "Kopyahin ang Code",
+    "sourceCode": "Source Code",
+    "preview": "Preview",
+    "openAsTemplate": "Buksan bilang Template",
+    "viewSource": "Tingnan ang Source",
+    "hideSource": "Itago ang Source",
+    "viewPdf": "Tingnan ang PDF",
+    "category": "Kategorya",
+    "license": "Lisensya",
+    "freeToUse": "Libreng gamitin (MIT)",
+    "abstract": "Abstrak",
+    "tags": "Mga Tag",
+    "latexSourceCode": "LaTeX Source Code",
+    "loadingPreview": "Naglo-load ng preview..."
   },
   "tools": {
     "input": "INPUT",
     "output": "OUTPUT",
-    "backToTools": "Back to Tools",
-    "export": "Export",
-    "processing": "Processing...",
-    "outputWillAppear": "Output will appear here...",
-    "failedToProcess": "Failed to process. Please try again.",
-    "conversionFailed": "Conversion failed"
+    "code": "CODE",
+    "preview": "PREVIEW",
+    "yourHandwrittenNotes": "Ang Iyong Sulat-kamay na Notes",
+    "cleanLatexCode": "Malinis na LaTeX Code",
+    "uploadImageDescription": "Mag-upload ng anumang larawan na naglalaman ng mathematical expressions",
+    "readyToCopy": "Handa nang kopyahin sa anumang LaTeX editor",
+    "generatingPreview": "Gumagawa ng preview...",
+    "previewWillAppear": "Lalabas ang preview dito...",
+    "backToTools": "Bumalik sa Mga Tool",
+    "openInOctree": "Buksan sa Octree",
+    "export": "I-export",
+    "exportAsLatex": "I-export bilang LaTeX",
+    "exportAsPdf": "I-export bilang PDF",
+    "exportAsImage": "I-export bilang Larawan",
+    "fileUploaded": "Matagumpay na na-upload ang file",
+    "dropFileHere": "Ihulog ang file dito",
+    "orBrowseFiles": "o mag-browse ng files",
+    "processing": "Pinoproseso...",
+    "convertingToLatex": "Kino-convert sa LaTeX...",
+    "converting": "Kino-convert...",
+    "outputWillAppear": "Lalabas ang output dito...",
+    "codeTab": "Code",
+    "previewTab": "Preview",
+    "readyToUseInLatex": "Handa nang gamitin sa iyong mga LaTeX documents",
+    "readyToUseInMarkdown": "Handa nang gamitin sa iyong mga Markdown files",
+    "editLatexCode": "I-edit ang iyong LaTeX code dito",
+    "livePreview": "Live preview ng iyong dokumento",
+    "generatedCodeWillAppear": "Lalabas ang generated code dito...",
+    "compilingLatex": "Kino-compile ang LaTeX...",
+    "aiThinking": "Nag-iisip ang AI Model…",
+    "giveItAMoment": "Maghintay sandali habang ginagawa ang iyong TikZ diagram.",
+    "codeStreaming": "Maghintay habang naglo-load ang code.",
+    "generatingPgfplots": "Gumagawa ng pgfplots code...",
+    "onlyCsvFiles": "Tanging CSV files lamang ang sinusuportahan para sa tool na ito.",
+    "onlyImageFiles": "Tanging image files (JPEG, PNG) at PDF files lamang ang sinusuportahan.",
+    "failedToProcess": "Nabigo sa pagproseso ng larawan. Pakisubukang muli.",
+    "failedToCompile": "Nabigo sa pag-compile ng LaTeX.",
+    "failedToGenerate": "Nabigo sa paggawa ng citation. Pakisubukang muli.",
+    "conversionFailed": "Nabigo ang conversion",
+    "pleaseEnterEquation": "Pakiusap maglagay ng equation description o mag-upload ng larawan",
+    "equationTooLong": "Ang equation description ay dapat 2000 characters o mas kaunti",
+    "failedToConvert": "Nabigo sa pag-convert ng equation. Pakisubukang muli.",
+    "noPdfUrl": "Walang PDF URL na ibinalik",
+    "failedToExportPdf": "Nabigo sa pag-export ng PDF."
   },
-  "toolsList": {},
-  "toolsSpecific": {},
+  "toolsSpecific": {
+    "mathToLatex": {
+      "title": "Math sa LaTeX",
+      "subtitle": "I-convert ang nai-type na math sa malinis na LaTeX.",
+      "inputLabel": "Math input",
+      "inputPlaceholder": "hal. integral mula 0 hanggang 1 ng x^2 dx",
+      "convert": "I-convert",
+      "clear": "I-clear",
+      "outputLabel": "LaTeX output",
+      "copy": "Kopyahin",
+      "copied": "Nakopya na!"
+    },
+    "imageToLatex": {
+      "title": "Larawan sa LaTeX",
+      "description": "I-convert ang mga larawan ng sulat-kamay na math at equations sa malinis na LaTeX code"
+    },
+    "tikzGenerator": {
+      "title": "TikZ Diagram Generator",
+      "subtitle": "Ilarawan ang iyong diagram at hayaan ang AI na gumawa ng TikZ code",
+      "inputLabel": "Paglalarawan ng Diagram",
+      "inputHint": "Ilarawan ang diagram na gusto mong gawin",
+      "placeholder": "Halimbawa: Gumuhit ng simpleng flowchart na may 3 nodes na konektado ng mga arrow. Ang unang node ay dapat sabihin 'Simula', ang pangalawa 'Proseso', at ang pangatlo 'Tapos'.",
+      "generateTikz": "Gumawa ng TikZ",
+      "generating": "Gumagawa...",
+      "aiModelThinking": "Nag-iisip ang AI Model…",
+      "giveItAMoment": "Maghintay sandali habang ginagawa ang iyong TikZ diagram.",
+      "hangTight": "Maghintay habang naglo-load ang code.",
+      "outputLabel": "Generated TikZ Code",
+      "readyToUse": "Handa nang gamitin sa iyong mga LaTeX documents",
+      "generatedCodeWillAppear": "Lalabas ang generated code dito...",
+      "failedToGenerate": "Nabigo sa paggawa ng TikZ. Pakisubukang muli.",
+      "failedToCompile": "Nabigo sa pag-compile ng TikZ document."
+    },
+    "pgfplotsGenerator": {
+      "title": "Pgfplots Generator",
+      "subtitle": "Ilarawan ang iyong plot at hayaan ang AI na gumawa ng pgfplots code",
+      "inputLabel": "Paglalarawan ng Plot",
+      "inputHint": "Ilarawan ang plot o graph na gusto mong gawin",
+      "placeholder": "Halimbawa: Gumawa ng line plot na nagpapakita ng y = x^2 mula x = -5 hanggang x = 5, na may asul na linya at grid. Magdagdag ng axis labels.",
+      "generatePlot": "Gumawa ng Plot",
+      "generating": "Gumagawa...",
+      "generatingPgfplotsCode": "Gumagawa ng pgfplots code...",
+      "outputLabel": "Generated Pgfplots Code",
+      "readyToUse": "Handa nang gamitin sa iyong mga LaTeX documents",
+      "generatedCodeWillAppear": "Lalabas ang generated code dito...",
+      "failedToGenerate": "Nabigo sa paggawa ng pgfplots. Pakisubukang muli."
+    },
+    "mermaidToLatex": {
+      "title": "Mermaid sa LaTeX Converter",
+      "subtitle": "I-convert ang Mermaid diagrams sa LaTeX code",
+      "inputLabel": "Mermaid Code",
+      "inputHint": "I-paste ang iyong Mermaid diagram syntax dito",
+      "convertToLatex": "I-convert sa LaTeX",
+      "converting": "Kino-convert...",
+      "convertingToLatex": "Kino-convert sa LaTeX...",
+      "outputLabel": "LaTeX Code",
+      "readyToUse": "Handa nang gamitin sa iyong mga LaTeX documents",
+      "convertedLatexWillAppear": "Lalabas ang converted LaTeX dito...",
+      "failedToConvert": "Nabigo sa pag-convert ng Mermaid. Pakisubukang muli."
+    },
+    "citationGenerator": {
+      "title": "LaTeX Citation Generator",
+      "subtitle": "Gumawa ng BibTeX citations mula sa article details, DOIs, o URLs",
+      "citationDetailsLabel": "Mga Detalye ng Citation",
+      "citationDetailsHint": "Ilagay ang article details, DOI, o URL",
+      "placeholder": "Ilagay ang mga detalye ng citation...",
+      "generateBibtex": "Gumawa ng BibTeX",
+      "generating": "Gumagawa...",
+      "generatingBibtex": "Gumagawa ng BibTeX...",
+      "outputLabel": "BibTeX Code",
+      "readyToAdd": "Handa nang idagdag sa iyong .bib file",
+      "bibtexWillAppear": "Lalabas ang BibTeX citation dito...",
+      "failedToGenerate": "Nabigo sa paggawa ng citation. Pakisubukang muli.",
+      "exportAsBib": "I-export bilang .bib"
+    },
+    "latexPreview": {
+      "title": "LaTeX Preview",
+      "subtitle": "Live LaTeX editor na may instant PDF preview",
+      "codeLabel": "LaTeX Editor",
+      "codeHint": "I-edit ang iyong LaTeX code dito",
+      "previewLabel": "PDF Output",
+      "previewHint": "Live preview ng iyong dokumento",
+      "compiling": "Kino-compile...",
+      "compilingLatex": "Kino-compile ang LaTeX..."
+    },
+    "aiLatexGenerator": {
+      "title": "AI LaTeX Generator",
+      "subtitle": "Ilarawan kung ano ang gusto mo at hayaan ang AI na gumawa ng LaTeX code",
+      "descriptionLabel": "Ang Iyong Paglalarawan",
+      "descriptionHint": "Ilarawan ang dokumento o content na kailangan mo",
+      "placeholder": "Halimbawa: Gumawa ng beamer presentation na may 5 slides tungkol sa machine learning...",
+      "generateLatex": "Gumawa ng LaTeX",
+      "generating": "Gumagawa...",
+      "generatingLatexCode": "Gumagawa ng LaTeX code...",
+      "outputLabel": "Generated LaTeX Code",
+      "readyToUse": "Handa nang gamitin sa iyong mga LaTeX documents",
+      "generatedLatexWillAppear": "Lalabas ang generated LaTeX dito...",
+      "failedToGenerate": "Nabigo sa paggawa ng LaTeX. Pakisubukang muli."
+    },
+    "htmlToLatex": {
+      "title": "HTML sa LaTeX Converter",
+      "subtitle": "I-convert ang HTML markup sa malinis na LaTeX code",
+      "inputLabel": "HTML Code",
+      "inputHint": "I-paste ang iyong HTML markup dito",
+      "convertToLatex": "I-convert sa LaTeX",
+      "converting": "Kino-convert...",
+      "convertingToLatex": "Kino-convert sa LaTeX...",
+      "outputLabel": "LaTeX Code",
+      "readyToUse": "Handa nang gamitin sa iyong mga LaTeX documents",
+      "convertedLatexWillAppear": "Lalabas ang converted LaTeX dito...",
+      "failedToConvert": "Nabigo sa pag-convert ng HTML. Pakisubukang muli."
+    },
+    "markdownToLatex": {
+      "title": "Markdown sa LaTeX Converter",
+      "subtitle": "I-convert ang Markdown documents sa malinis na LaTeX code",
+      "inputLabel": "Markdown Content",
+      "inputHint": "I-paste ang iyong Markdown text dito",
+      "convertToLatex": "I-convert sa LaTeX",
+      "converting": "Kino-convert...",
+      "convertingToLatex": "Kino-convert sa LaTeX...",
+      "outputLabel": "LaTeX Code",
+      "readyToUse": "Handa nang gamitin sa iyong mga LaTeX documents",
+      "convertedLatexWillAppear": "Lalabas ang converted LaTeX dito...",
+      "failedToConvert": "Nabigo sa pag-convert ng Markdown. Pakisubukang muli."
+    },
+    "mathmlToLatex": {
+      "title": "MathML sa LaTeX Converter",
+      "subtitle": "I-convert ang MathML markup sa malinis na LaTeX code",
+      "inputLabel": "MathML Code",
+      "inputHint": "I-paste ang iyong MathML markup dito",
+      "convertToLatex": "I-convert sa LaTeX",
+      "converting": "Kino-convert...",
+      "convertingToLatex": "Kino-convert sa LaTeX...",
+      "outputLabel": "LaTeX Code",
+      "readyToUse": "Handa nang gamitin sa iyong mga LaTeX documents",
+      "convertedLatexWillAppear": "Lalabas ang converted LaTeX dito...",
+      "failedToConvert": "Nabigo sa pag-convert ng MathML. Pakisubukang muli."
+    },
+    "latexToMarkdown": {
+      "title": "LaTeX sa Markdown Converter",
+      "subtitle": "I-convert ang LaTeX documents o snippets sa malinis na Markdown",
+      "inputLabel": "LaTeX Content",
+      "inputHint": "I-paste ang iyong LaTeX code dito",
+      "convertToMarkdown": "I-convert sa Markdown",
+      "converting": "Kino-convert...",
+      "convertingToMarkdown": "Kino-convert sa Markdown...",
+      "outputLabel": "Markdown",
+      "readyToUse": "Handa nang gamitin sa iyong mga Markdown files",
+      "convertedMarkdownWillAppear": "Lalabas ang converted Markdown dito...",
+      "failedToConvert": "Nabigo sa pag-convert ng LaTeX. Pakisubukang muli.",
+      "exportAsMarkdown": "I-export bilang Markdown"
+    },
+    "latexWordCounter": {
+      "title": "LaTeX Word Counter",
+      "subtitle": "Bilangin ang mga salita sa iyong LaTeX documents nang tumpak",
+      "inputLabel": "LaTeX Document",
+      "inputHint": "I-paste o i-type ang iyong LaTeX code",
+      "resultsLabel": "Bilang ng Salita",
+      "resultsHint": "Live na statistics ng salita",
+      "counting": "Binibilang...",
+      "countingWords": "Binibilang ang mga salita...",
+      "totalWords": "Kabuuang Salita",
+      "breakdown": "Detalye",
+      "textBody": "Nilalaman ng Teksto",
+      "headers": "Mga Header",
+      "captions": "Mga Caption",
+      "processedIn": "Pinroseso sa loob ng",
+      "enterLatexToCount": "Maglagay ng LaTeX para bilangin ang mga salita",
+      "failedToCount": "Nabigo sa pagbilang ng mga salita"
+    },
+    "tableToLatex": {
+      "title": "CSV sa LaTeX Converter",
+      "subtitle": "Mag-upload ng .csv file at makakuha agad ng malinis na LaTeX table code.",
+      "inputLabel": "Mag-upload ng CSV File",
+      "outputLabel": "LaTeX Table Output"
+    },
+    "equationToLatex": {
+      "title": "Equation sa LaTeX Converter",
+      "subtitle": "I-convert ang mga mathematical expressions sa LaTeX mula sa text descriptions o mga larawan",
+      "inputLabel": "Paglalarawan ng Equation o Larawan",
+      "inputHint": "Ilarawan ang iyong equation sa plain text o mag-upload ng larawan",
+      "placeholder": "Halimbawa: quadratic formula, integral ng x squared mula 0 hanggang 1, sum ng n mula 1 hanggang infinity ng 1 over n squared...",
+      "placeholderWithImage": "Hindi magagamit ang text input habang may na-upload na larawan",
+      "imageUploaded": "Na-upload ang larawan, hindi magagamit ang text input",
+      "dropImageHere": "Ihulog ang larawan ng equation dito",
+      "orBrowseFiles": "o mag-browse ng files",
+      "fileFormats": "JPEG, PNG, GIF, WebP",
+      "convertToLatex": "I-convert sa LaTeX",
+      "converting": "Kino-convert...",
+      "convertingToLatex": "Kino-convert sa LaTeX...",
+      "outputLabel": "Generated LaTeX",
+      "readyToUse": "Handa nang gamitin sa iyong mga LaTeX documents",
+      "generatedLatexWillAppear": "Lalabas ang generated LaTeX dito...",
+      "pleaseEnterEquation": "Pakiusap maglagay ng equation description o mag-upload ng larawan",
+      "equationTooLong": "Ang equation description ay dapat 2000 characters o mas kaunti",
+      "failedToConvert": "Nabigo sa pag-convert ng equation. Pakisubukang muli."
+    },
+    "imageToTikz": {
+      "title": "Larawan sa TikZ Converter",
+      "subtitle": "Mag-upload ng diagram o larawan at i-convert ito sa editable TikZ code",
+      "inputLabel": "Mag-upload ng Larawan",
+      "inputHint": "Mag-upload ng diagram, flowchart, o hugis para i-convert",
+      "dropFileHere": "Ihulog ang file dito",
+      "orBrowseFiles": "o mag-browse ng files",
+      "fileFormats": "JPEG, PNG, GIF, WebP",
+      "processing": "Pinoproseso...",
+      "analyzingImage": "Sinusuri ang iyong larawan...",
+      "analyzingImageSubtext": "Kino-convert ang mga hugis at elemento sa TikZ code.",
+      "analyzingImageStatus": "Sinusuri ang larawan...",
+      "analyzingImageStatusSubtext": "Maghintay habang naglo-load ang code.",
+      "converting": "Kino-convert...",
+      "outputLabel": "Generated TikZ Code",
+      "readyToUse": "Handa nang gamitin sa iyong mga LaTeX documents",
+      "generatedCodeWillAppear": "Lalabas ang generated code dito...",
+      "failedToConvert": "Nabigo sa pag-convert ng larawan sa TikZ. Pakisubukang muli.",
+      "pleaseUploadImage": "Pakiusap mag-upload ng image file (PNG, JPEG, GIF, WebP)",
+      "imageSizeTooLarge": "Ang laki ng larawan ay dapat mas mababa sa 20MB",
+      "removeImage": "Alisin ang larawan"
+    },
+    "pdfToLatex": {
+      "title": "PDF sa LaTeX Converter",
+      "subtitle": "I-convert ang PDF documents na may math at equations sa malinis na LaTeX code",
+      "inputLabel": "Ang Iyong PDF Document",
+      "outputLabel": "Malinis na LaTeX Code"
+    }
+  },
   "categories": {
-    "calculator": "Calculator",
-    "generator": "Generator",
-    "converter": "Converter",
-    "checker": "Checker",
-    "analyzer": "Analyzer",
-    "general": "General"
+    "academic": "Akademiko",
+    "professional": "Propesyonal",
+    "creative": "Malikhain",
+    "business": "Negosyo",
+    "education": "Edukasyon",
+    "presentations": "Mga Presentasyon",
+    "resumeCv": "Resume at CV",
+    "math": "Matematika",
+    "reports": "Mga Ulat",
+    "letters": "Mga Liham",
+    "other": "Iba pa"
+  },
+  "toolsList": {
+    "imageToLatex": {
+      "title": "Larawan sa LaTeX",
+      "description": "I-convert ang mga larawan sa LaTeX format"
+    },
+    "tableToLatex": {
+      "title": "Excel sa LaTeX",
+      "description": "I-convert ang CSV, JSON, Excel sa LaTeX tables"
+    },
+    "tikzGenerator": {
+      "title": "TikZ Generator",
+      "description": "Gumawa ng TikZ diagrams gamit ang AI"
+    },
+    "imageToTikz": {
+      "title": "Larawan sa TikZ",
+      "description": "I-convert ang mga larawan sa TikZ diagrams gamit ang AI"
+    },
+    "latexPreview": {
+      "title": "LaTeX Preview",
+      "description": "Live LaTeX editor na may PDF preview"
+    },
+    "markdownToLatex": {
+      "title": "Markdown sa LaTeX",
+      "description": "I-convert ang mga Markdown documents sa LaTeX format"
+    },
+    "citationGenerator": {
+      "title": "Citation Generator",
+      "description": "Gumawa ng BibTeX citations mula sa DOIs o article details"
+    },
+    "mathmlToLatex": {
+      "title": "MathML sa LaTeX",
+      "description": "I-convert ang MathML markup sa LaTeX format"
+    },
+    "aiLatexGenerator": {
+      "title": "AI LaTeX Generator",
+      "description": "Gumawa ng LaTeX code mula sa text descriptions"
+    },
+    "htmlToLatex": {
+      "title": "HTML sa LaTeX",
+      "description": "I-convert ang HTML markup sa LaTeX format"
+    },
+    "mermaidToLatex": {
+      "title": "Mermaid sa LaTeX",
+      "description": "I-convert ang Mermaid diagrams sa LaTeX format"
+    },
+    "pgfplotsGenerator": {
+      "title": "Pgfplots Generator",
+      "description": "Gumawa ng pgfplots graphs at charts gamit ang AI"
+    },
+    "latexToMarkdown": {
+      "title": "LaTeX sa Markdown",
+      "description": "I-convert ang LaTeX documents o snippets sa Markdown"
+    },
+    "equationToLatex": {
+      "title": "Equation sa LaTeX",
+      "description": "I-convert ang math equations mula sa text o mga larawan sa LaTeX"
+    },
+    "pdfToLatex": {
+      "title": "PDF sa LaTeX",
+      "description": "I-convert ang PDF documents na may mathematical content sa LaTeX"
+    },
+    "latexWordCounter": {
+      "title": "LaTeX Word Counter",
+      "description": "Bilangin ang mga salita sa LaTeX documents nang tumpak"
+    },
+    "arxivToLatex": {
+      "title": "ArXiv sa LaTeX",
+      "description": "Mag-import ng arXiv papers direkta sa Octree"
+    }
+  },
+  "templatesList": {
+    "research-paper": {
+      "title": "Research Paper",
+      "description": "IEEE-style na research paper template"
+    },
+    "beamer-presentation": {
+      "title": "Beamer Presentation",
+      "description": "Academic presentation slides"
+    },
+    "academic-cv": {
+      "title": "Academic CV",
+      "description": "Propesyonal na academic curriculum vitae"
+    },
+    "mathematical-document": {
+      "title": "Dokumento ng Matematika",
+      "description": "Dokumento na maraming matematika at teorema"
+    },
+    "lab-report": {
+      "title": "Lab Report",
+      "description": "Scientific lab report template"
+    },
+    "book-chapter": {
+      "title": "Kabanata ng Libro",
+      "description": "Template para sa kabanata ng libro o thesis"
+    },
+    "resume": {
+      "title": "Resume",
+      "description": "Propesyonal na resume template"
+    },
+    "grading-rubric": {
+      "title": "Grading Rubric",
+      "description": "Template para sa assessment criteria at grading"
+    },
+    "assignment": {
+      "title": "Assignment",
+      "description": "Template para sa homework at assignment"
+    },
+    "worksheet": {
+      "title": "Worksheet",
+      "description": "Template para sa mga practice problems at exercises"
+    },
+    "homework": {
+      "title": "Homework Template",
+      "description": "Structured homework assignment"
+    },
+    "poster": {
+      "title": "Research Poster",
+      "description": "Academic conference poster template"
+    },
+    "thesis": {
+      "title": "PhD Thesis",
+      "description": "Komprehensibong thesis template na may mga kabanata"
+    },
+    "letter": {
+      "title": "Pormal na Liham",
+      "description": "Propesyonal na business letter template"
+    },
+    "algorithm": {
+      "title": "Algorithm Pseudocode",
+      "description": "Algorithm documentation na may pseudocode"
+    },
+    "cover-letter": {
+      "title": "Cover Letter",
+      "description": "Propesyonal na academic at job application cover letter"
+    },
+    "journal-article": {
+      "title": "Journal Article",
+      "description": "Academic journal article template na may mga seksyon"
+    },
+    "syllabus": {
+      "title": "Course Syllabus",
+      "description": "Komprehensibong course syllabus template"
+    },
+    "research-proposal": {
+      "title": "Research Proposal",
+      "description": "Grant at research proposal template"
+    },
+    "essay": {
+      "title": "Academic Essay",
+      "description": "Structured essay na may argumento at analysis"
+    },
+    "research-statement": {
+      "title": "Research Statement",
+      "description": "Academic research statement para sa job applications"
+    },
+    "dissertation": {
+      "title": "Dissertation",
+      "description": "Kumpletong PhD dissertation template"
+    },
+    "white-paper": {
+      "title": "White Paper",
+      "description": "Propesyonal na white paper template"
+    },
+    "leaflet": {
+      "title": "Leaflet/Brochure",
+      "description": "Propesyonal na marketing leaflet template"
+    },
+    "technical-report": {
+      "title": "Technical Report",
+      "description": "Technical research report template"
+    },
+    "math-exercises": {
+      "title": "Mga Pagsasanay sa Math",
+      "description": "Mga practice problems at exercises para sa matematika"
+    },
+    "math-notes": {
+      "title": "Math Notes",
+      "description": "Structured lecture notes para sa mathematics courses"
+    },
+    "math-exam": {
+      "title": "Math Exam",
+      "description": "Pormal na mathematics examination template"
+    },
+    "math-problem-set": {
+      "title": "Math Problem Set",
+      "description": "Lingguhang problem set assignments para sa matematika"
+    },
+    "math-cheat-sheet": {
+      "title": "Math Cheat Sheet",
+      "description": "Compact reference sheet para sa formulas at theorems"
+    },
+    "lecture-notes": {
+      "title": "Lecture Notes",
+      "description": "Malinis na academic lecture notes template"
+    },
+    "quiz-template": {
+      "title": "Quiz Template",
+      "description": "Maikling quiz o test template"
+    },
+    "formula-sheet": {
+      "title": "Formula Sheet",
+      "description": "Reference sheet para sa mahahalagang formulas"
+    },
+    "project-report": {
+      "title": "Project Report",
+      "description": "Propesyonal na project report na may chapters at sections"
+    },
+    "article-template": {
+      "title": "Article Template",
+      "description": "Scientific article na may abstract at sections"
+    },
+    "statement-of-purpose": {
+      "title": "Statement of Purpose",
+      "description": "Graduate school application statement template"
+    },
+    "literature-review": {
+      "title": "Literature Review",
+      "description": "Academic literature review na may citations"
+    },
+    "meeting-minutes": {
+      "title": "Meeting Minutes",
+      "description": "Propesyonal na meeting minutes at notes template"
+    },
+    "certificate": {
+      "title": "Sertipiko",
+      "description": "Award o completion certificate template"
+    },
+    "invoice": {
+      "title": "Invoice",
+      "description": "Propesyonal na invoice para sa services o products"
+    },
+    "grant-proposal": {
+      "title": "Grant Proposal",
+      "description": "Research grant proposal template"
+    },
+    "letter-of-recommendation": {
+      "title": "Liham ng Rekomendasyon",
+      "description": "Propesyonal na recommendation letter template"
+    },
+    "motivation-letter": {
+      "title": "Motivation Letter",
+      "description": "Academic o propesyonal na motivation letter template"
+    },
+    "business-plan": {
+      "title": "Business Plan",
+      "description": "Propesyonal na business plan template"
+    },
+    "business-report": {
+      "title": "Business Report",
+      "description": "Corporate business report template"
+    },
+    "scientific-report": {
+      "title": "Scientific Report",
+      "description": "Scientific research report template"
+    },
+    "internship-report": {
+      "title": "Internship Report",
+      "description": "Student internship report template"
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Propesyonal na newsletter template"
+    },
+    "questionnaire": {
+      "title": "Questionnaire",
+      "description": "Research survey at questionnaire template"
+    },
+    "table-template": {
+      "title": "Table Template",
+      "description": "Propesyonal na table layouts at formatting"
+    },
+    "bibliography": {
+      "title": "Bibliography",
+      "description": "Standalone bibliography at references template"
+    },
+    "memo": {
+      "title": "Memo",
+      "description": "Propesyonal na business memo template"
+    },
+    "manuscript": {
+      "title": "Manuscript",
+      "description": "Book manuscript template para sa novels at non-fiction"
+    },
+    "recipe-book": {
+      "title": "Recipe Book",
+      "description": "Cookbook at recipe collection template"
+    },
+    "flyer": {
+      "title": "Flyer",
+      "description": "Marketing flyer at promotional one-page template"
+    },
+    "business-card": {
+      "title": "Business Card",
+      "description": "Propesyonal na business card template"
+    },
+    "calendar": {
+      "title": "Kalendaryo",
+      "description": "Buwanang at taunang calendar template"
+    },
+    "neurips-2026": {
+      "title": "NeurIPS 2026",
+      "description": "NeurIPS 2026 conference paper template na may 9-page limit at paper checklist"
+    },
+    "icml-2026": {
+      "title": "ICML 2026",
+      "description": "ICML 2026 conference paper template na may two-column format at 8-page limit"
+    },
+    "iclr-2026": {
+      "title": "ICLR 2026",
+      "description": "ICLR 2026 conference paper template na may reproducibility statement"
+    },
+    "cvpr-2026": {
+      "title": "CVPR 2026",
+      "description": "CVPR 2026 computer vision conference paper template na may two-column format"
+    },
+    "aaai-2026": {
+      "title": "AAAI 2026",
+      "description": "AAAI 2026 conference paper template na may two-column format at 7-page limit"
+    },
+    "obituary": {
+      "title": "Obituary",
+      "description": "Eleganteng memorial obituary template na may decorative border"
+    },
+    "eccv-2026": {
+      "title": "ECCV 2026",
+      "description": "ECCV 2026 European Conference on Computer Vision paper template"
+    },
+    "icra-2026": {
+      "title": "ICRA 2026",
+      "description": "IEEE ICRA 2026 robotics conference paper template na may two-column format"
+    },
+    "acm-chi-2026": {
+      "title": "ACM CHI 2026",
+      "description": "Official ACM CHI 2026 submission template para sa single-column review format"
+    },
+    "www-2026": {
+      "title": "WWW 2026",
+      "description": "The Web Conference (WWW) 2026 template na may mandatory relevance to the web section"
+    },
+    "acl-2026": {
+      "title": "ACL 2026",
+      "description": "ACL 2026 NLP conference paper template na may two-column format at mandatory limitations section"
+    },
+    "interspeech-2026": {
+      "title": "Interspeech 2026",
+      "description": "Interspeech 2026 speech at language processing conference paper template"
+    },
+    "interactive-flashcard": {
+      "title": "Interactive Flashcard / Redacted Quiz",
+      "description": "Click-to-reveal study guide na may nakatagong mga sagot - perpekto para sa self-testing"
+    },
+    "jakes-resume": {
+      "title": "Jake's Resume",
+      "description": "Malinis, ATS-friendly single-column resume template"
+    }
+  },
+  "symbols": {
+    "title": "Mga Simbolo ng LaTeX",
+    "description": "Mag-browse ng mga karaniwang mathematical operators at Greek letters para sa iyong mga LaTeX documents.",
+    "searchPlaceholder": "Maghanap ng mga simbolo...",
+    "searchResults": "Mga Resulta ng Paghahanap",
+    "symbolsFound": "{count} simbolo ang nahanap",
+    "noSymbolsFound": "Walang nahanap na simbolo na tumutugma sa",
+    "viewSymbols": "Tingnan ang mga Simbolo",
+    "backToSymbols": "Bumalik sa mga Simbolo",
+    "symbolCount": "{count} simbolo",
+    "symbolsCount": "{count} mga simbolo",
+    "categories": {
+      "math": {
+        "title": "Mga Simbolo ng Math",
+        "description": "Mga karaniwang mathematical operators, relations, at arrows.",
+        "subtitle": "Mga Karaniwang Mathematical Operators"
+      },
+      "greek": {
+        "title": "Mga Simbolo ng Griyego",
+        "description": "Kumpletong listahan ng mga Greek letters at kanilang LaTeX commands.",
+        "subtitle": "Mga Greek Letters at Variants"
+      },
+      "arrows": {
+        "title": "Mga Simbolo ng Arrow",
+        "description": "Directional arrows, double arrows, at harpoons para sa LaTeX documents.",
+        "subtitle": "Directional at Double Arrows"
+      },
+      "latin": {
+        "title": "Mga Latin Letters",
+        "description": "Accented characters at special Latin letters para sa iba't ibang wika.",
+        "subtitle": "Accented Characters at Special Letters"
+      },
+      "setTheory": {
+        "title": "Set Theory",
+        "description": "Sets, subsets, unions, intersections, at number sets.",
+        "subtitle": "Sets, Subsets, at Operations"
+      },
+      "logic": {
+        "title": "Lohika at Proofs",
+        "description": "Quantifiers, logical connectives, at proof notation.",
+        "subtitle": "Logical Connectives at Proof Notation"
+      },
+      "linearAlgebra": {
+        "title": "Linear Algebra",
+        "description": "Vectors, matrices, transposes, at inner products.",
+        "subtitle": "Vectors, Matrices, at Operations"
+      },
+      "calculus": {
+        "title": "Calculus at Analysis",
+        "description": "Derivatives, integrals, limits, at differential operators.",
+        "subtitle": "Derivatives, Integrals, at Limits"
+      },
+      "probability": {
+        "title": "Probability at Statistics",
+        "description": "Probability, expectation, variance, at distributions.",
+        "subtitle": "Probability at Statistical Notation"
+      },
+      "computerScience": {
+        "title": "Computer Science",
+        "description": "Big-O notation, logical operators, at algorithm symbols.",
+        "subtitle": "Big-O Notation at Algorithms"
+      },
+      "numberTheory": {
+        "title": "Number Theory",
+        "description": "Divisibility, modular arithmetic, at number-theoretic functions.",
+        "subtitle": "Divisibility at Modular Arithmetic"
+      },
+      "physics": {
+        "title": "Pisika",
+        "description": "Quantum mechanics, vector fields, at physical constants.",
+        "subtitle": "Quantum Mechanics at Physical Constants"
+      },
+      "chemistry": {
+        "title": "Kimika",
+        "description": "Reaction arrows, isotopes, bonds, at state symbols.",
+        "subtitle": "Reaction Arrows at Chemical Notation"
+      },
+      "finance": {
+        "title": "Currency at Finance",
+        "description": "Currency symbols, financial formulas, at notation."
+      },
+      "brackets": {
+        "title": "Brackets at Delimiters",
+        "description": "Angle brackets, floor, ceiling, norms, at delimiter pairs.",
+        "subtitle": "Brackets, Floor, Ceiling, at Norms"
+      },
+      "accents": {
+        "title": "Accents at Modifiers",
+        "description": "Hats, tildes, dots, bars, vectors, at text decorations."
+      },
+      "geometry": {
+        "title": "Geometry",
+        "description": "Angles, triangles, parallel, perpendicular, at congruence.",
+        "subtitle": "Angles, Triangles, at Geometric Relations"
+      },
+      "topology": {
+        "title": "Topology at Abstract Math",
+        "description": "Aleph, boundary, homology, at category theory notation.",
+        "subtitle": "Topological at Category Theory Notation"
+      },
+      "machineLearning": {
+        "title": "Machine Learning at AI",
+        "description": "Loss functions, gradients, argmax, KL divergence, at neural network notation.",
+        "subtitle": "Loss Functions at Neural Network Notation"
+      },
+      "relations": {
+        "title": "Relations at Comparisons",
+        "description": "Inequality, equivalence, subset, superset, at comparison symbols.",
+        "subtitle": "Inequality at Equivalence Symbols"
+      },
+      "operators": {
+        "title": "Advanced Operators",
+        "description": "Binary operators, tensor products, direct sums, at compositions.",
+        "subtitle": "Binary Operators at Compositions"
+      },
+      "summation": {
+        "title": "Summation at Product",
+        "description": "Sigma notation, product symbols, at indexed limits.",
+        "subtitle": "Sigma at Product Notation"
+      },
+      "functions": {
+        "title": "Functions at Mapping",
+        "description": "Function notation, maps, composition, at domain/codomain.",
+        "subtitle": "Function Notation at Composition"
+      },
+      "order": {
+        "title": "Inequalities at Order",
+        "description": "Precedes, succeeds, min, max, inf, sup, at bounds.",
+        "subtitle": "Ordering at Bound Notation"
+      },
+      "boolean": {
+        "title": "Boolean Algebra",
+        "description": "Logic gates, AND, OR, NOT, XOR, NAND, at boolean operations.",
+        "subtitle": "Logic Gates at Boolean Operations"
+      },
+      "optimization": {
+        "title": "Optimization",
+        "description": "Argmax, argmin, constraints, Lagrangian, at KKT conditions.",
+        "subtitle": "Optimization at Constraint Notation"
+      },
+      "units": {
+        "title": "Units at Measurements",
+        "description": "Degrees, SI units, physical constants, at measurement symbols.",
+        "subtitle": "SI Units at Measurement Symbols"
+      },
+      "quantifiers": {
+        "title": "Quantifiers",
+        "description": "For all, exists, element of, at set builder notation.",
+        "subtitle": "Universal at Existential Quantifiers"
+      },
+      "graphTheory": {
+        "title": "Graph Theory",
+        "description": "Vertices, edges, adjacency, paths, cycles, at chromatic numbers.",
+        "subtitle": "Vertices, Edges, at Graph Notation"
+      },
+      "combinatorics": {
+        "title": "Combinatorics",
+        "description": "Factorials, binomials, permutations, combinations, at counting.",
+        "subtitle": "Factorials, Permutations, at Combinations"
+      },
+      "specialFunctions": {
+        "title": "Special Functions",
+        "description": "Gamma, zeta, Bessel, Legendre, at error functions.",
+        "subtitle": "Gamma, Zeta, at Special Functions"
+      },
+      "complex": {
+        "title": "Complex Numbers",
+        "description": "Imaginary unit, conjugate, modulus, argument, at polar form.",
+        "subtitle": "Complex Number Notation"
+      },
+      "trigonometry": {
+        "title": "Trigonometry",
+        "description": "Sine, cosine, tangent, inverse trig, at hyperbolic functions.",
+        "subtitle": "Trigonometric at Hyperbolic Functions"
+      },
+      "differentialGeometry": {
+        "title": "Differential Geometry",
+        "description": "Manifolds, curvature, Christoffel symbols, at Riemann tensors.",
+        "subtitle": "Manifolds at Curvature Notation"
+      },
+      "tensors": {
+        "title": "Tensor Notation",
+        "description": "Einstein summation, indices, contractions, at covariant derivatives.",
+        "subtitle": "Einstein Summation at Tensor Indices"
+      },
+      "modalLogic": {
+        "title": "Modal Logic",
+        "description": "Necessity, possibility, temporal logic, at Kripke semantics.",
+        "subtitle": "Necessity at Possibility Operators"
+      },
+      "gameTheory": {
+        "title": "Game Theory",
+        "description": "Nash equilibrium, strategies, payoffs, at Shapley values.",
+        "subtitle": "Nash Equilibrium at Strategic Notation"
+      }
+    }
   },
   "nav": {
-    "tools": "Tools",
-    "getStarted": "Get Started",
+    "tools": "Mga Tool",
+    "templates": "Mga Template",
+    "symbols": "Mga Simbolo",
+    "getStarted": "Magsimula",
     "menu": "Menu"
   },
   "footer": {
-    "tagline": "Free online tools for everyone.",
+    "tagline": "Libreng LaTeX tools at templates para sa lahat.",
     "menu": "Menu",
-    "tools": "Tools",
-    "allRightsReserved": "All rights reserved.",
-    "viewAllTools": "View all tools →",
-    "socials": "Socials"
+    "tools": "Mga Tool",
+    "allRightsReserved": "Lahat ng karapatan ay nakalaan.",
+    "imageToLatex": "Larawan sa LaTeX",
+    "excelToLatex": "Excel sa LaTeX",
+    "tikzGenerator": "TikZ Generator",
+    "imageToTikz": "Larawan sa TikZ",
+    "latexPreview": "LaTeX Preview",
+    "markdownToLatex": "Markdown sa LaTeX",
+    "citationGenerator": "Citation Generator",
+    "aiLatexGenerator": "AI LaTeX Generator",
+    "learn": "Matuto",
+    "learnLatex": "Matuto ng LaTeX",
+    "learnTikz": "Matuto ng TikZ",
+    "learnPgfplots": "Matuto ng PGFPlots",
+    "viewAllTutorials": "Tingnan lahat ng tutorial →",
+    "openSource": "Open Source",
+    "octreeEditor": "Octree Editor",
+    "toolsTemplates": "Tools at Templates",
+    "marketingBlogs": "Marketing at Blogs",
+    "viewAllRepositories": "Tingnan lahat ng repositories →",
+    "socials": "Social Media",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn",
+    "tiktok": "TikTok",
+    "x": "X",
+    "reddit": "Reddit",
+    "discord": "Discord",
+    "greekLetters": "Mga Letrang Griyego",
+    "mathOperators": "Mga Math Operator",
+    "arrows": "Mga Arrow",
+    "relations": "Mga Relasyon",
+    "setTheory": "Set Theory",
+    "calculus": "Calculus",
+    "logic": "Lohika",
+    "linearAlgebra": "Linear Algebra",
+    "browseAllCategories": "I-browse lahat ng 37 kategorya →",
+    "researchPaper": "Research Paper",
+    "phdThesis": "PhD Thesis",
+    "beamerPresentation": "Beamer Presentation",
+    "academicCv": "Academic CV",
+    "coverLetter": "Cover Letter",
+    "labReport": "Lab Report",
+    "neurips2026": "NeurIPS 2026",
+    "icml2026": "ICML 2026",
+    "viewAllTemplates": "Tingnan lahat ng 71 template →",
+    "viewAllTools": "Tingnan lahat ng tools →"
   },
   "cta": {
-    "title": "Get Started Today",
-    "description": "Try our tools for free.",
-    "getStarted": "Get Started",
-    "learnMore": "Learn More"
+    "badge": "Sumulat ng LaTeX gamit ang AI",
+    "title": "Pinakamahusay na AI LaTeX Editor, Alternatibo sa Overleaf",
+    "description": "Tinutulungan ng Octree ang mga researcher mula sa 15+ na unibersidad na sumulat ng research papers nang mas mabilis gamit ang AI",
+    "feature1": "Gumawa ng magagandang TikZ diagrams gamit ang AI",
+    "feature2": "Mag-upload ng larawan at i-convert ito sa LaTeX nang walang problema",
+    "feature3": "Makakuha ng instant na tulong sa pagsulat at pag-format ng research papers",
+    "useInOctree": "Gamitin sa Octree",
+    "learnMore": "Matuto Pa"
   },
   "metadata": {
     "site": {
-      "title": "Free Online Tools",
-      "description": "Free online tools to help you get things done faster.",
-      "keywords": "free tools, online tools, calculator, generator, converter, checker"
+      "title": "Libreng LaTeX Tools - I-convert ang Larawan sa LaTeX, 60+ Templates, PDF Preview | Octree",
+      "description": "Libreng LaTeX tools: AI-powered math equation converter, 60+ propesyonal na templates (resume, CV, thesis, beamer), live PDF preview. I-convert ang sulat-kamay na math, mga larawan at PDFs sa LaTeX agad.",
+      "keywords": "paano gumawa ng LaTeX, libreng LaTeX converter, i-convert sulat-kamay na math sa LaTeX, larawan sa LaTeX converter, PDF sa LaTeX converter, math equation sa LaTeX, LaTeX math converter, AI LaTeX generator, LaTeX citation generator, TikZ generator, libreng LaTeX templates, LaTeX resume template Pilipinas, LaTeX CV template, LaTeX thesis template, LaTeX beamer template, online LaTeX editor, Overleaf alternative libre, LaTeX online Tagalog, compile LaTeX online, LaTeX sa PDF, equation editor, math formula editor, LaTeX symbols, BibTeX generator, table sa LaTeX, Excel sa LaTeX, markdown sa LaTeX, HTML sa LaTeX, MathML sa LaTeX, LaTeX word counter, PGFPlots generator, arXiv LaTeX, LaTeX para sa estudyante, LaTeX para sa thesis, paano mag-type ng equation, matematika sa LaTeX, LaTeX tutorial Filipino, gumawa ng diagram sa LaTeX"
+    },
+    "tools": {
+      "imageToLatex": {
+        "title": "Converter ng Larawan sa LaTeX - Libreng Tool na may AI",
+        "description": "I-convert ang mga larawan ng sulat-kamay na math equations sa malinis na LaTeX code agad. May AI, libre, walang kailangan mag-sign up.",
+        "keywords": "larawan sa LaTeX, litrato sa LaTeX, picture sa LaTeX, sulat-kamay na math sa LaTeX, scan math sa LaTeX, OCR LaTeX, math image converter, screenshot sa LaTeX, math OCR, equation OCR, formula sa LaTeX, math photo converter, sulat-kamay sa LaTeX, scan equation, paano i-convert ang larawan sa LaTeX, mag-upload ng math equation, kunan ng litrato ng equation, i-scan ang sulat kamay, handwritten math converter, gumawa ng LaTeX mula sa picture, libreng image to LaTeX, AI image converter, camera sa LaTeX, cellphone math scanner"
+      },
+      "mathToLatex": {
+        "title": "Converter ng Math sa LaTeX - Libreng Online Tool",
+        "description": "I-convert ang mathematical expressions sa LaTeX code. Mag-type o mag-paste ng math at makakuha ng malinis na LaTeX output.",
+        "keywords": "math sa LaTeX, convert math sa LaTeX, math expression sa LaTeX, formula sa LaTeX, math converter, equation converter, math notation LaTeX, mathematical expression converter, paano mag-type ng math sa LaTeX, i-type ang equation, matematika sa LaTeX, mag-paste ng formula, simpleng math converter, libreng equation converter, LaTeX math code, formula converter online, equation sa code, symbolic math"
+      },
+      "equationToLatex": {
+        "title": "Converter ng Equation sa LaTeX - Libreng Online Tool",
+        "description": "I-convert ang mathematical equations sa LaTeX code agad. I-type ang iyong equation at makakuha ng LaTeX.",
+        "keywords": "equation sa LaTeX, convert equation sa LaTeX, math equation converter, equation editor LaTeX, formula sa LaTeX, mathematical equation LaTeX, equation notation, paano isulat ang equation sa LaTeX, libreng equation to LaTeX, mag-type ng equation online, LaTeX equation generator, algebraic equation, quadratic formula LaTeX, calculus equation, physics equation LaTeX, chemistry equation, engineering formula, scientific notation"
+      },
+      "tikzGenerator": {
+        "title": "Generator ng TikZ Diagram - LaTeX Graphics na may AI",
+        "description": "Gumawa ng TikZ diagrams gamit ang AI. Ilarawan ang iyong diagram at makakuha ng malinis na TikZ LaTeX code agad.",
+        "keywords": "TikZ generator, TikZ online, TikZ examples, TikZ flowchart, TikZ diagram, TikZ neural network, AI TikZ generator, TikZ code generator, TikZ tutorial, TikZ shapes, TikZ arrows, TikZ graph, TikZ tree, TikZ plot, PGF TikZ, TikZ circuit, TikZ timeline, TikZ Venn diagram, paano gumawa ng diagram sa LaTeX, gumuhit ng flowchart, gumawa ng graph, LaTeX drawing, AI diagram maker, libreng TikZ tool, disenyo ng diagram, network diagram, organizational chart, process flow, block diagram, state machine diagram"
+      },
+      "imageToTikz": {
+        "title": "Converter ng Larawan sa TikZ - I-convert ang Larawan sa LaTeX Graphics",
+        "description": "I-convert ang mga larawan at diagrams sa TikZ LaTeX code gamit ang AI. Mag-upload ng kahit anong larawan at makakuha ng editable na TikZ code.",
+        "keywords": "larawan sa TikZ, picture sa TikZ, convert larawan sa TikZ, diagram sa TikZ, litrato sa TikZ code, AI TikZ converter, vectorize sa TikZ, larawan sa LaTeX diagram, paano i-convert ang diagram sa TikZ, mag-upload ng flowchart, gawing editable ang diagram, image to code, picture to diagram code, redraw diagram, AI drawing converter, trace image LaTeX, convert screenshot to diagram, libreng image to TikZ"
+      },
+      "citationGenerator": {
+        "title": "Generator ng LaTeX Citation - BibTeX Generator",
+        "description": "Gumawa ng BibTeX citations mula sa DOIs, URLs, o detalye ng artikulo. Libreng LaTeX citation tool.",
+        "keywords": "LaTeX citation generator, BibTeX generator, DOI sa BibTeX, citation generator, reference generator, bibliography generator, cite generator, APA citation LaTeX, MLA citation LaTeX, Chicago citation, IEEE citation, Harvard referencing LaTeX, paano gumawa ng citation, libreng reference generator, aklatan citation, journal citation, book citation, website citation, research paper citation, thesis bibliography, academic referencing, cita ng libro, sanggunian generator, reference list maker"
+      },
+      "latexPreview": {
+        "title": "LaTeX Live Preview - Libreng Online Editor",
+        "description": "Magsulat at mag-preview ng LaTeX documents sa real-time. Libreng online LaTeX editor na may instant PDF output.",
+        "keywords": "LaTeX preview, LaTeX online editor, LaTeX live preview, online LaTeX compiler, LaTeX sa PDF, libreng LaTeX editor, Overleaf alternative, online LaTeX, magsulat LaTeX online, LaTeX renderer, LaTeX viewer, compile LaTeX libre, paano mag-preview ng LaTeX, real-time LaTeX, instant PDF, LaTeX IDE online, write LaTeX browser, test LaTeX code, debug LaTeX, LaTeX web editor, libreng PDF generator, walang install na LaTeX, browser-based LaTeX"
+      },
+      "pdfToLatex": {
+        "title": "Converter ng PDF sa LaTeX - I-extract ang LaTeX mula sa PDF",
+        "description": "I-convert ang PDF documents na may mathematical content sa malinis na LaTeX code. AI-powered extraction.",
+        "keywords": "PDF sa LaTeX, convert PDF sa LaTeX, extract LaTeX mula sa PDF, PDF math converter, PDF equation extractor, PDF sa TeX, OCR PDF sa LaTeX, PDF formula extractor, scan PDF sa LaTeX, paano i-convert ang PDF sa LaTeX, kuhanin ang equation sa PDF, extract formula from PDF, PDF document converter, scanned document to LaTeX, research paper PDF, thesis PDF converter, book PDF to LaTeX, AI PDF extractor"
+      },
+      "tableToLatex": {
+        "title": "Converter ng Table sa LaTeX - Excel sa LaTeX",
+        "description": "I-convert ang tables mula sa Excel, Google Sheets, o CSV sa LaTeX format. Libreng table generator.",
+        "keywords": "table sa LaTeX, Excel sa LaTeX, CSV sa LaTeX, spreadsheet sa LaTeX, LaTeX table generator, tabular LaTeX, LaTeX table maker, Google Sheets sa LaTeX, copy paste table LaTeX, LaTeX tabular generator, paano gumawa ng table sa LaTeX, i-convert ang Excel, mag-paste ng table, libreng table converter, data table LaTeX, talahanayan sa LaTeX, spreadsheet converter, mga column at row, formatted table, table sa thesis, research table"
+      },
+      "markdownToLatex": {
+        "title": "Converter ng Markdown sa LaTeX - Libreng Online Tool",
+        "description": "I-convert ang Markdown files sa malinis na LaTeX code. Mapanatili ang formatting, links, at structure.",
+        "keywords": "markdown sa LaTeX, convert markdown sa LaTeX, md sa tex, markdown LaTeX converter, pandoc alternative, markdown sa PDF LaTeX, markdown sa TeX online, paano i-convert ang markdown, md file to LaTeX, GitHub markdown, README converter, notes to LaTeX, documentation converter, text to LaTeX, formatted text, libreng markdown converter"
+      },
+      "latexToMarkdown": {
+        "title": "Converter ng LaTeX sa Markdown - Libreng Online Tool",
+        "description": "I-convert ang LaTeX documents sa Markdown format. Mapanatili ang equations at formatting.",
+        "keywords": "LaTeX sa markdown, convert LaTeX sa markdown, tex sa md, LaTeX sa md converter, LaTeX markdown, TeX sa markdown, export LaTeX bilang markdown, paano i-convert LaTeX sa markdown, LaTeX to GitHub, LaTeX to README, document converter, thesis to markdown, research paper converter, simplify LaTeX, export equations"
+      },
+      "htmlToLatex": {
+        "title": "Converter ng HTML sa LaTeX - Libreng Online Tool",
+        "description": "I-convert ang HTML content sa malinis na LaTeX code. Perpekto para sa web sa document conversion.",
+        "keywords": "HTML sa LaTeX, convert HTML sa LaTeX, web sa LaTeX, HTML sa TeX, webpage sa LaTeX, HTML table sa LaTeX, convert website sa LaTeX, paano i-convert ang HTML, web page converter, online content to LaTeX, website scraper LaTeX, blog to document, web to PDF LaTeX, copy from website, HTML code converter"
+      },
+      "mathmlToLatex": {
+        "title": "Converter ng MathML sa LaTeX - Libreng Online Tool",
+        "description": "I-convert ang MathML equations sa LaTeX code. Perpekto para sa Word at web equation conversion.",
+        "keywords": "MathML sa LaTeX, convert MathML sa LaTeX, Word equation sa LaTeX, MathML converter, Office math sa LaTeX, OMML sa LaTeX, Word math sa LaTeX, paano i-convert ang Word equation, Microsoft Word math, equation editor Word, Office 365 equation, Google Docs equation, web equation converter, math markup converter"
+      },
+      "mermaidToLatex": {
+        "title": "Converter ng Mermaid sa LaTeX - Diagrams sa TikZ",
+        "description": "I-convert ang Mermaid diagrams sa TikZ LaTeX code. Flowcharts, sequence diagrams, at marami pa.",
+        "keywords": "Mermaid sa LaTeX, Mermaid sa TikZ, convert Mermaid diagram, flowchart sa LaTeX, sequence diagram sa LaTeX, Mermaid LaTeX, diagram sa TikZ, paano i-convert ang Mermaid, markdown diagram to LaTeX, GitHub diagram converter, text to diagram LaTeX, Mermaid code, UML to LaTeX, class diagram, entity relationship, Gantt chart LaTeX"
+      },
+      "latexWordCounter": {
+        "title": "LaTeX Word Counter - Libreng Online Tool",
+        "description": "Bilangin ang mga salita sa LaTeX documents na hindi kasama ang commands at comments. Tumpak na academic word count.",
+        "keywords": "LaTeX word counter, count words LaTeX, TeX word count, LaTeX character count, academic word counter, thesis word count, paper word count LaTeX, LaTeX text counter, paano bilangin ang salita sa LaTeX, word limit checker, page count estimator, document statistics, thesis length, essay word count, bilang ng salita, research paper length, accurate word count"
+      },
+      "aiLatexGenerator": {
+        "title": "AI LaTeX Generator - Magsulat ng LaTeX gamit ang AI",
+        "description": "Gumawa ng LaTeX code gamit ang AI. Ilarawan kung ano ang gusto mo at makakuha ng malinis, compilable na LaTeX.",
+        "keywords": "AI LaTeX generator, generate LaTeX AI, AI LaTeX writer, ChatGPT LaTeX, AI equation generator, AI math LaTeX, LaTeX mula sa text, natural language sa LaTeX, paano gumawa ng LaTeX gamit AI, describe to LaTeX, text to equation, AI document generator, automatic LaTeX, smart LaTeX creator, AI-powered writing, LaTeX assistant, equation from description, AI thesis helper"
+      },
+      "pgfplotsGenerator": {
+        "title": "PGFPlots Generator - LaTeX Graph Maker",
+        "description": "Gumawa ng magagandang graphs at plots para sa LaTeX gamit ang PGFPlots. Libreng online plot generator.",
+        "keywords": "PGFPlots generator, PGFPlots online, LaTeX graph, LaTeX plot, PGFPlots examples, LaTeX chart, data visualization LaTeX, scatter plot LaTeX, bar chart LaTeX, line graph LaTeX, function plot LaTeX, paano gumawa ng graph sa LaTeX, chart maker, data plot, function graphing, statistical plot, research graph, thesis chart, science plot, engineering graph, AI graph generator"
+      },
+      "arxivToLatex": {
+        "title": "arXiv sa LaTeX - I-download ang arXiv Source Code",
+        "description": "I-extract at i-download ang LaTeX source code mula sa arXiv papers. Kunin ang original na TeX files.",
+        "keywords": "arXiv sa LaTeX, arXiv source code, download arXiv LaTeX, arXiv TeX source, arXiv paper source, extract arXiv LaTeX, arXiv source download, paano kuhanin ang LaTeX mula sa arXiv, arXiv source files, research paper source, scientific paper LaTeX, preprint source code, academic paper download, physics paper LaTeX, math paper source, computer science paper"
+      }
+    },
+    "symbols": {
+      "main": {
+        "title": "Mga Simbolo ng LaTeX - Kumpletong Reference Guide",
+        "description": "Mag-browse at kopyahin ang mga simbolo ng LaTeX: Greek letters, math operators, arrows, at marami pa. Kumpletong symbol reference.",
+        "keywords": "LaTeX symbols, math symbols, Greek letters LaTeX, LaTeX operators, LaTeX arrows, symbol reference, copy LaTeX symbols, LaTeX special characters, mathematical notation LaTeX, LaTeX cheat sheet, lahat ng LaTeX symbols, paano mag-type ng simbolo sa LaTeX, listahan ng simbolo, matematika simbolo, science symbols, engineering notation, kopyahin at idikit, special characters LaTeX, simbolo ng equation"
+      },
+      "math": {
+        "title": "Mga Math Symbol ng LaTeX - Operators at Relations",
+        "description": "Kumpletong listahan ng LaTeX mathematical symbols. Operators, relations, equations na may copy-paste code.",
+        "keywords": "math symbols LaTeX, mathematical operators, LaTeX plus minus, LaTeX fraction, LaTeX square root, LaTeX summation, LaTeX integral, times symbol LaTeX, divide symbol LaTeX, equals LaTeX, not equal LaTeX, approximately LaTeX, paano mag-type ng math symbol, dagdag bawas LaTeX, multiplication sign, division sign, square root symbol, fraction bar, math operations, arithmetic symbols"
+      },
+      "greek": {
+        "title": "Greek Letters sa LaTeX - Alpha hanggang Omega",
+        "description": "Kumpletong listahan ng Greek letters at ang kanilang LaTeX commands. Copy-paste alpha, beta, gamma, at marami pa.",
+        "keywords": "Greek letters LaTeX, alpha LaTeX, beta LaTeX, gamma LaTeX, delta LaTeX, epsilon LaTeX, theta LaTeX, lambda LaTeX, pi LaTeX, sigma LaTeX, omega LaTeX, phi LaTeX, Greek alphabet LaTeX, mga letrang Griyego, paano mag-type ng Greek letter, pi symbol, sigma symbol, theta symbol, physics Greek letters, math Greek symbols"
+      },
+      "arrows": {
+        "title": "Mga Arrow Symbol ng LaTeX - Lahat ng Uri ng Arrow",
+        "description": "Kumpletong listahan ng LaTeX arrow symbols. Kanan, kaliwa, taas, baba, double arrows at marami pa.",
+        "keywords": "LaTeX arrows, rightarrow LaTeX, leftarrow LaTeX, double arrow LaTeX, implies LaTeX, arrow symbols, LaTeX arrow types, uparrow LaTeX, downarrow LaTeX, bidirectional arrow LaTeX, long arrow LaTeX, paano gumawa ng arrow, pana simbolo, patungo symbol, implies symbol, mapping arrow, reaction arrow, flow arrow"
+      },
+      "brackets": {
+        "title": "LaTeX Brackets at Delimiters",
+        "description": "Parentheses, braces, brackets, at delimiters sa LaTeX. Copy-paste bracket commands.",
+        "keywords": "LaTeX brackets, LaTeX parentheses, LaTeX braces, curly brackets LaTeX, square brackets LaTeX, angle brackets LaTeX, LaTeX delimiters, left right LaTeX, big brackets LaTeX, paano gumawa ng malaking bracket, panaklong LaTeX, brace sa math, grouping symbols, matrix brackets, absolute value bars, norm brackets"
+      },
+      "calculus": {
+        "title": "Mga Calculus Symbol ng LaTeX - Derivatives at Integrals",
+        "description": "Calculus notation sa LaTeX: derivatives, integrals, limits, at differential operators.",
+        "keywords": "calculus LaTeX, derivative LaTeX, integral LaTeX, partial derivative LaTeX, limit LaTeX, differential LaTeX, nabla LaTeX, gradient LaTeX, divergence LaTeX, curl LaTeX, Laplacian LaTeX, paano mag-type ng integral, derivative symbol, calculus notation, integral sign, partial differential, limit notation, dx dy symbol, summation calculus"
+      },
+      "setTheory": {
+        "title": "Mga Set Theory Symbol ng LaTeX",
+        "description": "Set theory notation sa LaTeX: union, intersection, subset, element of, at marami pa.",
+        "keywords": "set theory LaTeX, union LaTeX, intersection LaTeX, subset LaTeX, superset LaTeX, element of LaTeX, empty set LaTeX, set notation LaTeX, belongs to LaTeX, contains LaTeX, paano mag-type ng set symbol, union sign, intersection sign, subset symbol, element ng set, empty set symbol, set builder notation"
+      },
+      "logic": {
+        "title": "Mga Logic Symbol ng LaTeX - Logical Operators",
+        "description": "Logic symbols sa LaTeX: and, or, not, implies, if and only if, at quantifiers.",
+        "keywords": "logic symbols LaTeX, and LaTeX, or LaTeX, not LaTeX, implies LaTeX, if and only if LaTeX, negation LaTeX, logical operators LaTeX, propositional logic LaTeX, paano mag-type ng logic symbol, lohika simbolo, and or not symbols, implication arrow, biconditional, logical connectives"
+      },
+      "relations": {
+        "title": "Mga Relation Symbol ng LaTeX - Comparison Operators",
+        "description": "Relation symbols sa LaTeX: less than, greater than, equal, not equal, at equivalences.",
+        "keywords": "relation symbols LaTeX, less than LaTeX, greater than LaTeX, less equal LaTeX, greater equal LaTeX, not equal LaTeX, equivalent LaTeX, approximately LaTeX, proportional LaTeX, paano mag-type ng less than equal, mas mababa, mas mataas, hindi pantay, halos pantay, comparison symbols"
+      },
+      "operators": {
+        "title": "Mga Operator ng LaTeX - Mathematical Operators",
+        "description": "Mathematical operators sa LaTeX: sum, product, integral, at operator notation.",
+        "keywords": "LaTeX operators, sum LaTeX, product LaTeX, integral operator LaTeX, big operators LaTeX, summation LaTeX, prod LaTeX, coprod LaTeX, operator notation LaTeX, malaking operators, paano gumawa ng summation, product symbol, coproduct, big pi, big sigma"
+      },
+      "linearAlgebra": {
+        "title": "Mga Linear Algebra Symbol ng LaTeX - Matrices at Vectors",
+        "description": "Linear algebra notation sa LaTeX: matrices, vectors, determinants, at eigenvalues.",
+        "keywords": "linear algebra LaTeX, matrix LaTeX, vector LaTeX, determinant LaTeX, transpose LaTeX, eigenvalue LaTeX, eigenvector LaTeX, dot product LaTeX, cross product LaTeX, norm LaTeX, paano gumawa ng matrix, vector notation, determinant symbol, transpose symbol, eigenvalue notation, matrix multiplication"
+      },
+      "geometry": {
+        "title": "Mga Geometry Symbol ng LaTeX - Angles at Shapes",
+        "description": "Geometry notation sa LaTeX: angles, parallel, perpendicular, triangles, at circles.",
+        "keywords": "geometry LaTeX, angle LaTeX, parallel LaTeX, perpendicular LaTeX, triangle LaTeX, circle LaTeX, degree symbol LaTeX, congruent LaTeX, similar LaTeX, paano mag-type ng angle, anggulo simbolo, parallel lines, perpendicular lines, triangle symbol, degree sign, congruence symbol"
+      },
+      "probability": {
+        "title": "Mga Probability Symbol ng LaTeX - Statistics Notation",
+        "description": "Probability at statistics symbols sa LaTeX: expected value, variance, distributions.",
+        "keywords": "probability LaTeX, expected value LaTeX, variance LaTeX, standard deviation LaTeX, probability distribution LaTeX, statistics LaTeX, random variable LaTeX, conditional probability LaTeX, paano mag-type ng probability, posibilidad simbolo, expected value notation, variance symbol, statistics symbols, distribution notation"
+      },
+      "physics": {
+        "title": "Mga Physics Symbol ng LaTeX - Scientific Notation",
+        "description": "Physics symbols sa LaTeX: vectors, operators, quantum mechanics, at constants.",
+        "keywords": "physics LaTeX, vector LaTeX, hbar LaTeX, quantum mechanics LaTeX, bra ket LaTeX, Dirac notation LaTeX, physical constants LaTeX, scientific notation LaTeX, paano mag-type ng physics symbol, pisika simbolo, quantum notation, vector notation, Planck constant, scientific constants"
+      },
+      "chemistry": {
+        "title": "Mga Chemistry Symbol ng LaTeX - Chemical Notation",
+        "description": "Chemistry notation sa LaTeX: chemical formulas, reactions, at molecular structures.",
+        "keywords": "chemistry LaTeX, chemical formula LaTeX, reaction arrow LaTeX, subscript LaTeX, superscript LaTeX, mhchem LaTeX, chemical equation LaTeX, paano mag-type ng chemical formula, kimika simbolo, chemical reaction, molecular formula, reaction arrows, equilibrium arrow"
+      },
+      "computerScience": {
+        "title": "Mga Computer Science Symbol ng LaTeX - Algorithm Notation",
+        "description": "Computer science symbols sa LaTeX: algorithms, complexity, at programming notation.",
+        "keywords": "computer science LaTeX, algorithm LaTeX, big O notation LaTeX, complexity LaTeX, pseudocode LaTeX, programming symbols LaTeX, paano mag-type ng algorithm, kompyuter simbolo, Big O notation, complexity notation, CS symbols, algorithm notation"
+      },
+      "functions": {
+        "title": "Mga Function Symbol ng LaTeX - Mathematical Functions",
+        "description": "Function notation sa LaTeX: trigonometric, logarithmic, exponential, at marami pa.",
+        "keywords": "functions LaTeX, sin LaTeX, cos LaTeX, tan LaTeX, log LaTeX, ln LaTeX, exp LaTeX, lim LaTeX, min LaTeX, max LaTeX, argmin LaTeX, argmax LaTeX, paano mag-type ng function, trigonometric functions, logarithm notation, exponential notation, function names"
+      },
+      "numberTheory": {
+        "title": "Mga Number Theory Symbol ng LaTeX",
+        "description": "Number theory notation sa LaTeX: divisibility, congruence, at number sets.",
+        "keywords": "number theory LaTeX, divisibility LaTeX, modulo LaTeX, congruence LaTeX, prime LaTeX, gcd LaTeX, lcm LaTeX, integers LaTeX, natural numbers LaTeX, paano mag-type ng number theory, bilang teorya, divisibility symbol, modular arithmetic, prime notation, integer sets"
+      },
+      "accents": {
+        "title": "LaTeX Accents at Diacritics",
+        "description": "LaTeX accents: hat, bar, dot, tilde, at ibang diacritical marks.",
+        "keywords": "LaTeX accents, hat LaTeX, bar LaTeX, dot LaTeX, tilde LaTeX, vec LaTeX, overline LaTeX, underline LaTeX, overbrace LaTeX, underbrace LaTeX, paano maglagay ng accent, sumbrero sa math, vector arrow, overline notation, underline math"
+      },
+      "boolean": {
+        "title": "Mga Boolean Algebra Symbol ng LaTeX",
+        "description": "Boolean algebra notation sa LaTeX: AND, OR, NOT, XOR, at truth values.",
+        "keywords": "boolean LaTeX, AND LaTeX, OR LaTeX, NOT LaTeX, XOR LaTeX, true false LaTeX, boolean algebra LaTeX, logic gates LaTeX, paano mag-type ng boolean, logic gate symbols, digital logic, true false symbols, boolean operations"
+      },
+      "summation": {
+        "title": "Mga Summation at Product Symbol ng LaTeX",
+        "description": "Summation at product notation sa LaTeX: sums, products, at series.",
+        "keywords": "summation LaTeX, product LaTeX, sum notation LaTeX, sigma LaTeX, pi notation LaTeX, series LaTeX, infinite sum LaTeX, paano gumawa ng summation, sigma notation, product notation, series symbols, infinite series"
+      },
+      "trigonometry": {
+        "title": "Mga Trigonometry Symbol ng LaTeX",
+        "description": "Trigonometric functions sa LaTeX: sine, cosine, tangent, at inverse functions.",
+        "keywords": "trigonometry LaTeX, sin LaTeX, cos LaTeX, tan LaTeX, arcsin LaTeX, arccos LaTeX, arctan LaTeX, hyperbolic LaTeX, sinh LaTeX, cosh LaTeX, tanh LaTeX, paano mag-type ng trig function, trigonometric symbols, sine cosine tangent, inverse trig, hyperbolic functions"
+      },
+      "topology": {
+        "title": "Mga Topology Symbol ng LaTeX",
+        "description": "Topology notation sa LaTeX: open sets, closure, interior, at boundary.",
+        "keywords": "topology LaTeX, open set LaTeX, closed set LaTeX, closure LaTeX, interior LaTeX, boundary LaTeX, homeomorphism LaTeX, paano mag-type ng topology, topological notation, open closed sets, boundary symbol, interior notation"
+      },
+      "finance": {
+        "title": "Mga Finance Symbol ng LaTeX - Financial Notation",
+        "description": "Financial symbols sa LaTeX: currency, interest, at economic notation.",
+        "keywords": "finance LaTeX, currency LaTeX, dollar LaTeX, euro LaTeX, pound LaTeX, percent LaTeX, interest rate LaTeX, NPV LaTeX, paano mag-type ng currency, pera simbolo, peso sign, dollar sign, percentage symbol, financial formulas"
+      },
+      "machineLearning": {
+        "title": "Mga Machine Learning Symbol ng LaTeX - ML Notation",
+        "description": "Machine learning notation sa LaTeX: neural networks, loss functions, at optimization.",
+        "keywords": "machine learning LaTeX, neural network LaTeX, loss function LaTeX, gradient descent LaTeX, activation function LaTeX, weights LaTeX, bias LaTeX, ML notation LaTeX, paano mag-type ng ML symbols, AI notation, deep learning symbols, neural net notation, training notation"
+      },
+      "latin": {
+        "title": "LaTeX Latin Letters at Fonts",
+        "description": "Latin letters at font styles sa LaTeX: bold, italic, calligraphic, at marami pa.",
+        "keywords": "Latin letters LaTeX, bold LaTeX, italic LaTeX, mathcal LaTeX, mathbb LaTeX, mathfrak LaTeX, font styles LaTeX, blackboard bold LaTeX, paano gumawa ng bold, italic math, calligraphic letters, script letters, fancy letters, font sa math"
+      },
+      "complex": {
+        "title": "Mga Complex Number Symbol ng LaTeX",
+        "description": "Complex number notation sa LaTeX: imaginary unit, conjugate, at polar form.",
+        "keywords": "complex numbers LaTeX, imaginary unit LaTeX, conjugate LaTeX, real part LaTeX, imaginary part LaTeX, modulus LaTeX, argument LaTeX, paano mag-type ng complex number, imaginary number, i symbol, conjugate bar, complex notation"
+      },
+      "graphTheory": {
+        "title": "Mga Graph Theory Symbol ng LaTeX",
+        "description": "Graph theory notation sa LaTeX: vertices, edges, paths, at cycles.",
+        "keywords": "graph theory LaTeX, vertex LaTeX, edge LaTeX, path LaTeX, cycle LaTeX, adjacency LaTeX, degree LaTeX, connected LaTeX, paano mag-type ng graph theory, graph notation, network notation, vertex edge symbols, path cycle notation"
+      },
+      "combinatorics": {
+        "title": "Mga Combinatorics Symbol ng LaTeX",
+        "description": "Combinatorics notation sa LaTeX: factorials, binomials, at permutations.",
+        "keywords": "combinatorics LaTeX, factorial LaTeX, binomial LaTeX, permutation LaTeX, combination LaTeX, choose LaTeX, binom LaTeX, paano mag-type ng factorial, n choose k, binomial coefficient, permutation symbol, combination notation"
+      },
+      "specialFunctions": {
+        "title": "Mga Special Functions ng LaTeX - Gamma, Zeta, Bessel",
+        "description": "Special functions sa LaTeX: gamma, zeta, Bessel, at error functions.",
+        "keywords": "special functions LaTeX, gamma function LaTeX, zeta function LaTeX, Bessel function LaTeX, error function LaTeX, Legendre LaTeX, paano mag-type ng special function, gamma notation, zeta notation, Bessel notation, erf function"
+      },
+      "tensors": {
+        "title": "LaTeX Tensor Notation - Einstein Summation",
+        "description": "Tensor notation sa LaTeX: indices, contractions, at covariant derivatives.",
+        "keywords": "tensor LaTeX, Einstein summation LaTeX, tensor indices LaTeX, covariant derivative LaTeX, contravariant LaTeX, Kronecker delta LaTeX, paano mag-type ng tensor, tensor notation, index notation, Einstein convention, relativity notation"
+      },
+      "differentialGeometry": {
+        "title": "Mga Differential Geometry Symbol ng LaTeX",
+        "description": "Differential geometry notation sa LaTeX: manifolds, curvature, at connections.",
+        "keywords": "differential geometry LaTeX, manifold LaTeX, curvature LaTeX, Christoffel LaTeX, Riemann tensor LaTeX, connection LaTeX, paano mag-type ng differential geometry, manifold notation, curvature symbols, Christoffel symbols, metric tensor"
+      },
+      "modalLogic": {
+        "title": "Mga Modal Logic Symbol ng LaTeX",
+        "description": "Modal logic notation sa LaTeX: necessity, possibility, at temporal operators.",
+        "keywords": "modal logic LaTeX, necessity LaTeX, possibility LaTeX, box LaTeX, diamond LaTeX, temporal logic LaTeX, paano mag-type ng modal logic, necessity symbol, possibility symbol, modal operators, Kripke semantics"
+      },
+      "gameTheory": {
+        "title": "Mga Game Theory Symbol ng LaTeX",
+        "description": "Game theory notation sa LaTeX: strategies, payoffs, at equilibrium.",
+        "keywords": "game theory LaTeX, Nash equilibrium LaTeX, strategy LaTeX, payoff LaTeX, utility function LaTeX, Shapley value LaTeX, paano mag-type ng game theory, equilibrium notation, strategy symbols, payoff matrix, game notation"
+      },
+      "order": {
+        "title": "Mga Order Relation Symbol ng LaTeX",
+        "description": "Order relations sa LaTeX: partial orders, lattices, at supremum/infimum.",
+        "keywords": "order relations LaTeX, partial order LaTeX, lattice LaTeX, supremum LaTeX, infimum LaTeX, least upper bound LaTeX, paano mag-type ng order relations, ordering symbols, lattice notation, sup inf notation, bound symbols"
+      },
+      "optimization": {
+        "title": "Mga Optimization Symbol ng LaTeX",
+        "description": "Optimization notation sa LaTeX: minimize, maximize, at constraints.",
+        "keywords": "optimization LaTeX, minimize LaTeX, maximize LaTeX, argmin LaTeX, argmax LaTeX, subject to LaTeX, constraint LaTeX, paano mag-type ng optimization, min max notation, optimization symbols, constraint notation, objective function"
+      },
+      "quantifiers": {
+        "title": "Mga Quantifier Symbol ng LaTeX - Para sa Lahat, May",
+        "description": "Quantifier symbols sa LaTeX: universal at existential quantifiers.",
+        "keywords": "quantifiers LaTeX, for all LaTeX, exists LaTeX, forall LaTeX, existential LaTeX, universal quantifier LaTeX, there exists LaTeX, paano mag-type ng quantifier, para sa lahat symbol, may nagsasabi symbol, universal existential, logic quantifiers"
+      },
+      "units": {
+        "title": "LaTeX Units at Measurements",
+        "description": "SI units at measurements sa LaTeX: degrees, physical constants, at units.",
+        "keywords": "units LaTeX, SI units LaTeX, degree LaTeX, physical constants LaTeX, siunitx LaTeX, measurement LaTeX, meter LaTeX, kilogram LaTeX, paano mag-type ng units, mga yunit, degree symbol, metric units, imperial units, physics units"
+      }
+    },
+    "templates": {
+      "main": {
+        "title": "Libreng LaTeX Templates - Resume, CV, Thesis, Beamer",
+        "description": "60+ propesyonal na LaTeX templates. Resume, CV, thesis, beamer presentations, at marami pa. Libreng download.",
+        "keywords": "LaTeX templates, libreng LaTeX templates, LaTeX resume template, LaTeX CV template, LaTeX thesis template, LaTeX beamer template, Overleaf templates, academic templates LaTeX, LaTeX presentation template, LaTeX paper template, LaTeX homework template, LaTeX poster template, LaTeX letter template, LaTeX book template, LaTeX report template, professional LaTeX templates, template para sa thesis, template para sa resume, libreng download LaTeX, handa gamitin na template, mga halimbawa ng LaTeX"
+      },
+      "academic": {
+        "title": "Academic LaTeX Templates - Research Papers, Thesis, Dissertations",
+        "description": "Libreng academic LaTeX templates para sa research papers, thesis, dissertations, journal articles, at conference papers.",
+        "keywords": "academic LaTeX templates, research paper template LaTeX, thesis template LaTeX, dissertation template LaTeX, journal article template, conference paper LaTeX, IEEE template LaTeX, ACM template, Springer template, scientific paper template, PhD thesis LaTeX, master thesis template, academic writing LaTeX, template para sa pananaliksik, template ng thesis, template ng dissertation, sulating pang-akademiko, research journal template, pang-unibersidad na template"
+      },
+      "presentations": {
+        "title": "LaTeX Presentation Templates - Beamer Slides",
+        "description": "Libreng LaTeX beamer presentation templates. Propesyonal na slides para sa academic talks, conferences, at lectures.",
+        "keywords": "beamer template LaTeX, LaTeX presentation template, beamer slides, LaTeX slides, academic presentation template, conference slides LaTeX, lecture slides LaTeX, beamer themes, beamer examples, PowerPoint alternative LaTeX, presentation beamer, template para sa presentasyon, mga slide ng beamer, thesis defense slides, conference presentation, lecture presentation"
+      },
+      "resumeCV": {
+        "title": "LaTeX Resume & CV Templates - Propesyonal na Curriculum Vitae",
+        "description": "Libreng LaTeX resume at CV templates. Modernong, propesyonal na designs para sa job applications at academic CVs.",
+        "keywords": "LaTeX resume template, LaTeX CV template, curriculum vitae LaTeX, professional resume LaTeX, modern CV template, academic CV LaTeX, one page resume LaTeX, two column resume, moderncv template, europass LaTeX, software engineer resume LaTeX, data scientist CV, template para sa resume, template para sa CV, biodata template, job application template, career resume, propesyonal na resume, makabagong CV"
+      },
+      "math": {
+        "title": "LaTeX Math Templates - Equations, Proofs, Problem Sets",
+        "description": "LaTeX templates para sa mathematical documents: problem sets, proofs, theorems, at equation sheets.",
+        "keywords": "math template LaTeX, equation template LaTeX, problem set template, homework template LaTeX, proof template LaTeX, theorem template, math notes LaTeX, formula sheet template, exam template LaTeX, quiz template LaTeX, math assignment template, template para sa matematika, template ng equation, template ng proof, problem set, formula sheet, exam paper template"
+      },
+      "reports": {
+        "title": "LaTeX Report Templates - Technical, Lab, Project Reports",
+        "description": "Propesyonal na LaTeX templates para sa technical reports, lab reports, project documentation, at business reports.",
+        "keywords": "report template LaTeX, technical report LaTeX, lab report template, project report LaTeX, business report template, annual report LaTeX, internship report template, research report LaTeX, documentation template, template para sa ulat, template ng lab report, template ng technical report, project documentation, ulat ng negosyo, ulat ng pananaliksik"
+      },
+      "education": {
+        "title": "LaTeX Education Templates - Homework, Exams, Syllabi",
+        "description": "LaTeX templates para sa educators at students: homework, exams, syllabi, lecture notes, at course materials.",
+        "keywords": "homework template LaTeX, exam template LaTeX, syllabus template LaTeX, lecture notes template, course materials LaTeX, assignment template, test template LaTeX, worksheet template, study guide LaTeX, flashcard template LaTeX, template para sa homework, template ng eksam, template ng syllabus, lecture notes, worksheet, pang-edukasyon na template"
+      },
+      "letters": {
+        "title": "LaTeX Letter Templates - Cover Letters, Pormal na Sulat",
+        "description": "Propesyonal na LaTeX letter templates para sa cover letters, pormal na correspondence, at recommendation letters.",
+        "keywords": "letter template LaTeX, cover letter LaTeX, formal letter template, recommendation letter LaTeX, business letter template, application letter LaTeX, reference letter template, professional letter LaTeX, template para sa liham, template ng cover letter, pormal na liham, liham ng rekomendasyon, application letter, business correspondence"
+      },
+      "business": {
+        "title": "LaTeX Business Templates - Plans, Proposals, Invoices",
+        "description": "LaTeX templates para sa business documents: business plans, proposals, invoices, contracts, at memos.",
+        "keywords": "business template LaTeX, business plan LaTeX, proposal template LaTeX, invoice template LaTeX, contract template, memo template LaTeX, business card LaTeX, company report template, executive summary LaTeX, project proposal template, template para sa negosyo, template ng business plan, template ng proposal, template ng invoice, dokumento ng kumpanya, panukala"
+      },
+      "other": {
+        "title": "LaTeX Templates - Books, Posters, Newsletters",
+        "description": "Iba pang LaTeX templates: books, posters, newsletters, calendars, at creative documents.",
+        "keywords": "book template LaTeX, poster template LaTeX, newsletter template LaTeX, calendar template LaTeX, flyer template LaTeX, brochure LaTeX, recipe template LaTeX, magazine template, obituary template LaTeX, wedding invitation LaTeX, template ng libro, template ng poster, template ng newsletter, template ng kalendaryo, template ng flyer, creative templates"
+      }
+    }
+  },
+  "templateCode": {
+    "placeholders": {
+      "authorName": "Author Name",
+      "yourName": "Your Name",
+      "department": "Department",
+      "universityName": "University Name",
+      "email": "author@university.edu",
+      "presentationTitle": "Presentation Title",
+      "researchPaperTitle": "Research Paper Title",
+      "courseName": "Course Name",
+      "instructorName": "Instructor Name",
+      "yourAddress": "Your Address",
+      "cityStateZip": "City, State ZIP",
+      "phone": "(555) 123-4567",
+      "point1": "Point 1",
+      "point2": "Point 2",
+      "point3": "Point 3",
+      "contentGoesHere": "Content goes here.",
+      "summaryOfKeyPoints": "Summary of key points."
     }
   }
 }

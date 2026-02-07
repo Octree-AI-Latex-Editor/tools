@@ -1,98 +1,971 @@
 {
-  "language": {
-    "label": "Language",
-    "en": "English",
-    "fr": "French",
-    "es": "Spanish",
-    "pt": "Portuguese",
-    "cn": "Chinese",
-    "ar": "Arabic",
-    "de": "German",
-    "ja": "Japanese",
-    "it": "Italian",
-    "ko": "Korean",
-    "id": "Indonesian",
-    "fil": "Filipino",
-    "ms": "Malay",
-    "ru": "Russian",
-    "vi": "Vietnamese",
-    "nl": "Dutch"
-  },
-  "common": {
-    "backToTools": "Back to Tools",
-    "tryNow": "Try Now",
-    "view": "View",
-    "open": "Open",
-    "search": "Search",
-    "searchTools": "Search tools...",
-    "noResults": "No results found",
-    "loading": "Loading...",
-    "processing": "Processing...",
-    "generating": "Generating...",
-    "error": "Error",
-    "success": "Success",
-    "close": "Close",
-    "copy": "Copy",
-    "copied": "Copied!",
-    "download": "Download",
-    "export": "Export",
-    "exportAs": "Export as",
-    "browseFiles": "browse files",
-    "dropFileHere": "Drop your file here",
-    "fileUploaded": "File uploaded successfully",
-    "categories": "Categories",
-    "all": "All",
-    "tools": "Tools"
-  },
-  "home": {
-    "title": "Free Online Tools",
-    "description": "Useful tools to help you get things done faster.",
-    "noToolsFound": "No tools found matching your search."
-  },
-  "tools": {
-    "input": "INPUT",
-    "output": "OUTPUT",
-    "backToTools": "Back to Tools",
-    "export": "Export",
-    "processing": "Processing...",
-    "outputWillAppear": "Output will appear here...",
-    "failedToProcess": "Failed to process. Please try again.",
-    "conversionFailed": "Conversion failed"
-  },
-  "toolsList": {},
-  "toolsSpecific": {},
-  "categories": {
-    "calculator": "Calculator",
-    "generator": "Generator",
-    "converter": "Converter",
-    "checker": "Checker",
-    "analyzer": "Analyzer",
-    "general": "General"
+    "language": {
+      "label": "Idioma",
+      "en": "Inglês",
+      "fr": "Francês",
+      "es": "Espanhol",
+      "pt": "Português",
+      "cn": "Chinês",
+      "ar": "Árabe",
+      "de": "Alemão",
+      "ja": "Japonês",
+      "it": "Italiano",
+      "ko": "Coreano",
+      "id": "Indonésio",
+      "fil": "Filipino",
+      "ms": "Malaio",
+      "ru": "Russo",
+      "vi": "Vietnamita",
+      "nl": "Neerlandês"
+    },
+    "common": {
+      "backToTools": "Voltar para ferramentas",
+      "tryNow": "Experimentar agora",
+      "view": "Ver",
+      "open": "Abrir",
+      "openInOctree": "Abrir no Octree",
+      "search": "Pesquisar",
+      "searchTools": "Pesquisar ferramentas...",
+      "searchTemplates": "Pesquisar modelos...",
+      "noResults": "Nenhum resultado encontrado",
+      "loading": "Carregando...",
+      "processing": "Processando...",
+      "generating": "Gerando...",
+      "compiling": "Compilando...",
+      "error": "Erro",
+      "success": "Sucesso",
+      "close": "Fechar",
+      "copy": "Copiar",
+      "copied": "Copiado!",
+      "download": "Baixar",
+      "export": "Exportar",
+      "exportAs": "Exportar como",
+      "browseFiles": "procurar arquivos",
+      "dropFileHere": "Solte seu arquivo aqui",
+      "fileUploaded": "Arquivo carregado com sucesso",
+      "categories": "Categorias",
+      "all": "Todos",
+      "tools": "Ferramentas",
+      "templates": "Modelos",
+      "template": "modelo",
+      "templatesCount": "{count} modelo{plural}",
+      "starOnGitHub": "Marcar no GitHub",
+      "joinUsOnReddit": "Junte-se a nós no Reddit",
+      "joinOurDiscord": "Junte-se ao nosso Discord"
+    },
+    "home": {
+      "title": "Ferramentas e modelos LaTeX gratuitos",
+      "description": "Converta equações matemáticas escritas à mão e tabelas para LaTeX, gere citações e explore modelos profissionais.",
+      "noToolsFound": "Nenhuma ferramenta encontrada correspondendo à sua pesquisa."
+    },
+    "templates": {
+      "title": "Ferramentas e modelos LaTeX gratuitos",
+      "description": "Modelos LaTeX profissionais para artigos acadêmicos, apresentações, currículos e mais.",
+      "allTemplates": "Todos os modelos",
+      "noTemplatesFound": "Nenhum modelo encontrado correspondendo à sua pesquisa.",
+      "viewTemplate": "Ver modelo"
+    },
+    "tools": {
+      "input": "ENTRADA",
+      "output": "SAÍDA",
+      "code": "CÓDIGO",
+      "preview": "VISUALIZAÇÃO",
+      "yourHandwrittenNotes": "Suas anotações escritas à mão",
+      "cleanLatexCode": "Código LaTeX limpo",
+      "uploadImageDescription": "Envie qualquer imagem contendo expressões matemáticas",
+      "readyToCopy": "Pronto para copiar em qualquer editor LaTeX",
+      "editLatexCode": "Edite seu código LaTeX aqui",
+      "livePreview": "Visualização ao vivo do seu documento",
+      "previewWillAppear": "A visualização aparecerá aqui...",
+      "generatedCodeWillAppear": "O código gerado aparecerá aqui...",
+      "compilingLatex": "Compilando LaTeX...",
+      "generatingPreview": "Gerando visualização...",
+      "aiThinking": "O modelo de IA está pensando …",
+      "giveItAMoment": "Dê um momento para criar seu diagrama TikZ.",
+      "codeStreaming": "Aguarde enquanto o código é transmitido.",
+      "generatingPgfplots": "Gerando código pgfplots...",
+      "onlyCsvFiles": "Apenas arquivos CSV são suportados para esta ferramenta.",
+      "onlyImageFiles": "Apenas arquivos de imagem (JPEG, PNG) e arquivos PDF são suportados.",
+      "failedToProcess": "Falha ao processar a imagem. Por favor, tente novamente.",
+      "failedToCompile": "Falha ao compilar LaTeX.",
+      "failedToGenerate": "Falha ao gerar citação. Por favor, tente novamente.",
+      "conversionFailed": "Falha na conversão",
+      "exportAsLatex": "Exportar como LaTeX",
+      "exportAsPdf": "Exportar como PDF",
+      "exportAsImage": "Exportar como imagem",
+      "readyToUseInLatex": "Pronto para usar em seus documentos LaTeX",
+      "dropFileHere": "Solte seu arquivo aqui",
+      "orBrowseFiles": "ou procurar arquivos",
+      "processing": "Processando...",
+      "convertingToLatex": "Convertendo para LaTeX...",
+      "converting": "Convertendo...",
+      "outputWillAppear": "A saída aparecerá aqui...",
+      "codeTab": "Código",
+      "previewTab": "Visualização"
+    },
+    "toolsSpecific": {
+      "mathToLatex": {
+        "title": "Matemática para LaTeX",
+        "subtitle": "Converta matemática digitada em LaTeX limpo.",
+        "inputLabel": "Entrada matemática",
+        "inputPlaceholder": "ex. integral de 0 a 1 de x^2 dx",
+        "convert": "Converter",
+        "clear": "Limpar",
+        "outputLabel": "Saída LaTeX",
+        "copy": "Copiar",
+        "copied": "Copiado!"
+      },
+      "imageToLatex": {
+        "title": "Imagem para LaTeX",
+        "description": "Converta imagens de matemática escrita à mão e equações para código LaTeX limpo"
+      },
+      "tikzGenerator": {
+        "title": "Gerador de diagramas TikZ",
+        "subtitle": "Descreva seu diagrama e deixe a IA gerar código TikZ",
+        "inputLabel": "Descrição do diagrama",
+        "inputHint": "Descreva o diagrama que você quer criar",
+        "placeholder": "Exemplo: Desenhe um fluxograma simples com 3 nós conectados por setas. O primeiro nó deve dizer 'Início', o segundo 'Processo' e o terceiro 'Fim'.",
+        "generateTikz": "Gerar TikZ",
+        "generating": "Gerando...",
+        "aiModelThinking": "O modelo de IA está pensando …",
+        "giveItAMoment": "Dê um momento para criar seu diagrama TikZ.",
+        "hangTight": "Aguarde enquanto o código chega.",
+        "outputLabel": "Código TikZ gerado",
+        "readyToUse": "Pronto para usar em seus documentos LaTeX",
+        "generatedCodeWillAppear": "O código gerado aparecerá aqui...",
+        "failedToGenerate": "Falha ao gerar TikZ. Por favor, tente novamente.",
+        "failedToCompile": "Falha ao compilar o documento TikZ."
+      },
+      "pgfplotsGenerator": {
+        "title": "Gerador Pgfplots",
+        "subtitle": "Descreva seu gráfico e deixe a IA gerar código pgfplots",
+        "inputLabel": "Descrição do gráfico",
+        "inputHint": "Descreva o gráfico que você quer criar",
+        "placeholder": "Exemplo: Crie um gráfico de linhas mostrando y = x^2 de x = -5 a x = 5, com uma linha azul e grade. Adicione rótulos de eixos.",
+        "generatePlot": "Gerar gráfico",
+        "generating": "Gerando...",
+        "generatingPgfplotsCode": "Gerando código pgfplots...",
+        "outputLabel": "Código Pgfplots gerado",
+        "readyToUse": "Pronto para usar em seus documentos LaTeX",
+        "generatedCodeWillAppear": "O código gerado aparecerá aqui...",
+        "failedToGenerate": "Falha ao gerar pgfplots. Por favor, tente novamente."
+      },
+      "mermaidToLatex": {
+        "title": "Conversor Mermaid para LaTeX",
+        "subtitle": "Converta diagramas Mermaid em código LaTeX",
+        "inputLabel": "Código Mermaid",
+        "inputHint": "Cole sua sintaxe de diagrama Mermaid aqui",
+        "convertToLatex": "Converter para LaTeX",
+        "converting": "Convertendo...",
+        "convertingToLatex": "Convertendo para LaTeX...",
+        "outputLabel": "Código LaTeX",
+        "readyToUse": "Pronto para usar em seus documentos LaTeX",
+        "convertedLatexWillAppear": "O LaTeX convertido aparecerá aqui...",
+        "failedToConvert": "Falha ao converter Mermaid. Por favor, tente novamente."
+      },
+      "citationGenerator": {
+        "title": "Gerador de citações LaTeX",
+        "subtitle": "Gere citações BibTeX a partir de detalhes de artigos, DOI ou URL",
+        "citationDetailsLabel": "Detalhes da citação",
+        "citationDetailsHint": "Digite os detalhes do artigo, DOI ou URL",
+        "placeholder": "Digite os detalhes da citação...",
+        "generateBibtex": "Gerar BibTeX",
+        "generating": "Gerando...",
+        "generatingBibtex": "Gerando BibTeX...",
+        "outputLabel": "Código BibTeX",
+        "readyToAdd": "Pronto para adicionar ao seu arquivo .bib",
+        "bibtexWillAppear": "A citação BibTeX aparecerá aqui...",
+        "failedToGenerate": "Falha ao gerar citação. Por favor, tente novamente.",
+        "exportAsBib": "Exportar como .bib"
+      },
+      "latexPreview": {
+        "title": "Visualização LaTeX",
+        "subtitle": "Editor LaTeX ao vivo com visualização PDF instantânea",
+        "codeLabel": "Editor LaTeX",
+        "codeHint": "Edite seu código LaTeX aqui",
+        "previewLabel": "Saída PDF",
+        "previewHint": "Visualização ao vivo do seu documento",
+        "compiling": "Compilando...",
+        "compilingLatex": "Compilando LaTeX..."
+      },
+      "aiLatexGenerator": {
+        "title": "Gerador LaTeX com IA",
+        "subtitle": "Descreva o que você quer e deixe a IA gerar código LaTeX",
+        "descriptionLabel": "Sua descrição",
+        "descriptionHint": "Descreva o documento ou conteúdo que você precisa",
+        "placeholder": "Exemplo: Crie uma apresentação beamer com 5 slides sobre aprendizado de máquina...",
+        "generateLatex": "Gerar LaTeX",
+        "generating": "Gerando...",
+        "generatingLatexCode": "Gerando código LaTeX...",
+        "outputLabel": "Código LaTeX gerado",
+        "readyToUse": "Pronto para usar em seus documentos LaTeX",
+        "generatedLatexWillAppear": "O LaTeX gerado aparecerá aqui...",
+        "failedToGenerate": "Falha ao gerar LaTeX. Por favor, tente novamente."
+      },
+      "htmlToLatex": {
+        "title": "Conversor HTML para LaTeX",
+        "subtitle": "Converta marcação HTML em código LaTeX limpo",
+        "inputLabel": "Código HTML",
+        "inputHint": "Cole sua marcação HTML aqui",
+        "convertToLatex": "Converter para LaTeX",
+        "converting": "Convertendo...",
+        "convertingToLatex": "Convertendo para LaTeX...",
+        "outputLabel": "Código LaTeX",
+        "readyToUse": "Pronto para usar em seus documentos LaTeX",
+        "convertedLatexWillAppear": "O LaTeX convertido aparecerá aqui...",
+        "failedToConvert": "Falha ao converter HTML. Por favor, tente novamente."
+      },
+      "markdownToLatex": {
+        "title": "Conversor Markdown para LaTeX",
+        "subtitle": "Converta documentos Markdown em código LaTeX limpo",
+        "inputLabel": "Conteúdo Markdown",
+        "inputHint": "Cole seu texto Markdown aqui",
+        "convertToLatex": "Converter para LaTeX",
+        "converting": "Convertendo...",
+        "convertingToLatex": "Convertendo para LaTeX...",
+        "outputLabel": "Código LaTeX",
+        "readyToUse": "Pronto para usar em seus documentos LaTeX",
+        "convertedLatexWillAppear": "O LaTeX convertido aparecerá aqui...",
+        "failedToConvert": "Falha ao converter Markdown. Por favor, tente novamente."
+      },
+      "mathmlToLatex": {
+        "title": "Conversor MathML para LaTeX",
+        "subtitle": "Converta marcação MathML em código LaTeX limpo",
+        "inputLabel": "Código MathML",
+        "inputHint": "Cole sua marcação MathML aqui",
+        "convertToLatex": "Converter para LaTeX",
+        "converting": "Convertendo...",
+        "convertingToLatex": "Convertendo para LaTeX...",
+        "outputLabel": "Código LaTeX",
+        "readyToUse": "Pronto para usar em seus documentos LaTeX",
+        "convertedLatexWillAppear": "O LaTeX convertido aparecerá aqui...",
+        "failedToConvert": "Falha ao converter MathML. Por favor, tente novamente."
+      },
+      "latexToMarkdown": {
+        "title": "Conversor LaTeX para Markdown",
+        "subtitle": "Converta documentos ou trechos LaTeX em Markdown limpo",
+        "inputLabel": "Conteúdo LaTeX",
+        "inputHint": "Cole seu código LaTeX aqui",
+        "convertToMarkdown": "Converter para Markdown",
+        "converting": "Convertendo...",
+        "convertingToMarkdown": "Convertendo para Markdown...",
+        "outputLabel": "Markdown",
+        "readyToUse": "Pronto para usar em seus arquivos Markdown",
+        "convertedMarkdownWillAppear": "O Markdown convertido aparecerá aqui...",
+        "failedToConvert": "Falha ao converter LaTeX. Por favor, tente novamente.",
+        "exportAsMarkdown": "Exportar como Markdown"
+      },
+      "latexWordCounter": {
+        "title": "Contador de palavras LaTeX",
+        "subtitle": "Conte palavras em seus documentos LaTeX com precisão",
+        "inputLabel": "Documento LaTeX",
+        "inputHint": "Cole ou digite seu código LaTeX",
+        "resultsLabel": "Contagem de palavras",
+        "resultsHint": "Estatísticas de palavras ao vivo",
+        "counting": "Contando...",
+        "countingWords": "Contando palavras...",
+        "totalWords": "Total de palavras",
+        "breakdown": "Detalhamento",
+        "textBody": "Corpo do texto",
+        "headers": "Cabeçalhos",
+        "captions": "Legendas",
+        "processedIn": "Processado em",
+        "enterLatexToCount": "Digite LaTeX para contar palavras",
+        "failedToCount": "Falha ao contar palavras"
+      },
+      "tableToLatex": {
+        "title": "Conversor CSV para LaTeX",
+        "subtitle": "Faça upload de um arquivo .csv e obtenha instantaneamente código de tabela LaTeX limpo.",
+        "inputLabel": "Fazer upload de arquivo CSV",
+        "outputLabel": "Saída de tabela LaTeX"
+      },
+      "pdfToLatex": {
+        "title": "Conversor PDF para LaTeX",
+        "subtitle": "Converta documentos PDF com matemática e equações em código LaTeX limpo",
+        "inputLabel": "Seu documento PDF",
+        "outputLabel": "Código LaTeX limpo"
+      },
+      "equationToLatex": {
+        "title": "Conversor de equação para LaTeX",
+        "subtitle": "Converta expressões matemáticas para LaTeX a partir de descrições de texto ou imagens",
+        "inputLabel": "Descrição da equação ou imagem",
+        "inputHint": "Descreva sua equação em texto simples ou faça upload de uma imagem",
+        "placeholder": "Exemplo: fórmula quadrática, integral de x ao quadrado de 0 a 1, soma de n de 1 ao infinito de 1 sobre n ao quadrado...",
+        "placeholderWithImage": "Entrada de texto desabilitada enquanto a imagem é carregada",
+        "imageUploaded": "Imagem carregada, entrada de texto desabilitada",
+        "dropImageHere": "Solte sua imagem de equação aqui",
+        "orBrowseFiles": "ou navegar arquivos",
+        "fileFormats": "JPEG, PNG, GIF, WebP",
+        "convertToLatex": "Converter para LaTeX",
+        "converting": "Convertendo...",
+        "convertingToLatex": "Convertendo para LaTeX...",
+        "outputLabel": "LaTeX gerado",
+        "readyToUse": "Pronto para usar em seus documentos LaTeX",
+        "generatedLatexWillAppear": "O LaTeX gerado aparecerá aqui...",
+        "pleaseEnterEquation": "Por favor, digite uma descrição de equação ou faça upload de uma imagem",
+        "equationTooLong": "A descrição da equação deve ter 2000 caracteres ou menos",
+        "failedToConvert": "Falha ao converter a equação. Por favor, tente novamente."
+      },
+      "imageToTikz": {
+        "title": "Conversor de imagem para TikZ",
+        "subtitle": "Faça upload de um diagrama ou imagem e converta em código TikZ editável",
+        "inputLabel": "Fazer upload de imagem",
+        "inputHint": "Faça upload de um diagrama, fluxograma ou forma para converter",
+        "dropFileHere": "Solte seu arquivo aqui",
+        "orBrowseFiles": "ou navegar arquivos",
+        "fileFormats": "JPEG, PNG, GIF, WebP",
+        "processing": "Processando...",
+        "analyzingImage": "Analisando sua imagem...",
+        "analyzingImageSubtext": "Convertendo formas e elementos em código TikZ.",
+        "analyzingImageStatus": "Analisando imagem...",
+        "analyzingImageStatusSubtext": "Aguarde enquanto o código chega.",
+        "converting": "Convertendo...",
+        "outputLabel": "Código TikZ gerado",
+        "readyToUse": "Pronto para usar em seus documentos LaTeX",
+        "generatedCodeWillAppear": "O código gerado aparecerá aqui...",
+        "failedToConvert": "Falha ao converter imagem para TikZ. Por favor, tente novamente.",
+        "pleaseUploadImage": "Por favor, faça upload de um arquivo de imagem (PNG, JPEG, GIF, WebP)",
+        "imageSizeTooLarge": "O tamanho da imagem deve ser menor que 20MB",
+        "removeImage": "Remover imagem"
+      }
+    },
+    "categories": {
+      "academic": "Acadêmico",
+      "professional": "Profissional",
+      "creative": "Criativo",
+      "business": "Negócios",
+      "education": "Educação",
+      "presentations": "Apresentações",
+      "resumeCv": "Currículo",
+      "math": "Matemática",
+      "reports": "Relatórios",
+      "letters": "Cartas",
+      "other": "Outro"
+    },
+    "toolsList": {
+      "imageToLatex": {
+        "title": "Imagem para LaTeX",
+        "description": "Converta imagens para o formato LaTeX"
+      },
+      "tableToLatex": {
+        "title": "Excel para LaTeX",
+        "description": "Converta CSV, JSON, Excel para tabelas LaTeX"
+      },
+      "tikzGenerator": {
+        "title": "Gerador TikZ",
+        "description": "Gere diagramas TikZ com IA"
+      },
+      "imageToTikz": {
+        "title": "Imagem para TikZ",
+        "description": "Converta imagens em diagramas TikZ com IA"
+      },
+      "latexPreview": {
+        "title": "Pré-visualização LaTeX",
+        "description": "Editor LaTeX ao vivo com pré-visualização PDF"
+      },
+      "markdownToLatex": {
+        "title": "Markdown para LaTeX",
+        "description": "Converta documentos Markdown para o formato LaTeX"
+      },
+      "citationGenerator": {
+        "title": "Gerador de Citações",
+        "description": "Gere citações BibTeX a partir de DOIs ou detalhes de artigos"
+      },
+      "mathmlToLatex": {
+        "title": "MathML para LaTeX",
+        "description": "Converta marcação MathML para o formato LaTeX"
+      },
+      "aiLatexGenerator": {
+        "title": "Gerador LaTeX IA",
+        "description": "Gere código LaTeX a partir de descrições de texto"
+      },
+      "htmlToLatex": {
+        "title": "HTML para LaTeX",
+        "description": "Converta marcação HTML para o formato LaTeX"
+      },
+      "mermaidToLatex": {
+        "title": "Mermaid para LaTeX",
+        "description": "Converta diagramas Mermaid para o formato LaTeX"
+      },
+      "pgfplotsGenerator": {
+        "title": "Gerador Pgfplots",
+        "description": "Gere gráficos e diagramas pgfplots com IA"
+      },
+      "latexToMarkdown": {
+        "title": "LaTeX para Markdown",
+        "description": "Converta documentos ou trechos LaTeX para Markdown"
+      },
+      "equationToLatex": {
+        "title": "Equação para LaTeX",
+        "description": "Converta equações matemáticas de texto ou imagens para LaTeX"
+      },
+      "pdfToLatex": {
+        "title": "PDF para LaTeX",
+        "description": "Converta documentos PDF com conteúdo matemático para LaTeX"
+      },
+      "latexWordCounter": {
+        "title": "Contador de Palavras LaTeX",
+        "description": "Conte palavras em documentos LaTeX com precisão"
+      },
+      "arxivToLatex": {
+        "title": "ArXiv para LaTeX",
+        "description": "Importe artigos ArXiv diretamente no Octree"
+      }
+    },
+    "templatesList": {
+      "research-paper": { "title": "Artigo de pesquisa", "description": "Modelo de artigo de pesquisa estilo IEEE" },
+      "beamer-presentation": { "title": "Apresentação Beamer", "description": "Slides de apresentação acadêmica" },
+      "academic-cv": { "title": "CV acadêmico", "description": "Currículo acadêmico profissional" },
+      "mathematical-document": { "title": "Documento matemático", "description": "Documento com muitos teoremas matemáticos" },
+      "lab-report": { "title": "Relatório de laboratório", "description": "Modelo de relatório de laboratório científico" },
+      "book-chapter": { "title": "Capítulo de livro", "description": "Modelo de capítulo de livro ou tese" },
+      "resume": { "title": "Currículo", "description": "Modelo de currículo profissional" },
+      "grading-rubric": { "title": "Rúbrica de avaliação", "description": "Modelo de critérios de avaliação e classificação" },
+      "assignment": { "title": "Tarefa", "description": "Modelo de tarefa e dever de casa" },
+      "worksheet": { "title": "Folha de exercícios", "description": "Modelo de problemas práticos e exercícios" },
+      "homework": { "title": "Modelo de dever de casa", "description": "Tarefa estruturada" },
+      "poster": { "title": "Pôster de pesquisa", "description": "Modelo de pôster para conferência acadêmica" },
+      "thesis": { "title": "Tese de doutorado", "description": "Modelo de tese completo com capítulos" },
+      "letter": { "title": "Carta formal", "description": "Modelo de carta comercial profissional" },
+      "algorithm": { "title": "Pseudocódigo de algoritmo", "description": "Documentação de algoritmo com pseudocódigo" },
+      "cover-letter": { "title": "Carta de apresentação", "description": "Carta de apresentação acadêmica e profissional" },
+      "journal-article": { "title": "Artigo de revista", "description": "Modelo de artigo de revista acadêmica com seções" },
+      "syllabus": { "title": "Programa do curso", "description": "Modelo de programa de curso completo" },
+      "research-proposal": { "title": "Proposta de pesquisa", "description": "Modelo de proposta de pesquisa e subsídio" },
+      "essay": { "title": "Ensaio acadêmico", "description": "Ensaio estruturado com argumentação e análise" },
+      "research-statement": { "title": "Declaração de pesquisa", "description": "Declaração de pesquisa acadêmica para candidaturas" },
+      "dissertation": { "title": "Dissertação", "description": "Modelo de dissertação de doutorado completo" },
+      "white-paper": { "title": "Livro branco", "description": "Modelo de livro branco profissional" },
+      "leaflet": { "title": "Folheto/Brochura", "description": "Modelo de folheto de marketing profissional" },
+      "technical-report": { "title": "Relatório técnico", "description": "Modelo de relatório de pesquisa técnica" },
+      "math-exercises": { "title": "Exercícios de matemática", "description": "Problemas práticos e exercícios de matemática" },
+      "math-notes": { "title": "Notas de matemática", "description": "Notas de aula estruturadas para cursos de matemática" },
+      "math-exam": { "title": "Exame de matemática", "description": "Modelo de exame de matemática formal" },
+      "math-problem-set": { "title": "Conjunto de problemas de matemática", "description": "Tarefas semanais de conjuntos de problemas de matemática" },
+      "math-cheat-sheet": { "title": "Folha de referência de matemática", "description": "Folha de referência compacta para fórmulas e teoremas" },
+      "lecture-notes": { "title": "Notas de aula", "description": "Modelo de notas de aula acadêmicas limpas" },
+      "quiz-template": { "title": "Modelo de questionário", "description": "Modelo de questionário ou teste curto" },
+      "formula-sheet": { "title": "Folha de fórmulas", "description": "Folha de referência para fórmulas importantes" },
+      "project-report": { "title": "Relatório de projeto", "description": "Relatório de projeto profissional com capítulos e seções" },
+      "article-template": { "title": "Modelo de artigo", "description": "Artigo científico com resumo e seções" },
+      "statement-of-purpose": { "title": "Declaração de propósito", "description": "Modelo de declaração de propósito para candidatura de pós-graduação" },
+      "literature-review": { "title": "Revisão de literatura", "description": "Revisão de literatura acadêmica com citações" },
+      "meeting-minutes": { "title": "Ata de reunião", "description": "Modelo de ata e notas de reunião profissional" },
+      "certificate": { "title": "Certificado", "description": "Modelo de certificado de prêmio ou conclusão" },
+      "invoice": { "title": "Fatura", "description": "Modelo de fatura profissional para serviços ou produtos" },
+      "grant-proposal": { "title": "Proposta de subsídio", "description": "Modelo de proposta de subsídio de pesquisa" },
+      "letter-of-recommendation": { "title": "Carta de recomendação", "description": "Modelo de carta de recomendação profissional" },
+      "motivation-letter": { "title": "Carta de motivação", "description": "Modelo de carta de motivação acadêmica ou profissional" },
+      "business-plan": { "title": "Plano de negócios", "description": "Modelo de plano de negócios profissional" },
+      "business-report": { "title": "Relatório empresarial", "description": "Modelo de relatório empresarial corporativo" },
+      "scientific-report": { "title": "Relatório científico", "description": "Modelo de relatório de pesquisa científica" },
+      "internship-report": { "title": "Relatório de estágio", "description": "Modelo de relatório de estágio estudantil" },
+      "newsletter": { "title": "Boletim informativo", "description": "Modelo de boletim informativo profissional" },
+      "questionnaire": { "title": "Questionário", "description": "Modelo de pesquisa e questionário de pesquisa" },
+      "table-template": { "title": "Modelo de tabela", "description": "Layouts e formatação de tabelas profissionais" },
+      "bibliography": { "title": "Bibliografia", "description": "Modelo de bibliografia e referências independente" },
+      "memo": { "title": "Memorando", "description": "Modelo de memorando comercial profissional" },
+      "manuscript": { "title": "Manuscrito", "description": "Modelo de manuscrito de livro para romances e não ficção" },
+      "recipe-book": { "title": "Livro de receitas", "description": "Modelo de livro de receitas e coleção de receitas" },
+      "flyer": { "title": "Panfleto", "description": "Modelo de panfleto de marketing e promocional de uma página" },
+      "business-card": { "title": "Cartão de visita", "description": "Modelo de cartão de visita profissional" },
+      "calendar": { "title": "Calendário", "description": "Modelo de calendário mensal e anual" },
+      "neurips-2026": { "title": "NeurIPS 2026", "description": "Modelo de artigo para conferência NeurIPS 2026 com limite de 9 páginas" },
+      "icml-2026": { "title": "ICML 2026", "description": "Modelo de artigo para conferência ICML 2026 com formato de duas colunas" },
+      "iclr-2026": { "title": "ICLR 2026", "description": "Modelo de artigo para conferência ICLR 2026 com declaração de reprodutibilidade" },
+      "cvpr-2026": { "title": "CVPR 2026", "description": "Modelo de artigo para conferência CVPR 2026 de visão computacional" },
+      "aaai-2026": { "title": "AAAI 2026", "description": "Modelo de artigo para conferência AAAI 2026 com limite de 7 páginas" },
+      "obituary": { "title": "Obituário", "description": "Elegante modelo de obituário memorial com borda decorativa" },
+      "eccv-2026": { "title": "ECCV 2026", "description": "Modelo de artigo para conferência europeia ECCV 2026 de visão computacional" },
+      "icra-2026": { "title": "ICRA 2026", "description": "Modelo de artigo para conferência IEEE ICRA 2026 de robótica" },
+      "acm-chi-2026": { "title": "ACM CHI 2026", "description": "Modelo oficial de submissão ACM CHI 2026 em formato de uma coluna" },
+      "www-2026": { "title": "WWW 2026", "description": "Modelo da conferência web (WWW) 2026 com seção de relevância obrigatória" },
+      "acl-2026": { "title": "ACL 2026", "description": "Modelo de artigo para conferência ACL 2026 de processamento de linguagem natural" },
+      "interspeech-2026": { "title": "Interspeech 2026", "description": "Modelo de artigo para conferência Interspeech 2026 de processamento de fala" },
+      "interactive-flashcard": { "title": "Cartão Interativo / Quiz Oculto", "description": "Guia de estudo com respostas ocultas - perfeito para autoavaliação" },
+      "jakes-resume": { "title": "Currículo do Jake", "description": "Modelo de currículo limpo e compatível com ATS" }
+    },
+    "symbols": {
+    "title": "Símbolos LaTeX",
+    "description": "Navegue por operadores matemáticos comuns e letras gregas para seus documentos LaTeX.",
+    "searchPlaceholder": "Pesquisar símbolos...",
+    "searchResults": "Resultados da Pesquisa",
+    "symbolsFound": "{count} símbolo{plural} encontrado{plural}",
+    "noSymbolsFound": "Nenhum símbolo encontrado correspondendo a",
+    "viewSymbols": "Ver Símbolos",
+    "backToSymbols": "Voltar aos Símbolos",
+    "symbolCount": "{count} símbolo",
+    "symbolsCount": "{count} símbolos",
+    "categories": {
+      "math": { "title": "Símbolos Matemáticos", "description": "Operadores matemáticos comuns, relações e setas.", "subtitle": "Operadores Matemáticos Comuns" },
+      "greek": { "title": "Símbolos Gregos", "description": "Lista completa de letras gregas e seus comandos LaTeX.", "subtitle": "Letras Gregas e Variantes" },
+      "arrows": { "title": "Símbolos de Setas", "description": "Setas direcionais, setas duplas e arpões para documentos LaTeX.", "subtitle": "Setas Direcionais e Duplas" },
+      "latin": { "title": "Letras Latinas", "description": "Caracteres acentuados e letras latinas especiais para vários idiomas.", "subtitle": "Caracteres Acentuados e Letras Especiais" },
+      "setTheory": { "title": "Teoria dos Conjuntos", "description": "Conjuntos, subconjuntos, uniões, interseções e conjuntos numéricos.", "subtitle": "Conjuntos, Subconjuntos e Operações" },
+      "logic": { "title": "Lógica e Provas", "description": "Quantificadores, conectivos lógicos e notação de prova.", "subtitle": "Conectivos Lógicos e Notação de Prova" },
+      "linearAlgebra": { "title": "Álgebra Linear", "description": "Vetores, matrizes, transpostas e produtos internos.", "subtitle": "Vetores, Matrizes e Operações" },
+      "calculus": { "title": "Cálculo e Análise", "description": "Derivadas, integrais, limites e operadores diferenciais.", "subtitle": "Derivadas, Integrais e Limites" },
+      "probability": { "title": "Probabilidade e Estatística", "description": "Probabilidade, esperança, variância e distribuições.", "subtitle": "Notação de Probabilidade e Estatística" },
+      "computerScience": { "title": "Ciência da Computação", "description": "Notação Big-O, operadores lógicos e símbolos de algoritmos.", "subtitle": "Notação Big-O e Algoritmos" },
+      "numberTheory": { "title": "Teoria dos Números", "description": "Divisibilidade, aritmética modular e funções teóricas dos números.", "subtitle": "Divisibilidade e Aritmética Modular" },
+      "physics": { "title": "Física", "description": "Mecânica quântica, campos vetoriais e constantes físicas.", "subtitle": "Mecânica Quântica e Constantes Físicas" },
+      "chemistry": { "title": "Química", "description": "Setas de reação, isótopos, ligações e símbolos de estado.", "subtitle": "Setas de Reação e Notação Química" },
+      "finance": { "title": "Moeda e Finanças", "description": "Símbolos de moeda, fórmulas financeiras e notação.", "subtitle": "Notação de Moeda e Finanças" },
+      "brackets": { "title": "Colchetes e Delimitadores", "description": "Colchetes angulares, piso, teto, normas e pares de delimitadores.", "subtitle": "Colchetes, Piso, Teto e Normas" },
+      "accents": { "title": "Acentos e Modificadores", "description": "Chapéus, tils, pontos, barras, vetores e decorações de texto.", "subtitle": "Chapéus, Tils, Pontos e Decorações" },
+      "geometry": { "title": "Geometria", "description": "Ângulos, triângulos, paralelo, perpendicular e congruência.", "subtitle": "Ângulos, Triângulos e Relações Geométricas" },
+      "topology": { "title": "Topologia e Matemática Abstrata", "description": "Aleph, fronteira, homologia e notação de teoria das categorias.", "subtitle": "Notação Topológica e de Teoria das Categorias" },
+      "machineLearning": { "title": "Aprendizado de Máquina e IA", "description": "Funções de perda, gradientes, argmax, divergência KL e notação de redes neurais.", "subtitle": "Funções de Perda e Notação de Redes Neurais" },
+      "relations": { "title": "Relações e Comparações", "description": "Desigualdade, equivalência, subconjunto, superconjunto e símbolos de comparação.", "subtitle": "Símbolos de Desigualdade e Equivalência" },
+      "operators": { "title": "Operadores Avançados", "description": "Operadores binários, produtos tensoriais, somas diretas e composições.", "subtitle": "Operadores Binários e Composições" },
+      "summation": { "title": "Somatório e Produto", "description": "Notação sigma, símbolos de produto e limites indexados.", "subtitle": "Notação Sigma e de Produto" },
+      "functions": { "title": "Funções e Mapeamento", "description": "Notação de função, mapas, composição e domínio/contradomínio.", "subtitle": "Notação de Função e Composição" },
+      "order": { "title": "Desigualdades e Ordem", "description": "Precede, sucede, mín, máx, ínf, sup e limites.", "subtitle": "Notação de Ordem e Limites" },
+      "boolean": { "title": "Álgebra Booleana", "description": "Portas lógicas, AND, OR, NOT, XOR, NAND e operações booleanas.", "subtitle": "Portas Lógicas e Operações Booleanas" },
+      "optimization": { "title": "Otimização", "description": "Argmax, argmin, restrições, Lagrangiano e condições KKT.", "subtitle": "Notação de Otimização e Restrições" },
+      "units": { "title": "Unidades e Medidas", "description": "Graus, unidades SI, constantes físicas e símbolos de medição.", "subtitle": "Unidades SI e Símbolos de Medição" },
+      "quantifiers": { "title": "Quantificadores", "description": "Para todo, existe, elemento de e notação de construtor de conjunto.", "subtitle": "Quantificadores Universais e Existenciais" },
+      "graphTheory": { "title": "Teoria dos Grafos", "description": "Vértices, arestas, adjacência, caminhos, ciclos e números cromáticos.", "subtitle": "Vértices, Arestas e Notação de Grafos" },
+      "combinatorics": { "title": "Combinatória", "description": "Fatoriais, binômios, permutações, combinações e contagem.", "subtitle": "Fatoriais, Permutações e Combinações" },
+      "specialFunctions": { "title": "Funções Especiais", "description": "Funções gama, zeta, Bessel, Legendre e de erro.", "subtitle": "Funções Gama, Zeta e Especiais" },
+      "complex": { "title": "Números Complexos", "description": "Unidade imaginária, conjugado, módulo, argumento e forma polar.", "subtitle": "Notação de Números Complexos" },
+      "trigonometry": { "title": "Trigonometria", "description": "Seno, cosseno, tangente, funções trigonométricas inversas e hiperbólicas.", "subtitle": "Funções Trigonométricas e Hiperbólicas" },
+      "differentialGeometry": { "title": "Geometria Diferencial", "description": "Variedades, curvatura, símbolos de Christoffel e tensores de Riemann.", "subtitle": "Variedades e Notação de Curvatura" },
+      "tensors": { "title": "Notação Tensorial", "description": "Soma de Einstein, índices, contrações e derivadas covariantes.", "subtitle": "Soma de Einstein e Índices Tensoriais" },
+      "modalLogic": { "title": "Lógica Modal", "description": "Necessidade, possibilidade, lógica temporal e semântica de Kripke.", "subtitle": "Operadores de Necessidade e Possibilidade" },
+      "gameTheory": { "title": "Teoria dos Jogos", "description": "Equilíbrio de Nash, estratégias, pagamentos e valores de Shapley.", "subtitle": "Equilíbrio de Nash e Notação Estratégica" }
+    }
   },
   "nav": {
-    "tools": "Tools",
-    "getStarted": "Get Started",
-    "menu": "Menu"
-  },
-  "footer": {
-    "tagline": "Free online tools for everyone.",
-    "menu": "Menu",
-    "tools": "Tools",
-    "allRightsReserved": "All rights reserved.",
-    "viewAllTools": "View all tools →",
-    "socials": "Socials"
-  },
-  "cta": {
-    "title": "Get Started Today",
-    "description": "Try our tools for free.",
-    "getStarted": "Get Started",
-    "learnMore": "Learn More"
-  },
-  "metadata": {
-    "site": {
-      "title": "Free Online Tools",
-      "description": "Free online tools to help you get things done faster.",
-      "keywords": "free tools, online tools, calculator, generator, converter, checker"
+      "tools": "Ferramentas",
+      "templates": "Modelos",
+      "symbols": "Símbolos",
+      "getStarted": "Começar",
+      "menu": "Menu"
+    },
+    "footer": {
+      "tagline": "Ferramentas e modelos LaTeX gratuitos para todos.",
+      "menu": "Menu",
+      "tools": "Ferramentas",
+      "allRightsReserved": "Todos os direitos reservados.",
+      "imageToLatex": "Imagem para LaTeX",
+      "excelToLatex": "Excel para LaTeX",
+      "tikzGenerator": "Gerador TikZ",
+      "imageToTikz": "Imagem para TikZ",
+      "latexPreview": "Visualização LaTeX",
+      "markdownToLatex": "Markdown para LaTeX",
+      "citationGenerator": "Gerador de Citações",
+      "aiLatexGenerator": "Gerador LaTeX com IA",
+      "learn": "Aprender",
+      "learnLatex": "Aprender LaTeX",
+      "learnTikz": "Aprender TikZ",
+      "learnPgfplots": "Aprender PGFPlots",
+      "viewAllTutorials": "Ver todos os tutoriais →",
+      "openSource": "Código Aberto",
+      "octreeEditor": "Editor Octree",
+      "toolsTemplates": "Ferramentas e Modelos",
+      "marketingBlogs": "Marketing e Blogs",
+      "viewAllRepositories": "Ver todos os repositórios →",
+      "socials": "Redes Sociais",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "tiktok": "TikTok",
+      "x": "X",
+      "reddit": "Reddit",
+      "discord": "Discord",
+      "greekLetters": "Letras Gregas",
+      "mathOperators": "Operadores Matemáticos",
+      "arrows": "Setas",
+      "relations": "Relações",
+      "setTheory": "Teoria dos Conjuntos",
+      "calculus": "Cálculo",
+      "logic": "Lógica",
+      "linearAlgebra": "Álgebra Linear",
+      "browseAllCategories": "Ver todas as 37 categorias →",
+      "researchPaper": "Artigo de Pesquisa",
+      "phdThesis": "Tese de Doutorado",
+      "beamerPresentation": "Apresentação Beamer",
+      "academicCv": "CV Acadêmico",
+      "coverLetter": "Carta de Apresentação",
+      "labReport": "Relatório de Laboratório",
+      "neurips2026": "NeurIPS 2026",
+      "icml2026": "ICML 2026",
+      "viewAllTemplates": "Ver todos os 71 modelos →",
+      "viewAllTools": "Ver todas as ferramentas →"
+    },
+    "cta": {
+      "badge": "Escreva LaTeX usando IA",
+      "title": "O Melhor Editor LaTeX com IA, Alternativa ao Overleaf",
+      "description": "Octree ajuda pesquisadores de mais de 15 universidades a escrever artigos de pesquisa mais rápido usando IA",
+      "feature1": "Gere belos diagramas TikZ usando IA",
+      "feature2": "Carregue uma imagem e converta para LaTeX facilmente",
+      "feature3": "Obtenha assistência instantânea para escrever e formatar artigos de pesquisa",
+      "useInOctree": "Usar no Octree",
+      "learnMore": "Saiba Mais"
+    },
+    "metadata": {
+      "site": {
+        "title": "Ferramentas LaTeX Grátis - Converter Imagem para LaTeX, 60+ Modelos, Visualização PDF | Octree",
+        "description": "Ferramentas LaTeX gratuitas: conversor de equações matemáticas com IA, 60+ modelos profissionais (currículo, CV, tese, beamer), visualização PDF ao vivo. Converta matemática escrita à mão, imagens e PDFs para LaTeX instantaneamente.",
+        "keywords": "converter matemática escrita à mão para LaTeX, conversor imagem para LaTeX, conversor PDF para LaTeX, equação matemática para LaTeX, conversor matemática LaTeX, conversor LaTeX grátis, gerador LaTeX com IA, gerador de citações LaTeX, gerador TikZ, modelos LaTeX grátis, modelo currículo LaTeX, modelo CV LaTeX, modelo tese LaTeX, modelo beamer LaTeX, editor LaTeX online, alternativa Overleaf, LaTeX online, compilar LaTeX online, LaTeX para PDF, editor de equações, editor de fórmulas matemáticas, símbolos LaTeX, gerador BibTeX, tabela para LaTeX, Excel para LaTeX, markdown para LaTeX, HTML para LaTeX, MathML para LaTeX, contador de palavras LaTeX, gerador PGFPlots, arXiv LaTeX"
+      },
+      "tools": {
+        "imageToLatex": {
+          "title": "Conversor de Imagem para LaTeX - Ferramenta com IA Grátis",
+          "description": "Converta imagens de equações matemáticas escritas à mão para código LaTeX limpo instantaneamente. Com IA, grátis, sem cadastro necessário.",
+          "keywords": "imagem para LaTeX, foto para LaTeX, fotografia para LaTeX, matemática escrita à mão para LaTeX, escanear matemática para LaTeX, OCR LaTeX, conversor de imagem matemática, captura de tela para LaTeX, OCR matemático, OCR de equação, fórmula para LaTeX, conversor de foto matemática, escrita à mão para LaTeX, escanear equação"
+        },
+        "mathToLatex": {
+          "title": "Conversor de Matemática para LaTeX - Ferramenta Online Grátis",
+          "description": "Converta expressões matemáticas para código LaTeX. Digite ou cole matemática e obtenha saída LaTeX limpa.",
+          "keywords": "matemática para LaTeX, converter matemática para LaTeX, expressão matemática para LaTeX, fórmula para LaTeX, conversor matemático, conversor de equações, notação matemática LaTeX, conversor de expressão matemática"
+        },
+        "equationToLatex": {
+          "title": "Conversor de Equação para LaTeX - Ferramenta Online Grátis",
+          "description": "Converta equações matemáticas para código LaTeX instantaneamente. Digite sua equação e obtenha LaTeX.",
+          "keywords": "equação para LaTeX, converter equação para LaTeX, conversor de equação matemática, editor de equações LaTeX, fórmula para LaTeX, equação matemática LaTeX, notação de equação"
+        },
+        "tikzGenerator": {
+          "title": "Gerador de Diagramas TikZ - Gráficos LaTeX com IA",
+          "description": "Gere diagramas TikZ usando IA. Descreva seu diagrama e obtenha código TikZ LaTeX limpo instantaneamente.",
+          "keywords": "gerador TikZ, TikZ online, exemplos TikZ, fluxograma TikZ, diagrama TikZ, rede neural TikZ, gerador TikZ com IA, gerador de código TikZ, tutorial TikZ, formas TikZ, setas TikZ, gráfico TikZ, árvore TikZ, plot TikZ, PGF TikZ, circuito TikZ, linha do tempo TikZ, diagrama de Venn TikZ"
+        },
+        "imageToTikz": {
+          "title": "Conversor de Imagem para TikZ - Converter Imagens para Gráficos LaTeX",
+          "description": "Converta imagens e diagramas para código TikZ LaTeX usando IA. Envie qualquer imagem e obtenha código TikZ editável.",
+          "keywords": "imagem para TikZ, fotografia para TikZ, converter imagem para TikZ, diagrama para TikZ, foto para código TikZ, conversor TikZ com IA, vetorizar para TikZ, imagem para diagrama LaTeX"
+        },
+        "citationGenerator": {
+          "title": "Gerador de Citações LaTeX - Gerador BibTeX",
+          "description": "Gere citações BibTeX a partir de DOIs, URLs ou detalhes de artigos. Ferramenta de citação LaTeX gratuita.",
+          "keywords": "gerador de citações LaTeX, gerador BibTeX, DOI para BibTeX, gerador de citações, gerador de referências, gerador de bibliografia, gerador de citação, citação APA LaTeX, citação MLA LaTeX, citação Chicago, citação IEEE, referência Harvard LaTeX"
+        },
+        "latexPreview": {
+          "title": "Visualização LaTeX ao Vivo - Editor Online Grátis",
+          "description": "Escreva e visualize documentos LaTeX em tempo real. Editor LaTeX online gratuito com saída PDF instantânea.",
+          "keywords": "visualização LaTeX, editor LaTeX online, visualização LaTeX ao vivo, compilador LaTeX online, LaTeX para PDF, editor LaTeX grátis, alternativa Overleaf, LaTeX online, escrever LaTeX online, renderizador LaTeX, visualizador LaTeX, compilar LaTeX grátis"
+        },
+        "pdfToLatex": {
+          "title": "Conversor PDF para LaTeX - Extrair LaTeX de PDF",
+          "description": "Converta documentos PDF com conteúdo matemático para código LaTeX limpo. Extração com IA.",
+          "keywords": "PDF para LaTeX, converter PDF para LaTeX, extrair LaTeX de PDF, conversor de matemática PDF, extrator de equações PDF, PDF para TeX, OCR PDF para LaTeX, extrator de fórmulas PDF, escanear PDF para LaTeX"
+        },
+        "tableToLatex": {
+          "title": "Conversor de Tabela para LaTeX - Excel para LaTeX",
+          "description": "Converta tabelas do Excel, Google Sheets ou CSV para formato LaTeX. Gerador de tabelas grátis.",
+          "keywords": "tabela para LaTeX, Excel para LaTeX, CSV para LaTeX, planilha para LaTeX, gerador de tabelas LaTeX, tabular LaTeX, criador de tabelas LaTeX, Google Sheets para LaTeX, copiar colar tabela LaTeX, gerador tabular LaTeX"
+        },
+        "markdownToLatex": {
+          "title": "Conversor Markdown para LaTeX - Ferramenta Online Grátis",
+          "description": "Converta arquivos Markdown para código LaTeX limpo. Preserve formatação, links e estrutura.",
+          "keywords": "markdown para LaTeX, converter markdown para LaTeX, md para tex, conversor markdown LaTeX, alternativa pandoc, markdown para PDF LaTeX, markdown para TeX online"
+        },
+        "latexToMarkdown": {
+          "title": "Conversor LaTeX para Markdown - Ferramenta Online Grátis",
+          "description": "Converta documentos LaTeX para formato Markdown. Preserve equações e formatação.",
+          "keywords": "LaTeX para markdown, converter LaTeX para markdown, tex para md, conversor LaTeX para md, LaTeX markdown, TeX para markdown, exportar LaTeX como markdown"
+        },
+        "htmlToLatex": {
+          "title": "Conversor HTML para LaTeX - Ferramenta Online Grátis",
+          "description": "Converta conteúdo HTML para código LaTeX limpo. Perfeito para conversão de web para documento.",
+          "keywords": "HTML para LaTeX, converter HTML para LaTeX, web para LaTeX, HTML para TeX, página web para LaTeX, tabela HTML para LaTeX, converter site para LaTeX"
+        },
+        "mathmlToLatex": {
+          "title": "Conversor MathML para LaTeX - Ferramenta Online Grátis",
+          "description": "Converta equações MathML para código LaTeX. Perfeito para conversão de equações do Word e web.",
+          "keywords": "MathML para LaTeX, converter MathML para LaTeX, equação do Word para LaTeX, conversor MathML, Office math para LaTeX, OMML para LaTeX, matemática do Word para LaTeX"
+        },
+        "mermaidToLatex": {
+          "title": "Conversor Mermaid para LaTeX - Diagramas para TikZ",
+          "description": "Converta diagramas Mermaid para código TikZ LaTeX. Fluxogramas, diagramas de sequência e mais.",
+          "keywords": "Mermaid para LaTeX, Mermaid para TikZ, converter diagrama Mermaid, fluxograma para LaTeX, diagrama de sequência para LaTeX, Mermaid LaTeX, diagrama para TikZ"
+        },
+        "latexWordCounter": {
+          "title": "Contador de Palavras LaTeX - Ferramenta Online Grátis",
+          "description": "Conte palavras em documentos LaTeX excluindo comandos e comentários. Contagem de palavras acadêmica precisa.",
+          "keywords": "contador de palavras LaTeX, contar palavras LaTeX, contagem de palavras TeX, contador de caracteres LaTeX, contador de palavras acadêmico, contagem de palavras tese, contagem de palavras artigo LaTeX, contador de texto LaTeX"
+        },
+        "aiLatexGenerator": {
+          "title": "Gerador LaTeX com IA - Escreva LaTeX com IA",
+          "description": "Gere código LaTeX usando IA. Descreva o que você quer e obtenha LaTeX limpo e compilável.",
+          "keywords": "gerador LaTeX com IA, gerar LaTeX IA, escritor LaTeX IA, ChatGPT LaTeX, gerador de equações IA, IA matemática LaTeX, LaTeX a partir de texto, linguagem natural para LaTeX"
+        },
+        "pgfplotsGenerator": {
+          "title": "Gerador PGFPlots - Criador de Gráficos LaTeX",
+          "description": "Crie gráficos e plots bonitos para LaTeX usando PGFPlots. Gerador de gráficos online grátis.",
+          "keywords": "gerador PGFPlots, PGFPlots online, gráfico LaTeX, plot LaTeX, exemplos PGFPlots, gráfico LaTeX, visualização de dados LaTeX, gráfico de dispersão LaTeX, gráfico de barras LaTeX, gráfico de linhas LaTeX, plot de função LaTeX"
+        },
+        "arxivToLatex": {
+          "title": "arXiv para LaTeX - Baixar Código Fonte arXiv",
+          "description": "Extraia e baixe código fonte LaTeX de artigos arXiv. Obtenha os arquivos TeX originais.",
+          "keywords": "arXiv para LaTeX, código fonte arXiv, baixar LaTeX arXiv, fonte TeX arXiv, fonte de artigo arXiv, extrair LaTeX arXiv, download fonte arXiv"
+        }
+      },
+      "symbols": {
+        "main": {
+          "title": "Símbolos LaTeX - Guia de Referência Completo",
+          "description": "Navegue e copie símbolos LaTeX: letras gregas, operadores matemáticos, setas e mais. Referência completa de símbolos.",
+          "keywords": "símbolos LaTeX, símbolos matemáticos, letras gregas LaTeX, operadores LaTeX, setas LaTeX, referência de símbolos, copiar símbolos LaTeX, caracteres especiais LaTeX, notação matemática LaTeX, folha de consulta LaTeX, todos os símbolos LaTeX"
+        },
+        "math": {
+          "title": "Símbolos Matemáticos LaTeX - Operadores e Relações",
+          "description": "Lista completa de símbolos matemáticos LaTeX. Operadores, relações, equações com código para copiar e colar.",
+          "keywords": "símbolos matemáticos LaTeX, operadores matemáticos, LaTeX mais menos, fração LaTeX, raiz quadrada LaTeX, somatório LaTeX, integral LaTeX, símbolo multiplicar LaTeX, símbolo dividir LaTeX, igual LaTeX, diferente LaTeX, aproximadamente LaTeX"
+        },
+        "greek": {
+          "title": "Letras Gregas em LaTeX - Alfa a Ômega",
+          "description": "Lista completa de letras gregas e seus comandos LaTeX. Copie e cole alfa, beta, gama e mais.",
+          "keywords": "letras gregas LaTeX, alfa LaTeX, beta LaTeX, gama LaTeX, delta LaTeX, épsilon LaTeX, teta LaTeX, lambda LaTeX, pi LaTeX, sigma LaTeX, ômega LaTeX, fi LaTeX, alfabeto grego LaTeX"
+        },
+        "arrows": {
+          "title": "Símbolos de Setas LaTeX - Todos os Tipos de Setas",
+          "description": "Lista completa de símbolos de setas LaTeX. Direita, esquerda, cima, baixo, setas duplas e mais.",
+          "keywords": "setas LaTeX, seta direita LaTeX, seta esquerda LaTeX, seta dupla LaTeX, implica LaTeX, símbolos de setas, tipos de setas LaTeX, seta cima LaTeX, seta baixo LaTeX, seta bidirecional LaTeX, seta longa LaTeX"
+        },
+        "brackets": {
+          "title": "Parênteses e Delimitadores LaTeX",
+          "description": "Parênteses, chaves, colchetes e delimitadores em LaTeX. Comandos de colchetes para copiar e colar.",
+          "keywords": "colchetes LaTeX, parênteses LaTeX, chaves LaTeX, chaves curvas LaTeX, colchetes angulares LaTeX, colchetes quadrados LaTeX, delimitadores LaTeX, left right LaTeX, colchetes grandes LaTeX"
+        },
+        "calculus": {
+          "title": "Símbolos de Cálculo LaTeX - Derivadas e Integrais",
+          "description": "Notação de cálculo em LaTeX: derivadas, integrais, limites e operadores diferenciais.",
+          "keywords": "cálculo LaTeX, derivada LaTeX, integral LaTeX, derivada parcial LaTeX, limite LaTeX, diferencial LaTeX, nabla LaTeX, gradiente LaTeX, divergência LaTeX, rotacional LaTeX, laplaciano LaTeX"
+        },
+        "setTheory": {
+          "title": "Símbolos de Teoria dos Conjuntos LaTeX",
+          "description": "Notação de teoria dos conjuntos em LaTeX: união, interseção, subconjunto, elemento de e mais.",
+          "keywords": "teoria dos conjuntos LaTeX, união LaTeX, interseção LaTeX, subconjunto LaTeX, superconjunto LaTeX, elemento de LaTeX, conjunto vazio LaTeX, notação de conjuntos LaTeX, pertence a LaTeX, contém LaTeX"
+        },
+        "logic": {
+          "title": "Símbolos de Lógica LaTeX - Operadores Lógicos",
+          "description": "Símbolos de lógica em LaTeX: e, ou, não, implica, se e somente se, e quantificadores.",
+          "keywords": "símbolos de lógica LaTeX, e LaTeX, ou LaTeX, não LaTeX, implica LaTeX, se e somente se LaTeX, negação LaTeX, operadores lógicos LaTeX, lógica proposicional LaTeX"
+        },
+        "relations": {
+          "title": "Símbolos de Relação LaTeX - Operadores de Comparação",
+          "description": "Símbolos de relação em LaTeX: menor que, maior que, igual, diferente e equivalências.",
+          "keywords": "símbolos de relação LaTeX, menor que LaTeX, maior que LaTeX, menor igual LaTeX, maior igual LaTeX, diferente LaTeX, equivalente LaTeX, aproximadamente LaTeX, proporcional LaTeX"
+        },
+        "operators": {
+          "title": "Operadores LaTeX - Operadores Matemáticos",
+          "description": "Operadores matemáticos em LaTeX: soma, produto, integral e notação de operadores.",
+          "keywords": "operadores LaTeX, soma LaTeX, produto LaTeX, operador integral LaTeX, operadores grandes LaTeX, somatório LaTeX, prod LaTeX, coprod LaTeX, notação de operador LaTeX"
+        },
+        "linearAlgebra": {
+          "title": "Símbolos de Álgebra Linear LaTeX - Matrizes e Vetores",
+          "description": "Notação de álgebra linear em LaTeX: matrizes, vetores, determinantes e autovalores.",
+          "keywords": "álgebra linear LaTeX, matriz LaTeX, vetor LaTeX, determinante LaTeX, transposta LaTeX, autovalor LaTeX, autovetor LaTeX, produto escalar LaTeX, produto vetorial LaTeX, norma LaTeX"
+        },
+        "geometry": {
+          "title": "Símbolos de Geometria LaTeX - Ângulos e Formas",
+          "description": "Notação de geometria em LaTeX: ângulos, paralelo, perpendicular, triângulos e círculos.",
+          "keywords": "geometria LaTeX, ângulo LaTeX, paralelo LaTeX, perpendicular LaTeX, triângulo LaTeX, círculo LaTeX, símbolo de graus LaTeX, congruente LaTeX, semelhante LaTeX"
+        },
+        "probability": {
+          "title": "Símbolos de Probabilidade LaTeX - Notação Estatística",
+          "description": "Símbolos de probabilidade e estatística em LaTeX: valor esperado, variância, distribuições.",
+          "keywords": "probabilidade LaTeX, valor esperado LaTeX, variância LaTeX, desvio padrão LaTeX, distribuição de probabilidade LaTeX, estatística LaTeX, variável aleatória LaTeX, probabilidade condicional LaTeX"
+        },
+        "physics": {
+          "title": "Símbolos de Física LaTeX - Notação Científica",
+          "description": "Símbolos de física em LaTeX: vetores, operadores, mecânica quântica e constantes.",
+          "keywords": "física LaTeX, vetor LaTeX, hbar LaTeX, mecânica quântica LaTeX, bra ket LaTeX, notação de Dirac LaTeX, constantes físicas LaTeX, notação científica LaTeX"
+        },
+        "chemistry": {
+          "title": "Símbolos de Química LaTeX - Notação Química",
+          "description": "Notação química em LaTeX: fórmulas químicas, reações e estruturas moleculares.",
+          "keywords": "química LaTeX, fórmula química LaTeX, seta de reação LaTeX, subscrito LaTeX, sobrescrito LaTeX, mhchem LaTeX, equação química LaTeX"
+        },
+        "computerScience": {
+          "title": "Símbolos de Ciência da Computação LaTeX - Notação de Algoritmos",
+          "description": "Símbolos de ciência da computação em LaTeX: algoritmos, complexidade e notação de programação.",
+          "keywords": "ciência da computação LaTeX, algoritmo LaTeX, notação O grande LaTeX, complexidade LaTeX, pseudocódigo LaTeX, símbolos de programação LaTeX"
+        },
+        "functions": {
+          "title": "Símbolos de Funções LaTeX - Funções Matemáticas",
+          "description": "Notação de funções em LaTeX: trigonométricas, logarítmicas, exponenciais e mais.",
+          "keywords": "funções LaTeX, sin LaTeX, cos LaTeX, tan LaTeX, log LaTeX, ln LaTeX, exp LaTeX, lim LaTeX, min LaTeX, max LaTeX, argmin LaTeX, argmax LaTeX"
+        },
+        "numberTheory": {
+          "title": "Símbolos de Teoria dos Números LaTeX",
+          "description": "Notação de teoria dos números em LaTeX: divisibilidade, congruência e conjuntos numéricos.",
+          "keywords": "teoria dos números LaTeX, divisibilidade LaTeX, módulo LaTeX, congruência LaTeX, primo LaTeX, mdc LaTeX, mmc LaTeX, inteiros LaTeX, números naturais LaTeX"
+        },
+        "accents": {
+          "title": "Acentos e Diacríticos LaTeX",
+          "description": "Acentos LaTeX: chapéu, barra, ponto, til e outras marcas diacríticas.",
+          "keywords": "acentos LaTeX, chapéu LaTeX, barra LaTeX, ponto LaTeX, til LaTeX, vec LaTeX, sobrelinha LaTeX, sublinhado LaTeX, chave superior LaTeX, chave inferior LaTeX"
+        },
+        "boolean": {
+          "title": "Símbolos de Álgebra Booleana LaTeX",
+          "description": "Notação de álgebra booleana em LaTeX: AND, OR, NOT, XOR e valores de verdade.",
+          "keywords": "booleano LaTeX, AND LaTeX, OR LaTeX, NOT LaTeX, XOR LaTeX, verdadeiro falso LaTeX, álgebra booleana LaTeX, portas lógicas LaTeX"
+        },
+        "summation": {
+          "title": "Símbolos de Somatório e Produto LaTeX",
+          "description": "Notação de somatório e produto em LaTeX: somas, produtos e séries.",
+          "keywords": "somatório LaTeX, produto LaTeX, notação de soma LaTeX, sigma LaTeX, notação pi LaTeX, série LaTeX, soma infinita LaTeX"
+        },
+        "trigonometry": {
+          "title": "Símbolos de Trigonometria LaTeX",
+          "description": "Funções trigonométricas em LaTeX: seno, cosseno, tangente e funções inversas.",
+          "keywords": "trigonometria LaTeX, sin LaTeX, cos LaTeX, tan LaTeX, arcsin LaTeX, arccos LaTeX, arctan LaTeX, hiperbólico LaTeX, sinh LaTeX, cosh LaTeX, tanh LaTeX"
+        },
+        "topology": {
+          "title": "Símbolos de Topologia LaTeX",
+          "description": "Notação de topologia em LaTeX: conjuntos abertos, fecho, interior e fronteira.",
+          "keywords": "topologia LaTeX, conjunto aberto LaTeX, conjunto fechado LaTeX, fecho LaTeX, interior LaTeX, fronteira LaTeX, homeomorfismo LaTeX"
+        },
+        "finance": {
+          "title": "Símbolos de Finanças LaTeX - Notação Financeira",
+          "description": "Símbolos financeiros em LaTeX: moeda, juros e notação econômica.",
+          "keywords": "finanças LaTeX, moeda LaTeX, dólar LaTeX, euro LaTeX, libra LaTeX, porcentagem LaTeX, taxa de juros LaTeX, VPL LaTeX"
+        },
+        "machineLearning": {
+          "title": "Símbolos de Machine Learning LaTeX - Notação ML",
+          "description": "Notação de machine learning em LaTeX: redes neurais, funções de perda e otimização.",
+          "keywords": "machine learning LaTeX, rede neural LaTeX, função de perda LaTeX, gradiente descendente LaTeX, função de ativação LaTeX, pesos LaTeX, viés LaTeX, notação ML LaTeX"
+        },
+        "latin": {
+          "title": "Letras Latinas e Fontes LaTeX",
+          "description": "Letras latinas e estilos de fonte em LaTeX: negrito, itálico, caligráfico e mais.",
+          "keywords": "letras latinas LaTeX, negrito LaTeX, itálico LaTeX, mathcal LaTeX, mathbb LaTeX, mathfrak LaTeX, estilos de fonte LaTeX, blackboard bold LaTeX"
+        },
+        "complex": {
+          "title": "Símbolos de Números Complexos LaTeX",
+          "description": "Notação de números complexos em LaTeX: unidade imaginária, conjugado e forma polar.",
+          "keywords": "números complexos LaTeX, unidade imaginária LaTeX, conjugado LaTeX, parte real LaTeX, parte imaginária LaTeX, módulo LaTeX, argumento LaTeX"
+        },
+        "graphTheory": {
+          "title": "Símbolos de Teoria dos Grafos LaTeX",
+          "description": "Notação de teoria dos grafos em LaTeX: vértices, arestas, caminhos e ciclos.",
+          "keywords": "teoria dos grafos LaTeX, vértice LaTeX, aresta LaTeX, caminho LaTeX, ciclo LaTeX, adjacência LaTeX, grau LaTeX, conectado LaTeX"
+        },
+        "combinatorics": {
+          "title": "Símbolos de Combinatória LaTeX",
+          "description": "Notação de combinatória em LaTeX: fatoriais, binomiais e permutações.",
+          "keywords": "combinatória LaTeX, fatorial LaTeX, binomial LaTeX, permutação LaTeX, combinação LaTeX, escolher LaTeX, binom LaTeX"
+        },
+        "specialFunctions": {
+          "title": "Funções Especiais LaTeX - Gamma, Zeta, Bessel",
+          "description": "Funções especiais em LaTeX: gamma, zeta, Bessel e funções de erro.",
+          "keywords": "funções especiais LaTeX, função gamma LaTeX, função zeta LaTeX, função de Bessel LaTeX, função de erro LaTeX, Legendre LaTeX"
+        },
+        "tensors": {
+          "title": "Notação Tensorial LaTeX - Soma de Einstein",
+          "description": "Notação tensorial em LaTeX: índices, contrações e derivadas covariantes.",
+          "keywords": "tensor LaTeX, soma de Einstein LaTeX, índices tensoriais LaTeX, derivada covariante LaTeX, contravariante LaTeX, delta de Kronecker LaTeX"
+        },
+        "differentialGeometry": {
+          "title": "Símbolos de Geometria Diferencial LaTeX",
+          "description": "Notação de geometria diferencial em LaTeX: variedades, curvatura e conexões.",
+          "keywords": "geometria diferencial LaTeX, variedade LaTeX, curvatura LaTeX, Christoffel LaTeX, tensor de Riemann LaTeX, conexão LaTeX"
+        },
+        "modalLogic": {
+          "title": "Símbolos de Lógica Modal LaTeX",
+          "description": "Notação de lógica modal em LaTeX: necessidade, possibilidade e operadores temporais.",
+          "keywords": "lógica modal LaTeX, necessidade LaTeX, possibilidade LaTeX, caixa LaTeX, diamante LaTeX, lógica temporal LaTeX"
+        },
+        "gameTheory": {
+          "title": "Símbolos de Teoria dos Jogos LaTeX",
+          "description": "Notação de teoria dos jogos em LaTeX: estratégias, pagamentos e equilíbrio.",
+          "keywords": "teoria dos jogos LaTeX, equilíbrio de Nash LaTeX, estratégia LaTeX, pagamento LaTeX, função de utilidade LaTeX, valor de Shapley LaTeX"
+        },
+        "order": {
+          "title": "Símbolos de Relações de Ordem LaTeX",
+          "description": "Relações de ordem em LaTeX: ordens parciais, reticulados e supremo/ínfimo.",
+          "keywords": "relações de ordem LaTeX, ordem parcial LaTeX, reticulado LaTeX, supremo LaTeX, ínfimo LaTeX, limite superior mínimo LaTeX"
+        },
+        "optimization": {
+          "title": "Símbolos de Otimização LaTeX",
+          "description": "Notação de otimização em LaTeX: minimizar, maximizar e restrições.",
+          "keywords": "otimização LaTeX, minimizar LaTeX, maximizar LaTeX, argmin LaTeX, argmax LaTeX, sujeito a LaTeX, restrição LaTeX"
+        },
+        "quantifiers": {
+          "title": "Símbolos de Quantificadores LaTeX - Para Todo, Existe",
+          "description": "Símbolos de quantificadores em LaTeX: quantificadores universal e existencial.",
+          "keywords": "quantificadores LaTeX, para todo LaTeX, existe LaTeX, forall LaTeX, existencial LaTeX, quantificador universal LaTeX, existe um LaTeX"
+        },
+        "units": {
+          "title": "Unidades e Medidas LaTeX",
+          "description": "Unidades SI e medidas em LaTeX: graus, constantes físicas e unidades.",
+          "keywords": "unidades LaTeX, unidades SI LaTeX, graus LaTeX, constantes físicas LaTeX, siunitx LaTeX, medida LaTeX, metro LaTeX, quilograma LaTeX"
+        }
+      },
+      "templates": {
+        "main": {
+          "title": "Modelos LaTeX Grátis - Currículo, CV, Tese, Beamer",
+          "description": "60+ modelos LaTeX profissionais. Currículo, CV, tese, apresentações beamer e mais. Download grátis.",
+          "keywords": "modelos LaTeX, modelos LaTeX grátis, modelo de currículo LaTeX, modelo de CV LaTeX, modelo de tese LaTeX, modelo beamer LaTeX, modelos Overleaf, modelos acadêmicos LaTeX, modelo de apresentação LaTeX, modelo de artigo LaTeX, modelo de trabalho LaTeX, modelo de poster LaTeX, modelo de carta LaTeX, modelo de livro LaTeX, modelo de relatório LaTeX, modelos LaTeX profissionais"
+        },
+        "academic": {
+          "title": "Modelos LaTeX Acadêmicos - Artigos de Pesquisa, Tese, Dissertações",
+          "description": "Modelos LaTeX acadêmicos gratuitos para artigos de pesquisa, teses, dissertações, artigos de revista e conferências.",
+          "keywords": "modelos acadêmicos LaTeX, modelo de artigo de pesquisa LaTeX, modelo de tese LaTeX, modelo de dissertação LaTeX, modelo de artigo de revista, artigo de conferência LaTeX, modelo IEEE LaTeX, modelo ACM, modelo Springer, modelo de artigo científico, tese de doutorado LaTeX, modelo de tese de mestrado, escrita acadêmica LaTeX"
+        },
+        "presentations": {
+          "title": "Modelos de Apresentação LaTeX - Slides Beamer",
+          "description": "Modelos beamer LaTeX gratuitos. Slides profissionais para palestras acadêmicas, conferências e aulas.",
+          "keywords": "modelo beamer LaTeX, modelo de apresentação LaTeX, slides beamer, slides LaTeX, modelo de apresentação acadêmica, slides de conferência LaTeX, slides de aula LaTeX, temas beamer, exemplos beamer, alternativa ao PowerPoint LaTeX, apresentação beamer"
+        },
+        "resumeCV": {
+          "title": "Modelos de Currículo e CV LaTeX - Curriculum Vitae Profissional",
+          "description": "Modelos de currículo e CV LaTeX gratuitos. Designs modernos e profissionais para candidaturas e CVs acadêmicos.",
+          "keywords": "modelo de currículo LaTeX, modelo de CV LaTeX, curriculum vitae LaTeX, currículo profissional LaTeX, modelo de CV moderno, CV acadêmico LaTeX, currículo de uma página LaTeX, currículo duas colunas, modelo moderncv, europass LaTeX, currículo engenheiro de software LaTeX, CV cientista de dados"
+        },
+        "math": {
+          "title": "Modelos de Matemática LaTeX - Equações, Demonstrações, Listas de Problemas",
+          "description": "Modelos LaTeX para documentos matemáticos: listas de problemas, demonstrações, teoremas e folhas de equações.",
+          "keywords": "modelo de matemática LaTeX, modelo de equações LaTeX, modelo de lista de problemas, modelo de trabalho LaTeX, modelo de demonstração LaTeX, modelo de teorema, notas de matemática LaTeX, modelo de folha de fórmulas, modelo de prova LaTeX, modelo de questionário LaTeX, modelo de tarefa de matemática"
+        },
+        "reports": {
+          "title": "Modelos de Relatórios LaTeX - Técnicos, Laboratório, Projeto",
+          "description": "Modelos LaTeX profissionais para relatórios técnicos, relatórios de laboratório, documentação de projetos e relatórios empresariais.",
+          "keywords": "modelo de relatório LaTeX, relatório técnico LaTeX, modelo de relatório de laboratório, relatório de projeto LaTeX, modelo de relatório empresarial, relatório anual LaTeX, modelo de relatório de estágio, relatório de pesquisa LaTeX, modelo de documentação"
+        },
+        "education": {
+          "title": "Modelos LaTeX para Educação - Trabalhos, Provas, Programas",
+          "description": "Modelos LaTeX para educadores e estudantes: trabalhos, provas, programas de disciplina, notas de aula e materiais de curso.",
+          "keywords": "modelo de trabalho LaTeX, modelo de prova LaTeX, modelo de programa de disciplina LaTeX, modelo de notas de aula, materiais de curso LaTeX, modelo de tarefa, modelo de teste LaTeX, modelo de folha de exercícios, guia de estudo LaTeX, modelo de flashcard LaTeX"
+        },
+        "letters": {
+          "title": "Modelos de Cartas LaTeX - Cartas de Apresentação, Cartas Formais",
+          "description": "Modelos profissionais de cartas LaTeX para cartas de apresentação, correspondência formal e cartas de recomendação.",
+          "keywords": "modelo de carta LaTeX, carta de apresentação LaTeX, modelo de carta formal, carta de recomendação LaTeX, modelo de carta empresarial, carta de candidatura LaTeX, modelo de carta de referência, carta profissional LaTeX"
+        },
+        "business": {
+          "title": "Modelos LaTeX Empresariais - Planos, Propostas, Faturas",
+          "description": "Modelos LaTeX para documentos empresariais: planos de negócios, propostas, faturas, contratos e memorandos.",
+          "keywords": "modelo empresarial LaTeX, plano de negócios LaTeX, modelo de proposta LaTeX, modelo de fatura LaTeX, modelo de contrato, modelo de memorando LaTeX, cartão de visita LaTeX, modelo de relatório empresarial, sumário executivo LaTeX, modelo de proposta de projeto"
+        },
+        "other": {
+          "title": "Modelos LaTeX - Livros, Posters, Boletins",
+          "description": "Modelos LaTeX diversos: livros, posters, boletins, calendários e documentos criativos.",
+          "keywords": "modelo de livro LaTeX, modelo de poster LaTeX, modelo de boletim LaTeX, modelo de calendário LaTeX, modelo de folheto LaTeX, modelo de brochura LaTeX, modelo de receita LaTeX, modelo de revista, modelo de obituário LaTeX, convite de casamento LaTeX"
+        }
+      }
+    },
+    "templateCode": {
+      "placeholders": {
+        "authorName": "Nome do autor",
+        "yourName": "Seu nome",
+        "department": "Departamento",
+        "universityName": "Nome da universidade",
+        "email": "autor@universidade.edu",
+        "presentationTitle": "Título da apresentação",
+        "researchPaperTitle": "Título do artigo de pesquisa",
+        "courseName": "Nome do curso",
+        "instructorName": "Nome do instrutor",
+        "yourAddress": "Seu endereço",
+        "cityStateZip": "Cidade, Estado CEP",
+        "phone": "(555) 123-4567",
+        "point1": "Ponto 1",
+        "point2": "Ponto 2",
+        "point3": "Ponto 3",
+        "contentGoesHere": "O conteúdo vai aqui.",
+        "summaryOfKeyPoints": "Resumo dos pontos principais."
+      }
     }
   }
-}
+  

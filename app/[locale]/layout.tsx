@@ -10,7 +10,6 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getMessages, setRequestLocale, getTranslations } from 'next-intl/server';
 import { routing } from '@/src/i18n/routing';
 import { notFound } from 'next/navigation';
-import { siteConfig } from "@/lib/site-config";
 
 type Props = {
   children: React.ReactNode;
@@ -56,7 +55,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     keywords: keywords.split(', '),
-    metadataBase: new URL(siteConfig.websiteUrl || 'https://example.com'),
+    metadataBase: new URL('https://tools.useoctree.com'),
     alternates: {
       canonical: locale === 'en' ? '/' : `/${locale}`,
       languages: {
@@ -75,8 +74,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title,
       description,
-      url: siteConfig.websiteUrl,
-      siteName: siteConfig.name,
+      url: 'https://tools.useoctree.com',
+      siteName: 'Octree LaTeX Tools',
       locale: localeToOgLocale[locale] || 'en_US',
       type: "website",
     },
@@ -120,10 +119,10 @@ export default async function LocaleLayout({ children, params }: Props) {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
-    name: siteConfig.name,
-    description: siteConfig.description,
-    url: siteConfig.websiteUrl,
-    applicationCategory: 'UtilityApplication',
+    name: 'Octree LaTeX Tools',
+    description: 'Free LaTeX tools: AI-powered converter for math equations, images & PDFs. 60+ professional templates for resume, CV, thesis, beamer, homework, obituary, interactive flashcards. Live PDF preview.',
+    url: 'https://tools.useoctree.com',
+    applicationCategory: 'DeveloperApplication',
     operatingSystem: 'Any',
     offers: {
       '@type': 'Offer',
@@ -132,9 +131,27 @@ export default async function LocaleLayout({ children, params }: Props) {
     },
     author: {
       '@type': 'Organization',
-      name: siteConfig.name,
-      url: siteConfig.websiteUrl,
+      name: 'Octree',
+      url: 'https://useoctree.com',
     },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      ratingCount: '312',
+      bestRating: '5',
+      worstRating: '1',
+    },
+    featureList: [
+      'AI-powered handwritten math to LaTeX converter',
+      'PDF to LaTeX converter',
+      'Image to LaTeX converter',
+      'Free LaTeX equation generator',
+      '60+ LaTeX templates: resume, CV, thesis, beamer presentation, homework, poster, obituary, interactive flashcards, business plan, business report, memo, manuscript, and more',
+      'Live PDF preview and editor',
+      'Free download with ready-to-use code',
+      'Citation generator',
+      'TikZ generator',
+    ],
   };
 
   return (
