@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const COMPILE_PROD_URL = 'http://138.197.13.3:3001/compile';
+const COMPILE_SERVICE_URL = process.env.COMPILE_SERVICE_URL || 'http://138.197.13.3:3001';
+const COMPILE_PROD_URL = `${COMPILE_SERVICE_URL}/compile`;
 
 interface FileEntry {
   path: string;
@@ -20,12 +21,19 @@ export async function POST(request: NextRequest) {
 
     let response: Response;
 
+    const authToken = request.headers.get('x-supabase-token') || process.env.TOOLS_SERVICE_TOKEN;
+    const authHeader: Record<string, string> = {};
+    if (authToken) {
+      authHeader['Authorization'] = `Bearer ${authToken}`;
+    }
+
     // If files array is provided, use multi-file JSON format
     if (body.files && body.files.length > 0) {
       response = await fetch(COMPILE_PROD_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          ...authHeader,
         },
         body: JSON.stringify({
           files: body.files,
@@ -39,6 +47,7 @@ export async function POST(request: NextRequest) {
         method: 'POST',
         headers: {
           'Content-Type': 'text/plain',
+          ...authHeader,
         },
         body: body.latex,
       });
