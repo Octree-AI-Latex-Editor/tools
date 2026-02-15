@@ -1,11 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
 
+const COMPILE_URL = process.env.COMPILE_SERVICE_URL;
+
 export async function POST(request: NextRequest) {
   try {
     const { latex } = await request.json();
 
     // Call Octree's compile server
-    const response = await fetch('http://142.93.195.236:3001/compile', {
+    const response = await fetch(`${COMPILE_URL}/compile`, {
       method: 'POST',
       headers: {
         'Content-Type': 'text/plain',
