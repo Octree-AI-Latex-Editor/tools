@@ -7,15 +7,15 @@ import { cn } from '@/lib/utils';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { loader } from '@monaco-editor/react';
-import { CompileErrorModal } from '@/components/CompileErrorModal';
 import { OctreeCTA } from '@/components/OctreeCTA';
+import { OctreeLogo } from '@/components/icons/octree-logo';
+import { openInOctree } from '@/lib/open-in-octree';
 import { Button } from '@/components/ui/button';
 import { useTranslations, useLocale } from 'next-intl';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import type { Locale } from '@/lib/i18n/config';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
-const PDFPreview = dynamic(() => import('@/components/PDFPreview'), { ssr: false });
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -47,11 +47,6 @@ export default function CitationGenerator() {
   const [isProcessing, setIsProcessing] = useState(false);
   const [error, setError] = useState<string>('');
   const [activeTab, setActiveTab] = useState<'code' | 'preview'>('code');
-  const [previewUrl, setPreviewUrl] = useState<string>('');
-  const [isCompiling, setIsCompiling] = useState(false);
-  const [lastCompiledBibtex, setLastCompiledBibtex] = useState<string>('');
-  const [compileError, setCompileError] = useState<string>('');
-  const [showCompileErrorModal, setShowCompileErrorModal] = useState(false);
   const [latestLatexDocument, setLatestLatexDocument] = useState<string>('');
 
   useEffect(() => {
@@ -114,30 +109,21 @@ export default function CitationGenerator() {
     }
   };
 
-  const compileBibtex = async (bibtex: string) => {
-    if (lastCompiledBibtex === bibtex && previewUrl) return;
-
-    setIsCompiling(true);
-    setCompileError('');
-    try {
-      // Extract ALL citation keys from BibTeX
-      const citationKeys: string[] = [];
-      const keyRegex = /@\w+\{([^,]+),/g;
-      let match;
-      while ((match = keyRegex.exec(bibtex)) !== null) {
-        citationKeys.push(match[1].trim());
-      }
-      
-      if (citationKeys.length === 0) {
-        citationKeys.push('citation');
-      }
-      
-      // Create citation commands for all keys
-      const allKeys = citationKeys.join(',');
-      const individualCites = citationKeys.map(key => `\\cite{${key}}`).join(', ');
-      
-      // Create a clean LaTeX document that uses BibTeX
-      const latexDocument = `\\documentclass[12pt]{article}
+  // Build LaTeX document for "Open in Octree" whenever bibtex changes
+  useEffect(() => {
+    if (!bibtexCode) return;
+    const citationKeys: string[] = [];
+    const keyRegex = /@\w+\{([^,]+),/g;
+    let match;
+    while ((match = keyRegex.exec(bibtexCode)) !== null) {
+      citationKeys.push(match[1].trim());
+    }
+    if (citationKeys.length === 0) {
+      citationKeys.push('citation');
+    }
+    const allKeys = citationKeys.join(',');
+    const individualCites = citationKeys.map(key => `\\cite{${key}}`).join(', ');
+    const latexDocument = `\\documentclass[12pt]{article}
 \\usepackage[utf8]{inputenc}
 \\usepackage[margin=1in]{geometry}
 \\usepackage{natbib}
@@ -157,61 +143,8 @@ export default function CitationGenerator() {
 \\bibliography{references}
 
 \\end{document}`;
-
-      setLatestLatexDocument(latexDocument);
-
-      // Create a unique projectId based on bibtex content hash
-      const projectHash = btoa(bibtex).slice(0, 16).replace(/[^a-zA-Z0-9]/g, '');
-      
-      // Send both files to compile-prod endpoint
-      const response = await fetch('/api/compile-prod', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          files: [
-            { path: 'main.tex', content: latexDocument },
-            { path: 'references.bib', content: bibtex },
-          ],
-          projectId: `citation-${projectHash}`,
-          lastModifiedFile: 'references.bib',
-        }),
-      });
-
-      if (!response.ok) {
-        let message = tTools('failedToCompile');
-        try {
-          const data = await response.json();
-          if (data?.error) {
-            message = data.error;
-          }
-        } catch {
-          // Ignore parse errors
-        }
-        throw new Error(message);
-      }
-
-      const data = await response.json();
-      setPreviewUrl(data.previewUrl || data.pdfUrl || '');
-      setLastCompiledBibtex(bibtex);
-    } catch (err) {
-      console.error('Compilation error:', err);
-      setPreviewUrl('');
-      setLastCompiledBibtex('');
-      const fallbackMessage =
-        err instanceof Error ? err.message : tTools('failedToCompile');
-      setCompileError(fallbackMessage);
-      setShowCompileErrorModal(true);
-    } finally {
-      setIsCompiling(false);
-    }
-  };
-
-  useEffect(() => {
-    if (bibtexCode && activeTab === 'preview' && !isProcessing) {
-      compileBibtex(bibtexCode);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [bibtexCode, activeTab, isProcessing]);
+    setLatestLatexDocument(latexDocument);
+  }, [bibtexCode]);
 
   const exportAsBibtex = () => {
     const blob = new Blob([bibtexCode], { type: 'text/plain' });
@@ -313,26 +246,23 @@ export default function CitationGenerator() {
                   </button>
                   <button
                     onClick={(e) => {
-                      if (isCompiling || isProcessing) {
+                      if (isProcessing) {
                         e.preventDefault();
                         return;
                       }
                       setActiveTab('preview');
                     }}
-                    disabled={isCompiling || isProcessing}
+                    disabled={isProcessing}
                     className={`flex items-center gap-2 px-4 py-2.5 text-sm font-medium border-b-2 transition-colors ${
                       activeTab === 'preview'
                         ? 'border-blue-600 text-gray-900 bg-blue-50'
                         : 'border-transparent text-gray-500 hover:text-gray-700'
-                    } ${(isCompiling || isProcessing) ? 'opacity-50 cursor-not-allowed' : ''}`}
+                    } ${isProcessing ? 'opacity-50 cursor-not-allowed' : ''}`}
                   >
                     <Eye className="h-4 w-4" />
                     {tTools('previewTab')}
                     {isProcessing && (
                       <span className="text-xs text-gray-400">({t('generating')})</span>
-                    )}
-                    {!isProcessing && isCompiling && (
-                      <span className="text-xs text-gray-400">({tTools('compilingLatex')})</span>
                     )}
                   </button>
                 </div>
@@ -372,21 +302,25 @@ export default function CitationGenerator() {
                       )}
                     </div>
                   ) : (
-                    <div className="flex-1 overflow-auto rounded-lg">
-                      {isCompiling ? (
-                        <div className="flex items-center justify-center h-full">
-                          <div className="text-center">
-                            <Loader2 className="mx-auto h-8 w-8 text-blue-500 animate-spin mb-2" />
-                            <p className="text-sm text-gray-600">{tTools('generatingPreview')}</p>
-                          </div>
-                        </div>
-                      ) : previewUrl ? (
-                        <PDFPreview pdfUrl={previewUrl} width={420} />
-                      ) : (
-                        <div className="flex items-center justify-center h-full">
-                          <p className="text-gray-400">{tTools('previewWillAppear')}</p>
-                        </div>
-                      )}
+                    <div className="flex-1 flex items-center justify-center rounded-lg">
+                      <div className="text-center max-w-sm">
+                        <Eye className="mx-auto h-10 w-10 text-gray-300 mb-4" />
+                        <p className="text-gray-600 mb-2 font-medium">Preview in Octree</p>
+                        <p className="text-sm text-gray-400 mb-6">
+                          Open your citation document in Octree to compile and preview the formatted references.
+                        </p>
+                        <button
+                          onClick={() => openInOctree({
+                            latex: latestLatexDocument,
+                            title: 'Citation Preview',
+                            source: 'tools:citation-generator',
+                          })}
+                          className="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-50 transition-colors shadow-sm"
+                        >
+                          <OctreeLogo className="h-5 w-5" />
+                          Open in Octree
+                        </button>
+                      </div>
                     </div>
                   )
                 ) : (
@@ -417,14 +351,6 @@ export default function CitationGenerator() {
         </div>
       </div>
 
-      <CompileErrorModal
-        isOpen={showCompileErrorModal}
-        errorMessage={compileError}
-        latex={latestLatexDocument}
-        onClose={() => setShowCompileErrorModal(false)}
-        source="tools:citation-generator"
-        title={t('title')}
-      />
     </div>
   );
 } 
