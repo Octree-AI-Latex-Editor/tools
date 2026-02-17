@@ -51,7 +51,9 @@
     "templatesCount": "{count} template",
     "starOnGitHub": "I-star sa GitHub",
     "joinUsOnReddit": "Sumali sa amin sa Reddit",
-    "joinOurDiscord": "Sumali sa aming Discord"
+    "joinOurDiscord": "Sumali sa aming Discord",
+    "exploreMoreTools": "Tuklasin ang Iba Pang Mga Tool",
+    "exploreMoreTemplates": "Tuklasin ang Iba Pang Mga Template"
   },
   "home": {
     "title": "Libreng LaTeX Tools at Templates",

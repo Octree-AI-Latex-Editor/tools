@@ -51,7 +51,9 @@
     "templatesCount": "{count}개 템플릿",
     "starOnGitHub": "GitHub에서 스타",
     "joinUsOnReddit": "Reddit에서 팔로우",
-    "joinOurDiscord": "Discord 참여"
+    "joinOurDiscord": "Discord 참여",
+    "exploreMoreTools": "더 많은 도구 탐색",
+    "exploreMoreTemplates": "더 많은 템플릿 탐색"
   },
   "home": {
     "title": "무료 LaTeX 도구 및 템플릿",

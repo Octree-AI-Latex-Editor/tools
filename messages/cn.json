@@ -51,7 +51,9 @@
       "templatesCount": "{count} 个模板",
       "starOnGitHub": "在 GitHub 上标星",
       "joinUsOnReddit": "在 Reddit 上加入我们",
-      "joinOurDiscord": "加入我们的 Discord"
+      "joinOurDiscord": "加入我们的 Discord",
+      "exploreMoreTools": "探索更多工具",
+      "exploreMoreTemplates": "探索更多模板"
     },
     "home": {
       "title": "免费 LaTeX 工具和模板",

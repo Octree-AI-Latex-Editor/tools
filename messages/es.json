@@ -51,7 +51,9 @@
       "templatesCount": "{count} plantilla{plural}",
       "starOnGitHub": "Dar estrella en GitHub",
       "joinUsOnReddit": "Únete a nosotros en Reddit",
-      "joinOurDiscord": "Únete a nuestro Discord"
+      "joinOurDiscord": "Únete a nuestro Discord",
+      "exploreMoreTools": "Explorar más herramientas",
+      "exploreMoreTemplates": "Explorar más plantillas"
     },
     "home": {
       "title": "Herramientas y Plantillas LaTeX Gratuitas",

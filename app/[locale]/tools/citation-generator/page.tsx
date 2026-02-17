@@ -8,6 +8,8 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { loader } from '@monaco-editor/react';
 import { OctreeCTA } from '@/components/OctreeCTA';
+import { ExploreMoreTools } from '@/components/ExploreMoreTools';
+import { ExploreMoreTemplates } from '@/components/ExploreMoreTemplates';
 import { OctreeLogo } from '@/components/icons/octree-logo';
 import { openInOctree } from '@/lib/open-in-octree';
 import { Button } from '@/components/ui/button';
@@ -344,6 +346,9 @@ export default function CitationGenerator() {
             )}
           </div>
         </div>
+
+        <ExploreMoreTools currentToolHref="/tools/citation-generator" />
+        <ExploreMoreTemplates />
 
         {/* Call to Action */}
         <div className="mt-16">

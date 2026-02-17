@@ -28,6 +28,7 @@ const satoshi = localFont({
     },
   ],
   display: 'swap',
+  variable: '--font-satoshi',
 });
 
 const localeToOgLocale: Record<string, string> = {
@@ -156,7 +157,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale}>
-      <body className={satoshi.className}>
+      <body className={`${satoshi.variable} ${satoshi.className}`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

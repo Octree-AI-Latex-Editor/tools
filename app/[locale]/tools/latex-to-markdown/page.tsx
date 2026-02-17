@@ -7,6 +7,8 @@ import { cn } from '@/lib/utils';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { OctreeCTA } from '@/components/OctreeCTA';
+import { ExploreMoreTools } from '@/components/ExploreMoreTools';
+import { ExploreMoreTemplates } from '@/components/ExploreMoreTemplates';
 import { Button } from '@/components/ui/button';
 import { useTranslations, useLocale } from 'next-intl';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
@@ -262,6 +264,9 @@ export default function LatexToMarkdown() {
             )}
           </div>
         </div>
+
+        <ExploreMoreTools currentToolHref="/tools/latex-to-markdown" />
+        <ExploreMoreTemplates />
 
         {/* Call to Action */}
         <div className="mt-16">

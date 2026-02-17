@@ -51,7 +51,9 @@
     "templatesCount": "{count} sjablo{plural}",
     "starOnGitHub": "Star op GitHub",
     "joinUsOnReddit": "Volg ons op Reddit",
-    "joinOurDiscord": "Word lid van onze Discord"
+    "joinOurDiscord": "Word lid van onze Discord",
+    "exploreMoreTools": "Meer tools ontdekken",
+    "exploreMoreTemplates": "Meer sjablonen ontdekken"
   },
   "home": {
     "title": "Gratis LaTeX Tools & Sjablonen",
