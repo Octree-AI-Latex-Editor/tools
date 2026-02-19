@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
+import { generateAlternates } from '@/lib/seo';
 
 /**
  * Maps symbol URL slugs to their translation keys in messages files.
@@ -75,14 +76,24 @@ export async function generateSymbolMetadata(
   symbolSlug: string,
   defaultMetadata: Metadata
 ): Promise<Metadata> {
+  const symbolPath = `/symbols/${symbolSlug}`;
+  const alternates = generateAlternates(symbolPath, locale);
+
   // For English, use the carefully crafted SEO-optimized metadata as-is
+  // but add canonical + hreflang
   if (locale === 'en') {
-    return defaultMetadata;
+    return {
+      ...defaultMetadata,
+      alternates,
+    };
   }
 
   const translationKey = slugToTranslationKey[symbolSlug];
   if (!translationKey) {
-    return defaultMetadata;
+    return {
+      ...defaultMetadata,
+      alternates,
+    };
   }
 
   try {
@@ -94,6 +105,7 @@ export async function generateSymbolMetadata(
       ...defaultMetadata,
       title,
       description,
+      alternates,
       openGraph: {
         ...(typeof defaultMetadata.openGraph === 'object' ? defaultMetadata.openGraph : {}),
         title,
@@ -110,6 +122,9 @@ export async function generateSymbolMetadata(
     };
   } catch {
     // Fallback to default metadata if translations fail
-    return defaultMetadata;
+    return {
+      ...defaultMetadata,
+      alternates,
+    };
   }
 }

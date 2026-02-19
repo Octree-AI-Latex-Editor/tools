@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
+import { generateAlternates } from '@/lib/seo';
 
 /**
  * Maps tool URL slugs to their translation keys in messages files.
@@ -55,14 +56,24 @@ export async function generateToolMetadata(
   toolSlug: string,
   defaultMetadata: Metadata
 ): Promise<Metadata> {
+  const toolPath = `/tools/${toolSlug}`;
+  const alternates = generateAlternates(toolPath, locale);
+
   // For English, use the carefully crafted SEO-optimized metadata as-is
+  // but add hreflang languages
   if (locale === 'en') {
-    return defaultMetadata;
+    return {
+      ...defaultMetadata,
+      alternates,
+    };
   }
 
   const translationKey = slugToTranslationKey[toolSlug];
   if (!translationKey) {
-    return defaultMetadata;
+    return {
+      ...defaultMetadata,
+      alternates,
+    };
   }
 
   try {
@@ -74,14 +85,12 @@ export async function generateToolMetadata(
       ...defaultMetadata,
       title,
       description,
-      alternates: {
-        canonical: `/${locale}/tools/${toolSlug}`,
-      },
+      alternates,
       openGraph: {
         ...(typeof defaultMetadata.openGraph === 'object' ? defaultMetadata.openGraph : {}),
         title,
         description,
-        url: `https://tools.useoctree.com/${locale}/tools/${toolSlug}`,
+        url: `https://tools.useoctree.com/${locale}${toolPath}`,
         locale: localeToOgLocale[locale] || locale,
       },
       twitter: {
@@ -92,6 +101,9 @@ export async function generateToolMetadata(
     };
   } catch {
     // Fallback to default metadata if translations fail
-    return defaultMetadata;
+    return {
+      ...defaultMetadata,
+      alternates,
+    };
   }
 }

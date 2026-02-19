@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from 'next-intl/server';
+import { generateAlternates } from '@/lib/seo';
 
 const localeToOgLocale: Record<string, string> = {
   en: 'en_US', es: 'es_ES', fr: 'fr_FR', pt: 'pt_BR', cn: 'zh_CN',
@@ -135,9 +136,7 @@ const defaultMetadata: Metadata = {
     "hidden answer template latex",
     "self-test template latex",
   ],
-  alternates: {
-    canonical: '/templates',
-  },
+  alternates: generateAlternates('/templates', 'en'),
   openGraph: {
     title: "60+ Free LaTeX Templates - Resume, CV, Research Paper & More",
     description: "Download 60+ free LaTeX templates: resume, CV, thesis, beamer, homework, poster, obituary, interactive flashcards. Ready-to-use code with live PDF previews.",
@@ -173,9 +172,7 @@ export async function generateMetadata({
       ...defaultMetadata,
       title,
       description,
-      alternates: {
-        canonical: `/${locale}/templates`,
-      },
+      alternates: generateAlternates('/templates', locale),
       openGraph: {
         ...(typeof defaultMetadata.openGraph === 'object' ? defaultMetadata.openGraph : {}),
         title,

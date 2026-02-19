@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { templates } from '@/lib/templates';
+import { generateAlternates } from '@/lib/seo';
 
 /**
  * Locale-specific title formats for template pages.
@@ -725,6 +726,7 @@ export async function generateMetadata({
       'online latex editor',
       'latex template download',
     ],
+    alternates: generateAlternates(`/templates/${slug}`, locale),
     openGraph: {
       title,
       description,

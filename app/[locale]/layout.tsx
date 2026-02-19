@@ -10,6 +10,7 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getMessages, setRequestLocale, getTranslations } from 'next-intl/server';
 import { routing } from '@/src/i18n/routing';
 import { notFound } from 'next/navigation';
+import { generateAlternates } from '@/lib/seo';
 
 type Props = {
   children: React.ReactNode;
@@ -41,6 +42,12 @@ const localeToOgLocale: Record<string, string> = {
   ja: 'ja_JP',
   it: 'it_IT',
   ko: 'ko_KR',
+  id: 'id_ID',
+  ms: 'ms_MY',
+  fil: 'fil_PH',
+  ru: 'ru_RU',
+  vi: 'vi_VN',
+  nl: 'nl_NL',
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -56,21 +63,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description,
     keywords: keywords.split(', '),
     metadataBase: new URL('https://tools.useoctree.com'),
-    alternates: {
-      canonical: locale === 'en' ? '/' : `/${locale}`,
-      languages: {
-        'en': '/',
-        'es': '/es',
-        'fr': '/fr',
-        'pt': '/pt',
-        'zh': '/cn',
-        'ar': '/ar',
-        'de': '/de',
-        'ja': '/ja',
-        'it': '/it',
-        'ko': '/ko',
-      },
-    },
+    alternates: generateAlternates('', locale),
     openGraph: {
       title,
       description,
