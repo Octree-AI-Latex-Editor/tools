@@ -54,9 +54,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'metadata' });
   
-  const title = t('site.title');
+  const baseTitle = t('site.title');
   const description = t('site.description');
   const keywords = t('site.keywords');
+  const isDefaultLocale = locale === 'en';
+  const title = isDefaultLocale
+    ? baseTitle
+    : {
+        default: baseTitle,
+        template: `%s [${locale.toUpperCase()}]`,
+      };
   
   return {
     title,
