@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
         messages: [
           {
             role: 'user',
-            content: `Convert this table data to a complete LaTeX document with a properly formatted table. The file type is ${type}. Include \\documentclass{article}, necessary packages (booktabs, array, etc.), and wrap the table in \\begin{document}...\\end{document}. Return ONLY the complete LaTeX code, no explanations or markdown formatting.\n\nTable data:\n${fileData}`,
+            content: `Convert this table data to a complete LaTeX document with a properly formatted table. The file type is ${type}. Include \\documentclass{article}, necessary packages (booktabs, array, etc.), and wrap the table in \\begin{document}...\\end{document}. Return ONLY the complete LaTeX code, no explanations and NO markdown formatting. Do NOT wrap the output in \`\`\`latex or \`\`\` tags. Just return the raw LaTeX code.\n\nTable data:\n${fileData}`,
           },
         ],
         max_tokens: 2000,

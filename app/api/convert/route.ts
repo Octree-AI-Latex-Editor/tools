@@ -19,7 +19,7 @@ export async function POST(request: NextRequest) {
                               content: [
                     {
                       type: 'text',
-                      text: 'Convert this handwritten mathematical expression to a complete LaTeX document. Include \\documentclass{article}, necessary packages (amsmath, amssymb, etc.), and wrap the math in \\begin{document}...\\end{document}. Return ONLY the complete LaTeX code, no explanations or markdown formatting.',
+                      text: 'Convert this handwritten mathematical expression to a complete LaTeX document. Include \\documentclass{article}, necessary packages (amsmath, amssymb, etc.), and wrap the math in \\begin{document}...\\end{document}. Return ONLY the complete LaTeX code, no explanations and NO markdown formatting. Do NOT wrap the output in \`\`\`latex or \`\`\` tags. Just return the raw LaTeX code.',
                     },
                     {
                       type: 'image_url',
