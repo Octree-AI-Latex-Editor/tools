@@ -10,9 +10,11 @@ export async function POST(request: NextRequest) {
     const response = await fetch(`${COMPILE_URL}/compile`, {
       method: 'POST',
       headers: {
-        'Content-Type': 'text/plain',
+        'Content-Type': 'application/json',
       },
-      body: latex,
+      body: JSON.stringify({
+        files: [{ path: 'main.tex', content: latex }],
+      }),
     });
 
     if (!response.ok) {

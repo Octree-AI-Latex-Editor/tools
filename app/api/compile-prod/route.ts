@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const COMPILE_PROD_URL = 'http://138.197.13.3:3001/compile';
+const COMPILE_PROD_URL = `${process.env.COMPILE_SERVER}/compile`;
 
 interface FileEntry {
   path: string;
@@ -38,9 +38,11 @@ export async function POST(request: NextRequest) {
       response = await fetch(COMPILE_PROD_URL, {
         method: 'POST',
         headers: {
-          'Content-Type': 'text/plain',
+          'Content-Type': 'application/json',
         },
-        body: body.latex,
+        body: JSON.stringify({
+          files: [{ path: 'main.tex', content: body.latex }],
+        }),
       });
     } else {
       return NextResponse.json(

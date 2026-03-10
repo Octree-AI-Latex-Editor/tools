@@ -1745,17 +1745,19 @@ This report presented our cloud-native architecture which successfully met all p
   },
 ];
 
-const COMPILE_SERVER_URL = 'http://142.93.195.236:3001/compile';
+const COMPILE_SERVER_URL = `${process.env.COMPILE_SERVER}/compile`;
 const OUTPUT_DIR = path.join(__dirname, '../public/templates');
 
 async function compileTemplate(template) {
   console.log(`Compiling ${template.filename}...`);
-  
+
   try {
     const response = await fetch(COMPILE_SERVER_URL, {
       method: 'POST',
-      headers: { 'Content-Type': 'text/plain' },
-      body: template.code,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        files: [{ path: 'main.tex', content: template.code }],
+      }),
     });
 
     if (!response.ok) {

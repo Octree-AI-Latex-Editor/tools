@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "compile-templates": "tsx scripts/compile-templates.mjs"
+    "compile-templates": "node --env-file=.env --import tsx/esm scripts/compile-templates.mjs"
   },
   "dependencies": {
     "@fontsource/dm-sans": "^5.2.8",
