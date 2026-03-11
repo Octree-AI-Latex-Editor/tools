@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const COMPILE_URL = process.env.COMPILE_SERVICE_URL;
+const COMPILE_URL = process.env.COMPILE_SERVER;
 
 export async function POST(request: NextRequest) {
   try {
