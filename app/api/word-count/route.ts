@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const WORD_COUNT_URL = process.env.NEXT_PUBLIC_COMPILE_SERVICE_URL + '/word-count';
+const WORD_COUNT_URL = process.env.COMPILE_SERVER + '/word-count';
 
 interface FileEntry {
   path: string;
