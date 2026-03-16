@@ -27,7 +27,7 @@ Requirements:
 - Add placeholder content where appropriate
 - Make it ready to compile
 
-Return ONLY the complete LaTeX code, no explanations or markdown formatting.`,
+Return ONLY the complete LaTeX code, no explanations and NO markdown formatting. Do NOT wrap the output in \`\`\`latex or \`\`\` tags. Just return the raw LaTeX code.`,
           },
         ],
         max_tokens: 2500,

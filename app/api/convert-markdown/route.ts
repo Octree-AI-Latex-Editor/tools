@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
 - Complete \\begin{document}...\\end{document} structure
 - Preserve all math equations (both inline $ and block $$)
 
-Return ONLY the complete LaTeX code, no explanations or markdown formatting.
+Return ONLY the complete LaTeX code, no explanations and NO markdown formatting. Do NOT wrap the output in \`\`\`latex or \`\`\` tags. Just return the raw LaTeX code.
 
 Markdown content:
 ${markdown}`,

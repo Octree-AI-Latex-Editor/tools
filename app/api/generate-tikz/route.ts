@@ -23,7 +23,7 @@ Create a complete LaTeX document with:
 - Complete \\begin{document}...\\end{document} structure
 - Well-commented TikZ code inside a tikzpicture environment
 
-Return ONLY the complete LaTeX code, no explanations or markdown formatting.`,
+Return ONLY the complete LaTeX code, no explanations and NO markdown formatting. Do NOT wrap the output in \`\`\`latex or \`\`\` tags. Just return the raw LaTeX code.`,
           },
         ],
         max_completion_tokens: 4000,

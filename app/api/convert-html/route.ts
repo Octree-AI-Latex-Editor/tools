@@ -21,7 +21,7 @@ export async function POST(request: NextRequest) {
 - Complete \\begin{document}...\\end{document} structure
 - Proper LaTeX equivalents for HTML elements (headers, lists, tables, emphasis, etc.)
 
-Return ONLY the complete LaTeX code, no explanations or markdown formatting.
+Return ONLY the complete LaTeX code, no explanations and NO markdown formatting. Do NOT wrap the output in \`\`\`latex or \`\`\` tags. Just return the raw LaTeX code.
 
 HTML input:
 ${html}`,

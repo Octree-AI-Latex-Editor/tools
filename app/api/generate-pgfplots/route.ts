@@ -25,7 +25,7 @@ Create a complete LaTeX document with:
 - Well-commented pgfplots code inside tikzpicture and axis environments
 - Use proper plot types (2D plots, 3D plots, bar graphs, scatter plots, etc.)
 
-Return ONLY the complete LaTeX code, no explanations or markdown formatting.`,
+Return ONLY the complete LaTeX code, no explanations and NO markdown formatting. Do NOT wrap the output in \`\`\`latex or \`\`\` tags. Just return the raw LaTeX code.`,
           },
         ],
         max_completion_tokens: 10000,
