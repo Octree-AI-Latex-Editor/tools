@@ -18,7 +18,7 @@ export default function Header() {
   return (
     <nav className="border-b border-gray-200 bg-white">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="relative flex h-14 items-center justify-between">
+        <div className="relative flex h-16 items-center justify-between">
           <div className="flex items-center gap-8">
             <Link
               href="https://tools.useoctree.com"
@@ -55,7 +55,7 @@ export default function Header() {
               {t('symbols')}
             </Link>
           </div>
-          <Button asChild size="lg" variant="gradient">
+          <Button asChild variant="gradient">
             <Link href="https://app.useoctree.com">
               {t('getStarted')}
             </Link>
