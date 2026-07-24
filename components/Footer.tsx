@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import { OctreeLogo } from "@/components/icons/octree-logo";
-import { DM_Sans } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { useTranslations } from 'next-intl';
 
-const dmSans = DM_Sans({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  weight: ["500"],
 });
 
 const toolLinks = [
@@ -60,11 +60,11 @@ export default function Footer() {
               <OctreeLogo className="h-8 w-8" />
               <span
                 className={cn(
-                  "text-xl font-medium tracking-tight text-neutral-900",
-                  dmSans.className
+                  "text-xl font-medium tracking-[-0.02em] text-neutral-900",
+                  spaceGrotesk.className
                 )}
               >
-                Octree
+                octree
               </span>
             </Link>
             <p className="mt-4 text-sm text-gray-600">

@@ -2,14 +2,14 @@
 
 import Link from "next/link";
 import { OctreeLogo } from "@/components/icons/octree-logo";
-import { DM_Sans } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 import { useTranslations } from 'next-intl';
 
-const dmSans = DM_Sans({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  weight: ["500"],
 });
 
 export default function Header() {
@@ -27,11 +27,11 @@ export default function Header() {
               <OctreeLogo className="h-7 w-7" />
               <span
                 className={cn(
-                  "text-lg font-medium tracking-tight text-neutral-900",
-                  dmSans.className
+                  "text-xl font-medium tracking-[-0.02em] text-neutral-900",
+                  spaceGrotesk.className
                 )}
               >
-                Octree
+                octree
               </span>
             </Link>
           </div>
@@ -56,10 +56,7 @@ export default function Header() {
             </Link>
           </div>
           <Button asChild size="lg" variant="gradient">
-            <Link
-              href="https://app.useoctree.com"
-              className="inline-flex h-10 items-center justify-center rounded-lg bg-[#5B8DEF] px-5 text-sm font-medium text-white transition-colors hover:bg-[#4a7de0]"
-            >
+            <Link href="https://app.useoctree.com">
               {t('getStarted')}
             </Link>
           </Button>
