@@ -51,7 +51,9 @@
     "templatesCount": "{count} template{plural}",
     "starOnGitHub": "Star on GitHub",
     "joinUsOnReddit": "Join us on Reddit",
-    "joinOurDiscord": "Join our Discord"
+    "joinOurDiscord": "Join our Discord",
+    "exploreMoreTools": "Explore More Tools",
+    "exploreMoreTemplates": "Explore More Templates"
   },
   "home": {
     "title": "Free LaTeX Tools & Templates",

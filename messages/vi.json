@@ -51,7 +51,9 @@
     "templatesCount": "{count} mẫu",
     "starOnGitHub": "Star trên GitHub",
     "joinUsOnReddit": "Tham gia Reddit",
-    "joinOurDiscord": "Tham gia Discord"
+    "joinOurDiscord": "Tham gia Discord",
+    "exploreMoreTools": "Khám phá thêm công cụ",
+    "exploreMoreTemplates": "Khám phá thêm mẫu"
   },
   "home": {
     "title": "Công cụ & Mẫu LaTeX Miễn phí",

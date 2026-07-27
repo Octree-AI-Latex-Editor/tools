@@ -19,6 +19,7 @@ export default async function MathToLatex() {
         inputLabel={t('inputLabel')}
         outputLabel={t('outputLabel')}
         acceptedFormats="JPEG, PNG, PDF"
+        toolHref="/tools/math-to-latex"
       />
     </div>
   );

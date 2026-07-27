@@ -16,6 +16,8 @@ import {
 import { openInOctree } from '@/lib/open-in-octree';
 import { CompileErrorModal } from '@/components/CompileErrorModal';
 import { OctreeCTA } from '@/components/OctreeCTA';
+import { ExploreMoreTools } from '@/components/ExploreMoreTools';
+import { ExploreMoreTemplates } from '@/components/ExploreMoreTemplates';
 import { Button } from '@/components/ui/button';
 import { useTranslations, useLocale } from 'next-intl';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
@@ -393,6 +395,9 @@ export default function TikzGenerator() {
             )}
           </div>
         </div>
+
+        <ExploreMoreTools currentToolHref="/tools/tikz-generator" />
+        <ExploreMoreTemplates />
 
         {/* Call to Action */}
         <div className="mt-16">

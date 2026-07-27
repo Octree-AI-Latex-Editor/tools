@@ -51,7 +51,9 @@
       "templatesCount": "{count} قالب{plural}",
       "starOnGitHub": "إضافة نجمة على GitHub",
       "joinUsOnReddit": "انضم إلينا على Reddit",
-      "joinOurDiscord": "انضم إلى Discord الخاص بنا"
+      "joinOurDiscord": "انضم إلى Discord الخاص بنا",
+      "exploreMoreTools": "استكشف المزيد من الأدوات",
+      "exploreMoreTemplates": "استكشف المزيد من القوالب"
     },
     "home": {
       "title": "أدوات وقوالب LaTeX مجانية",

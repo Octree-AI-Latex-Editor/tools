@@ -51,7 +51,9 @@
     "templatesCount": "{count} templat",
     "starOnGitHub": "Beri Bintang di GitHub",
     "joinUsOnReddit": "Gabung di Reddit",
-    "joinOurDiscord": "Gabung Discord kami"
+    "joinOurDiscord": "Gabung Discord kami",
+    "exploreMoreTools": "Jelajahi Alat Lainnya",
+    "exploreMoreTemplates": "Jelajahi Template Lainnya"
   },
   "home": {
     "title": "Alat & Templat LaTeX Gratis",

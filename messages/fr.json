@@ -51,7 +51,9 @@
       "templatesCount": "{count} modèle{plural}",
       "starOnGitHub": "Étoile sur GitHub",
       "joinUsOnReddit": "Rejoignez-nous sur Reddit",
-      "joinOurDiscord": "Rejoignez notre Discord"
+      "joinOurDiscord": "Rejoignez notre Discord",
+      "exploreMoreTools": "Découvrir plus d'outils",
+      "exploreMoreTemplates": "Découvrir plus de modèles"
     },
     "home": {
       "title": "Outils et modèles LaTeX gratuits",

@@ -16,6 +16,8 @@ import {
 import { openInOctree } from '@/lib/open-in-octree';
 import { CompileErrorModal } from '@/components/CompileErrorModal';
 import { OctreeCTA } from '@/components/OctreeCTA';
+import { ExploreMoreTools } from '@/components/ExploreMoreTools';
+import { ExploreMoreTemplates } from '@/components/ExploreMoreTemplates';
 import { useTranslations } from 'next-intl';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
@@ -33,6 +35,7 @@ interface AIToolLayoutProps {
   inputLabel?: string;
   outputLabel?: string;
   acceptedFormats?: string;
+  toolHref?: string;
 }
 
 export default function AIToolLayout({
@@ -42,6 +45,7 @@ export default function AIToolLayout({
   inputLabel = 'Your Handwritten Notes',
   outputLabel = 'Clean LaTeX Code',
   acceptedFormats = 'JPEG, PNG, PDF',
+  toolHref,
 }: AIToolLayoutProps) {
   const t = useTranslations('tools');
   const tCommon = useTranslations('common');
@@ -677,6 +681,9 @@ export default function AIToolLayout({
                    )}
           </div>
         </div>
+
+        <ExploreMoreTools currentToolHref={toolHref} />
+        <ExploreMoreTemplates />
 
         {/* Call to Action */}
         <div className="mt-16">

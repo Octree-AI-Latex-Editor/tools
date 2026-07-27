@@ -13,6 +13,8 @@ import {
   registerLatexCompletions,
 } from '@/lib/editor-config';
 import { OctreeCTA } from '@/components/OctreeCTA';
+import { ExploreMoreTools } from '@/components/ExploreMoreTools';
+import { ExploreMoreTemplates } from '@/components/ExploreMoreTemplates';
 import {
   Card,
   CardContent,
@@ -278,6 +280,9 @@ export default function LatexWordCounter() {
             </Card>
           </div>
         </div>
+
+        <ExploreMoreTools currentToolHref="/tools/latex-word-counter" />
+        <ExploreMoreTemplates />
 
         {/* Call to Action */}
         <div className="mt-16">

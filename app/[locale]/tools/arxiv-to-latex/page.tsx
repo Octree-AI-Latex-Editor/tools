@@ -5,6 +5,8 @@ import { DM_Sans } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { OctreeCTA } from '@/components/OctreeCTA';
+import { ExploreMoreTools } from '@/components/ExploreMoreTools';
+import { ExploreMoreTemplates } from '@/components/ExploreMoreTemplates';
 import { useTranslations } from 'next-intl';
 
 const dmSans = DM_Sans({
@@ -50,6 +52,9 @@ export default function ArxivToLatex() {
             </div>
           </div>
         </div>
+
+        <ExploreMoreTools currentToolHref="/tools/arxiv-to-latex" />
+        <ExploreMoreTemplates />
 
         {/* Call to Action */}
         <div className="mt-8">

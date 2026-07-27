@@ -14,6 +14,7 @@ export default function TableToLatex() {
       inputLabel={t('inputLabel')}
       outputLabel={t('outputLabel')}
       acceptedFormats="CSV"
+      toolHref="/tools/table-to-latex"
     />
   );
 } 

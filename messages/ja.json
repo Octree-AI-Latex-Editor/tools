@@ -51,7 +51,9 @@
     "templatesCount": "{count}件のテンプレート",
     "starOnGitHub": "GitHubでスター",
     "joinUsOnReddit": "Redditでフォロー",
-    "joinOurDiscord": "Discordに参加"
+    "joinOurDiscord": "Discordに参加",
+    "exploreMoreTools": "他のツールを探す",
+    "exploreMoreTemplates": "他のテンプレートを探す"
   },
   "home": {
     "title": "無料LaTeXツール＆テンプレート",

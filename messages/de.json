@@ -51,7 +51,9 @@
     "templatesCount": "{count} Vorlage{plural}",
     "starOnGitHub": "Stern auf GitHub",
     "joinUsOnReddit": "Folge uns auf Reddit",
-    "joinOurDiscord": "Tritt unserem Discord bei"
+    "joinOurDiscord": "Tritt unserem Discord bei",
+    "exploreMoreTools": "Weitere Tools entdecken",
+    "exploreMoreTemplates": "Weitere Vorlagen entdecken"
   },
   "home": {
     "title": "Kostenlose LaTeX-Tools & Vorlagen",

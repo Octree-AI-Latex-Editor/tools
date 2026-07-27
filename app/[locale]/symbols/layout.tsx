@@ -9,6 +9,7 @@ import { Search, ArrowLeft } from "lucide-react";
 import { GitHubIcon } from "@/components/icons/github";
 import { RedditIcon } from "@/components/icons/reddit";
 import { DiscordIcon } from "@/components/icons/discord";
+import { ExploreMoreTemplates } from "@/components/ExploreMoreTemplates";
 
 const SearchInput = () => {
     const router = useRouter();
@@ -112,6 +113,7 @@ function SymbolsLayoutContent({
 
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
                 {children}
+                <ExploreMoreTemplates />
             </div>
         </div>
     );

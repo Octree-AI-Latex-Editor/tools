@@ -14,6 +14,7 @@ export default function PdfToLatex() {
       inputLabel={t('inputLabel')}
       outputLabel={t('outputLabel')}
       acceptedFormats="PDF"
+      toolHref="/tools/pdf-to-latex"
     />
   );
 } 
